@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Networking.Connectivity.WwanContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Networking.Connectivity.WwanConnectionProfileDetails">
+      <summary>Permet d'accéder aux informations spécifiques à une connexion de réseau local sans fil.</summary>
+    </member><member name="P:Windows.Networking.Connectivity.WwanConnectionProfileDetails.AccessPointName">
+      <summary>Indique le nom du point d'accès utilisé pour établir la connexion WWAN.</summary>
+      <returns>Le nom du point d'accès.</returns>
+    </member><member name="P:Windows.Networking.Connectivity.WwanConnectionProfileDetails.HomeProviderId">
+      <summary>Indique l'ID du fournisseur de réseau domestique.</summary>
+      <returns>L'ID du fournisseur de réseau domestique</returns>
+    </member><member name="M:Windows.Networking.Connectivity.WwanConnectionProfileDetails.GetCurrentDataClass">
+      <summary>Indique la classe de service de données proposée par le réseau actuellement utilisé pour la connexion WWAN.</summary>
+      <returns>La classe du service de données actuellement fourni.</returns>
+    </member><member name="M:Windows.Networking.Connectivity.WwanConnectionProfileDetails.GetNetworkRegistrationState">
+      <summary>Récupère l'état d'enregistrement réseau actuel de la connexion WWAN.</summary>
+      <returns>État d'enregistrement réseau actuel.</returns>
+    </member><member name="T:Windows.Networking.Connectivity.WwanDataClass">
+      <summary>Définit les valeurs utilisées pour indiquer la classe de service de données fournie par une connexion réseau WWAN.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdo">
+      <summary>Ce réseau fournit le service de données CDMA Evolution-Data Optimized (initialement Evolution-Data Only, 1xEDVO, également appelé CDMA2000 1x EV-DO ou 1x EVDO).</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdoRevA">
+      <summary>Le réseau fournit le service de données 1xEVDO RevA.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdoRevB">
+      <summary>Le réseau fournit le service de données 1xEVDO RevB.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdv">
+      <summary>Le réseau fournit le service de données CDMA Evolution-Data/Voice (également appelé CDMA 2000 1x EV-DV, ou 1x EVDV).</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xRtt">
+      <summary>Le réseau fournit le service de données CDMA 1x Radio Transmission Technology (1xRTT).</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma3xRtt">
+      <summary>Le réseau fournit le service de données CDMA 3x Radio Transmission Technology (3xRTT).</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.CdmaUmb">
+      <summary>Le réseau fournit le service de données UMB.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Custom">
+      <summary>Le réseau fournit un service de données non répertorié dans cette table.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Edge">
+      <summary>Le réseau fournit le service de données EDGE (Enhanced Data for Global Evolution).</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Gprs">
+      <summary>Le réseau fournit le service de données GPRS (General Packet Radio Service).</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Hsdpa">
+      <summary>Le réseau fournit le service de données HSDPA (High-Speed Downlink Packet Access).</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Hsupa">
+      <summary>Le réseau fournit un service de données HSUPA (High Speed Uplink Packet Access).</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.LteAdvanced">
+      <summary>Le réseau fournit le service de données LTE-Advanced.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.None">
+      <summary>Le réseau ne fournit pas de service de données.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Umts">
+      <summary>Le réseau fournit le service de données UMTS (Universal Mobile Telecommunications System).</summary>
+    </member><member name="T:Windows.Networking.Connectivity.WwanNetworkRegistrationState">
+      <summary>Définit les états d'accès au réseau pour une connexion WWAN.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Denied">
+      <summary>L'inscription de la connexion avec tous les réseaux disponibles est refusée. Cependant, les appels vocaux d'urgence peuvent toujours être passés. Cette valeur s'applique uniquement aux connexions vocales, et non aux connexions de données.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Deregistered">
+      <summary>La connexion n'est pas enregistrée avec un réseau.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Home">
+      <summary>La connexion n'est pas enregistrée avec un réseau domestique.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.None">
+      <summary>Aucun réseau trouvé pour cette connexion.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Partner">
+      <summary>La connexion est enregistrée avec un partenaire de réseau itinérant.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Roaming">
+      <summary>La connexion est enregistrée avec un réseau itinérant.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Searching">
+      <summary>Recherche des réseaux disponibles.</summary>
+    </member></members>
+</doc>

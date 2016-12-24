@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.Protection.ProtectionRenewalContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Media.Protection.ComponentRenewal">
+      <summary>Permet aux applications d'initier le renouvellement des composants qui ont besoin d'une mise à jour pour lire un contenu multimédia protégé.</summary>
+    </member><member name="M:Windows.Media.Protection.ComponentRenewal.RenewSystemComponentsAsync(Windows.Media.Protection.RevocationAndRenewalInformation)">
+      <summary>Initialise la mise à jour des composants critiques de protection de contenu après l'intervention de l'utilisateur.</summary>
+      <returns>Objet utilisé pour contrôler l'opération asynchrone.</returns>
+      <param name="information">Informations relatives à la révocation et au renouvellement.</param>
+    </member><member name="T:Windows.Media.Protection.RenewalStatus">
+      <summary>Définit les valeurs possibles retournées par RenewSystemComponentsAsync.</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.AppComponentsMayNeedUpdating">
+      <summary>Spécifie qu'aucun composant système à mettre à jour n'a été détecté. Mais les composants d'application peuvent nécessiter une mise à jour, auquel cas l'utilisateur peut avoir besoin de rechercher une application mise à jour dans le magasin.</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.NoComponentsFound">
+      <summary>Spécifie qu'aucun composant à mettre à jour n'a été trouvé.</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.NotStarted">
+      <summary>Spécifie que le renouvellement n'a pas démarré.</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.UpdatesInProgress">
+      <summary>Spécifie que des mises à jour sont disponibles et que l'utilisateur a accepté de les installer.</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.UserCancelled">
+      <summary>Spécifie que l'utilisateur a refusé de procéder aux mises à jour.</summary>
+    </member></members>
+</doc>

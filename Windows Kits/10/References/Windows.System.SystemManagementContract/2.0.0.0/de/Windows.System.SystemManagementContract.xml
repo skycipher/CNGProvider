@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.SystemManagementContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.System.ProcessLauncher">
+      <summary>Startet den angegebenen Prozess mit zugeordneten Argumenten, sofern vorhanden.</summary>
+    </member><member name="M:Windows.System.ProcessLauncher.RunToCompletionAsync(System.String,System.String)">
+      <summary>Startet einen neuen Prozess.</summary>
+      <returns>Wenn diese Methode abgeschlossen ist, gibt sie die Ergebnisse des Prozesses zurück.</returns>
+      <param name="fileName">Der Name des zu starten Prozesses.</param>
+      <param name="args">Argumente zur Prozessausführung.</param>
+    </member><member name="M:Windows.System.ProcessLauncher.RunToCompletionAsync(System.String,System.String,Windows.System.ProcessLauncherOptions)">
+      <summary>Startet einen neuen Prozess, einschließlich die angegebenen Optionen.</summary>
+      <returns>Wenn diese Methode abgeschlossen ist, gibt sie die Ergebnisse des Prozesses zurück.</returns>
+      <param name="fileName">Dateiname des zu startenden Prozesses.</param>
+      <param name="args">Argumente für den angegebenen Prozess.</param>
+      <param name="options">Zugeordnete Optionen zum Ausführen des Prozesses.</param>
+    </member><member name="T:Windows.System.ProcessLauncherOptions">
+      <summary>Gibt die Optionen an, die verwendet werden, um den angegebenen Prozess zu starten.</summary>
+    </member><member name="M:Windows.System.ProcessLauncherOptions.#ctor">
+      <summary>Erstellt und initialisiert eine neue Instanz des Process Launcher-Optionsobjekts.</summary>
+    </member><member name="P:Windows.System.ProcessLauncherOptions.StandardError">
+      <summary>Gibt an, worauf Standardfehler verweist.</summary>
+      <returns>Der Stream, auf den Standardfehler verweisen.</returns>
+    </member><member name="P:Windows.System.ProcessLauncherOptions.StandardInput">
+      <summary>Gibt an, wo eine Standardeingabe herkommt.</summary>
+      <returns>Der Eingabestream für die Standardeingabe.</returns>
+    </member><member name="P:Windows.System.ProcessLauncherOptions.StandardOutput">
+      <summary>Gibt an, worauf eine Standardausgabe verweist.</summary>
+      <returns>Der Stream, auf den die Standardausgabe verweist.</returns>
+    </member><member name="P:Windows.System.ProcessLauncherOptions.WorkingDirectory">
+      <summary>Ruft das Verzeichnis ab, in dem der Process Launcher läuft, oder legt es fest.</summary>
+      <returns>Das Arbeitsverzeichnis.</returns>
+    </member><member name="T:Windows.System.ProcessLauncherResult">
+      <summary>Stellt die Rückgabe des gestarteten Prozesses dar.</summary>
+    </member><member name="P:Windows.System.ProcessLauncherResult.ExitCode">
+      <summary>Stellt den Exitcode des Prozesses dar, der von ProcessLauncher ausgeführt wurde.</summary>
+      <returns>Der Exitcode.</returns>
+    </member><member name="T:Windows.System.ShutdownKind">
+      <summary>Beschreibt die Typen des Herunterfahrens, die Sie für ein Gerät ausführen können, das im Modus mit festem Zweck ausgeführt wird.</summary>
+    </member><member name="F:Windows.System.ShutdownKind.Restart">
+      <summary>Fährt das Gerät mit festem Zweck herunter und startet dann das Gerät neu.</summary>
+    </member><member name="F:Windows.System.ShutdownKind.Shutdown">
+      <summary>Fährt das Gerät mit festem Zweck herunter, ohne das Gerät neu zu starten.</summary>
+    </member><member name="T:Windows.System.ShutdownManager">
+      <summary>Verwaltet das Herunterfahren von Geräten, die im Modus mit festem Zweck ausgeführt werden.</summary>
+    </member><member name="M:Windows.System.ShutdownManager.BeginShutdown(Windows.System.ShutdownKind,Windows.Foundation.TimeSpan)">
+      <summary>Fährt ein Gerät herunter, das im Modus mit festem Zweck ausgeführt wird, und startet optional das Gerät nach der angegebenen Anzahl von Sekunden neu.</summary>
+      <param name="shutdownKind">Der Typ des auszuführenden Herunterfahrens, entweder mit oder ohne den Neustart des Geräts.</param>
+      <param name="timeout">Die Wartezeit in Sekunden, bevor das Gerät neu gestartet wird, wenn shutdownKind ist ShutdownKind.Restart.</param>
+    </member><member name="M:Windows.System.ShutdownManager.CancelShutdown">
+      <summary>Bricht ein Herunterfahren eines Geräts mit festem Zweck ab, der bereits ausgeführt wird.</summary>
+    </member><member name="T:Windows.System.SystemManagementContract">
+      <summary>Stellt den Windows.System.SystemManagementContract-API-Vertrag dar.</summary>
+    </member><member name="T:Windows.System.TimeZoneSettings">
+      <summary>Enthält Methoden und Eigenschaften zum Interagieren mit Zeitzonen.</summary>
+    </member><member name="P:Windows.System.TimeZoneSettings.CanChangeTimeZone">
+      <summary>Ruft ab, ob die Zeitzone geändert werden kann.</summary>
+      <returns>True, wenn die Zeitzone geändert werden kann; andernfalls False.</returns>
+    </member><member name="P:Windows.System.TimeZoneSettings.CurrentTimeZoneDisplayName">
+      <summary>Ruft den Anzeigenamen der aktuellen Zeitzone ab.</summary>
+      <returns>Der Anzeigename der aktuellen Zeitzone.</returns>
+    </member><member name="P:Windows.System.TimeZoneSettings.SupportedTimeZoneDisplayNames">
+      <summary>Ruft den Anzeigenamen für alle unterstützten Zeitzonen ab.</summary>
+      <returns>Die Anzeigenamen für alle unterstützten Zeitzonen.</returns>
+    </member><member name="M:Windows.System.TimeZoneSettings.ChangeTimeZoneByDisplayName(System.String)">
+      <summary>Ändert die Zeitzonenunterstützung mit dem Anzeigenamen.</summary>
+      <param name="timeZoneDisplayName">Der Anzeigename der Zeitzone, zu der gewechselt werden soll.</param>
+    </member></members>
+</doc>

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.UserProfile.UserProfileContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.System.UserProfile.AccountPictureKind">
+      <summary>GetAccountPicture を使用するときに特定のイメージ タイプを要求できます。</summary>
+    </member><member name="F:Windows.System.UserProfile.AccountPictureKind.LargeImage">
+      <summary>ユーザー アカウントで大きなイメージを使用することを示します。</summary>
+    </member><member name="F:Windows.System.UserProfile.AccountPictureKind.SmallImage">
+      <summary>ユーザー アカウントで小さなイメージを使用することを示します。</summary>
+    </member><member name="F:Windows.System.UserProfile.AccountPictureKind.Video">
+      <summary>ユーザー アカウントでビデオを使用することを示します。</summary>
+    </member><member name="T:Windows.System.UserProfile.SetAccountPictureResult">
+      <summary>ユーザー アカウントのイメージを設定しようとしたときに返される結果。</summary>
+    </member><member name="F:Windows.System.UserProfile.SetAccountPictureResult.ChangeDisabled">
+      <summary>AccountPictureChangeEnabled プロパティが無効である、またはユーザーが同意を求めるプロンプトを取り消したため、画像が設定されなかったことを示します。</summary>
+    </member><member name="F:Windows.System.UserProfile.SetAccountPictureResult.Failure">
+      <summary>画像またはビデオが設定されなかったことを示します。</summary>
+    </member><member name="F:Windows.System.UserProfile.SetAccountPictureResult.FileSizeError">
+      <summary>ファイルのサイズが大きすぎて、画像が設定されなかったことを示します。</summary>
+    </member><member name="F:Windows.System.UserProfile.SetAccountPictureResult.LargeOrDynamicError">
+      <summary>画像が大きすぎて設定されなかったことを示します。</summary>
+    </member><member name="F:Windows.System.UserProfile.SetAccountPictureResult.Success">
+      <summary>画像が正常に設定されたことを示します。</summary>
+    </member><member name="F:Windows.System.UserProfile.SetAccountPictureResult.VideoFrameSizeError">
+      <summary>フレーム サイズが大きすぎて、ビデオが設定されなかったことを示します。</summary>
+    </member><member name="T:Windows.System.UserProfile.SetImageFeedResult">
+      <summary>LockScreen.RequestSetImageFeedAsync への呼び出し結果を指定します。</summary>
+    </member><member name="F:Windows.System.UserProfile.SetImageFeedResult.ChangeDisabled">
+      <summary>ロック画面イメージのスライド ショーはグループ ポリシーによって無効になっているため、フィードは設定されませんでした。</summary>
+    </member><member name="F:Windows.System.UserProfile.SetImageFeedResult.Success">
+      <summary>イメージ フィードは正常に設定されました。</summary>
+    </member><member name="F:Windows.System.UserProfile.SetImageFeedResult.UserCanceled">
+      <summary>操作はユーザーによって取り消されました。</summary>
+    </member><member name="T:Windows.System.UserProfile.UserInformation">
+      <summary>名前およびアカウントの画像など、ユーザーについての情報を表します。</summary>
+    </member><member name="P:Windows.System.UserProfile.UserInformation.AccountPictureChangeEnabled">
+      <summary>ユーザーのアカウントの画像を変更できるかどうかを判断します。</summary>
+      <returns>ユーザー アカウントの画像が変更された場合は true。それ以外の場合は false。</returns>
+    </member><member name="P:Windows.System.UserProfile.UserInformation.NameAccessAllowed">
+      <summary>アプリケーションがユーザー情報にアクセス可能かどうか確認できます。</summary>
+      <returns>アプリケーションが AccountPictureChanged イベントへのアクセスを許可されており、GetAccountPicture、GetDisplayNameAsync、GetDomainNameAsync、GetFirstNameAsync、GetLastNameAsync、および GetSessionInitiationProtocolUriAsync メソッドを使用してユーザー情報を取得することが許可されている場合は true。 それ以外の場合、このプロパティは false です。</returns>
+    </member><member name="E:Windows.System.UserProfile.UserInformation.AccountPictureChanged">
+      <summary>ユーザーの画像または名前が変更されたときに発生します。</summary>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetAccountPicture(Windows.System.UserProfile.AccountPictureKind)">
+      <summary>ユーザーのアカウントの画像を取得します。</summary>
+      <returns>イメージを含んでいるオブジェクト。</returns>
+      <param name="kind">欲しいイメージ (小、大など) を決定するために使用できる列挙です。</param>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetDisplayNameAsync">
+      <summary>ユーザー アカウントの表示名を取得します。</summary>
+      <returns>ユーザー アカウントの表示名。</returns>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetDomainNameAsync">
+      <summary>ユーザーのドメイン名を取得します。</summary>
+      <returns>ユーザーのドメイン名を表す文字列。</returns>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetFirstNameAsync">
+      <summary>ユーザーの名を取得します。</summary>
+      <returns>ユーザーの名。</returns>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetLastNameAsync">
+      <summary>ユーザーの姓を取得します。</summary>
+      <returns>ユーザーの姓。</returns>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetPrincipalNameAsync">
+      <summary>ユーザーのプリンシパル名を取得します。 この名前はユーザー プリンシパル名です (通常はユーザーの住所ですが、そうでない場合もあります)。</summary>
+      <returns>ユーザーのプリンシパル名。</returns>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetSessionInitiationProtocolUriAsync">
+      <summary>ユーザーのセッション開始プロトコルの URI (Uniform Resource Identifier) を取得します。</summary>
+      <returns>セッション開始プロトコルの URI (Uniform Resource Identifier)。</returns>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.SetAccountPictureAsync(Windows.Storage.IStorageFile)">
+      <summary>IStorageFile のオブジェクトを使用してユーザー アカウントの画像を設定します。</summary>
+      <returns>操作が成功したかどうかを示す値。</returns>
+      <param name="image">イメージを含むファイル。</param>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.SetAccountPictureFromStreamAsync(Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>IRandomAccessStream のオブジェクトを使用してユーザー アカウントの画像を設定します。</summary>
+      <returns>操作が成功したかどうかを示す値。</returns>
+      <param name="image">イメージ。</param>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.SetAccountPicturesAsync(Windows.Storage.IStorageFile,Windows.Storage.IStorageFile,Windows.Storage.IStorageFile)">
+      <summary>IStorageFile のオブジェクトを使用してユーザー アカウントの画像を設定します。 小さいイメージ、大きいイメージ、およびビデオの追加をサポートします。</summary>
+      <returns>操作が成功したかどうかを示す値。</returns>
+      <param name="smallImage">イメージの小さいバージョン。</param>
+      <param name="largeImage">イメージの大きいバージョン。</param>
+      <param name="video">ビデオ。</param>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.SetAccountPicturesFromStreamsAsync(Windows.Storage.Streams.IRandomAccessStream,Windows.Storage.Streams.IRandomAccessStream,Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>IRandomAccessStream のオブジェクトを使用してユーザー アカウントの画像を設定します。 小さいイメージ、大きいイメージ、およびビデオの追加をサポートします。</summary>
+      <returns>操作が成功したかどうかを示す値。</returns>
+      <param name="smallImage">イメージの小さいバージョン。</param>
+      <param name="largeImage">イメージの大きいバージョン。</param>
+      <param name="video">ビデオ。</param>
+    </member></members>
+</doc>

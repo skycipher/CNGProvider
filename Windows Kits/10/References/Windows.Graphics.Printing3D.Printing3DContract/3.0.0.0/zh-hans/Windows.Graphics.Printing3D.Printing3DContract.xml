@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Graphics.Printing3D.Printing3DContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Graphics.Printing3D.Print3DManager">
+      <summary>创建 3D 打印体验。</summary>
+    </member><member name="E:Windows.Graphics.Printing3D.Print3DManager.TaskRequested">
+      <summary>于创建 3D 打印作业时发生。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Print3DManager.GetForCurrentView">
+      <summary>获取 3D 打印管理器。</summary>
+      <returns>3D 打印管理器。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Print3DManager.ShowPrintUIAsync">
+      <summary>以编程方式启动 3D 打印用户界面。</summary>
+      <returns>如果操作成功完成，则为 true；否则为 false。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTask">
+      <summary>表示 3D 打印作业。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Print3DTask.Source">
+      <summary>获取要打印的 3D 打印包。</summary>
+      <returns>要打印的 3D 打印包。</returns>
+    </member><member name="E:Windows.Graphics.Printing3D.Print3DTask.Completed">
+      <summary>于打印请求发送至 3D 打印机并已创建 3D 打印作业时发生。</summary>
+    </member><member name="E:Windows.Graphics.Printing3D.Print3DTask.SourceChanged">
+      <summary>于工作流修改 3D 打印包时发生。</summary>
+    </member><member name="E:Windows.Graphics.Printing3D.Print3DTask.Submitting">
+      <summary>于 3D 打印包已提交至 3D 打印机时发生。</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs">
+      <summary>为 3D 打印请求的 Completed 事件提供数据。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs.Completion">
+      <summary>获取 3D 打印请求的状态。</summary>
+      <returns>3D 打印请求的完成状态。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs.ExtendedStatus">
+      <summary>在 3D 打印请求过程中获取遇到的错误类型。</summary>
+      <returns>在 3D 打印请求过程中遇到的错误类型。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskCompletion">
+      <summary>指定 3D 打印请求的完成状态。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskCompletion.Abandoned">
+      <summary>已放弃请求。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskCompletion.Canceled">
+      <summary>已取消请求。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskCompletion.Failed">
+      <summary>请求失败。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskCompletion.Slicing">
+      <summary>驱动程序正在准备打印机 3D 模型的逐层切片。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskCompletion.Submitted">
+      <summary>已成功提交请求。</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskDetail">
+      <summary>指定在 3D 打印请求过程中遇到的错误类型。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.InvalidMaterialSelection">
+      <summary>选择了无效的打印材料。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.InvalidModel">
+      <summary>3D 模型无效。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.InvalidPrintTicket">
+      <summary>打印票证无效。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.ModelExceedsPrintBed">
+      <summary>3D 模型超出了打印平台的范围。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.ModelNotManifold">
+      <summary>3d 模型没有繁多的边缘。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.Unknown">
+      <summary>无其他可用信息。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.UploadFailed">
+      <summary>3D 打印包上载失败。</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskRequest">
+      <summary>表示 3D 打印作业请求。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Print3DTaskRequest.CreateTask(System.String,System.String,Windows.Graphics.Printing3D.Print3DTaskSourceRequestedHandler)">
+      <summary>创建 3D 打印作业。</summary>
+      <returns>3D 打印作业。</returns>
+      <param name="title">打印作业的名称。</param>
+      <param name="printerId">3D 打印机的标识符。</param>
+      <param name="handler">打印作业请求源的回叫。</param>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs">
+      <summary>为 TaskRequested 事件提供数据。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs.Request">
+      <summary>获取与 Print3DManager 关联的 3D 打印作业请求。</summary>
+      <returns>3D 打印作业请求。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskSourceChangedEventArgs">
+      <summary>为 SourceChanged 事件提供数据。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Print3DTaskSourceChangedEventArgs.Source">
+      <summary>从工作流获取上载的 3D 打印包。</summary>
+      <returns>上载的 3D 打印包。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskSourceRequestedArgs">
+      <summary>为 Print3DTaskSourceRequestedHandler 委托提供数据。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Print3DTaskSourceRequestedArgs.SetSource(Windows.Graphics.Printing3D.Printing3D3MFPackage)">
+      <summary>指定用于打印作业的 3D 生成格式 (3MF) 包。</summary>
+      <param name="source">用于打印作业的 3D 生成格式 (3MF) 包。</param>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskSourceRequestedHandler">
+      <summary>表示处理 3D 打印包请求的方法。</summary>
+      <param name="args">提供用于 3D 打印作业的 3D 打印包。</param>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3D3MFPackage">
+      <summary>表示 3D 生成格式 (3MF) 包。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3D3MFPackage.#ctor">
+      <summary>创建 Printing3D3MFPackage 对象。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3D3MFPackage.ModelPart">
+      <summary>获取或设置到 3D 生成格式 (3MF) 包中 3D 模型的 XML 流。</summary>
+      <returns>到 3MF 包中 3D 模型的 XML 流。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3D3MFPackage.PrintTicket">
+      <summary>获取或设置到 3D 生成格式 (3MF) 包中打印票证的流。</summary>
+      <returns>到 3MF 包中打印票证的流。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3D3MFPackage.Textures">
+      <summary>获取或设置 3D 生成格式 (3MF) 包中的纹理。</summary>
+      <returns>3MF 包中的纹理，类型为 Printing3DTextureResource。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3D3MFPackage.Thumbnail">
+      <summary>获取或设置表示 3D 生成格式 (3MF) 包内容的缩略图图像。</summary>
+      <returns>表示 3MF 包内容的缩略图图像。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3D3MFPackage.LoadAsync(Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>从 3D 生成格式 (3MF) 文件流创建 Printing3D3MFPackage 对象。</summary>
+      <returns>从特定 3MF 包流创建的 Printing3D3MFPackage。</returns>
+      <param name="value">3MF 文件流。</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3D3MFPackage.LoadModelFromPackageAsync(Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>从 3D 生成格式 (3MF) 文件流创建 Printing3DModel 对象。</summary>
+      <returns>从指定 3MF 对象流创建的 Printing3DModel 对象。</returns>
+      <param name="value">3MF 文件流。</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3D3MFPackage.SaveAsync">
+      <summary>将 Printing3D3MFPackage 对象保存到 3D 生成格式 (3MF) 文件流。</summary>
+      <returns>到将保存包的 3MF 文件的流。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3D3MFPackage.SaveModelToPackageAsync(Windows.Graphics.Printing3D.Printing3DModel)">
+      <summary>保存指定的 3D 模型到 3D 生成格式 (3MF) 包。</summary>
+      <returns>操作的结果。</returns>
+      <param name="value">要保存到 3MF 包的 3D 模型。</param>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DBaseMaterial">
+      <summary>表示用于在 3D 模型中生成某些对象的基材。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DBaseMaterial.#ctor">
+      <summary>创建 Printing3DBaseMaterial 类的实例。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DBaseMaterial.Abs">
+      <summary>获取丙烯腈-丁二烯-苯乙烯 (ABS) 热塑性塑料在基材中使用的名称。</summary>
+      <returns>ABS 热塑性塑料在基材中使用的名称。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DBaseMaterial.Color">
+      <summary>获取或设置基材颜色。</summary>
+      <returns>基材颜色。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DBaseMaterial.Name">
+      <summary>获取或设置基材名称。</summary>
+      <returns>基材名称。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DBaseMaterial.Pla">
+      <summary>获取聚乳酸 (PLA) 热塑性塑料在基材中使用的名称。</summary>
+      <returns>用于基材的 PLA 热塑性塑料。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup">
+      <summary>表示用于 3D 模型的基材组。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup.#ctor(System.UInt32)">
+      <summary>创建 Printing3DBaseMaterialGroup 类的实例。</summary>
+      <param name="MaterialGroupId">用于 3D 模型的基本材料组的标识符；大于零的值。</param>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup.Bases">
+      <summary>获取用于 3D 模型的基材组。</summary>
+      <returns>用于 3D 模型的基本材料，类型为 Printing3DBaseMaterial。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup.MaterialGroupId">
+      <summary>获取基本材料组的标识符 (ID)。</summary>
+      <returns>基本材料组的 ID。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DBufferDescription">
+      <summary>指定分析缓冲区中数据所使用的方法。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferDescription.Format">
+      <summary>指定缓冲区采用的格式。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferDescription.Stride">
+      <summary>指定将指针向前移动多远以找到下一个数据单元。</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DBufferFormat">
+      <summary>指定缓冲区采用的格式。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.Printing3DDouble">
+      <summary>double 类型的缓冲区。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.Printing3DUInt">
+      <summary>uint 类型的缓冲区。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.R32G32B32A32Float">
+      <summary>支持每通道（包括 alpha）32 位的四分量 128 位浮点格式。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.R32G32B32A32UInt">
+      <summary>支持每通道（包括 alpha）32 位的四分量 128 位无符号整数格式。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.R32G32B32Float">
+      <summary>支持每颜色通道 32 位的三分量 96 位浮点格式。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.R32G32B32UInt">
+      <summary>支持每颜色通道 32 位的三分量 96 位无符号整数格式。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.Unknown">
+      <summary>格式未知。</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DColorMaterial">
+      <summary>表示用于 3D 模型的颜色材料。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DColorMaterial.#ctor">
+      <summary>创建 Printing3DColorMaterial 类的实例。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DColorMaterial.Color">
+      <summary>获取或设置材料颜色。</summary>
+      <returns>材料的颜色。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DColorMaterial.Value">
+      <summary>获取或设置材料的颜色值。</summary>
+      <returns>材料的颜色值。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DColorMaterialGroup">
+      <summary>表示用于 3D 模型的颜色材料组。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DColorMaterialGroup.#ctor(System.UInt32)">
+      <summary>创建 Printing3DColorMaterialGroup 类的实例。</summary>
+      <param name="MaterialGroupId">用于 3D 模型的颜色材料组的标识符；大于零的值。</param>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DColorMaterialGroup.Colors">
+      <summary>获取用于 3D 模型的颜色材料组。</summary>
+      <returns>用于 3D 模型的颜色材料组，类型为 Printing3DColorMaterial。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DColorMaterialGroup.MaterialGroupId">
+      <summary>获取颜色材料组的标识符 (ID)。</summary>
+      <returns>颜色材料组的 ID。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DComponent">
+      <summary>表示 3D 生成格式 (3MF) 分量。 作为其他分量的容器。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DComponent.#ctor">
+      <summary>创建 Printing3DComponent 类的实例。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponent.Components">
+      <summary>获取分量中包含的其他分量。</summary>
+      <returns>分量中包含的其他分量。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponent.Mesh">
+      <summary>获取或设置分量的 3D 网格。</summary>
+      <returns>分量的 3D 网格。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponent.Name">
+      <summary>获取或设置 3D 生成格式 (3MF) 组件的名称。</summary>
+      <returns>3MF 组件的名称。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponent.PartNumber">
+      <summary>获取或设置 3D 生成格式 (3MF) 组件的部件号。</summary>
+      <returns>3MF 组件的部件号。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponent.Thumbnail">
+      <summary>获取或设置 3D 生成格式 (3MF) 组件的缩略图图像。</summary>
+      <returns>3MF 组件的缩略图图像。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponent.Type">
+      <summary>获取或设置 3D 生成格式 (3MF) 组件的类型。</summary>
+      <returns>3MF 组件的类型。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DComponentWithMatrix">
+      <summary>表示应用于具有矩阵转换的对象定义的 3D 生成格式 (3MF) 组件。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DComponentWithMatrix.#ctor">
+      <summary>创建 Printing3DComponentWithMatrix 类的实例。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponentWithMatrix.Component">
+      <summary>获取或设置应用于具有矩阵转换的对象定义的 3D 生成格式 (3MF) 基元组件。</summary>
+      <returns>应用于具有矩阵转换的对象定义的 3MF 组件。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponentWithMatrix.Matrix">
+      <summary>获取或设置应用于 3D 生成格式 (3MF) 基元组件的矩阵转换。</summary>
+      <returns>应用于 3D 生成格式 (3MF) 基元组件的矩阵转换。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DCompositeMaterial">
+      <summary>表示由基本材料的混合物定义的一种复合材料。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DCompositeMaterial.#ctor">
+      <summary>创建 Printing3DCompositeMaterial 类的实例。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DCompositeMaterial.Values">
+      <summary>获取用于复合材料的基本材料的混合物。 每个混合物通过列出每种基本材料占整个混合物的比例（基于 0 和 1 之间的值）来定义。</summary>
+      <returns>用于复合材料的基本材料所占的比例（介于 0 和 1 之间的值）。 比例值的指定顺序与 MaterialIndices 中的基本材料的顺序相同。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup">
+      <summary>表示复合材料的组。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup.#ctor(System.UInt32)">
+      <summary>创建 Printing3DCompositeMaterialGroup 类的实例。</summary>
+      <param name="MaterialGroupId">复合材料组的标识符 (ID)；大于零的值。</param>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup.BaseMaterialGroup">
+      <summary>获取将用于生成复合材料的 Printing3DBaseMaterial 成员所属的现有 Printing3DBaseMaterialGroup。</summary>
+      <returns>从中生成复合材料的 Printing3DBaseMaterialGroup。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup.Composites">
+      <summary>获取定义各个复合材料的混合物的列表。 每个混合物通过列出每种基本材料占整个混合物的比例（基于 0 和 1 之间的值）来定义，其中比例值的指定顺序与 MaterialIndices 中的基本材料的顺序相同。</summary>
+      <returns>定义各个复合材料的混合物的列表。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup.MaterialGroupId">
+      <summary>获取基本材料组的标识符 (ID)，该组定义用于复合材料组的材料。</summary>
+      <returns>基本材料组的 ID，该组定义用于复合材料组的材料。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup.MaterialIndices">
+      <summary>获取构成组中的复合材料的基本材料的有序列表。 基本材料的顺序保留在 Composites 定义的混合物值中。</summary>
+      <returns>由 MaterialGroupId 指定的基本材料组中的基本材料的索引值。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DFaceReductionOptions">
+      <summary>提供 Printing3DModel 类中的 TryReduceFacesAsync 方法的其他信息</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DFaceReductionOptions.#ctor">
+      <summary>创建 Printing3DFaceReductionOptions 类的实例。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DFaceReductionOptions.MaxEdgeLength">
+      <summary>设置某个边缘的最大长度，共享该边缘的三角形可以通过 TryReduceFacesAsync 方法合并。 如果设置为零，则使用内置的默认值。</summary>
+      <returns>某个边缘的最大长度，共享该边缘的三角形可以合并。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DFaceReductionOptions.MaxReductionArea">
+      <summary>设置某个三角形的区域，该三角形的上方无法通过 TryReduceFacesAsync 方法合并。 如果设置为零，则使用内置的默认值。</summary>
+      <returns>可在其中合并三角形的最大区域。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DFaceReductionOptions.TargetTriangleCount">
+      <summary>设置网格中的三角形的所需数量。 如果三角形计数小于或等于此数字，TryReduceFacesAsync 方法将停止合并面。 如果设置为零，算法将一直运行到三角形的数量减少一半。</summary>
+      <returns>网格中的三角形的所需数量。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DMaterial">
+      <summary>表示 3D 模型中的所有材料资源。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMaterial.#ctor">
+      <summary>创建 Printing3DMaterial 类的实例。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMaterial.BaseGroups">
+      <summary>获取用于 3D 模型的所有基材组。</summary>
+      <returns>用于 3D 模型的所有基本材料组，类型为 Printing3DBaseMaterialGroup。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMaterial.ColorGroups">
+      <summary>获取用于 3D 模型的所有颜色材料组。</summary>
+      <returns>用于 3D 模型的所有颜色材料组，类型为 Printing3DColorMaterialGroup。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMaterial.CompositeGroups">
+      <summary>获取用于 3D 模型的所有符合材料组。</summary>
+      <returns>用于 3D 模型的所有复合材料组，类型为 Printing3DCompositeMaterialGroup。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMaterial.MultiplePropertyGroups">
+      <summary>获取用于 3D 模型的所有多属性组。</summary>
+      <returns>用于 3D 模型的所有多属性组，类型为 Printing3DMultiplePropertyMaterialGroup。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMaterial.Texture2CoordGroups">
+      <summary>获取用于 3D 模型的所有 2D 纹理材料组。</summary>
+      <returns>用于 3D 模型的所有 2D 纹理材料组，类型为 Printing3DTexture2CoordMaterialGroup。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DMesh">
+      <summary>表示 3D 模型中的网格。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.#ctor">
+      <summary>创建 Printing3DMesh 类的实例。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.BufferDescriptionSet">
+      <summary>获取一组网格缓冲区描述。</summary>
+      <returns>一组网格缓冲区描述。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.BufferSet">
+      <summary>获取一组网格缓冲区。</summary>
+      <returns>一组网格缓冲区。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.IndexCount">
+      <summary>获取或设置三角形索引的数量。</summary>
+      <returns>三角形索引的数量。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.TriangleIndicesDescription">
+      <summary>获取或设置三角形索引的缓冲区描述。</summary>
+      <returns>三角形索引的缓冲区描述。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.TriangleMaterialIndicesDescription">
+      <summary>获取或设置三角形材料索引的缓冲区描述。</summary>
+      <returns>三角形材料索引的缓冲区描述。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.VertexCount">
+      <summary>获取或设置三角形顶点的数量。</summary>
+      <returns>三角形顶点的数量。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.VertexNormalsDescription">
+      <summary>获取或设置顶点法线的缓冲区描述。</summary>
+      <returns>顶点法线的缓冲区描述。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.VertexPositionsDescription">
+      <summary>获取或设置顶点位置的缓冲区描述。</summary>
+      <returns>顶点位置的缓冲区描述。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.CreateTriangleIndices(System.UInt32)">
+      <summary>创建三角形索引的缓冲区。</summary>
+      <param name="value">缓冲区的容量，即 IBuffer 可容纳的最大字节数。</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.CreateTriangleMaterialIndices(System.UInt32)">
+      <summary>创建三角形材料索引的缓冲区。</summary>
+      <param name="value">缓冲区的容量，即 IBuffer 可容纳的最大字节数。</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.CreateVertexNormals(System.UInt32)">
+      <summary>创建顶点法线的缓冲区。</summary>
+      <param name="value">缓冲区的容量，即 IBuffer 可容纳的最大字节数。</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.CreateVertexPositions(System.UInt32)">
+      <summary>创建顶点位置的缓冲区。</summary>
+      <param name="value">缓冲区的容量，即 IBuffer 可容纳的最大字节数。</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.GetTriangleIndices">
+      <summary>获取三角形索引的缓冲区。</summary>
+      <returns>三角形索引的缓冲区。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.GetTriangleMaterialIndices">
+      <summary>获取三角形材料索引的缓冲区。</summary>
+      <returns>三角形材料索引的缓冲区。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.GetVertexNormals">
+      <summary>获取顶点法线的缓冲区。</summary>
+      <returns>顶点法线的缓冲区。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.GetVertexPositions">
+      <summary>获取顶点位置的缓冲区。</summary>
+      <returns>顶点位置的缓冲区。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.VerifyAsync(Windows.Graphics.Printing3D.Printing3DMeshVerificationMode)">
+      <summary>验证网格有繁多边缘和常规三角形。</summary>
+      <returns>验证的结果，类型为 Printing3DMeshVerificationResult。</returns>
+      <param name="value">指定验证网格的方式。</param>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DMeshVerificationMode">
+      <summary>指定验证网格的方式。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DMeshVerificationMode.FindAllErrors">
+      <summary>等待返回结果，直到验证完成。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DMeshVerificationMode.FindFirstError">
+      <summary>一发现第一次失败就返回结果。</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DMeshVerificationResult">
+      <summary>为 VerifyAsync 方法提供数据。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMeshVerificationResult.IsValid">
+      <summary>获取指示网格是否有效的值。</summary>
+      <returns>如果网格有效，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMeshVerificationResult.NonmanifoldTriangles">
+      <summary>如果适用，获取带有非繁多边缘的三角形。</summary>
+      <returns>带有非繁多边缘的三角形。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMeshVerificationResult.ReversedNormalTriangles">
+      <summary>如果适用，获取倒转的常规三角形。</summary>
+      <returns>倒转的常规三角形。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DModel">
+      <summary>表示 3D 生成格式 (3MF) 包中的 3D 模型。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.#ctor">
+      <summary>创建 Printing3DModel 类的实例。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Build">
+      <summary>获取或设置根 3D 生成格式 (3MF) 分量。 它表示 3D 打印机上的版本牌，并定义了要打印的内容。</summary>
+      <returns>根 3MF 分量。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Components">
+      <summary>获取用于 3D 模型的所有 3D 生成格式 (3MF) 分量。</summary>
+      <returns>用于 3D 模型的所有 3MF 组件，类型为 Printing3DComponent。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Material">
+      <summary>获取或设置 3D 模型的根材料容器。</summary>
+      <returns>3D 模型的根材料容器。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Meshes">
+      <summary>获取用于 3D 模型的所有网格。</summary>
+      <returns>用于 3D 模型的所有网格，类型为 Printing3DMesh。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Metadata">
+      <summary>获取 3D 生成格式 (3MF) 包的元数据。</summary>
+      <returns>3MF 包的元数据。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.RequiredExtensions">
+      <summary>获取 3D 生成格式 (3MF) 包所需的扩展的列表。</summary>
+      <returns>3MF 包所需的扩展。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Textures">
+      <summary>获取用于 3D 模型的所有纹理。</summary>
+      <returns>用于 3D 模型的所有纹理，类型为 Printing3DModelTexture。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Unit">
+      <summary>获取或设置用于 3D 模型的测量单位。</summary>
+      <returns>用于 3D 模型的测量单位。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Version">
+      <summary>获取或设置 3D 生成格式 (3MF) 包的版本。</summary>
+      <returns>3MF 包的版本。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.Clone">
+      <summary>获取当前 3D 模型的副本。</summary>
+      <returns>当前 3D 模型的副本。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.RepairAsync">
+      <summary>修复 3D 模型。</summary>
+      <returns>操作结果。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.RepairWithProgressAsync">
+      <summary>利用报告操作进度的能力修复 3D 模型。</summary>
+      <returns>一个指示异步操作是否已成功的 Boolean 值和一个以 0 和 1 之间的小数的形式报告进度的 Double 值。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.TryPartialRepairAsync">
+      <summary>运行 3D 模型修复算法，直到完成或引发异常。</summary>
+      <returns>如果该异步操作成功，则为 true；否则为 false。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.TryPartialRepairAsync(Windows.Foundation.TimeSpan)">
+      <summary>开始 3D 模型修复算法，但在达到时间限制时退出。</summary>
+      <returns>如果该异步操作成功，则为 true；否则为 false。</returns>
+      <param name="maxWaitTime">定义算法可以运行的时间量（以秒为单位）。 如果值为 0，则会导致算法一直运行到满足另一个结束条件。</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.TryReduceFacesAsync">
+      <summary>运行一个算法，该算法通过合并邻近的顶点减少 Printing3DModel 中的所有网格中的三角形面的数量。 在三角形的总数减少一半时停止。</summary>
+      <returns>一个指示异步操作是否已成功的 Boolean 值和一个以 0 和 1 之间的小数的形式报告进度的 Double 值。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.TryReduceFacesAsync(Windows.Graphics.Printing3D.Printing3DFaceReductionOptions)">
+      <summary>运行一个算法，该算法通过合并邻近的顶点减少 Printing3DModel 中的所有网格中的三角形面的数量。 根据指定选项停止。</summary>
+      <returns>一个指示异步操作是否已成功的 Boolean 值和一个以 0 和 1 之间的小数的形式报告进度的 Double 值。</returns>
+      <param name="printing3DFaceReductionOptions">定义将触发操作结束的条件。</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.TryReduceFacesAsync(Windows.Graphics.Printing3D.Printing3DFaceReductionOptions,Windows.Foundation.TimeSpan)">
+      <summary>运行一个算法，该算法通过合并邻近的顶点减少 Printing3DModel 中的所有网格中的三角形面的数量。 根据指定选项或在达到 maxWait 时间时停止。</summary>
+      <returns>一个指示异步操作是否已成功的 Boolean 值和一个以 0 和 1 之间的小数的形式报告进度的 Double 值。</returns>
+      <param name="printing3DFaceReductionOptions">定义将触发操作结束的条件。</param>
+      <param name="maxWait">定义算法可以运行的时间量（以秒为单位）。 如果值为 0，则会导致算法一直运行到满足另一个结束条件。</param>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DModelTexture">
+      <summary>表示用于 3D 模型的纹理。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModelTexture.#ctor">
+      <summary>创建 Printing3DModelTexture 类的实例。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModelTexture.TextureResource">
+      <summary>获取或设置纹理所使用的纹理资源。</summary>
+      <returns>纹理所使用的纹理资源。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModelTexture.TileStyleU">
+      <summary>获取或设置指示平铺应以何种形式出现在 U 轴中以便填充整个请求区域的值。</summary>
+      <returns>指示平铺应以何种形式出现在 U 轴中以便填充整个请求区域的值。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModelTexture.TileStyleV">
+      <summary>获取或设置指示平铺应以何种形式出现在 V 轴中以便填充整个请求区域的值。</summary>
+      <returns>指示平铺应以何种形式出现在 V 轴中以便填充整个请求区域的值。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DModelUnit">
+      <summary>指定用于 3D 模型的测量单位。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DModelUnit.Centimeter">
+      <summary>3D 模型的单位指定为厘米。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DModelUnit.Foot">
+      <summary>3D 模型的单位指定为英尺。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DModelUnit.Inch">
+      <summary>3D 模型的单位指定为英寸。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DModelUnit.Meter">
+      <summary>3D 模型的单位指定为米。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DModelUnit.Micron">
+      <summary>3D 模型的单位指定为微米。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DModelUnit.Millimeter">
+      <summary>3D 模型的单位指定为毫米。</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial">
+      <summary>表示来自在 (MaterialGroupIndices) 中指定的材料组的属性和/或材料的组合。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial.#ctor">
+      <summary>创建 Printing3DMultiplePropertyMaterial 类的实例。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial.MaterialIndices">
+      <summary>获取在多属性材料中组合的属性和/或材料的索引。 每个组合通过以下方式定义：列出来自某个材料组的项的索引，该索引包含来自另一个材料组的项的索引。 索引值的指定顺序与 MaterialGroupIndices 中的组的列出顺序相同。</summary>
+      <returns>在多属性中组合的属性或材料的索引。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup">
+      <summary>表示多属性材料组。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup.#ctor(System.UInt32)">
+      <summary>创建 Printing3DMultiplePropertyMaterialGroup 类的新实例。</summary>
+      <param name="MaterialGroupId">多属性材料组的标识符 (ID)；大于零的值。</param>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup.MaterialGroupId">
+      <summary>获取多属性材料组的标识符 (ID)。</summary>
+      <returns>多属性材料组的 ID。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup.MaterialGroupIndices">
+      <summary>获取用于定义多属性组中的属性材料组合的材料组的有序列表（MaterialGroupId 值）。 材料组的顺序保留在 MultipleProperties 定义的组合中。</summary>
+      <returns>组中的属性或材料的索引。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup.MultipleProperties">
+      <summary>获取属性材料组合的列表。 每个组合通过以下方式定义：列出来自某个材料组的项的索引，该索引包含来自另一个材料组的项的索引。 索引值的指定顺序与 MaterialGroupIndices 中的组的列出顺序相同。</summary>
+      <returns>属性材料组合的列表。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DObjectType">
+      <summary>指定 3D 模型中的对象的函数。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DObjectType.Model">
+      <summary>作为 3D 模型的核心组件的函数。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DObjectType.Others">
+      <summary>位于其他某个容量中的函数。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DObjectType.Support">
+      <summary>作为支持对象的函数。</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial">
+      <summary>表示用于 3D 模型的 2D 纹理材料。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial.#ctor">
+      <summary>创建 Printing3DTexture2CoordMaterial 类的实例。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial.Texture">
+      <summary>获取或设置用于 2D 纹理材料的纹理。</summary>
+      <returns>用于 2D 纹理材料的纹理。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial.U">
+      <summary>获取或设置纹理中的 U 坐标，位于纹理左上方原点的水平向右方向。</summary>
+      <returns>纹理内的 U 坐标。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial.V">
+      <summary>获取或设置纹理中的 V 坐标，位于纹理左上方原点的垂直向下方向。</summary>
+      <returns>纹理内的 V 坐标。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup">
+      <summary>表示用于 3D 模型的 2D 纹理材料组。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup.#ctor(System.UInt32)">
+      <summary>创建 Printing3DTexture2CoordMaterialGroup 类的实例。</summary>
+      <param name="MaterialGroupId">用于 3D 模型的 2D 纹理组的标识符；大于零的值。</param>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup.MaterialGroupId">
+      <summary>获取 2D 纹理材料组的标识符 (ID)。</summary>
+      <returns>2D 纹理材料组的 ID。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup.Texture">
+      <summary>获取或设置材料组的纹理。</summary>
+      <returns>材料组的纹理。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup.Texture2Coords">
+      <summary>获取用于 3D 模型的 2D 纹理材料组。</summary>
+      <returns>用于 3D 模型的 2D 纹理材料的组，该材料的类型为 Printing3DTexture2CoordMaterial。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior">
+      <summary>指定平铺应以何种形式出现在 U 轴和 V 轴中以便填充纹理的整个请求区域。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior.Clamp">
+      <summary>将纹理坐标限制到 [0.0，1.0] 范围。 即，它应用纹理一次，然后涂上边缘像素的颜色。 例如，假设您的应用程序创建了一个正方形基元并将纹理坐标 (0.0,0.0)、(0.0,3.0)、(3.0,3.0) 和 (3.0,0.0) 分配到该基元的顶点。 设置 Clamp 纹理边缘行为会导致纹理应用一次。 列顶部和行结尾的像素颜色将延伸到基元的顶部和右侧，如下所示。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior.Mirror">
+      <summary>在每个整数边界平铺镜像纹理。 例如，在纹理坐标 (0.0,0.0)、(0.0,3.0)、(3.0,3.0) 和 (3.0,0.0) 中。 设置 Wrap 纹理边缘行为会导致纹理在 u 和 v 方向应用三次。 所应用的所有其他行和列均为上一行或列的镜像，如此处所示。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior.None">
+      <summary>不会出现平铺。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior.Wrap">
+      <summary>平铺在每个整数接合点处重复纹理资源。 例如，在 (0.0,0.0)、(0.0,3.0)、(3.0,3.0) 和 (3.0,0.0) 纹理坐标中，设置 Wrap 纹理边缘行为会导致纹理在 u 和 v 方向应用三次，如此处所示。</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DTextureResource">
+      <summary>指定用于 2D 纹理材料的纹理资源。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DTextureResource.#ctor">
+      <summary>创建 Printing3DTextureResource 类的实例。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTextureResource.Name">
+      <summary>获取或设置纹理资源的名称。</summary>
+      <returns>纹理资源的名称。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTextureResource.TextureData">
+      <summary>获取或设置纹理资源的图像流。</summary>
+      <returns>纹理资源的图像流。</returns>
+    </member></members>
+</doc>

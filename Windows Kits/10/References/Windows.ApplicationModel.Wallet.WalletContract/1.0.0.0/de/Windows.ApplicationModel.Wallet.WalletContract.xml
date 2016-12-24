@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Wallet.WalletContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs">
+      <summary>Stellt Informationen für eine App bereit, die als Ergebnis einer Brieftaschenaktion gestartet wurde.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs.ActionId">
+      <summary>Ruft die ID der Aktion ab, z. B. die ID des Verbs, der Transaktion usw.</summary>
+      <returns>Die ID der Aktion, z. B. die ID des Verbs, der Transaktion usw.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs.ActionKind">
+      <summary>Ruft die Aktion ab, die für WalletItem ausgeführt wurde.</summary>
+      <returns>Die Aktion, die für das WalletItem ausgeführt wurde.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs.ItemId">
+      <summary>Ruft die ID von WalletItem ab, für das der Benutzer die Aktion ausgeführt hat.</summary>
+      <returns>Die ID von WalletItem, für das der Benutzer die Aktion ausgeführt hat.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs">
+      <summary>Stellt Informationen für eine App bereit, die als Ergebnis einer Brieftaschenaktion gestartet wurde.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.ActionId">
+      <summary>Ruft die ID der Aktion ab, z. B. die ID des Verbs, der Transaktion usw.</summary>
+      <returns>Die ID der Aktion, z. B. die ID des Verbs, der Transaktion usw.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.ActionKind">
+      <summary>Ruft die Aktion ab, die für WalletItem ausgeführt wurde.</summary>
+      <returns>Ruft die Aktion ab, die für WalletItem ausgeführt wurde.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.ItemId">
+      <summary>Ruft die ID von WalletItem ab, für das der Benutzer die Aktion ausgeführt hat.</summary>
+      <returns>Die ID von WalletItem, für das der Benutzer die Aktion ausgeführt hat.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.Kind">
+      <summary>Ruft den Typ der Aktion ab, die für das WalletItem ausgeführt wurde.</summary>
+      <returns>Der Typ der Aktion, die für das WalletItem ausgeführt wurde.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.PreviousExecutionState">
+      <summary>Ruft den Ausführungsstatus der App vor ihrer Aktivierung ab.</summary>
+      <returns>Der Ausführungsstatus der App vor ihrer Aktivierung.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.SplashScreen">
+      <summary>Ruft das Begrüßungsbildschirm-Objekt ab, das Informationen über den Übergang vom Begrüßungsbildschirm zur aktivierten App bereitstellt.</summary>
+      <returns>Das Begrüßungsbildschirmobjekt, das Informationen zum Übergang vom Begrüßungsbildschirm zur aktivierten App bereitstellt.</returns>
+    </member><member name="T:Windows.ApplicationModel.Wallet.WalletActionKind">
+      <summary>Stellt die Aktion dar, die für das Element durchgeführt wurde, das die App gestartet hat.</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.Message">
+      <summary>Es wurde auf eine Nachricht getippt.</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.MoreTransactions">
+      <summary>Es wurde auf das Benutzeroberflächenelement Weitere Transaktionen getippt.</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.OpenItem">
+      <summary>Das Element wurde geöffnet.</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.Transaction">
+      <summary>Eine Transaktion wurde angetippt.</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.Verb">
+      <summary>Ein Verb wurde angetippt.</summary>
+    </member><member name="T:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs">
+      <summary>Stellt Informationen für eine App bereit, die als Ergebnis einer Brieftaschenaktion gestartet wurde.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.ActionId">
+      <summary>Ruft die ID der Aktion ab, z. B. die ID des Verbs, der Transaktion usw.</summary>
+      <returns>Die ID der Aktion, z. B. die ID des Verbs, der Transaktion usw.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.ActionKind">
+      <summary>Ruft die Aktion ab, die für WalletItem ausgeführt wurde.</summary>
+      <returns>Ruft die Aktion ab, die für WalletItem ausgeführt wurde.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.ActivatedOperation">
+      <summary>Ruft den App-Aktivierungsvorgang ab.</summary>
+      <returns>Der aktivierte Vorgang.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.ItemId">
+      <summary>Ruft die ID von WalletItem ab, für das der Benutzer die Aktion ausgeführt hat.</summary>
+      <returns>Die ID von WalletItem, für das der Benutzer die Aktion ausgeführt hat.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.Kind">
+      <summary>Ruft den Aktivierungstyp ab.</summary>
+      <returns>Einer der Enumerationswerte.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.PreviousExecutionState">
+      <summary>Ruft den Ausführungsstatus der App vor ihrer Aktivierung ab.</summary>
+      <returns>Einer der Enumerationswerte.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.SplashScreen">
+      <summary>Ruft das Begrüßungsbildschirm-Objekt ab, das Informationen über den Übergang vom Begrüßungsbildschirm zur aktivierten App bereitstellt.</summary>
+      <returns>Das Objekt, das Informationen für den Begrüßungsbildschirm bereitstellt.</returns>
+    </member></members>
+</doc>

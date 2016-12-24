@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Networking.NetworkOperators.LegacyNetworkOperatorsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails">
+      <summary>Fornisce dettagli per una notifica all'operatore di rete.</summary>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.EncodingType">
+      <summary>Ottiene lo schema di codifica dei dati (DCS) del messaggio ricevuto.</summary>
+      <returns>Lo schema di codifica dei dati (DCS) del messaggio ricevuto.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.Message">
+      <summary>Ottiene il messaggio per la notifica dell'operatore di rete.</summary>
+      <returns>Messaggio per la notifica dell'operatore di rete.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.NetworkAccountId">
+      <summary>Ottiene un identificatore univoco per l'account Mobile Broadband che ha ricevuto la notifica.</summary>
+      <returns>Un identificatore univoco per un account Mobile Broadband.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.NotificationType">
+      <summary>Ottiene il tipo della notifica di rete.</summary>
+      <returns>Tipo della notifica di rete.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.RuleId">
+      <summary>Ottiene l'identificatore della regola sottoposta a provisioning che corrisponde alla notifica e che ha attivato la notifica.</summary>
+      <returns>L'identificatore delle regole di provisioning.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.SmsMessage">
+      <summary>Ottiene un messaggio SMS per l'account Mobile Broadband che ha ricevuto la notifica.</summary>
+      <returns>Se la notifica dell'operatore di rete viene attivata tramite un nuovo SMS dell'operatore di rete mobile, contiene l'oggetto del messaggio SMS per la notifica dell'operatore di rete. NULL se non è stato ricevuto alcun SMS come parte della notifica.</returns>
+    </member><member name="M:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.AuthorizeTethering(System.Boolean,System.String)">
+      <summary>Utilizzato per indicare se il tethering è consentito per un dispositivo. Se non lo è, può essere fornito un motivo.</summary>
+      <param name="allow">true se il tethering è consentito; in caso contrario, false.</param>
+      <param name="entitlementFailureReason">Motivo per cui il tethering non è consentito.</param>
+    </member></members>
+</doc>

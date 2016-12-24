@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Calls.CallsVoipContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Calls.CallAnswerEventArgs">
+      <summary>VoipPhoneCall 클래스의 AnswerRequested 이벤트를 지원합니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+    </member><member name="P:Windows.ApplicationModel.Calls.CallAnswerEventArgs.AcceptedMedia">
+      <summary>호출에 응답할 때 사용자가 선택한 미디어 유형을 가져옵니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+      <returns>호출에 응답할 때 사용자가 선택한 미디어 유형입니다.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.CallRejectEventArgs">
+      <summary>VoipPhoneCall 클래스의 RejectRequested 이벤트를 지원합니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+    </member><member name="P:Windows.ApplicationModel.Calls.CallRejectEventArgs.RejectReason">
+      <summary>들어오는 호출이 거부된 이유를 가져옵니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+      <returns>들어오는 호출이 거부된 이유입니다.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.CallStateChangeEventArgs">
+      <summary>VoipPhoneCall 클래스의 EndRequested, HoldRequested 및 ResumeRequested 이벤트를 지원합니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+    </member><member name="P:Windows.ApplicationModel.Calls.CallStateChangeEventArgs.State">
+      <summary>VoIP 호출의 현재 상태를 가져옵니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+      <returns>VOIP 호출의 현재 상태입니다.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.MuteChangeEventArgs">
+      <summary>NotifyMuted 및 NotifyUnmuted 이벤트를 지원합니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+    </member><member name="P:Windows.ApplicationModel.Calls.MuteChangeEventArgs.Muted">
+      <summary>호출이 현재 음소거되었는지 여부를 가져옵니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+      <returns>호출이 현재 음소거되었는지 여부입니다.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.VoipCallCoordinator">
+      <summary>응용 프로그램에서 VoIP 호출을 관리할 수 있도록 합니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+    </member><member name="E:Windows.ApplicationModel.Calls.VoipCallCoordinator.MuteStateChanged">
+      <summary>전화 통화에 대한 음소거 상태가 변경될 때 발생합니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.CancelUpgrade(System.Guid)">
+      <summary>VoIP 호출에 대한 업그레이드를 취소합니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+      <param name="callUpgradeGuid">VoIP 호출에 대한 GUID입니다.</param>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.GetDefault">
+      <summary>VoipCallCoordinator 클래스의 기본 인스턴스를 검색합니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+      <returns>기본 호출 코디네이터입니다.</returns>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.NotifyMuted">
+      <summary>사용자가 VoIP 앱의 UI를 사용하여 호출을 음소거했음을 시스템에 알립니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.NotifyUnmuted">
+      <summary>사용자가 VoIP 앱의 UI를 사용하여 호출의 음소거를 해제했음을 시스템에 알립니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestIncomingUpgradeToVideoCall(System.String,System.String,System.String,Windows.Foundation.Uri,System.String,Windows.Foundation.Uri,System.String,Windows.Foundation.Uri,Windows.Foundation.TimeSpan)">
+      <summary>기존 호출을 대체할 들어오는 화상 통화에 대해 시스템에 요청합니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+      <returns>새로 들어오는 호출을 나타내는 개체입니다.</returns>
+      <param name="context">포그라운드 앱에 딥 링크로 전달되는 문자열입니다. 이는 앱의 UI를 보다 빠르게 채우는 데 사용할 수 있는 연락처 이름이나 기타 데이터일 수 있습니다. 최대 길이는 128자입니다. 이 매개 변수는 null이 아니어야 하며 앱의 매니페스트 파일에 정의된 작업을 참조해야 합니다.</param>
+      <param name="contactName">들어오는 호출 UI에 표시될 호출자의 연락처 이름입니다. 최대 길이는 128자입니다.</param>
+      <param name="contactNumber">들어오는 호출 UI에 표시될 호출자의 전화 번호입니다. 최대 길이는 128자입니다.</param>
+      <param name="contactImage">들어오는 호출 UI에 표시될 호출자와 연결된 이미지 파일의 Uri입니다. 파일 형식은 PNG 또는 JPG여야 합니다. 최대 파일 크기는 1MB입니다.</param>
+      <param name="serviceName">VoIP 서비스 또는 응용 프로그램의 이름입니다. 최대 길이는 128자입니다.</param>
+      <param name="brandingImage">들어오는 호출 UI에 표시될 VoIP 서비스 또는 응용 프로그램의 로고나 아이콘인 이미지 파일의 Uri입니다. 파일 형식은 PNG 또는 JPG여야 합니다. 최대 파일 크기는 128KB입니다.</param>
+      <param name="callDetails">호출이 누구를 대신한 것인지를 나타내는 문자열입니다. 최대 길이는 128자입니다.</param>
+      <param name="ringtone">이 호출의 벨소리를 포함하는 오디오 파일의 Uri입니다. 파일 형식은 WMA 또는 MP3이어야 합니다. 최대 파일 크기는 1MB입니다.</param>
+      <param name="ringTimeout">시스템에서 호출을 거부하기 전에 사용자가 호출에 응답하거나 호출을 무시할 때까지 기다릴 시간(초)입니다. 허용 범위는 5 ~ 120초입니다. 기본값은 30초입니다.</param>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestNewIncomingCall(System.String,System.String,System.String,Windows.Foundation.Uri,System.String,Windows.Foundation.Uri,System.String,Windows.Foundation.Uri,Windows.ApplicationModel.Calls.VoipPhoneCallMedia,Windows.Foundation.TimeSpan)">
+      <summary>새 들어오는 호출에 대해 시스템에 요청합니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+      <returns>새로 들어오는 호출을 나타내는 개체입니다.</returns>
+      <param name="context">포그라운드 앱에 딥 링크로 전달되는 문자열입니다. 최대 길이는 128자입니다. 이 매개 변수는 null이 아니어야 합니다.</param>
+      <param name="contactName">들어오는 호출 UI에 표시될 호출자의 연락처 이름입니다. 최대 길이는 128자입니다.</param>
+      <param name="contactNumber">들어오는 호출 UI에 표시될 호출자의 전화 번호입니다. 최대 길이는 128자입니다.</param>
+      <param name="contactImage">들어오는 호출 UI에 표시될 호출자와 연결된 이미지 파일의 Uri입니다. 파일 형식은 PNG 또는 JPG여야 합니다. 최대 파일 크기는 1MB입니다.</param>
+      <param name="serviceName">VoIP 서비스 또는 응용 프로그램의 이름입니다. 최대 길이는 128자입니다.</param>
+      <param name="brandingImage">들어오는 호출 UI에 표시될 VoIP 서비스 또는 응용 프로그램의 로고나 아이콘인 이미지 파일의 Uri입니다. 파일 형식은 PNG 또는 JPG여야 합니다. 최대 파일 크기는 128KB입니다.</param>
+      <param name="callDetails">호출이 누구를 대신한 것인지를 나타내는 문자열입니다. 최대 길이는 128자입니다.</param>
+      <param name="ringtone">이 호출의 벨소리를 포함하는 오디오 파일의 Uri입니다. 파일 형식은 WMA 또는 MP3이어야 합니다. 최대 파일 크기는 1MB입니다.</param>
+      <param name="media">새로 들어오는 호출의 미디어 유형입니다.</param>
+      <param name="ringTimeout">시스템에서 호출을 거부하기 전에 사용자가 호출에 응답하거나 호출을 무시할 때까지 기다릴 시간(초)입니다. 허용 범위는 5 ~ 120초입니다. 기본값은 30초입니다.</param>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestNewOutgoingCall(System.String,System.String,System.String,Windows.ApplicationModel.Calls.VoipPhoneCallMedia)">
+      <summary>새 나가는 호출에 대해 시스템에 요청합니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+      <returns>새로 들어오는 호출을 나타내는 개체입니다.</returns>
+      <param name="context">포그라운드 앱에 딥 링크로 전달되는 문자열입니다. 최대 길이는 128자입니다. 이 매개 변수는 null이 아니어야 합니다.</param>
+      <param name="contactName">전화의 최소화된 호출 UI에 표시되는 호출자의 이름 또는 ID입니다. 최대 길이는 128자입니다.</param>
+      <param name="serviceName">전화의 최소화된 호출 UI에 표시되는 VoIP 서비스의 이름입니다. 최대 길이는 128자입니다.</param>
+      <param name="media">새로 나가는 호출을 나타내는 개체입니다.</param>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestOutgoingUpgradeToVideoCall(System.Guid,System.String,System.String,System.String)">
+      <summary>기존 셀룰러 호출을 대체할 나가는 화상 통화를 만들도록 시스템에 요청합니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+      <returns>새로 나가는 호출을 나타내는 개체입니다.</returns>
+      <param name="callUpgradeGuid">호출의 GUID입니다.</param>
+      <param name="context">포그라운드 앱에 딥 링크로 전달되는 문자열입니다. 이는 앱의 UI를 보다 빠르게 채우는 데 사용할 수 있는 연락처 이름이나 기타 데이터일 수 있습니다. 최대 길이는 128자입니다. 이 매개 변수는 null이 아니어야 하며 앱의 매니페스트 파일에 정의된 작업을 참조해야 합니다.</param>
+      <param name="contactName">전화의 최소화된 호출 UI에 표시되는 호출자의 이름 또는 ID입니다. 최대 길이는 128자입니다.</param>
+      <param name="serviceName">전화의 최소화된 호출 UI에 표시되는 VoIP 서비스의 이름입니다. 최대 길이는 128자입니다.</param>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.ReserveCallResourcesAsync(System.String)">
+      <summary>VoIP 호출에 필요한 리소스를 예약합니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+      <returns>예약 작업의 결과입니다.</returns>
+      <param name="taskEntryPoint">백그라운드 작업을 수행하는 응용 프로그램 정의 클래스의 이름입니다. 자세한 내용은 TaskEntryPoint를 참조하십시오.</param>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.TerminateCellularCall(System.Guid)">
+      <summary>VoIP 호출을 업그레이드하기 위해 셀룰러 호출을 종료합니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+      <param name="callUpgradeGuid">VoIP 호출에 대한 GUID입니다.</param>
+    </member><member name="T:Windows.ApplicationModel.Calls.VoipPhoneCall">
+      <summary>VoIP 전화 호출을 나타냅니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+    </member><member name="P:Windows.ApplicationModel.Calls.VoipPhoneCall.CallMedia">
+      <summary>호출에서 사용되는 미디어 유형을 가져옵니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+      <returns>호출에서 사용되는 미디어 유형입니다.</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.VoipPhoneCall.ContactName">
+      <summary>VoIP 호출과 연결된 연락처 이름을 가져오거나 설정합니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+      <returns>VoIP 호출과 연결된 연락처 이름입니다.</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.VoipPhoneCall.StartTime">
+      <summary>VoIP 호출과 연결된 시작 시간을 가져오거나 설정합니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+      <returns>호출과 관련된 시작 시간입니다.</returns>
+    </member><member name="E:Windows.ApplicationModel.Calls.VoipPhoneCall.AnswerRequested">
+      <summary>사용자가 들어오는 호출에 응답할 때 발생합니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+    </member><member name="E:Windows.ApplicationModel.Calls.VoipPhoneCall.EndRequested">
+      <summary>호출이 종료되어야 함을 VoIP 앱에 알리기 위해 발생합니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+    </member><member name="E:Windows.ApplicationModel.Calls.VoipPhoneCall.HoldRequested">
+      <summary>호출이 보류 중이 되어야 함을 VoIP 앱에 알리기 위해 발생합니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+    </member><member name="E:Windows.ApplicationModel.Calls.VoipPhoneCall.RejectRequested">
+      <summary>호출이 거부되었을 때 발생합니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+    </member><member name="E:Windows.ApplicationModel.Calls.VoipPhoneCall.ResumeRequested">
+      <summary>이전에 보류된 VoIP 호출이 활성화되어야 함을 나타내기 위해 발생합니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallActive">
+      <summary>VoIP 호출이 활성화 상태임을 시스템에 알립니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallEnded">
+      <summary>호출이 종료되었음을 시스템에 알립니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallHeld">
+      <summary>호출이 현재 보류 중임을 시스템에 알립니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallReady">
+      <summary>셀룰러에서 비디오로 호출을 업그레이드하는 경우 시스템이 기존 셀룰러 호출을 종료할 수 있도록 앱에서 비디오 호출에 대한 오디오 및 비디오 스트림 설정을 완료했음을 시스템에 알립니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+    </member><member name="T:Windows.ApplicationModel.Calls.VoipPhoneCallMedia">
+      <summary>VoIP 호출에서 사용되는 미디어 유형을 지정합니다.</summary>
+      <capability type="voipCall">앱이 Windows.ApplicationModel.Calls 네임스페이스에서 VOIP 호출 API에 액세스하는 데 필요합니다.</capability>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallMedia.Audio">
+      <summary>호출에서 오디오를 사용합니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallMedia.None">
+      <summary>호출에서 미디어를 사용하지 않습니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallMedia.Video">
+      <summary>호출에서 동영상을 사용합니다.</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason">
+      <summary>들어오는 호출이 거부된 이유를 지정합니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason.EmergencyCallExists">
+      <summary>긴급 호출이 진행 중입니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason.InvalidCallState">
+      <summary>호출의 상태가 잘못되었습니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason.OtherIncomingCall">
+      <summary>다른 들어오는 호출이 수락되었습니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason.TimedOut">
+      <summary>들어오는 호출 시간이 초과되었습니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason.UserIgnored">
+      <summary>사용자가 호출을 무시하기 위해 단추를 눌렀습니다.</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.VoipPhoneCallResourceReservationStatus">
+      <summary>VoIP 리소스 예약을 시도한 결과를 나타냅니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallResourceReservationStatus.ResourcesNotAvailable">
+      <summary>사용할 수 없으므로 리소스가 예약되지 않았습니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallResourceReservationStatus.Success">
+      <summary>리소스가 예약되었습니다.</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.VoipPhoneCallState">
+      <summary>VoIP 호출의 상태를 지정합니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallState.Active">
+      <summary>호출이 활성 상태입니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallState.Ended">
+      <summary>호출이 끝났습니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallState.Held">
+      <summary>호출이 보류 중입니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallState.Incoming">
+      <summary>호출이 들어오고 있지만 아직 활성화되지 않았습니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallState.Outgoing">
+      <summary>호출이 나가고 있지만 아직 활성화되지 않았습니다.</summary>
+    </member></members>
+</doc>

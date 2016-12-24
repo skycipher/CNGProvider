@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Printers.Extensions.ExtensionsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Printers.Extensions.PrintExtensionContext">
+      <summary>Proporciona el contexto para el objeto de extensión de impresora.</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintExtensionContext.FromDeviceId(System.String)">
+      <summary>Obtiene el contexto para el objeto de extensión de impresora basado en el identificador de DeviceInformation.</summary>
+      <returns>Puntero al contexto.</returns>
+      <param name="deviceId">Identificador de dispositivo del dispositivo de impresión.</param>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails">
+      <summary>Contiene propiedades que permiten que un cliente tenga acceso a los datos de eventos de impresión y la información del nombre de dispositivo de impresión y los manipule.</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails.EventData">
+      <summary>Obtiene o establece los datos de evento para un evento de notificación de impresión.</summary>
+      <returns>Los datos de evento de notificación de impresión.</returns>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails.PrinterName">
+      <summary>Obtiene el nombre del dispositivo de impresión asociado a la notificación de impresión.</summary>
+      <returns>El nombre del dispositivo de impresión.</returns>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfiguration">
+      <summary>Permite a un cliente recuperar el contexto de extensión de la tarea de impresión, así como agregar un controlador de eventos a dicha tarea.</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfiguration.PrinterExtensionContext">
+      <summary>Obtiene el contexto para la extensión de la tarea de impresión.</summary>
+      <returns>El contexto para la extensión de la tarea de impresión.</returns>
+    </member><member name="E:Windows.Devices.Printers.Extensions.PrintTaskConfiguration.SaveRequested">
+      <summary>Generado por la ventana de impresión para que la aplicación notifique a la aplicación del dispositivo que el vale de impresión debe actualizarse.</summary>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest">
+      <summary>Se le llama cuando el cuadro de diálogo de impresión para la aplicación genera un evento SaveRequested.</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Deadline">
+      <summary>Obtiene el objeto de fecha y hora que proporciona información de fecha límite para la tarea de impresión.</summary>
+      <returns>La fecha límite para la tarea de impresión.</returns>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Cancel">
+      <summary>La llamada la realiza la aplicación del dispositivo para cancelar la solicitud del cliente para guardar la configuración de la tarea de impresión.</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.GetDeferral">
+      <summary>La llamada la realiza la aplicación del dispositivo cuando debe realizar determinadas tareas asincrónicas antes de poder guardar la información de configuración de la tarea de impresión.</summary>
+      <returns>El objeto que representa el aplazamiento de la solicitud para guardar la configuración de la tarea de impresión.</returns>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Save(System.Object)">
+      <summary>La llamada la realiza la aplicación del dispositivo para guardar la configuración de la tarea de impresión.</summary>
+      <param name="printerExtensionContext">El objeto que representa el contexto para la extensión de la tarea de impresión.</param>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral">
+      <summary>La llamada la realiza la aplicación del dispositivo para proporcionar una actualización del estado del aplazamiento.</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral.Complete">
+      <summary>La llamada la realiza la aplicación del dispositivo cuando se completa el aplazamiento.</summary>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs">
+      <summary>Se le llama para notificar a la aplicación del dispositivo que la configuración de la tarea de impresión se debe guardar.</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs.Request">
+      <summary>Obtiene la información necesaria para actualizar la configuración de la tarea de impresión.</summary>
+      <returns>La solicitud para guardar la configuración de la tarea de impresión.</returns>
+    </member></members>
+</doc>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Networking.NetworkOperators.LegacyNetworkOperatorsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails">
+      <summary>Fournit des détails sur une notification d'opérateur du réseau.</summary>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.EncodingType">
+      <summary>Obtient le schéma d'encodage de données du message reçu.</summary>
+      <returns>Schéma d'encodage de données du message reçu.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.Message">
+      <summary>Obtient le message pour la notification d'opérateur de réseau.</summary>
+      <returns>Message pour la notification d'opérateur de réseau.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.NetworkAccountId">
+      <summary>Obtient un identificateur unique pour le compte mobile à haut débit qui a reçu la notification.</summary>
+      <returns>Un identificateur unique d'un compte mobile à haut débit.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.NotificationType">
+      <summary>Obtient le type de la notification réseau.</summary>
+      <returns>Type de la notification réseau.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.RuleId">
+      <summary>Obtient l'identificateur de la règle configurée qui correspondait à la notification et qui l'a déclenchée.</summary>
+      <returns>Identificateur de la règle configurée.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.SmsMessage">
+      <summary>Obtient un message SMS pour le compte mobile à haut débit ayant reçu la notification.</summary>
+      <returns>Si la notification d'opérateur de réseau est déclenchée par un nouveau SMS de l'opérateur de réseau mobile, elle contient l'objet du message SMS pour la notification d'opérateur réseau. NULL si aucun message SMS n'a été reçu dans le cadre de la notification.</returns>
+    </member><member name="M:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.AuthorizeTethering(System.Boolean,System.String)">
+      <summary>Utilisé pour indiquer si la connexion est autorisée pour un périphérique. Dans le cas contraire, une raison peut être fournie.</summary>
+      <param name="allow">true si la connexion est autorisée ; sinon, false.</param>
+      <param name="entitlementFailureReason">La connexion n'est pas autorisée.</param>
+    </member></members>
+</doc>

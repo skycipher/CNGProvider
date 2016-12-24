@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Printers.Extensions.ExtensionsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Printers.Extensions.PrintExtensionContext">
+      <summary>Предоставляет контекст для объекта расширения принтера.</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintExtensionContext.FromDeviceId(System.String)">
+      <summary>Получает контекст для объекта расширения принтера на основе идентификатора DeviceInformation.</summary>
+      <returns>Указатель на контекст.</returns>
+      <param name="deviceId">Идентификатор информации устройства для устройства печати.</param>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails">
+      <summary>Содержит свойства, обеспечивающие клиенту возможность доступа и управления данными события печати и сведениями об имени устройства печати.</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails.EventData">
+      <summary>Получает или задает данные события для события уведомления печати.</summary>
+      <returns>Данные события уведомления печати.</returns>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails.PrinterName">
+      <summary>Получает имя устройства печати, связанного с уведомлением печати.</summary>
+      <returns>Имя устройства печати.</returns>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfiguration">
+      <summary>Позволяет клиенту извлечь контекст расширения задачи печати, а также добавить обработчик событий к задаче печати.</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfiguration.PrinterExtensionContext">
+      <summary>Получает контекст для расширения задачи печати.</summary>
+      <returns>Контекст для расширения задачи печати.</returns>
+    </member><member name="E:Windows.Devices.Printers.Extensions.PrintTaskConfiguration.SaveRequested">
+      <summary>Вызывается окном печати для приложения для уведомления этого приложения о необходимости обновить билет на печать.</summary>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest">
+      <summary>Вызывается, когда диалоговое окно печати приложения вызывает событие SaveRequested.</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Deadline">
+      <summary>Получает объект даты и времени, который предоставляет данные о крайнем сроке для задачи печати.</summary>
+      <returns>Крайний срок для задачи печати.</returns>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Cancel">
+      <summary>Вызывается приложением устройства, чтобы отменить запрос клиента на сохранение конфигурации задачи печати.</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.GetDeferral">
+      <summary>Вызывается приложением устройства, когда оно должно завершить некоторые асинхронные задачи, прежде чем сможет сохранить сведения о конфигурации задачи печати.</summary>
+      <returns>Объект, представляющий отсрочку для запроса сохранения конфигурации задачи печати.</returns>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Save(System.Object)">
+      <summary>Вызывается приложением устройства, чтобы сохранить конфигурацию задачи печати.</summary>
+      <param name="printerExtensionContext">Объект, представляющий контекст расширения задачи печати.</param>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral">
+      <summary>Вызывается приложением устройства, чтобы предоставить обновление состояния отсрочки.</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral.Complete">
+      <summary>Вызывается приложением устройства при завершении отсрочки.</summary>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs">
+      <summary>Вызывается для уведомления приложения устройства о том, что необходимо сохранить конфигурацию задачи печати.</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs.Request">
+      <summary>Получает сведения, необходимые для обновления конфигурации задачи печати.</summary>
+      <returns>Запрос на сохранение задачи печати.</returns>
+    </member></members>
+</doc>

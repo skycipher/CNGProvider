@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Services.Maps.GuidanceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem">
+      <summary>Gibt das Maßsystem an, das an, das für die Audioanleitung verwendet wird.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem.Meters">
+      <summary>Das metrische System.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem.MilesAndFeet">
+      <summary>Das übliche System der USA.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem.MilesAndYards">
+      <summary>Das britische System.</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind">
+      <summary>Gibt die Typen von Audiobenachrichtigungen an, die angefordert werden, wenn das AudioNotificationRequested-Ereignis ausgelöst wird.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.Gps">
+      <summary>GPS-Benachrichtigungen.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.Maneuver">
+      <summary>Manöverbenachrichtigungen.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.Route">
+      <summary>Routenbenachrichtigungen.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.SpeedLimit">
+      <summary>Höchstgeschwindigkeitsbenachrichtigungen.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.Traffic">
+      <summary>Verkehrsbenachrichtigungen.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.TrafficCamera">
+      <summary>Verkehrskamerabenachrichtigungen.</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs">
+      <summary>Stellt Daten für das AudioNotificationRequested-Ereignis bereit.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs.AudioFilePaths">
+      <summary>Ruft eine Liste von Audiodateien ab, die zur Wiedergabe angefordert wurden.</summary>
+      <returns>Eine Liste von Audiodateien, die zur Wiedergabe angefordert wurden.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs.AudioNotification">
+      <summary>Ruft den Typ der Audiobenachrichtigung ab, die angefordert wurde.</summary>
+      <returns>Der Typ der Audiobenachrichtigung, die angefordert wurde.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs.AudioText">
+      <summary>Ruft die textbasierte Version der Audiobenachrichtigung ab, die angefordert wurde.</summary>
+      <returns>Die textbasierte Version der Audiobenachrichtigung, die angefordert wurde.</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceAudioNotifications">
+      <summary>Gibt Typen von Audiobenachrichtigungen an, die bei der Navigation verwendet werden.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.Gps">
+      <summary>GPS-Benachrichtigungen.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.Maneuver">
+      <summary>Manöverbenachrichtigungen.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.None">
+      <summary>Keine Audiobenachrichtigungen ausgewählt.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.Route">
+      <summary>Routenbenachrichtigungen.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.SpeedLimit">
+      <summary>Höchstgeschwindigkeitsbenachrichtigungen.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.Traffic">
+      <summary>Verkehrsbenachrichtigungen.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.TrafficCamera">
+      <summary>Verkehrskamerabenachrichtigungen.</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceLaneInfo">
+      <summary>Repräsentiert eine Spur neben der aktuellen Position und deren Beziehung zur Route.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceLaneInfo.IsOnRoute">
+      <summary>Ruft einen Wert ab, der angibt, ob die Spur auf der Route liegt.</summary>
+      <returns>True, wenn die Spur auf der Route liegt; andernfalls False.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceLaneInfo.LaneMarkers">
+      <summary>Ruft einen Wert ab, der den Pfad der Spur beschreibt.</summary>
+      <returns>Ein Wert, des Typs GuidanceLaneMarkers, der den Pfad der Spur beschreibt.</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceLaneMarkers">
+      <summary>Gibt Pfad der Spur an.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.HardLeft">
+      <summary>Markierung für scharfe Linkskurve.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.HardRight">
+      <summary>Markierung für scharfe Rechtskurve.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.Left">
+      <summary>Markierung für Linkskurve.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.LightLeft">
+      <summary>Markierung für leichte Linkskurve.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.LightRight">
+      <summary>Markierung für leichte Rechtskurve.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.None">
+      <summary>Keine Spurmarkierungen vorhanden.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.Right">
+      <summary>Markierung für Rechtskurve.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.Straight">
+      <summary>Markierung für Geradeausfahrt.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.Unknown">
+      <summary>Keine Spurmarkerinformationen verfügbar.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.UTurnLeft">
+      <summary>Markierung für Wende nach links.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.UTurnRight">
+      <summary>Markierung für Wende nach rechts.</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceManeuver">
+      <summary>Repräsentiert ein Manöver entlang einer geführten Route.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.DepartureRoadName">
+      <summary>Ruft den vollständigen Namen der Straße am Anfang des Manövers ab.</summary>
+      <returns>Der vollständige Name der Straße am Anfang des Manövers.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.DepartureShortRoadName">
+      <summary>Ruft den Kurznamen der Straße am Anfang des Manövers ab. Zum Beispiel eine Autobahnnummer wie "I-90."</summary>
+      <returns>Der Kurzname der Straße am Anfang des Manövers.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.DistanceFromPreviousManeuver">
+      <summary>Ruft die Entfernung vom vorherigen Manöver zu diesem Manöver ab, in Metern.</summary>
+      <returns>Die Entfernung vom vorherigen Manöver zu diesem Manöver , in Metern.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.DistanceFromRouteStart">
+      <summary>Ruft die Entfernung vom Routenbeginn zu diesem Manöver ab, in Metern.</summary>
+      <returns>Die Entfernung vom Routenbeginn zu diesem Manöver, in Metern.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.EndAngle">
+      <summary>Ruft einen Wert ab, der die Richtung am Ende des Manövers in Grad angibt, wobei gilt: 0 oder 360 = Norden, 90 = Osten, 180 = Süden und 270 = Westen.</summary>
+      <returns>Die Richtung am Ende des Manövers in Grad, wobei gilt: 0 oder 360 = Norden, 90 = Osten, 180 = Süden und 270 = Westen.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.InstructionText">
+      <summary>Ruft die Anweisung ab, die dem Manöver zugeordnet ist.</summary>
+      <returns>Die Anweisung, die dem Manöver zugeordnet ist.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.Kind">
+      <summary>Ruft den Typ des Manövers ab.</summary>
+      <returns>Der Typ des Manövers.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.NextRoadName">
+      <summary>Ruft den vollständigen Namen der Straße am Ende des Manövers ab.</summary>
+      <returns>Der vollständige Namen der Straße am Ende des Manövers.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.NextShortRoadName">
+      <summary>Ruft den Kurznamen der Straße am Ende des Manövers ab. Zum Beispiel eine Autobahnnummer wie "I-90."</summary>
+      <returns>Der Kurzname der Straße am Ende des Manövers.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.RoadSignpost">
+      <summary>Ruft einen Wert ab, der ein Schild auf der Straße darstellt, die dem Manöver zugeordnet ist.</summary>
+      <returns>Ein Wert, der ein Schild auf der Straße darstellt, die dem Manöver zugeordnet ist. Falls keine Daten verfügbar sind, ist dieser Wert Null.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.StartAngle">
+      <summary>Ruft einen Wert ab, der die Richtung am Anfang des Manövers in Grad angibt, wobei gilt: 0 oder 360 = Norden, 90 = Osten, 180 = Süden und 270 = Westen.</summary>
+      <returns>Die Richtung am Anfang des Manövers in Grad, wobei gilt: 0 oder 360 = Norden, 90 = Osten, 180 = Süden und 270 = Westen.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.StartLocation">
+      <summary>Ruft den Standort ab, an dem das Manöver beginnt.</summary>
+      <returns>Der Standort, an dem das Manöver beginnt.</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceManeuverKind">
+      <summary>Gibt Typen von Leitfadenmanövern an.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.End">
+      <summary>Das Ziel wurde erreicht.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayEnterLeft">
+      <summary>Fahren Sie auf die rechte Spur der Autobahn.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayEnterRight">
+      <summary>Fahren Sie auf die linke Spur der Autobahn.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayKeepLeft">
+      <summary>Halten Sie sich auf der Autobahn links.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayKeepRight">
+      <summary>Halten Sie sich auf der Autobahn rechts.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayLeaveLeft">
+      <summary>Verlassen Sie die Autobahn von der linken Spur.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayLeaveRight">
+      <summary>Verlassen Sie die Autobahn von der rechten Spur.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.GoStraight">
+      <summary>Direkt.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.KeepMiddle">
+      <summary>Bleiben Sie auf der mittleren Spur.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.LeaveTransitStation">
+      <summary>Verlassen einer öffentlichen Nahverkehrsstation.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.None">
+      <summary>Keine Manöver anwendbar.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.PassTransitStation">
+      <summary>Passieren einer öffentlichen Nahverkehrsstation.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.Start">
+      <summary>Der Ausgangspunkt.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TakeFerry">
+      <summary>Nehmen der Fähre.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft1">
+      <summary>Nehmen Sie die erste Ausfahrt des Kreisverkehrs (Linksverkehr).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft10">
+      <summary>Nehmen Sie die zehnte Ausfahrt des Kreisverkehrs (Linksverkehr).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft11">
+      <summary>Nehmen Sie die elfte Ausfahrt des Kreisverkehrs (Linksverkehr).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft12">
+      <summary>Nehmen Sie die zwölfte Ausfahrt des Kreisverkehrs (Linksverkehr).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft2">
+      <summary>Nehmen Sie die zweite Ausfahrt des Kreisverkehrs (Linksverkehr).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft3">
+      <summary>Nehmen Sie die dritte Ausfahrt des Kreisverkehrs (Linksverkehr).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft4">
+      <summary>Nehmen Sie die vierte Ausfahrt des Kreisverkehrs (Linksverkehr).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft5">
+      <summary>Nehmen Sie die fünfte Ausfahrt des Kreisverkehrs (Linksverkehr).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft6">
+      <summary>Nehmen Sie die sechste Ausfahrt des Kreisverkehrs (Linksverkehr).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft7">
+      <summary>Nehmen Sie die siebte Ausfahrt des Kreisverkehrs (Linksverkehr).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft8">
+      <summary>Nehmen Sie die achte Ausfahrt des Kreisverkehrs (Linksverkehr).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft9">
+      <summary>Nehmen Sie die neunte Ausfahrt des Kreisverkehrs (Linksverkehr).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight1">
+      <summary>Nehmen Sie die erste Ausfahrt des Kreisverkehrs (Rechtsverkehr).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight10">
+      <summary>Nehmen Sie die zehnte Ausfahrt des Kreisverkehrs (Rechtsverkehr).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight11">
+      <summary>Nehmen Sie die elfte Ausfahrt des Kreisverkehrs (Rechtsverkehr).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight12">
+      <summary>Nehmen Sie die zwölfte Ausfahrt des Kreisverkehrs (Rechtsverkehr).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight2">
+      <summary>Nehmen Sie die zweite Ausfahrt des Kreisverkehrs (Rechtsverkehr).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight3">
+      <summary>Nehmen Sie die dritte Ausfahrt des Kreisverkehrs (Rechtsverkehr).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight4">
+      <summary>Nehmen Sie die vierte Ausfahrt des Kreisverkehrs (Rechtsverkehr).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight5">
+      <summary>Nehmen Sie die fünfte Ausfahrt des Kreisverkehrs (Rechtsverkehr).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight6">
+      <summary>Nehmen Sie die sechste Ausfahrt des Kreisverkehrs (Rechtsverkehr).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight7">
+      <summary>Nehmen Sie die siebte Ausfahrt des Kreisverkehrs (Rechtsverkehr).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight8">
+      <summary>Nehmen Sie die achte Ausfahrt des Kreisverkehrs (Rechtsverkehr).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight9">
+      <summary>Nehmen Sie die neunte Ausfahrt des Kreisverkehrs (Rechtsverkehr).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnHardLeft">
+      <summary>Biegen Sie scharf nach links ab.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnHardRight">
+      <summary>Biegen Sie scharf nach rechts ab.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnKeepLeft">
+      <summary>Bleiben Sie auf der linken Spur.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnKeepRight">
+      <summary>Bleiben Sie auf der rechten Spur.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnLeft">
+      <summary>Biegen Sie nach links ab (ca. 90 Grad).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnLightLeft">
+      <summary>Biegen Sie leicht nach links ab.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnLightRight">
+      <summary>Biegen Sie leicht nach rechts ab.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnRight">
+      <summary>Biegen Sie nach rechts ab (ca. 90 Grad).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.UTurnLeft">
+      <summary>Wende zur linken Seite.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.UTurnRight">
+      <summary>Wende zur rechten Seite.</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate">
+      <summary>Beschreibt die Navigationsbedingungen an der aktuellen Position des Benutzers.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.CurrentHeading">
+      <summary>Ruft einen Wert ab, der den aktuellen Kurs in Grad angibt, wobei 0 oder 360 = Nord, 90 = Osten, 180 = Süd und 270 = Westen.</summary>
+      <returns>Der aktuelle Kurs in Grad, wobei 0 oder 360 = Norden, 90 = Osten, 180 = Süden und 270 = Westen ist.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.CurrentSpeed">
+      <summary>Ruft einen Wert ab, der die aktuelle Geschwindigkeit angibt, in Metern pro Sekunde.</summary>
+      <returns>Die aktuelle Geschwindigkeit, in Metern pro Sekunde.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.IsOnStreet">
+      <summary>Ruft einen Wert ab, der angibt, ob die aktuelle Position auf einer Straße liegt.</summary>
+      <returns>True, wenn die aktuelle Position auf einer Straße liegt; andernfalls False.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.Location">
+      <summary>Ruft die aktuelle geographische Position ab.</summary>
+      <returns>Die aktuelle geographische Position.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.Road">
+      <summary>Ruft einen Wert ab, der die Straße an der aktuellen Position beschreibt.</summary>
+      <returns>Ein Wert, der die Straße an der aktuellen Position beschreibt.</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceMode">
+      <summary>Gibt den Typ des Navigationsleitfadens an.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceMode.Navigation">
+      <summary>Navigationsleitfaden ist aktiv.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceMode.None">
+      <summary>Zeigt an, dass das Modul nicht aktiv ist.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceMode.Simulation">
+      <summary>Navigationsleitfaden wird simuliert.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceMode.Tracking">
+      <summary>Navigationshilfe wird ohne eine bestimmte Route geboten.</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceNavigator">
+      <summary>Stellt Navigationsleitfaden bereit.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceNavigator.AudioMeasurementSystem">
+      <summary>Ruft das Maßsystem ab, das für den Audioleitfaden verwendet wird, oder legt es fest.</summary>
+      <returns>Das Maßsystem, das für die Audioanleitung verwendet wird.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceNavigator.AudioNotifications">
+      <summary>Ruft die Typen von Audiobenachrichtigungen ab oder legt sie fest, die vom Navigationsleitfaden bereitgestellt werden.</summary>
+      <returns>Die Typen von Audiobenachrichtigungen, die vom Navigationsleitfaden bereitgestellt werden.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceNavigator.IsGuidanceAudioMuted">
+      <summary>Ruft einen Wert ab, der angibt, ob der Audioleitfaden stummgeschaltet ist.</summary>
+      <returns>Der Audioleitfaden ist stummgeschaltet, wenn der Wert True ist; andernfalls ist er nicht stummgeschaltet.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceNavigator.UseAppProvidedVoice">
+      <summary>Ruft einen Wert ab, der angibt, ob auf dem gerät Cortana verwendet wird.</summary>
+      <returns>Wenn der Wert True ist, wird Cortana auf dem Gerät verwendet; andernfalls False.</returns>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.AudioNotificationRequested">
+      <summary>Tritt auf, wenn Audiobenachrichtigungen für den Navigationsleitfaden angebracht sind, etwa vor einer anstehenden Kurve oder Ausfahrt.</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.DestinationReached">
+      <summary>Tritt auf, wenn das Ziel der Route erreicht wurde.</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.GuidanceUpdated">
+      <summary>Tritt auf, wenn der Navigationsleitfaden aktualisiert wurde.</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.Rerouted">
+      <summary>Tritt auf, wenn der Navigationsleitfaden eine neue Route eingestellt hat.</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.RerouteFailed">
+      <summary>Tritt auf, wenn die Umlenkung des Navigationsleitfadens fehlschlägt.</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.Rerouting">
+      <summary>Tritt auf, wenn der Navigationsleitfaden umleitet.</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.UserLocationLost">
+      <summary>Tritt auf, wenn der Standort des Benutzers verloren gegangen ist.</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.UserLocationRestored">
+      <summary>Tritt auf, wenn der Standort des Benutzers wiederhergestellt wurde.</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.GetCurrent">
+      <summary>Ruft das GuidanceNavigator-Objekt ab, das den aktuellen Navigationsleitfaden repräsentiert.</summary>
+      <returns>Das GuidanceNavigator-Objekt, das den aktuellen Navigationsleitfaden repräsentiert.</returns>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.Pause">
+      <summary>Hält den Navigationsleitfaden an.</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.RepeatLastAudioNotification">
+      <summary>Wiederholt die letzte Audiobenachrichtigung.</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.Resume">
+      <summary>Setzt den Navigationsleitfaden fort.</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.SetGuidanceVoice(System.Int32,System.String)">
+      <summary>Legt die Stimme fest, die für Audiobenachrichtigungen verwendet wird.</summary>
+      <param name="voiceId">Der Bezeichner der Stimme.</param>
+      <param name="voiceFolder">Der Ordnerpfad der angegebenen Stimme.</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.StartNavigating(Windows.Services.Maps.Guidance.GuidanceRoute)">
+      <summary>Startet den Navigationsleitfaden unter Verwendung der angegebenen Route.</summary>
+      <param name="route">Die Route, die gefahren werden soll.</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.StartSimulating(Windows.Services.Maps.Guidance.GuidanceRoute,System.Int32)">
+      <summary>Startet die Simulation des Navigationsleitfadens unter Verwendung der angegebenen Route.</summary>
+      <param name="route">Die Route, die gefahren werden soll.</param>
+      <param name="speedInMetersPerSecond">Die Geschwindigkeit der Navigationssimulation, in Metern pro Sekunde.</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.StartTracking">
+      <summary>Startet den Navigationsleitfaden, ohne eine bestimmte Route.</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.Stop">
+      <summary>Beendet den Navigationsleitfaden.</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.UpdateUserLocation(Windows.Devices.Geolocation.Geocoordinate)">
+      <summary>Aktualisiert den Navigationsleitfaden unter Verwendung des angegebenen geographischen Orts.</summary>
+      <param name="userLocation">Der aktuelle Standort des Benutzers.</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.UpdateUserLocation(Windows.Devices.Geolocation.Geocoordinate,Windows.Devices.Geolocation.BasicGeoposition)">
+      <summary>Aktualisiert den Navigationsleitfaden unter Verwendung des angegebenen geographischen Orts.</summary>
+      <param name="userLocation">Der aktuelle Standort des Benutzers.</param>
+      <param name="positionOverride">Die Höhe, Breite und Länge, die anstelle der Angaben unter userLocation verwendet werden sollen.</param>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs">
+      <summary>Stellt Daten für das Rerouted-Ereignis bereit.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs.Route">
+      <summary>Ruft die neue Route ab, die im Zuge der Umleitung erstellt wurde.</summary>
+      <returns>Die neue Route.</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceRoadSegment">
+      <summary>Repräsentiert die Straße auf einem Segment der Route.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.Id">
+      <summary>Ruft den Bezeichner des Straßensegments ab.</summary>
+      <returns>Der Bezeichner des Straßensegments.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.IsHighway">
+      <summary>Ruft einen Wert ab, der anzeigt, ob das Straßensegment eine Autobahn ist.</summary>
+      <returns>True, wenn das Straßensegment eine Autobahn ist; andernfalls False.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.IsTollRoad">
+      <summary>Ruft einen Wert ab, der anzeigt, ob das Straßensegment eine Mautstrecke ist.</summary>
+      <returns>True, wenn das Straßensegment eine Mautstrecke ist; andernfalls False.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.IsTunnel">
+      <summary>Ruft einen Wert ab, der anzeigt, ob das Straßensegment ein Tunnel ist.</summary>
+      <returns>True, wenn das Straßensegment ein Tunnel ist; andernfalls False.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.Path">
+      <summary>Ruft eine geordnete Serie geographischer Punkte ab, die das Straßensegment beschreibt.</summary>
+      <returns>Eine geordnete Serie geographischer Punkte, die das Straßensegment beschreibt.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.RoadName">
+      <summary>Ruft den vollständigen Namen der Straße ab.</summary>
+      <returns>Der vollständige Name der Straße.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.ShortRoadName">
+      <summary>Ruft den Kurznamen der Straße ab.</summary>
+      <returns>Der Kurzname der Straße.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.SpeedLimit">
+      <summary>Ruft die Höchstgeschwindigkeit des Straßensegments ab.</summary>
+      <returns>Die Höchstgeschwindigkeit des Straßensegments.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.TravelTime">
+      <summary>Ruft die Reisezeit für das Straßensegment ab.</summary>
+      <returns>Die Reisezeit für das Straßensegment.</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceRoadSignpost">
+      <summary>Stellt ein Schild auf der Straße dar.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.BackgroundColor">
+      <summary>Ruft die Hintergrundfarbe des Schilds ab.</summary>
+      <returns>Die Hintergrundfarbe des Schilds. Falls keine Daten verfügbar sind, ist dieser Wert Blau.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.Exit">
+      <summary>Ruft den Text ab, der auf dem Schild steht.</summary>
+      <returns>Der Text, der auf dem Schild steht. Falls keine Daten verfügbar sind, ist dieser Wert Null.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.ExitDirections">
+      <summary>Ruft die Richtungsangaben ab, die auf dem Schild stehen. Beispielsweise Ortsnamen und Entfernungen.</summary>
+      <returns>Die Richtungsangaben, die auf dem Schild stehen. Falls keine Daten verfügbar sind, gibt dieser Wert eine leere Liste aus.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.ExitNumber">
+      <summary>Ruft die Nummer der Ausfahrt auf dem Schild ab.</summary>
+      <returns>Die Nummer der Ausfahrt auf dem Schild. Falls keine Daten verfügbar sind, ist dieser Wert Null.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.ForegroundColor">
+      <summary>Ruft die Textfarbe des Schilds ab.</summary>
+      <returns>Die Textfarbe des Schilds. Falls keine Daten verfügbar sind, ist dieser Wert Weiß.</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceRoute">
+      <summary>Stellt eine Route dar, für die ein Navigationsleitfaden bereitgestellt wird.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.BoundingBox">
+      <summary>Ruft den geographischen Bereich ab, der die Route enthält.</summary>
+      <returns>Der geographische Bereich, der die Route enthält.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.Distance">
+      <summary>Ruft die Gesamtlänge der Route in Metern ab.</summary>
+      <returns>Die Gesamtlänge der Route in Metern.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.Duration">
+      <summary>Ruft die geschätzte Reisezeit der Route ab.</summary>
+      <returns>Die geschätzte Reisezeit der Route.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.Maneuvers">
+      <summary>Ruft eine Liste der Manöver ab, die erforderlich sind, um die Route zu navigieren.</summary>
+      <returns>Die Manöver, die erforderlich sind, um die Route zu navigieren.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.Path">
+      <summary>Ruft eine geordnete Serie geographischer Punkte entlang der Route ab.</summary>
+      <returns>Eine geordnete Serie geographischer Punkte entlang der Route.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.RoadSegments">
+      <summary>Ruft eine Liste von Straßensegmenten ab, geordnet von Anfang bis Ende, die die Route bilden.</summary>
+      <returns>Eine Liste von Straßensegmenten, geordnet von Anfang bis Ende, die die Route bilden.</returns>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceRoute.CanCreateFromMapRoute(Windows.Services.Maps.MapRoute)">
+      <summary>Überprüft, ob das angegebene MapRoute-Objekt zu einem GuidanceRoute-Objekt konvertiert werden kann.</summary>
+      <returns>True, wenn ein GuidanceRoute-Objekt erstellt werden kann; andernfalls False.</returns>
+      <param name="mapRoute">Die potenzielle zu navigierende Route</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceRoute.ConvertToMapRoute">
+      <summary>Erstellt ein MapRoute-Objekt, das auf der aktuellen GuidanceRoute basiert.</summary>
+      <returns>Ein MapRoute-Objekt, das auf dem aktuellen GuidanceRoute-Objekt basiert.</returns>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceRoute.TryCreateFromMapRoute(Windows.Services.Maps.MapRoute)">
+      <summary>Erstellt ein GuidanceRoute-Objekt, das auf der angegebenen MapRoute basiert.</summary>
+      <returns>Ein GuidanceRoute-Objekt, das auf dem angegebenen MapRoute-Objekt basiert; andernfalls Null, wenn die mapRoute nicht konvertiert werden kann.</returns>
+      <param name="mapRoute">Die potenzielle zu navigierende Route</param>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector">
+      <summary>Sammelt Positionsdaten zur Meldung von Verkehrsverhältnissen.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.Enabled">
+      <summary>Ruft einen Wert ab, der angibt, ob Positionsdaten für die Verkehrsberichterstellung erfasst werden, oder legt ihn fest.</summary>
+      <returns>True, wenn Positionsdaten für die Verkehrsberichterstellung gesammelt werden; andernfalls False.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.SpeedTrigger">
+      <summary>Ruft die Geschwindigkeit ab oder legt sie fest, bei der die Datenerfassung beginnt, in Metern pro Sekunde.</summary>
+      <returns>Die Geschwindigkeit, bei der die Datenerfassung beginnt, in Metern pro Sekunde.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.UploadFrequency">
+      <summary>Ruft die Frequenz der Verkehrsberichtserstellung ab oder legt sie fest, in Sekunden.</summary>
+      <returns>Die Häufigkeit, in der die Verkehrsberichtserstellung erfolgt, in Sekunden.</returns>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.ClearLocalData">
+      <summary>Löscht Positionsdaten, die lokal vom GuidanceTelemetryCollector gespeichert wurden.</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.GetCurrent">
+      <summary>Erstellt ein GuidanceTelemetryCollector-Objekt für den aktuellen Telemetrie-Collector.</summary>
+      <returns>Der aktuelle Telemetrie-Collector.</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs">
+      <summary>Stellt Daten für das GuidanceUpdated-Ereignis bereit.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.AfterNextManeuver">
+      <summary>Ruft das Manöver ab, das auf NextManeuver folgt.</summary>
+      <returns>Das Manöver, das auf NextManeuver folgt.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.AfterNextManeuverDistance">
+      <summary>Ruft die Entfernung entlang der Route zwischen der aktuellen Position und dem AfterNextManeuver ab, in Metern.</summary>
+      <returns>Die Entfernung entlang der Route zwischen der aktuellen Position und dem AfterNextManeuver, in Metern.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.CurrentLocation">
+      <summary>Ruft die Navigationsbedingungen an der aktuellen Position ab.</summary>
+      <returns>Die Navigationsbedingungen an der aktuellen Position.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.DistanceToDestination">
+      <summary>Ruft die verbleibende Entfernung entlang der Route ab, in Metern.</summary>
+      <returns>Die verbleibende Entfernung entlang der Route, in Metern.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.ElapsedDistance">
+      <summary>Ruft die vor der Aktualisierung entlang der Route zurückgelegte Entfernung ab, in Metern.</summary>
+      <returns>Die vor der Aktualisierung entlang der Route zurückgelegte Entfernung, in Metern.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.ElapsedTime">
+      <summary>Ruft die Zeit ab, die entlang der Route vor der Aktualisierung verstrichen ist.</summary>
+      <returns>Die Zeit, die entlang der Route vor der Aktualisierung verstrichen ist.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.IsNewManeuver">
+      <summary>Ruft einen Wert ab, der angibt, ob die Aktualisierung ein neues Manöver enthält.</summary>
+      <returns>True, wenn die Aktualisierung ein neues Manöver enthält; andernfalls False.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.LaneInfo">
+      <summary>Ruft eine Liste von Spuren in der Nähe des aktuellen Standortes ab, von links nach rechts sortiert.</summary>
+      <returns>Die Spuren in der Nähe der aktuellen Position, von links nach rechts sortiert.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.Mode">
+      <summary>Ruft den Typ des Navigationsleitfadens ab.</summary>
+      <returns>Der Typ des Navigationsleitfadens.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.NextManeuver">
+      <summary>Ruft das Manöver ab, das dem aktuellen Manöver folgt.</summary>
+      <returns>Das Manöver, das dem aktuellen Manöver folgt.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.NextManeuverDistance">
+      <summary>Ruft die Entfernung entlang der Route zwischen der aktuellen Position und dem NextManeuver ab, in Metern.</summary>
+      <returns>Die Entfernung entlang der Route zwischen der aktuellen Position und dem NextManeuver, in Metern.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.RoadName">
+      <summary>Ruft den vollständigen Namen des aktuellen Straßensegments ab.</summary>
+      <returns>Der vollständige Name des aktuellen Straßensegments.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.Route">
+      <summary>Ruft die aktualisierte Route ab.</summary>
+      <returns>Die aktualisierte Route.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.TimeToDestination">
+      <summary>Ruft die geschätzte Reisezeit zum Erreichen des Ziels ab.</summary>
+      <returns>Die geschätzte Reisezeit zum Erreichen des Ziels.</returns>
+    </member></members>
+</doc>

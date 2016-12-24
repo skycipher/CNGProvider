@@ -1,0 +1,863 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.DevicesLowLevelContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.ILowLevelDevicesAggregateProvider">
+      <summary>すべての下位レベル デバイス集計プロバイダーに共通のプロパティを表します。</summary>
+    </member><member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.AdcControllerProvider">
+      <summary>既定の ADC プロバイダーを取得します。 既定のプロバイダーが明示的に設定されていない場合、通常のドライバーとコントローラーにフォールバックされます。</summary>
+      <returns>ADC プロバイダー。</returns>
+    </member><member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.GpioControllerProvider">
+      <summary>既定の GPIO プロバイダーを取得します。 既定のプロバイダーが明示的に設定されていない場合、通常のドライバーとコントローラーにフォールバックされます。</summary>
+      <returns>GPIO プロバイダー。</returns>
+    </member><member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.I2cControllerProvider">
+      <summary>既定の I2C プロバイダーを取得します。 既定のプロバイダーが明示的に設定されていない場合、通常のドライバーとコントローラーにフォールバックされます。</summary>
+      <returns>I2C プロバイダー。</returns>
+    </member><member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.PwmControllerProvider">
+      <summary>既定の PWM プロバイダーを取得します。 既定のプロバイダーが明示的に設定されていない場合、通常のドライバーとコントローラーにフォールバックされます。</summary>
+      <returns>PWM プロバイダー。</returns>
+    </member><member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.SpiControllerProvider">
+      <summary>既定の SPI プロバイダーを取得します。 既定のプロバイダーが明示的に設定されていない場合、通常のドライバーとコントローラーにフォールバックされます。</summary>
+      <returns>SPI プロバイダー。</returns>
+    </member><member name="T:Windows.Devices.LowLevelDevicesAggregateProvider">
+      <summary>下位レベル バス デバイス プロバイダーを表します。 このクラスは、下位レベル バス コントローラーの既定のプロバイダーへのアクセス権を付与します。</summary>
+    </member><member name="M:Windows.Devices.LowLevelDevicesAggregateProvider.#ctor(Windows.Devices.Adc.Provider.IAdcControllerProvider,Windows.Devices.Pwm.Provider.IPwmControllerProvider,Windows.Devices.Gpio.Provider.IGpioControllerProvider,Windows.Devices.I2c.Provider.II2cControllerProvider,Windows.Devices.Spi.Provider.ISpiControllerProvider)">
+      <summary>LowLevelDevicesAggregateProvider のインスタンスを作成し、対応するバスの既定値として指定されたプロバイダーを設定します。</summary>
+      <param name="adc">ADC プロバイダー。</param>
+      <param name="pwm">PWM プロバイダー。</param>
+      <param name="gpio">GPIO プロバイダー。</param>
+      <param name="i2c">I2C プロバイダー。</param>
+      <param name="spi">SPI プロバイダー。</param>
+    </member><member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.AdcControllerProvider">
+      <summary>既定の ADC プロバイダーを取得します。 既定のプロバイダーが明示的に設定されていない場合、通常のドライバーとコントローラーにフォールバックされます。</summary>
+      <returns>ADC プロバイダー。</returns>
+    </member><member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.GpioControllerProvider">
+      <summary>既定の GPIO プロバイダーを取得します。 既定のプロバイダーが明示的に設定されていない場合、通常のドライバーとコントローラーにフォールバックされます。</summary>
+      <returns>GPIO プロバイダー。</returns>
+    </member><member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.I2cControllerProvider">
+      <summary>既定の I2C プロバイダーを取得します。 既定のプロバイダーが明示的に設定されていない場合、通常のドライバーとコントローラーにフォールバックされます。</summary>
+      <returns>I2C プロバイダー。</returns>
+    </member><member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.PwmControllerProvider">
+      <summary>既定の PWM プロバイダーを取得します。 既定のプロバイダーが明示的に設定されていない場合、通常のドライバーとコントローラーにフォールバックされます。</summary>
+      <returns>PWM プロバイダー。</returns>
+    </member><member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.SpiControllerProvider">
+      <summary>既定の SPI プロバイダーを取得します。 既定のプロバイダーが明示的に設定されていない場合、通常のドライバーとコントローラーにフォールバックされます。</summary>
+      <returns>SPI プロバイダー。</returns>
+    </member><member name="T:Windows.Devices.LowLevelDevicesController">
+      <summary>下位レベル バス デバイス コントローラーとそれに関連付けられたプロバイダーを表します。</summary>
+    </member><member name="P:Windows.Devices.LowLevelDevicesController.DefaultProvider">
+      <summary>コントローラーの既定のプロバイダーを取得または設定します。</summary>
+      <returns>デバイス集計プロバイダー。</returns>
+    </member><member name="T:Windows.Devices.Adc.AdcChannel">
+      <summary>単一の ADC チャネルを表します。</summary>
+    </member><member name="P:Windows.Devices.Adc.AdcChannel.Controller">
+      <summary>このチャネルの ADC コントローラーを取得します。</summary>
+      <returns>ADC コントローラー。</returns>
+    </member><member name="M:Windows.Devices.Adc.AdcChannel.Close">
+      <summary>このチャネルでの接続を閉じ、多のユーザーが開くことができるようにします。</summary>
+    </member><member name="M:Windows.Devices.Adc.AdcChannel.ReadRatio">
+      <summary>このコントローラーに有効な最大値の割合として値を読み込みます。</summary>
+      <returns>最大値の割合としての値。</returns>
+    </member><member name="M:Windows.Devices.Adc.AdcChannel.ReadValue">
+      <summary>ADC からアナログ値のデジタル表現を読み取ります。</summary>
+      <returns>デジタル値。</returns>
+    </member><member name="T:Windows.Devices.Adc.AdcChannelMode">
+      <summary>ADC コントローラーが入力に使用するチャネルのモードについて説明します。</summary>
+    </member><member name="F:Windows.Devices.Adc.AdcChannelMode.Differential">
+      <summary>2 つのピンの違い。</summary>
+    </member><member name="F:Windows.Devices.Adc.AdcChannelMode.SingleEnded">
+      <summary>特定のピンの単純な値。</summary>
+    </member><member name="T:Windows.Devices.Adc.AdcController">
+      <summary>システムの ADC コントローラーを表します。</summary>
+    </member><member name="P:Windows.Devices.Adc.AdcController.ChannelCount">
+      <summary>ADC コントローラーで使用できるチャネルの数。</summary>
+      <returns>チャネルの数。</returns>
+    </member><member name="P:Windows.Devices.Adc.AdcController.ChannelMode">
+      <summary>ADC コントローラーのチャネル モードを取得または設定します。</summary>
+      <returns>ADC チャネル モード。</returns>
+    </member><member name="P:Windows.Devices.Adc.AdcController.MaxValue">
+      <summary>コントローラーが報告できる最大値を取得します。</summary>
+      <returns>最大値。</returns>
+    </member><member name="P:Windows.Devices.Adc.AdcController.MinValue">
+      <summary>コントローラーが報告できる最小値。</summary>
+      <returns>最小値。</returns>
+    </member><member name="P:Windows.Devices.Adc.AdcController.ResolutionInBits">
+      <summary>コントローラーの解像度を、コントローラーが持っているビット数として取得します。</summary>
+      <returns>ADC コントローラーが持っているビット数。</returns>
+    </member><member name="M:Windows.Devices.Adc.AdcController.GetControllersAsync(Windows.Devices.Adc.Provider.IAdcProvider)">
+      <summary>システムに非同期的に接続されているすべてのコントローラーを取得します。</summary>
+      <returns>メソッドが正常に完了すると、システムで使用可能なコントローラーを表す値のリストが返されます。</returns>
+      <param name="provider">システムのコントローラーの ADC プロバイダー。</param>
+    </member><member name="M:Windows.Devices.Adc.AdcController.GetDefaultAsync">
+      <summary>システムの既定の ADC コントローラーを取得します。</summary>
+      <returns>システムの既定の ADC コントローラー、またはシステムの既定の ADC コントローラーがない場合は null。</returns>
+    </member><member name="M:Windows.Devices.Adc.AdcController.IsChannelModeSupported(Windows.Devices.Adc.AdcChannelMode)">
+      <summary>指定されたチャネル モードがコントローラーによってサポートされていることを確認します。</summary>
+      <returns>指定されたチャネル モードがサポートされる場合は true。それ以外の場合は false。</returns>
+      <param name="channelMode">チャネル モード。</param>
+    </member><member name="M:Windows.Devices.Adc.AdcController.OpenChannel(System.Int32)">
+      <summary>指定された ADC チャネルへの接続を開きます。</summary>
+      <returns>ADC チャネル。</returns>
+      <param name="channelNumber">接続先のチャネル。</param>
+    </member><member name="T:Windows.Devices.Adc.Provider.IAdcControllerProvider">
+      <summary>すべての ADC コントローラーに共通のプロパティとメソッドを表します。</summary>
+    </member><member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.ChannelCount">
+      <summary>ADC コントローラーに使用できるチャネルの数を取得します。</summary>
+      <returns>チャネルの数。</returns>
+    </member><member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.ChannelMode">
+      <summary>コントローラー チャネル モードを取得または設定します。</summary>
+      <returns>チャネル モード。</returns>
+    </member><member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.MaxValue">
+      <summary>コントローラーが返すことができる最大値を取得します。</summary>
+      <returns>最大値。</returns>
+    </member><member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.MinValue">
+      <summary>コントローラーが返すことができる最小値を取得します。</summary>
+      <returns>最小値。</returns>
+    </member><member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.ResolutionInBits">
+      <summary>コントローラーの解像度を、コントローラーが持っているビット数として取得します。</summary>
+      <returns>ビット数としての解像度。</returns>
+    </member><member name="M:Windows.Devices.Adc.Provider.IAdcControllerProvider.AcquireChannel(System.Int32)">
+      <summary>指定された ADC チャネルへの接続を取得します。</summary>
+      <param name="channel">接続先のチャネル。</param>
+    </member><member name="M:Windows.Devices.Adc.Provider.IAdcControllerProvider.IsChannelModeSupported(Windows.Devices.Adc.Provider.ProviderAdcChannelMode)">
+      <summary>指定されたチャネル モードがコントローラーによってサポートされているかどうかを調べます。</summary>
+      <returns>指定されたチャネル モードがサポートされる場合は true。それ以外の場合は false。</returns>
+      <param name="channelMode">対象のチャネル モード。</param>
+    </member><member name="M:Windows.Devices.Adc.Provider.IAdcControllerProvider.ReadValue(System.Int32)">
+      <summary>指定されたチャネルのアナログ値のデジタル表現を取得します。</summary>
+      <returns>アナログ値のデジタル表現。</returns>
+      <param name="channelNumber">読み取り元のチャネル。</param>
+    </member><member name="M:Windows.Devices.Adc.Provider.IAdcControllerProvider.ReleaseChannel(System.Int32)">
+      <summary>チャネル接続を解放し、他のユーザーが使用できるようにそのチャネルを開きます。</summary>
+      <param name="channel">接続を閉じるチャネル。</param>
+    </member><member name="T:Windows.Devices.Adc.Provider.IAdcProvider">
+      <summary>すべての ADC プロバイダーに共通するメソッドを表します。</summary>
+    </member><member name="M:Windows.Devices.Adc.Provider.IAdcProvider.GetControllers">
+      <summary>システムで使用可能な ADC コントローラーを取得します。</summary>
+      <returns>このメソッドが正常に完了すると、システムで使用可能なすべてのコントローラーを表す値のリストが返されます。</returns>
+    </member><member name="T:Windows.Devices.Adc.Provider.ProviderAdcChannelMode">
+      <summary>ピン値の表示方法を決定します。 具体的な実装はプロバイダーによって決定されるため、差分は完全微分または擬似微分の可能性があります。</summary>
+    </member><member name="F:Windows.Devices.Adc.Provider.ProviderAdcChannelMode.Differential">
+      <summary>2 つのピンの違い。</summary>
+    </member><member name="F:Windows.Devices.Adc.Provider.ProviderAdcChannelMode.SingleEnded">
+      <summary>特定のピンの単純な値。</summary>
+    </member><member name="T:Windows.Devices.Gpio.GpioController">
+      <summary>システムの既定の汎用 I/O (GPIO) コントローラーを表します。</summary>
+    </member><member name="P:Windows.Devices.Gpio.GpioController.PinCount">
+      <summary>汎用 I/O (GPIO) コントローラーのピンの数を取得します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>GPIO コントローラーのピンの数。 一部のピンはユーザー モードで使用できないことがあります。 ピン番号が実際のピンにどのように対応するかについては、基板のドキュメントを参照してください。</returns>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.GetControllersAsync(Windows.Devices.Gpio.Provider.IGpioProvider)">
+      <summary>システムに非同期的に接続されているすべてのコントローラーを取得します。</summary>
+      <returns>メソッドが正常に完了すると、システムで使用可能なコントローラーを表す値のリストが返されます。</returns>
+      <param name="provider">システムのコントローラーの GPIO プロバイダー。</param>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.GetDefault">
+      <summary>システムの既定の汎用 I/O (GPIO) コントローラーを取得します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <deprecated type="deprecate">このメソッドは、GetDefaultAsync のために使用されなくなりました。</deprecated>
+      <returns>システムの既定の GPIO コントローラー、またはシステムの既定の GPIO コントローラーがない場合は null。</returns>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.GetDefaultAsync">
+      <summary>システムの既定の汎用 I/O (GPIO) コントローラーを取得します。</summary>
+      <returns>システムの既定の GPIO コントローラー、またはシステムの既定の GPIO コントローラーがない場合は null。</returns>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.OpenPin(System.Int32)">
+      <summary>指定の汎用 I/O (GPIO) ピンへの接続を排他モードで開きます。</summary>
+      <returns>開いた GPIO ピン。</returns>
+      <param name="pinNumber">開く GPIO ピンのピン番号。 一部のピンはユーザー モードで使用できないことがあります。 ピン番号が実際のピンにどのように対応するかについては、基板のドキュメントを参照してください。</param>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.OpenPin(System.Int32,Windows.Devices.Gpio.GpioSharingMode)">
+      <summary>指定の汎用 I/O (GPIO) ピンを指定のモードで開きます。</summary>
+      <returns>開いた GPIO ピン。</returns>
+      <param name="pinNumber">開く GPIO ピンのピン番号。 一部のピンはユーザー モードで使用できないことがあります。 ピン番号が実際のピンにどのように対応するかについては、基板のドキュメントを参照してください。</param>
+      <param name="sharingMode">ピンを開いたまま他のピンへの接続を開くことができるかどうかを決定する、GPIO ピンを開くモード。</param>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.TryOpenPin(System.Int32,Windows.Devices.Gpio.GpioSharingMode,Windows.Devices.Gpio.GpioPin@,Windows.Devices.Gpio.GpioOpenStatus@)">
+      <summary>指定したモードで指定した汎用 I/O (GPIO) ピンを開き、ピンをプログラムで開くエラーを処理するのに使用できるステータス値を取得します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>メソッドによりピンが正常に開かれた場合は true。それ以外の場合は false。 メソッドから true が返された場合、pin パラメーターは GpioPin のインスタンスを受け取り、openStatus パラメーターは GpioOpenStatus.PinOpened を受け取ります。 メソッドから false が返された場合、pin パラメーターは null で、openStatus パラメーターは、その操作が失敗した原因を受け取ります。</returns>
+      <param name="pinNumber">開く GPIO ピンのピン番号。 一部のピンはユーザー モードで使用できないことがあります。 ピン番号が実際のピンにどのように対応するかについては、基板のドキュメントを参照してください。</param>
+      <param name="sharingMode">ピンを開いたまま他のピンへの接続を開くことができるかどうかを決定する、GPIO ピンを開くモード。</param>
+      <param name="pin">戻り値が true の場合は開いている GPIO のピン、それ以外の場合は null。</param>
+      <param name="openStatus">GPIO ピンを開くのに成功した、または GPIO ピンを開くのに失敗した理由を示す列挙値。</param>
+    </member><member name="T:Windows.Devices.Gpio.GpioOpenStatus">
+      <summary>GpioPin.TryOpenPin メソッドでピンを開いた場合の考えられる結果について説明します。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioOpenStatus.PinOpened">
+      <summary>GPIO ピンが正常に開きました。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioOpenStatus.PinUnavailable">
+      <summary>ピンはシステムによって予約されているため、ユーザー モードで実行するアプリケーションでは使用できません。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioOpenStatus.SharingViolation">
+      <summary>現在ピンは互換性のない共有モードで開かれています。 例: ピンは、既に GpioSharingMode.Exclusive モードで開いています。ピンは、GpioSharingMode.Exclusive モードで開くように要求したとき、既に GpioSharingMode.SharedReadOnly モードで開いています。</summary>
+    </member><member name="T:Windows.Devices.Gpio.GpioPin">
+      <summary>汎用 I/O (GPIO) ピンを表します。</summary>
+    </member><member name="P:Windows.Devices.Gpio.GpioPin.DebounceTimeout">
+      <summary>ピンの値の変更がフィルターで除外され、ValueChanged イベントが生成されない間隔を示す、汎用 I/O (GPIO) ピンのデバウンス タイムアウトを取得または設定します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>ピンの値の変更がフィルターで除外され、ValueChanged イベントが生成されない間隔を示す、汎用 I/O (GPIO) ピンのデバウンス タイムアウト。 この間隔が 0 の場合、ピンの値に対するすべての変更により ValueChanged イベントが生成されます。</returns>
+    </member><member name="P:Windows.Devices.Gpio.GpioPin.PinNumber">
+      <summary>汎用 I/O (GPIO) ピンのピン番号を取得します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>GPIO ピンのピン番号。</returns>
+    </member><member name="P:Windows.Devices.Gpio.GpioPin.SharingMode">
+      <summary>開いている汎用 I/O (GPIO) ピンの共有モードを取得します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>開いている GPIO ピンの共有モード。</returns>
+    </member><member name="E:Windows.Devices.Gpio.GpioPin.ValueChanged">
+      <summary>ピンが入力として構成されている場合は外部刺激により、ピンが出力として構成されている場合は値がピンに記述されたことにより、汎用 I/O (GPIO) ピンの値が変更された場合に発生します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.Close">
+      <summary>汎用 I/O (GPIO) ピンを閉じ、関連付けられていたリソースを解放します。</summary>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.GetDriveMode">
+      <summary>汎用 I/O (GPIO) ピンの現在のドライブ モードを取得します。 ドライブ モードは、汎用 I/O (GPIO) ピンを入力と出力のどちらとして構成するか、また値がピンに対してどのように動作するかを指定します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>GPIO ピンの現在のドライブ モードを示す列挙値。 ドライブ モードは、汎用 I/O (GPIO) ピンを入力と出力のどちらとして構成するか、また値がピンに対してどのように動作するかを指定します。</returns>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.IsDriveModeSupported(Windows.Devices.Gpio.GpioPinDriveMode)">
+      <summary>汎用 I/O (GPIO) ピンが指定されたドライブ モードをサポートするかどうかを取得します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>GPIO ピンが driveMode で指定されたドライブ モードをサポートする場合は true。それ以外の場合は false。 SetDriveMode を呼び出したときに、このメソッドから false が返されるドライブ モードを指定すると、SetDriveMode により例外が生成されます。</returns>
+      <param name="driveMode">サポートを確認するドライブ モード。</param>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.Read">
+      <summary>汎用 I/O (GPIO) ピンの現在の値を読み取ります。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>GPIO ピンの現在の値。 ピンが出力として構成されている場合、この値はピンに書き込まれた最後の値です。</returns>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.SetDriveMode(Windows.Devices.Gpio.GpioPinDriveMode)">
+      <summary>汎用 I/O (GPIO) ピンのドライブ モードを設定します。 ドライブ モードは、汎用 I/O (GPIO) ピンを入力と出力のどちらとして構成するか、また値がピンに対してどのように動作するかを指定します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <param name="value">GPIO ピンに使用するドライブ モードを指定する列挙値。 ドライブ モードは、汎用 I/O (GPIO) ピンを入力と出力のどちらとして構成するか、また値がピンに対してどのように動作するかを指定します。</param>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.Write(Windows.Devices.Gpio.GpioPinValue)">
+      <summary>ピンが出力として構成されている場合は、現在のドライブ モードに応じて汎用 I/O (GPIO) ピンに指定された値を実行し、ピンが入力として構成されている場合は、ピンのラッチ状態の出力値を更新します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <param name="value">GPIO ピンに書き込む列挙値。 GPIO ピンが出力として構成されている場合、メソッドはピンの現在のドライブ モードに応じて指定された値を実行します。GPIO ピンが入力として構成されている場合、メソッドはピンのラッチ状態の出力値を更新します。 ラッチ状態の値は、ピンの構成が出力に変更されたときに、ピンに対して実行されます。</param>
+    </member><member name="T:Windows.Devices.Gpio.GpioPinDriveMode">
+      <summary>汎用 I/O (GPIO) ピンを入力と出力のどちらとして構成するか、また値がピンに対してどのように動作するかについて説明します。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.Input">
+      <summary>高いインピーダンスとフローティング モードで GPIO ピンを構成します。 このピンの GpioPin.Read メソッドを呼び出すと、現在のピンの状態が外部で動作したものとしてメソッドから返されます。 GpioPin.Write メソッドを呼び出すと、ピンのラッチ状態の出力値がメソッドにより設定されます。 ピンが出力に変更されると、このラッチ状態の出力値を取ります。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.InputPullDown">
+      <summary>地面へのプルダウン抵抗器を使用して高いインピーダンスとして GPIO ピンを設定します。このピンの GpioPin.Read メソッドを呼び出すと、現在のピンの状態が外部で動作したものとしてメソッドから返されます。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.InputPullUp">
+      <summary>電圧チャージ接続 (VCC) へのプルアップ抵抗器を使用して高いインピーダンスとして GPIO ピンを設定します。このピンの GpioPin.Read メソッドを呼び出すと、既にピンに書き込まれた値がメソッドから返されます。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.Output">
+      <summary>低いインピーダンスとストロング ドライブ モードで GPIO ピンを構成します。 GpioPin.Write の値によりこのピンの GpioPinValue.High メソッドを呼び出すと、ピンの低インピーダンスの high 値がメソッドにより生成されます。 値 GpioPinValue.Low を使用してこのピンの GpioPin.Write メソッドを呼び出すと、ピンの低インピーダンスの値 low がメソッドにより生成されます。このピンの GpioPin.Read メソッドを呼び出すと、既にピンに書き込まれている値がメソッドにより返されます。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.OutputOpenDrain">
+      <summary>GPIO をオープン ドレイン モードで構成します。値 GpioPinValue.Low を使用してこのピンの GpioPin.Write メソッドを呼び出すと、ピンに値 low がメソッドにより実行されます。 GpioPin.Write の値によりこのピンの GpioPinValue.High メソッドを呼び出すと、メソッドはピンをフローティング モードにします。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.OutputOpenDrainPullUp">
+      <summary>抵抗プルアップ モードを使用してオープン ドレイン モードで GPIO ピンを構成します。値 GpioPinValue.Low を使用してこのピンの GpioPin.Write メソッドを呼び出すと、低インピーダンスの low 状態がメソッドにより生成されます。 GpioPin.Write の値によりこのピンの GpioPinValue.High メソッドを呼び出すと、VCC へのプルアップ抵抗器を使用してピンが高インピーダンスとしてメソッドにより構成されます。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.OutputOpenSource">
+      <summary>GPIO ピンをオープン コレクター モードで構成します。値 GpioPinValue.High を使用してこのピンの GpioPin.Write メソッドを呼び出すと、ピンに値 high がメソッドにより実行されます。 GpioPin.Write の値によりこのピンの GpioPinValue.Low メソッドを呼び出すと、メソッドはピンをフローティング モードで構成します。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.OutputOpenSourcePullDown">
+      <summary>GPIO ピンをオープン コレクター モードで構成します。値 GpioPinValue.High を使用してこのピンの GpioPin.Write メソッドを呼び出すと、ピンに値 high がメソッドにより実行されます。 GpioPin.Write の値によりこのピンの GpioPinValue.High メソッドを呼び出すと、VCC へのプルパップ抵抗器を使用してピンが高インピーダンスとしてメソッドにより構成されます。</summary>
+    </member><member name="T:Windows.Devices.Gpio.GpioPinEdge">
+      <summary>GpioPin.ValueChanged イベントで汎用 I/O (GPIO) ピンの値に発生する可能性がある変化の種類について説明します。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinEdge.FallingEdge">
+      <summary>GPIO ピンの値が高い値から低い値に変化しました。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinEdge.RisingEdge">
+      <summary>GPIO ピンの値が低い値から高い値に変化しました。</summary>
+    </member><member name="T:Windows.Devices.Gpio.GpioPinValue">
+      <summary>汎用 I/O (GPIO) ピンの有効な値について説明します。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinValue.High">
+      <summary>GPIO ピンの値が高い値を示します。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinValue.Low">
+      <summary>GPIO ピンの値が低い値を示します。</summary>
+    </member><member name="T:Windows.Devices.Gpio.GpioPinValueChangedEventArgs">
+      <summary>ピンが入力として構成されている場合は外部刺激により、ピンが出力として構成されている場合は値がピンに記述されたことにより、汎用 I/O (GPIO) ピンの値が変更された場合に発生する GpioPin.ValueChanged イベントに関するデータを提供します。</summary>
+    </member><member name="P:Windows.Devices.Gpio.GpioPinValueChangedEventArgs.Edge">
+      <summary>GpioPin.ValueChanged イベントで汎用 I/O (GPIO) ピンの値に発生した変化の種類を取得します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>GpioPin.ValueChanged イベントで GPIO ピンの値に発生した変化の種類を示す列挙値。</returns>
+    </member><member name="T:Windows.Devices.Gpio.GpioSharingMode">
+      <summary>汎用 I/O (GPIO) ピンを開くことができるモードについて説明します。 これらのモードは、ピンを開いたまま他の GPIO ピンへの接続を開くことができるかどうかを決定します。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioSharingMode.Exclusive">
+      <summary>他のピンへの接続を開くことができないように、GPIO ピンを排他的に開きます。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioSharingMode.SharedReadOnly">
+      <summary>SharedReadOnly モードで他のピンへの接続を開くことができるように、GPIO ピンを共有モードで開きます。 共有モードの GPIO ピンの状態を変更しない操作のみを実行できます。 共有モードで GPIO ピンに実行できる操作は、GpioPin.Read メソッドの呼び出し、GpioPin.GetDriveMode メソッドの呼び出し、GpioPin.PinNumber や GpioPin.DebounceTimeout などのプロパティ値の取得、GpioPin.ValueChanged イベントのイベント ハンドラーの登録などです。</summary>
+    </member><member name="T:Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs">
+      <summary>IGpioPinProvider.ValueChanged イベントに関する情報を提供します。</summary>
+    </member><member name="M:Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs.#ctor(Windows.Devices.Gpio.Provider.ProviderGpioPinEdge)">
+      <summary>指定されたエッジ値を使用して GpioPinProviderValueChangedEventArgs クラスを構築します。</summary>
+      <param name="edge">目的のピン エッジ。</param>
+    </member><member name="P:Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs.Edge">
+      <summary>ピンの変更後の値を取得します。</summary>
+      <returns>ピン エッジ。</returns>
+    </member><member name="T:Windows.Devices.Gpio.Provider.IGpioControllerProvider">
+      <summary>すべての汎用 I/O (GPIO) コントローラーに共通するアクションを表します。</summary>
+    </member><member name="P:Windows.Devices.Gpio.Provider.IGpioControllerProvider.PinCount">
+      <summary>使用可能な汎用 I/O (GPIO) ピンの数を取得します。</summary>
+      <returns>使用できる GPIO ピンの数。</returns>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioControllerProvider.OpenPinProvider(System.Int32,Windows.Devices.Gpio.Provider.ProviderGpioSharingMode)">
+      <summary>特定のピンの汎用 I/O (GPIO) ピン プロバイダーを開き、返します。</summary>
+      <returns>指定ピンの GPIO ピン プロバイダー。</returns>
+      <param name="pin">目的の GPIO ピン数。</param>
+      <param name="sharingMode">ピンを開く共有モード。</param>
+    </member><member name="T:Windows.Devices.Gpio.Provider.IGpioPinProvider">
+      <summary>汎用 I/O (GPIO) ピン プロバイダーに共通するアクションを表します。</summary>
+    </member><member name="P:Windows.Devices.Gpio.Provider.IGpioPinProvider.DebounceTimeout">
+      <summary>ピンの値の変更がフィルターで除外され、ValueChanged イベントが生成されない間隔を示す、汎用 I/O (GPIO) ピンのデバウンス タイムアウトを取得または設定します。</summary>
+      <returns>ピンの値の変更がフィルターで除外され、ValueChanged イベントが生成されない間隔を示す、汎用 I/O (GPIO) ピンのデバウンス タイムアウト。 この間隔が 0 の場合、ピンの値に対するすべての変更により ValueChanged イベントが生成されます。</returns>
+    </member><member name="P:Windows.Devices.Gpio.Provider.IGpioPinProvider.PinNumber">
+      <summary>汎用 I/O (GPIO) ピンのピン番号を取得します。</summary>
+      <returns>GPIO ピンのピン番号。</returns>
+    </member><member name="P:Windows.Devices.Gpio.Provider.IGpioPinProvider.SharingMode">
+      <summary>開いている汎用 I/O (GPIO) ピンの共有モードを取得します。</summary>
+      <returns>開いている GPIO ピンの共有モード。</returns>
+    </member><member name="E:Windows.Devices.Gpio.Provider.IGpioPinProvider.ValueChanged">
+      <summary>ピンの値が変更された場合に発生するイベント。</summary>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.GetDriveMode">
+      <summary>ピンの現在設定されているドライブ モードを取得します。</summary>
+      <returns>ピンのドライブ モード。</returns>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.IsDriveModeSupported(Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode)">
+      <summary>ドライブ モードがピンでサポートされているかどうかを判定します。</summary>
+      <returns>ドライブ モードがサポートされる場合は true。それ以外の場合は false。</returns>
+      <param name="driveMode">目的のドライブ モード。</param>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.Read">
+      <summary>ピンの現在の値を読み取ります。</summary>
+      <returns>ピンの値。</returns>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.SetDriveMode(Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode)">
+      <summary>ピンのドライブ モードを設定します。</summary>
+      <param name="value">ピンの目的のドライブ モード。</param>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.Write(Windows.Devices.Gpio.Provider.ProviderGpioPinValue)">
+      <summary>ピンに値を書き込みます。</summary>
+      <param name="value">書き込む値。</param>
+    </member><member name="T:Windows.Devices.Gpio.Provider.IGpioProvider">
+      <summary>汎用 I/O (GPIO) コントローラー プロバイダーに共通するアクションを表します。</summary>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioProvider.GetControllers">
+      <summary>システムで使用可能なコントローラーを取得します。</summary>
+      <returns>システムで使用できるコントローラーを表す値のリスト。</returns>
+    </member><member name="T:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode">
+      <summary>汎用 I/O (GPIO) ピンを入力と出力のどちらとして構成するか、また値がピンに対してどのように動作するかについて説明します。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.Input">
+      <summary>高いインピーダンスとフローティング モードで GPIO ピンを構成します。 このピンの IGpioPinProvider.Read メソッドを呼び出すと、現在のピンの状態が外部で動作したものとしてメソッドから返されます。 IGpioPinProvider.Write メソッドを呼び出すと、ピンのラッチ状態の出力値がメソッドにより設定されます。 ピンが出力に変更されると、このラッチ状態の出力値を取ります。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.InputPullDown">
+      <summary>地面へのプルダウン抵抗器を使用して高いインピーダンスとして GPIO ピンを設定します。このピンの IGpioPinProvider.Read メソッドを呼び出すと、現在のピンの状態が外部で動作したものとしてメソッドから返されます。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.InputPullUp">
+      <summary>電圧チャージ接続 (VCC) へのプルアップ抵抗器を使用して高いインピーダンスとして GPIO ピンを設定します。このピンの IGpioPinProvider.Read メソッドを呼び出すと、既にピンに書き込まれた値がメソッドから返されます。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.Output">
+      <summary>低いインピーダンスとストロング ドライブ モードで GPIO ピンを構成します。 ProviderGpioPinValue.High の値によりこのピンの IGpioPinProvider.Write メソッドを呼び出すと、ピンの低いインピーダンスの上位値がメソッドにより生成されます。 値 ProviderGpioPinValue.Low を使用してこのピンの IGpioPinProvider.Write メソッドを呼び出すと、ピンの低インピーダンスの値 low がメソッドにより生成されます。このピンの IGpioPinProvider.Read メソッドを呼び出すと、既にピンに書き込まれている値がメソッドにより返されます。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.OutputOpenDrain">
+      <summary>GPIO をオープン ドレイン モードで構成します。値 ProviderGpioPinValue.Low を使用してこのピンの IGpioPinProvider.Write メソッドを呼び出すと、ピンに値 low がメソッドにより実行されます。 ProviderGpioPinValue.High の値によりこのピンの IGpioPinProvider.Write メソッドを呼び出すと、メソッドはピンをフローティング モードにします。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.OutputOpenDrainPullUp">
+      <summary>抵抗プルアップ モードを使用してオープン ドレイン モードで GPIO ピンを構成します。値 ProviderGpioPinValue.Low を使用してこのピンの IGpioPinProvider.Write メソッドを呼び出すと、低インピーダンスの low 状態がメソッドにより生成されます。 ProviderGpioPinValue.High の値によりこのピンの IGpioPinProvider.Write メソッドを呼び出すと、VCC へのプルパップ抵抗器を使用してピンが高インピーダンスとしてメソッドにより構成されます。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.OutputOpenSource">
+      <summary>GPIO ピンをオープン コレクター モードで構成します。値 ProviderGpioPinValue.High を使用してこのピンの IGpioPinProvider.Write メソッドを呼び出すと、ピンに値 high がメソッドにより実行されます。 ProviderGpioPinValue.Low の値によりこのピンの IGpioPinProvider.Write メソッドを呼び出すと、メソッドはピンをフローティング モードで構成ます。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.OutputOpenSourcePullDown">
+      <summary>GPIO ピンをオープン コレクター モードで構成します。値 ProviderGpioPinValue.High を使用してこのピンの IGpioPinProvider.Write メソッドを呼び出すと、ピンに値 high がメソッドにより実行されます。 ProviderGpioPinValue.Low の値によりこのピンの IGpioPinProvider.Write メソッドを呼び出すと、地面へのプルダウン抵抗器を使用してピンが高インピーダンスとしてメソッドにより構成されます。</summary>
+    </member><member name="T:Windows.Devices.Gpio.Provider.ProviderGpioPinEdge">
+      <summary>汎用 I/O (GPIO) ピンの値に発生する可能性がある変化の種類について説明します。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinEdge.FallingEdge">
+      <summary>下降エッジ、つまり値が high から low に変化する場合。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinEdge.RisingEdge">
+      <summary>上昇エッジ、つまり値が low から high に変化する場合。</summary>
+    </member><member name="T:Windows.Devices.Gpio.Provider.ProviderGpioPinValue">
+      <summary>汎用 I/O (GPIO) ピンの有効な値について説明します。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinValue.High">
+      <summary>GPIO ピンの値が高い値を示します。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinValue.Low">
+      <summary>GPIO ピンの値が低い値を示します。</summary>
+    </member><member name="T:Windows.Devices.Gpio.Provider.ProviderGpioSharingMode">
+      <summary>汎用 I/O (GPIO) ピンを開くことができるモードについて説明します。 これらのモードは、ピンを開いたまま他の GPIO ピンへの接続を開くことができるかどうかを決定します。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioSharingMode.Exclusive">
+      <summary>他のピンへの接続を開くことができないように、GPIO ピンを排他的に開きます。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioSharingMode.SharedReadOnly">
+      <summary>SharedReadOnly モードで他のピンへの接続を開くことができるように、GPIO ピンを共有モードで開きます。 ピンの状態を変更しない操作のみを実行できます。</summary>
+    </member><member name="T:Windows.Devices.I2c.I2cBusSpeed">
+      <summary>相互統合回路 (I2C) デバイスに接続するために使用できるバスの速度について説明します。 バス速度とは、デバイスにアクセスするときに I2C の時間を記録する頻度のことです。</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cBusSpeed.FastMode">
+      <summary>最高速度は 400 kHz です。</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cBusSpeed.StandardMode">
+      <summary>標準速度は 100 キロヘルツ (kHz) です。 これが既定の速度です。</summary>
+    </member><member name="T:Windows.Devices.I2c.I2cConnectionSettings">
+      <summary>相互統合回路 (I2C) デバイスで使用する接続設定を表します。</summary>
+    </member><member name="M:Windows.Devices.I2c.I2cConnectionSettings.#ctor(System.Int32)">
+      <summary>バスの速度と排他的な共有モードの標準モードの既定の設定を使用して、指定したバス アドレスの相互統合回路 (I2C) デバイスの、I2cConnectionSettings クラスの新しいインスタンスを作成し初期化します。</summary>
+      <param name="slaveAddress">I2cConnectionSettings の設定が適用される相互統合回路 (I2C) デバイスのバス アドレス。 7 ビット アドレス指定のみがサポートされているため、有効な値の範囲は 8 ~ 119 です。</param>
+    </member><member name="P:Windows.Devices.I2c.I2cConnectionSettings.BusSpeed">
+      <summary>相互統合回路 (I2C) デバイスに接続するために使用するバスの速度を取得または設定します。 バス速度とは、デバイスにアクセスするときに I2C の時間を記録する頻度のことです。</summary>
+      <returns>I2C デバイスに接続するために使用するバスの速度。</returns>
+    </member><member name="P:Windows.Devices.I2c.I2cConnectionSettings.SharingMode">
+      <summary>相互統合回路 (I2C) バス アドレスに接続するために使用する共有モードを取得または設定します。 このモードは、I2C バス アドレスに接続している間に他の I2C バス アドレスへの接続を開くことができるかどうかを決定します。</summary>
+      <returns>I2C バス アドレスに接続するために使用する共有モード。</returns>
+    </member><member name="P:Windows.Devices.I2c.I2cConnectionSettings.SlaveAddress">
+      <summary>相互統合回路 (I2C) デバイスのバス アドレスを取得または設定します。</summary>
+      <returns>I2C デバイスのバス アドレス。 7 ビット アドレス指定のみがサポートされているため、有効な値の範囲は 8 ~ 119 です。</returns>
+    </member><member name="T:Windows.Devices.I2c.I2cController">
+      <summary>システムの I2C コントローラーを表します。</summary>
+    </member><member name="M:Windows.Devices.I2c.I2cController.GetControllersAsync(Windows.Devices.I2c.Provider.II2cProvider)">
+      <summary>システムにあるすべての I2C コントローラーを取得します。</summary>
+      <returns>メソッドが正常に完了すると、システムで使用可能な I2C コントローラーを表す値のリストが返されます。</returns>
+      <param name="provider">システムのコントローラーの I2C プロバイダー。</param>
+    </member><member name="M:Windows.Devices.I2c.I2cController.GetDefaultAsync">
+      <summary>システムの既定の I2C コントローラーを取得します。</summary>
+      <returns>システムの既定の I2C コントローラー、またはシステムの既定の I2C コントローラーがない場合は null。</returns>
+    </member><member name="M:Windows.Devices.I2c.I2cController.GetDevice(Windows.Devices.I2c.I2cConnectionSettings)">
+      <summary>指定した設定で I2C デバイスを取得します。</summary>
+      <returns>I2C デバイス。</returns>
+      <param name="settings">目的の接続設定。</param>
+    </member><member name="T:Windows.Devices.I2c.I2cDevice">
+      <summary>相互統合回路 (I2C) バス上のデバイスへの通信チャネルを表します。</summary>
+    </member><member name="P:Windows.Devices.I2c.I2cDevice.ConnectionSettings">
+      <summary>相互統合回路 (I2C) デバイスとの通信に使用する接続設定を取得します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>相互統合回路 (I2C) デバイスとの通信に使用する接続設定。</returns>
+    </member><member name="P:Windows.Devices.I2c.I2cDevice.DeviceId">
+      <summary>デバイスの相互統合回路 (I2C) バス コントローラーの、プラグ アンド プレイ デバイスの識別子を取得します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>デバイスの相互統合回路 (I2C) バス コントローラーの、プラグ アンド プレイ デバイスの識別子。</returns>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.Close">
+      <summary>相互統合回路 (I2C) デバイスへの接続を閉じます。</summary>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.FromIdAsync(System.String,Windows.Devices.I2c.I2cConnectionSettings)">
+      <summary>指定した接続の設定を使用して、指定のプラグ アンド プレイ デバイスの識別子を持つ相互統合回路 (I2C) バス コントローラーの I2cDevice オブジェクトを非同期的に取得します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>I2cDevice オブジェクトを返す非同期操作。</returns>
+      <param name="deviceId">I2cDevice オブジェクトを作成する I2C バス コントローラーの、プラグ アンド プレイ デバイスの識別子。</param>
+      <param name="settings">deviceId で指定される I2C バス コントローラーとの通信に使用する接続設定。</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.GetDeviceSelector">
+      <summary>システム上のすべての相互統合回路 (I2C) バス コントローラーに関する、高度な検索テクニック (AQS) の文字列を取得します。</summary>
+      <returns>これらのバス コントローラーの DeviceInformation オブジェクトを取得する DeviceInformation.FindAllAsync メソッドで使用できる、システム上のすべての I2C バス コントローラーの AQS 文字列。</returns>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.GetDeviceSelector(System.String)">
+      <summary>指定した表示名の相互統合回路 (I2C) バスの、高度な検索テクニック (AQS) の文字列を取得します。</summary>
+      <returns>そのバスの DeviceInformation オブジェクトを取得する DeviceInformation.FindAllAsync メソッドで使用できる、friendlyName を指定する I2C バスの AQS 文字列。</returns>
+      <param name="friendlyName">AQS の文字列を取得する特定のハードウェア プラットフォームの、I2C バスの表示名。</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.Read(System.Byte[])">
+      <summary>デバイスが指定されたバッファーに接続される相互統合回路 (I2C) バスからデータを読み取ります。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <param name="buffer">I2C バスからデータを読み取るバッファー。 バッファーの長さにより、デバイスから要求するデータの量が決まります。</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.ReadPartial(System.Byte[])">
+      <summary>デバイスが指定されたバッファーに接続される相互統合回路 (I2C) バスからデータを読み取り、エラー処理に使用できる操作の成功に関する情報を返します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>読み取り操作の成功と、操作によりバッファーに読み込まれた実際のバイト数に関する情報が格納された構造体。</returns>
+      <param name="buffer">I2C バスからデータを読み取るバッファー。 バッファーの長さにより、デバイスから要求するデータの量が決まります。</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.Write(System.Byte[])">
+      <summary>I2cDevice オブジェクトの作成に使用する I2cConnectionSettings オブジェクトで指定するバス アドレスに基づいて、デバイスが接続する相互統合回路 (I2C) バスにデータを書き込みます。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <param name="buffer">I2C デバイスに書き込むデータを格納するバッファー。 このデータにバス アドレスを含めないでください。</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.WritePartial(System.Byte[])">
+      <summary>デバイスが接続される相互統合回路 (I2C) バスにデータを書き込み、エラー処理に使用できる操作の成功に関する情報を返します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>書き込み操作の成功と、操作によりバッファーに書き込まれた実際のバイト数に関する情報が格納された構造体。</returns>
+      <param name="buffer">I2C デバイスに書き込むデータを格納するバッファー。 このデータにバス アドレスを含めないでください。</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.WriteRead(System.Byte[],System.Byte[])">
+      <summary>分割不可能な操作を実行して、デバイスを接続する相互統合回路 (I2C) バスにデータを書き込み、そのバスからデータを読み取り、読み取りと書き込みの間の再起動条件を送信します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <param name="writeBuffer">I2C デバイスに書き込むデータを格納するバッファー。 このデータにバス アドレスを含めないでください。</param>
+      <param name="readBuffer">I2C バスからデータを読み取るバッファー。 バッファーの長さにより、デバイスから要求するデータの量が決まります。</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.WriteReadPartial(System.Byte[],System.Byte[])">
+      <summary>分割不可能な操作を実行して、デバイスが接続される相互統合回路 (I2C) バスにデータを書き込み、そのバスからデータを読み取り、エラー処理に使用できる操作の成功に関する情報を返します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>操作の読み取りと書き込みの両方が成功したかどうかに関する情報と、操作により書き込まれた実際のバイト数と操作により読み込まれた実際のバイト数の合計が格納された構造体。</returns>
+      <param name="writeBuffer">I2C デバイスに書き込むデータを格納するバッファー。 このデータにバス アドレスを含めないでください。</param>
+      <param name="readBuffer">I2C バスからデータを読み取るバッファー。 バッファーの長さにより、デバイスから要求するデータの量が決まります。</param>
+    </member><member name="T:Windows.Devices.I2c.I2cSharingMode">
+      <summary>相互統合回路 (I2C) バス アドレスに接続できるモードについて説明します。 これらのモードは、I2C バス アドレスに接続している間に他の I2C バス アドレスへの接続を開くことができるかどうかを決定します。</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cSharingMode.Exclusive">
+      <summary>I2C バス アドレスに排他的に接続し、その間他の I2C バス アドレスに接続できないようにします。
+これは既定のモードです。</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cSharingMode.Shared">
+      <summary>I2C バス アドレスに共有モードで接続し、その間他の I2C バス アドレスに接続できるようにします。 共有接続では、すべての操作を実行できますが、そのような接続の使用には注意してください。 複数のクライアント アプリケーションが I2C デバイスのグローバル状態を変更するとき、競合状態が発生することがあります。共有接続を使用するユース ケースの例は、デバイスの状態を変更しないで読み取り値を取得するセンサーです。</summary>
+    </member><member name="T:Windows.Devices.I2c.I2cTransferResult">
+      <summary>ReadPartial、WritePartial、WriteReadPartial メソッドにより実行されたデータ転送が成功したかどうか、またメソッドにより転送された実際のバイト数に関する情報を提供します。</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cTransferResult.BytesTransferred">
+      <summary>操作により転送された実際のバイト数。 この値が各メソッドに表す内容を次の表に示します。MethodDescriptionReadPartial 読み取り操作がバッファーに読み取り実際のバイト数。 Status メンバーの値が I2CTransferStatus.PartialTransfer の場合、この値が buffer パラメーターで指定したバッファーのバイト数より小さい場合があります。 WritePartialThe 書き込み操作により I2C デバイスに転送された実際のバイト数。 Status メンバーの値が I2CTransferStatus.PartialTransfer の場合、この値が buffer パラメーターで指定したバッファーのバイト数より小さい場合があります。 WriteReadPartial 操作により転送された実際のバイト数。操作により書き込まれたバイト数と操作により読み取られたバイト数の合計です。 I2CTransferStatus.PartialTransfer メンバーの値が Status の場合、この値が writeBuffer パラメーターと readBuffer パラメーターで指定したバッファーの長さの合計より小さい場合があります。</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cTransferResult.Status">
+      <summary>読み取りまたは書き込み操作が、メソッドで要求されたバイト数をすべて転送したかどうか、または、すべて転送されなかった理由を示す列挙値。 WriteReadPartial の場合、この値は読み取り操作と書き込み操作の両方のデータがすべて転送されたかどうかを示します。</summary>
+    </member><member name="T:Windows.Devices.I2c.I2cTransferStatus">
+      <summary>ReadPartial、WritePartial、WriteReadPartial メソッドにより実行されたデータ転送が成功したかどうか、または転送できなかった理由について説明します。</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cTransferStatus.FullTransfer">
+      <summary>データは完全に転送されました。 WriteReadPartial の場合、読み取りと書き込み操作の両方のデータは完全が転送されました。このステータス コードでは、メソッドが返す I2cTransferResult.BytesTransferred メンバーの値は、メソッドを呼び出したときに指定したバッファーのサイズと同じか、WriteReadPartial に指定した 2 つのバッファーのサイズの合計と等しくなります。</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cTransferStatus.PartialTransfer">
+      <summary>I2Cの デバイスは、すべてのデータが転送される前にデータ転送に対して否定応答を返しました。このステータス コードでは、メソッドが返す I2cTransferResult.BytesTransferred の値は、実際に転送されるバイト数になります。 WriteReadPartial の場合、この値は、操作により書き込まれたバイト数と操作により読み取られたバイト数の合計です。</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cTransferStatus.SlaveAddressNotAcknowledged">
+      <summary>バス アドレスが確認されませんでした。このステータス コードの場合、メソッドから返される I2cTransferResult.BytesTransferred メンバーの値は、実際に転送されたバイト数です。</summary>
+    </member><member name="T:Windows.Devices.I2c.II2cDeviceStatics">
+      <summary>相互統合回路 (I2C) バス上のデバイスへの通信チャネルを開く方法を示します。</summary>
+    </member><member name="M:Windows.Devices.I2c.II2cDeviceStatics.FromIdAsync(System.String,Windows.Devices.I2c.I2cConnectionSettings)">
+      <summary>指定した接続の設定を使用して、指定のプラグ アンド プレイ デバイスの識別子を持つ相互統合回路 (I2C) バス コントローラーの I2cDevice オブジェクトを非同期的に取得します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>I2cDevice オブジェクトを返す非同期操作。</returns>
+      <param name="deviceId">I2cDevice オブジェクトを作成する I2C バス コントローラーの、プラグ アンド プレイ デバイスの識別子。</param>
+      <param name="settings">deviceId で指定される I2C バス コントローラーとの通信に使用する接続設定。</param>
+    </member><member name="M:Windows.Devices.I2c.II2cDeviceStatics.GetDeviceSelector">
+      <summary>システム上のすべての相互統合回路 (I2C) バス コントローラーに関する、高度な検索テクニック (AQS) の文字列を取得します。</summary>
+      <returns>これらのバス コントローラーの DeviceInformation オブジェクトを取得する DeviceInformation.FindAllAsync メソッドで使用できる、システム上のすべての I2C バス コントローラーの AQS 文字列。</returns>
+    </member><member name="M:Windows.Devices.I2c.II2cDeviceStatics.GetDeviceSelector(System.String)">
+      <summary>指定した表示名の相互統合回路 (I2C) バスの、高度な検索テクニック (AQS) の文字列を取得します。</summary>
+      <returns>そのバスの DeviceInformation オブジェクトを取得する DeviceInformation.FindAllAsync メソッドで使用できる、friendlyName を指定する I2C バスの AQS 文字列。</returns>
+      <param name="friendlyName">AQS の文字列を取得する特定のハードウェア プラットフォームの、I2C バスの表示名。</param>
+    </member><member name="T:Windows.Devices.I2c.Provider.II2cControllerProvider">
+      <summary>すべての I2C コントローラーに共通のプロパティとメソッドを表します。</summary>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cControllerProvider.GetDeviceProvider(Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings)">
+      <summary>指定した設定で I2C デバイス プロバイダーを取得します。</summary>
+      <returns>I2C デバイス プロバイダー。</returns>
+      <param name="settings">目的の設定。</param>
+    </member><member name="T:Windows.Devices.I2c.Provider.II2cDeviceProvider">
+      <summary>すべての I2C デバイス プロバイダーに共通するメソッドを表します。</summary>
+    </member><member name="P:Windows.Devices.I2c.Provider.II2cDeviceProvider.DeviceId">
+      <summary>デバイスの相互統合回路 (I2C) バス コントローラーの、プラグ アンド プレイ デバイスの識別子を取得します。</summary>
+      <returns>デバイスの相互統合回路 (I2C) バス コントローラーの、プラグ アンド プレイ デバイスの識別子。</returns>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.Read(System.Byte[])">
+      <summary>デバイスが指定されたバッファーに接続される相互統合回路 (I2C) バスからデータを読み取ります。</summary>
+      <param name="buffer">I2C バスからデータを読み取るバッファー。 バッファーの長さにより、デバイスから要求するデータの量が決まります。</param>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.ReadPartial(System.Byte[])">
+      <summary>デバイスが指定されたバッファーに接続される相互統合回路 (I2C) バスからデータを読み取り、エラー処理に使用できる操作の成功に関する情報を返します。</summary>
+      <returns>読み取り操作の成功と、操作によりバッファーに読み込まれた実際のバイト数に関する情報が格納された構造体。</returns>
+      <param name="buffer">I2C バスからデータを読み取るバッファー。 バッファーの長さにより、デバイスから要求するデータの量が決まります。</param>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.Write(System.Byte[])">
+      <summary>デバイスが接続する相互統合回路 (I2C) バスにデータを書き込みます。</summary>
+      <param name="buffer">I2C デバイスに書き込むデータを格納するバッファー。 このデータにバス アドレスを含めないでください。</param>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.WritePartial(System.Byte[])">
+      <summary>デバイスが接続される相互統合回路 (I2C) バスにデータを書き込み、エラー処理に使用できる操作の成功に関する情報を返します。</summary>
+      <returns>書き込み操作の成功と、操作によりバッファーに書き込まれた実際のバイト数に関する情報が格納された構造体。</returns>
+      <param name="buffer">I2C デバイスに書き込むデータを格納するバッファー。 このデータにバス アドレスを含めないでください。</param>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.WriteRead(System.Byte[],System.Byte[])">
+      <summary>分割不可能な操作を実行して、デバイスを接続する相互統合回路 (I2C) バスにデータを書き込み、そのバスからデータを読み取り、読み取りと書き込みの間の再起動条件を送信します。</summary>
+      <param name="writeBuffer">I2C デバイスに書き込むデータを格納するバッファー。 このデータにバス アドレスを含めないでください。</param>
+      <param name="readBuffer">I2C バスからデータを読み取るバッファー。 バッファーの長さにより、デバイスから要求するデータの量が決まります。</param>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.WriteReadPartial(System.Byte[],System.Byte[])">
+      <summary>分割不可能な操作を実行して、デバイスが接続される相互統合回路 (I2C) バスにデータを書き込み、そのバスからデータを読み取り、エラー処理に使用できる操作の成功に関する情報を返します。</summary>
+      <returns>操作の読み取りと書き込みの両方が成功したかどうかに関する情報と、操作により書き込まれた実際のバイト数と操作により読み込まれた実際のバイト数の合計が格納された構造体。</returns>
+      <param name="writeBuffer">I2C デバイスに書き込むデータを格納するバッファー。 このデータにバス アドレスを含めないでください。</param>
+      <param name="readBuffer">I2C バスからデータを読み取るバッファー。 バッファーの長さにより、デバイスから要求するデータの量が決まります。</param>
+    </member><member name="T:Windows.Devices.I2c.Provider.II2cProvider">
+      <summary>すべての I2C プロバイダーに共通するアクションを表します。</summary>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cProvider.GetControllersAsync">
+      <summary>システムにあるすべての I2C コントローラーを取得します。</summary>
+      <returns>メソッドが正常に完了すると、システムで使用可能な I2C コントローラーを表す値のリストが返されます。</returns>
+    </member><member name="T:Windows.Devices.I2c.Provider.ProviderI2cBusSpeed">
+      <summary>相互統合回路 (I2C) デバイスに接続するために使用できるバスの速度について説明します。 バス速度とは、デバイスにアクセスするときに I2C の時間を記録する頻度のことです。</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cBusSpeed.FastMode">
+      <summary>最高速度は 400 kHz です。</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cBusSpeed.StandardMode">
+      <summary>標準速度は 100 キロヘルツ (kHz) です。 これが既定の速度です。</summary>
+    </member><member name="T:Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings">
+      <summary>相互統合回路 (I2C) デバイスで使用する接続設定を表します。</summary>
+    </member><member name="P:Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings.BusSpeed">
+      <summary>相互統合回路 (I2C) デバイスに接続するために使用するバスの速度を取得または設定します。 バス速度とは、デバイスにアクセスするときに I2C の時間を記録する頻度のことです。</summary>
+      <returns>I2C デバイスに接続するために使用するバスの速度。</returns>
+    </member><member name="P:Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings.SharingMode">
+      <summary>相互統合回路 (I2C) バス アドレスに接続するために使用する共有モードを取得または設定します。 このモードは、I2C バス アドレスに接続している間に他の I2C バス アドレスへの接続を開くことができるかどうかを決定します。</summary>
+      <returns>I2C バス アドレスに接続するために使用する共有モード。</returns>
+    </member><member name="P:Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings.SlaveAddress">
+      <summary>相互統合回路 (I2C) デバイスのバス アドレスを取得または設定します。</summary>
+      <returns>I2C デバイスのバス アドレス。 7 ビット アドレス指定のみがサポートされているため、有効な値の範囲は 8 ~ 119 です。</returns>
+    </member><member name="T:Windows.Devices.I2c.Provider.ProviderI2cSharingMode">
+      <summary>相互統合回路 (I2C) バス アドレスに接続できるモードについて説明します。 これらのモードは、I2C バス アドレスに接続している間に他の I2C バス アドレスへの接続を開くことができるかどうかを決定します。</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cSharingMode.Exclusive">
+      <summary>I2C バス アドレスに排他的に接続し、その間他の I2C バス アドレスに接続できないようにします。
+これは既定のモードです。</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cSharingMode.Shared">
+      <summary>I2C バス アドレスに共有モードで接続し、その間他の I2C バス アドレスに接続できるようにします。 共有接続では、すべての操作を実行できますが、そのような接続の使用には注意してください。 複数のクライアント アプリケーションが I2C デバイスのグローバル状態を変更するとき、競合状態が発生することがあります。共有接続を使用するユース ケースの例は、デバイスの状態を変更しないで読み取り値を取得するセンサーです。</summary>
+    </member><member name="T:Windows.Devices.I2c.Provider.ProviderI2cTransferResult">
+      <summary>ReadPartial、WritePartial、WriteReadPartial メソッドにより実行されたデータ転送が成功したかどうか、またメソッドにより転送された実際のバイト数に関する情報を提供します。</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferResult.BytesTransferred">
+      <summary>操作により転送された実際のバイト数。 この値が各メソッドに表す内容を次の表に示します。MethodDescriptionReadPartial 読み取り操作がバッファーに読み取り実際のバイト数。 Status メンバーの値が ProviderI2CTransferStatus.PartialTransfer の場合、この値が buffer パラメーターで指定したバッファーのバイト数より小さい場合があります。 WritePartialThe 書き込み操作により I2C デバイスに転送された実際のバイト数。 Status メンバーの値が ProviderI2CTransferStatus.PartialTransfer の場合、この値が buffer パラメーターで指定したバッファーのバイト数より小さい場合があります。 WriteReadPartial 操作により転送された実際のバイト数。操作により書き込まれたバイト数と操作により読み取られたバイト数の合計です。 ProviderI2CTransferStatus.PartialTransfer メンバーの値が Status の場合、この値が writeBuffer パラメーターと readBuffer パラメーターで指定したバッファーの長さの合計より小さい場合があります。</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferResult.Status">
+      <summary>読み取りまたは書き込み操作が、メソッドで要求されたバイト数をすべて転送したかどうか、または、すべて転送されなかった理由を示す列挙値。 WriteReadPartial の場合、この値は読み取り操作と書き込み操作の両方のデータがすべて転送されたかどうかを示します。</summary>
+    </member><member name="T:Windows.Devices.I2c.Provider.ProviderI2cTransferStatus">
+      <summary>ReadPartial、WritePartial、WriteReadPartial メソッドにより実行されたデータ転送が成功したかどうか、または転送できなかった理由について説明します。</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferStatus.FullTransfer">
+      <summary>データは完全に転送されました。 WriteReadPartial の場合、読み取りと書き込み操作の両方のデータは完全が転送されました。このステータス コードでは、メソッドが返す ProviderI2cTransferResult.BytesTransferred メンバーの値は、メソッドを呼び出したときに指定したバッファーのサイズと同じか、WriteReadPartial に指定した 2 つのバッファーのサイズの合計と等しくなります。</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferStatus.PartialTransfer">
+      <summary>I2Cの デバイスは、すべてのデータが転送される前にデータ転送に対して否定応答を返しました。このステータス コードでは、メソッドが返す ProviderI2cTransferResult.BytesTransferred の値は、実際に転送されるバイト数になります。 WriteReadPartial の場合、この値は、操作により書き込まれたバイト数と操作により読み取られたバイト数の合計です。</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferStatus.SlaveAddressNotAcknowledged">
+      <summary>バス アドレスが確認されませんでした。このステータス コードの場合、メソッドから返される ProviderI2cTransferResult.BytesTransferred メンバーの値は、実際に転送されたバイト数です。</summary>
+    </member><member name="T:Windows.Devices.Pwm.PwmController">
+      <summary>システムに接続されている PWM コントローラーを表します。</summary>
+    </member><member name="P:Windows.Devices.Pwm.PwmController.ActualFrequency">
+      <summary>PWM の実際の周波数を取得します。</summary>
+      <returns>周波数 (Hz 単位)。</returns>
+    </member><member name="P:Windows.Devices.Pwm.PwmController.MaxFrequency">
+      <summary>コントローラーによって提供される最大周波数を取得します。</summary>
+      <returns>最大周波数 (Hz 単位)。</returns>
+    </member><member name="P:Windows.Devices.Pwm.PwmController.MinFrequency">
+      <summary>コントローラーによって提供される最小周波数を取得します。</summary>
+      <returns>最小周波数 (Hz 単位)。</returns>
+    </member><member name="P:Windows.Devices.Pwm.PwmController.PinCount">
+      <summary>システムで使用できるピンの数を取得します。</summary>
+      <returns>ピンの数。</returns>
+    </member><member name="M:Windows.Devices.Pwm.PwmController.GetControllersAsync(Windows.Devices.Pwm.Provider.IPwmProvider)">
+      <summary>システムにあるコントローラーを非同期的に取得します。</summary>
+      <returns>メソッドが正常に完了すると、システムで使用可能なコントローラーを表す値のリストが返されます。</returns>
+      <param name="provider">システムにある PWM プロバイダー。</param>
+    </member><member name="M:Windows.Devices.Pwm.PwmController.GetDefaultAsync">
+      <summary>システムの既定の PWM コントローラーを取得します。</summary>
+      <returns>システムの既定の PWM コントローラー、またはシステムの既定の PWM コントローラーがない場合は null。</returns>
+    </member><member name="M:Windows.Devices.Pwm.PwmController.OpenPin(System.Int32)">
+      <summary>使用するピンを開きます。</summary>
+      <returns>要求されたピンが使用できるようになります。</returns>
+      <param name="pinNumber">開くピン。</param>
+    </member><member name="M:Windows.Devices.Pwm.PwmController.SetDesiredFrequency(System.Double)">
+      <summary>PWM 周波数を設定します。</summary>
+      <returns>設定した実際の間隔。 これは、プロバイダーによって決定される、サポートされる最も近い一致です。</returns>
+      <param name="desiredFrequency">目的の周波数の値 (Hz 単位)。</param>
+    </member><member name="T:Windows.Devices.Pwm.PwmPin">
+      <summary>システムの単一 PWN ピンを表します。</summary>
+    </member><member name="P:Windows.Devices.Pwm.PwmPin.Controller">
+      <summary>このピンにより使用されている PWM コントローラーを取得します。</summary>
+      <returns>コントローラー。</returns>
+    </member><member name="P:Windows.Devices.Pwm.PwmPin.IsStarted">
+      <summary>ピンの開始状態を取得します。</summary>
+      <returns>PWM がこのピンで開始された場合は true。それ以外の場合は false。</returns>
+    </member><member name="P:Windows.Devices.Pwm.PwmPin.Polarity">
+      <summary>ピンの極性を取得または設定します。</summary>
+      <returns>ピンの極性。</returns>
+    </member><member name="M:Windows.Devices.Pwm.PwmPin.Close">
+      <summary>ピンへの現在の接続を閉じ、他のユーザーがピンを開くことができるようにします。</summary>
+    </member><member name="M:Windows.Devices.Pwm.PwmPin.GetActiveDutyCyclePercentage">
+      <summary>このピンのデューティ サイクル率を取得します。</summary>
+      <returns>デューティ サイクル率 (0 ～ 100)。</returns>
+    </member><member name="M:Windows.Devices.Pwm.PwmPin.SetActiveDutyCyclePercentage(System.Double)">
+      <summary>このピンのデューティ サイクル率を設定します。</summary>
+      <param name="dutyCyclePercentage">0 ～ 100 の値で表される目的のデューティ サイクル率。</param>
+    </member><member name="M:Windows.Devices.Pwm.PwmPin.Start">
+      <summary>このピンで PWM を開始します。</summary>
+    </member><member name="M:Windows.Devices.Pwm.PwmPin.Stop">
+      <summary>このピンで PWM を停止します。</summary>
+    </member><member name="T:Windows.Devices.Pwm.PwmPulsePolarity">
+      <summary>PWM シグナルを開始する極性を表します。</summary>
+    </member><member name="F:Windows.Devices.Pwm.PwmPulsePolarity.ActiveHigh">
+      <summary>PWM シグナルがアクティブ ハイ状態で開始されるように構成します。</summary>
+    </member><member name="F:Windows.Devices.Pwm.PwmPulsePolarity.ActiveLow">
+      <summary>PWM シグナルがアクティブ ロー状態で開始されるように構成します。</summary>
+    </member><member name="T:Windows.Devices.Pwm.Provider.IPwmControllerProvider">
+      <summary>すべての PWM コントローラーに共通のプロパティとメソッドを表します。</summary>
+    </member><member name="P:Windows.Devices.Pwm.Provider.IPwmControllerProvider.ActualFrequency">
+      <summary>PWM の実際の周波数を取得します。</summary>
+      <returns>周波数 (Hz 単位)。</returns>
+    </member><member name="P:Windows.Devices.Pwm.Provider.IPwmControllerProvider.MaxFrequency">
+      <summary>コントローラーによって提供される最大周波数を取得します。</summary>
+      <returns>最大周波数 (Hz 単位)。</returns>
+    </member><member name="P:Windows.Devices.Pwm.Provider.IPwmControllerProvider.MinFrequency">
+      <summary>コントローラーによって提供される最小周波数を取得します。</summary>
+      <returns>最小周波数 (Hz 単位)。</returns>
+    </member><member name="P:Windows.Devices.Pwm.Provider.IPwmControllerProvider.PinCount">
+      <summary>システムで使用できる PWM ピンの数を取得します。</summary>
+      <returns>使用できるピンの数。</returns>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.AcquirePin(System.Int32)">
+      <summary>指定されたピンを取得し、使用するピンを開きます。</summary>
+      <param name="pin">PWM 接続を開くピン。</param>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.DisablePin(System.Int32)">
+      <summary>このピンで PWM を停止します。</summary>
+      <param name="pin">PWM シグナルを停止するピン。</param>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.EnablePin(System.Int32)">
+      <summary>指定のピンで PWM を開始します。</summary>
+      <param name="pin">PWM シグナルを開始するピン。</param>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.ReleasePin(System.Int32)">
+      <summary>指定ピンへの接続を解放し、他のユーザーがピンを使用できるようにします。</summary>
+      <param name="pin">解放するピン。</param>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.SetDesiredFrequency(System.Double)">
+      <summary>目的の PWM 周波数を設定します。</summary>
+      <returns>上記の値に設定した後の実際の PWM 周波数。 これは、プロバイダーによって決定される、サポートされる最も近い一致です。</returns>
+      <param name="frequency">目的の周波数 (Hz 単位)。</param>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.SetPulseParameters(System.Int32,System.Double,System.Boolean)">
+      <summary>ピン、デューティ サイクル、極性の PWM パラメーターを設定します。</summary>
+      <param name="pin">これらの値が適用されるピンを示します。</param>
+      <param name="dutyCycle">デューティ サイクル率 (0 ～ 100 の値。0 と 100 を含む)。</param>
+      <param name="invertPolarity">ピンの極性が逆の場合は true。それ以外の場合は false。</param>
+    </member><member name="T:Windows.Devices.Pwm.Provider.IPwmProvider">
+      <summary>すべての PWM プロバイダーに共通するメソッドを表します。</summary>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmProvider.GetControllers">
+      <summary>システムで使用可能なコントローラーを取得します。</summary>
+      <returns>システムで使用できる PWM コントローラーの一覧を返します。</returns>
+    </member><member name="T:Windows.Devices.Spi.ISpiDeviceStatics">
+      <summary>SPI デバイスに共通の SPI デバイスの統計情報を表します。</summary>
+    </member><member name="M:Windows.Devices.Spi.ISpiDeviceStatics.FromIdAsync(System.String,Windows.Devices.Spi.SpiConnectionSettings)">
+      <summary>指定された接続設定でデバイスを開きます。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>SPI デバイス。</returns>
+      <param name="busId">バスの ID。</param>
+      <param name="settings">接続設定。</param>
+    </member><member name="M:Windows.Devices.Spi.ISpiDeviceStatics.GetBusInfo(System.String)">
+      <summary>特定のバスに関する情報を取得します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>要求されたバスの情報。</returns>
+      <param name="busId">バスの ID。</param>
+    </member><member name="M:Windows.Devices.Spi.ISpiDeviceStatics.GetDeviceSelector">
+      <summary>システム上にあるすべての SPI バスを取得します。</summary>
+      <returns>システム上にあるすべてのバスを含む文字列。</returns>
+    </member><member name="M:Windows.Devices.Spi.ISpiDeviceStatics.GetDeviceSelector(System.String)">
+      <summary>入力パラメーターと一致する、システム上のすべての SPI バスを取得します。</summary>
+      <returns>名前での入力内容を持つすべてのバスを含む文字列。</returns>
+      <param name="friendlyName">目的のバスの識別名を指定する入力パラメーター。 これは通常、回路図上の名前に対応します。</param>
+    </member><member name="T:Windows.Devices.Spi.SpiBusInfo">
+      <summary>SPI バスに関する情報を表します。</summary>
+    </member><member name="P:Windows.Devices.Spi.SpiBusInfo.ChipSelectLineCount">
+      <summary>バスで使用できるチップ選択線の数を取得します。</summary>
+      <returns>チップ選択線の数。</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiBusInfo.MaxClockFrequency">
+      <summary>バスの最大クロック サイクル周波数。</summary>
+      <returns>Hz 単位でのクロック サイクル。</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiBusInfo.MinClockFrequency">
+      <summary>バスの最小クロック サイクル周波数。</summary>
+      <returns>Hz 単位でのクロック サイクル。</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiBusInfo.SupportedDataBitLengths">
+      <summary>データの転送のためにバスで使用できるビット間隔を取得します。</summary>
+      <returns>サポートされているデータ間隔。</returns>
+    </member><member name="T:Windows.Devices.Spi.SpiConnectionSettings">
+      <summary>デバイスとの接続設定を表します。</summary>
+    </member><member name="M:Windows.Devices.Spi.SpiConnectionSettings.#ctor(System.Int32)">
+      <summary>SpiConnectionSettings の新しいインスタンスを初期化します。</summary>
+      <param name="chipSelectLine">接続を確立するチップ選択線。</param>
+    </member><member name="P:Windows.Devices.Spi.SpiConnectionSettings.ChipSelectLine">
+      <summary>SPI デバイスへの接続のチップ選択線を取得または設定します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>チップ選択線。</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiConnectionSettings.ClockFrequency">
+      <summary>接続のクロック周波数を取得または設定します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>Hz 単位でのクロック周波数の値。</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiConnectionSettings.DataBitLength">
+      <summary>この接続でのデータのビット間隔を取得または設定します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>データのビット間隔。</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiConnectionSettings.Mode">
+      <summary>この接続の SpiMode を取得または設定します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>通信モード。</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiConnectionSettings.SharingMode">
+      <summary>SPI 接続の共有モードを取得または設定します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>共有モード。</returns>
+    </member><member name="T:Windows.Devices.Spi.SpiController">
+      <summary>システムの SPI コントローラーを表します。</summary>
+    </member><member name="M:Windows.Devices.Spi.SpiController.GetControllersAsync(Windows.Devices.Spi.Provider.ISpiProvider)">
+      <summary>システムにあるすべての SPI コントローラーを取得します。</summary>
+      <returns>メソッドが正常に完了すると、システムで使用可能な SPI コントローラーを表す値のリストが返されます。</returns>
+      <param name="provider">システムのコントローラーの SPI プロバイダー。</param>
+    </member><member name="M:Windows.Devices.Spi.SpiController.GetDefaultAsync">
+      <summary>システムの既定の SPI コントローラーを取得します。</summary>
+      <returns>システムの既定の SPI コントローラー、またはシステムの既定の SPI コントローラーがない場合は null。</returns>
+    </member><member name="M:Windows.Devices.Spi.SpiController.GetDevice(Windows.Devices.Spi.SpiConnectionSettings)">
+      <summary>指定した設定で SPI デバイスを取得します。</summary>
+      <returns>SPI デバイス。</returns>
+      <param name="settings">目的の接続設定。</param>
+    </member><member name="T:Windows.Devices.Spi.SpiDevice">
+      <summary>SPI バスを使用して接続したデバイスを表します。</summary>
+    </member><member name="P:Windows.Devices.Spi.SpiDevice.ConnectionSettings">
+      <summary>デバイスの接続設定を取得します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>接続設定。</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiDevice.DeviceId">
+      <summary>デバイスに関連付けられている一意の ID を取得します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>ID。</returns>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.Close">
+      <summary>デバイスへの接続を閉じます。</summary>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.FromIdAsync(System.String,Windows.Devices.Spi.SpiConnectionSettings)">
+      <summary>指定された接続設定でデバイスを開きます。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>要求された SPI デバイス。</returns>
+      <param name="busId">バスの ID。</param>
+      <param name="settings">接続設定。</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.GetBusInfo(System.String)">
+      <summary>特定のバスに関する情報を取得します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <returns>要求されたバスの情報。</returns>
+      <param name="busId">バスの ID。</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.GetDeviceSelector">
+      <summary>システム上にあるすべての SPI バスを取得します。</summary>
+      <returns>システム上にあるすべてのバスを含む文字列。</returns>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.GetDeviceSelector(System.String)">
+      <summary>入力パラメーターと一致する、システム上のすべての SPI バスを取得します。</summary>
+      <returns>名前での入力内容を持つすべてのバスを含む文字列。</returns>
+      <param name="friendlyName">目的のバスの識別名を指定する入力パラメーター。 これは通常、回路図上の名前に対応します。</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.Read(System.Byte[])">
+      <summary>接続されたデバイスから読み取ります。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <param name="buffer">デバイスから読み込まれたデータを含む配列。</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.TransferFullDuplex(System.Byte[],System.Byte[])">
+      <summary>完全な双方向通信システムを使用してデータを転送します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <param name="writeBuffer">デバイスに書き込むデータを含む配列。</param>
+      <param name="readBuffer">デバイスから読み込まれたデータを含む配列。</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.TransferSequential(System.Byte[],System.Byte[])">
+      <summary>順番にデータをデバイスに転送します。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <param name="writeBuffer">デバイスに書き込むデータを含む配列。</param>
+      <param name="readBuffer">デバイスから読み込まれたデータを含む配列。</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.Write(System.Byte[])">
+      <summary>接続されたデバイスに書き込みます。</summary>
+      <capability type="lowLevelDevices">IoT デバイスで動作するアプリが、下位レベルのバス ハードウェア (GPIO、I2C、SPI、ADC、PWM など) にアクセスするために必要です。</capability>
+      <param name="buffer">デバイスに書き込むデータを含む配列。</param>
+    </member><member name="T:Windows.Devices.Spi.SpiMode">
+      <summary>SPI 通信モードを定義します。</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiMode.Mode0">
+      <summary>CPOL = 0, CPHA = 0。</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiMode.Mode1">
+      <summary>CPOL = 0, CPHA = 1。</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiMode.Mode2">
+      <summary>CPOL = 1, CPHA = 0。</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiMode.Mode3">
+      <summary>CPOL = 1, CPHA = 1。</summary>
+    </member><member name="T:Windows.Devices.Spi.SpiSharingMode">
+      <summary>SPI バスの共有モードを定義します。</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiSharingMode.Exclusive">
+      <summary>SPI バスのセグメントは共有されていません。</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiSharingMode.Shared">
+      <summary>SPI バスは共有されています。</summary>
+    </member><member name="T:Windows.Devices.Spi.Provider.ISpiControllerProvider">
+      <summary>すべての SPI コントローラーに共通するアクションを表します。</summary>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiControllerProvider.GetDeviceProvider(Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings)">
+      <summary>指定した設定で SPI デバイスを取得します。</summary>
+      <returns>SPI デバイス。</returns>
+      <param name="settings">目的の接続設定。</param>
+    </member><member name="T:Windows.Devices.Spi.Provider.ISpiDeviceProvider">
+      <summary>SPI バスを使用して接続したデバイスに共通のアクションを表します。</summary>
+    </member><member name="P:Windows.Devices.Spi.Provider.ISpiDeviceProvider.ConnectionSettings">
+      <summary>デバイスの接続設定を取得します。</summary>
+      <returns>接続設定。</returns>
+    </member><member name="P:Windows.Devices.Spi.Provider.ISpiDeviceProvider.DeviceId">
+      <summary>デバイスに関連付けられている一意の ID を取得します。</summary>
+      <returns>デバイス ID。</returns>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiDeviceProvider.Read(System.Byte[])">
+      <summary>接続されたデバイスから読み取ります。</summary>
+      <param name="buffer">デバイスから読み込まれたデータを含む配列。</param>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiDeviceProvider.TransferFullDuplex(System.Byte[],System.Byte[])">
+      <summary>完全な双方向通信システムを使用してデータを転送します。</summary>
+      <param name="writeBuffer">デバイスに書き込むデータを含む配列。</param>
+      <param name="readBuffer">デバイスから読み込まれたデータを含む配列。</param>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiDeviceProvider.TransferSequential(System.Byte[],System.Byte[])">
+      <summary>順番にデータをデバイスに転送します。</summary>
+      <param name="writeBuffer">デバイスに書き込むデータを含む配列。</param>
+      <param name="readBuffer">デバイスから読み込まれたデータを含む配列。</param>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiDeviceProvider.Write(System.Byte[])">
+      <summary>接続されたデバイスに書き込みます。</summary>
+      <param name="buffer">デバイスに書き込むデータを含む配列。</param>
+    </member><member name="T:Windows.Devices.Spi.Provider.ISpiProvider">
+      <summary>SPI コントローラーに共通するアクションを表します。</summary>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiProvider.GetControllersAsync">
+      <summary>プロバイダーのすべての SPI コントローラーをシステムで取得します。</summary>
+      <returns>メソッドが正常に完了すると、システムで使用可能な SPI コントローラーを表す値のリストが返されます。</returns>
+    </member><member name="T:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings">
+      <summary>デバイスに接続するためのプロバイダー設定を表します。</summary>
+    </member><member name="M:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.#ctor(System.Int32)">
+      <summary>ProviderSpiConnectionSettings の新しいインスタンスを初期化します。</summary>
+      <param name="chipSelectLine">接続を確立するチップ選択線。</param>
+    </member><member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.ChipSelectLine">
+      <summary>SPI デバイスへの接続のチップ選択線を取得または設定します。</summary>
+      <returns>チップ選択線。</returns>
+    </member><member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.ClockFrequency">
+      <summary>接続のクロック周波数を取得または設定します。</summary>
+      <returns>Hz 単位でのクロック周波数の値。</returns>
+    </member><member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.DataBitLength">
+      <summary>この接続でのデータのビット間隔を取得または設定します。</summary>
+      <returns>データのビット間隔。</returns>
+    </member><member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.Mode">
+      <summary>この接続の ProviderSpiMode を取得または設定します。</summary>
+      <returns>通信モード。</returns>
+    </member><member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.SharingMode">
+      <summary>SPI 接続の共有モードを取得または設定します。</summary>
+      <returns>共有モード。</returns>
+    </member><member name="T:Windows.Devices.Spi.Provider.ProviderSpiMode">
+      <summary>SPI 通信モードを定義します。</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiMode.Mode0">
+      <summary>CPOL = 0, CPHA = 0。</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiMode.Mode1">
+      <summary>CPOL = 0, CPHA = 1。</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiMode.Mode2">
+      <summary>CPOL = 1, CPHA = 0。</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiMode.Mode3">
+      <summary>CPOL = 1, CPHA = 1。</summary>
+    </member><member name="T:Windows.Devices.Spi.Provider.ProviderSpiSharingMode">
+      <summary>SPI バスの共有モードを定義します。</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiSharingMode.Exclusive">
+      <summary>SPI バスのセグメントは共有されていません。</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiSharingMode.Shared">
+      <summary>SPI バスは共有されています。</summary>
+    </member></members>
+</doc>

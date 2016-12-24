@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.Protection.ProtectionRenewalContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Media.Protection.ComponentRenewal">
+      <summary>Consente alle applicazioni di avviare il rinnovo dei componenti che devono essere aggiornati per riprodurre il contenuto multimediale protetto.</summary>
+    </member><member name="M:Windows.Media.Protection.ComponentRenewal.RenewSystemComponentsAsync(Windows.Media.Protection.RevocationAndRenewalInformation)">
+      <summary>Avvia l'aggiornamento di componenti di protezione di contenuto critico dopo aver visualizzato una richiesta all'utente.</summary>
+      <returns>Oggetto utilizzato per controllare l'operazione asincrona.</returns>
+      <param name="information">Informazioni relative alla revoca e al rinnovo.</param>
+    </member><member name="T:Windows.Media.Protection.RenewalStatus">
+      <summary>Definisce i possibili valori restituiti da RenewSystemComponentsAsync.</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.AppComponentsMayNeedUpdating">
+      <summary>Specifica che non ci sono componenti di sistema da aggiornare. Potrebbe, tuttavia, essere necessario aggiornare i componenti dell'applicazione pertanto l'utente potrebbe dovere scaricare un'applicazione aggiornata dall'archivio.</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.NoComponentsFound">
+      <summary>Specifica che non ci sono componenti da aggiornare.</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.NotStarted">
+      <summary>Specifica che il rinnovo non è stato avviato.</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.UpdatesInProgress">
+      <summary>Specifica che sono disponibili nuovi aggiornamenti e l'utente ne ha consentito l'installazione</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.UserCancelled">
+      <summary>Specifica che l'utente ha rifiutato l'installazione degli aggiornamenti.</summary>
+    </member></members>
+</doc>

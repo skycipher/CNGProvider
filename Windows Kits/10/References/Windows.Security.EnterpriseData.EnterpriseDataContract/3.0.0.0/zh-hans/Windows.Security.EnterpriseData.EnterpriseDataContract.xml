@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Security.EnterpriseData.EnterpriseDataContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Security.EnterpriseData.BufferProtectUnprotectResult">
+      <summary>包含有关来自保护或解除保护受企业保护的缓冲区的结果的信息。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.BufferProtectUnprotectResult.Buffer">
+      <summary>获取已保护或解除保护的受企业保护的缓冲区。</summary>
+      <returns>受企业保护的缓冲区。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.BufferProtectUnprotectResult.ProtectionInfo">
+      <summary>获取有关已保护或解除保护的受企业保护的缓冲区的 DataProtectionInfo 对象。</summary>
+      <returns>有关受企业保护的缓冲区的信息对象。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.DataProtectionInfo">
+      <summary>包含有关受企业保护的缓冲区或流的信息。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.DataProtectionInfo.Identity">
+      <summary>受企业保护的缓冲区或流的企业标识。</summary>
+      <returns>企业标识。 此为托管的电子邮件地址或域。 您的应用应使用 IsIdentityManaged 确认电子邮件地址或域是否受托管。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.DataProtectionInfo.Status">
+      <summary>受企业保护的缓冲区或流的保护状态。</summary>
+      <returns>DataProtectionStatus 枚举的值。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.DataProtectionManager">
+      <summary>提供对管理针对企业标识而保护的缓冲区和流的操作的访问。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+    </member><member name="M:Windows.Security.EnterpriseData.DataProtectionManager.GetProtectionInfoAsync(Windows.Storage.Streams.IBuffer)">
+      <summary>获取受企业保护的缓冲区的状态。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+      <returns>成功完成对此方法的调用时，它会返回包含缓冲区的状态的 DataProtectionInfo 对象。</returns>
+      <param name="protectedData">正在为其查询保护状态的缓冲区。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.DataProtectionManager.GetStreamProtectionInfoAsync(Windows.Storage.Streams.IInputStream)">
+      <summary>获取受企业保护的流的状态。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+      <returns>成功完成对此方法的调用时，它会返回包含流的状态的 DataProtectionInfo 对象。</returns>
+      <param name="protectedStream">正在为其查询保护状态的流。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.DataProtectionManager.ProtectAsync(Windows.Storage.Streams.IBuffer,System.String)">
+      <summary>对企业标识保护缓冲区中的数据。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+      <returns>成功完成对此方法的调用时，它会返回包含新受到保护的缓冲区的状态的 BufferProtectUnprotectResult 对象。</returns>
+      <param name="data">要保护的缓冲区。</param>
+      <param name="identity">企业标识。 此为托管的电子邮件地址或域。 您的应用应使用 IsIdentityManaged 确认电子邮件地址或域是否受托管。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.DataProtectionManager.ProtectStreamAsync(Windows.Storage.Streams.IInputStream,System.String,Windows.Storage.Streams.IOutputStream)">
+      <summary>对企业标识保护数据流。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+      <returns>成功完成对此方法的调用时，它会返回包含受保护的流的状态的 DataProtectionInfo 对象。</returns>
+      <param name="unprotectedStream">输入，未保护的流。</param>
+      <param name="identity">企业标识。 此为托管的电子邮件地址或域。 您的应用应使用 IsIdentityManaged 确认电子邮件地址或域是否受托管。</param>
+      <param name="protectedStream">输出，受保护的流。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.DataProtectionManager.UnprotectAsync(Windows.Storage.Streams.IBuffer)">
+      <summary>从缓冲区移除对企业标识的保护。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+      <returns>成功完成对此方法的调用时，它会返回包含已解除保护的缓冲区的状态的 BufferProtectUnprotectResult 对象。</returns>
+      <param name="data">要解除保护的缓冲区。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.DataProtectionManager.UnprotectStreamAsync(Windows.Storage.Streams.IInputStream,Windows.Storage.Streams.IOutputStream)">
+      <summary>从数据流移除对企业标识的保护。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+      <returns>成功完成对此方法的调用时，它会返回包含已解除保护的流的状态的 DataProtectionInfo 对象。</returns>
+      <param name="protectedStream">输入，受保护的流。</param>
+      <param name="unprotectedStream">输出，未保护的流。</param>
+    </member><member name="T:Windows.Security.EnterpriseData.DataProtectionStatus">
+      <summary>描述缓冲区或流的企业标识保护状态。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.DataProtectionStatus.AccessSuspended">
+      <summary>用于访问受保护的项的键在设备锁定时已删除。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.DataProtectionStatus.LicenseExpired">
+      <summary>该项的 RMS 许可证已过期。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.DataProtectionStatus.Protected">
+      <summary>该项受到保护。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.DataProtectionStatus.ProtectedToOtherIdentity">
+      <summary>该项针对另一企业标识受到保护。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.DataProtectionStatus.Revoked">
+      <summary>已撤消对该项的保护。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.DataProtectionStatus.Unprotected">
+      <summary>该项未针对企业标识受到保护。</summary>
+    </member><member name="T:Windows.Security.EnterpriseData.EnforcementLevel">
+      <summary>一组枚举值，这些值共同描述了可能的企业数据保护 (EDP) 强制级别。 EDP 强制级别是移动设备管理 (MDM) 策略配置的一个方面。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.EnforcementLevel.Block">
+      <summary>针对要阻止的用户的策略调用。 为了响应尝试的操作（如将数据粘贴到未经授权的应用中），您的应用应阻止该操作并审核它。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.EnforcementLevel.NoProtection">
+      <summary>无保护的策略调用。 如果数据已受到保护，您的应用应禁用 EDP 行为，并对数据解除保护。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.EnforcementLevel.Override">
+      <summary>针对要被允许替代警告消息的用户的策略调用。 为了响应尝试的操作（如将数据粘贴到未经授权的应用中），您的应用应通过可替代的警告消息提示用户。 如果用户进行了替代，则您的应用应执行操作并审核它。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.EnforcementLevel.Silent">
+      <summary>针对静默保护的策略调用。 您的应用不应进行提示以响应一个操作（如将数据粘贴到未经授权的应用中）。 相反，您的应用应静默允许操作并审核它。</summary>
+    </member><member name="T:Windows.Security.EnterpriseData.FileProtectionInfo">
+      <summary>包含有关受企业保护的文件的信息。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.FileProtectionInfo.Identity">
+      <summary>受企业保护的文件的企业标识。</summary>
+      <returns>企业标识。 此为托管的电子邮件地址或域。 您的应用应使用 IsIdentityManaged 确认电子邮件地址或域是否受托管。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.FileProtectionInfo.IsRoamable">
+      <summary>指定对受企业保护的文件的保护能否漫游至其他设备。</summary>
+      <returns>如果文件的保护能够漫游至其他设备，则为 true。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.FileProtectionInfo.Status">
+      <summary>受企业保护的文件的保护状态。</summary>
+      <returns>FileProtectionStatus 枚举的值。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.FileProtectionManager">
+      <summary>提供对管理针对企业标识而保护的文件的操作的访问。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.CopyProtectionAsync(Windows.Storage.IStorageItem,Windows.Storage.IStorageItem)">
+      <summary>将一个文件的文件保护复制到另一个文件。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+      <returns>成功完成对此方法的调用时，如果复制了文件保护，则会返回 true；如果发生错误，则为 false。</returns>
+      <param name="source">源文件（将从此处复制文件保护）。</param>
+      <param name="target">目标文件（文件保护将复制到此处）。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.CreateProtectedAndOpenAsync(Windows.Storage.IStorageFolder,System.String,System.String,Windows.Storage.CreationCollisionOption)">
+      <summary>创建受企业保护的文件。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+      <returns>成功完成对此方法的调用时，它会返回表示新创建的受保护文件的 ProtectedFileCreateResult 对象。</returns>
+      <param name="parentFolder">要在其中创建受企业保护的文件的文件夹。</param>
+      <param name="desiredName">新建受企业保护文件的所需名称。</param>
+      <param name="identity">企业标识。 此为托管的电子邮件地址或域。 您的应用应使用 IsIdentityManaged 确认电子邮件地址或域是否受托管。</param>
+      <param name="collisionOption">一个 CreationCollisionOption 值，指定 desiredName 存在时要执行的操作。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.GetProtectionInfoAsync(Windows.Storage.IStorageItem)">
+      <summary>获取受企业保护的文件的状态。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+      <returns>成功完成对此方法的调用时，它会返回包含文件的状态的 FileProtectionInfo 对象。</returns>
+      <param name="source">正在为其查询保护状态的文件或文件夹。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.IsContainerAsync(Windows.Storage.IStorageFile)">
+      <summary>使用此属性可确定存储文件是否实际上是包含文件的容器。</summary>
+      <returns>如果存储文件是容器，则为 true，否则为 false。</returns>
+      <param name="file">要确定是否为容器的文件。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.LoadFileFromContainerAsync(Windows.Storage.IStorageFile)">
+      <summary>创建受企业保护的文件，并从容器文件加载该文件。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+      <returns>成功完成对此方法的调用时，它会返回表示新创建的受保护文件的 ProtectedContainerImportResult 对象。</returns>
+      <param name="containerFile">要创建并加载的受企业保护的文件。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.LoadFileFromContainerAsync(Windows.Storage.IStorageFile,Windows.Storage.IStorageItem)">
+      <summary>在指定的存储项（如文件夹）中创建受企业保护的文件，并从容器文件加载该文件。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+      <returns>成功完成对此方法的调用时，它会返回表示新创建的受保护文件的 ProtectedContainerImportResult 对象。</returns>
+      <param name="containerFile">要创建并加载的受企业保护的文件。</param>
+      <param name="target">要在其中创建受企业保护的文件的存储项。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.LoadFileFromContainerAsync(Windows.Storage.IStorageFile,Windows.Storage.IStorageItem,Windows.Storage.NameCollisionOption)">
+      <summary>在指定的存储项（如文件夹）中创建受企业保护的文件，并从容器文件加载该文件。</summary>
+      <returns>成功完成对此方法的调用时，它会返回表示新创建的受保护文件的 ProtectedContainerImportResult 对象。</returns>
+      <param name="containerFile">要创建并加载的受企业保护的文件。</param>
+      <param name="target">要在其中创建受企业保护的文件的存储项。</param>
+      <param name="collisionOption">在创建的文件与容器的位置中的现有项同名的情况下，确定 Windows 的响应方式的枚举值。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.ProtectAsync(Windows.Storage.IStorageItem,System.String)">
+      <summary>对企业标识保护文件中的数据。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+      <returns>成功完成对此方法的调用时，它会返回包含新受到保护的文件的状态的 FileProtectionInfo 对象。</returns>
+      <param name="target">要保护的文件。</param>
+      <param name="identity">企业标识。 此为托管的电子邮件地址或域。 在使用标识保护文件之前使用 ProtectionPolicyManager.IsIdentityManaged 确认电子邮件地址或域是否受托管。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.SaveFileAsContainerAsync(Windows.Storage.IStorageFile)">
+      <summary>将受企业保护的文件另存为容器化版本。</summary>
+      <returns>成功完成对此方法的调用时，它会返回表示新创建的容器文件的 ProtectedContainerExportResult 对象。</returns>
+      <param name="protectedFile">正在复制的受保护的源文件。</param>
+    </member><member name="T:Windows.Security.EnterpriseData.FileProtectionStatus">
+      <summary>描述文件或文件夹的企业保护状态。</summary>
+      <deprecated type="deprecate">Undetermined 在 Windows 10 之后的版本中不可用。 请改用 Unknown。</deprecated>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.AccessSuspended">
+      <summary>用于访问受保护的项的键在设备锁定时已删除。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.FileInUse">
+      <summary>该项正由其他进程使用。 在该项变为专供后，您可以将企业保护应用于它。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.LicenseExpired">
+      <summary>该项的 RMS 许可证已过期。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.NotProtectable">
+      <summary>此项已加密或属于系统文件，无法使用企业保护进行保护。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.Protected">
+      <summary>此项正在使用企业保护进行保护。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.ProtectedByOtherUser">
+      <summary>ProtectedByOtherUser 在 Windows 10 之后的版本中可能或不可用。 请改用 ProtectedToOtherIdentity。另一个用户已使用企业保护来保护项。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.ProtectedToOtherEnterprise">
+      <summary>ProtectedToOtherEnterprise 在 Windows 10 之后的版本中可能不可用。 请改用 ProtectedToOtherIdentity。已针对使用企业保护的另一个企业 ID 对此项进行了保护。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.ProtectedToOtherIdentity">
+      <summary>已针对使用企业保护的另一个企业标识对此项进行了保护。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.Revoked">
+      <summary>已使用企业保护撤消该项。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.Undetermined">
+      <summary>Undetermined 在 Windows 10 之后的版本中不可用。 请改用 Unknown。该项正在加密或解密，无法确定企业保护状态。 稍后重新检查。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.Unknown">
+      <summary>该项正在加密或解密，无法确定企业保护状态。 稍后重新检查。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.Unprotected">
+      <summary>此项未使用企业保护进行保护。</summary>
+    </member><member name="T:Windows.Security.EnterpriseData.FileRevocationManager">
+      <summary>提供对选择性擦除操作的访问。</summary>
+      <deprecated type="deprecate">FileRevocationManager 在 Windows 10 之后的版本中可能不可用。 请改用 FileProtectionManager。</deprecated>
+    </member><member name="M:Windows.Security.EnterpriseData.FileRevocationManager.CopyProtectionAsync(Windows.Storage.IStorageItem,Windows.Storage.IStorageItem)">
+      <summary>将文件或文件夹的选择性擦除保护状态复制到新文件或文件夹。</summary>
+      <deprecated type="deprecate">FileRevocationManager 在 Windows 10 之后的版本中可能不可用。 请改用 FileProtectionManager。</deprecated>
+      <returns>如果复制操作已成功，则为 true；否则为 false。</returns>
+      <param name="sourceStorageItem">要从中复制选择性擦除保护状态的源项。</param>
+      <param name="targetStorageItem">要将选择性擦除保护状态复制到其中的目标项。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileRevocationManager.GetStatusAsync(Windows.Storage.IStorageItem)">
+      <summary>获取文件或文件夹的选择性擦除保护状态。</summary>
+      <deprecated type="deprecate">FileRevocationManager 在 Windows 10 之后的版本中可能不可用。 请改用 FileProtectionManager。</deprecated>
+      <returns>用于检索 storageItem 的选择性擦除保护状态的异步操作。</returns>
+      <param name="storageItem">要获取其选择性擦除保护状态的文件或文件夹。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileRevocationManager.ProtectAsync(Windows.Storage.IStorageItem,System.String)">
+      <summary>保护文件或文件夹免遭选择性擦除。</summary>
+      <deprecated type="deprecate">FileRevocationManager 在 Windows 10 之后的版本中可能不可用。 请改用 FileProtectionManager。</deprecated>
+      <returns>用于检索 storageItem 的选择性擦除保护状态的异步操作。</returns>
+      <param name="storageItem">要通过选择性擦除保护的文件或文件夹。</param>
+      <param name="enterpriseIdentity">要保护其文件或文件夹的企业 ID。 必须将 enterpriseIdentity 值格式化为国际化域名 (IDN) 且不得包含空格。 例如，contoso.com。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileRevocationManager.Revoke(System.String)">
+      <summary>对指定的企业 ID 撤消为进行选择性擦除而保护的所有文件和文件夹。</summary>
+      <deprecated type="deprecate">FileRevocationManager 在 Windows 10 之后的版本中可能不可用。 请改用 FileProtectionManager。</deprecated>
+      <param name="enterpriseIdentity">对此企业 ID 撤消受选择性擦除保护的所有文件和文件夹。 必须将 enterpriseIdentity 值格式化为国际化域名 (IDN) 且不得包含空格。 例如，contoso.com。</param>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedAccessResumedEventArgs">
+      <summary>在还原内容保护时提供数据。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedAccessResumedEventArgs.Identities">
+      <summary>包含内容保护正在得到还原的企业标识。</summary>
+      <returns>内容保护正在得到还原的企业标识。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs">
+      <summary>在正在挂起内容保护时提供数据。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs.Deadline">
+      <summary>将挂起内容保护的 DateTime。</summary>
+      <returns>将挂起内容保护的 DateTime。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs.Identities">
+      <summary>包含内容保护正在挂起的企业标识。</summary>
+      <returns>内容保护正在挂起的企业标识。</returns>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs.GetDeferral">
+      <summary>获取管理保护挂起的 Deferral 对象。</summary>
+      <returns>Deferral 对象。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedContainerExportResult">
+      <summary>表示已导出至容器文件的受企业保护的文件的结果。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedContainerExportResult.File">
+      <summary>已从受企业保护的文件中导出的容器文件。</summary>
+      <returns>已从受企业保护的文件中导出的容器文件。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedContainerExportResult.Status">
+      <summary>将受企业保护的文件导出至容器文件后的保护状态。</summary>
+      <returns>ProtectedImportExportStatus 枚举的值。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedContainerImportResult">
+      <summary>表示已从容器文件导入的受企业保护的文件的结果。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedContainerImportResult.File">
+      <summary>已从容器文件中加载的受企业保护的文件。</summary>
+      <returns>已从容器文件中加载的受企业保护的文件。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedContainerImportResult.Status">
+      <summary>将受企业保护的文件从容器文件中导入后的保护状态。</summary>
+      <returns>ProtectedImportExportStatus 枚举的值。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedContentRevokedEventArgs">
+      <summary>在已撤销内容保护时提供数据。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedContentRevokedEventArgs.Identities">
+      <summary>包含内容保护已撤销的企业标识。</summary>
+      <returns>内容保护已撤销的企业标识。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedFileCreateResult">
+      <summary>包含有关新创建的受企业保护的文件的信息。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedFileCreateResult.File">
+      <summary>新创建的受企业保护的文件。</summary>
+      <returns>新创建的受企业保护的文件。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedFileCreateResult.ProtectionInfo">
+      <summary>有关受企业保护的文件的信息。</summary>
+      <returns>有关受企业保护的文件的信息。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedFileCreateResult.Stream">
+      <summary>对新创建的受企业保护的文件的流随机访问权限。</summary>
+      <returns>对新创建的受企业保护的文件的流随机访问权限。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedImportExportStatus">
+      <summary>已从容器文件中导入或导出至容器文件中的受企业保护的文件的可能状态值。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.AccessSuspended">
+      <summary>用于访问受保护的文件的键在设备锁定时已删除。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.LicenseExpired">
+      <summary>该文件的 RMS 许可证已过期。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.NotRoamable">
+      <summary>不能将文件漫游到另一台设备。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.Ok">
+      <summary>文件的保护是好的。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.ProtectedToOtherIdentity">
+      <summary>由于针对另一个企业标识对文件进行了保护，所以无法访问文件。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.Revoked">
+      <summary>文件的保护已撤销，它是不可访问的。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.Undetermined">
+      <summary>无法确定文件的保护。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.Unprotected">
+      <summary>文件不受保护。</summary>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectionPolicyAuditAction">
+      <summary>定义指定音频操作的常量。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectionPolicyAuditAction.CopyToLocation">
+      <summary>指示要复制到某个位置的数据。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectionPolicyAuditAction.Decrypt">
+      <summary>指示一个解密操作。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectionPolicyAuditAction.Other">
+      <summary>指示另一个操作。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectionPolicyAuditAction.SendToRecipient">
+      <summary>指示要发送到某个收件人的数据。</summary>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo">
+      <summary>表示审核所需的信息。</summary>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.#ctor(Windows.Security.EnterpriseData.ProtectionPolicyAuditAction,System.String)">
+      <summary>初始化类的新实例。</summary>
+      <param name="action">审核操作。</param>
+      <param name="dataDescription">正在审核的数据的描述。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.#ctor(Windows.Security.EnterpriseData.ProtectionPolicyAuditAction,System.String,System.String,System.String)">
+      <summary>初始化类的新实例。</summary>
+      <param name="action">审核操作。</param>
+      <param name="dataDescription">正在审核的数据的描述。</param>
+      <param name="sourceDescription">数据的源的描述。</param>
+      <param name="targetDescription">数据的目标的描述。</param>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.Action">
+      <summary>审核操作。</summary>
+      <returns>审核操作。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.DataDescription">
+      <summary>正在审核的数据的描述。</summary>
+      <returns>正在审核的数据的描述。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.SourceDescription">
+      <summary>数据的源的描述。</summary>
+      <returns>数据的源的描述。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.TargetDescription">
+      <summary>数据的目标的描述。</summary>
+      <returns>数据的目标的描述。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectionPolicyManager">
+      <summary>管理针对受保护内容的企业保护策略。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyManager.Identity">
+      <summary>获取或设置企业标识。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+      <returns>企业标识。 此为托管的电子邮件地址或域。 您的应用应使用 IsIdentityManaged 确认电子邮件地址或域是否受托管。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyManager.IsProtectionEnabled">
+      <summary>使用此属性确定是否在设备上启用企业数据保护 (EDP)。</summary>
+      <returns>如果在设备上启用了 EDP，则为 true，否则为 false。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyManager.ShowEnterpriseIndicator">
+      <summary>一个值，指示 shell 是否应修饰窗口以显示它是企业窗口。</summary>
+      <returns>如果指示 shell 应修饰窗口以显示它是企业窗口，则为 true，否则为 false。</returns>
+    </member><member name="E:Windows.Security.EnterpriseData.ProtectionPolicyManager.PolicyChanged">
+      <summary>为响应 Policy CSP 托管的企业数据保护 (EDP) 策略中的更改而引发的事件。</summary>
+    </member><member name="E:Windows.Security.EnterpriseData.ProtectionPolicyManager.ProtectedAccessResumed">
+      <summary>应用为了接收针对“保护已恢复”的通知而注册的事件。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+    </member><member name="E:Windows.Security.EnterpriseData.ProtectionPolicyManager.ProtectedAccessSuspending">
+      <summary>应用为了接收针对“保护将要挂起”的通知而注册的事件。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+    </member><member name="E:Windows.Security.EnterpriseData.ProtectionPolicyManager.ProtectedContentRevoked">
+      <summary>您的应用为了接收针对“保护将要撤销”的通知而注册的事件。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.CheckAccess(System.String,System.String)">
+      <summary>请求了解对受企业保护的内容的访问权限是否可用于某个标识。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+      <returns>作为查询的结果的 ProtectionPolicyEvaluationResult 枚举值。</returns>
+      <param name="sourceIdentity">应用的源企业标识。 此为托管的电子邮件地址或域。 您的应用应使用 IsIdentityManaged 检查电子邮件地址或域是否受托管。</param>
+      <param name="targetIdentity">您要检查的企业标识有权访问受保护的内容。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.CheckAccessForApp(System.String,System.String)">
+      <summary>为您的应用和特定目标应用之间的数据传输执行企业保护策略评估。</summary>
+      <returns>作为查询的结果的 ProtectionPolicyEvaluationResult 枚举值。</returns>
+      <param name="sourceIdentity">应用的源企业标识。 此为托管的电子邮件地址或域。 您的应用应使用 IsIdentityManaged 检查电子邮件地址或域是否受托管。</param>
+      <param name="appPackageFamilyName">要检查的应用的包系列名称有权访问受保护的内容。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.ClearProcessUIPolicy">
+      <summary>针对企业标识的明确的 UI 策略强制。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.CreateCurrentThreadNetworkContext(System.String)">
+      <summary>创建针对企业标识进行保护的 ThreadNetworkContext。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+      <returns>受保护的网络上下文。 完成对资源的访问后，应用必须调用 ThreadNetworkContext.Close。</returns>
+      <param name="identity">企业标识。 此为托管的电子邮件地址或域。 这可以从 GetPrimaryManagedIdentityForNetworkEndpoint 返回；否则您的应用应使用 IsIdentityManaged 确认电子邮件地址或域是否受托管。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.GetEnforcementLevel(System.String)">
+      <summary>您可以使用此方法来确定当前企业数据保护 (EDP) 强制级别。 EDP 强制级别是移动设备管理 (MDM) 策略配置的一个方面。</summary>
+      <returns>EnforcementLevel 枚举的值。</returns>
+      <param name="identity">企业标识。 此为托管的电子邮件地址或域。 您的应用应使用 IsIdentityManaged 确认电子邮件地址或域是否受托管。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.GetForCurrentView">
+      <summary>返回与当前应用窗口关联的 ProtectionPolicyManager 对象。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+      <returns>与当前应用窗口关联的 ProtectionPolicyManager 对象。</returns>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.GetPrimaryManagedIdentityForNetworkEndpointAsync(Windows.Networking.HostName)">
+      <summary>如果资源位于受到企业策略托管的终结点上，则会返回网络资源的企业标识。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+      <returns>企业标识。</returns>
+      <param name="endpointHost">网络资源的主机名或 IP 地址。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.HasContentBeenRevokedSince(System.String,Windows.Foundation.DateTime)">
+      <summary>使用此方法检查（对于目前受托管或曾经受托管的已知标识）对受保护数据的访问权限是自指定的日期和时间起已撤销还是仍然可访问。</summary>
+      <returns>如果该访问权限自指定日期和时间起已撤销，则为 true，否则为 false。</returns>
+      <param name="identity">用于保护数据的企业标识。 此为托管的电子邮件地址或域。 您的应用应使用 IsIdentityManaged 确认电子邮件地址或域是否受托管。</param>
+      <param name="since">您要作为检查的起始点的日期和时间。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.IsIdentityManaged(System.String)">
+      <summary>确定企业实体是否受到企业策略的托管。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+      <returns>如果企业标识受到托管，则为 true，否则为 false。</returns>
+      <param name="identity">企业标识。 这是电子邮件地址或域。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.IsProtectionUnderLockRequired(System.String)">
+      <summary>使用此属性可确定 ProtectionUnderLockConfigRequired 企业数据保护 (EDP) 策略的值。</summary>
+      <returns>如果为标识设置了 ProtectionUnderLockConfigRequired 策略，则为 true，否则为 false。</returns>
+      <param name="identity">您要检查的企业标识已设置 ProtectionUnderLockConfigRequired 策略。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.IsUserDecryptionAllowed(System.String)">
+      <summary>使用此属性可确定是否允许描述受企业数据保护 (EDP) 保护的文件。</summary>
+      <returns>如果允许描述受 EDP 保护的文件，则为 true，否则为 false。</returns>
+      <param name="identity">您要检查的企业标识有权访问受保护的内容。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.LogAuditEvent(System.String,System.String,Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo)">
+      <summary>导致记录审核事件。</summary>
+      <param name="sourceIdentity">内容被保护到的企业标识。 此为托管的电子邮件地址或域。 您的应用应使用 IsIdentityManaged 确认电子邮件地址或域是否受托管。</param>
+      <param name="targetIdentity">内容正在披露到的企业标识。 这是电子邮件地址或域。</param>
+      <param name="auditInfo">一个审核信息对象；一个 ProtectionPolicyAuditInfo 的实例。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessAsync(System.String,System.String)">
+      <summary>为某个标识请求对受企业保护的内容的访问权限。</summary>
+      <returns>作为请求的结果的 ProtectionPolicyEvaluationResult 枚举的值。</returns>
+      <param name="sourceIdentity">内容被保护到的企业标识。 此为托管的电子邮件地址或域。 您的应用应使用 IsIdentityManaged 确认电子邮件地址或域是否受托管。</param>
+      <param name="targetIdentity">内容正在披露到的企业标识。 这是电子邮件地址或域。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessAsync(System.String,System.String,Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo)">
+      <summary>为某个标识请求对受企业保护的内容的访问权限。</summary>
+      <returns>作为请求的结果的 ProtectionPolicyEvaluationResult 枚举的值。</returns>
+      <param name="sourceIdentity">内容被保护到的企业标识。 此为托管的电子邮件地址或域。 您的应用应使用 IsIdentityManaged 确认电子邮件地址或域是否受托管。</param>
+      <param name="targetIdentity">内容正在披露到的企业标识。 这是电子邮件地址或域。</param>
+      <param name="auditInfo">一个审核信息对象；一个 ProtectionPolicyAuditInfo 的实例。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessAsync(System.String,System.String,Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo,System.String)">
+      <summary>为某个标识请求对受企业保护的内容的访问权限。</summary>
+      <returns>作为请求的结果的 ProtectionPolicyEvaluationResult 枚举的值。</returns>
+      <param name="sourceIdentity">内容被保护到的企业标识。 此为托管的电子邮件地址或域。 您的应用应使用 IsIdentityManaged 确认电子邮件地址或域是否受托管。</param>
+      <param name="targetIdentity">内容正在披露到的企业标识。 这是电子邮件地址或域。</param>
+      <param name="auditInfo">一个审核信息对象；一个 ProtectionPolicyAuditInfo 的实例。</param>
+      <param name="messageFromApp">将在同意对话框中显示以便让用户做出同意决定的消息。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessForAppAsync(System.String,System.String)">
+      <summary>为特定目标应用请求对受企业保护的内容的访问权限。</summary>
+      <returns>作为查询的结果的 ProtectionPolicyEvaluationResult 枚举值。</returns>
+      <param name="sourceIdentity">内容被保护到的企业标识。 此为托管的电子邮件地址或域。 您的应用应使用 IsIdentityManaged 确认电子邮件地址或域是否受托管。</param>
+      <param name="appPackageFamilyName">内容正在披露到的企业标识。 这是电子邮件地址或域。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessForAppAsync(System.String,System.String,Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo)">
+      <summary>为特定目标应用请求对受企业保护的内容的访问权限。</summary>
+      <returns>作为查询的结果的 ProtectionPolicyEvaluationResult 枚举值。</returns>
+      <param name="sourceIdentity">内容被保护到的企业标识。 此为托管的电子邮件地址或域。 您的应用应使用 IsIdentityManaged 确认电子邮件地址或域是否受托管。</param>
+      <param name="appPackageFamilyName">内容正在披露到的企业标识。 这是电子邮件地址或域。</param>
+      <param name="auditInfo">一个审核信息对象；一个 ProtectionPolicyAuditInfo 的实例。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessForAppAsync(System.String,System.String,Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo,System.String)">
+      <summary>为特定目标应用请求对受企业保护的内容的访问权限。</summary>
+      <returns>作为查询的结果的 ProtectionPolicyEvaluationResult 枚举值。</returns>
+      <param name="sourceIdentity">内容被保护到的企业标识。 此为托管的电子邮件地址或域。 您的应用应使用 IsIdentityManaged 确认电子邮件地址或域是否受托管。</param>
+      <param name="appPackageFamilyName">内容正在披露到的企业标识。 这是电子邮件地址或域。</param>
+      <param name="auditInfo">一个审核信息对象；一个 ProtectionPolicyAuditInfo 的实例。</param>
+      <param name="messageFromApp">将在同意对话框中显示以便让用户做出同意决定的消息。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RevokeContent(System.String)">
+      <summary>撤销访问针对所有指定企业标识进行保护的所有内容所需要的密钥。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+      <param name="identity">企业标识。 此为托管的电子邮件地址或域。 您的应用应使用 IsIdentityManaged 确认电子邮件地址或域是否受托管。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.TryApplyProcessUIPolicy(System.String)">
+      <summary>针对企业标识启用 UI 策略强制。</summary>
+      <capability type="enterpriseDataPolicy">应用为设备定义和使用企业特定策略时为必需。</capability>
+      <returns>如果标识正受到企业策略的托管，则为 true，否则为 false。</returns>
+      <param name="identity">企业标识。 此为托管的电子邮件地址或域。 您的应用应使用 IsIdentityManaged 确认电子邮件地址或域是否受托管。</param>
+    </member><member name="T:Windows.Security.EnterpriseData.ThreadNetworkContext">
+      <summary>企业标识的受保护的网络上下文。</summary>
+    </member><member name="M:Windows.Security.EnterpriseData.ThreadNetworkContext.Close">
+      <summary>关闭受保护的网络上下文。</summary>
+    </member></members>
+</doc>

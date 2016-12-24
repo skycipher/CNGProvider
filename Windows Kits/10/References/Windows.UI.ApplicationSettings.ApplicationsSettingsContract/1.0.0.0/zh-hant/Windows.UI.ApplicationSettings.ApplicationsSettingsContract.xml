@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.ApplicationSettings.ApplicationsSettingsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.ApplicationSettings.SettingsEdgeLocation">
+      <summary>指定 [設定] 快速鍵顯示的畫面邊緣。</summary>
+      <deprecated type="deprecate">SettingsEdgeLocation 已被取代，因此可能無法在所有平台上運作。 如需詳細資訊，請參閱 MSDN。</deprecated>
+    </member><member name="F:Windows.UI.ApplicationSettings.SettingsEdgeLocation.Left">
+      <summary>[設定] 快速鍵出現在畫面左邊。</summary>
+    </member><member name="F:Windows.UI.ApplicationSettings.SettingsEdgeLocation.Right">
+      <summary>[設定] 快速鍵出現在畫面右邊。</summary>
+    </member><member name="T:Windows.UI.ApplicationSettings.SettingsPane">
+      <summary>可讓應用程式控制 [設定快速鍵] 窗格的靜態類別。 應用程式可以加入或移除命令、在使用者開啟窗格時接收通知，或是以程式設計方式開啟窗格。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SettingsPane 可能會經過修改或無法使用。 請改用 SettingsPane，將設定選項整合至應用程式體驗中。 如需詳細資訊，請參閱應用程式設定的指引。</deprecated>
+    </member><member name="P:Windows.UI.ApplicationSettings.SettingsPane.Edge">
+      <summary>取得表示 [設定] 快速鍵是顯示在畫面左邊緣還是右邊緣的值。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SettingsPane 可能會經過修改或無法使用。 請改用 SettingsPane，將設定選項整合至應用程式體驗中。 如需詳細資訊，請參閱應用程式設定的指引。</deprecated>
+      <returns>[設定] 快速鍵的位置。</returns>
+    </member><member name="E:Windows.UI.ApplicationSettings.SettingsPane.CommandsRequested">
+      <summary>會在使用者開啟設定窗格時發生。 接聽這個事件可讓應用程式初始化設定命令，並暫停它的 UI，直到使用者關閉窗格為止。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SettingsPane 可能會經過修改或無法使用。 請改用 SettingsPane，將設定選項整合至應用程式體驗中。 如需詳細資訊，請參閱應用程式設定的指引。</deprecated>
+    </member><member name="M:Windows.UI.ApplicationSettings.SettingsPane.GetForCurrentView">
+      <summary>取得與目前應用程式檢視 (亦即 CoreWindow) 相關聯的 SettingsPane 物件。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SettingsPane 可能會經過修改或無法使用。 請改用 SettingsPane，將設定選項整合至應用程式體驗中。 如需詳細資訊，請參閱應用程式設定的指引。</deprecated>
+      <returns>設定窗格。</returns>
+    </member><member name="M:Windows.UI.ApplicationSettings.SettingsPane.Show">
+      <summary>向使用者顯示 [設定快速鍵] 窗格。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SettingsPane 可能會經過修改或無法使用。 請改用 SettingsPane，將設定選項整合至應用程式體驗中。 如需詳細資訊，請參閱應用程式設定的指引。</deprecated>
+    </member><member name="T:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest">
+      <summary>包含只有在 CommandsRequested 事件期間才可以使用的屬性。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SettingsPaneCommandsRequest 可能會經過修改或無法使用。 請改用 SettingsPane，將設定選項整合至應用程式體驗中。 如需詳細資訊，請參閱應用程式設定的指引。</deprecated>
+    </member><member name="P:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest.ApplicationCommands">
+      <summary>在 CommandsRequested 事件期間可用的向量。 將 SettingsCommand 物件附加給它，讓這些物件可供 SettingsPane UI 使用。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SettingsPaneCommandsRequest 可能會經過修改或無法使用。 請改用 SettingsPane，將設定選項整合至應用程式體驗中。 如需詳細資訊，請參閱應用程式設定的指引。</deprecated>
+      <returns>SettingsCommand 物件的向量。</returns>
+    </member><member name="T:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs">
+      <summary>包含事件物件在 CommandsRequested 事件期間所提供的引數。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SettingsPaneCommandsRequestedEventArgs 可能會經過修改或無法使用。 請改用 SettingsPane，將設定選項整合至應用程式體驗中。 如需詳細資訊，請參閱應用程式設定的指引。</deprecated>
+    </member><member name="P:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs.Request">
+      <summary>可在 CommandsRequested 事件期間使用的 SettingsPaneCommandsRequest 執行個體。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SettingsPaneCommandsRequestedEventArgs 可能會經過修改或無法使用。 請改用 SettingsPane，將設定選項整合至應用程式體驗中。 如需詳細資訊，請參閱應用程式設定的指引。</deprecated>
+      <returns>命令要求物件。</returns>
+    </member></members>
+</doc>

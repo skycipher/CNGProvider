@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Web.Http.Diagnostics.HttpDiagnosticsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider">
+      <summary>Fournit une fonctionnalité de diagnostic simple pour suivre et profiler le trafic Web dans les applications générées sur les piles HTTP de Microsoft.</summary>
+    </member><member name="E:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.RequestResponseCompleted">
+      <summary>Abonnez-vous à l'événement RequestResponseCompleted pour recevoir une notification indiquant qu'une demande a été soumise.</summary>
+    </member><member name="E:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.RequestSent">
+      <summary>Abonnez-vous à l'événement RequestSent pour recevoir une notification indiquant qu'une demande a été envoyée.</summary>
+    </member><member name="E:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.ResponseReceived">
+      <summary>Abonnez-vous à l'événement ResponseReceived pour recevoir une notification indiquant qu'une réponse a été reçue.</summary>
+    </member><member name="M:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.CreateFromProcessDiagnosticInfo(Windows.System.Diagnostics.ProcessDiagnosticInfo)">
+      <summary>Crée un nouveau HttpDiagnosticProvider selon l'objet ProcessDiagnosticInfo spécifié.</summary>
+      <returns>Le HttpDiagnosticProvider nouvellement créé.</returns>
+      <param name="processDiagnosticInfo">Objet ProcessDiagnosticInfo qui identifie le processus à surveiller.</param>
+    </member><member name="M:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.Start">
+      <summary>Démarre la surveillance de la cible de processus jointe par HttpDiagnosticProvider.</summary>
+    </member><member name="M:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.Stop">
+      <summary>Arrête la surveillance de la cible de processus jointe par HttpDiagnosticProvider.</summary>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs">
+      <summary>Fournit des données pour l'événement RequestResponseCompleted.</summary>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.ActivityId">
+      <summary>Obtient un identificateur unique local pour cette activité, pour la corrélation avec d'autres événements.</summary>
+      <returns>Identificateur unique local de cette activité.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.Initiator">
+      <summary>Obtient le type d'opération qui initie cette demande.</summary>
+      <returns>Type d'initiateur.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.ProcessId">
+      <summary>Obtient l'ID de processus.</summary>
+      <returns>ID de processus.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.RequestedUri">
+      <summary>Obtient l'URI de la réponse demandée.</summary>
+      <returns>URI de la réponse demandée.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.SourceLocations">
+      <summary>Obtient la pile des appels de l'emplacement source.</summary>
+      <returns>Pile des appels de l'emplacement source.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.ThreadId">
+      <summary>Obtient l'ID de thread.</summary>
+      <returns>ID de thread.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.Timestamps">
+      <summary>Obtient le timestamp pour les événements de connexion.</summary>
+      <returns>Timestamp pour les événements de connexion.</returns>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps">
+      <summary>Fournit tous les timestamps pour les événements de connexion.</summary>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.CacheCheckedTimestamp">
+      <summary>Obtient l'heure de la dernière vérification du cache local.</summary>
+      <returns>Heure de la dernière vérification du cache local.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.ConnectionCompletedTimestamp">
+      <summary>Obtient le timestamp pour la fin de la phase de connexion TCP.</summary>
+      <returns>Timestamp pour la fin de la phase de connexion TCP.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.ConnectionInitiatedTimestamp">
+      <summary>Obtient le timestamp pour le début de la phase de connexion TCP.</summary>
+      <returns>Timestamp pour le début de la phase de connexion TCP.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.NameResolvedTimestamp">
+      <summary>Obtient l'heure de la résolution de nom DNS.</summary>
+      <returns>Heure de la résolution de nom DNS.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.RequestCompletedTimestamp">
+      <summary>Obtient le timestamp pour le dernier octet envoyé.</summary>
+      <returns>Timestamp pour le dernier octet envoyé.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.RequestSentTimestamp">
+      <summary>Obtient le timestamp pour le premier octet envoyé.</summary>
+      <returns>Timestamp pour le premier octet envoyé.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.ResponseCompletedTimestamp">
+      <summary>Obtient le timestamp pour le dernier octet reçu.</summary>
+      <returns>Timestamp pour le dernier octet reçu.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.ResponseReceivedTimestamp">
+      <summary>Obtient le timestamp pour le premier octet reçu.</summary>
+      <returns>Timestamp pour le premier octet reçu.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.SslNegotiatedTimestamp">
+      <summary>Obtient l'heure de la négociation du protocole de transfert SSL.</summary>
+      <returns>Heure de la négociation du protocole de transfert SSL.</returns>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs">
+      <summary>Fournit des données pour l'événement RequestSent.</summary>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.ActivityId">
+      <summary>Obtient un identificateur unique local pour cette activité, pour la corrélation avec d'autres événements.</summary>
+      <returns>Identificateur unique local de cette activité.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.Initiator">
+      <summary>Obtient le type d'opération qui initie cette demande.</summary>
+      <returns>Type d'initiateur.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.Message">
+      <summary>Obtient le HttpRequestMessage y compris les en-têtes.</summary>
+      <returns>HttpRequestMessage y compris les en-têtes.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.ProcessId">
+      <summary>Obtient l'ID de processus.</summary>
+      <returns>ID de processus.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.SourceLocations">
+      <summary>Obtient la pile des appels de l'emplacement source.</summary>
+      <returns>Pile des appels de l'emplacement source.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.ThreadId">
+      <summary>Obtient l'ID de thread.</summary>
+      <returns>ID de thread.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.Timestamp">
+      <summary>Obtient le timestamp de la date d'envoi de HttpRequestMessage.</summary>
+      <returns>timestamp de la date d'envoi de HttpRequestMessage.</returns>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs">
+      <summary>Fournit des données pour l'événement ResponseReceived.</summary>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs.ActivityId">
+      <summary>Obtient un identificateur unique local pour cette activité, pour la corrélation avec d'autres événements.</summary>
+      <returns>Identificateur unique local de cette activité.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs.Message">
+      <summary>Obtient l'objet HttpResponseMessage, y compris les en-têtes, le code d'état et les données.</summary>
+      <returns>Objet HttpResponseMessage, y compris les en-têtes, le code d'état et les données.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs.Timestamp">
+      <summary>Obtient l'horodatage de la réception du HttpResponseMessage.</summary>
+      <returns>Horodatage de la réception du HttpResponseMessage.</returns>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator">
+      <summary>Fournit le type d'initiateur des requêtes de téléchargement.</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Beacon">
+      <summary>Une demande unidirectionnelle de balise</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.CrossOriginPreFlight">
+      <summary>Une demande de pré-vol cross-origin</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Fetch">
+      <summary>Une demande de récupération</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.HtmlDownload">
+      <summary>Un téléchargement HTML</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Image">
+      <summary>Une ressource d'image</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Link">
+      <summary>Un lien</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Media">
+      <summary>Une ressource multimédia</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Other">
+      <summary>Une autre ressource</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.ParsedElement">
+      <summary>Un élément analysé</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Prefetch">
+      <summary>Une demande de prérécupération</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Script">
+      <summary>Une ressource de script</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Style">
+      <summary>Un élément CSS</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.XmlHttpRequest">
+      <summary>Une requête HTTP XML</summary>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation">
+      <summary>Contient l'emplacement source de l'activité HTTP.</summary>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation.ColumnNumber">
+      <summary>Obtient le numéro de la colonne.</summary>
+      <returns>Numéro de la colonne.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation.LineNumber">
+      <summary>Obtient le numéro de la ligne.</summary>
+      <returns>Numéro de ligne.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation.SourceUri">
+      <summary>Obtient l'URI source.</summary>
+      <returns>URI source.</returns>
+    </member></members>
+</doc>

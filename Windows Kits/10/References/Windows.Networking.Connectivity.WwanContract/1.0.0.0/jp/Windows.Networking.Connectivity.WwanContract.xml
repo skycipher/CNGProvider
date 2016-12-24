@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Networking.Connectivity.WwanContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Networking.Connectivity.WwanConnectionProfileDetails">
+      <summary>WWAN 接続に固有の情報にアクセスするために使用されます。</summary>
+    </member><member name="P:Windows.Networking.Connectivity.WwanConnectionProfileDetails.AccessPointName">
+      <summary>WWAN 接続を確立するために使用されるアクセス ポイントの名前を示します。</summary>
+      <returns>アクセス ポイントの名前。</returns>
+    </member><member name="P:Windows.Networking.Connectivity.WwanConnectionProfileDetails.HomeProviderId">
+      <summary>ホーム ネットワーク プロバイダーの ID を示します。</summary>
+      <returns>ホーム ネットワーク プロバイダーの ID。</returns>
+    </member><member name="M:Windows.Networking.Connectivity.WwanConnectionProfileDetails.GetCurrentDataClass">
+      <summary>WWAN 接続用に現在使用されているネットワークで提供されるデータ サービスのクラスを示します。</summary>
+      <returns>現在提供されているデータ サービスのクラス。</returns>
+    </member><member name="M:Windows.Networking.Connectivity.WwanConnectionProfileDetails.GetNetworkRegistrationState">
+      <summary>WWAN 接続の現在のネットワーク登録状態を取得します。</summary>
+      <returns>現在のネットワーク登録状態。</returns>
+    </member><member name="T:Windows.Networking.Connectivity.WwanDataClass">
+      <summary>WWAN ネットワーク接続によって提供されるデータ サービスのクラスを示すために使用される値を定義します。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdo">
+      <summary>このネットワークには、CDMA Evolution-Data Optimized (当初は Data Only。1xEDVO、CDMA2000 1x EV-DO、または 1x EVDO とも呼ばれます) データ サービスが用意されています。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdoRevA">
+      <summary>ネットワークは 1xEVDO RevA データ サービスを提供します。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdoRevB">
+      <summary>ネットワークは 1xEVDO RevB データ サービスを提供します。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdv">
+      <summary>ネットワークは、サポートされている CDMA Evolution-Data/Voice (CDMA 2000 1x EV-DV、または 1x EVDV とも呼ばれます) データ サービスを提供します。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xRtt">
+      <summary>ネットワークは 1xRTT (CDMA 1x Radio Transmission Technology) データ サービスを提供します。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma3xRtt">
+      <summary>ネットワークは 3xRTT (CDMA 3x Radio Transmission Technology) データ サービスを提供します。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.CdmaUmb">
+      <summary>ネットワークは UMB データ サービスを提供します。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Custom">
+      <summary>ネットワークは、この表にないデータ サービスを提供します。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Edge">
+      <summary>ネットワークは EDGE (Enhanced Data for Global Evolution) を提供します。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Gprs">
+      <summary>ネットワークは GPRS (General Packet Radio Service) データ サービスを提供します。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Hsdpa">
+      <summary>ネットワークは HSDPA (High-Speed Uplink Packet Access) データ サービスを提供します。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Hsupa">
+      <summary>ネットワークは HSUPA (High-Speed Uplink Packet Access) データ サービスを提供します。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.LteAdvanced">
+      <summary>ネットワークは LTE Advanced データ サービスを提供します。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.None">
+      <summary>ネットワークはデータ サービスを提供しません。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Umts">
+      <summary>ネットワークは UMTS (Universal Mobile Telecommunications System) データ サービスを提供します。</summary>
+    </member><member name="T:Windows.Networking.Connectivity.WwanNetworkRegistrationState">
+      <summary>WWAN 接続のネットワーク登録状態を定義します。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Denied">
+      <summary>使用できるすべてのネットワークとの接続は登録を拒否されます。 ただし、緊急時の音声呼び出しは行われる可能性があります。 この値は、音声接続のみに適用され、データ接続には適用されません。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Deregistered">
+      <summary>接続がネットワークに登録されていません。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Home">
+      <summary>接続はホーム ネットワークに登録されています。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.None">
+      <summary>この接続のネットワークが見つかりませんでした。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Partner">
+      <summary>接続はローミング ネットワーク パートナーに登録されています。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Roaming">
+      <summary>接続はローミング ネットワークに登録されています。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Searching">
+      <summary>使用できるネットワークを検索しています。</summary>
+    </member></members>
+</doc>

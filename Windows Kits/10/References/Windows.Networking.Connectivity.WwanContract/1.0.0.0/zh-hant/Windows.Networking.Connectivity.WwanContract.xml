@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Networking.Connectivity.WwanContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Networking.Connectivity.WwanConnectionProfileDetails">
+      <summary>用來存取專屬於 WWAN 連線的資訊。</summary>
+    </member><member name="P:Windows.Networking.Connectivity.WwanConnectionProfileDetails.AccessPointName">
+      <summary>表示用於建立 WWAN 連線的存取點名稱。</summary>
+      <returns>存取點名稱。</returns>
+    </member><member name="P:Windows.Networking.Connectivity.WwanConnectionProfileDetails.HomeProviderId">
+      <summary>表示家用網路提供者 識別碼。</summary>
+      <returns>家用網路提供者 識別碼。</returns>
+    </member><member name="M:Windows.Networking.Connectivity.WwanConnectionProfileDetails.GetCurrentDataClass">
+      <summary>表示 WWAN 連線目前使用的網路所提供的資料服務類別。</summary>
+      <returns>目前提供的資料服務類別。</returns>
+    </member><member name="M:Windows.Networking.Connectivity.WwanConnectionProfileDetails.GetNetworkRegistrationState">
+      <summary>擷取 WWAN 連線的目前網路註冊狀態。</summary>
+      <returns>目前的網路註冊狀態。</returns>
+    </member><member name="T:Windows.Networking.Connectivity.WwanDataClass">
+      <summary>定義用於表示無線廣域網路 (WWAN) 網路連接所提供的資料服務類型的值。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdo">
+      <summary>這個網路提供 CDMA 進展資料最佳化 (僅限於原先資料，1xEDVO，也稱為 CDMA2000 1x EV-DO 或 1x EVDO) 資料服務。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdoRevA">
+      <summary>網路提供 1xEVDO RevA 資料服務。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdoRevB">
+      <summary>網路提供 1xEVDO RevB 資料服務。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdv">
+      <summary>支援網路提供的 CDMA 進展資料/語音 (也稱為 CDMA 2000 1x EV-DV 或 1x EVDV) 資料服務。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xRtt">
+      <summary>網路提供 CDMA 1x 無線傳輸技術 (1xRTT) 資料服務。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma3xRtt">
+      <summary>網路提供 CDMA 3x 無線傳輸技術 (3xRTT) 資料服務。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.CdmaUmb">
+      <summary>網路提供 UMB 資料服務。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Custom">
+      <summary>網路提供此資料表中未列出的資料服務。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Edge">
+      <summary>網路提供全域進展強化資料 (EDGE)。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Gprs">
+      <summary>網路提供一般封包無線電服務 (GPRS) 資料服務。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Hsdpa">
+      <summary>網路提供高速下行連結封包存取 (HSDPA) 資料服務。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Hsupa">
+      <summary>網路提供 HSUPA (高速寬頻全球區域網路封包存取) 資料服務。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.LteAdvanced">
+      <summary>網路提供 LTE 進階資料服務。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.None">
+      <summary>網路無法提供資料服務。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Umts">
+      <summary>網路提供通用行動通訊系統 (UMTS) 資料服務。</summary>
+    </member><member name="T:Windows.Networking.Connectivity.WwanNetworkRegistrationState">
+      <summary>定義無線廣域網路 (WWAN) 連接的網路註冊狀態。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Denied">
+      <summary>註冊連線，並拒絕所有可用網路。 不過依舊可以撥打緊急語音電話。 這個值只適用於語音連接，而不是資料連接。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Deregistered">
+      <summary>未向網路註冊連線。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Home">
+      <summary>向家用網路註冊連線。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.None">
+      <summary>此連線找不到網路。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Partner">
+      <summary>向漫遊網路合作夥伴註冊連線。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Roaming">
+      <summary>向漫遊網路註冊連線。</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Searching">
+      <summary>搜尋可用的網路。</summary>
+    </member></members>
+</doc>

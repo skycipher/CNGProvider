@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Portable.PortableDeviceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Portable.ServiceDevice">
+      <summary>提供为支持设备枚举的 WPD（Windows 可移植设备）的可移植设备标识设备服务的方法。</summary>
+    </member><member name="M:Windows.Devices.Portable.ServiceDevice.GetDeviceSelector(Windows.Devices.Portable.ServiceDeviceType)">
+      <summary>返回用于枚举指定 ServiceDeviceType 的设备服务的高级查询语法 (AQS) 字符串。 此字符串将传递给 FindAllAsync 或 CreateWatcher 方法。</summary>
+      <returns>AQS 字符串。</returns>
+      <param name="serviceType">要标识的服务的类型。</param>
+    </member><member name="M:Windows.Devices.Portable.ServiceDevice.GetDeviceSelectorFromServiceId(System.Guid)">
+      <summary>按其 GUID 标识设备的高级查询语法 (AQS) 字符串。 此字符串将传递给 FindAllAsync 或 CreateWatcher 方法。</summary>
+      <returns>AQS 字符串。</returns>
+      <param name="serviceId">服务标识符。</param>
+    </member><member name="T:Windows.Devices.Portable.ServiceDeviceType">
+      <summary>指示可移植设备服务的类型。</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.CalendarService">
+      <summary>提供日历信息的服务。</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.ContactsService">
+      <summary>跟踪联系人的服务。</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.DeviceStatusService">
+      <summary>设备状态服务。</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.NotesService">
+      <summary>笔记记录服务。</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.RingtonesService">
+      <summary>为电话提供铃声的服务。</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.SmsService">
+      <summary>短消息服务 (SMS) 消息传递服务。</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.TasksService">
+      <summary>跟踪任务的服务。</summary>
+    </member><member name="T:Windows.Devices.Portable.StorageDevice">
+      <summary>提供用于访问支持 WPD 的可移植设备的存储功能的方法。 可移动的存储设备包括：USB 大容量闪存驱动器和 camerasMedia 传输协议 (MTP) 音乐播放器、电话和 camerasPicture 传输协议 (PTP) 照相机</summary>
+      <capability type="removableStorage">要求读取和写入可移动的存储。</capability>
+    </member><member name="M:Windows.Devices.Portable.StorageDevice.FromId(System.String)">
+      <summary>从可移动存储设备的 DeviceInformation ID 获取 StorageFolder 对象。</summary>
+      <capability type="removableStorage">要求读取和写入可移动的存储。</capability>
+      <returns>表示可移动存储设备并提供对设备上内容的访问的存储文件夹对象。</returns>
+      <param name="DeviceId">标识可移动存储设备的 DeviceInformation ID。 此 id 可以从 Windows.Devices.Enumeration 或 AutoPlay 设备事件参数的 DeviceInformationId 属性中检索。 有关更多信息，请参见快速入门：为自动播放设备注册应用程序。 为了使 FromId 成功，应用程序必须声明 removableStorage 功能（如“应用程序功能声明”中所示）和它希望在设备上访问的文件的文件类型关联（如“如何处理文件激活”中所示）。 有关更多信息，请参见可移动存储示例。</param>
+    </member><member name="M:Windows.Devices.Portable.StorageDevice.GetDeviceSelector">
+      <summary>标识可移除存储设备的高级查询语法 (AQS) 字符串。 此字符串将传递给 FindAllAsync 或 CreateWatcher 方法。</summary>
+      <capability type="removableStorage">要求读取和写入可移动的存储。</capability>
+      <returns>标识存储设备的 AQS 字符串。</returns>
+    </member></members>
+</doc>

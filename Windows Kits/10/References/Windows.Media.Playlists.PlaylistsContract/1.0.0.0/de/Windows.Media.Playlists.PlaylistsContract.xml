@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.Playlists.PlaylistsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Media.Playlists.Playlist">
+      <summary>Bietet Zugriff auf eine Wiedergabeliste für Medien</summary>
+    </member><member name="M:Windows.Media.Playlists.Playlist.#ctor">
+      <summary>Erstellt eine neue Instanz eines Playlist-Objekts.</summary>
+    </member><member name="P:Windows.Media.Playlists.Playlist.Files">
+      <summary>Der Satz der Mediendateien, die die Wiedergabeliste bilden.</summary>
+      <returns>Die Liste der Mediendateien, die die Wiedergabeliste bilden.</returns>
+    </member><member name="M:Windows.Media.Playlists.Playlist.LoadAsync(Windows.Storage.IStorageFile)">
+      <summary>Lädt asynchron Dateien in eine Wiedergabeliste.</summary>
+      <returns>Der asynchrone Vorgang zum Laden der Wiedergabeliste. Die GetResults-Methode des IAsyncOperation-Objekts gibt die Wiedergabeliste zurück.</returns>
+      <param name="file">Die zu ladenden Dateien.</param>
+    </member><member name="M:Windows.Media.Playlists.Playlist.SaveAsAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption)">
+      <summary>Speichert asynchron die Wiedergabeliste einer angegebenen Datei und eines angegebenen Ordners.</summary>
+      <returns>Stellt den asynchronen Vorgang dar, um die Wiedergabeliste in einer angegebenen Datei oder einem Ordner zu speichern.</returns>
+      <param name="saveLocation">Der Ordner, in dem die Wiedergabeliste zu speichern ist.</param>
+      <param name="desiredName">Der Name der zu speichernden Wiedergabeliste.</param>
+      <param name="option">Die Aktion, die ausgeführt werden soll, wenn die Wiedergabeliste in eine vorhandene Datei gespeichert wird. Einer der Werte der NameCollisionOption-Enumeration.</param>
+    </member><member name="M:Windows.Media.Playlists.Playlist.SaveAsAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption,Windows.Media.Playlists.PlaylistFormat)">
+      <summary>Speichert asynchron die Wiedergabeliste einer angegebenen Datei und eines angegebenen Ordners, in einem angegebenen Format.</summary>
+      <returns>Stellt den asynchronen Vorgang dar, um die Wiedergabeliste in einer angegebenen Datei oder einem Ordner zu speichern.</returns>
+      <param name="saveLocation">Der Ordner, in dem die Wiedergabeliste zu speichern ist.</param>
+      <param name="desiredName">Der Name der zu speichernden Wiedergabeliste.</param>
+      <param name="option">Die Aktion, die ausgeführt werden soll, wenn die Wiedergabeliste in eine vorhandene Datei gespeichert wird. Einer der Werte der NameCollisionOption-Enumeration.</param>
+      <param name="playlistFormat">Das Wiedergabelistenformat. Einer der Werte der PlaylistFormat-Enumeration.</param>
+    </member><member name="M:Windows.Media.Playlists.Playlist.SaveAsync">
+      <summary>Speichert asynchron die Wiedergabeliste.</summary>
+      <returns>Stellt die asynchrone Aktion zum Speichern der Wiedergabeliste dar.</returns>
+    </member><member name="T:Windows.Media.Playlists.PlaylistFormat">
+      <summary>Gibt das Format einer Wiedergabelistendatei an.</summary>
+    </member><member name="F:Windows.Media.Playlists.PlaylistFormat.M3u">
+      <summary>M3U-Wiedergabeliste.</summary>
+    </member><member name="F:Windows.Media.Playlists.PlaylistFormat.WindowsMedia">
+      <summary>Windows Media-Wiedergabeliste.</summary>
+    </member><member name="F:Windows.Media.Playlists.PlaylistFormat.Zune">
+      <summary>Zune-Wiedergabeliste.</summary>
+    </member></members>
+</doc>

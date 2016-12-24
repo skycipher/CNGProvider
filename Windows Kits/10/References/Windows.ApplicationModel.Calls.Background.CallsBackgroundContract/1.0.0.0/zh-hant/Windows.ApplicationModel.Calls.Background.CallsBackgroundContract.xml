@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Calls.Background.CallsBackgroundContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Background.PhoneTrigger">
+      <summary>表示觸發背景工作的電話事件。</summary>
+    </member><member name="M:Windows.ApplicationModel.Background.PhoneTrigger.#ctor(Windows.ApplicationModel.Calls.Background.PhoneTriggerType,System.Boolean)">
+      <summary>初始化 PhoneTrigger 類別的新執行個體。</summary>
+      <param name="type">指定電話事件的類型。</param>
+      <param name="oneShot">表示觸發是否為一次性通知。 如果您未在傳送一次性通知時訂閱，便無法獲得任何反應。 如果您在發出一次性通知時未連接，便不會有任何反應。</param>
+    </member><member name="P:Windows.ApplicationModel.Background.PhoneTrigger.OneShot">
+      <summary>取得布林值，表示觸發是否為一次性通知。</summary>
+      <returns>表示觸發是否為一次性通知的布林值。</returns>
+    </member><member name="P:Windows.ApplicationModel.Background.PhoneTrigger.TriggerType">
+      <summary>取得觸發所指出的電話事件類型</summary>
+      <returns>觸發所指出的電話事件類型。</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason">
+      <summary>提供通話遭拒的原因。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason.InCallBlockingList">
+      <summary>通話遭拒，因為它已列入封鎖清單。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason.PrivateNumber">
+      <summary>通話遭拒，因為它是私人電話號碼，而私人電話號碼已遭封鎖。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason.UnknownNumber">
+      <summary>通話遭拒，因為它是未知的號碼，而未知的號碼已遭封鎖。</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails">
+      <summary>用來提供有關剛封鎖之通話的詳細資料。</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails.CallBlockedReason">
+      <summary>取得通話遭封鎖的原因。</summary>
+      <returns>封鎖通話的原因。</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails.LineId">
+      <summary>取得剛封鎖之通話的識別碼。</summary>
+      <returns>已封鎖之通話的識別碼。</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails.PhoneNumber">
+      <summary>取得已封鎖之通話的電話號碼。</summary>
+      <returns>已封鎖之通話的電話號碼。</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails">
+      <summary>用來提供通話來源詳細資料。</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails.PhoneNumber">
+      <summary>取得通話來源的電話號碼。</summary>
+      <returns>通話來源的電話號碼。</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails.RequestId">
+      <summary>取得此通話的唯一識別碼。</summary>
+      <returns>此通話的唯一識別碼。</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails">
+      <summary>用來提供有關變更電話線屬性的詳細資料。</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails.ChangeType">
+      <summary>取得 PhoneLineChangeKind 值，表示是否已是新增、移除或變更電話線。</summary>
+      <returns>PhoneLineChangeKind 值，表示是否已是新增、移除或變更電話線。</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails.LineId">
+      <summary>取得已新增、移除或變更之電話線的識別碼。</summary>
+      <returns>已新增、移除或變更之電話線的識別碼。</returns>
+    </member><member name="M:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails.HasLinePropertyChanged(Windows.ApplicationModel.Calls.Background.PhoneLineProperties)">
+      <summary>對照一組旗標檢查電話線，確認指定的電話線屬性是否已經變更。</summary>
+      <returns>如果電話線上由 lineProperty 參數指出的任何屬性已變更，則傳回 true。</returns>
+      <param name="lineProperty">一組旗標，表示要查詢電話線屬性的變更狀態。</param>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind">
+      <summary>表示背景電話線變更觸發的變更類型。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind.Added">
+      <summary>已加入新電話線。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind.PropertiesChanged">
+      <summary>電話線的屬性已更新。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind.Removed">
+      <summary>已移除的電話線。</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneLineProperties">
+      <summary>表示一組屬性旗標，這是電話線變更觸發程序的一部分。 多個屬性可一次設定。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.BrandingOptions">
+      <summary>電話線的商標選項。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.CanDial">
+      <summary>在電話線撥出電話的撥號功能。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.CellularDetails">
+      <summary>電話線的行動電話詳細資料。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.DisplayColor">
+      <summary>電話線慣用的顯示色彩。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.DisplayName">
+      <summary>使用者指定的電話線易記名稱。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.NetworkName">
+      <summary>電話線目前使用的網路名稱。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.NetworkState">
+      <summary>電話線目前的網路狀態。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.None">
+      <summary>沒有屬性。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.Transport">
+      <summary>電話線傳輸 (行動電話或 VoIP)。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.Voicemail">
+      <summary>與電話線相關聯的語音信箱帳戶。</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails">
+      <summary>用來提供有關電話線新語音信箱訊息的詳細資料。</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails.LineId">
+      <summary>取得傳來新語音信箱訊息之電話線的識別碼。</summary>
+      <returns>新語音信箱的電話線識別碼。</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails.OperatorMessage">
+      <summary>取得操作員在傳送語音信箱變更 SMS 時所設定的選擇性語音信箱變更訊息。</summary>
+      <returns>操作員在傳送語音信箱變更 SMS 時所設定的選擇性語音信箱變更訊息。 如果有訊息，該訊息會顯示在語音信箱快顯通知上 (如果有顯示快顯通知的話)。</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails.VoicemailCount">
+      <summary>取得電話線的新語音信箱訊息計數。</summary>
+      <returns>目前語音信箱訊息的計數。</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneTriggerType">
+      <summary>表示電話觸發的事件類型。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.AirplaneModeDisabledForEmergencyCall">
+      <summary>電話線的飛航模式已停用，因此可以撥打緊急電話。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.CallBlocked">
+      <summary>通話已遭封鎖。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.CallHistoryChanged">
+      <summary>通話記錄已變更。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.CallOriginDataRequest">
+      <summary>發出通話來源的要求。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.LineChanged">
+      <summary>PhoneLineProperties 已變更。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.NewVoicemailMessage">
+      <summary>系統收到新的語音留言或語音留言計數已變成 0。</summary>
+    </member></members>
+</doc>

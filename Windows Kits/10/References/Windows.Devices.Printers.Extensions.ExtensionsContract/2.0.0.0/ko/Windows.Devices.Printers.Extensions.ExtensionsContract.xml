@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Printers.Extensions.ExtensionsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Printers.Extensions.PrintExtensionContext">
+      <summary>프린터 확장 개체의 컨텍스트를 제공합니다.</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintExtensionContext.FromDeviceId(System.String)">
+      <summary>DeviceInformation ID를 기반으로 프린터 확장 개체의 컨텍스트를 가져옵니다.</summary>
+      <returns>컨텍스트에 대한 포인터입니다.</returns>
+      <param name="deviceId">인쇄 장치의 장치 정보 ID입니다.</param>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails">
+      <summary>클라이언트가 인쇄 이벤트 데이터 및 인쇄 장치 이름 정보를 액세스 및/또는 조작할 수 있게 하는 속성을 포함합니다.</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails.EventData">
+      <summary>인쇄 알림 이벤트에 대한 이벤트 데이터를 가져오거나 설정합니다.</summary>
+      <returns>인쇄 알림 이벤트 데이터입니다.</returns>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails.PrinterName">
+      <summary>인쇄 알림과 관련된 인쇄 장치의 이름을 가져옵니다.</summary>
+      <returns>인쇄 장치 이름입니다.</returns>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfiguration">
+      <summary>클라이언트가 인쇄 작업 확장 컨텍스트를 검색하고 인쇄 작업에 이벤트 처리기를 추가할 수 있도록 허용합니다.</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfiguration.PrinterExtensionContext">
+      <summary>인쇄 작업 확장의 컨텍스트를 가져옵니다.</summary>
+      <returns>인쇄 작업 확장 컨텍스트입니다.</returns>
+    </member><member name="E:Windows.Devices.Printers.Extensions.PrintTaskConfiguration.SaveRequested">
+      <summary>인쇄 티켓을 업데이트해야 함을 장치 앱에 알리기 위해 앱의 인쇄 창에서 발생합니다.</summary>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest">
+      <summary>앱의 인쇄 대화 상자에서 SaveRequested 이벤트를 발생시킬 경우 호출됩니다.</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Deadline">
+      <summary>인쇄 작업에 대한 마감 날짜 정보를 제공하는 날짜-시간 개체를 가져옵니다.</summary>
+      <returns>인쇄 작업 마감일입니다.</returns>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Cancel">
+      <summary>장치 앱에서 호출하여 클라이언트의 인쇄 작업 구성 저장 요청을 취소합니다.</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.GetDeferral">
+      <summary>인쇄 작업 구성 정보를 저장하려면 먼저 일부 비동기 작업을 완료해야 하는 경우 장치 앱에서 호출합니다.</summary>
+      <returns>인쇄 작업 구성 저장 요청에 대한 지연을 나타내는 개체입니다.</returns>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Save(System.Object)">
+      <summary>장치 앱에서 호출하여 인쇄 작업 구성을 저장합니다.</summary>
+      <param name="printerExtensionContext">인쇄 작업 확장 컨텍스트를 나타내는 개체입니다.</param>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral">
+      <summary>장치 앱에서 호출하여 지연 상태의 업데이트를 제공합니다.</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral.Complete">
+      <summary>지연이 완료되면 장치 앱에서 호출합니다.</summary>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs">
+      <summary>장치 앱에 인쇄 작업 구성을 반드시 저장해야 함을 알리기 위해 호출됩니다.</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs.Request">
+      <summary>인쇄 작업 구성을 업데이트하는 데 필요한 정보를 가져옵니다.</summary>
+      <returns>인쇄 작업 구성 저장 요청입니다.</returns>
+    </member></members>
+</doc>

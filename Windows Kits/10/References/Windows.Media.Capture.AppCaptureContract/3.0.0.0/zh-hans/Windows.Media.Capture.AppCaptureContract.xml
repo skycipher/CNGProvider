@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.Capture.AppCaptureContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Media.Capture.AppCaptureAlternateShortcutKeys">
+      <summary>定义应用捕获的替换字快捷键。</summary>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.SaveHistoricalVideoKey">
+      <summary>获取或设置保存历史视频快捷键。</summary>
+      <returns>保存历史视频快捷键。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.SaveHistoricalVideoKeyModifiers">
+      <summary>获取或设置保存历史视频快捷键修饰符。</summary>
+      <returns>保存历史视频快捷键修饰符。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.TakeScreenshotKey">
+      <summary>获取或设置拍摄屏幕快照快捷键。</summary>
+      <returns>拍摄屏幕快照快捷键。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.TakeScreenshotKeyModifiers">
+      <summary>获取或设置拍摄屏幕快照快捷键修饰符。</summary>
+      <returns>拍摄屏幕快照快捷键修饰符。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleBroadcastKey">
+      <summary>获取或设置切换广播快捷键。</summary>
+      <returns>切换广播快捷键。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleBroadcastKeyModifiers">
+      <summary>获取或设置切换广播快捷键修饰符。</summary>
+      <returns>切换广播快捷键修饰符。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleCameraCaptureKey">
+      <summary>获取或设置切换照相机捕获快捷键。</summary>
+      <returns>切换照相机捕获快捷键。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleCameraCaptureKeyModifiers">
+      <summary>获取或设置切换照相机捕获快捷键修饰符。</summary>
+      <returns>切换照相机捕获快捷键修饰符。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleGameBarKey">
+      <summary>获取或设置切换游戏栏快捷键。</summary>
+      <returns>切换游戏栏快捷键。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleGameBarKeyModifiers">
+      <summary>获取或设置切换游戏栏快捷键修饰符。</summary>
+      <returns>切换游戏栏快捷键修饰符。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleMicrophoneCaptureKey">
+      <summary>获取或设置切换麦克风捕获快捷键。</summary>
+      <returns>切换麦克风捕获快捷键。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleMicrophoneCaptureKeyModifiers">
+      <summary>获取或设置切换麦克风捕获快捷键修饰符。</summary>
+      <returns>切换麦克风捕获快捷键修饰符。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleRecordingIndicatorKey">
+      <summary>获取或设置切换记录指示器快捷键。</summary>
+      <returns>切换记录指示器快捷键。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleRecordingIndicatorKeyModifiers">
+      <summary>获取或设置切换记录指示器快捷键修饰符。</summary>
+      <returns>切换记录指示器快捷键修饰符。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleRecordingKey">
+      <summary>获取或设置切换记录快捷键。</summary>
+      <returns>切换记录快捷键。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleRecordingKeyModifiers">
+      <summary>获取或设置切换记录快捷键修饰符。</summary>
+      <returns>切换记录快捷键修饰符。</returns>
+    </member><member name="T:Windows.Media.Capture.AppCaptureHistoricalBufferLengthUnit">
+      <summary>指定应用捕获历史记录缓冲区的单位。</summary>
+    </member><member name="F:Windows.Media.Capture.AppCaptureHistoricalBufferLengthUnit.Megabytes">
+      <summary>兆字节</summary>
+    </member><member name="F:Windows.Media.Capture.AppCaptureHistoricalBufferLengthUnit.Seconds">
+      <summary>秒</summary>
+    </member><member name="T:Windows.Media.Capture.AppCaptureManager">
+      <summary>提供对应用捕获设置的访问。</summary>
+    </member><member name="M:Windows.Media.Capture.AppCaptureManager.ApplySettings(Windows.Media.Capture.AppCaptureSettings)">
+      <summary>应用应用捕获设置。</summary>
+      <capability type="appCaptureSettings">控制 Game DVR 的用户设置时为必需</capability>
+      <param name="appCaptureSettings">要应用的设置。</param>
+    </member><member name="M:Windows.Media.Capture.AppCaptureManager.GetCurrentSettings">
+      <summary>获取当前应用捕获设置。</summary>
+      <capability type="appCaptureSettings">控制 Game DVR 的用户设置时为必需</capability>
+      <returns>当前应用捕获设置。</returns>
+    </member><member name="T:Windows.Media.Capture.AppCaptureSettings">
+      <summary>表示应用捕获设置。</summary>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.AlternateShortcutKeys">
+      <summary>获取替换字快捷键设置。</summary>
+      <returns>替换字快捷键设置。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.AppCaptureDestinationFolder">
+      <summary>获取或设置应用捕获目标文件夹。</summary>
+      <returns>应用捕获目标文件夹。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.AudioEncodingBitrate">
+      <summary>获取或设置音频编码比特率。</summary>
+      <returns>音频编码比特率。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.CustomVideoEncodingBitrate">
+      <summary>获取或设置自定义视频编码比特率。</summary>
+      <returns>自定义视频编码比特率。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.CustomVideoEncodingHeight">
+      <summary>获取或设置自定义视频编码高度。</summary>
+      <returns>自定义视频编码高度。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.CustomVideoEncodingWidth">
+      <summary>获取自定义视频编码宽度。</summary>
+      <returns>自定义视频编码宽度。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.HasHardwareEncoder">
+      <summary>获取一个值，该值指示设备是否有具有硬件编码器。</summary>
+      <returns>如果设备具有硬件编码器，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.HistoricalBufferLength">
+      <summary>获取或设置历史记录缓冲区长度。</summary>
+      <returns>历史记录缓冲区长度。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.HistoricalBufferLengthUnit">
+      <summary>获取或设置历史记录缓冲区长度的单位。</summary>
+      <returns>历史记录缓冲区长度的单位。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.IsAppCaptureEnabled">
+      <summary>获取或设置一个值，该值指示是否启用了应用捕获。</summary>
+      <returns>如果启用了应用捕获，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.IsAudioCaptureEnabled">
+      <summary>获取或设置一个值，该值指示是否启用了音频捕获。</summary>
+      <returns>如果启用了音频捕获，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.IsCpuConstrained">
+      <summary>获取一个值，该值指示应用捕获是否为受 CPU 约束的。</summary>
+      <returns>如果应用捕获为受 CPU 约束的，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.IsDisabledByPolicy">
+      <summary>获取一个值，该值指示应用捕获是否已由策略禁用。</summary>
+      <returns>如果应用捕获已由策略禁用，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.IsGpuConstrained">
+      <summary>获取一个值，该值指示应用捕获是否为受 GPU 约束的。</summary>
+      <returns>如果应用捕获为受 GPU 约束的，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.IsHistoricalCaptureEnabled">
+      <summary>获取或设置一个值，该值指示是否启用了历史记录捕获。</summary>
+      <returns>如果启用了历史记录捕获，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.IsHistoricalCaptureOnBatteryAllowed">
+      <summary>获取或设置一个值，该值指示在设备由电池供电时是否允许历史记录捕获。</summary>
+      <returns>如果在设备由电池供电时允许历史记录捕获，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.IsHistoricalCaptureOnWirelessDisplayAllowed">
+      <summary>获取或设置一个值，该值指示无线显示器上是否允许历史记录捕获。</summary>
+      <returns>如果无线显示器上允许历史记录捕获，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.IsMemoryConstrained">
+      <summary>获取一个值，该值指示设备是否为受内存约束的。</summary>
+      <returns>如果设备为受内存约束的，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.IsMicrophoneCaptureEnabled">
+      <summary>获取或设置一个值，该值指示是否启用了麦克风捕获。</summary>
+      <returns>如果启用了麦克风捕获，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.IsMicrophoneCaptureEnabledByDefault">
+      <summary>获取或设置一个值，该值指示是否默认启用了麦克风捕获。</summary>
+      <returns>如果默认启用了麦克风捕获，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.MaximumRecordLength">
+      <summary>获取或设置最大录制长度。</summary>
+      <returns>最大录制长度。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.MicrophoneGain">
+      <summary>获取或设置一个值，该值指定应用于麦克风音频的增益。</summary>
+      <returns>应用于麦克风音频的增益。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.ScreenshotDestinationFolder">
+      <summary>获取或设置屏幕快照目标文件夹。</summary>
+      <returns>屏幕快照目标文件夹。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.SystemAudioGain">
+      <summary>获取或设置一个值，该值指定应用于系统音频的增益。</summary>
+      <returns>应用于系统音频的增益。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.VideoEncodingBitrateMode">
+      <summary>获取或设置视频编码比特率。</summary>
+      <returns>视频编码比特率。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.VideoEncodingFrameRateMode">
+      <summary>获取或设置一个值，该值指示视频编码帧速率模式。</summary>
+      <returns>视频编码帧速率模式。</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.VideoEncodingResolutionMode">
+      <summary>获取或设置视频编码分辨率模式。</summary>
+      <returns>视频编码分辨率模式。</returns>
+    </member><member name="T:Windows.Media.Capture.AppCaptureVideoEncodingBitrateMode">
+      <summary>指定应用捕获视频编码比特率模式。</summary>
+    </member><member name="F:Windows.Media.Capture.AppCaptureVideoEncodingBitrateMode.Custom">
+      <summary>自定义比特率。</summary>
+    </member><member name="F:Windows.Media.Capture.AppCaptureVideoEncodingBitrateMode.High">
+      <summary>高比特率。</summary>
+    </member><member name="F:Windows.Media.Capture.AppCaptureVideoEncodingBitrateMode.Standard">
+      <summary>标准比特率。</summary>
+    </member><member name="T:Windows.Media.Capture.AppCaptureVideoEncodingFrameRateMode">
+      <summary>指定视频编码帧速率模式。</summary>
+    </member><member name="F:Windows.Media.Capture.AppCaptureVideoEncodingFrameRateMode.High">
+      <summary>在高帧速率下编码。</summary>
+    </member><member name="F:Windows.Media.Capture.AppCaptureVideoEncodingFrameRateMode.Standard">
+      <summary>在标准帧速率下编码。</summary>
+    </member><member name="T:Windows.Media.Capture.AppCaptureVideoEncodingResolutionMode">
+      <summary>指定应用捕获视频编码分辨率模式。</summary>
+    </member><member name="F:Windows.Media.Capture.AppCaptureVideoEncodingResolutionMode.Custom">
+      <summary>自定义分辨率。</summary>
+    </member><member name="F:Windows.Media.Capture.AppCaptureVideoEncodingResolutionMode.High">
+      <summary>高分辨率。</summary>
+    </member><member name="F:Windows.Media.Capture.AppCaptureVideoEncodingResolutionMode.Standard">
+      <summary>标准分辨率。</summary>
+    </member></members>
+</doc>

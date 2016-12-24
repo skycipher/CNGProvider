@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.Profile.ProfileHardwareTokenContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.System.Profile.HardwareIdentification">
+      <summary>Предоставляет возможность получить идентификатор оборудования, который представляет текущее оборудование.</summary>
+    </member><member name="M:Windows.System.Profile.HardwareIdentification.GetPackageSpecificToken(Windows.Storage.Streams.IBuffer)">
+      <summary>Получает идентификатор оборудования (ASHWID), представляющий текущее оборудование.</summary>
+      <returns>Данные идентификатора оборудования.</returns>
+      <param name="nonce">Криптографический объект nonce не является обязательным. Использовать nonce рекомендуется, когда ASHWID необходимо проверить в облаке для защиты от атак с повторением пакетов. В сценариях, где требуется однократно используемое число, удаленный сервер должен создать произвольное однократно используемое число и передать его в клиентское приложение, а затем убедиться, что сигнатура имеет ожидаемое число после получения ASHWID из клиентской системы.</param>
+    </member><member name="T:Windows.System.Profile.HardwareToken">
+      <summary>Представляет токен, который содержит аппаратную идентификацию, являющуюся достаточно уникальной.</summary>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Certificate">
+      <summary>Получает сертификат, используемый для подписания идентификатора и для упрощения проверки подлинности идентификатора.</summary>
+      <returns>Сертификат, используемый для подписания идентификатора.</returns>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Id">
+      <summary>Получает идентификатор оборудования, определяющий устройство.</summary>
+      <returns>Идентификатор, определяющий устройство. Этот буфер байтов содержит набор идентификаторов, представляющих различные компоненты оборудования, обнаруженные в устройстве.</returns>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Signature">
+      <summary>Получает цифровую подпись идентификатора оборудования, что позволяет подтвердить подлинность возвращаемого идентификатора.</summary>
+      <returns>Цифровая подпись для идентификатора.</returns>
+    </member></members>
+</doc>

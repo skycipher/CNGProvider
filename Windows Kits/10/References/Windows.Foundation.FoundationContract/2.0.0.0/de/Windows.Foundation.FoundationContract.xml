@@ -1,0 +1,1162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Foundation.FoundationContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Foundation.AsyncActionCompletedHandler">
+      <summary>Stellt eine Methode dar, die das Beendigungsereignis einer asynchronen Aktion behandelt.</summary>
+      <param name="asyncInfo">Die asynchrone Aktion.</param>
+      <param name="asyncStatus">Einer der Enumerationswerte.</param>
+    </member><member name="T:Windows.Foundation.AsyncActionProgressHandler`1">
+      <summary>Stellt eine Methode dar, die Fortschrittsaktualisierungsereignisse einer asynchronen Aktion behandelt, die Fortschrittsaktualisierungen bereitstellt.</summary>
+      <typeparam name="TProgress">Die Statusinformationen.</typeparam>
+      <param name="asyncInfo">Die asynchrone Aktion.</param>
+      <param name="progressInfo">Die Statusinformationen.</param>
+    </member><member name="T:Windows.Foundation.AsyncActionWithProgressCompletedHandler`1">
+      <summary>Stellt eine Methode dar, die das Beendigungsereignis einer asynchronen Aktion behandelt, die Fortschrittsaktualisierungen bereitstellt.</summary>
+      <typeparam name="TProgress">Die Statusinformationen.</typeparam>
+      <param name="asyncInfo">Die asynchrone Aktion.</param>
+      <param name="asyncStatus">Einer der Enumerationswerte.</param>
+    </member><member name="T:Windows.Foundation.AsyncOperationCompletedHandler`1">
+      <summary>Stellt eine Methode dar, die das abgeschlossene Ereignis eines asynchronen Vorgangs behandelt.</summary>
+      <typeparam name="TResult">Das Ergebnis.</typeparam>
+      <param name="asyncInfo">Der asynchrone Vorgang.</param>
+      <param name="asyncStatus">Einer der Enumerationswerte.</param>
+    </member><member name="T:Windows.Foundation.AsyncOperationProgressHandler`2">
+      <summary>Stellt eine Methode dar, die Fortschrittsaktualisierungsereignisse eines asynchronen Vorgangs behandelt, der Fortschrittsaktualisierungen bereitstellt.</summary>
+      <typeparam name="TResult">Das Ergebnis.</typeparam>
+      <typeparam name="TProgress">Die Statusinformationen.</typeparam>
+      <param name="asyncInfo">Der asynchrone Vorgang.</param>
+      <param name="progressInfo">Die Statusinformationen.</param>
+    </member><member name="T:Windows.Foundation.AsyncOperationWithProgressCompletedHandler`2">
+      <summary>Stellt eine Methode dar, die das Beendigungsereignis eines asynchronen Vorgangs behandelt, der Fortschrittsaktualisierungen bereitstellt.</summary>
+      <typeparam name="TResult">Das Ergebnis.</typeparam>
+      <typeparam name="TProgress">Die Statusinformationen.</typeparam>
+      <param name="asyncInfo">Der asynchrone Vorgang.</param>
+      <param name="asyncStatus">Einer der Enumerationswerte.</param>
+    </member><member name="T:Windows.Foundation.AsyncStatus">
+      <summary>Stellt den Status eines asynchronen Vorgangs dar.</summary>
+    </member><member name="F:Windows.Foundation.AsyncStatus.Canceled">
+      <summary>Der Vorgang wurde abgebrochen.</summary>
+    </member><member name="F:Windows.Foundation.AsyncStatus.Completed">
+      <summary>Der Vorgang wurde abgeschlossen.</summary>
+    </member><member name="F:Windows.Foundation.AsyncStatus.Error">
+      <summary>Bei dem Vorgang ist ein Fehler aufgetreten.</summary>
+    </member><member name="F:Windows.Foundation.AsyncStatus.Started">
+      <summary>Der Vorgang wurde gestartet.</summary>
+    </member><member name="T:Windows.Foundation.DateTime">
+      <summary>Stellt einen Zeitpunkt dar, der normalerweise durch Datum und Uhrzeit dargestellt wird.</summary>
+    </member><member name="F:Windows.Foundation.DateTime.UniversalTime">
+      <summary>Eine 64-Bit-Ganzzahl mit Vorzeichen, die einen Zeitpunkt als Anzahl von 100-Nanosekunden-Intervallen vor oder nach Mitternacht am 1. Januar 1601 darstellt (entsprechend dem gregorianischen Kalender).</summary>
+    </member><member name="T:Windows.Foundation.Deferral">
+      <summary>Speichert einen DeferralCompletedHandler, der bei Abschluss der Verzögerung aufgerufen wird, und ändert den Status der Verzögerung.</summary>
+    </member><member name="M:Windows.Foundation.Deferral.#ctor(Windows.Foundation.DeferralCompletedHandler)">
+      <summary>Initialisiert ein neues Deferral-Objekt und gibt einen DeferralCompletedHandler an, der nach Abschluss der Verzögerung aufgerufen werden soll.</summary>
+      <param name="handler">Ein DeferralCompletedHandler, der beim Abschluss der Verzögerung aufgerufen wird.</param>
+    </member><member name="M:Windows.Foundation.Deferral.Close">
+      <summary>Wenn der DeferralCompletedHandler noch nicht aufgerufen wurde, wird er hierüber aufgerufen, und der Verweis zum Delegaten wird gelöscht.</summary>
+    </member><member name="M:Windows.Foundation.Deferral.Complete">
+      <summary>Wenn der DeferralCompletedHandler noch nicht aufgerufen wurde, wird er hierüber aufgerufen, und der Verweis zum Delegaten wird gelöscht.</summary>
+    </member><member name="T:Windows.Foundation.DeferralCompletedHandler">
+      <summary>Stellt eine Methode dar, die das Beendigungsereignis einer verzögerten Aktion behandelt.</summary>
+    </member><member name="T:Windows.Foundation.EventHandler`1">
+      <summary>Stellt eine Methode dar, die allgemeine Ereignisse behandelt.</summary>
+      <typeparam name="T">Der Typ der vom Ereignis generierten Ereignisdaten.</typeparam>
+      <param name="sender">Die Ereignisquelle.</param>
+      <param name="args">Die Ereignisdaten.</param>
+    </member><member name="T:Windows.Foundation.EventRegistrationToken">
+      <summary>Stellt einen Verweis auf einen Delegaten dar, der Änderungsbenachrichtigungen empfängt.</summary>
+    </member><member name="F:Windows.Foundation.EventRegistrationToken.Value">
+      <summary>Der Verweis auf den Delegaten.</summary>
+    </member><member name="T:Windows.Foundation.HResult">
+      <summary>Stellt einen Windows-Runtime-Fehler dar.</summary>
+    </member><member name="F:Windows.Foundation.HResult.Value">
+      <summary>Ein Integer, der einen Fehler beschreibt.</summary>
+    </member><member name="T:Windows.Foundation.IAsyncAction">
+      <summary>Stellt eine asynchrone Aktion dar. Dies ist der Rückgabetyp für viele asynchrone Windows-Runtime-Methoden, die kein Ergebnisobjekt haben und den laufenden Status nicht melden.</summary>
+    </member><member name="P:Windows.Foundation.IAsyncAction.Completed">
+      <summary>Ruft die Methode ab, die die Benachrichtigung "Aktion abgeschlossen" behandelt, oder legt diese fest.</summary>
+      <returns>Die Methode, die die Benachrichtigung behandelt.</returns>
+    </member><member name="M:Windows.Foundation.IAsyncAction.GetResults">
+      <summary>Gibt die Ergebnisse der Aktion zurück.</summary>
+    </member><member name="T:Windows.Foundation.IAsyncActionWithProgress`1">
+      <summary>Stellt eine asynchrone Aktion dar, die Statusaktualisierungen an Aufrufer melden kann. Dies ist der Rückgabetyp für alle asynchronen Windows-Runtime-Methoden, die kein Ergebnisobjekt haben, aber den Status an Rückruflistener melden.</summary>
+      <typeparam name="TProgress">Der Typ der Statusdaten.</typeparam>
+    </member><member name="P:Windows.Foundation.IAsyncActionWithProgress`1.Completed">
+      <summary>Ruft die Methode ab, die die Benachrichtigung "Aktion abgeschlossen" behandelt, oder legt diese fest.</summary>
+      <returns>Die Methode, die die Benachrichtigung behandelt.</returns>
+    </member><member name="P:Windows.Foundation.IAsyncActionWithProgress`1.Progress">
+      <summary>Ruft die Rückrufmethode ab, die Statusbenachrichtigungen empfängt, oder legt diese fest.</summary>
+      <returns>Ein Verweis auf die Rückrufmethode, die Statusbenachrichtigungen behandelt. Implementieren Sie den AsyncActionProgressHandler(TProgress)-Delegaten, um den Rückruf zu definieren. TProgress definiert den Statuseinheitentyp, der nach Methodenimplementierung variiert.</returns>
+    </member><member name="M:Windows.Foundation.IAsyncActionWithProgress`1.GetResults">
+      <summary>Gibt die Ergebnisse der Aktion zurück.</summary>
+    </member><member name="T:Windows.Foundation.IAsyncInfo">
+      <summary>Unterstützt asynchrone Aktionen und Vorgänge.
+IAsyncInfo ist eine Basisschnittstelle für IAsyncAction, IAsyncActionWithProgress&lt;TProgress&gt;, IAsyncOperation&lt;TResult&gt; und IAsyncOperationWithProgress&lt;TResult,TProgress&amp;gt, die jeweils Kombinationen von Rückgabetyp und Fortschritt für eine asynchrone Methode unterstützen.</summary>
+    </member><member name="P:Windows.Foundation.IAsyncInfo.ErrorCode">
+      <summary>Ruft eine Zeichenfolge ab, die den Fehlerzustand des asynchronen Vorgangs beschreibt.</summary>
+      <returns>Die Fehlerzeichenfolge.</returns>
+    </member><member name="P:Windows.Foundation.IAsyncInfo.Id">
+      <summary>Ruft den Handle des asynchronen Vorgangs ab.</summary>
+      <returns>Der Handle des asynchronen Vorgangs.</returns>
+    </member><member name="P:Windows.Foundation.IAsyncInfo.Status">
+      <summary>Ruft einen Wert ab, der den Status des asynchronen Vorgangs angibt.</summary>
+      <returns>Der Status des Vorgangs als ein Wert der Enumeration. Der Wert Completed gibt an, dass die Methode zurückgegeben wurde. Der Started-Wert stellt einen Übergangszustand dar, bevor eines der anderen 3 Endergebnisse (Completed, Error, Canceled) durch den Aufruf der Methode bestimmt werden kann.</returns>
+    </member><member name="M:Windows.Foundation.IAsyncInfo.Cancel">
+      <summary>Bricht den asynchronen Vorgang ab.</summary>
+    </member><member name="M:Windows.Foundation.IAsyncInfo.Close">
+      <summary>Schließt den asynchronen Vorgang.</summary>
+    </member><member name="T:Windows.Foundation.IAsyncOperation`1">
+      <summary>Stellt einen asynchronen Vorgang dar, der ein Ergebnis nach Abschluss zurückgibt. Dies ist der Rückgabetyp für viele asynchrone Windows-Runtime-Methoden, die Ergebnisse haben, aber keine Statusberichte erstellen.</summary>
+      <typeparam name="TResult">Der Typ des Ergebnisses.</typeparam>
+    </member><member name="P:Windows.Foundation.IAsyncOperation`1.Completed">
+      <summary>Ruft die Methode ab, die die Benachrichtigung "Vorgang abgeschlossen" behandelt, oder legt diese fest.</summary>
+      <returns>Die Methode, die die Benachrichtigung behandelt.</returns>
+    </member><member name="M:Windows.Foundation.IAsyncOperation`1.GetResults">
+      <summary>Gibt das Ergebnis des Vorgangs zurück.</summary>
+      <returns>Die Ergebnisse des Vorgangs.</returns>
+    </member><member name="T:Windows.Foundation.IAsyncOperationWithProgress`2">
+      <summary>Stellt einen asynchronen Vorgang dar, der Statusaktualisierungen an Aufrufer melden kann. Dies ist der Rückgabetyp für viele asynchrone Windows-Runtime-Methoden, die Ergebnisse haben und außerdem Statusberichte erstellen.</summary>
+      <typeparam name="TResult">Der Typ des Ergebnisses.</typeparam>
+      <typeparam name="TProgress">Der Typ der Statusdaten.</typeparam>
+    </member><member name="P:Windows.Foundation.IAsyncOperationWithProgress`2.Completed">
+      <summary>Ruft die Methode ab, die die Benachrichtigung "Vorgang abgeschlossen" behandelt, oder legt diese fest.</summary>
+      <returns>Die Methode, die die Benachrichtigung behandelt.</returns>
+    </member><member name="P:Windows.Foundation.IAsyncOperationWithProgress`2.Progress">
+      <summary>Ruft die Methode ab, die Statusbenachrichtigungen behandelt, oder legt diese fest.</summary>
+      <returns>Ein Verweis auf die Rückrufmethode, die Statusbenachrichtigungen behandelt. Implementieren Sie den Delegaten AsyncOperationProgressHandler&lt;TResult, TProgress&gt; um den Rückruf zu definieren. TProgress definiert den Statuseinheitentyp, der nach Methodenimplementierung variiert.</returns>
+    </member><member name="M:Windows.Foundation.IAsyncOperationWithProgress`2.GetResults">
+      <summary>Gibt das Ergebnis des Vorgangs zurück.</summary>
+      <returns>Die Ergebnisse des Vorgangs.</returns>
+    </member><member name="T:Windows.Foundation.IClosable">
+      <summary>Definiert eine Methode zur Freigabe von reservierten Ressourcen.</summary>
+    </member><member name="M:Windows.Foundation.IClosable.Close">
+      <summary>Gibt Systemressourcen frei, die von einem Windows Runtime-Objekt verfügbar gemacht werden.</summary>
+    </member><member name="T:Windows.Foundation.IPropertyValue">
+      <summary>Stellt einen Wert in einem Eigenschaftsspeicher dar. Sie können diese Schnittstelle nicht implementieren (siehe Hinweise).</summary>
+    </member><member name="P:Windows.Foundation.IPropertyValue.IsNumericScalar">
+      <summary>Ruft einen Wert ab, der angibt, ob der Eigenschaftswert ein Skalarwert ist.</summary>
+      <returns>"True", wenn der Wert ein Skalar ist, andernfalls FALSE.</returns>
+    </member><member name="P:Windows.Foundation.IPropertyValue.Type">
+      <summary>Gibt den Typ zurück, der in der Eigenschaft gespeichert ist.</summary>
+      <returns>Der Typ, der im Eigenschaftswert gespeichert ist.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetBoolean">
+      <summary>Gibt den booleschen Wert zurück, der als Eigenschaftswert gespeichert ist.</summary>
+      <returns>Der Wert.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetBooleanArray(System.Boolean[]@)">
+      <summary>Gibt das Array von booleschen Werten zurück, das als Eigenschaftswert gespeichert ist.</summary>
+      <param name="value">Das Array von Werten.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetChar16">
+      <summary>Gibt das Unicode-Zeichen zurück, das als Eigenschaftswert gespeichert ist.</summary>
+      <returns>Der Wert.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetChar16Array(System.Char[]@)">
+      <summary>Gibt das Array von Unicode-Zeichen zurück, das als Eigenschaftswert gespeichert ist.</summary>
+      <param name="value">Das Array von Werten.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetDateTime">
+      <summary>Gibt den Datums-und Uhrzeitwert zurück, der als Eigenschaftswert gespeichert ist.</summary>
+      <returns>Der Wert.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetDateTimeArray(Windows.Foundation.DateTime[]@)">
+      <summary>Gibt das Array von Datums- und Uhrzeitwerten zurück, die als Eigenschaftswert gespeichert ist.</summary>
+      <param name="value">Das Array von Werten.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetDouble">
+      <summary>Gibt den Gleitkommazahl zurück, der als Eigenschaftswert gespeichert ist.</summary>
+      <returns>Der Wert.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetDoubleArray(System.Double[]@)">
+      <summary>Gibt das Array von Gleitkommawerten zurück, das als Eigenschaftswert gespeichert ist.</summary>
+      <param name="value">Das Array von Werten.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetGuid">
+      <summary>Gibt den GUID-Wert zurück, der als Eigenschaftswert gespeichert wird.</summary>
+      <returns>Der Wert.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetGuidArray(System.Guid[]@)">
+      <summary>Gibt das Array von GUID-Werten zurück, das als Eigenschaftswert gespeichert ist.</summary>
+      <param name="value">Das Array von Werten.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInspectableArray(System.Object[]@)">
+      <summary>Gibt das Array von Inspectable-Objekten zurück, das als Eigenschaftswert gespeichert ist.</summary>
+      <param name="value">Das Array von Objekten.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt16">
+      <summary>Gibt den ganzzahligen Wert zurück, der als Eigenschaftswert gespeichert ist.</summary>
+      <returns>Der Wert.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt16Array(System.Int16[]@)">
+      <summary>Gibt das Array von ganzzahligen Werten zurück, das als Eigenschaftswert gespeichert ist.</summary>
+      <param name="value">Das Array von Werten.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt32">
+      <summary>Gibt den ganzzahligen Wert zurück, der als Eigenschaftswert gespeichert ist.</summary>
+      <returns>Der Wert.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt32Array(System.Int32[]@)">
+      <summary>Gibt das Array von ganzzahligen Werten zurück, das als Eigenschaftswert gespeichert ist.</summary>
+      <param name="value">Das Array von Werten.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt64">
+      <summary>Gibt den ganzzahligen Wert zurück, der als Eigenschaftswert gespeichert ist.</summary>
+      <returns>Der Wert.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt64Array(System.Int64[]@)">
+      <summary>Gibt das Array von ganzzahligen Werten zurück, das als Eigenschaftswert gespeichert ist.</summary>
+      <param name="value">Das Array von Werten.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetPoint">
+      <summary>Gibt die Punktstruktur zurück, die als Eigenschaftswert gespeichert ist.</summary>
+      <returns>Die Struktur.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetPointArray(Windows.Foundation.Point[]@)">
+      <summary>Gibt das Array von Point-Strukturen zurück, das als Eigenschaftswert gespeichert ist.</summary>
+      <param name="value">Das Array von Strukturen.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetRect">
+      <summary>Gibt die Rechteckstruktur zurück, die als Eigenschaftswert gespeichert ist.</summary>
+      <returns>Die Struktur.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetRectArray(Windows.Foundation.Rect[]@)">
+      <summary>Gibt das Array von Rectangle-Strukturen zurück, das als Eigenschaftswert gespeichert ist.</summary>
+      <param name="value">Das Array von Strukturen.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetSingle">
+      <summary>Gibt den Gleitkommazahl zurück, der als Eigenschaftswert gespeichert ist.</summary>
+      <returns>Der Wert.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetSingleArray(System.Single[]@)">
+      <summary>Gibt das Array von Gleitkommawerten zurück, das als Eigenschaftswert gespeichert ist.</summary>
+      <param name="value">Das Array von Werten.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetSize">
+      <summary>Gibt die Größenstruktur zurück, die als Eigenschaftswert gespeichert ist.</summary>
+      <returns>Die Struktur.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetSizeArray(Windows.Foundation.Size[]@)">
+      <summary>Gibt das Array von Size-Strukturen zurück, das als Eigenschaftswert gespeichert ist.</summary>
+      <param name="value">Das Array von Strukturen.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetString">
+      <summary>Gibt den Zeichenfolgenwert, der als Eigenschaftswert gespeichert ist.</summary>
+      <returns>Der Wert.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetStringArray(System.String[]@)">
+      <summary>Gibt das Array von Zeichenfolgenwerten zurück, das als Eigenschaftswert gespeichert ist.</summary>
+      <param name="value">Das Array von Werten.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetTimeSpan">
+      <summary>Gibt den Wert des Zeitintervalls zurück, der als Eigenschaftswert gespeichert wird.</summary>
+      <returns>Der Wert.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetTimeSpanArray(Windows.Foundation.TimeSpan[]@)">
+      <summary>Gibt das Array von Zeitintervallwerten zurück, das als Eigenschaftswert gespeichert ist.</summary>
+      <param name="value">Das Array von Werten.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt16">
+      <summary>Gibt den vorzeichenlosen ganzzahligen Wert zurück, der als Eigenschaftswert gespeichert ist.</summary>
+      <returns>Der Wert.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt16Array(System.UInt16[]@)">
+      <summary>Gibt das Array von ganzzahligen Werten ohne Vorzeichen zurück, das als Eigenschaftswert gespeichert ist.</summary>
+      <param name="value">Das Array von Werten.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt32">
+      <summary>Gibt den vorzeichenlosen ganzzahligen Wert zurück, der als Eigenschaftswert gespeichert ist.</summary>
+      <returns>Der Wert.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt32Array(System.UInt32[]@)">
+      <summary>Gibt das Array von ganzzahligen Werten ohne Vorzeichen zurück, das als Eigenschaftswert gespeichert ist.</summary>
+      <param name="value">Das Array von Werten.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt64">
+      <summary>Gibt den vorzeichenlosen ganzzahligen Wert zurück, der als Eigenschaftswert gespeichert ist.</summary>
+      <returns>Der Wert.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt64Array(System.UInt64[]@)">
+      <summary>Gibt das Array von ganzzahligen Werten ohne Vorzeichen zurück, das als Eigenschaftswert gespeichert ist.</summary>
+      <param name="value">Das Array von Werten.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt8">
+      <summary>Gibt den Bytewert zurück, der als Eigenschaftswert gespeichert ist.</summary>
+      <returns>Der Wert.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt8Array(System.Byte[]@)">
+      <summary>Gibt das Array von Bytewerten zurück, das als Eigenschaftswert gespeichert ist.</summary>
+      <param name="value">Das Array von Werten.</param>
+    </member><member name="T:Windows.Foundation.IReference`1">
+      <summary>Ermöglicht die Verwendung beliebiger Enumerationen, Strukturen und Delegattypen als Eigenschaftswerte.</summary>
+      <typeparam name="T">Der Typ.</typeparam>
+    </member><member name="P:Windows.Foundation.IReference`1.Value">
+      <summary>Ruft den Typ ab, der als IPropertyValue dargestellt wird.</summary>
+      <returns>Der Typ.</returns>
+    </member><member name="T:Windows.Foundation.IReferenceArray`1">
+      <summary>Ermöglicht die Verwendung beliebiger Enumerationen, Strukturen und Delegattypen als ein Array von Eigenschaftswerten. Sie können diese Schnittstelle nicht implementieren (siehe Hinweise).</summary>
+      <typeparam name="T">Der Typ.</typeparam>
+    </member><member name="P:Windows.Foundation.IReferenceArray`1.Value">
+      <summary>Ruft den Typ ab, der als IPropertyValue-Array dargestellt wird.</summary>
+      <returns>Der Typ.</returns>
+    </member><member name="T:Windows.Foundation.IStringable">
+      <summary>Bietet eine Möglichkeit, das aktuelle Objekt als Zeichenfolge darzustellen.</summary>
+    </member><member name="M:Windows.Foundation.IStringable.ToString">
+      <summary>Ruft eine Zeichenfolge ab, die das aktuelle Objekt darstellt.</summary>
+      <returns>Eine Zeichenfolge, die das aktuelle Objekt darstellt.</returns>
+    </member><member name="T:Windows.Foundation.Point">
+      <summary>Stellt x- und y-Koordinatenwerte dar, die einen Punkt in einem zweidimensionalen Raum definieren.</summary>
+    </member><member name="F:Windows.Foundation.Point.X">
+      <summary>Die horizontale Position des Punkts.</summary>
+    </member><member name="F:Windows.Foundation.Point.Y">
+      <summary>Die vertikale Position des Punkts.</summary>
+    </member><member name="T:Windows.Foundation.PropertyType">
+      <summary>Gibt die Eigenschaftswerttypen an.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Boolean">
+      <summary>Ein Wert, der nur TRUE oder FALSE sein kann.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.BooleanArray">
+      <summary>Ein Array von booleschen Werten.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Char16">
+      <summary>Ein 16-Bit-(2-Byte-)Codepunkt ohne Vorzeichen.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Char16Array">
+      <summary>Ein Array von Char-Werten.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.DateTime">
+      <summary>Ein Zeitpunkt, der in der Regel durch Datum und Uhrzeit dargestellt wird.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.DateTimeArray">
+      <summary>Ein Array von DateTime-Werten.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Double">
+      <summary>Eine 64-Bit-Gleitkommazahl (8-Byte) mit Vorzeichen.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.DoubleArray">
+      <summary>Ein Array von Double-Werten.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Empty">
+      <summary>Es ist kein Typ angegeben.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Guid">
+      <summary>Ein GUID (Globally Unique Identifier).</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.GuidArray">
+      <summary>Ein Array von Guid-Werten.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Inspectable">
+      <summary>Ein Objekt, das die IInspectable-Schnittstelle implementiert.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.InspectableArray">
+      <summary>Ein Array von Inspectable-Werten.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int16">
+      <summary>Eine 16-Bit-Ganzzahl (2 Bytes) mit Vorzeichen.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int16Array">
+      <summary>Ein Array von Int16-Werten.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int32">
+      <summary>Eine 32-Bit-Ganzzahl (4 Bytes) mit Vorzeichen.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int32Array">
+      <summary>Ein Array von Int32-Werten.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int64">
+      <summary>Eine 64-Bit-Ganzzahl (8 Bytes) mit Vorzeichen.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int64Array">
+      <summary>Ein Array von Int64-Werten.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.OtherType">
+      <summary>Ein nicht in dieser Enumeration angegebener Typ.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.OtherTypeArray">
+      <summary>Ein Array eines nicht angegebenen Typs.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Point">
+      <summary>Ein geordnetes Paar von x- und y-Koordinaten als Gleitkommazahlen, das einen Punkt in einem zweidimensionalen Raum definiert.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.PointArray">
+      <summary>Ein Array von Punktstrukturen.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Rect">
+      <summary>Ein Satz von vier Gleitkommazahlen, die die Position und Größe eines Rechtecks angeben.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.RectArray">
+      <summary>Ein Array von Rect-Strukturen.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Single">
+      <summary>Eine 32-Bit-Gleitkommazahl (4-Byte) mit Vorzeichen.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.SingleArray">
+      <summary>Ein Array von Single-Werten.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Size">
+      <summary>Ein geordnetes Paar von Gleitkommazahlen, die eine Höhe und eine Breite angeben.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.SizeArray">
+      <summary>Ein Array von Size-Strukturen.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.String">
+      <summary>Ein Windows-Runtime HSTRING.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.StringArray">
+      <summary>Ein Array von String-Werten.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.TimeSpan">
+      <summary>Ein Zeitintervall.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.TimeSpanArray">
+      <summary>Ein Array von TimeSpan-Werten.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt16">
+      <summary>Eine 16-Bit-Ganzahl (2 Bytes) ohne Vorzeichen.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt16Array">
+      <summary>Ein Array von UInt16-Werten.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt32">
+      <summary>Eine 32-Bit-Ganzahl (4 Bytes) ohne Vorzeichen.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt32Array">
+      <summary>Ein Array von UInt32-Werten.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt64">
+      <summary>Eine 64-Bit-Ganzahl (8 Bytes) ohne Vorzeichen.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt64Array">
+      <summary>Ein Array von UInt64-Werten.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt8">
+      <summary>Ein Byte.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt8Array">
+      <summary>Ein Array von Byte-Werten.</summary>
+    </member><member name="T:Windows.Foundation.PropertyValue">
+      <summary>Repräsentiert einen Wert in einem Eigenschaftenspeicher (etwa eine PropertySet-Instanz).</summary>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateBoolean(System.Boolean)">
+      <summary>Erstellt einen Eigenschaftswert aus einem booleschen Wert.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Der Wert, der im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateBooleanArray(System.Boolean[])">
+      <summary>Erstellt einen Eigenschaftswert aus einem Array von booleschen Werten.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Das Array, das im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateChar16(System.Char)">
+      <summary>Erstellt einen Eigenschaftswert aus einem Unicode-Zeichen.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Der Wert, der im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateChar16Array(System.Char[])">
+      <summary>Erstellt einen Eigenschaftswert aus einem Array von Unicode-Zeichen.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Das Array, das im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateDateTime(Windows.Foundation.DateTime)">
+      <summary>Erstellt einen Eigenschaftswert aus einem Datums- und Uhrzeitwert.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Der Wert, der im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateDateTimeArray(Windows.Foundation.DateTime[])">
+      <summary>Erstellt einen Eigenschaftswert aus einem Array von Datums- und Uhrzeitwerten.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Das Array, das im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateDouble(System.Double)">
+      <summary>Erstellt einen Eigenschaftswert aus einem Gleitkommawert.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Der Wert, der im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateDoubleArray(System.Double[])">
+      <summary>Erstellt einen Eigenschaftswert aus einem Array von Gleitkommawerten.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Das Array, das im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateEmpty">
+      <summary>Erstellt einen leeren Eigenschaftswert.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateGuid(System.Guid)">
+      <summary>Erstellt einen Eigenschaftswert aus einer GUID.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Der Wert, der im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateGuidArray(System.Guid[])">
+      <summary>Erstellt einen Eigenschaftenwert aus einem GUID-Array.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Das Array, das im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInspectable(System.Object)">
+      <summary>Erstellt einen Eigenschaftswert aus einem zu prüfenden Objekt.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Das Objekt, das im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInspectableArray(System.Object[])">
+      <summary>Erstellt einen Eigenschaftswert aus einem Array zu prüfender Objekte.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Das Array, das im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt16(System.Int16)">
+      <summary>Erstellt einen Eigenschaftswert aus einer Ganzzahl.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Der Wert, der im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt16Array(System.Int16[])">
+      <summary>Erstellt einen Eigenschaftswert aus einem Array von Ganzzahlen.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Das Array, das im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt32(System.Int32)">
+      <summary>Erstellt einen Eigenschaftswert aus einer Ganzzahl.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Der Wert, der im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt32Array(System.Int32[])">
+      <summary>Erstellt einen Eigenschaftswert aus einem Array von Ganzzahlen.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Das Array, das im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt64(System.Int64)">
+      <summary>Erstellt einen Eigenschaftswert aus einer Ganzzahl.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Der Wert, der im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt64Array(System.Int64[])">
+      <summary>Erstellt einen Eigenschaftswert aus einem Array von Ganzzahlen.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Das Array, das im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreatePoint(Windows.Foundation.Point)">
+      <summary>Erstellt einen Eigenschaftswert aus einer Punktstruktur.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Die Struktur, die im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreatePointArray(Windows.Foundation.Point[])">
+      <summary>Erstellt einen Eigenschaftswert aus einem Array von Punktstrukturen.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Das Array, das im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateRect(Windows.Foundation.Rect)">
+      <summary>Erstellt einen Eigenschaftswert aus einer Rechteckstruktur.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Die Struktur, die im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateRectArray(Windows.Foundation.Rect[])">
+      <summary>Erstellt einen Eigenschaftswert aus einem Array von Rechteckstrukturen.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Das Array, das im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateSingle(System.Single)">
+      <summary>Erstellt einen Eigenschaftswert aus einem Gleitkommawert.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Der Wert, der im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateSingleArray(System.Single[])">
+      <summary>Erstellt einen Eigenschaftswert aus einem Array von Gleitkommawerten.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Das Array, das im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateSize(Windows.Foundation.Size)">
+      <summary>Erstellt einen Eigenschaftswert aus einer Größenstruktur.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Die Struktur, die im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateSizeArray(Windows.Foundation.Size[])">
+      <summary>Erstellt einen Eigenschaftswert aus einem Array von Größenstrukturen.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Das Array, das im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateString(System.String)">
+      <summary>Erstellt einen Eigenschaftswert aus einer Zeichenfolge.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Die Zeichenfolge, die im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateStringArray(System.String[])">
+      <summary>Erstellt einen Eigenschaftswert aus einem Array von Zeichenfolgen.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Das Array, das im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateTimeSpan(Windows.Foundation.TimeSpan)">
+      <summary>Erstellt einen Eigenschaftswert aus einem Zeitintervall.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Das Zeitintervall zum Speichern des Eigenschaftswerts.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateTimeSpanArray(Windows.Foundation.TimeSpan[])">
+      <summary>Erstellt einen Eigenschaftswert aus einem Array von Zeitintervallen.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Das Array, das im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt16(System.UInt16)">
+      <summary>Erstellt einen Eigenschaftswert aus einer Ganzzahl ohne Vorzeichen.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Der Wert, der im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt16Array(System.UInt16[])">
+      <summary>Erstellt einen Eigenschaftswert aus einem Array von Ganzzahlen ohne Vorzeichen.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Das Array, das im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt32(System.UInt32)">
+      <summary>Erstellt einen Eigenschaftswert aus einer Ganzzahl ohne Vorzeichen.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Der Wert, der im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt32Array(System.UInt32[])">
+      <summary>Erstellt einen Eigenschaftswert aus einem Array von Ganzzahlen ohne Vorzeichen.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Das Array, das im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt64(System.UInt64)">
+      <summary>Erstellt einen Eigenschaftswert aus einer Ganzzahl ohne Vorzeichen.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Der Wert, der im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt64Array(System.UInt64[])">
+      <summary>Erstellt einen Eigenschaftswert aus einem Array von Ganzzahlen ohne Vorzeichen.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Das Array, das im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt8(System.Byte)">
+      <summary>Erstellt einen Eigenschaftswert aus einem Byte.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Der Wert, der im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt8Array(System.Byte[])">
+      <summary>Erstellt einen Eigenschaftswert aus einem Array von Bytes.</summary>
+      <returns>Der Eigenschaftswert.</returns>
+      <param name="value">Das Array, das im Eigenschaftswert gespeichert werden soll.</param>
+    </member><member name="T:Windows.Foundation.Rect">
+      <summary>Enthält Zahlenwerte, die die Position und die Größe eines Rechtecks darstellen.</summary>
+    </member><member name="F:Windows.Foundation.Rect.Height">
+      <summary>Die Höhe des Rechtecks in Pixel.</summary>
+    </member><member name="F:Windows.Foundation.Rect.Width">
+      <summary>Die Breite des Rechtecks in Pixel.</summary>
+    </member><member name="F:Windows.Foundation.Rect.X">
+      <summary>Die x-Koordinate der linken oberen Ecke des Rechtecks.</summary>
+    </member><member name="F:Windows.Foundation.Rect.Y">
+      <summary>Die y-Koordinate der linken oberen Ecke des Rechtecks.</summary>
+    </member><member name="T:Windows.Foundation.Size">
+      <summary>Stellt Zahlenwerte dar, die eine Höhe und Breite festlegen.</summary>
+    </member><member name="F:Windows.Foundation.Size.Height">
+      <summary>Die Höhe.</summary>
+    </member><member name="F:Windows.Foundation.Size.Width">
+      <summary>Die Breite.</summary>
+    </member><member name="T:Windows.Foundation.TimeSpan">
+      <summary>Stellt ein Zeitintervall als 64-Bit-Ganzzahlwert mit Vorzeichen dar.</summary>
+    </member><member name="F:Windows.Foundation.TimeSpan.Duration">
+      <summary>Eine in der Einheit 100 Nanosekunden ausgedrückte Zeitspanne.</summary>
+    </member><member name="T:Windows.Foundation.TypedEventHandler`2">
+      <summary>Stellt eine Methode dar, die allgemeine Ereignisse behandelt.</summary>
+      <typeparam name="TSender">Der Objekttyp.</typeparam>
+      <typeparam name="TResult">Der Typ der vom Ereignis generierten Ereignisdaten.</typeparam>
+      <param name="sender">Die Ereignisquelle.</param>
+      <param name="args">Die Ereignisdaten. Wenn keine Ereignisdaten vorhanden ist, ist dieser Parameter NULL.</param>
+    </member><member name="T:Windows.Foundation.Collections.CollectionChange">
+      <summary>Beschreibt die Aktion, die zur Änderung einer Auflistung führt.</summary>
+    </member><member name="F:Windows.Foundation.Collections.CollectionChange.ItemChanged">
+      <summary>Ein Element wird in der Auflistung geändert.</summary>
+    </member><member name="F:Windows.Foundation.Collections.CollectionChange.ItemInserted">
+      <summary>Ein Element wird zur Auflistung hinzugefügt.</summary>
+    </member><member name="F:Windows.Foundation.Collections.CollectionChange.ItemRemoved">
+      <summary>Ein Element wird aus der Auflistung entfernt.</summary>
+    </member><member name="F:Windows.Foundation.Collections.CollectionChange.Reset">
+      <summary>Die Auflistung wurde geändert.</summary>
+    </member><member name="T:Windows.Foundation.Collections.IIterable`1">
+      <summary>Macht einen Iterator verfügbar, der eine einfache Iteration über eine Auflistung eines angegebenen Typs unterstützt.</summary>
+      <typeparam name="T">Der Typ der zu durchlaufenden Objekte.</typeparam>
+    </member><member name="M:Windows.Foundation.Collections.IIterable`1.First">
+      <summary>Gibt einen Iterator für die Elemente in der Auflistung zurück.</summary>
+      <returns>Der Iterator.</returns>
+    </member><member name="T:Windows.Foundation.Collections.IIterator`1">
+      <summary>Unterstützt eine einfache Iteration durch eine Auflistung.</summary>
+      <typeparam name="T">Der Typ der zu durchlaufenden Objekte.</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IIterator`1.Current">
+      <summary>Ruft das aktuelle Element in der Auflistung ab.</summary>
+      <returns>Das aktuelle Element in der Auflistung.</returns>
+    </member><member name="P:Windows.Foundation.Collections.IIterator`1.HasCurrent">
+      <summary>Ruft ein Wert ab, der angibt, ob sich der Iterator auf ein aktuelles Element bezieht oder am Ende einer Auflistung befindet.</summary>
+      <returns>"True", wenn der Iterator auf ein gültiges Element in der Auflistung verweist; andernfalls "False".</returns>
+    </member><member name="M:Windows.Foundation.Collections.IIterator`1.GetMany(`0[])">
+      <summary>Ruft alle Elemente in der Auflistung ab.</summary>
+      <returns>Die Anzahl der Elemente in der Auflistung.</returns>
+      <param name="items">Die Elemente in der Auflistung.</param>
+    </member><member name="M:Windows.Foundation.Collections.IIterator`1.MoveNext">
+      <summary>Verschiebt den Iterator zum nächsten Element in der Auflistung.</summary>
+      <returns>"True", wenn der Iterator auf ein gültiges Element in der Auflistung verweist. "False", wenn der Iterator das Ende der Auflistung erreicht.</returns>
+    </member><member name="T:Windows.Foundation.Collections.IKeyValuePair`2">
+      <summary>Stellt ein Schlüssel-Wert-Paar dar. Dies wird in der Regel als Einschränkungstyp verwendet, wenn Sie zwei Typparameter in einen kapseln müssen, um Einschränkungen einer anderen generischen Schnittstelle zu erfüllen.</summary>
+      <typeparam name="K">Der Typ der Schlüssel in jedem Schlüssel-Wert-Paar.</typeparam>
+      <typeparam name="V">Der Typ der Werte in jedem Schlüssel-Wert-Paar.</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IKeyValuePair`2.Key">
+      <summary>Ruft den Schlüssel des Schlüssel-Wert-Paars ab.</summary>
+      <returns>Der Schlüssel.</returns>
+    </member><member name="P:Windows.Foundation.Collections.IKeyValuePair`2.Value">
+      <summary>Ruft den Wert im Schlüssel-Wert-Paar ab.</summary>
+      <returns>Der Wert.</returns>
+    </member><member name="T:Windows.Foundation.Collections.IMap`2">
+      <summary>Stellt eine assoziative Auflistung, auch als Zuordnung oder Wörterbuch bekannt, dar.</summary>
+      <typeparam name="K">Der Typ der Schlüssel in der Zuordnung.</typeparam>
+      <typeparam name="V">Der Typ der Werte in der Zuordnung.</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IMap`2.Size">
+      <summary>Ruft die Anzahl der Elemente in der Struktur ab.</summary>
+      <returns>Die Anzahl der Elemente in der Zuordnung.</returns>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.Clear">
+      <summary>Entfernt alle Elemente aus der Zuordnung.</summary>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.GetView">
+      <summary>Gibt eine unveränderliche Ansicht der Zuordnung zurück.</summary>
+      <returns>Die Ansicht der Zuordnung.</returns>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.HasKey(`0)">
+      <summary>Bestimmt, ob die Zuordnung den angegebenen Schlüssel enthält.</summary>
+      <returns>"True", wenn der Schlüssel gefunden wird, andernfalls FALSE.</returns>
+      <param name="key">Der Schlüssel, der dem zu suchenden Element zugeordnet ist.</param>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.Insert(`0,`1)">
+      <summary>Fügt ein Element in der Zuordnung ein oder ersetzt ein Element.</summary>
+      <returns>"True", wenn ein Element mit dem angegebenen Schlüssel ein vorhandenes Element ist, das ersetzt wurde; andernfalls "False".</returns>
+      <param name="key">Der Schlüssel, der dem einzufügenden Element zugeordnet ist.</param>
+      <param name="value">Das einzufügende Element.</param>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.Lookup(`0)">
+      <summary>Gibt das Element am angegebenen Schlüssel in der Zuordnung zurück.</summary>
+      <returns>Das dem angegebenen Schlüssel zugeordnete Element.</returns>
+      <param name="key">Der Schlüssel, der dem zu suchenden Element zugeordnet ist.</param>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.Remove(`0)">
+      <summary>Entfernt ein Element aus der Zuordnung.</summary>
+      <param name="key">Der Schlüssel, der dem zu entfernenden Element zugeordnet ist.</param>
+    </member><member name="T:Windows.Foundation.Collections.IMapChangedEventArgs`1">
+      <summary>Stellt Daten für das Changed-Ereignis einer Zuordnungsauflistung bereit.</summary>
+      <typeparam name="K">Der Typ der Schlüssel in der Zuordnung.</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IMapChangedEventArgs`1.CollectionChange">
+      <summary>Ruft den Typ der Änderung ab, der in der Zuordnung aufgetreten ist.</summary>
+      <returns>Der Typ der Änderung in der Zuordnung.</returns>
+    </member><member name="P:Windows.Foundation.Collections.IMapChangedEventArgs`1.Key">
+      <summary>Ruft den Schlüssel des Elements, das geändert wurde.</summary>
+      <returns>Der Schlüssel des Elements, das geändert wurde.</returns>
+    </member><member name="T:Windows.Foundation.Collections.IMapView`2">
+      <summary>Stellt eine unveränderliche Ansicht in eine Zuordnung dar.</summary>
+      <typeparam name="K">Der Typ der Schlüssel in der Zuordnung.</typeparam>
+      <typeparam name="V">Der Typ der Werte in der Zuordnung.</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IMapView`2.Size">
+      <summary>Ruft die Anzahl der Elemente in der Struktur ab.</summary>
+      <returns>Die Anzahl der Elemente in der Zuordnung.</returns>
+    </member><member name="M:Windows.Foundation.Collections.IMapView`2.HasKey(`0)">
+      <summary>Bestimmt, ob die Zuordnungsansicht den angegebenen Schlüssel enthält.</summary>
+      <returns>"True", wenn der Schlüssel gefunden wird, andernfalls FALSE.</returns>
+      <param name="key">Der im Zuordnungsbereich zu suchende Schlüssel.</param>
+    </member><member name="M:Windows.Foundation.Collections.IMapView`2.Lookup(`0)">
+      <summary>Gibt das Element am angegebenen Schlüssel in der Zuordnungsansicht zurück.</summary>
+      <returns>Das dem angegebenen Schlüssel zugeordnete Element.</returns>
+      <param name="key">Der im Zuordnungsbereich zu suchende Schlüssel.</param>
+    </member><member name="T:Windows.Foundation.Collections.IObservableMap`2">
+      <summary>Benachrichtigt Listener über dynamische Änderungen an einer Zuordnung, z. B., wenn Elemente hinzugefügt oder entfernt werden.</summary>
+      <typeparam name="K">Der Typ der Schlüssel in der Zuordnung.</typeparam>
+      <typeparam name="V">Der Typ der Werte in der Zuordnung.</typeparam>
+    </member><member name="E:Windows.Foundation.Collections.IObservableMap`2.MapChanged">
+      <summary>Tritt ein, wenn sich die Zuordnung ändert.</summary>
+    </member><member name="T:Windows.Foundation.Collections.IObservableVector`1">
+      <summary>Benachrichtigt Listener über Änderungen am Vektor.</summary>
+      <typeparam name="T">Der Typ der Werte im Vektor.</typeparam>
+    </member><member name="E:Windows.Foundation.Collections.IObservableVector`1.VectorChanged">
+      <summary>Tritt ein, wenn sich der Vektor ändert.</summary>
+    </member><member name="T:Windows.Foundation.Collections.IPropertySet">
+      <summary>Stellt eine Auflistung von Schlüssel-Wert-Paaren dar, wobei einige andere Auflistungsschnittstellen korreliert werden.</summary>
+    </member><member name="T:Windows.Foundation.Collections.IVector`1">
+      <summary>Stellt eine Random-Access-Auflistung von Elementen dar.</summary>
+      <typeparam name="T">Der Typ der Werte im Vektor.</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IVector`1.Size">
+      <summary>Ruft die Anzahl der Elemente im Vektor ab.</summary>
+      <returns>Die Anzahl der Elemente im Vektor.</returns>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.Append(`0)">
+      <summary>Fügt ein Element an das Ende des Vektors an.</summary>
+      <param name="value">Das Element, das an den Vektor angefügt werden soll.</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.Clear">
+      <summary>Entfernt alle Elemente aus dem Vektor.</summary>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.GetAt(System.UInt32)">
+      <summary>Gibt das Element am angegebenen Index im Vektor zurück.</summary>
+      <returns>Das Element am angegebenen Index.</returns>
+      <param name="index">Der nullbasierte Index des Elements.</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.GetView">
+      <summary>Gibt eine unveränderliche Ansicht des Vektors zurück.</summary>
+      <returns>Die Ansicht des Vektors.</returns>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.IndexOf(`0,System.UInt32@)">
+      <summary>Ruft den Index eines angegebenen Elements im Vektor ab.</summary>
+      <returns>True, wenn das Element gefunden wird, andernfalls False.</returns>
+      <param name="value">Das im Vektor zu suchende Element.</param>
+      <param name="index">Wenn das Element gefunden wird, ist dies der nullbasierte Index des Elements; andernfalls ist dieser Parameter 0.</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.InsertAt(System.UInt32,`0)">
+      <summary>Fügt ein Element am angegebenen Index im Vektor ein.</summary>
+      <param name="index">Der nullbasierte Index.</param>
+      <param name="value">Das einzufügende Element.</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.RemoveAt(System.UInt32)">
+      <summary>Entfernt das Element am angegebenen Index im Vektor.</summary>
+      <param name="index">Der nullbasierte Index des zu entfernenden Vektorelements.</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.RemoveAtEnd">
+      <summary>Entfernt das letzte Element aus dem Vektor.</summary>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.ReplaceAll(`0[])">
+      <summary>Ersetzt alle Elemente im Vektor durch die angegebenen Elemente.</summary>
+      <param name="items">Die Auflistung der dem Vektor hinzuzufügenden Elemente.</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.SetAt(System.UInt32,`0)">
+      <summary>Legt den Wert am angegebenen Index im Vektor fest.</summary>
+      <param name="index">Der nullbasierte Index, an dem der Wert festgelegt werden soll.</param>
+      <param name="value">Das festzulegende Element.</param>
+    </member><member name="T:Windows.Foundation.Collections.IVectorChangedEventArgs">
+      <summary>Stellt Daten für das Changed-Ereignis eines Vektor bereit.</summary>
+    </member><member name="P:Windows.Foundation.Collections.IVectorChangedEventArgs.CollectionChange">
+      <summary>Ruft den Typ der Änderung ab, der im Vektor aufgetreten ist.</summary>
+      <returns>Der Typ der Änderung im Vektor.</returns>
+    </member><member name="P:Windows.Foundation.Collections.IVectorChangedEventArgs.Index">
+      <summary>Ruft die Position ab, an der die Änderung im Vektor aufgetreten ist.</summary>
+      <returns>Die nullbasierte Position, an der die Änderung im Vektor aufgetreten ist, falls zutreffend.</returns>
+    </member><member name="T:Windows.Foundation.Collections.IVectorView`1">
+      <summary>Stellt eine unveränderliche Ansicht in eine Zuordnung dar.</summary>
+      <typeparam name="T">Der Typ der Werte im Vektor.</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IVectorView`1.Size">
+      <summary>Ruft die Anzahl der Elemente in der Vektoransicht ab.</summary>
+      <returns>Die Anzahl der Elemente in der Vektoransicht.</returns>
+    </member><member name="M:Windows.Foundation.Collections.IVectorView`1.GetAt(System.UInt32)">
+      <summary>Gibt das Element am angegebenen Index in der Vektoransicht zurück.</summary>
+      <returns>Das Element am angegebenen Index.</returns>
+      <param name="index">Der nullbasierte Index des Elements.</param>
+    </member><member name="M:Windows.Foundation.Collections.IVectorView`1.IndexOf(`0,System.UInt32@)">
+      <summary>Ruft den Index eines angegebenen Elements in der Vektoransicht ab.</summary>
+      <returns>True, wenn das Element gefunden wird, andernfalls False.</returns>
+      <param name="value">Das in der Vektoransicht zu suchende Element.</param>
+      <param name="index">Wenn das Element gefunden wird, ist dies der nullbasierte Index des Elements; andernfalls ist dieser Parameter 0.</param>
+    </member><member name="T:Windows.Foundation.Collections.MapChangedEventHandler`2">
+      <summary>Die Methode, die das Changed-Ereignis einer sichtbaren Zuordnung behandelt.</summary>
+      <typeparam name="K">Der Typ der Schlüssel in der Zuordnung.</typeparam>
+      <typeparam name="V">Der Typ der Werte in der Zuordnung.</typeparam>
+      <param name="sender">Die wahrnehmbare Zuordnung, die geändert wurde.</param>
+      <param name="event">Die Beschreibung der Änderung, die in der Zuordnung aufgetreten ist.</param>
+    </member><member name="T:Windows.Foundation.Collections.PropertySet">
+      <summary>Stellt einen Eigenschaftensatz dar, der ein Satz von PropertyValue-Objekten mit Zeichenfolgeschlüsseln ist.</summary>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.#ctor">
+      <summary>Erstellt und initialisiert eine neue Instanz der gesetzten Eigenschaft.</summary>
+    </member><member name="P:Windows.Foundation.Collections.PropertySet.Size">
+      <summary>Ruft die Anzahl der Elemente ab, die im Eigenschaftensatz enthalten sind.</summary>
+      <returns>Die Anzahl der Elemente im Eigenschaftensatz.</returns>
+    </member><member name="E:Windows.Foundation.Collections.PropertySet.MapChanged">
+      <summary>Tritt ein, wenn sich die sichtbare Zuordnung geändert hat.</summary>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.Clear">
+      <summary>Entfernt alle Elemente aus der Eigenschaftenmenge.</summary>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.First">
+      <summary>Gibt einen Iterator zurück, um die Elemente im Eigenschaftensatz aufzulisten.</summary>
+      <returns>Der Iterator. Die aktuelle Position des Iterators beträgt Index 0 (null) oder entspricht dem Ende des Eigenschaftensatzes, wenn der Eigenschaftensatz leer ist.</returns>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.GetView">
+      <summary>Ruft eine unveränderliche Ansicht des Eigenschaftensets ab.</summary>
+      <returns>Die unveränderliche Ansicht.</returns>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.HasKey(System.String)">
+      <summary>Gibt an, ob die Menge der Eigenschaften ein Element mit dem angegebenen Schlüssel enthält.</summary>
+      <returns>"True", wenn der Eigenschaftensatz ein Element mit dem angegebenen Schlüssel enthält, andernfalls FALSE.</returns>
+      <param name="key">Der Schlüssel.</param>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.Insert(System.String,System.Object)">
+      <summary>Fügt dem Eigenschaftensatz ein Element hinzu.</summary>
+      <returns>"True", wenn die Methode einen Wert ersetzt, der bereits für den Schlüssel vorhanden ist. "False", wenn es sich um einen neuen Schlüssel handelt.</returns>
+      <param name="key">Der einzufügende Schlüssel.</param>
+      <param name="value">Der einzufügende Wert.</param>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.Lookup(System.String)">
+      <summary>Ruft den Wert für den angegebenen Schlüssel ab.</summary>
+      <returns>Der Wert, der gilt, wenn ein Element mit dem angegebenen Schlüssel vorhanden ist; andernfalls Null.</returns>
+      <param name="key">Der Schlüssel.</param>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.Remove(System.String)">
+      <summary>Entfernt ein Element aus der Eigenschaftenmenge.</summary>
+      <param name="key">Der Schlüssel.</param>
+    </member><member name="T:Windows.Foundation.Collections.StringMap">
+      <summary>Eine assoziative Auflistung, auch als Zuordnung oder Wörterbuch bekannt.</summary>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.#ctor">
+      <summary>Erstellt und initialisiert eine neue Instanz der String-Map.</summary>
+    </member><member name="P:Windows.Foundation.Collections.StringMap.Size">
+      <summary>Ruft die Anzahl der Elemente in der Struktur ab.</summary>
+      <returns>Die Anzahl der Elemente in der Zuordnung.</returns>
+    </member><member name="E:Windows.Foundation.Collections.StringMap.MapChanged">
+      <summary>Tritt auf, wenn sich der Inhalt der Zuordnung ändert.</summary>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.Clear">
+      <summary>Entfernt alle Elemente aus der Zuordnung.</summary>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.First">
+      <summary>Gibt einen Iterator für die Elemente in der Auflistung zurück.</summary>
+      <returns>Die Elemente in der Auflistung.</returns>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.GetView">
+      <summary>Gibt eine unveränderliche Ansicht der Zuordnung zurück.</summary>
+      <returns>Die Ansicht der Zuordnung.</returns>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.HasKey(System.String)">
+      <summary>Bestimmt, ob die Zuordnung den angegebenen Schlüssel enthält.</summary>
+      <returns>"True", wenn der Schlüssel gefunden wird, andernfalls FALSE.</returns>
+      <param name="key">Der Schlüssel, der dem zu suchenden Element zugeordnet ist.</param>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.Insert(System.String,System.String)">
+      <summary>Fügt ein Element in der Zuordnung ein oder ersetzt ein Element.</summary>
+      <returns>"True", wenn ein Element mit dem angegebenen Schlüssel ein vorhandenes Element ist, das ersetzt wurde; andernfalls "False".</returns>
+      <param name="key">Der Schlüssel, der dem einzufügenden Element zugeordnet ist.</param>
+      <param name="value">Das einzufügende Element.</param>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.Lookup(System.String)">
+      <summary>Gibt das Element am angegebenen Schlüssel in der Zuordnung zurück.</summary>
+      <returns>Das dem angegebenen Schlüssel zugeordnete Element.</returns>
+      <param name="key">Der Schlüssel, der dem zu suchenden Element zugeordnet ist.</param>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.Remove(System.String)">
+      <summary>Entfernt ein Element aus der Zuordnung.</summary>
+      <param name="key">Der Schlüssel, der dem zu entfernenden Element zugeordnet ist.</param>
+    </member><member name="T:Windows.Foundation.Collections.ValueSet">
+      <summary>Implementiert eine Zuordnung mit Schlüsseln des Typs Zeichenfolge und Werten des Typs Objekt. Diese Klasse verhindert, dass nicht serialisierbare Typen in der Zuordnung aufgenommen werden.</summary>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.#ctor">
+      <summary>Erstellt und initialisiert eine neue Instanz der gesetzten Eigenschaft.</summary>
+    </member><member name="P:Windows.Foundation.Collections.ValueSet.Size">
+      <summary>Ruft die Anzahl der Elemente ab, die im Wertsatz enthalten sind.</summary>
+      <returns>Die Anzahl der Elemente im Wertsatz.</returns>
+    </member><member name="E:Windows.Foundation.Collections.ValueSet.MapChanged">
+      <summary>Tritt ein, wenn sich die sichtbare Zuordnung geändert hat.</summary>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.Clear">
+      <summary>Entfernt alle Elemente aus dem Wertsatz.</summary>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.First">
+      <summary>Gibt einen Iterator zurück, um die Elemente im Wertsatz aufzulisten.</summary>
+      <returns>Der Iterator. Die aktuelle Position des Iterators ist Index 0 (null) oder entspricht dem Ende des Wertsatzes, wenn der Wertsatz leer ist.</returns>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.GetView">
+      <summary>Ruft eine unveränderliche Ansicht des Wertsatzes ab.</summary>
+      <returns>Die unveränderliche Ansicht.</returns>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.HasKey(System.String)">
+      <summary>Gibt an, ob der Wertsatz ein Element mit dem angegebenen Schlüssel enthält.</summary>
+      <returns>"True", wenn der Wertsatz ein Element mit dem angegebenen Schlüssel enthält, andernfalls FALSE.</returns>
+      <param name="key">Der Schlüssel.</param>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.Insert(System.String,System.Object)">
+      <summary>Fügt dem Wertsatz ein Element hinzu.</summary>
+      <returns>"True", wenn die Methode einen Wert ersetzt, der bereits für den Schlüssel vorhanden ist. "False", wenn es sich um einen neuen Schlüssel handelt.</returns>
+      <param name="key">Der einzufügende Schlüssel.</param>
+      <param name="value">Der einzufügende Wert.</param>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.Lookup(System.String)">
+      <summary>Ruft den Wert für den angegebenen Schlüssel ab.</summary>
+      <returns>Der Wert, der gilt, wenn ein Element mit dem angegebenen Schlüssel vorhanden ist; andernfalls Null.</returns>
+      <param name="key">Der Schlüssel.</param>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.Remove(System.String)">
+      <summary>Entfernt ein Element aus dem Wertsatz.</summary>
+      <param name="key">Der Schlüssel.</param>
+    </member><member name="T:Windows.Foundation.Collections.VectorChangedEventHandler`1">
+      <summary>Die Methode, die das Changed-Ereignis eines sichtbaren Vektors behandelt.</summary>
+      <typeparam name="T">Der Typ der Werte im Vektor.</typeparam>
+      <param name="sender">Die wahrnehmbare Vektor, der geändert wurde.</param>
+      <param name="event">Die Beschreibung der Änderung, die im Vektor aufgetreten ist.</param>
+    </member><member name="T:Windows.Foundation.Metadata.ActivatableAttribute">
+      <summary>Gibt an, dass die Klasse eine aktivierbare Laufzeitklasse ist.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.Type,System.UInt32)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+      <param name="type">Der Typ der Klasse.</param>
+      <param name="version">Die Version der Klasse.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.Type,System.UInt32,System.String)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+      <param name="type">Der Typ der Klasse.</param>
+      <param name="version">Die Version des API-Vertrages, der die Klasse implementiert.</param>
+      <param name="contractName">Eine Zeichenfolge, die den Typ des API-Vertrags implementiert, der die Klasse implementiert.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.Type,System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+      <param name="type">Der Typ der Klasse.</param>
+      <param name="version">Die Version der Klasse.</param>
+      <param name="platform">Ein Wert der Enumeration. Der Standard ist Windows.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.UInt32)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+      <param name="version">Die Version der Klasse.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.UInt32,System.String)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+      <param name="version">Die Version der Klasse.</param>
+      <param name="type">Eine Zeichenfolge, die den Typ der Factoryschnittstelle darstellt.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+      <param name="version">Die Version der Klasse.</param>
+      <param name="platform">Ein Wert der Enumeration. Der Standard ist Windows.</param>
+    </member><member name="T:Windows.Foundation.Metadata.AllowForWebAttribute">
+      <summary>Ermöglicht Entwicklern, ein systemeigenes Universelle Windows-Platform (UWP)-Objekt als globaler Parameter im Kontext des Dokuments der obersten Ebene in einem WebView verfügbar zu machen. Damit ein Universelle Windows-Platform (UWP)-Objekt projiziert werden kann, muss es IAgileObject implementieren und mit dem AllowForWebAttribute-Attribut ergänzt werden.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.AllowForWebAttribute.#ctor">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.AllowMultipleAttribute">
+      <summary>Gibt an, dass mehrere Instanzen eines benutzerdefinierten Attributs auf ein Ziel angewendet werden können.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.AllowMultipleAttribute.#ctor">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.ApiInformation">
+      <summary>Ermöglicht es Ihnen, zu erkennen, ob ein angegebener Member, Typ oder API-Vertrag vorhanden ist, damit Sie API-Aufrufe zu einer Vielzahl von Geräten sicher ausführen können.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsApiContractPresent(System.String,System.UInt16)">
+      <summary>Gibt True oder False zurück, um anzugeben, ob der API-Vertrag mit dem angegebenen Namen und der Hauptversionsnummer vorhanden ist.</summary>
+      <returns>True, wenn der angegebene API-Vertrag vorhanden ist; andernfalls False.</returns>
+      <param name="contractName">Der Name des API‑Vertrags.</param>
+      <param name="majorVersion">Die Hauptversionsnummer des API‑Vertrags.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsApiContractPresent(System.String,System.UInt16,System.UInt16)">
+      <summary>Gibt True oder False zurück, um anzugeben, ob der API-Vertrag mit dem angegebenen Namen und der Haupt‑ und Nebenversionsnummer vorhanden ist.</summary>
+      <returns>True, wenn der angegebene API-Vertrag vorhanden ist; andernfalls False.</returns>
+      <param name="contractName">Der Name des API‑Vertrags.</param>
+      <param name="majorVersion">Die Hauptversionsnummer des API‑Vertrags.</param>
+      <param name="minorVersion">Die Nebenversionsnummer des API‑Vertrags.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsEnumNamedValuePresent(System.String,System.String)">
+      <summary>Gibt True oder False zurück, um anzugeben, ob eine angegebene benannte Konstante für eine angegebene Enumeration vorhanden ist.</summary>
+      <returns>True, wenn die angegebene Konstante vorhanden ist; andernfalls False.</returns>
+      <param name="enumTypeName">Der qualifizierte Namespacename des Typs.</param>
+      <param name="valueName">Der Name der Konstante.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsEventPresent(System.String,System.String)">
+      <summary>Gibt True oder False zurück, um anzugeben, ob ein angegebenes Ereignis für einen angegebenen Typ vorhanden ist.</summary>
+      <returns>True, wenn das angegebene Ereignis für den Typ vorhanden ist; andernfalls False.</returns>
+      <param name="typeName">Der qualifizierte Namespacename des Typs.</param>
+      <param name="eventName">Der Name des Ereignisses.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsMethodPresent(System.String,System.String)">
+      <summary>Gibt True oder False zurück, um anzugeben, ob eine angegebene Methode für einen angegebenen Typ vorhanden ist.</summary>
+      <returns>True, wenn die angegebene Methode für den Typ vorhanden ist; andernfalls False.</returns>
+      <param name="typeName">Der qualifizierte Namespacename des Typs.</param>
+      <param name="methodName">Der Name der Methode.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsMethodPresent(System.String,System.String,System.UInt32)">
+      <summary>Gibt True oder False zurück, um anzugeben, ob eine angegebene Methodenüberladung mit der angegebenen Anzahl von Eingabeparametern für einen bestimmten Typ vorhanden ist.</summary>
+      <returns>True, wenn die angegebene Methode für den Typ vorhanden ist; andernfalls False.</returns>
+      <param name="typeName">Der qualifizierte Namespacename des Typs.</param>
+      <param name="methodName">Der Name der Methode.</param>
+      <param name="inputParameterCount">Die Anzahl von Eingabeparametern für die Überladung.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsPropertyPresent(System.String,System.String)">
+      <summary>Gibt True oder False zurück, um anzugeben, ob eine angegebene Eigenschaft (beschreibbar oder schreibgeschützt) für einen angegebenen Typ vorhanden ist.</summary>
+      <returns>True, wenn die angegebene Eigenschaft für den Typ vorhanden ist; andernfalls False.</returns>
+      <param name="typeName">Der qualifizierte Namespacename des Typs.</param>
+      <param name="propertyName">Der Name der Eigenschaft.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsReadOnlyPropertyPresent(System.String,System.String)">
+      <summary>Gibt True oder False zurück, um anzugeben, ob eine angegebene schreibgeschützte Eigenschaft für einen angegebenen Typ vorhanden ist.</summary>
+      <returns>True, wenn die angegebene Eigenschaft für den Typ vorhanden ist; andernfalls False.</returns>
+      <param name="typeName">Der qualifizierte Namespacename des Typs.</param>
+      <param name="propertyName">Der Name der Eigenschaft.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsTypePresent(System.String)">
+      <summary>Gibt True oder False zurück, um anzugeben, ob ein angegebener Typ vorhanden ist.</summary>
+      <returns>True, wenn der angegebene Typ vorhanden ist; andernfalls False.</returns>
+      <param name="typeName">Der qualifizierte Namespacename des Typs.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsWriteablePropertyPresent(System.String,System.String)">
+      <summary>Gibt True oder False zurück, um anzugeben, ob eine beschreibbare Eigenschaft für einen angegebenen Typ vorhanden ist.</summary>
+      <returns>True, wenn die angegebene Eigenschaft für den Typ vorhanden ist; andernfalls False.</returns>
+      <param name="typeName">Der qualifizierte Namespacename des Typs.</param>
+      <param name="propertyName">Der Name der Eigenschaft.</param>
+    </member><member name="T:Windows.Foundation.Metadata.AttributeTargets">
+      <summary>Gibt das Programmkonstrukt an, zu dem ein Attribut gehört.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.All">
+      <summary>Das Attribut gilt für alle Programmkonstrukte.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.ApiContract">
+      <summary>Das Attribut gilt für einen API-Vertrag.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Delegate">
+      <summary>Das Attribut gilt für einen Delegaten.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Enum">
+      <summary>Das Attribut wird auf eine Enumeration angewendet.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Event">
+      <summary>Das Attribut wird auf ein Ereignis angewendet.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Field">
+      <summary>Das Attribut gilt für ein Feld.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Interface">
+      <summary>Das Attribut gilt für eine Schnittstelle.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.InterfaceImpl">
+      <summary>Das Attribut gilt für eine Implementierung einer Schnittstelle.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Method">
+      <summary>Das Attribut wird auf eine Methode angewendet.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Parameter">
+      <summary>Das Attribut wird auf einen Parameter angewendet.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Property">
+      <summary>Das Attribut wird auf eine Eigenschaft angewendet.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.RuntimeClass">
+      <summary>Das Attribut gilt für eine Laufzeitklasse.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Struct">
+      <summary>Das Attribut gilt für eine Struktur.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.AttributeUsageAttribute">
+      <summary>Gibt die Verwendung eines anderen Attributs an.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.AttributeUsageAttribute.#ctor(Windows.Foundation.Metadata.AttributeTargets)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+      <param name="A_0">Einer oder mehrere der Enumerationswerte.</param>
+    </member><member name="T:Windows.Foundation.Metadata.ComposableAttribute">
+      <summary>Gibt an, wie ein Programmierelement aufgebaut ist.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ComposableAttribute.#ctor(System.Type,Windows.Foundation.Metadata.CompositionType,System.UInt32)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+      <param name="type">Der Typ des Factoryobjekts, das verwendet wird, um das Programmierelement zu erstellen.</param>
+      <param name="compositionType">Einer der Enumerationswerte.</param>
+      <param name="version">Die Version.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ComposableAttribute.#ctor(System.Type,Windows.Foundation.Metadata.CompositionType,System.UInt32,System.String)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+      <param name="type">Der Typ des Factoryobjekts, das verwendet wird, um das Programmierelement zu erstellen.</param>
+      <param name="compositionType">Einer der Enumerationswerte.</param>
+      <param name="version">Die Version des API-Vertrags, in dem die Kompositionsfactory zur Ablaufaktivierungsfactory der Klasse hinzugefügt wurde.</param>
+      <param name="contract">Eine Zeichenfolge, die den Typ des API-Vertrags implementiert, der die Klasse implementiert.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ComposableAttribute.#ctor(System.Type,Windows.Foundation.Metadata.CompositionType,System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+      <param name="type">Der Typ des Factoryobjekts, das verwendet wird, um das Programmierelement zu erstellen.</param>
+      <param name="compositionType">Einer der Enumerationswerte.</param>
+      <param name="version">Die Version.</param>
+      <param name="platform">Ein Wert der Enumeration. Der Standard ist Windows.</param>
+    </member><member name="T:Windows.Foundation.Metadata.CompositionType">
+      <summary>Gibt die Sichtbarkeit eines Programmelements an, dem das zusammensetzbare Attribut zugeordnet ist.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.CompositionType.Protected">
+      <summary>Gibt an, dass der Zugriff auf das Programmierelement auf andere Elemente der enthaltenden Klasse oder auf Typen beschränkt ist, die von der enthaltenden Klasse abgeleitet sind.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.CompositionType.Public">
+      <summary>Gibt an, dass der Zugriff auf das Programmierelement nicht eingeschränkt ist.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.DefaultAttribute">
+      <summary>Gibt die Standardschnittstelle für eine Laufzeitklasse an.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.DefaultAttribute.#ctor">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.DefaultOverloadAttribute">
+      <summary>Gibt an, dass eine Methode die Standardmethode für die Überladung ist.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.DefaultOverloadAttribute.#ctor">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.DeprecatedAttribute">
+      <summary>Gibt an, dass ein Typ oder Member in den Metadaten als veraltet markiert werden sollte. Compiler und andere Entwicklertools können dieses Attribut lesen und dem Benutzer Informationen über den Veraltungstyp und die möglichen Alternativen bereitstellen.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.DeprecatedAttribute.#ctor(System.String,Windows.Foundation.Metadata.DeprecationType,System.UInt32)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+      <param name="message">Eine Zeichenfolgemeldung, die von Compilern und anderen Entwicklertools verwendet werden kann, um die Veraltung zu erläutern und die Zeichenfolgenamen alternativer APIs anzugeben.</param>
+      <param name="type">Ein Wert der Enumeration. Der Standard lautet "Deprecate".</param>
+      <param name="version">Eine Konstante zur Angabe der Version, für die die Veraltung gilt.</param>
+    </member><member name="M:Windows.Foundation.Metadata.DeprecatedAttribute.#ctor(System.String,Windows.Foundation.Metadata.DeprecationType,System.UInt32,System.String)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+      <param name="message">Eine Zeichenfolgemeldung, die von Compilern und anderen Entwicklertools verwendet werden kann, um die Veraltung zu erläutern und die Zeichenfolgenamen alternativer APIs anzugeben.</param>
+      <param name="type">Ein Wert der Enumeration. Der Standard lautet "Deprecate".</param>
+      <param name="version">Eine Konstante zur Angabe der Version, für die die Veraltung gilt.</param>
+      <param name="contract">Eine Zeichenfolge, die den Typ des API-Vertrages darstellt, der den veralteten Typ oder Member implementiert.</param>
+    </member><member name="M:Windows.Foundation.Metadata.DeprecatedAttribute.#ctor(System.String,Windows.Foundation.Metadata.DeprecationType,System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs, einschließlich eines Platform-Werts für die Zielfestlegung.</summary>
+      <param name="message">Eine Zeichenfolgemeldung, die von Compilern und anderen Entwicklertools verwendet werden kann, um die Veraltung zu erläutern und die Zeichenfolgenamen alternativer APIs anzugeben.</param>
+      <param name="type">Ein Wert der Enumeration. Der Standard lautet "Deprecate".</param>
+      <param name="version">Eine Konstante zur Angabe der Version, für die die Veraltung gilt.</param>
+      <param name="platform">Ein Wert der Enumeration. Der Standard ist Windows.</param>
+    </member><member name="T:Windows.Foundation.Metadata.DeprecationType">
+      <summary>Zeigt eine Veraltung als Deprecate oder Remove an.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.DeprecationType.Deprecate">
+      <summary>Compiler und andere Tools sollten die Entität als veraltet behandeln. Dies ist der Standardwert.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.DeprecationType.Remove">
+      <summary>Compiler und andere Tools sollten die Entität als entfernt behandeln.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.DualApiPartitionAttribute">
+      <summary>Zeigt an, dass der Typ in Desktop-Apps und in Windows Store-Apps unterstützt wird.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.DualApiPartitionAttribute.#ctor">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.ExclusiveToAttribute">
+      <summary>Gibt an, dass der angegebene Typ für diesem Typ exklusiv ist.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ExclusiveToAttribute.#ctor(System.Type)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+      <param name="typeName">Der Name des Typs.</param>
+    </member><member name="T:Windows.Foundation.Metadata.ExperimentalAttribute">
+      <summary>Zeigt, an, dass ein Typ oder ein Member in Metadaten als experimentell markiert werden sollte, und daher möglicherweise nicht in der endgültigen Version eines SDK oder einer Bibliothek vorhanden sein wird.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ExperimentalAttribute.#ctor">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.GCPressureAmount">
+      <summary>Nur für die interne Verwendung durch Microsoft vorgesehen.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.GCPressureAmount.High">
+      <summary>Mehr als 100.000 Speicherauslastung.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.GCPressureAmount.Low">
+      <summary>Weniger als 10.000 Speicherauslastung.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.GCPressureAmount.Medium">
+      <summary>Zwischen 10.000 und 100.000 Speicherauslastung.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.GCPressureAttribute">
+      <summary>Nur für die interne Verwendung durch Microsoft vorgesehen.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.GCPressureAttribute.#ctor">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.GuidAttribute">
+      <summary>Gibt die GUID der Schnittstelle oder des Delegaten an.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.GuidAttribute.#ctor(System.UInt32,System.UInt16,System.UInt16,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+      <param name="a">Die ersten 4 Bytes der GUID.</param>
+      <param name="b">Die nächsten 2 Bytes der GUID.</param>
+      <param name="c">Die nächsten 2 Bytes der GUID.</param>
+      <param name="d">Das nächste Byte der GUID.</param>
+      <param name="e">Das nächste Byte der GUID.</param>
+      <param name="f">Das nächste Byte der GUID.</param>
+      <param name="g">Das nächste Byte der GUID.</param>
+      <param name="h">Das nächste Byte der GUID.</param>
+      <param name="i">Das nächste Byte der GUID.</param>
+      <param name="j">Das nächste Byte der GUID.</param>
+      <param name="k">Das nächste Byte der GUID.</param>
+    </member><member name="T:Windows.Foundation.Metadata.HasVariantAttribute">
+      <summary>Zeigt an, dass der Typ eine Instanz einer IInspectable-Variante ist. Gilt für Laufzeitklassen, Schnittstellen und parametrisierte Schnittstellen.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.HasVariantAttribute.#ctor">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.InternalAttribute">
+      <summary>Zeigt an, dass ein Typ oder ein Member in Metadaten als SDK- oder Framework-intern markiert werden sollte, sowie nur für die Verwendung durch Systemkomponenten.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.InternalAttribute.#ctor">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.LengthIsAttribute">
+      <summary>Gibt die Anzahl von Arrayelementen an.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.LengthIsAttribute.#ctor(System.Int32)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+      <param name="indexLengthParameter">Die Anzahl von Arrayelementen.</param>
+    </member><member name="T:Windows.Foundation.Metadata.MarshalingBehaviorAttribute">
+      <summary>Gibt das Marshallingverhalten einer Windows Runtime-Komponente an.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.MarshalingBehaviorAttribute.#ctor(Windows.Foundation.Metadata.MarshalingType)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+      <param name="behavior">Einer der Enumerationswerte.</param>
+    </member><member name="T:Windows.Foundation.Metadata.MarshalingType">
+      <summary>Gibt den Typ des Marshallens für die Klasse an.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.MarshalingType.Agile">
+      <summary>Die Klassen marshallt auf denselben Zeigerwert auf allen Schnittstellen. Das gilt auch, wenn das Marshalling rückgängig gemacht wird.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.MarshalingType.InvalidMarshaling">
+      <summary>Die Klasse kann nicht gemarshallt werden.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.MarshalingType.None">
+      <summary>Die Klasse verhindert das Marshalling auf allen Schnittstellen.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.MarshalingType.Standard">
+      <summary>Die Klasse implementiert nicht IMarshal und leitet nicht auf allen Schnittstellen zu CoGetStandardMarshal weiter.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.MetadataMarshalAttribute">
+      <summary>Zeigt an, dass Tools einen Eintrag für eine Schnittstelle erstellen sollten, wenn sie ein Anwendungspaket erstellen.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.MetadataMarshalAttribute.#ctor">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.MuseAttribute">
+      <summary>Zeigt an, dass eine Runtimeklasse kompatibel ist mit Windows Store-Apps, die Webbrowser sind.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.MuseAttribute.#ctor">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.OverloadAttribute">
+      <summary>Identifiziert die Methode als Überladung in einer Sprache, die Überladung unterstützt.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.OverloadAttribute.#ctor(System.String)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+      <param name="method">Der Name, der die Methode in der projizierten Sprache darstellt.</param>
+    </member><member name="T:Windows.Foundation.Metadata.OverridableAttribute">
+      <summary>Gibt an, dass die Schnittstelle überschreibbare Methoden enthält.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.OverridableAttribute.#ctor">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.Platform">
+      <summary>Gibt die Plattformen an, auf denen ein bestimmter Typ unterstützt werden soll (wie bei Windows Runtime-Attributen und Metadaten).</summary>
+    </member><member name="F:Windows.Foundation.Metadata.Platform.Windows">
+      <summary>Zur Verwendung durch Windows-Metadaten.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.Platform.WindowsPhone">
+      <summary>Zur Verwendung durch Windows Phone-Metadaten.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.PlatformAttribute">
+      <summary>Deklariert die Plattform, auf der ein Typ unterstützt werden soll, wenn plattformspezifische Metadaten erzeugt werden.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.PlatformAttribute.#ctor(Windows.Foundation.Metadata.Platform)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+      <param name="platform">Ein Wert der Enumeration. Der Standard ist Windows.</param>
+    </member><member name="T:Windows.Foundation.Metadata.ProtectedAttribute">
+      <summary>Zeigt an, dass die Schnittstelle geschützte Methoden enthält.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ProtectedAttribute.#ctor">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.RangeAttribute">
+      <summary>Gibt die Einschränkungen des numerischen Bereichs für den Wert eines Datenfelds an.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.RangeAttribute.#ctor(System.Int32,System.Int32)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs mit den angegebenen Minimal- und Maximalwerten.</summary>
+      <param name="minValue">Der zulässige Mindestwert.</param>
+      <param name="maxValue">Der zulässige Höchstwert.</param>
+    </member><member name="T:Windows.Foundation.Metadata.RemoteAsyncAttribute">
+      <summary>Zeigt an, dass eine Schnittstelle mithilfe eines asynchronen Formulars vom asynchronen Muster bereitgestellt werden kann.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.RemoteAsyncAttribute.#ctor">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.StaticAttribute">
+      <summary>Gibt eine Schnittstelle an, die nur statische Methoden enthält.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.StaticAttribute.#ctor(System.Type,System.UInt32)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+      <param name="type">Der Typ, der die statischen Methoden für die Laufzeitklasse enthält.</param>
+      <param name="version">Die Version, in der die statische Schnittstelle hinzugefügt wurde.</param>
+    </member><member name="M:Windows.Foundation.Metadata.StaticAttribute.#ctor(System.Type,System.UInt32,System.String)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+      <param name="type">Der Typ, der die statischen Methoden für die Laufzeitklasse enthält.</param>
+      <param name="version">Die Version des API-Vertrags, in dem die statische Factory zur Aktivierungsfactory der Runtimeklasse hinzugefügt wurde.</param>
+      <param name="contractName">Eine Zeichenfolge, die den Typ des API-Vertrags implementiert, der die Klasse implementiert.</param>
+    </member><member name="M:Windows.Foundation.Metadata.StaticAttribute.#ctor(System.Type,System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+      <param name="type">Der Typ, der die statischen Methoden für die Laufzeitklasse enthält.</param>
+      <param name="version">Die Version, in der die statische Schnittstelle hinzugefügt wurde.</param>
+      <param name="platform">Ein Wert der Enumeration. Der Standard ist Windows.</param>
+    </member><member name="T:Windows.Foundation.Metadata.ThreadingAttribute">
+      <summary>Gibt das Threadingmodell einer Windows Runtime-Komponente an.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ThreadingAttribute.#ctor(Windows.Foundation.Metadata.ThreadingModel)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+      <param name="model">Einer der Enumerationswerte.</param>
+    </member><member name="T:Windows.Foundation.Metadata.ThreadingModel">
+      <summary>Gibt das Threadingmodell an.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.ThreadingModel.Both">
+      <summary>Sowohl Singlethread- als auch Multithreadapartments.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.ThreadingModel.InvalidThreading">
+      <summary>Es gibt kein gültiges Threadingmodell.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.ThreadingModel.MTA">
+      <summary>Multithread-Apartment.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.ThreadingModel.STA">
+      <summary>Singlethread-Apartment.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.VariantAttribute">
+      <summary>Zeigt an, dass das Element eine Instanz einer IInspectable-Variante ist. Gilt für Methodenparameter, Eigenschaften und Rückgabewerte von Typen.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.VariantAttribute.#ctor">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.VersionAttribute">
+      <summary>Gibt die Version des Typs an.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.VersionAttribute.#ctor(System.UInt32)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+      <param name="version">Die Version, die dem ausgewählten Objekt zugeordnet werden soll.</param>
+    </member><member name="M:Windows.Foundation.Metadata.VersionAttribute.#ctor(System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+      <param name="version">Die Version, die dem ausgewählten Objekt zugeordnet werden soll.</param>
+      <param name="platform">Ein Wert der Enumeration. Der Standard ist Windows.</param>
+    </member><member name="T:Windows.Foundation.Metadata.WebHostHiddenAttribute">
+      <summary>Identifiziert den Typ als einen, dessen Funktionalität nicht in die angegebene Zielsprache projiziert wird.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.WebHostHiddenAttribute.#ctor">
+      <summary>Erstellt und initialisiert eine neue Instanz des Attributs.</summary>
+    </member></members>
+</doc>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.ApplicationSettings.ApplicationsSettingsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.ApplicationSettings.SettingsEdgeLocation">
+      <summary>Указывает окончание экрана, на котором отображаются экспресс-кнопки "Параметры".</summary>
+      <deprecated type="deprecate">Объект SettingsEdgeLocation устарел и может не работать на всех платформах. Подробнее см. в MSDN.</deprecated>
+    </member><member name="F:Windows.UI.ApplicationSettings.SettingsEdgeLocation.Left">
+      <summary>Экспресс-кнопка "Параметры" отображается у левого края экрана.</summary>
+    </member><member name="F:Windows.UI.ApplicationSettings.SettingsEdgeLocation.Right">
+      <summary>Экспресс-кнопка "Параметры" отображается у правого края экрана.</summary>
+    </member><member name="T:Windows.UI.ApplicationSettings.SettingsPane">
+      <summary>Статический класс, позволяющий приложению управлять областью экспресс-кнопки "Параметры". Приложение может добавлять или удалять команды, получать уведомления, когда пользователь открывает панель, и открывать панель программными средствами.</summary>
+      <deprecated type="deprecate">Объект SettingsPane может быть изменен или недоступен для выпусков, следующих за Windows 10. Вместо SettingsPane используйте параметры настройки в приложении. Дополнительные сведения см. в разделе "Рекомендации по параметрам приложений".</deprecated>
+    </member><member name="P:Windows.UI.ApplicationSettings.SettingsPane.Edge">
+      <summary>Получает значение, показывающее, на левом или правом краю экрана отображается экспресс-кнопка "Параметры".</summary>
+      <deprecated type="deprecate">Объект SettingsPane может быть изменен или недоступен для выпусков, следующих за Windows 10. Вместо SettingsPane используйте параметры настройки в приложении. Дополнительные сведения см. в разделе "Рекомендации по параметрам приложений".</deprecated>
+      <returns>Местоположение экспресс-кнопки "Параметры".</returns>
+    </member><member name="E:Windows.UI.ApplicationSettings.SettingsPane.CommandsRequested">
+      <summary>Происходит, когда пользователь открывает область параметров. Прослушивание для данного события позволяет приложению инициализировать команды установки и приостановить свой пользовательский интерфейс до тех пор, пока пользователь не закроет панель.</summary>
+      <deprecated type="deprecate">Объект SettingsPane может быть изменен или недоступен для выпусков, следующих за Windows 10. Вместо SettingsPane используйте параметры настройки в приложении. Дополнительные сведения см. в разделе "Рекомендации по параметрам приложений".</deprecated>
+    </member><member name="M:Windows.UI.ApplicationSettings.SettingsPane.GetForCurrentView">
+      <summary>Получает объект SettingsPane, связанный с текущим представлением приложения (то есть, с CoreWindow).</summary>
+      <deprecated type="deprecate">Объект SettingsPane может быть изменен или недоступен для выпусков, следующих за Windows 10. Вместо SettingsPane используйте параметры настройки в приложении. Дополнительные сведения см. в разделе "Рекомендации по параметрам приложений".</deprecated>
+      <returns>Область параметров.</returns>
+    </member><member name="M:Windows.UI.ApplicationSettings.SettingsPane.Show">
+      <summary>Отображает область экспресс-кнопки "Параметры" для пользователя.</summary>
+      <deprecated type="deprecate">Объект SettingsPane может быть изменен или недоступен для выпусков, следующих за Windows 10. Вместо SettingsPane используйте параметры настройки в приложении. Дополнительные сведения см. в разделе "Рекомендации по параметрам приложений".</deprecated>
+    </member><member name="T:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest">
+      <summary>Содержит свойства, которые доступны только во время события CommandsRequested.</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequest может быть изменен или недоступен в выпусках, более новых, чем Windows 10. Вместо SettingsPane используйте параметры настройки в приложении. Дополнительные сведения см. в разделе "Рекомендации по параметрам приложений".</deprecated>
+    </member><member name="P:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest.ApplicationCommands">
+      <summary>Вектор, доступный во время события CommandsRequested. Добавьте в него объекты SettingsCommand, чтобы сделать их доступными в пользовательском интерфейсе SettingsPane.</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequest может быть изменен или недоступен в выпусках, более новых, чем Windows 10. Вместо SettingsPane используйте параметры настройки в приложении. Дополнительные сведения см. в разделе "Рекомендации по параметрам приложений".</deprecated>
+      <returns>Вектор объектов SettingsCommand.</returns>
+    </member><member name="T:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs">
+      <summary>Содержит аргументы, доступные из объекта события во время события CommandsRequested.</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequestedEventArgs может быть изменен или недоступен для выпусков после предварительной версии Windows 10. Вместо SettingsPane используйте параметры настройки в приложении. Дополнительные сведения см. в разделе "Рекомендации по параметрам приложений".</deprecated>
+    </member><member name="P:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs.Request">
+      <summary>Экземпляр SettingsPaneCommandsRequest, который становится доступным во время события CommandsRequested.</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequestedEventArgs может быть изменен или недоступен для выпусков после предварительной версии Windows 10. Вместо SettingsPane используйте параметры настройки в приложении. Дополнительные сведения см. в разделе "Рекомендации по параметрам приложений".</deprecated>
+      <returns>Команды запрашивают объект.</returns>
+    </member></members>
+</doc>

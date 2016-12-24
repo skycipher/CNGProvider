@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Activation.ContactActivatedEventsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs">
+      <summary>Stellt Daten bereit, wenn eine Anwendung aktiviert wird, um einen Kontakt anzurufen.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.Contact">
+      <summary>Ruft den Kontakt für den Anruf ab.</summary>
+      <returns>Der Kontakt für den Aufruf.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.Kind">
+      <summary>Ruft den Aktivierungstyp ab.</summary>
+      <returns>Der ActivationKind.Contact-Enumerationswert.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.PreviousExecutionState">
+      <summary>Ruft den Ausführungsstatus der App vor ihrer Aktivierung ab.</summary>
+      <returns>Ein ApplicationExecutionState-Eingabewert.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.ServiceId">
+      <summary>Ruft den Bezeichner des Diensts ab, der für den Aufruf verwendet wird.</summary>
+      <returns>Der Bezeichner des Diensts, der für den Aufruf verwendet wird.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.ServiceUserId">
+      <summary>Ruft die Benutzer-ID des Diensts ab, der für den Anruf verwendet wird.</summary>
+      <returns>Die Benutzer-ID des Diensts, der für den Anruf verwendet wird.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.SplashScreen">
+      <summary>Ruft das Begrüßungsbildschirm-Objekt ab, das Informationen zum Übergang vom Begrüßungsbildschirm zur aktivierten App bereitstellt.</summary>
+      <returns>Das Objekt, das Informationen für den Begrüßungsbildschirm bereitstellt.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.Verb">
+      <summary>Ruft die auszuführende Aktion ab.</summary>
+      <returns>Die auszuführende Aktion ab.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs">
+      <summary>Stellt Daten bereit, wenn eine Anwendung aktiviert wird, um einen Kontakt zuzuordnen.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Address">
+      <summary>Ruft die Adresse eines Kontakts für den Zuordnungsvorgang ab.</summary>
+      <returns>Die Adresse eines Kontakts für den Zuordnungsvorgang.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Contact">
+      <summary>Ruft den Kontakt für den Zuordnungsvorgang ab.</summary>
+      <returns>Der Kontakt für den Zuordnungsvorgang.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Kind">
+      <summary>Ruft den Aktivierungstyp ab.</summary>
+      <returns>Der ActivationKind.Contact-Enumerationswert.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.PreviousExecutionState">
+      <summary>Ruft den Ausführungsstatus der App vor ihrer Aktivierung ab.</summary>
+      <returns>Ein ApplicationExecutionState-Eingabewert.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.SplashScreen">
+      <summary>Ruft das Begrüßungsbildschirm-Objekt ab, das Informationen zum Übergang vom Begrüßungsbildschirm zur aktivierten App bereitstellt.</summary>
+      <returns>Das Objekt, das Informationen für den Begrüßungsbildschirm bereitstellt.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Verb">
+      <summary>Ruft die auszuführende Aktion ab.</summary>
+      <returns>Die auszuführende Aktion ab.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs">
+      <summary>Stellt Daten bereit, wenn eine Anwendung aktiviert wird, um eine Nachricht an einen Kontakt zu senden.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.Contact">
+      <summary>Ruft den Kontakt für die Nachricht ab.</summary>
+      <returns>Der Kontakt für die Nachricht.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.Kind">
+      <summary>Ruft den Aktivierungstyp ab.</summary>
+      <returns>Der ActivationKind.Contact-Enumerationswert.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.PreviousExecutionState">
+      <summary>Ruft den Ausführungsstatus der App vor ihrer Aktivierung ab.</summary>
+      <returns>Ein ApplicationExecutionState-Eingabewert.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.ServiceId">
+      <summary>Ruft den Bezeichner des Diensts ab, der für die Meldung verwendet wird.</summary>
+      <returns>Der Bezeichner des Diensts, der für die Nachricht verwendet wird.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.ServiceUserId">
+      <summary>Ruft die Benutzer-ID des Diensts ab, der für die Meldung verwendet wird.</summary>
+      <returns>Die Benutzer-ID des Diensts, der für die Meldung verwendet wird.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.SplashScreen">
+      <summary>Ruft das Begrüßungsbildschirm-Objekt ab, das Informationen zum Übergang vom Begrüßungsbildschirm zur aktivierten App bereitstellt.</summary>
+      <returns>Das Objekt, das Informationen für den Begrüßungsbildschirm bereitstellt.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.Verb">
+      <summary>Ruft die auszuführende Aktion ab.</summary>
+      <returns>Die auszuführende Aktion ab.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs">
+      <summary>Erstellt Daten, wenn eine App aktiviert wird, sofern sie die Kontaktauswahl verwendet.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.ContactPickerUI">
+      <summary>Ruft die Letterbox-Benutzeroberfläche der Kontaktauswahl ab, die angezeigt wird, wenn der Benutzer Kontakte auswählen möchte, die von der App bereitgestellt werden.</summary>
+      <returns>Ruft die Letterbox-Benutzeroberfläche der Kontaktauswahl ab, die angezeigt wird, wenn der Benutzer Kontakte auswählen möchte, die von der App bereitgestellt werden.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.Kind">
+      <summary>Ruft den Aktivierungstyp ab.</summary>
+      <returns>Einer der Enumerationswerte.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.PreviousExecutionState">
+      <summary>Ruft den Ausführungsstatus der App vor ihrer Aktivierung ab.</summary>
+      <returns>Einer der Enumerationswerte.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.SplashScreen">
+      <summary>Ruft das Begrüßungsbildschirm-Objekt ab, das Informationen über den Übergang vom Begrüßungsbildschirm zur aktivierten App bereitstellt.</summary>
+      <returns>Das Objekt, das Informationen für den Begrüßungsbildschirm bereitstellt.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs">
+      <summary>Stellt Daten bereit, wenn eine Anwendung aktiviert wird, um einen Kontakt zu senden.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.Contact">
+      <summary>Ruft den Kontakt für den Beitrag ab.</summary>
+      <returns>Der Kontakt für den Beitrag.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.Kind">
+      <summary>Ruft den Aktivierungstyp ab.</summary>
+      <returns>Der ActivationKind.Contact-Enumerationswert.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.PreviousExecutionState">
+      <summary>Ruft den Ausführungsstatus der App vor ihrer Aktivierung ab.</summary>
+      <returns>Ein ApplicationExecutionState-Eingabewert.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.ServiceId">
+      <summary>Ruft den Bezeichner des Diensts ab, der für den Beitrag verwendet wird.</summary>
+      <returns>Der Bezeichner des Diensts, der für den Post verwendet wird.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.ServiceUserId">
+      <summary>Ruft die Benutzer-ID des Diensts ab, der für die Bereitstellung verwendet wird.</summary>
+      <returns>Die Benutzer-ID des Diensts, der für den Beitrag verwendet wird.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.SplashScreen">
+      <summary>Ruft das Begrüßungsbildschirm-Objekt ab, das Informationen zum Übergang vom Begrüßungsbildschirm zur aktivierten App bereitstellt.</summary>
+      <returns>Das Objekt, das Informationen für den Begrüßungsbildschirm bereitstellt.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.Verb">
+      <summary>Ruft die auszuführende Aktion ab.</summary>
+      <returns>Die auszuführende Aktion ab.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs">
+      <summary>Stellt Daten bereit, wenn eine Anwendung aktiviert wird, um mit einem Kontakt per Videoanruf zu telefonieren.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.Contact">
+      <summary>Ruft den Kontakt für den Videoanruf ab.</summary>
+      <returns>Der Kontakt für den Videoanruf.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.Kind">
+      <summary>Ruft den Aktivierungstyp ab.</summary>
+      <returns>Der ActivationKind.Contact-Enumerationswert.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.PreviousExecutionState">
+      <summary>Ruft den Ausführungsstatus der App vor ihrer Aktivierung ab.</summary>
+      <returns>Ein ApplicationExecutionState-Eingabewert.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.ServiceId">
+      <summary>Ruft den Bezeichner des Diensts ab, der für den Videoanruf verwendet wird.</summary>
+      <returns>Der Bezeichner des Diensts, der für den Videoanruf verwendet wird.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.ServiceUserId">
+      <summary>Ruft die Benutzer-ID des Diensts ab, der für den Videoanruf verwendet wird.</summary>
+      <returns>Die Benutzer-ID des Diensts, der für den Videoanruf verwendet wird.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.SplashScreen">
+      <summary>Ruft das Begrüßungsbildschirm-Objekt ab, das Informationen zum Übergang vom Begrüßungsbildschirm zur aktivierten App bereitstellt.</summary>
+      <returns>Das Objekt, das Informationen für den Begrüßungsbildschirm bereitstellt.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.Verb">
+      <summary>Ruft die auszuführende Aktion ab.</summary>
+      <returns>Die auszuführende Aktion ab.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactActivatedEventArgs">
+      <summary>Stellt Informationen zu einem aktivierten Ereignis bereit, das ausgelöst wird, wenn der Benutzer einen Kontakt verwaltet.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactActivatedEventArgs.Verb">
+      <summary>Ruft die Aktion ab, die dem aktivierten Kontakt zugeordnet ist.</summary>
+      <returns>Die Aktion, die dem aktivierten Kontakt zugeordnet ist.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs">
+      <summary>Stellt Daten bereit, wenn eine Anwendung aktiviert wird, um einen Kontakt anzurufen.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs.Contact">
+      <summary>Ruft den Kontakt für den Anruf ab.</summary>
+      <returns>Der Kontakt für den Aufruf.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs.ServiceId">
+      <summary>Ruft den Bezeichner des Diensts ab, der für den Aufruf verwendet wird.</summary>
+      <returns>Der Bezeichner des Diensts, der für den Aufruf verwendet wird.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs.ServiceUserId">
+      <summary>Ruft die Benutzer-ID des Diensts ab, der für den Anruf verwendet wird.</summary>
+      <returns>Die Benutzer-ID des Diensts, der für den Anruf verwendet wird.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs">
+      <summary>Stellt Daten bereit, wenn eine Anwendung aktiviert wird, um einen Kontakt zuzuordnen.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs.Address">
+      <summary>Ruft die Adresse eines Kontakts für den Zuordnungsvorgang ab.</summary>
+      <returns>Stellt die Adresse eines Kontakts für den Zuordnungsvorgang dar.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs.Contact">
+      <summary>Ruft den Kontakt für den Zuordnungsvorgang ab.</summary>
+      <returns>Der Kontakt für den Zuordnungsvorgang.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs">
+      <summary>Stellt Daten bereit, wenn eine Anwendung aktiviert wird, um eine Nachricht an einen Kontakt zu senden.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs.Contact">
+      <summary>Ruft den Kontakt für die Nachricht ab.</summary>
+      <returns>Der Kontakt für die Nachricht.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs.ServiceId">
+      <summary>Ruft den Bezeichner des Diensts ab, der für die Meldung verwendet wird.</summary>
+      <returns>Der Bezeichner des Diensts, der für die Nachricht verwendet wird.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs.ServiceUserId">
+      <summary>Ruft die Benutzer-ID des Diensts ab, der für die Meldung verwendet wird.</summary>
+      <returns>Die Benutzer-ID des Diensts, der für die Meldung verwendet wird.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs">
+      <summary>Erstellt Daten, wenn eine App aktiviert wird, sofern sie die Kontaktauswahl verwendet.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs.ContactPickerUI">
+      <summary>Die Letterbox-Benutzeroberfläche der Kontaktauswahl, die angezeigt wird, wenn der Benutzer Dateien oder Ordner auswählen möchte, die von der App bereitgestellt werden.</summary>
+      <returns>Die Letterbox-Benutzeroberfläche der Kontaktauswahl, die angezeigt wird, wenn der Benutzer Dateien oder Ordner auswählen möchte, die von der App bereitgestellt werden.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs">
+      <summary>Stellt Daten bereit, wenn eine Anwendung aktiviert wird, um einen Kontakt zu senden.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs.Contact">
+      <summary>Ruft den Kontakt für den Beitrag ab.</summary>
+      <returns>Der Kontakt für den Beitrag.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs.ServiceId">
+      <summary>Ruft den Bezeichner des Diensts ab, der für den Beitrag verwendet wird.</summary>
+      <returns>Der Bezeichner des Diensts, der für den Post verwendet wird.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs.ServiceUserId">
+      <summary>Ruft die Benutzer-ID des Diensts ab, der für die Bereitstellung verwendet wird.</summary>
+      <returns>Die Benutzer-ID des Diensts, der für den Beitrag verwendet wird.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactsProviderActivatedEventArgs">
+      <summary>Stellt Informationen zu einem aktivierten Ereignis bereit, das ausgelöst wird, wenn der Benutzer einen Kontakt verwaltet, der von der App bereitgestellt wird.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactsProviderActivatedEventArgs.Verb">
+      <summary>Ruft die Aktion ab, die dem aktivierten Kontaktanbieter zugeordnet ist.</summary>
+      <returns>Die Aktion, die dem aktivierten Kontaktanbieter zugeordnet ist.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs">
+      <summary>Stellt Daten bereit, wenn eine Anwendung aktiviert wird, um mit einem Kontakt per Videoanruf zu telefonieren.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs.Contact">
+      <summary>Ruft den Kontakt für den Videoanruf ab.</summary>
+      <returns>Der Kontakt für den Videoanruf.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs.ServiceId">
+      <summary>Ruft den Bezeichner des Diensts ab, der für den Videoanruf verwendet wird.</summary>
+      <returns>Der Bezeichner des Diensts, der für den Videoanruf verwendet wird.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs.ServiceUserId">
+      <summary>Ruft die Benutzer-ID des Diensts ab, der für den Videoanruf verwendet wird.</summary>
+      <returns>Die Benutzer-ID des Diensts, der für den Videoanruf verwendet wird.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs">
+      <summary>Stellt Daten bereit, wenn eine Anwendung aktiviert wird, um einen Kontakt anzurufen.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.ActivatedOperation">
+      <summary>Ruft den durch die App aktivierten Vorgang ab.</summary>
+      <returns>Der Aktivierungsvorgang.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.Contact">
+      <summary>Ruft den Kontakt für den Anruf ab.</summary>
+      <returns>Der Kontakt für den Aufruf.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.Kind">
+      <summary>Ruft den Aktivierungstyp ab.</summary>
+      <returns>Der ActivationKind.Contact-Enumerationswert.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.PreviousExecutionState">
+      <summary>Ruft den Ausführungsstatus der App vor ihrer Aktivierung ab.</summary>
+      <returns>Ein ApplicationExecutionState-Eingabewert.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.ServiceId">
+      <summary>Ruft den Bezeichner des Diensts ab, der für den Aufruf verwendet wird.</summary>
+      <returns>Der Bezeichner des Diensts, der für den Aufruf verwendet wird.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.ServiceUserId">
+      <summary>Ruft die Benutzer-ID des Diensts ab, der für den Anruf verwendet wird.</summary>
+      <returns>Die Benutzer-ID des Diensts, der für den Anruf verwendet wird.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.SplashScreen">
+      <summary>Ruft das Begrüßungsbildschirm-Objekt ab, das Informationen zum Übergang vom Begrüßungsbildschirm zur aktivierten App bereitstellt.</summary>
+      <returns>Das Objekt, das Informationen für den Begrüßungsbildschirm bereitstellt.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.Verb">
+      <summary>Ruft die auszuführende Aktion ab.</summary>
+      <returns>Die auszuführende Aktion ab.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs">
+      <summary>Stellt Daten bereit, wenn eine Anwendung aktiviert wird, um einen Kontakt zuzuordnen.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.ActivatedOperation">
+      <summary>Ruft den durch die App aktivierten Vorgang ab.</summary>
+      <returns>Der Aktivierungsvorgang.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Address">
+      <summary>Ruft die Adresse eines Kontakts für den Zuordnungsvorgang ab.</summary>
+      <returns>Die Adresse eines Kontakts für den Zuordnungsvorgang.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Contact">
+      <summary>Ruft den Kontakt für den Zuordnungsvorgang ab.</summary>
+      <returns>Der Kontakt für den Zuordnungsvorgang.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Kind">
+      <summary>Ruft den Aktivierungstyp ab.</summary>
+      <returns>Der ActivationKind.Contact-Enumerationswert.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.PreviousExecutionState">
+      <summary>Ruft den Ausführungsstatus der App vor ihrer Aktivierung ab.</summary>
+      <returns>Ein ApplicationExecutionState-Eingabewert.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.SplashScreen">
+      <summary>Ruft das Begrüßungsbildschirm-Objekt ab, das Informationen zum Übergang vom Begrüßungsbildschirm zur aktivierten App bereitstellt.</summary>
+      <returns>Das Objekt, das Informationen für den Begrüßungsbildschirm bereitstellt.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Verb">
+      <summary>Ruft die auszuführende Aktion ab.</summary>
+      <returns>Die auszuführende Aktion ab.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs">
+      <summary>Stellt Daten bereit, wenn eine Anwendung aktiviert wird, um einem Kontakt eine Nachricht zu senden.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.ActivatedOperation">
+      <summary>Ruft den durch die App aktivierten Vorgang ab.</summary>
+      <returns>Der Aktivierungsvorgang.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.Contact">
+      <summary>Ruft den Kontakt für die Nachricht ab.</summary>
+      <returns>Der Kontakt für die Nachricht.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.Kind">
+      <summary>Ruft den Aktivierungstyp ab.</summary>
+      <returns>Der ActivationKind.Contact-Enumerationswert.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.PreviousExecutionState">
+      <summary>Ruft den Ausführungsstatus der App vor ihrer Aktivierung ab.</summary>
+      <returns>Ein ApplicationExecutionState-Eingabewert.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.ServiceId">
+      <summary>Ruft den Bezeichner des Diensts ab, der für die Meldung verwendet wird.</summary>
+      <returns>Der Bezeichner des Diensts, der für die Nachricht verwendet wird.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.ServiceUserId">
+      <summary>Ruft die Benutzer-ID des Diensts ab, der für die Meldung verwendet wird.</summary>
+      <returns>Die Benutzer-ID des Diensts, der für die Meldung verwendet wird.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.SplashScreen">
+      <summary>Ruft das Begrüßungsbildschirm-Objekt ab, das Informationen zum Übergang vom Begrüßungsbildschirm zur aktivierten App bereitstellt.</summary>
+      <returns>Das Objekt, das Informationen für den Begrüßungsbildschirm bereitstellt.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.Verb">
+      <summary>Ruft die auszuführende Aktion ab.</summary>
+      <returns>Die auszuführende Aktion ab.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs">
+      <summary>Erstellt Daten, wenn eine App aktiviert wird, sofern sie die Kontaktauswahl verwendet.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.ActivatedOperation">
+      <summary>Ruft den durch die App aktivierten Vorgang ab.</summary>
+      <returns>Der Aktivierungsvorgang.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.ContactPickerUI">
+      <summary>Ruft die Letterbox-Benutzeroberfläche der Kontaktauswahl ab, die angezeigt wird, wenn der Benutzer Kontakte auswählen möchte, die von der App bereitgestellt werden.</summary>
+      <returns>Ruft die Letterbox-Benutzeroberfläche der Kontaktauswahl ab, die angezeigt wird, wenn der Benutzer Kontakte auswählen möchte, die von der App bereitgestellt werden.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.Kind">
+      <summary>Ruft den Aktivierungstyp ab.</summary>
+      <returns>Einer der Enumerationswerte.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.PreviousExecutionState">
+      <summary>Ruft den Ausführungsstatus der App vor ihrer Aktivierung ab.</summary>
+      <returns>Einer der Enumerationswerte.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.SplashScreen">
+      <summary>Ruft das Begrüßungsbildschirm-Objekt ab, das Informationen über den Übergang vom Begrüßungsbildschirm zur aktivierten App bereitstellt.</summary>
+      <returns>Das Objekt, das Informationen für den Begrüßungsbildschirm bereitstellt.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs">
+      <summary>Stellt Daten bereit, wenn eine Anwendung aktiviert wird, um einen Kontakt zu senden.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.ActivatedOperation">
+      <summary>Ruft den durch die App aktivierten Vorgang ab.</summary>
+      <returns>Der Aktivierungsvorgang.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.Contact">
+      <summary>Ruft den Kontakt für den Beitrag ab.</summary>
+      <returns>Der Kontakt für den Beitrag.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.Kind">
+      <summary>Ruft den Aktivierungstyp ab.</summary>
+      <returns>Der ActivationKind.Contact-Enumerationswert.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.PreviousExecutionState">
+      <summary>Ruft den Ausführungsstatus der App vor ihrer Aktivierung ab.</summary>
+      <returns>Ein ApplicationExecutionState-Eingabewert.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.ServiceId">
+      <summary>Ruft den Bezeichner des Diensts ab, der für den Beitrag verwendet wird.</summary>
+      <returns>Der Bezeichner des Diensts, der für den Post verwendet wird.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.ServiceUserId">
+      <summary>Ruft die Benutzer-ID des Diensts ab, der für die Bereitstellung verwendet wird.</summary>
+      <returns>Die Benutzer-ID des Diensts, der für den Beitrag verwendet wird.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.SplashScreen">
+      <summary>Ruft das Begrüßungsbildschirm-Objekt ab, das Informationen zum Übergang vom Begrüßungsbildschirm zur aktivierten App bereitstellt.</summary>
+      <returns>Das Objekt, das Informationen für den Begrüßungsbildschirm bereitstellt.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.Verb">
+      <summary>Ruft die auszuführende Aktion ab.</summary>
+      <returns>Die auszuführende Aktion ab.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs">
+      <summary>Stellt Daten bereit, wenn eine Anwendung aktiviert wird, um mit einem Kontakt per Videoanruf zu telefonieren.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.ActivatedOperation">
+      <summary>Ruft den durch die App aktivierten Vorgang ab.</summary>
+      <returns>Der Aktivierungsvorgang.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.Contact">
+      <summary>Ruft den Kontakt für den Videoanruf ab.</summary>
+      <returns>Der Kontakt für den Videoanruf.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.Kind">
+      <summary>Ruft den Aktivierungstyp ab.</summary>
+      <returns>Der ActivationKind.Contact-Enumerationswert.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.PreviousExecutionState">
+      <summary>Ruft den Ausführungsstatus der App vor ihrer Aktivierung ab.</summary>
+      <returns>Ein ApplicationExecutionState-Eingabewert.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.ServiceId">
+      <summary>Ruft den Bezeichner des Diensts ab, der für den Videoanruf verwendet wird.</summary>
+      <returns>Der Bezeichner des Diensts, der für den Videoanruf verwendet wird.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.ServiceUserId">
+      <summary>Ruft die Benutzer-ID des Diensts ab, der für den Videoanruf verwendet wird.</summary>
+      <returns>Die Benutzer-ID des Diensts, der für den Videoanruf verwendet wird.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.SplashScreen">
+      <summary>Ruft das Begrüßungsbildschirm-Objekt ab, das Informationen zum Übergang vom Begrüßungsbildschirm zur aktivierten App bereitstellt.</summary>
+      <returns>Das Objekt, das Informationen für den Begrüßungsbildschirm bereitstellt.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.Verb">
+      <summary>Ruft die auszuführende Aktion ab.</summary>
+      <returns>Die auszuführende Aktion ab.</returns>
+    </member></members>
+</doc>

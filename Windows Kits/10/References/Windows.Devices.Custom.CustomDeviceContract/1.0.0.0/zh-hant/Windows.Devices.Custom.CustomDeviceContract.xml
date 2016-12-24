@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Custom.CustomDeviceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Custom.CustomDevice">
+      <summary>代表自訂的裝置。</summary>
+    </member><member name="P:Windows.Devices.Custom.CustomDevice.InputStream">
+      <summary>輸入資料流。</summary>
+      <returns>輸入資料流。</returns>
+    </member><member name="P:Windows.Devices.Custom.CustomDevice.OutputStream">
+      <summary>輸出資料流。</summary>
+      <returns>輸出資料流。</returns>
+    </member><member name="M:Windows.Devices.Custom.CustomDevice.FromIdAsync(System.String,Windows.Devices.Custom.DeviceAccessMode,Windows.Devices.Custom.DeviceSharingMode)">
+      <summary>以非同步方式為指定的 DeviceInformation.Id 建立 CustomDevice 物件。</summary>
+      <capability type="optical">要求應用程式存取光碟機上的功能，例如 CD、DVD 和 Blu-ray。</capability>
+      <returns>傳回自訂的裝置。</returns>
+      <param name="deviceId">裝置的 DeviceInformation.Id。</param>
+      <param name="desiredAccess">所需的存取。</param>
+      <param name="sharingMode">共享模式。</param>
+    </member><member name="M:Windows.Devices.Custom.CustomDevice.GetDeviceSelector(System.Guid)">
+      <summary>取得裝置選取器。</summary>
+      <returns>裝置選取器。</returns>
+      <param name="classGuid">用於建立裝置選取器的裝置介面的裝置介面類別 GUID。</param>
+    </member><member name="M:Windows.Devices.Custom.CustomDevice.SendIOControlAsync(Windows.Devices.Custom.IIOControlCode,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)">
+      <summary>傳送 IO 控制碼。</summary>
+      <returns>非同步作業的結果。</returns>
+      <param name="ioControlCode">IO 控制項代碼。</param>
+      <param name="inputBuffer">輸入緩衝區。</param>
+      <param name="outputBuffer">輸出緩衝區。</param>
+    </member><member name="M:Windows.Devices.Custom.CustomDevice.TrySendIOControlAsync(Windows.Devices.Custom.IIOControlCode,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)">
+      <summary>傳送 IO 控制碼。 傳回指示作業是否成功的值。</summary>
+      <returns>如果作業成功則為 true，否則為 false。</returns>
+      <param name="ioControlCode">IO 控制項代碼。</param>
+      <param name="inputBuffer">輸入緩衝區。</param>
+      <param name="outputBuffer">輸出緩衝區。</param>
+    </member><member name="T:Windows.Devices.Custom.DeviceAccessMode">
+      <summary>裝置存取模式。</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceAccessMode.Read">
+      <summary>讀取存取權。</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceAccessMode.ReadWrite">
+      <summary>讀取/寫入存取權。</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceAccessMode.Write">
+      <summary>寫入存取權。</summary>
+    </member><member name="T:Windows.Devices.Custom.DeviceSharingMode">
+      <summary>裝置共享模式。</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceSharingMode.Exclusive">
+      <summary>裝置為獨佔式。</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceSharingMode.Shared">
+      <summary>裝置在共用。</summary>
+    </member><member name="T:Windows.Devices.Custom.IIOControlCode">
+      <summary>表示 IO 控制碼。</summary>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.AccessMode">
+      <summary>存取模式。</summary>
+      <returns>存取模式。</returns>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.BufferingMethod">
+      <summary>緩衝的方法。</summary>
+      <returns>緩衝的方法。</returns>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.ControlCode">
+      <summary>控制項代碼。</summary>
+      <returns>控制項代碼。</returns>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.DeviceType">
+      <summary>裝置類型。</summary>
+      <returns>裝置類型。</returns>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.Function">
+      <summary>函式。</summary>
+      <returns>函式。</returns>
+    </member><member name="T:Windows.Devices.Custom.IOControlAccessMode">
+      <summary>識別存取模式。</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlAccessMode.Any">
+      <summary>任何模式。</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlAccessMode.Read">
+      <summary>讀取模式。</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlAccessMode.ReadWrite">
+      <summary>讀取/寫入模式。</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlAccessMode.Write">
+      <summary>寫入模式。</summary>
+    </member><member name="T:Windows.Devices.Custom.IOControlBufferingMethod">
+      <summary>識別緩衝的方法。</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlBufferingMethod.Buffered">
+      <summary>緩衝。</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlBufferingMethod.DirectInput">
+      <summary>直接輸入。</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlBufferingMethod.DirectOutput">
+      <summary>直接輸出。</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlBufferingMethod.Neither">
+      <summary>都沒有。</summary>
+    </member><member name="T:Windows.Devices.Custom.IOControlCode">
+      <summary>代表控制項的程式碼。</summary>
+    </member><member name="M:Windows.Devices.Custom.IOControlCode.#ctor(System.UInt16,System.UInt16,Windows.Devices.Custom.IOControlAccessMode,Windows.Devices.Custom.IOControlBufferingMethod)">
+      <summary>控制項代碼。</summary>
+      <param name="deviceType">裝置類型。</param>
+      <param name="function">裝置函式。</param>
+      <param name="accessMode">存取模式。</param>
+      <param name="bufferingMethod">緩衝的方法。</param>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.AccessMode">
+      <summary>存取模式。</summary>
+      <returns>存取模式。</returns>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.BufferingMethod">
+      <summary>緩衝的方法。</summary>
+      <returns>緩衝的方法。</returns>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.ControlCode">
+      <summary>控制項代碼。</summary>
+      <returns>控制項代碼。</returns>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.DeviceType">
+      <summary>裝置類型。</summary>
+      <returns>裝置類型。</returns>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.Function">
+      <summary>函式。</summary>
+      <returns>函式。</returns>
+    </member><member name="T:Windows.Devices.Custom.KnownDeviceTypes">
+      <summary>表示已知的裝置類型。</summary>
+    </member><member name="P:Windows.Devices.Custom.KnownDeviceTypes.Unknown">
+      <summary>裝置廠商所定義。</summary>
+      <returns>裝置廠商所定義。</returns>
+    </member></members>
+</doc>

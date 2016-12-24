@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.Core.CoreWindowDialogsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.Core.CoreWindowDialog">
+      <summary>定义应用程序窗口的子对话框。</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowDialog.#ctor">
+      <summary>创建 CoreWindowDialog 类的默认实例。</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowDialog.#ctor(System.String)">
+      <summary>创建具有所提供标题的 CoreWindowDialog 类的实例。</summary>
+      <param name="title">对话框的标题。</param>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.BackButtonCommand">
+      <summary>获取或设置选择对话框中的后退按钮时所调用的委托。</summary>
+      <returns>在选择对话框上的“后退”按钮时调用的委托。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.CancelCommandIndex">
+      <summary>获取和设置对话框取消操作的命令索引值。</summary>
+      <returns>对话框取消操作的命令索引值。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.Commands">
+      <summary>获取对话框上可用的用户界面命令 (UI) 集。</summary>
+      <returns>对话框上可用的 UI 命令集。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.DefaultCommandIndex">
+      <summary>获取或设置对话框窗口的默认命令的索引。</summary>
+      <returns>对话框窗口的默认命令（如 确定）的索引值。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.IsInteractionDelayed">
+      <summary>获取或设置指示任何 UI 交互事件消息是否稍微延迟的值。 此延迟可防止用户意外调用对话框窗口上的操作。</summary>
+      <returns>如果通过对话框将分段延迟引入任何交互，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.MaxSize">
+      <summary>获取对话框的最大大小。</summary>
+      <returns>对话框的最大大小（以像素为单位）。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.MinSize">
+      <summary>获取对话框的最小大小。</summary>
+      <returns>对话框的最小大小（以像素为单位）。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.Title">
+      <summary>获取或设置对话框的标题。</summary>
+      <returns>对话框的标题。</returns>
+    </member><member name="E:Windows.UI.Core.CoreWindowDialog.Showing">
+      <summary>在显示对话框时激发。</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowDialog.ShowAsync">
+      <summary>显示对话框和异步等待用户执行操作。</summary>
+      <returns>由用户执行的对话框操作，以及该操作相关信息。</returns>
+    </member><member name="T:Windows.UI.Core.CoreWindowFlyout">
+      <summary>定义应用程序窗口的子弹出对话框。</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowFlyout.#ctor(Windows.Foundation.Point)">
+      <summary>在所提供的位置创建 CoreWindowFlyout 类的实例。</summary>
+      <param name="position">将形成弹出窗口的屏幕上的像素位置。 该位置将提供顶部最左边弹出的窗口。</param>
+    </member><member name="M:Windows.UI.Core.CoreWindowFlyout.#ctor(Windows.Foundation.Point,System.String)">
+      <summary>使用所提供的标题在指定位置创建 CoreWindowFlyout 类的实例。</summary>
+      <param name="position">将形成弹出窗口的屏幕上的像素位置。 该位置将提供顶部最左边弹出的窗口。</param>
+      <param name="title">以的标题。</param>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.BackButtonCommand">
+      <summary>获取或设置在菜单上选择后退按钮时所调用的委托。</summary>
+      <returns>在选择弹出窗口上的“后退”按钮时调用的委托。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.Commands">
+      <summary>获取弹出对话框上可用的用户界面命令集。</summary>
+      <returns>弹出对话框上可用的用户界面命令集。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.DefaultCommandIndex">
+      <summary>获取或设置菜单窗口的默认命令的索引。</summary>
+      <returns>弹出对话框窗口的默认命令（如 确定）的索引值。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.IsInteractionDelayed">
+      <summary>获取或设置指示任何 UI 交互事件消息是否稍微延迟的值。 此延迟可防止用户意外调用弹出对话框窗口上的操作。</summary>
+      <returns>如果通过浮出控件将分段延迟引入任何交互，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.MaxSize">
+      <summary>获取弹出对话框的最大大小。</summary>
+      <returns>以的最大大小（以像素为单位）。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.MinSize">
+      <summary>获取弹出对话框的最小大小。</summary>
+      <returns>以的最小大小（以像素为单位）。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.Title">
+      <summary>获取或设置以的标题。</summary>
+      <returns>以的标题。</returns>
+    </member><member name="E:Windows.UI.Core.CoreWindowFlyout.Showing">
+      <summary>在显示弹出对话框时激发。</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowFlyout.ShowAsync">
+      <summary>显示弹出对话框和异步等待用户执行操作。</summary>
+      <returns>由用户执行的代码操作，以及该操作相关信息。</returns>
+    </member><member name="T:Windows.UI.Core.CoreWindowPopupShowingEventArgs">
+      <summary>定义设置所需弹出窗口大小的方法。</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowPopupShowingEventArgs.SetDesiredSize(Windows.Foundation.Size)">
+      <summary>设置所需的弹出窗口大小。</summary>
+      <param name="value">所需的弹出窗口的大小。</param>
+    </member></members>
+</doc>

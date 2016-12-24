@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Networking.NetworkOperators.LegacyNetworkOperatorsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails">
+      <summary>Proporciona los detalles de una notificación del operador de red.</summary>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.EncodingType">
+      <summary>Obtiene el esquema de codificación de datos (DCS) del mensaje recibido.</summary>
+      <returns>El esquema de codificación de datos (DCS) del mensaje recibido.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.Message">
+      <summary>Obtiene el mensaje de la notificación del operador de red.</summary>
+      <returns>El mensaje de la notificación del operador de red.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.NetworkAccountId">
+      <summary>Obtiene un identificador único para la cuenta de banda ancha móvil que recibió la notificación.</summary>
+      <returns>Un identificador único para una cuenta de banda ancha móvil.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.NotificationType">
+      <summary>Obtiene el tipo de la notificación de red.</summary>
+      <returns>Tipo de la notificación de red.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.RuleId">
+      <summary>Obtiene el identificador de la regla proporcionado que coincidió y desencadenó la notificación.</summary>
+      <returns>El identificador de regla proporcionado.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.SmsMessage">
+      <summary>Obtiene un mensaje SMS para la cuenta de banda ancha móvil que recibió la notificación.</summary>
+      <returns>Si la notificación del operador de red se desencadena mediante un SMS de operador de red móvil nuevo, contiene el objeto de mensaje de texto de la notificación del operador de red. NULL si no se ha recibido ningún mensaje SMS como parte de la notificación.</returns>
+    </member><member name="M:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.AuthorizeTethering(System.Boolean,System.String)">
+      <summary>Se utiliza para indicar si se permite el tethering para un dispositivo. En caso contrario, se puede proporcionar un motivo.</summary>
+      <param name="allow">true si se permite el tethering; de lo contrario, false.</param>
+      <param name="entitlementFailureReason">Motivo por el que no se permite el tethering.</param>
+    </member></members>
+</doc>

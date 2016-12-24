@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Scanners.ScannerDeviceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Scanners.IImageScannerFormatConfiguration">
+      <summary>Configura el formato de archivo cuando un origen de entrada de escáner transfiere los datos de imagen adquiridos a la aplicación.</summary>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerFormatConfiguration.DefaultFormat">
+      <summary>Obtiene el formato de archivo predeterminado para el origen de análisis al principio de una nueva sesión de análisis.</summary>
+      <returns>El tipo de archivo.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerFormatConfiguration.Format">
+      <summary>Obtiene o establece el formato de transferencia de archivos actual para la adquisición de datos de imagen del dispositivo en la aplicación cliente.</summary>
+      <returns>El tipo de archivo.</returns>
+    </member><member name="M:Windows.Devices.Scanners.IImageScannerFormatConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>Determina si el escáner de entrada admite el formato de archivo especificado.</summary>
+      <returns>True si se admite el tipo de archivo especificado; en caso contrario, False.</returns>
+      <param name="value">El tipo de archivo.</param>
+    </member><member name="T:Windows.Devices.Scanners.IImageScannerSourceConfiguration">
+      <summary>Consulta y configura los valores de digitalizacióin que son comunes para los orígenes de escáner plano y alimentador.</summary>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.ActualResolution">
+      <summary>Obtiene la resolución horizontal y vertical real de análisis para el origen de análisis, en PPP.</summary>
+      <returns>Resolución horizontal y vertical, en píxeles.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.AutoCroppingMode">
+      <summary>Obtiene o establece el modo de recorte automático.</summary>
+      <returns>El modo de recorte automático para la digitalización.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.Brightness">
+      <summary>Configura el nivel de contraste actual para capturar datos de imagen del origen de escáner. En una nueva sesión de análisis, el valor de esta propiedad es la propiedad DefaultBrightness.</summary>
+      <returns>El nivel de brillo.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.BrightnessStep">
+      <summary>Obtiene el tamaño de paso al cual los niveles de luminosidad del origen de datos se pueden aumentar o disminuir entre los valores mínimo y máximo.</summary>
+      <returns>Tamaño de paso para incrementar o disminuir. El valor típico es 1.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.ColorMode">
+      <summary>Obtiene o establece el modo de color del origen de factor de combinación para el origen del examen. Cuando se inicia una nueva sesión de digitalización, esta propiedad es igual que la propiedad DefaultColorMode.</summary>
+      <returns>Modo de color.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.Contrast">
+      <summary>Establece u obtiene el nivel de contraste actual para capturar datos de imagen del origen de digitalización. Al principio de una nueva sesión de análisis, esta propiedad se establece en la propiedad DefaultContrast.</summary>
+      <returns>Nivel de contraste.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.ContrastStep">
+      <summary>Obtiene el tamaño de paso al que los niveles de contraste del origen de datos se pueden aumentar o disminuir entre los valores mínimo y máximo.</summary>
+      <returns>Tamaño de paso para incrementar o disminuir. El valor típico es 1.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DefaultBrightness">
+      <summary>Obtiene el nivel predeterminado de brillo del origen del análisis.</summary>
+      <returns>El nivel de brillo predeterminado para el escáner.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DefaultColorMode">
+      <summary>Obtiene el modo de color predeterminado para este origen de análisis.</summary>
+      <returns>Modo de color.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DefaultContrast">
+      <summary>Obtiene el nivel predeterminado de contraste del origen del análisis.</summary>
+      <returns>Nivel de contraste predeterminado.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DesiredResolution">
+      <summary>Obtiene o establece la resolución de digitalización horizontal y vertical del origen de digitalización solicitada por la aplicación, en PPP.</summary>
+      <returns>Resolución horizontal y vertical, en píxeles.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxBrightness">
+      <summary>Obtiene el nivel máximo de ajuste de luminosidad admitido por el origen de análisis.</summary>
+      <returns>Nivel de brillo máximo, normalmente 1.000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxContrast">
+      <summary>Obtiene el nivel máximo de contraste admitido por el origen de análisis.</summary>
+      <returns>Nivel de contraste máximo, normalmente 1.000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxResolution">
+      <summary>Obtiene la resolución horizontal y vertical máxima de análisis del origen de análisis, en PPP.</summary>
+      <returns>Resolución horizontal y vertical, en píxeles.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxScanArea">
+      <summary>Obtiene las dimensiones máximas de digitalización en pulgadas. El ancho de digitalización máximo es el ancho mayor que un documento puede tener para que el alimentador y el escáner plano puedan digitalizarlo.</summary>
+      <returns>El ancho y el alto del área.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinBrightness">
+      <summary>Obtiene el nivel mínimo de luminosidad admitido por el origen de análisis.</summary>
+      <returns>Nivel de brillo mínimo, normalmente -1.000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinContrast">
+      <summary>Obtiene el nivel mínimo de contraste admitido por el origen de análisis.</summary>
+      <returns>Nivel de contraste mínimo, normalmente -1.000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinResolution">
+      <summary>Obtiene la resolución horizontal y vertical mínima de análisis del origen de análisis, en PPP.</summary>
+      <returns>Resolución horizontal y vertical, en píxeles.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinScanArea">
+      <summary>Obtiene el área de digitalización mínima en pulgadas. El área de digitalización mínima es el tamaño más pequeño que un documento puede tener para que un escáner plano o un alimentador puedan digitalizarlo.</summary>
+      <returns>El ancho y el alto del área.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.OpticalResolution">
+      <summary>Obtiene la resolución horizontal y vertical óptica de análisis del origen de análisis, en PPP.</summary>
+      <returns>Resolución de digitalización horizontal y vertical en píxeles.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.SelectedScanRegion">
+      <summary>Obtiene o establece las coordenadas de origen (horizontal y vertical) y las dimensiones (ancho y alto) del área de digitalización seleccionada, en pulgadas. Esta propiedad se omite si la propiedad AutoCroppingMode no está establecida en Disabled.</summary>
+      <returns>Ubicación y tamaño de un rectángulo.</returns>
+    </member><member name="M:Windows.Devices.Scanners.IImageScannerSourceConfiguration.IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)">
+      <summary>Determina si el origen de digitalización admite el ImageScannerAutoCroppingMode especificado.</summary>
+      <returns>True si el dispositivo admite el modo value; de lo contrario, false.</returns>
+      <param name="value">El modo de recorte automático de la imagen que se debe digitalizar.</param>
+    </member><member name="M:Windows.Devices.Scanners.IImageScannerSourceConfiguration.IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)">
+      <summary>Determina si el origen de digitalización puede digitalizar y transferir imágenes en el modo de color especificado.</summary>
+      <returns>True si el escáner puede digitalizar imágenes en el modo value; de lo contrario, False.</returns>
+      <param name="value">Modo de color.</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScanner">
+      <summary>Representa las propiedades de las imágenes que se deben digitalizar.</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.AutoConfiguration">
+      <summary>Obtiene y establece la configuración de digitalización de la unidad de digitalización autoconfigurada, como el formato de archivo, incluida la compresión en la que se deben entregar los datos digitalizados. Esta propiedad se omite si el escáner no tiene capacidad de configuración automática.</summary>
+      <returns>Configuración de la digitalización. Null si el escáner no es capaz de la configuración automática.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.DefaultScanSource">
+      <summary>Obtiene el origen predeterminado de análisis elegido para este dispositivo de escáner.</summary>
+      <returns>Tipo de origen del examen.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.DeviceId">
+      <summary>Obtiene el identificador de dispositivo PnP de este dispositivo de escáner.</summary>
+      <returns>Identificador de dispositivo PnP.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.FeederConfiguration">
+      <summary>Obtiene o establece la configuración de digitalización de la unidad de digitalización del alimentador, como el tamaño de página, la orientación y la resolución de la digitalización.</summary>
+      <returns>Configuración del alimentador del escáner. Es Null si no hay ningún alimentador.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.FlatbedConfiguration">
+      <summary>Obtiene y establece la configuración de digitalización de la unidad de digitalización de escáner plano, como la resolución de digitalización y el modo de color.</summary>
+      <returns>Configuración de la digitalización del escáner plano. Null si no hay cristal plano.</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.FromIdAsync(System.String)">
+      <summary>Crea una instancia de un objeto de ImageScanner basado en un identificador de información de dispositivo de escáner. Este método se requiere para la enumeración de dispositivos de agente.</summary>
+      <returns>Objeto ImageScanner.</returns>
+      <param name="deviceId">Identificador de información del dispositivo. Vea la propiedad DeviceInformation.Id.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.GetDeviceSelector">
+      <summary>Devuelve la cadena de selección de clase que pueden usar las aplicaciones para enumerar los dispositivos de escáner. Este método se requiere para la enumeración de dispositivos administrados.</summary>
+      <returns>Selección de la clase.</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.IsPreviewSupported(Windows.Devices.Scanners.ImageScannerScanSource)">
+      <summary>Determina si el origen de digitalización especificado admite la vista previa de digitalización.</summary>
+      <returns>Devuelve True si el origen de digitalización especificado admite la vista previa; de lo contrario, devuelve False.</returns>
+      <param name="scanSource">Origen de la digitalización.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.IsScanSourceSupported(Windows.Devices.Scanners.ImageScannerScanSource)">
+      <summary>Determina si el origen de digitalización especificado está disponible en el escáner.</summary>
+      <returns>True si el origen de digitalización, escáner plano o alimentador, está disponible; de lo contrario, False.</returns>
+      <param name="value">Origen de la digitalización.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.ScanFilesToFolderAsync(Windows.Devices.Scanners.ImageScannerScanSource,Windows.Storage.StorageFolder)">
+      <summary>Inicia un trabajo de digitalización con el origen de digitalización especificado y una o varias imágenes a un archivo de varias páginas, tales como TIFF, XPS y PDF; uno o varios archivos de una sola página, tales como DIB, PNG, JPG y TIFF, en la ubicación de carpeta especificada. Devuelve el progreso de la digitalización.</summary>
+      <returns>Lista de archivos de imagen digitalizados desde ImageScannerScanResult y progreso del trabajo de digitalización WIA desde UInt32, que indica cuántos archivos se transfirieron a la carpeta de destino.</returns>
+      <param name="scanSource">Origen de análisis de la imagen.</param>
+      <param name="storageFolder">Ubicación de la carpeta destino del archivo digitalizado.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.ScanPreviewToStreamAsync(Windows.Devices.Scanners.ImageScannerScanSource,Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>Digitaliza una imagen desde el origen de digitalización especificado y aplica la resolución de digitalización más baja con el formato de archivo de imagen seleccionado.</summary>
+      <returns>Progreso de la digitalización y formato del archivo digitalizado.</returns>
+      <param name="scanSource">Origen de análisis de la imagen.</param>
+      <param name="targetStream">Archivo de imagen digitalizado.</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerAutoConfiguration">
+      <summary>Representa el origen de digitalización autoconfigurado del escáner.</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerAutoConfiguration.DefaultFormat">
+      <summary>El formato de archivo predeterminado para el origen de digitalización al principio de una nueva sesión de digitalización.</summary>
+      <returns>El tipo de archivo.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerAutoConfiguration.Format">
+      <summary>Obtiene o establece el formato de transferencia de archivos actual para la adquisición de datos de imagen del dispositivo en la aplicación cliente.</summary>
+      <returns>El tipo de archivo.</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerAutoConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>Determina si el escáner de entrada admite el formato de archivo especificado.</summary>
+      <returns>True si se admite el tipo de archivo especificado; en caso contrario, False.</returns>
+      <param name="value">El tipo de archivo.</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerAutoCroppingMode">
+      <summary>Especifica el modo de recorte automático del dispositivo de digitalización.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerAutoCroppingMode.Disabled">
+      <summary>Se deshabilita la detección automática. Al principio de una nueva sesión de escáner, la propiedad AutoCroppingMode se establece en este valor de forma predeterminada.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerAutoCroppingMode.MultipleRegion">
+      <summary>Digitalizar varias regiones de digitalización en imágenes individuales independientes.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerAutoCroppingMode.SingleRegion">
+      <summary>Digitalizar una única región de digitalización en imágenes individuales e independientes.</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerColorMode">
+      <summary>Especifica los modos de color para el origen de digitalización.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.AutoColor">
+      <summary>El dispositivo detecta automáticamente el modo de color adecuado en función del contenido de digitalización. En este caso la decisión entre el color, la escala de grises y blanco y negro, por ejemplo, se basa en el dispositivo, y no en la aplicación.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.Color">
+      <summary>Color RGB de 24 bits (3 canales a 8 bits por canal).</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.Grayscale">
+      <summary>Escala de grises de 8 bits o de 4 bits (1 canal a 8 o 4 bits por canal). Si el dispositivo admite la escala de grises de 4 y 8 bits, la propiedad DefaultColorMode usa la de 8 bits.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.Monochrome">
+      <summary>Bitonal de 1 bit, también llamado monocromático o “blanco y negro” (1 canal a 1 bit por canal).</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerFeederConfiguration">
+      <summary>Representa el origen de digitalización del alimentador del escáner.</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ActualResolution">
+      <summary>Obtiene la resolución horizontal y vertical real de análisis para el alimentador del escáner, en PPP.</summary>
+      <returns>Resolución horizontal y vertical, en píxeles.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.AutoCroppingMode">
+      <summary>Obtiene o establece el modo de recorte automático.</summary>
+      <returns>El modo de recorte automático para la digitalización.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.AutoDetectPageSize">
+      <summary>Obtiene o establece la característica de detección automática del tamaño de página para el alimentador del escáner.</summary>
+      <returns>True si la característica de detección automática del tamaño de página está habilitada; de lo contrario, False.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Brightness">
+      <summary>Obtiene o establece el nivel de brillo actual para capturar datos de imagen desde el alimentador del escáner. Al principio de una nueva sesión de análisis, esta propiedad se establece en la propiedad DefaultBrightness.</summary>
+      <returns>Nivel de brillo actual.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.BrightnessStep">
+      <summary>Obtiene el tamaño de paso al cual los niveles de luminosidad del origen de datos se pueden aumentar o disminuir entre los valores mínimo y máximo.</summary>
+      <returns>Tamaño de paso para incrementar o disminuir. El valor típico es 1.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.CanAutoDetectPageSize">
+      <summary>Devuelve True si el dispositivo puede detectar automáticamente en el momento de digitalización el tamaño de las páginas de un documento digitalizado a través del alimentador; de lo contrario, devuelve False.</summary>
+      <returns>True si el dispositivo puede detectar automáticamente en el momento de la digitalización el tamaño de las páginas del documento digitalizadas a través del alimentador; de lo contrario, False.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.CanScanAhead">
+      <summary>Obtiene si el dispositivo del escáner es capaz de analizar a continuación desde el alimentador.</summary>
+      <returns>Indica si el alimentador del escáner puede examinar a continuación.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.CanScanDuplex">
+      <summary>Obtiene si el alimentador del escáner es capaz de realizar detección dúplex (análisis de ambos lados de la página del documento, parte anterior y posterior). Cuando se realiza la digitalización en modo dúplex, se aplican los mismos valores de digitalización (como el modo de color y la resolución del escáner) para digitalizar ambos lados de la página.</summary>
+      <returns>Indica si la detección dúplex está disponible.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ColorMode">
+      <summary>Obtiene o establece el modo de color del alimentador del escáner.</summary>
+      <returns>Modo de color.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Contrast">
+      <summary>Establece u obtiene el nivel de contraste actual para capturar datos de imagen desde el alimentador del escáner. Al principio de una nueva sesión de análisis, esta propiedad se establece en la propiedad DefaultContrast.</summary>
+      <returns>Nivel de contraste.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ContrastStep">
+      <summary>Obtiene el tamaño de paso al que los niveles de contraste del origen de datos se pueden aumentar o disminuir entre los valores mínimo y máximo.</summary>
+      <returns>Tamaño de paso para incrementar o disminuir. El valor típico es 1.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultBrightness">
+      <summary>Obtiene el nivel predeterminado de brillo del alimentador del escáner.</summary>
+      <returns>El nivel de brillo predeterminado para el escáner.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultColorMode">
+      <summary>Obtiene el modo de color predeterminado para el alimentador del escáner.</summary>
+      <returns>Modo de color.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultContrast">
+      <summary>Obtiene el nivel de contraste predeterminado para el alimentador del escáner.</summary>
+      <returns>Nivel de contraste predeterminado.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultFormat">
+      <summary>Obtiene el formato de archivo predeterminado para el alimentador del escáner al principio de una nueva sesión de análisis.</summary>
+      <returns>El tipo de archivo.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DesiredResolution">
+      <summary>Obtiene o establece la resolución de digitalización horizontal y vertical del alimentador del escáner solicitada por la aplicación, en PPP.</summary>
+      <returns>Resolución horizontal y vertical, en píxeles.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Duplex">
+      <summary>Indica si el alimentador del escáner puede examinar los dos lados de la página de un documento.</summary>
+      <returns>Devuelve True si el alimentador puede digitalizar ambas caras de la página.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Format">
+      <summary>Obtiene o establece el formato de transferencia de archivos actual para la adquisición de datos de imagen del alimentador del escáner en la aplicación cliente.</summary>
+      <returns>El tipo de archivo.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxBrightness">
+      <summary>Obtiene el nivel máximo de luminosidad admitido por el alimentador del escáner.</summary>
+      <returns>Nivel de brillo máximo, normalmente 1.000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxContrast">
+      <summary>Obtiene el nivel máximo de contraste admitido por el alimentador del escáner.</summary>
+      <returns>Nivel de contraste máximo, normalmente 1.000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxNumberOfPages">
+      <summary>Obtiene o establece el número máximo de páginas sin imágenes que la aplicación puede digitalizar en un trabajo de digitalización, antes de que el escáner se detenga.</summary>
+      <returns>Número de páginas.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxResolution">
+      <summary>Obtiene la resolución horizontal y vertical máxima de análisis del alimentador del escáner, en PPP.</summary>
+      <returns>Resolución horizontal y vertical, en píxeles.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxScanArea">
+      <summary>Obtiene las dimensiones máximas de digitalización en pulgadas. El ancho de digitalización máximo es el ancho mayor que un documento puede tener para que el alimentador del escáner pueda digitalizarlo.</summary>
+      <returns>El ancho y el alto del área.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinBrightness">
+      <summary>Obtiene el nivel mínimo de luminosidad admitido por el alimentador del escáner.</summary>
+      <returns>Nivel de brillo mínimo, normalmente -1.000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinContrast">
+      <summary>Obtiene el nivel mínimo de contraste admitido por el alimentador del escáner.</summary>
+      <returns>Nivel de contraste mínimo, normalmente -1.000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinResolution">
+      <summary>Obtiene la resolución horizontal y vertical mínima de análisis del alimentador del escáner, en PPP.</summary>
+      <returns>Resolución horizontal y vertical, en píxeles.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinScanArea">
+      <summary>Obtiene el área de digitalización mínima en pulgadas. El área de digitalización mínima es el tamaño más pequeño que un documento puede tener para que un alimentador pueda digitalizarlo.</summary>
+      <returns>El ancho y el alto del área.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.OpticalResolution">
+      <summary>Obtiene la resolución horizontal y vertical óptica de análisis del alimentador del escáner, en PPP.</summary>
+      <returns>Resolución de digitalización horizontal y vertical en píxeles.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.PageOrientation">
+      <summary>Obtiene o establece la orientación de página seleccionada actualmente que indica cómo colocar los documentos en la bandeja de entrada del alimentador del escáner.</summary>
+      <returns>Orientación de la página.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.PageSize">
+      <summary>Obtiene o establece el tamaño de página seleccionado actualmente para la digitalización desde el alimentador.</summary>
+      <returns>Tamaño de la página.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.PageSizeDimensions">
+      <summary>Obtiene las dimensiones (ancho y alto) y la orientación del tamaño de página seleccionada, en unidades de milipulgada (1/1000").</summary>
+      <returns>Tamaño de la página.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ScanAhead">
+      <summary>Indica si se puede examinar a continuación.</summary>
+      <returns>True para seguir con la digitalización.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.SelectedScanRegion">
+      <summary>Obtiene o establece las coordenadas de origen (horizontal y vertical) y las dimensiones (ancho y alto) del área de digitalización seleccionada, en pulgadas. Esta propiedad se omite si la propiedad AutoCroppingMode no es Disabled.</summary>
+      <returns>Región de digitalización en pulgadas.</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)">
+      <summary>Devuelve si el alimentador de escáner admite el ImageScannerAutoCroppingMode especificado.</summary>
+      <returns>Indica si el dispositivo admite el modo value.</returns>
+      <param name="value">El modo de recorte automático de la imagen que se debe digitalizar.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)">
+      <summary>Devuelve si el alimentador del escáner puede digitalizar y transferir imágenes en el modo de color especificado.</summary>
+      <returns>Indica si el escáner puede examinar imágenes en el modo value.</returns>
+      <param name="value">Modo de color.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>Determina si el alimentador del escáner admite el formato de archivo especificado.</summary>
+      <returns>Indica si el tipo de archivo especificado es compatible.</returns>
+      <param name="value">El tipo de archivo.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsPageSizeSupported(Windows.Graphics.Printing.PrintMediaSize,Windows.Graphics.Printing.PrintOrientation)">
+      <summary>Devuelve si el alimentador puede digitalizar documentos en el tamaño de página y la orientación especificados.</summary>
+      <returns>Indica que el escáner se puede examinar con los valores pageSize y pageOrientation.</returns>
+      <param name="pageSize">Tamaño de la página.</param>
+      <param name="pageOrientation">Orientación de la página.</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration">
+      <summary>Representa el origen de digitalización plana del escáner.</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.ActualResolution">
+      <summary>Obtiene la resolución horizontal y vertical real de análisis para el escáner Flatbed, en PPP.</summary>
+      <returns>Resolución horizontal y vertical, en píxeles.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.AutoCroppingMode">
+      <summary>Obtiene o establece el modo de recorte automático.</summary>
+      <returns>El modo de recorte automático para la digitalización.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.Brightness">
+      <summary>Obtiene o establece el nivel de brillo actual para capturar datos de imagen desde el escáner plano. Al principio de una nueva sesión de análisis, esta propiedad se establece en la propiedad DefaultBrightness.</summary>
+      <returns>Nivel de brillo actual.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.BrightnessStep">
+      <summary>Obtiene el tamaño de paso al cual los niveles de luminosidad del origen de datos se pueden aumentar o disminuir entre los valores mínimo y máximo.</summary>
+      <returns>Tamaño de paso para incrementar o disminuir. El valor típico es 1.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.ColorMode">
+      <summary>Obtiene o establece el modo de color del escáner plano.</summary>
+      <returns>Modo de color.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.Contrast">
+      <summary>Establece u obtiene el nivel de contraste actual para capturar datos de imagen del origen de digitalización. Al principio de una nueva sesión de análisis, esta propiedad se establece en la propiedad DefaultContrast.</summary>
+      <returns>Nivel de contraste.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.ContrastStep">
+      <summary>Obtiene el tamaño de paso al que los niveles de contraste del origen de datos se pueden aumentar o disminuir entre los valores mínimo y máximo.</summary>
+      <returns>Tamaño de paso para incrementar o disminuir. El valor típico es 1.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultBrightness">
+      <summary>Obtiene el nivel predeterminado de brillo del Flatbed del escáner.</summary>
+      <returns>El nivel de brillo predeterminado para el escáner.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultColorMode">
+      <summary>Obtiene el modo de color predeterminado para el Flatbed del escáner.</summary>
+      <returns>Modo de color.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultContrast">
+      <summary>Obtiene el nivel de contraste predeterminado para el Flatbed del escáner.</summary>
+      <returns>Nivel de contraste predeterminado.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultFormat">
+      <summary>Obtiene el formato de archivo predeterminado para el Flatbed del escáner al principio de una nueva sesión de análisis.</summary>
+      <returns>El tipo de archivo.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DesiredResolution">
+      <summary>Obtiene o establece la resolución de digitalización horizontal y vertical del escáner plano solicitada por la aplicación, en PPP.</summary>
+      <returns>Resolución horizontal y vertical, en píxeles.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.Format">
+      <summary>Obtiene o establece el formato de transferencia de archivos actual para la adquisición de datos de imagen del escáner plano en la aplicación cliente.</summary>
+      <returns>El tipo de archivo.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxBrightness">
+      <summary>Obtiene el nivel máximo de luminosidad admitido por el Flatbed del escáner.</summary>
+      <returns>Nivel de brillo máximo, normalmente 1.000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxContrast">
+      <summary>Obtiene el nivel máximo de contraste admitido por el Flatbed del escáner.</summary>
+      <returns>Nivel de contraste máximo, normalmente 1.000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxResolution">
+      <summary>Obtiene la resolución horizontal y vertical máxima de análisis del Flatbed del escáner, en PPP.</summary>
+      <returns>Resolución horizontal y vertical, en píxeles.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxScanArea">
+      <summary>Obtiene las dimensiones máximas de digitalización en pulgadas. El ancho de digitalización máximo es el ancho mayor que un documento puede tener para que el escáner plano pueda digitalizarlo.</summary>
+      <returns>El ancho y el alto del área.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinBrightness">
+      <summary>Obtiene el nivel mínimo de luminosidad admitido por el Flatbed del escáner.</summary>
+      <returns>Nivel de brillo mínimo, normalmente -1.000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinContrast">
+      <summary>Obtiene el nivel mínimo de contraste admitido por el Flatbed del escáner.</summary>
+      <returns>Nivel de contraste mínimo, normalmente -1.000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinResolution">
+      <summary>Obtiene la resolución horizontal y vertical mínima de análisis del Flatbed del escáner, en PPP.</summary>
+      <returns>Resolución horizontal y vertical, en píxeles.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinScanArea">
+      <summary>Obtiene el área de digitalización mínima en pulgadas. El área de digitalización mínima es el tamaño más pequeño que un documento puede tener para que un escáner plano pueda digitalizarlo.</summary>
+      <returns>El ancho y el alto del área.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.OpticalResolution">
+      <summary>Obtiene la resolución óptica de análisis del escáner Flatbed en PPP.</summary>
+      <returns>Resolución de digitalización horizontal y vertical en píxeles.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.SelectedScanRegion">
+      <summary>Obtiene o establece las coordenadas de origen (horizontal y vertical) y las dimensiones (ancho y alto) del área de digitalización seleccionada, en pulgadas. Esta propiedad se omite si la propiedad AutoCroppingMode no es Disabled.</summary>
+      <returns>Ubicación y tamaño de un rectángulo.</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)">
+      <summary>Devuelve si el cristal plano del escáner admite el ImageScannerAutoCroppingMode especificado.</summary>
+      <returns>Indica si el dispositivo admite el modo value.</returns>
+      <param name="value">El modo de recorte automático de la imagen que se debe digitalizar.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)">
+      <summary>Devuelve si el cristal plano del escáner puede digitalizar y transferir imágenes en el modo de color especificado.</summary>
+      <returns>Indica si el escáner puede examinar imágenes en el modo value.</returns>
+      <param name="value">Modo de color.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>Determina si el cristal plano del escáner admite el formato de archivo especificado.</summary>
+      <returns>Indica si el tipo de archivo especificado es compatible.</returns>
+      <param name="value">El tipo de archivo.</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerFormat">
+      <summary>Tipo de archivos que se van a digitalizar.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.DeviceIndependentBitmap">
+      <summary>Mapa de bits independiente del dispositivo Windows (DIB) Este valor admite a cualquier modo de color, con una única página y descomprimido. Este es el único formato admitido por todos los dispositivos de escáner WIA 2.0 compatibles.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Jpeg">
+      <summary>Formato de archivo de imagen intercambiable/EXIF o formato de intercambio de archivo JPEG/JFIF Utilice estos archivos solo en los modos de color o de escala de grises (8 bits por canal y ejemplo), con página única y comprimido (compresión JPEG con pérdida).</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.OpenXps">
+      <summary>Formato de archivo de documento de Open XML Paper Specification (OpenXPS) Estos archivos pueden contener datos de imagen en cualquier modo de color admitido por esta API, comprimido en la opción del dispositivo, de una o de varias páginas.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Pdf">
+      <summary>Formato de archivos de documentos Portable Document Format PDF/A (PDF/A es una versión con norma ISO del documento PDF especializada para la conservación digital de documentos electrónicos) Estos archivos pueden contener datos de imagen en cualquier modo de color admitido por esta API, comprimido en según el dispositivo, en una sola página o en varias.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Png">
+      <summary>Formato PNG (Portable Network Graphics) Este valor admite cualquier modo de color, con una única página y comprimido (compresión PNG sin pérdidas).</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Tiff">
+      <summary>Formato Tagged Image File Format (TIFF) compatible con la especificación TIFF 6.0, ya sea de una o varias páginas. Estos archivos pueden estar en cualquier modo de color que admita esta API, siempre sin comprimir y ya sea de una página (si solo debe transferirse una imagen) o de varias páginas (si deben transferirse varias imágenes y el dispositivo es compatible con este formato de archivo de varias páginas).</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Xps">
+      <summary>Formato de archivo de documento de Microsoft XML Paper Specification (XPS) Estos archivos pueden contener datos de imagen en cualquier modo de color admitido por esta API, comprimido en la opción del dispositivo, de una o de varias páginas.</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerPreviewResult">
+      <summary>Representa el resultado de un trabajo de digitalización de vista previa.</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerPreviewResult.Format">
+      <summary>Obtiene el formato de los datos para la vista previa del análisis. Después de la vista previa, esta propiedad se restablece al valor de antes de la vista previa.</summary>
+      <returns>Formato de digitalización.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerPreviewResult.Succeeded">
+      <summary>Obtiene si la vista previa de análisis se realizó correctamente.</summary>
+      <returns>True si la vista previa de la digitalización se realizó correctamente; en caso contrario, False.</returns>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerResolution">
+      <summary>Especifica la resolución de digitalización.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerResolution.DpiX">
+      <summary>Tamaño horizontal.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerResolution.DpiY">
+      <summary>Tamaño vertical.</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerScanResult">
+      <summary>Representa el resultado de un trabajo de examen.</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerScanResult.ScannedFiles">
+      <summary>Obtiene la lista de archivos de imagen analizados producida por el trabajo de análisis completo.</summary>
+      <returns>Una lista de archivos de imagen digitalizados desde el trabajo de digitalización completado. Si no hay archivos examinados, la propiedad IVectorView&lt;T&gt;.Size será 0.</returns>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerScanSource">
+      <summary>Tipos de origen del examen para el dispositivo de digitalización.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.AutoConfigured">
+      <summary>El origen de la digitalización se configura automáticamente.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.Default">
+      <summary>Origen predeterminado.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.Feeder">
+      <summary>Un origen de escáner del alimentador.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.Flatbed">
+      <summary>Un origen de escáner plano.</summary>
+    </member></members>
+</doc>

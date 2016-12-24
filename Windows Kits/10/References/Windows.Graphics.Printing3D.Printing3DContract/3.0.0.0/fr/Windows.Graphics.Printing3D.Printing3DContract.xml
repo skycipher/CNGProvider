@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Graphics.Printing3D.Printing3DContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Graphics.Printing3D.Print3DManager">
+      <summary>Crée l'expérience d'impression 3D.</summary>
+    </member><member name="E:Windows.Graphics.Printing3D.Print3DManager.TaskRequested">
+      <summary>Se produit lorsqu'une nouvelle tâche d'impression 3D a été créée.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Print3DManager.GetForCurrentView">
+      <summary>Obtient un gestionnaire d'impression 3D.</summary>
+      <returns>Le gestionnaire d'impression 3D.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Print3DManager.ShowPrintUIAsync">
+      <summary>Initialise par programmation l'interface utilisateur d'impression 3D.</summary>
+      <returns>true si l'opération s'est terminée correctement ; sinon, false.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTask">
+      <summary>Représente une tâche d'impression 3D.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Print3DTask.Source">
+      <summary>Obtient le package d'impression 3D à imprimer.</summary>
+      <returns>Le package d'impression 3D à imprimer.</returns>
+    </member><member name="E:Windows.Graphics.Printing3D.Print3DTask.Completed">
+      <summary>Se produit lorsque la demande d'impression a été envoyée à l'imprimante 3D et que la tâche d'impression 3D a été créée.</summary>
+    </member><member name="E:Windows.Graphics.Printing3D.Print3DTask.SourceChanged">
+      <summary>Se produit lorsque le flux de travail modifie le package d'impression 3D.</summary>
+    </member><member name="E:Windows.Graphics.Printing3D.Print3DTask.Submitting">
+      <summary>Se produit lorsque le package d'impression 3D a été envoyé à l'imprimante 3D.</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs">
+      <summary>Fournit des données pour l'événement Completed de la demande d'impression 3D.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs.Completion">
+      <summary>Obtient l'état de la demande d'impression 3D.</summary>
+      <returns>L'état d'achèvement de la demande d'impression 3D.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs.ExtendedStatus">
+      <summary>Obtient le type d'erreur rencontré pendant la demande d'impression 3D.</summary>
+      <returns>Le type d'erreur rencontré pendant la demande d'impression 3D.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskCompletion">
+      <summary>Indique l'état d'achèvement d'une demande d'impression 3D.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskCompletion.Abandoned">
+      <summary>La demande a été abandonnée.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskCompletion.Canceled">
+      <summary>La demande a été annulée.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskCompletion.Failed">
+      <summary>La demande a échoué.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskCompletion.Slicing">
+      <summary>Le pilote prépare couche par couche les sections du modèle 3D pour l'imprimante.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskCompletion.Submitted">
+      <summary>La demande a été envoyée avec succès.</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskDetail">
+      <summary>Indique le type d'erreurs rencontrées pendant une demande d'impression 3D.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.InvalidMaterialSelection">
+      <summary>Un matériel d'impression incorrect a été sélectionné.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.InvalidModel">
+      <summary>Le modèle 3D n'est pas valide.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.InvalidPrintTicket">
+      <summary>Le ticket d'impression est pas valide.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.ModelExceedsPrintBed">
+      <summary>Le modèle 3D dépasse le lit d'impression.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.ModelNotManifold">
+      <summary>Le modèle 3D n'a pas d'arêtes manifold.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.Unknown">
+      <summary>Aucune information supplémentaire n'est disponible.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.UploadFailed">
+      <summary>Le chargement du package d'impression 3D a échoué.</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskRequest">
+      <summary>Représente une demande de tâche d'impression 3D.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Print3DTaskRequest.CreateTask(System.String,System.String,Windows.Graphics.Printing3D.Print3DTaskSourceRequestedHandler)">
+      <summary>Crée une tâche d'impression 3D.</summary>
+      <returns>La tâche d'impression 3D.</returns>
+      <param name="title">Nom de la tâche d'impression.</param>
+      <param name="printerId">L'identificateur de l'imprimante 3D.</param>
+      <param name="handler">Le rappel pour la source de la demande de tâche d'impression.</param>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs">
+      <summary>Fournit des données pour l'événement TaskRequested.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs.Request">
+      <summary>Obtient la demande de tâche d'impression 3D associée au Print3DManager.</summary>
+      <returns>La requête de tâche d'impression 3D.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskSourceChangedEventArgs">
+      <summary>Fournit des données pour l'événement SourceChanged.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Print3DTaskSourceChangedEventArgs.Source">
+      <summary>Obtient le package d'impression 3D mis à jour à partir du flux de travail.</summary>
+      <returns>Le package d'impression 3D mis à jour.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskSourceRequestedArgs">
+      <summary>Fournit des données pour le délégué Print3DTaskSourceRequestedHandler.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Print3DTaskSourceRequestedArgs.SetSource(Windows.Graphics.Printing3D.Printing3D3MFPackage)">
+      <summary>Indique le package 3MF (3D Manufacturing Format - Format de création 3D) à utiliser pour la tâche d'impression.</summary>
+      <param name="source">Le package 3MF (3D Manufacturing Format) à utiliser pour la tâche d'impression.</param>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskSourceRequestedHandler">
+      <summary>Représente la méthode qui gère les demandes pour les packages d'impression 3D.</summary>
+      <param name="args">Fournit le package d'impression 3D à utiliser pour la tâche d'impression 3D.</param>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3D3MFPackage">
+      <summary>Représente un package 3MF (3D Manufacturing Format).</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3D3MFPackage.#ctor">
+      <summary>Crée un objet Printing3D3MFPackage.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3D3MFPackage.ModelPart">
+      <summary>Obtient ou définit un flux XML pour le modèle 3D dans le package 3MF (3D Manufacturing Format).</summary>
+      <returns>Un flux XML pour le modèle 3D dans le package 3MF.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3D3MFPackage.PrintTicket">
+      <summary>Obtient ou définit un flux pour le ticket d'impression dans le package 3MF (3D Manufacturing Format).</summary>
+      <returns>Un flux pour le ticket d'impression dans le package 3MF.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3D3MFPackage.Textures">
+      <summary>Obtient ou définit les textures dans le package 3MF (3D Manufacturing Format).</summary>
+      <returns>Les textures dans le package 3MF, de type Printing3DTextureResource.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3D3MFPackage.Thumbnail">
+      <summary>Obtient ou définit une image miniature représentant le contenu du package 3MF (3D Manufacturing Format).</summary>
+      <returns>Une image miniature représentant le contenu du package 3MF.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3D3MFPackage.LoadAsync(Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>Crée un objet Printing3D3MFPackage à partir d'un flux de fichier 3MF (3D Manufacturing Format).</summary>
+      <returns>Un objet Printing3D3MFPackage créé à partir du flux de package 3MF spécifié.</returns>
+      <param name="value">Un flux de fichier 3MF.</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3D3MFPackage.LoadModelFromPackageAsync(Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>Crée un objet Printing3DModel à partir d'un flux de fichier 3MF (3D Manufacturing Format).</summary>
+      <returns>Un objet Printing3DModel créé à partir du flux d'objet 3MF spécifié.</returns>
+      <param name="value">Un flux de fichier 3MF.</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3D3MFPackage.SaveAsync">
+      <summary>Enregistre l'objet Printing3D3MFPackage dans un flux de fichiers au format 3D Manufacturing (3MF).</summary>
+      <returns>Un flux pour le fichier 3MF où le package doit être enregistré.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3D3MFPackage.SaveModelToPackageAsync(Windows.Graphics.Printing3D.Printing3DModel)">
+      <summary>Enregistre le modèle 3D spécifié dans le package 3MF (3D Manufacturing Format).</summary>
+      <returns>Résultats de l'opération.</returns>
+      <param name="value">Le modèle 3D à enregistrer dans le package 3MF.</param>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DBaseMaterial">
+      <summary>Représente la matière première utilisée pour fabriquer certains objets dans le modèle 3D.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DBaseMaterial.#ctor">
+      <summary>Crée une instance de la classe Printing3DBaseMaterial.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DBaseMaterial.Abs">
+      <summary>Obtient le nom du thermoplastique acrylonitrile butadiène styrène (ABS) utilisé dans la matière première.</summary>
+      <returns>Le nom du thermoplastique ABS utilisé dans la matière première.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DBaseMaterial.Color">
+      <summary>Obtient ou définit la couleur de la matière première.</summary>
+      <returns>La couleur de la matière première.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DBaseMaterial.Name">
+      <summary>Obtient ou définit le nom de la matière première.</summary>
+      <returns>Le nom de la matière première.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DBaseMaterial.Pla">
+      <summary>Obtient le nom du thermoplastique avec acide polylactique (PLA) utilisé dans la matière première.</summary>
+      <returns>Le thermoplastique PLA utilisé dans la matière première.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup">
+      <summary>Représente un groupe de matières premières utilisées dans le modèle 3D.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup.#ctor(System.UInt32)">
+      <summary>Crée une instance de la classe Printing3DBaseMaterialGroup.</summary>
+      <param name="MaterialGroupId">L'identificateur pour le groupe de matières premières utilisées dans le modèle 3D ; une valeur supérieure à zéro.</param>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup.Bases">
+      <summary>Obtient un groupe de matières premières utilisées dans le modèle 3D.</summary>
+      <returns>Les matières premières utilisées dans le modèle 3D, de type Printing3DBaseMaterial.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup.MaterialGroupId">
+      <summary>Obtient l'identificateur (ID) pour le groupe de matières premières.</summary>
+      <returns>L'ID du groupe de matières premières.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DBufferDescription">
+      <summary>Spécifie comment analyser les données dans la mémoire tampon.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferDescription.Format">
+      <summary>Spécifie le format utilisé par la mémoire tampon.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferDescription.Stride">
+      <summary>Spécifie la distance à faire parcourir au pointeur pour trouver l'unité de données suivante.</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DBufferFormat">
+      <summary>Spécifie le format utilisé par la mémoire tampon.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.Printing3DDouble">
+      <summary>Une mémoire tampon de type double.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.Printing3DUInt">
+      <summary>Une mémoire tampon de type uint.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.R32G32B32A32Float">
+      <summary>Un format virgule flottante 128 bits à quatre composants qui prend en charge 32 bits par canal, y compris l'alpha.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.R32G32B32A32UInt">
+      <summary>Un format entier non signé 128 bits à quatre composants qui prend en charge 32 bits par canal, y compris l'alpha.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.R32G32B32Float">
+      <summary>Un format virgule flottante 96 bits à trois composants qui prend en charge 32 bits par canal de couleur.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.R32G32B32UInt">
+      <summary>Un format entier non signé 96 bits à trois composants qui prend en charge 32 bits par canal de couleur.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.Unknown">
+      <summary>Le format est inconnu.</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DColorMaterial">
+      <summary>Représente un matériau de couleur utilisé dans le modèle 3D.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DColorMaterial.#ctor">
+      <summary>Crée une instance de la classe Printing3DColorMaterial.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DColorMaterial.Color">
+      <summary>Obtient ou définit la couleur du matériau.</summary>
+      <returns>La couleur du matériau.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DColorMaterial.Value">
+      <summary>Obtient ou définit la valeur de couleur du matériau.</summary>
+      <returns>La valeur de la couleur du matériau.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DColorMaterialGroup">
+      <summary>Représente un groupe de matériaux de couleur utilisés dans le modèle 3D.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DColorMaterialGroup.#ctor(System.UInt32)">
+      <summary>Crée une instance de la classe Printing3DColorMaterialGroup.</summary>
+      <param name="MaterialGroupId">L'identificateur pour le groupe de matériaux de couleur utilisés dans le modèle 3D ; une valeur supérieure à zéro.</param>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DColorMaterialGroup.Colors">
+      <summary>Obtient un groupe de matériaux de couleur utilisés dans le modèle 3D.</summary>
+      <returns>Un groupe de matériaux de couleur utilisés dans le modèle 3D, de type Printing3DColorMaterial.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DColorMaterialGroup.MaterialGroupId">
+      <summary>Obtient l'identificateur (ID) pour le groupe de matériaux de couleur.</summary>
+      <returns>L'ID du groupe de matériaux de couleur.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DComponent">
+      <summary>Représente un composant de format 3MF (3D Manufacturing Format). Agit comme un conteneur d'autres composants.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DComponent.#ctor">
+      <summary>Crée une instance de la classe Printing3DComponent.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponent.Components">
+      <summary>Obtient les autres composants contenus dans le composant.</summary>
+      <returns>Les autres composants contenus dans le composant.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponent.Mesh">
+      <summary>Obtient ou définit le maillage 3D du composant.</summary>
+      <returns>Le maillage 3D du composant.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponent.Name">
+      <summary>Obtient ou définit le nom du composant 3MF (3D Manufacturing Format).</summary>
+      <returns>Nom du composant 3MF.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponent.PartNumber">
+      <summary>Obtient ou définit le numéro de référence du composant 3MF (3D Manufacturing Format).</summary>
+      <returns>Le numéro de référence du composant 3MF.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponent.Thumbnail">
+      <summary>Obtient ou définit l'image miniature du composant 3MF (3D Manufacturing Format).</summary>
+      <returns>Image miniature du composant 3MF.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponent.Type">
+      <summary>Obtient ou définit le type du composant 3MF (3D Manufacturing Format).</summary>
+      <returns>Type du composant 3MF.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DComponentWithMatrix">
+      <summary>Représente un composant 3MF (3D Manufacturing Format) qui est appliqué à la définition d'objet avec une transformation de matrice.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DComponentWithMatrix.#ctor">
+      <summary>Crée une instance de la classe Printing3DComponentWithMatrix.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponentWithMatrix.Component">
+      <summary>Obtient ou définit le composant de primitive 3MF (3D Manufacturing Format) qui est appliqué à la définition d'objet avec une transformation de matrice.</summary>
+      <returns>Le composant de primitive 3MF appliqué à la définition d'objet avec une transformation de matrice.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponentWithMatrix.Matrix">
+      <summary>Obtient ou définit la transformation de matrice qui est appliquée au composant de primitive 3MF (3D Manufacturing Format).</summary>
+      <returns>Transformation de matrice qui est appliquée au composant de primitive 3MF (3D Manufacturing Format).</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DCompositeMaterial">
+      <summary>Représente un matériau composite qui est défini par un mélange de matières premières.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DCompositeMaterial.#ctor">
+      <summary>Crée une instance de la classe Printing3DCompositeMaterial.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DCompositeMaterial.Values">
+      <summary>Obtient le mélange de matières premières utilisé dans le matériau composite. Chaque combinaison est définie en répertoriant la proportion du mélange global pour chaque matière première (valeurs comprises entre 0 et 1).</summary>
+      <returns>Les proportions de matières premières utilisées dans le matériau composite (valeurs comprises entre 0 et 1). Les valeurs de la proportion sont spécifiées dans le même ordre que les matières premières dans MaterialIndices.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup">
+      <summary>Représente un groupe de matériaux composites.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup.#ctor(System.UInt32)">
+      <summary>Crée une instance de la classe Printing3DCompositeMaterialGroup.</summary>
+      <param name="MaterialGroupId">L'identificateur (ID) du groupe de matériaux composites ; une valeur supérieure à zéro.</param>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup.BaseMaterialGroup">
+      <summary>Obtient l'objet Printing3DBaseMaterialGroup existant dont les membres Printing3DBaseMaterial seront utilisés pour générer des matériaux composites.</summary>
+      <returns>L'objet Printing3DBaseMaterialGroup à partir duquel produire des matériaux composites.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup.Composites">
+      <summary>Obtient une liste de mélanges qui définissent des matériaux composites. Chaque mélange est défini en répertoriant la proportion de mélange global pour chaque matière première (valeurs comprises entre 0 et 1), où les valeurs de la proportion sont spécifiées dans le même ordre que les matières premières dans MaterialIndices.</summary>
+      <returns>Liste de mélanges qui définissent des matériaux composites.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup.MaterialGroupId">
+      <summary>Obtient l'identificateur (ID) du groupe de matières premières qui définit les matériaux utilisés dans le groupe de matériaux composites.</summary>
+      <returns>ID du groupe de matières premières qui définit les matériaux utilisés dans le groupe de matériaux composites.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup.MaterialIndices">
+      <summary>Obtient une liste classée de matières premières utilisées pour produire des matériaux composites dans le groupe. L'ordre des matières premières est conservé dans les valeurs de mélange définies par les composites.</summary>
+      <returns>Valeurs d'index des matières premières du groupe de matières premières spécifié par MaterialGroupId.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DFaceReductionOptions">
+      <summary>Fournit des informations supplémentaires pour la méthode TryReduceFacesAsync dans la classe Printing3DModel</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DFaceReductionOptions.#ctor">
+      <summary>Crée une instance de la classe Printing3DFaceReductionOptions.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DFaceReductionOptions.MaxEdgeLength">
+      <summary>Définit la longueur maximale d'un bord pour lequel des triangles qui partagent ce bord peuvent être fusionnés via la méthode TryReduceFacesAsync. Si la valeur est zéro, une valeur par défaut intégrée est utilisé.</summary>
+      <returns>Longueur maximale d'un bord pour lequel des triangles qui partagent ce bord peuvent être fusionnés.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DFaceReductionOptions.MaxReductionArea">
+      <summary>Définit la zone d'un triangle au-dessus de laquelle le dit triangle ne peut pas être fusionné via la méthode TryReduceFacesAsync. Si la valeur est zéro, une valeur par défaut intégrée est utilisé.</summary>
+      <returns>Zone maximale dans laquelle un triangle peut être fusionné.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DFaceReductionOptions.TargetTriangleCount">
+      <summary>Définit le nombre souhaité de triangles sur un maillage. La méthode TryReduceFacesAsync cessera de fusionner les polices si le nombre de triangles est inférieur ou égal à ce nombre. Si la valeur est zéro, l'algorithme s'exécute jusqu'à ce que le nombre de triangles soit réduit de moitié.</summary>
+      <returns>Nombre souhaité de triangles sur un maillage.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DMaterial">
+      <summary>Représente toutes les ressources matérielles dans le modèle 3D.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMaterial.#ctor">
+      <summary>Crée une instance de la classe Printing3DMaterial.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMaterial.BaseGroups">
+      <summary>Obtient tous les groupes de matières premières utilisées dans le modèle 3D.</summary>
+      <returns>Tous les groupes de matières premières utilisées dans le modèle 3D, de type Printing3DBaseMaterialGroup.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMaterial.ColorGroups">
+      <summary>Obtient tous les groupes de matériaux de couleur utilisés dans le modèle 3D.</summary>
+      <returns>Tous les groupes de matériaux de couleur utilisés dans le modèle 3D, de type Printing3DColorMaterialGroup.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMaterial.CompositeGroups">
+      <summary>Obtient tous les groupes de matériaux composites utilisés dans le modèle 3D.</summary>
+      <returns>Tous les groupes de matériaux composites utilisés dans le modèle 3D, de type Printing3DCompositeMaterialGroup.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMaterial.MultiplePropertyGroups">
+      <summary>Obtient tous les groupes de propriétés multiples utilisés dans le modèle 3D.</summary>
+      <returns>Tous les groupes de propriétés multiples utilisés dans le modèle 3D, de type Printing3DMultiplePropertyMaterialGroup.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMaterial.Texture2CoordGroups">
+      <summary>Obtient tous les groupes de matériaux de texture 2D utilisés dans le modèle 3D.</summary>
+      <returns>Tous les groupes de matériaux de texture 2D utilisés dans le modèle 3D, de type Printing3DTexture2CoordMaterialGroup.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DMesh">
+      <summary>Représente un maillage dans le modèle 3D.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.#ctor">
+      <summary>Crée une instance de la classe Printing3DMesh.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.BufferDescriptionSet">
+      <summary>Obtient un jeu de descriptions de mémoire tampon de maillage.</summary>
+      <returns>Un jeu de descriptions de mémoire tampon de maillage.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.BufferSet">
+      <summary>Obtient un jeu de mémoires tampons de maillage.</summary>
+      <returns>Un jeu de mémoires tampons de maillage.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.IndexCount">
+      <summary>Obtient ou définit le nombre d'index de triangle.</summary>
+      <returns>Le nombre d'index de triangle.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.TriangleIndicesDescription">
+      <summary>Obtient ou établit la description de mémoire tampon pour les index de triangle.</summary>
+      <returns>La description de mémoire tampon pour les index de triangle.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.TriangleMaterialIndicesDescription">
+      <summary>Obtient ou établit la description de mémoire tampon pour les index de matériau de triangle.</summary>
+      <returns>La description de mémoire tampon pour les index de matériau de triangle.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.VertexCount">
+      <summary>Obtient ou définit le nombre de sommets de triangle.</summary>
+      <returns>Le nombre de sommets de triangle.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.VertexNormalsDescription">
+      <summary>Obtient ou établit la description de mémoire tampon pour les normales de vertex.</summary>
+      <returns>La description de mémoire tampon pour les normales de vertex.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.VertexPositionsDescription">
+      <summary>Obtient ou établit la description de mémoire tampon pour les positions de vertex.</summary>
+      <returns>La description de mémoire tampon pour les positions de vertex.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.CreateTriangleIndices(System.UInt32)">
+      <summary>Crée la mémoire tampon pour les index de triangle.</summary>
+      <param name="value">La capacité de la mémoire tampon, le nombre maximal d'octets que l'IBuffer peut contenir.</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.CreateTriangleMaterialIndices(System.UInt32)">
+      <summary>Crée la mémoire tampon pour les index de matériau de triangle.</summary>
+      <param name="value">La capacité de la mémoire tampon, le nombre maximal d'octets que l'IBuffer peut contenir.</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.CreateVertexNormals(System.UInt32)">
+      <summary>Crée la description de mémoire tampon pour les normales de vertex.</summary>
+      <param name="value">La capacité de la mémoire tampon, le nombre maximal d'octets que l'IBuffer peut contenir.</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.CreateVertexPositions(System.UInt32)">
+      <summary>Crée la description de mémoire tampon pour les positions de vertex.</summary>
+      <param name="value">La capacité de la mémoire tampon, le nombre maximal d'octets que l'IBuffer peut contenir.</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.GetTriangleIndices">
+      <summary>Obtient la mémoire tampon pour les index de triangle.</summary>
+      <returns>La mémoire tampon pour les index de triangle.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.GetTriangleMaterialIndices">
+      <summary>Obtient la mémoire tampon pour les index de matériau de triangle.</summary>
+      <returns>La mémoire tampon pour les index de matériau de triangle.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.GetVertexNormals">
+      <summary>Obtient la mémoire tampon pour les normales de vertex.</summary>
+      <returns>La mémoire tampon pour les normales de vertex.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.GetVertexPositions">
+      <summary>Obtient la mémoire tampon pour les positions de vertex.</summary>
+      <returns>Mémoire tampon pour les positions de vertex.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.VerifyAsync(Windows.Graphics.Printing3D.Printing3DMeshVerificationMode)">
+      <summary>Vérifie que les arêtes du maillage sont manifold et que les triangles sont normaux.</summary>
+      <returns>Les résultats de la vérification du type Printing3DMeshVerificationResult.</returns>
+      <param name="value">Spécifie le processus de vérification du maillage.</param>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DMeshVerificationMode">
+      <summary>Spécifie le processus de vérification du maillage.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DMeshVerificationMode.FindAllErrors">
+      <summary>Attend la fin de la vérification avant de renvoyer les résultats.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DMeshVerificationMode.FindFirstError">
+      <summary>Retourne les résultats à la découverte de la première erreur.</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DMeshVerificationResult">
+      <summary>Fournit des données pour la méthode VerifyAsync.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMeshVerificationResult.IsValid">
+      <summary>Obtient une valeur qui indique si le maillage est valide.</summary>
+      <returns>true si le maillage est valide ; sinon, false.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMeshVerificationResult.NonmanifoldTriangles">
+      <summary>Obtient les triangles avec des arêtes non manifold, le cas échéant.</summary>
+      <returns>Les triangles avec des arêtes non manifold.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMeshVerificationResult.ReversedNormalTriangles">
+      <summary>Obtient les triangles normaux inversés, le cas échéant.</summary>
+      <returns>Les triangles normaux inversés.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DModel">
+      <summary>Représente le modèle 3D dans un package 3MF (3D Manufacturing Format).</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.#ctor">
+      <summary>Crée une instance de la classe Printing3DModel.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Build">
+      <summary>Obtient ou définit le composant 3MF (3D Manufacturing Format) racine. Il représente le plateau de construction d'une imprimante 3D et détermine ce qui sera imprimé.</summary>
+      <returns>Le composant 3MF racine.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Components">
+      <summary>Obtient tous les composants 3MF (3D Manufacturing Format) utilisés dans le modèle 3D.</summary>
+      <returns>Tous les composants 3MF utilisés dans le modèle 3D de type Printing3DComponent.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Material">
+      <summary>Obtient ou définit le conteneur matériel racine pour le modèle 3D.</summary>
+      <returns>Le conteneur matériel racine du modèle 3D.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Meshes">
+      <summary>Obtient tous les maillages utilisés dans le modèle 3D.</summary>
+      <returns>Tous les maillages utilisés dans le modèle 3D, de type Printing3DMesh.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Metadata">
+      <summary>Obtient les métadonnées du package 3MF (3D Manufacturing Format).</summary>
+      <returns>Les métadonnées du package 3MF.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.RequiredExtensions">
+      <summary>Obtient une liste des extensions requises par le package 3MF (3D Manufacturing Format).</summary>
+      <returns>Les extensions requises par le package 3MF.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Textures">
+      <summary>Obtient toutes les textures utilisées dans le modèle 3D.</summary>
+      <returns>Toutes les textures utilisés dans le modèle 3D, de type Printing3DModelTexture.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Unit">
+      <summary>Obtient ou définit les unités de mesure utilisées dans le modèle 3D.</summary>
+      <returns>Unités de mesure utilisées dans le modèle 3D.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Version">
+      <summary>Obtient ou définit la version du package 3MF (3D Manufacturing Format).</summary>
+      <returns>La version du package 3MF.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.Clone">
+      <summary>Obtient une copie du modèle 3D actuel.</summary>
+      <returns>Une copie du modèle 3D actuel.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.RepairAsync">
+      <summary>Répare le modèle 3D.</summary>
+      <returns>Résultats de l'opération.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.RepairWithProgressAsync">
+      <summary>Répare le modèle 3D, avec la possibilité de signaler le déroulement de l'exécution.</summary>
+      <returns>Valeur booléenne indiquant si l'opération asynchrone a réussi, et une valeur Double signalant la progression comme un nombre décimal entre zéro et un.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.TryPartialRepairAsync">
+      <summary>Exécute l'algorithme de réparation du modèle 3D jusqu'à la fin ou jusqu'à ce qu'une exception soit levée.</summary>
+      <returns>true si l'opération asynchrone a réussi ; sinon, false.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.TryPartialRepairAsync(Windows.Foundation.TimeSpan)">
+      <summary>Démarre l'algorithme de réparation du modèle 3D, mais quitte si la limite de temps est atteinte.</summary>
+      <returns>true si l'opération asynchrone a réussi ; sinon, false.</returns>
+      <param name="maxWaitTime">Définit la durée (en secondes) d'exécution de l'algorithme. Une valeur de 0 exécute l'algorithme jusqu'à ce qu'une autre condition de fin soit remplie.</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.TryReduceFacesAsync">
+      <summary>Exécute un algorithme qui réduit le nombre de faces de triangle dans l'ensemble des maillages dans Printing3DModel en fusionnant des sommets voisins. S'arrête lorsque le nombre total de triangles est réduit de moitié.</summary>
+      <returns>Valeur booléenne indiquant si l'opération asynchrone a réussi, et une valeur Double signalant la progression comme un nombre décimal entre zéro et un.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.TryReduceFacesAsync(Windows.Graphics.Printing3D.Printing3DFaceReductionOptions)">
+      <summary>Exécute un algorithme qui réduit le nombre de faces de triangle dans l'ensemble des maillages dans Printing3DModel en fusionnant des sommets voisins. S'arrête en fonction des options spécifiées.</summary>
+      <returns>Valeur booléenne indiquant si l'opération asynchrone a réussi, et une valeur Double signalant la progression comme un nombre décimal entre zéro et un.</returns>
+      <param name="printing3DFaceReductionOptions">Définit les conditions qui déclencheront la fin de l'exécution.</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.TryReduceFacesAsync(Windows.Graphics.Printing3D.Printing3DFaceReductionOptions,Windows.Foundation.TimeSpan)">
+      <summary>Exécute un algorithme qui réduit le nombre de faces de triangle dans l'ensemble des maillages dans Printing3DModel en fusionnant des sommets voisins. S'arrête en fonction des options spécifiées ou lorsque le temps maxWait est atteint.</summary>
+      <returns>Valeur booléenne indiquant si l'opération asynchrone a réussi, et une valeur Double signalant la progression comme un nombre décimal entre zéro et un.</returns>
+      <param name="printing3DFaceReductionOptions">Définit les conditions qui déclencheront la fin de l'exécution.</param>
+      <param name="maxWait">Définit la durée (en secondes) d'exécution de l'algorithme. Une valeur de 0 exécute l'algorithme jusqu'à ce qu'une autre condition de fin soit remplie.</param>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DModelTexture">
+      <summary>Représente une texture utilisée dans le modèle 3D.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModelTexture.#ctor">
+      <summary>Crée une instance de la classe Printing3DModelTexture.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModelTexture.TextureResource">
+      <summary>Obtient ou définit la ressource de texture utilisée par la texture.</summary>
+      <returns>La ressource de texture utilisée par la texture.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModelTexture.TileStyleU">
+      <summary>Obtient ou définit une valeur qui indique le processus de disposition en mosaïque dans l'axe U afin de remplir l'ensemble de la zone requise.</summary>
+      <returns>Une valeur qui indique le processus de disposition en mosaïque dans l'axe U afin de remplir l'ensemble de la zone requise.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModelTexture.TileStyleV">
+      <summary>Obtient ou définit une valeur qui indique le processus de disposition en mosaïque dans l'axe V afin de remplir l'ensemble de la zone requise.</summary>
+      <returns>Une valeur qui indique le processus de disposition en mosaïque dans l'axe V afin de remplir l'ensemble de la zone requise.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DModelUnit">
+      <summary>Spécifie les unités de mesure utilisées dans le modèle 3D.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DModelUnit.Centimeter">
+      <summary>Les unités du modèle 3D sont indiquées en centimètres.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DModelUnit.Foot">
+      <summary>Les unités du modèle 3D sont indiquées en pieds.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DModelUnit.Inch">
+      <summary>Les unités du modèle 3D sont indiquées en pouces.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DModelUnit.Meter">
+      <summary>Les unités du modèle 3D sont indiquées en mètres.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DModelUnit.Micron">
+      <summary>Les unités du modèle 3D sont indiquées en microns.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DModelUnit.Millimeter">
+      <summary>Les unités du modèle 3D sont indiquées en millimètres.</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial">
+      <summary>Représente une combinaison de propriétés et/ou matériaux des groupes de matières spécifiés dans (MaterialGroupIndices).</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial.#ctor">
+      <summary>Crée une instance de la classe Printing3DMultiplePropertyMaterial.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial.MaterialIndices">
+      <summary>Obtient les index des propriétés et/ou matériaux combinés dans le matériau avec propriétés multiples. Chaque combinaison est définie en répertoriant l'index d'un élément d'un groupe de matériaux avec l'index d'un élément d'un groupe de matériaux secondaire. Les valeurs d'index sont spécifiées dans le même ordre que les groupes de matériaux répertoriés dans MaterialGroupIndices.</summary>
+      <returns>Les index des propriétés ou des matériaux sont combinés dans la propriété multiple.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup">
+      <summary>Représente un groupe de matériaux avec propriétés multiples.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup.#ctor(System.UInt32)">
+      <summary>Crée une instance de la classe Printing3DMultiplePropertyMaterialGroup.</summary>
+      <param name="MaterialGroupId">L'identificateur (ID) du groupe de matériaux avec propriétés multiples ; une valeur supérieure à zéro.</param>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup.MaterialGroupId">
+      <summary>Obtient l'identificateur (ID) du groupe de matériaux avec propriétés multiples.</summary>
+      <returns>L'ID du groupe de matériaux avec propriétés multiples.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup.MaterialGroupIndices">
+      <summary>Obtient une liste classée de groupes de matériaux (valeurs MaterialGroupId) qui sont utilisés pour définir des combinaisons de propriété-matériau dans le groupe de propriétés multiples. L'ordre des groupes de matériaux est conservé dans les combinaisons définies par MultipleProperties.</summary>
+      <returns>Les index des propriétés ou des matières dans le groupe.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup.MultipleProperties">
+      <summary>Obtient une liste de combinaisons de propriété-matériau. Chaque combinaison est définie en répertoriant l'index d'un élément d'un groupe de matériaux avec l'index d'un élément d'un groupe de matériaux secondaire. Les valeurs d'index sont spécifiées dans le même ordre que les groupes de matériaux répertoriés dans MaterialGroupIndices.</summary>
+      <returns>Liste de combinaisons de propriété-matériau.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DObjectType">
+      <summary>Spécifie la fonction de l'objet dans le modèle 3D.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DObjectType.Model">
+      <summary>Fonctionne en tant que composant principal du modèle 3D.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DObjectType.Others">
+      <summary>Fonctionne dans une autre capacité.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DObjectType.Support">
+      <summary>Fonctionne comme un objet de prise en charge.</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial">
+      <summary>Représente un matériau de texture 2D utilisé dans le modèle 3D.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial.#ctor">
+      <summary>Crée une instance de la classe Printing3DTexture2CoordMaterial.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial.Texture">
+      <summary>Obtient ou définit la texture utilisée dans le matériau de texture 2D.</summary>
+      <returns>La texture utilisée dans le matériau de texture 2D.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial.U">
+      <summary>Obtient ou définit la coordonnée U au sein de la texture, horizontalement vers la droite à partir de l'origine, dans la partie supérieure gauche de la texture.</summary>
+      <returns>La coordonnée U au sein de la texture.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial.V">
+      <summary>Obtient ou définit la coordonnée V au sein de la texture, verticalement vers le bas à partir de l'origine, dans la partie supérieure gauche de la texture.</summary>
+      <returns>La coordonnée V au sein de la texture.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup">
+      <summary>Représente un groupe de matériaux de texture 2D utilisés dans le modèle 3D.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup.#ctor(System.UInt32)">
+      <summary>Crée une instance de la classe Printing3DTexture2CoordMaterialGroup.</summary>
+      <param name="MaterialGroupId">L'identificateur pour un groupe de matériaux de texture 2D utilisés dans le modèle 3D ; une valeur supérieure à zéro.</param>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup.MaterialGroupId">
+      <summary>Obtient l'identificateur (ID) du groupe de matériaux de texture 2D.</summary>
+      <returns>L'ID du 2D groupe de matériaux de texture 2D.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup.Texture">
+      <summary>Obtient ou définit la texture du groupe de matériaux.</summary>
+      <returns>Texture du groupe de matériaux.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup.Texture2Coords">
+      <summary>Obtient un groupe de matériaux de texture 2D utilisés dans le modèle 3D.</summary>
+      <returns>Un groupe de matériaux de texture 2D utilisé dans le modèle 3D, de type Printing3DTexture2CoordMaterial.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior">
+      <summary>Définit le processus de disposition en mosaïque dans les axes U et V afin de remplir l'ensemble de la zone requise d'une texture.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior.Clamp">
+      <summary>Fixe les coordonnées de texture dans la plage [0.0, 1.0]. Autrement dit, applique la texture une fois, puis estompe la couleur des pixels de bord. Par exemple, supposons que votre application crée une primitive carré et assigne des coordonnées de texture de (0.0, 0.0), (0.0, 3.0), (3.0, 3.0), et (3.0, 0.0) à des vertex de la primitive. En définissant le comportement de bord de texture sur Clamp la texture est appliquée une fois. Les couleurs des pixels en haut des colonnes et la fin des lignes sont étendues vers le haut et la droite de la primitive respectivement, comme indiqué ici.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior.Mirror">
+      <summary>Les mosaïques appliquent la texture en miroir à chaque limite entière. Par exemple, avec les coordonnées de texture (0,0 ; 0,0), (0,0 ; 3,0), (3,0 ; 3,0) et (3,0 ; 0,0). Si le comportement de bord de texture Wrap est sélectionné, la texture est appliquée trois fois dans les directions U et V. Toutes les autres lignes et colonnes appliquées sont une image en miroir de la ligne ou de la colonne précédente, comme illustré.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior.None">
+      <summary>Aucune mosaïque ne sera disposée.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior.Wrap">
+      <summary>Les mosaïques répètent la ressource de texture à chaque jonction entière. Par exemple, avec les coordonnées de texture (0,0 ; 0,0), (0,0 ; 3,0), (3,0 ; 3,0), et (3,0 ; 0,0), si le comportement de bord de texture Wrap est sélectionné, la texture est appliquée trois fois dans les directions U et V, tel qu'illustré.</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DTextureResource">
+      <summary>Spécifie la ressource de texture utilisée dans un matériau de texture 2D.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DTextureResource.#ctor">
+      <summary>Crée une instance de la classe Printing3DTextureResource.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTextureResource.Name">
+      <summary>Obtient ou définit le nom de la ressource de texture.</summary>
+      <returns>Le nom de la ressource de texture.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTextureResource.TextureData">
+      <summary>Obtient ou définit le flux d'image de la ressource de texture.</summary>
+      <returns>Le flux d'image de la ressource de texture.</returns>
+    </member></members>
+</doc>

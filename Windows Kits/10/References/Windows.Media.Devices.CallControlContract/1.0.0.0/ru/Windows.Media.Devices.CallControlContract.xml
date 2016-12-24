@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.Devices.CallControlContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Media.Devices.CallControl">
+      <summary>Представляет свойства, команды и события для обработки вызовов на телефоне или другом устройстве.</summary>
+    </member><member name="P:Windows.Media.Devices.CallControl.HasRinger">
+      <summary>Указывает, имеет ли устройство телефонной связи встроенный сигнал вызова.</summary>
+      <returns>Значение типа Boolean, равное true, если устройство телефонной связи оснащено звонковым устройством, и равное false, если не оснащено.</returns>
+    </member><member name="E:Windows.Media.Devices.CallControl.AnswerRequested">
+      <summary>Происходит при получении устройством запроса ответа на вызов.</summary>
+    </member><member name="E:Windows.Media.Devices.CallControl.AudioTransferRequested">
+      <summary>Происходит, когда устройство получает запрос на передачу звука.</summary>
+    </member><member name="E:Windows.Media.Devices.CallControl.DialRequested">
+      <summary>Происходит при наборе номера с устройства.</summary>
+    </member><member name="E:Windows.Media.Devices.CallControl.HangUpRequested">
+      <summary>Происходит при получении устройством запроса на разъединение вызова.</summary>
+    </member><member name="E:Windows.Media.Devices.CallControl.KeypadPressed">
+      <summary>Происходит при нажатии клавиши на цифровой клавиатуре устройства.</summary>
+    </member><member name="E:Windows.Media.Devices.CallControl.RedialRequested">
+      <summary>Происходит при получении устройством запроса повторного набора.</summary>
+    </member><member name="M:Windows.Media.Devices.CallControl.EndCall(System.UInt64)">
+      <summary>Завершает заданный вызов.</summary>
+      <param name="callToken">Уникальный идентификатор заданной ячейки.</param>
+    </member><member name="M:Windows.Media.Devices.CallControl.FromId(System.String)">
+      <summary>Возвращает класс CallControl, представляющий устройства аудиосвязи, указанные передаваемым идентификатором DeviceInformation.</summary>
+      <returns>Класс, представляющий указанное устройство звуковой связи.</returns>
+      <param name="deviceId">Идентификатор DeviceInformation указанного устройства звукового взаимодействия.</param>
+    </member><member name="M:Windows.Media.Devices.CallControl.GetDefault">
+      <summary>Возвращает класс CallControl, представляющий устройство звуковой связи по умолчанию.</summary>
+      <returns>Класс, представляющий устройство звуковой связи по умолчанию.</returns>
+    </member><member name="M:Windows.Media.Devices.CallControl.IndicateActiveCall(System.UInt64)">
+      <summary>Указывает, что заданный вызов сейчас активен.</summary>
+      <param name="callToken">Уникальный идентификатор заданной ячейки.</param>
+    </member><member name="M:Windows.Media.Devices.CallControl.IndicateNewIncomingCall(System.Boolean,System.String)">
+      <summary>Информирует устройство о наличии входящего вызова.</summary>
+      <returns>Токен вызова, который однозначно идентифицирует этот вызов.</returns>
+      <param name="enableRinger">Указывает, должно ли устройство активировать встроенный звонок.</param>
+      <param name="callerId">Числовая строка, определяющая идентификатор вызывающей стороны. Этот параметр может иметь значение NULL, и для многих VoIP-вызовов он зачастую имеет именно значение NULL.</param>
+    </member><member name="M:Windows.Media.Devices.CallControl.IndicateNewOutgoingCall">
+      <summary>Обновляет индикаторы устройства, чтобы показать исходящий вызов.</summary>
+      <returns>Токен вызова, который однозначно идентифицирует этот вызов.</returns>
+    </member><member name="T:Windows.Media.Devices.CallControlEventHandler">
+      <summary>Обрабатывает события AnswerRequested и AudioTransferRequested.</summary>
+      <param name="sender">Объект CallControl, вызвавший событие.</param>
+    </member><member name="T:Windows.Media.Devices.DialRequestedEventArgs">
+      <summary>Содержит сведения для события DialRequested.</summary>
+    </member><member name="P:Windows.Media.Devices.DialRequestedEventArgs.Contact">
+      <summary>Возвращает набранный контакт.</summary>
+      <returns>Контакт.</returns>
+    </member><member name="M:Windows.Media.Devices.DialRequestedEventArgs.Handled">
+      <summary>Указывает, что событие DialRequested обработано.</summary>
+    </member><member name="T:Windows.Media.Devices.DialRequestedEventHandler">
+      <summary>Обрабатывает событие DialRequested.</summary>
+      <param name="sender">Объект CallControl, вызвавший событие.</param>
+      <param name="e">Класс, содержащий сведения для события.</param>
+    </member><member name="T:Windows.Media.Devices.KeypadPressedEventArgs">
+      <summary>Содержит сведения для события KeypadPressed.</summary>
+    </member><member name="P:Windows.Media.Devices.KeypadPressedEventArgs.TelephonyKey">
+      <summary>Возвращает значение нажатой кнопки клавиатуры на устройстве.</summary>
+      <returns>Ключ. Одно из значений перечисления TelephonyKey.</returns>
+    </member><member name="T:Windows.Media.Devices.KeypadPressedEventHandler">
+      <summary>Обрабатывает событие KeypadPressed.</summary>
+      <param name="sender">Объект CallControl, вызвавший событие.</param>
+      <param name="e">Класс, содержащий сведения для события.</param>
+    </member><member name="T:Windows.Media.Devices.RedialRequestedEventArgs">
+      <summary>Содержит сведения для события RedialRequested.</summary>
+    </member><member name="M:Windows.Media.Devices.RedialRequestedEventArgs.Handled">
+      <summary>Указывает, что событие RedialRequested обработано.</summary>
+    </member><member name="T:Windows.Media.Devices.RedialRequestedEventHandler">
+      <summary>Обрабатывает событие RedialRequested.</summary>
+      <param name="sender">Объект CallControl, вызвавший событие.</param>
+      <param name="e">Класс, содержащий сведения для события.</param>
+    </member><member name="T:Windows.Media.Devices.TelephonyKey">
+      <summary>Указывает клавишу цифровой клавиатуры, которая была нажата на устройстве телефонной связи.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.A">
+      <summary>Клавиша A на цифровой клавиатуре.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.B">
+      <summary>Клавиша B на цифровой клавиатуре.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.C">
+      <summary>Клавиша C на цифровой клавиатуре.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D">
+      <summary>Клавиша D на цифровой клавиатуре.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D0">
+      <summary>Клавиша 0 на цифровой клавиатуре.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D1">
+      <summary>Клавиша 1 на цифровой клавиатуре.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D2">
+      <summary>Клавиша 2 на цифровой клавиатуре.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D3">
+      <summary>Клавиша 3 на цифровой клавиатуре.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D4">
+      <summary>Клавиша 4 на цифровой клавиатуре.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D5">
+      <summary>Клавиша 5 на цифровой клавиатуре.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D6">
+      <summary>Клавиша 6 на цифровой клавиатуре.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D7">
+      <summary>Клавиша 7 на цифровой клавиатуре.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D8">
+      <summary>Клавиша 8 на цифровой клавиатуре.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D9">
+      <summary>Клавиша 9 на цифровой клавиатуре.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.Pound">
+      <summary>Клавиша # на цифровой клавиатуре.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.Star">
+      <summary>Клавиша * на цифровой клавиатуре.</summary>
+    </member></members>
+</doc>

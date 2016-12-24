@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.Playlists.PlaylistsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Media.Playlists.Playlist">
+      <summary>Proporciona acceso a una lista de reproducción multimedia.</summary>
+    </member><member name="M:Windows.Media.Playlists.Playlist.#ctor">
+      <summary>Crea una nueva instancia de objeto Playlist.</summary>
+    </member><member name="P:Windows.Media.Playlists.Playlist.Files">
+      <summary>El conjunto de archivos multimedia que constituyen la lista de reproducción.</summary>
+      <returns>La lista de archivos multimedia que constituyen la lista de reproducción.</returns>
+    </member><member name="M:Windows.Media.Playlists.Playlist.LoadAsync(Windows.Storage.IStorageFile)">
+      <summary>Carga archivos en una lista de reproducción de forma asincrónica.</summary>
+      <returns>Representa la operación asincrónica para cargar la lista de reproducción. El método GetResults de este objeto IAsyncOperation devuelve la lista de reproducción.</returns>
+      <param name="file">Representa los archivos que hay que cargar.</param>
+    </member><member name="M:Windows.Media.Playlists.Playlist.SaveAsAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption)">
+      <summary>Guarda de forma asincrónica la lista de reproducción en un archivo y carpeta especificados.</summary>
+      <returns>Representa la operación asincrónica para guardar la lista de reproducción en un archivo y una carpeta especificados.</returns>
+      <param name="saveLocation">La carpeta donde se va a guardar la lista de reproducción.</param>
+      <param name="desiredName">Nombre de la lista de reproducción que se va a guardar.</param>
+      <param name="option">La acción que se debe realizar si la lista de reproducción se guarda en un archivo existente. Uno de los valores de la enumeración NameCollisionOption.</param>
+    </member><member name="M:Windows.Media.Playlists.Playlist.SaveAsAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption,Windows.Media.Playlists.PlaylistFormat)">
+      <summary>Guarda de forma asincrónica la lista de reproducción en un archivo y carpeta especificados, en el formato indicado.</summary>
+      <returns>Representa la operación asincrónica para guardar la lista de reproducción en un archivo y una carpeta especificados.</returns>
+      <param name="saveLocation">La carpeta donde se va a guardar la lista de reproducción.</param>
+      <param name="desiredName">Nombre de la lista de reproducción que se va a guardar.</param>
+      <param name="option">La acción que se debe realizar si la lista de reproducción se guarda en un archivo existente. Uno de los valores de la enumeración NameCollisionOption.</param>
+      <param name="playlistFormat">El formato de la lista de reproducción. Uno de los valores de la enumeración PlaylistFormat.</param>
+    </member><member name="M:Windows.Media.Playlists.Playlist.SaveAsync">
+      <summary>Guarda de forma asincrónica la lista de reproducción.</summary>
+      <returns>Representa la acción asincrónica para guardar la lista de reproducción.</returns>
+    </member><member name="T:Windows.Media.Playlists.PlaylistFormat">
+      <summary>Indica el formato de un archivo de lista de reproducción.</summary>
+    </member><member name="F:Windows.Media.Playlists.PlaylistFormat.M3u">
+      <summary>Lista de reproducción de M3U.</summary>
+    </member><member name="F:Windows.Media.Playlists.PlaylistFormat.WindowsMedia">
+      <summary>Lista de reproducción de Windows Media.</summary>
+    </member><member name="F:Windows.Media.Playlists.PlaylistFormat.Zune">
+      <summary>Lista de reproducción de Zune.</summary>
+    </member></members>
+</doc>

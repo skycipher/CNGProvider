@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.Profile.ProfileHardwareTokenContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.System.Profile.HardwareIdentification">
+      <summary>Permet d'obtenir un numéro d'identification du matériel qui représente le matériel actuel.</summary>
+    </member><member name="M:Windows.System.Profile.HardwareIdentification.GetPackageSpecificToken(Windows.Storage.Streams.IBuffer)">
+      <summary>Obtient un numéro d'identification du matériel (ASHWID) qui représente le matériel actuel.</summary>
+      <returns>Informations d'ID matériel.</returns>
+      <param name="nonce">La valeur à usage unique cryptographique est facultative. La valeur à usage unique est recommandée lorsque ASHWID doit être vérifié dans le cloud pour détecter les attaques par relecture. Dans les scénarios où une valeur à usage unique est souhaitée, le serveur distant doit générer une valeur à usage unique aléatoire et la passer à l'application cliente. Il vérifie ensuite que la signature comporte la valeur à usage unique attendue une fois que l'ASHWID est reçu du système client.</param>
+    </member><member name="T:Windows.System.Profile.HardwareToken">
+      <summary>Représente un jeton qui contient un ID matériel suffisamment spécifique.</summary>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Certificate">
+      <summary>Obtient le certificat utilisé pour signer l'Id et est utilisé pour vérifier l'authenticité de l'Id.</summary>
+      <returns>Certificat utilisé pour signer la propriété de l'Id.</returns>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Id">
+      <summary>Obtient le numéro d'identification du matériel qui identifie le périphérique.</summary>
+      <returns>ID qui identifie le périphérique. Cette mémoire tampon d'octets contient un ensemble d'identificateurs qui représentent les différents composants matériels trouvés dans le périphérique.</returns>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Signature">
+      <summary>Obtient la signature numérique du matériel de l'Id qui permet de vérifier l'authenticité de l'Id retourné.</summary>
+      <returns>Signature numérique de l'Id.</returns>
+    </member></members>
+</doc>

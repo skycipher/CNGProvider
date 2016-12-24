@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Networking.Sockets.ControlChannelTriggerContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Networking.Sockets.ControlChannelTrigger">
+      <summary>Habilita las notificaciones en tiempo real que se recibirán en segundo plano para objetos que establecen una conexión TCP y deseen notificación de tráfico entrante. Esta clase no se admite en Windows Phone.</summary>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.#ctor(System.String,System.UInt32)">
+      <summary>Crea un nuevo objeto ControlChannelTrigger con un identificador de desencadenador de canal de control y un valor para el intervalo de mantenimiento del servidor. La clase de ControlChannelTrigger no se admite en Windows Phone.</summary>
+      <param name="channelId">Una cadena usada para distinguir los distintos desencadenadores de canal de control del equipo local. La longitud máxima permitida para esta cadena es de 64 caracteres.</param>
+      <param name="serverKeepAliveIntervalInMinutes">El intervalo keep-alive, en minutos, registrado en el sistema para indicar cuándo se deben reactivar la aplicación y las conexiones de red. El valor mínimo que puede establecerse para este parámetro es 15 minutos. El valor máximo que se puede establecer es 1439 minutos (aproximadamente 24 horas).</param>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.#ctor(System.String,System.UInt32,Windows.Networking.Sockets.ControlChannelTriggerResourceType)">
+      <summary>Crea un nuevo objeto ControlChannelTrigger con un identificador de desencadenador de canal de control, un valor para el intervalo de mantenimiento del servidor y el tipo de recurso solicitado por el desencadenador de canal de control. La clase de ControlChannelTrigger no se admite en Windows Phone.</summary>
+      <param name="channelId">Una cadena usada para distinguir los distintos desencadenadores de canal de control del equipo local. La longitud máxima permitida para esta cadena es de 64 caracteres.</param>
+      <param name="serverKeepAliveIntervalInMinutes">El intervalo keep-alive, en minutos, registrado en el sistema para indicar cuándo se deben reactivar la aplicación y las conexiones de red. El valor mínimo que puede establecerse para este parámetro es 15 minutos. El valor máximo que se puede establecer es 1439 minutos (aproximadamente 24 horas).</param>
+      <param name="resourceRequestType">El tipo de recurso solicitado para el desencadenador de canal de control.</param>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.ControlChannelTriggerId">
+      <summary>Obtiene una cadena que se puede usar para distinguir los distintos desencadenadores de canal de control del equipo local. La clase de ControlChannelTrigger no se admite en Windows Phone.</summary>
+      <returns>Una cadena que se puede usar para diferenciar varios desencadenadores de canal de control.</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.CurrentKeepAliveIntervalInMinutes">
+      <summary>Obtiene el intervalo keep-alive de la red, en minutos, mantenido por los componentes de red de bajo nivel en la pila TCP basándose en las condiciones actuales de la red. La clase de ControlChannelTrigger no se admite en Windows Phone.</summary>
+      <returns>El intervalo keep-alive de la red, en minutos, mantenido por los componentes de red de bajo nivel en la pila TCP basándose en las condiciones actuales de la red.</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.IsWakeFromLowPowerSupported">
+      <summary>Obtiene un valor que indica si se admite la reactivación desde estados de energía baja.</summary>
+      <returns>Si es true, se admite la reactivación desde estados de energía baja.</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.KeepAliveTrigger">
+      <summary>Obtiene un objeto que representa el desencadenador keep-alive asociado al objeto ControlChannelTrigger que una aplicación debe usar para enlazar la clase de activación con la infraestructura del agente en segundo plano. La clase de ControlChannelTrigger no se admite en Windows Phone.</summary>
+      <returns>Una cadena que representa el identificador de clase de activación para la tarea persistente en segundo plano.</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.PushNotificationTrigger">
+      <summary>Obtiene un objeto que representa el desencadenador de notificación de inserción asociado al objeto ControlChannelTrigger que una aplicación debe usar para enlazar la clase de activación con la infraestructura del agente en segundo plano. La clase de ControlChannelTrigger no se admite en Windows Phone.</summary>
+      <returns>Una cadena que representa el identificador de clase de activación para la tarea de notificación de inserción en segundo plano.</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.ServerKeepAliveIntervalInMinutes">
+      <summary>Obtiene o establece el intervalo keep-alive del servidor, en minutos, registrado en el sistema para indicar cuándo se deben reactivar la aplicación y las conexiones de red asociadas. La clase de ControlChannelTrigger no se admite en Windows Phone.</summary>
+      <returns>El intervalo keep-alive del servidor, en minutos, registrado en el sistema para indicar cuándo se deben reactivar la aplicación y las conexiones de red asociadas.</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.TransportObject">
+      <summary>Obtiene el objeto de transporte que usa el sistema para la conexión de transporte asociada al objeto ControlChannelTrigger. La clase de ControlChannelTrigger no se admite en Windows Phone.</summary>
+      <returns>El objeto de transporte que utiliza el sistema para la conexión de transporte</returns>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.Close">
+      <summary>Cierra el objeto ControlChannelTrigger. Este método no se admite en Windows Phone.</summary>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.DecreaseNetworkKeepAliveInterval">
+      <summary>Proporciona a una aplicación una manera de indicar que el intervalo keep-alive de la red mantenido por el sistema con los intermediarios de red que pueden reactivarse es demasiado largo y debe reducirse. Este método se aplica a los elementos de clase en el objeto Windows.Networking.Sockets y en los espacios de nombres relacionados. La clase de ControlChannelTrigger no se admite en Windows Phone.</summary>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.FlushTransport">
+      <summary>Vuelca los datos de redes usados por la conexión de transporte asociada con la clase ControlChannelTrigger a la pila de red. La clase de ControlChannelTrigger no se admite en Windows Phone.</summary>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.UsingTransport(System.Object)">
+      <summary>Establece la conexión de transporte que usará un desencadenador de canal de control por los elementos de la clase en Windows.Networking.Sockets y en los espacios de nombres relacionados. La clase de ControlChannelTrigger no se admite en Windows Phone.</summary>
+      <param name="transport">La instancia de la clase de red que representa el transporte de red.</param>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.WaitForPushEnabled">
+      <summary>Permite que una aplicación notifique al sistema que se ha establecido una conexión y el sistema debe completar la configuración interna del desencadenador de canales de control. La clase de ControlChannelTrigger no se admite en Windows Phone.</summary>
+      <returns>Un valor que indica si el sistema pudo completar la configuración de un objeto ControlChannelTrigger.</returns>
+    </member><member name="T:Windows.Networking.Sockets.ControlChannelTriggerResetReason">
+      <summary>La razón por la que se restableció un ControlChannelTrigger. Esta enumeración no se admite en Windows Phone.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResetReason.ApplicationRestart">
+      <summary>El ControlChannelTrigger se restableció como resultado del reinicio de la aplicación. Este valor se admite en Windows 8.1, Windows Server 2012 R2 y posterior.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResetReason.FastUserSwitched">
+      <summary>ControlChannelTrigger se restableció como resultado de un cambio rápido de usuario.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResetReason.LowPowerExit">
+      <summary>ControlChannelTrigger se restableció como resultado de una salida de bajo consumo (salida de modo de espera conectado).</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResetReason.QuietHoursExit">
+      <summary>El objeto ControlChannelTrigger se restableció debido a que se han configurado horas de silencio en el dispositivo y estas han finalizado. Este valor se admite en Windows 8.1, Windows Server 2012 R2 y posterior.</summary>
+    </member><member name="T:Windows.Networking.Sockets.ControlChannelTriggerResourceType">
+      <summary>El tipo de recurso utilizado por un desencadenador de canal de control. Esta enumeración no se admite en Windows Phone.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResourceType.RequestHardwareSlot">
+      <summary>Solicitar una ranura de hardware del sistema.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResourceType.RequestSoftwareSlot">
+      <summary>Solicitar una ranura de software del sistema.</summary>
+    </member><member name="T:Windows.Networking.Sockets.ControlChannelTriggerStatus">
+      <summary>Especifica si el sistema fue capaz de completar la configuración de un objeto ControlChannelTrigger para su uso por los elementos de la clase en el espacio de nombres Windows.Networking.Sockets y en otros relacionados. Esta enumeración no se admite en Windows Phone.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.HardwareSlotAllocated">
+      <summary>El sistema asignó una ranura de hardware.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.HardwareSlotRequested">
+      <summary>La comprobación de directivas fue correcta y se ha solicitado una ranura de hardware del sistema.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.PolicyError">
+      <summary>Error de directiva cuando el sistema intentó completar la configuración de un objeto ControlChannelTrigger. Este error puede ocurrir cuando una aplicación solicita mas conexiones para ranuras de hardware o de software de las permitidas por la directiva del sistema.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.ServiceUnavailable">
+      <summary>El servicio proporcionado por ControlChannelTrigger no está disponible. Esto puede ocurrir si el servicio de agente de conexión de red no está listo pero la aplicación intenta establecer un canal de ControlChannelTrigger. Este código de estado se proporciona en las condiciones siguientes: cuando hay un cambio rápido de usuario y el nuevo usuario intenta establecer el canal de ControlChannelTrigger. Cuando el sistema entra en modo de bajo consumo (modo en espera conectada) y la aplicación intenta crear una ranura de software. Las ranuras de software solo están disponibles cuando el sistema está activo y no en modo de bajo consumo. La mitigación en estos casos es escuchar los eventos del agente de eventos del sistema y registrar el canal de ControlChannelTrigger en ese punto.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.SoftwareSlotAllocated">
+      <summary>La comprobación de directivas fue correcta y el sistema asignó una ranura de software.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.SystemError">
+      <summary>Error del sistema cuando este intentó completar la configuración de un ControlChannelTrigger para una ranura de hardware.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.TransportDisconnected">
+      <summary>El transporte de red asociado a ControlChannelTrigger se desconectó. La conexión TCP subyacente ya fue desconectada por un reinicio TCP recibido del destino remoto o una desconexión correcta de la aplicación o del destino remoto. La aparición más común es una restauración de TCP o una desconexión correcta enviada por el destino remoto.</summary>
+    </member><member name="T:Windows.Networking.Sockets.IControlChannelTriggerEventDetails">
+      <summary>Objeto cuya instancia se creó mediante la infraestructura del agente en segundo plano que se usa para diferenciar desencadenadores de canal de control. Esta interfaz no se admite en Windows Phone.</summary>
+    </member><member name="P:Windows.Networking.Sockets.IControlChannelTriggerEventDetails.ControlChannelTrigger">
+      <summary>Obtiene el objeto ControlChannelTrigger asociado a un objeto IControlChannelTriggerEventDetails. La interfaz de IControlChannelTriggerEventDetails no se admite en Windows Phone.</summary>
+      <returns>Un objeto ControlChannelTrigger.</returns>
+    </member><member name="T:Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails">
+      <summary>Objeto cuya instancia se creó mediante la infraestructura del agente en segundo plano para que un evento ControlChannelReset indique que ControlChannelTrigger se ha restaurado. Esta interfaz no se admite en Windows Phone.</summary>
+    </member><member name="P:Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails.HardwareSlotReset">
+      <summary>Un valor que indica si un evento de restablecimiento ControlChannelTrigger ha afectado a una ranura de hardware. La interfaz de IControlChannelTriggerResetEventDetails no se admite en Windows Phone.</summary>
+      <returns>Un valor que indica si un evento de restablecimiento ControlChannelTrigger ha afectado a una ranura de hardware.</returns>
+    </member><member name="P:Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails.ResetReason">
+      <summary>Un valor que indica la razón por la que ControlChannelTrigger se ha restaurado. La interfaz de IControlChannelTriggerResetEventDetails no se admite en Windows Phone.</summary>
+      <returns>Un valor que indica la razón por la que ControlChannelTrigger se ha restaurado.</returns>
+    </member><member name="P:Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails.SoftwareSlotReset">
+      <summary>Un valor que indica si un evento de restablecimiento ControlChannelTrigger ha afectado a una ranura de software. La interfaz de IControlChannelTriggerResetEventDetails no se admite en Windows Phone.</summary>
+      <returns>Un valor que indica si un evento de restablecimiento ControlChannelTrigger ha afectado a una ranura de software.</returns>
+    </member></members>
+</doc>

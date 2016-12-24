@@ -1,0 +1,1162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Foundation.FoundationContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Foundation.AsyncActionCompletedHandler">
+      <summary>Представляет метод, который обрабатывает событие завершения асинхронного действия.</summary>
+      <param name="asyncInfo">Асинхронное действие.</param>
+      <param name="asyncStatus">Одно из значений перечисления.</param>
+    </member><member name="T:Windows.Foundation.AsyncActionProgressHandler`1">
+      <summary>Представляет метод, обрабатывающий события обновления хода выполнения асинхронного действия, которое предоставляет обновления хода выполнения.</summary>
+      <typeparam name="TProgress">Сведения о ходе выполнения.</typeparam>
+      <param name="asyncInfo">Асинхронное действие.</param>
+      <param name="progressInfo">Сведения о ходе выполнения.</param>
+    </member><member name="T:Windows.Foundation.AsyncActionWithProgressCompletedHandler`1">
+      <summary>Представляет метод, обрабатывающий событие завершения асинхронного действия, которое предоставляет обновления хода выполнения.</summary>
+      <typeparam name="TProgress">Сведения о ходе выполнения.</typeparam>
+      <param name="asyncInfo">Асинхронное действие.</param>
+      <param name="asyncStatus">Одно из значений перечисления.</param>
+    </member><member name="T:Windows.Foundation.AsyncOperationCompletedHandler`1">
+      <summary>Представляет метод, который обрабатывает завершенное событие асинхронной операции.</summary>
+      <typeparam name="TResult">Результат.</typeparam>
+      <param name="asyncInfo">Асинхронная операция.</param>
+      <param name="asyncStatus">Одно из значений перечисления.</param>
+    </member><member name="T:Windows.Foundation.AsyncOperationProgressHandler`2">
+      <summary>Представляет метод, обрабатывающий события обновления хода выполнения асинхронной операции, которая предоставляет обновления хода выполнения.</summary>
+      <typeparam name="TResult">Результат.</typeparam>
+      <typeparam name="TProgress">Сведения о ходе выполнения.</typeparam>
+      <param name="asyncInfo">Асинхронная операция.</param>
+      <param name="progressInfo">Сведения о ходе выполнения.</param>
+    </member><member name="T:Windows.Foundation.AsyncOperationWithProgressCompletedHandler`2">
+      <summary>Представляет метод, обрабатывающий событие завершения асинхронной операции, которая предоставляет обновления хода выполнения.</summary>
+      <typeparam name="TResult">Результат.</typeparam>
+      <typeparam name="TProgress">Сведения о ходе выполнения.</typeparam>
+      <param name="asyncInfo">Асинхронная операция.</param>
+      <param name="asyncStatus">Одно из значений перечисления.</param>
+    </member><member name="T:Windows.Foundation.AsyncStatus">
+      <summary>Задает состояние асинхронной операции.</summary>
+    </member><member name="F:Windows.Foundation.AsyncStatus.Canceled">
+      <summary>Операция была отменена.</summary>
+    </member><member name="F:Windows.Foundation.AsyncStatus.Completed">
+      <summary>Операция завершена.</summary>
+    </member><member name="F:Windows.Foundation.AsyncStatus.Error">
+      <summary>При выполнении операции возникла ошибка.</summary>
+    </member><member name="F:Windows.Foundation.AsyncStatus.Started">
+      <summary>Операция запущена.</summary>
+    </member><member name="T:Windows.Foundation.DateTime">
+      <summary>Представляет текущее время, обычно выраженное как дата и время суток.</summary>
+    </member><member name="F:Windows.Foundation.DateTime.UniversalTime">
+      <summary>64-разрядное целое число со знаком, представляющее момент времени как число интервалов по 100 нс до или после полуночи 1 января 1601 г. (по григорианскому календарю).</summary>
+    </member><member name="T:Windows.Foundation.Deferral">
+      <summary>Хранит DeferralCompletedHandler, который нужно вызвать по окончании задержки, обрабатывает состояние задержки.</summary>
+    </member><member name="M:Windows.Foundation.Deferral.#ctor(Windows.Foundation.DeferralCompletedHandler)">
+      <summary>Инициализирует новый объект Deferral и задает вызов DeferralCompletedHandler по окончании отсрочки.</summary>
+      <param name="handler">Обработчик DeferralCompletedHandler, который вызывается после завершения отсрочки.</param>
+    </member><member name="M:Windows.Foundation.Deferral.Close">
+      <summary>Если DeferralCompletedHandler еще не вызван, этот объект вызывает указанный обработчик и удаляет ссылку на делегат.</summary>
+    </member><member name="M:Windows.Foundation.Deferral.Complete">
+      <summary>Если DeferralCompletedHandler еще не вызван, этот объект вызывает указанный обработчик и удаляет ссылку на делегат.</summary>
+    </member><member name="T:Windows.Foundation.DeferralCompletedHandler">
+      <summary>Представляет метод, который обрабатывает событие завершения отложенного действия.</summary>
+    </member><member name="T:Windows.Foundation.EventHandler`1">
+      <summary>Представляет метод, который обрабатывает общие события.</summary>
+      <typeparam name="T">Тип данных события, создаваемых событием.</typeparam>
+      <param name="sender">Источник события.</param>
+      <param name="args">Данные события.</param>
+    </member><member name="T:Windows.Foundation.EventRegistrationToken">
+      <summary>Представляет ссылку на делегат, принимающий уведомления об изменениях.</summary>
+    </member><member name="F:Windows.Foundation.EventRegistrationToken.Value">
+      <summary>Ссылка на делегат.</summary>
+    </member><member name="T:Windows.Foundation.HResult">
+      <summary>Представляет ошибку среды выполнения Windows.</summary>
+    </member><member name="F:Windows.Foundation.HResult.Value">
+      <summary>Целое число, которое описывает ошибку.</summary>
+    </member><member name="T:Windows.Foundation.IAsyncAction">
+      <summary>Представляет асинхронное действие. Это возвращаемый тип для многих асинхронных методов среды выполнения Windows, не имеющих объекта результата и не сообщающих о ходе выполнения.</summary>
+    </member><member name="P:Windows.Foundation.IAsyncAction.Completed">
+      <summary>Получает или задает метод, обрабатывающий уведомление о завершении действия.</summary>
+      <returns>Метод, обрабатывающий уведомление.</returns>
+    </member><member name="M:Windows.Foundation.IAsyncAction.GetResults">
+      <summary>Возвращает результаты действия.</summary>
+    </member><member name="T:Windows.Foundation.IAsyncActionWithProgress`1">
+      <summary>Представляет асинхронное действие, которое может отправлять обновленные сведения о ходе выполнения вызывающим объектам. Это возвращаемый тип для всех асинхронных методов среды выполнения Windows, не имеющих объекта результата, но сообщающих о ходе выполнения прослушивателям обратного вызова.</summary>
+      <typeparam name="TProgress">Тип данных о ходе выполнения.</typeparam>
+    </member><member name="P:Windows.Foundation.IAsyncActionWithProgress`1.Completed">
+      <summary>Получает или задает метод, обрабатывающий уведомление о завершении действия.</summary>
+      <returns>Метод, обрабатывающий уведомление.</returns>
+    </member><member name="P:Windows.Foundation.IAsyncActionWithProgress`1.Progress">
+      <summary>Получает или задает метод обратного вызова, получающий уведомление о ходе выполнения.</summary>
+      <returns>Ссылка на метод обратного вызова, обрабатывающий уведомления о ходе выполнения. Реализуйте делегат AsyncActionProgressHandler(TProgress) для определения обратного вызова. TProgress определяет тип единицы хода выполнения, которая зависит от реализации метода.</returns>
+    </member><member name="M:Windows.Foundation.IAsyncActionWithProgress`1.GetResults">
+      <summary>Возвращает результаты действия.</summary>
+    </member><member name="T:Windows.Foundation.IAsyncInfo">
+      <summary>Поддерживает асинхронные действия и операции.
+IAsyncInfo — это базовый интерфейс для объектов IAsyncAction, IAsyncActionWithProgress&lt;TProgress&gt;, IAsyncOperation&lt;TResult&gt; и IAsyncOperationWithProgress&lt;TResult,TProgress&gt;, каждый из которых поддерживает комбинации возвращаемого типа и хода выполнения для асинхронного метода.</summary>
+    </member><member name="P:Windows.Foundation.IAsyncInfo.ErrorCode">
+      <summary>Получает строку, которая описывает условие ошибки асинхронной операции.</summary>
+      <returns>Строка ошибки.</returns>
+    </member><member name="P:Windows.Foundation.IAsyncInfo.Id">
+      <summary>Получает результат обработки асинхронной операции.</summary>
+      <returns>Результат обработки асинхронной операции.</returns>
+    </member><member name="P:Windows.Foundation.IAsyncInfo.Status">
+      <summary>Получает значение перечисления, указывающего состояние асинхронной операции.</summary>
+      <returns>Статус операции в виде значения перечисления. Значение Completed показывает, что метод был возвращен. Значение Started представляет промежуточное состояние до того, как любой из других трех окончательных результатов (Completed, Error, Canceled) можно будет определить вызовом метода.</returns>
+    </member><member name="M:Windows.Foundation.IAsyncInfo.Cancel">
+      <summary>Отменяет асинхронную операцию.</summary>
+    </member><member name="M:Windows.Foundation.IAsyncInfo.Close">
+      <summary>Закрывает асинхронную операцию.</summary>
+    </member><member name="T:Windows.Foundation.IAsyncOperation`1">
+      <summary>Представляет асинхронную операцию, которая возвращает результат по окончании. Это возвращаемый тип для многих асинхронных методов среды выполнения Windows, которые имеют результаты, но не сообщают о ходе выполнения.</summary>
+      <typeparam name="TResult">Тип результата.</typeparam>
+    </member><member name="P:Windows.Foundation.IAsyncOperation`1.Completed">
+      <summary>Получает или задает метод, обрабатывающий уведомление о завершении операции.</summary>
+      <returns>Метод, обрабатывающий уведомление.</returns>
+    </member><member name="M:Windows.Foundation.IAsyncOperation`1.GetResults">
+      <summary>Возвращает результаты операции.</summary>
+      <returns>Результаты операции.</returns>
+    </member><member name="T:Windows.Foundation.IAsyncOperationWithProgress`2">
+      <summary>Представляет асинхронную операци, которая может отправлять обновленные сведения о ходе выполнения вызывающим объектам. Это возвращаемый тип для многих асинхронных методов среды выполнения Windows, которые имеют результаты и сообщают о ходе выполнения.</summary>
+      <typeparam name="TResult">Тип результата.</typeparam>
+      <typeparam name="TProgress">Тип данных о ходе выполнения.</typeparam>
+    </member><member name="P:Windows.Foundation.IAsyncOperationWithProgress`2.Completed">
+      <summary>Получает или задает метод, обрабатывающий уведомление о завершении операции.</summary>
+      <returns>Метод, обрабатывающий уведомление.</returns>
+    </member><member name="P:Windows.Foundation.IAsyncOperationWithProgress`2.Progress">
+      <summary>Получает или задает метод, обрабатывающий уведомления о ходе выполнения.</summary>
+      <returns>Ссылка на метод обратного вызова, обрабатывающий уведомления о ходе выполнения. Реализуйте делегат AsyncOperationProgressHandler&lt;TResult, TProgress&gt; для определения обратного вызова. TProgress определяет тип единицы хода выполнения, которая зависит от реализации метода.</returns>
+    </member><member name="M:Windows.Foundation.IAsyncOperationWithProgress`2.GetResults">
+      <summary>Возвращает результаты операции.</summary>
+      <returns>Результаты операции.</returns>
+    </member><member name="T:Windows.Foundation.IClosable">
+      <summary>Определяет методы высвобождения распределенных ресурсов.</summary>
+    </member><member name="M:Windows.Foundation.IClosable.Close">
+      <summary>Освобождает системные ресурсы, предоставляемые объектом среды выполнения Windows.</summary>
+    </member><member name="T:Windows.Foundation.IPropertyValue">
+      <summary>Представляет значение в хранилище свойств. Невозможно реализовать этот интерфейс, см. примечания.</summary>
+    </member><member name="P:Windows.Foundation.IPropertyValue.IsNumericScalar">
+      <summary>Получает значение, указывающее, является ли значение свойства скалярным значением.</summary>
+      <returns>Значение true, если значение является скалярным; в противном случае — значение false.</returns>
+    </member><member name="P:Windows.Foundation.IPropertyValue.Type">
+      <summary>Возвращает тип, хранимый в значении свойства.</summary>
+      <returns>Тип, хранимый в значении свойства.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetBoolean">
+      <summary>Возвращает логическое значение, хранящееся как значение свойства.</summary>
+      <returns>Значение.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetBooleanArray(System.Boolean[]@)">
+      <summary>Возвращает массив логических значений, который хранится как значение свойства.</summary>
+      <param name="value">Массив значений.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetChar16">
+      <summary>Возвращает символ Юникода, который хранится в качестве значения свойства.</summary>
+      <returns>Значение.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetChar16Array(System.Char[]@)">
+      <summary>Возвращает массив символов Юникода, который хранится как значение свойства.</summary>
+      <param name="value">Массив значений.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetDateTime">
+      <summary>Возвращает значение даты и времени, которое хранится как значение свойства.</summary>
+      <returns>Значение.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetDateTimeArray(Windows.Foundation.DateTime[]@)">
+      <summary>Возвращает массив значений даты и времени, который хранится как значение свойства.</summary>
+      <param name="value">Массив значений.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetDouble">
+      <summary>Возвращает значение с плавающей запятой, которое хранится как значение свойства.</summary>
+      <returns>Значение.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetDoubleArray(System.Double[]@)">
+      <summary>Возвращает массив значений с плавающей запятой, который хранится как значение свойства.</summary>
+      <param name="value">Массив значений.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetGuid">
+      <summary>Возвращает значение GUID, хранящееся как значение свойства.</summary>
+      <returns>Значение.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetGuidArray(System.Guid[]@)">
+      <summary>Возвращает массив значений GUID, который хранится как значение свойства.</summary>
+      <param name="value">Массив значений.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInspectableArray(System.Object[]@)">
+      <summary>Возвращает массив проверяемых объектов, который хранится как значение свойства.</summary>
+      <param name="value">Массив объектов.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt16">
+      <summary>Возвращает целочисленное значение, которое хранится как значение свойства.</summary>
+      <returns>Значение.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt16Array(System.Int16[]@)">
+      <summary>Возвращает массив целых чисел, который хранится как значение свойства.</summary>
+      <param name="value">Массив значений.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt32">
+      <summary>Возвращает целочисленное значение, которое хранится как значение свойства.</summary>
+      <returns>Значение.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt32Array(System.Int32[]@)">
+      <summary>Возвращает массив целых чисел, который хранится как значение свойства.</summary>
+      <param name="value">Массив значений.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt64">
+      <summary>Возвращает целочисленное значение, которое хранится как значение свойства.</summary>
+      <returns>Значение.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt64Array(System.Int64[]@)">
+      <summary>Возвращает массив целых чисел, который хранится как значение свойства.</summary>
+      <param name="value">Массив значений.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetPoint">
+      <summary>Возвращает структуру "точка", хранящуюся как значение свойства.</summary>
+      <returns>Структура.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetPointArray(Windows.Foundation.Point[]@)">
+      <summary>Возвращает массив структур "точка", который хранится как значение свойства.</summary>
+      <param name="value">Массив структур.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetRect">
+      <summary>Возвращает структуру "прямоугольник", хранящуюся как значение свойства.</summary>
+      <returns>Структура.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetRectArray(Windows.Foundation.Rect[]@)">
+      <summary>Возвращает массив структур "прямоугольник", который хранится как значение свойства.</summary>
+      <param name="value">Массив структур.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetSingle">
+      <summary>Возвращает значение с плавающей запятой, которое хранится как значение свойства.</summary>
+      <returns>Значение.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetSingleArray(System.Single[]@)">
+      <summary>Возвращает массив значений с плавающей запятой, который хранится как значение свойства.</summary>
+      <param name="value">Массив значений.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetSize">
+      <summary>Возвращает структуру "размер", хранящуюся как значение свойства.</summary>
+      <returns>Структура.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetSizeArray(Windows.Foundation.Size[]@)">
+      <summary>Возвращает массив структур "размер", который хранится как значение свойства.</summary>
+      <param name="value">Массив структур.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetString">
+      <summary>Возвращает строковое значение, которое хранится как значение свойства.</summary>
+      <returns>Значение.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetStringArray(System.String[]@)">
+      <summary>Возвращает массив строковых значений, который хранится как значение свойства.</summary>
+      <param name="value">Массив значений.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetTimeSpan">
+      <summary>Возвращает значение интервала времени, которое хранится как значение свойства.</summary>
+      <returns>Значение.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetTimeSpanArray(Windows.Foundation.TimeSpan[]@)">
+      <summary>Возвращает массив значений интервала времени, который хранится как значение свойства.</summary>
+      <param name="value">Массив значений.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt16">
+      <summary>Возвращает целочисленное значение без знака, которое хранится как значение свойства.</summary>
+      <returns>Значение.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt16Array(System.UInt16[]@)">
+      <summary>Возвращает массив целых чисел без знака, который хранится как значение свойства.</summary>
+      <param name="value">Массив значений.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt32">
+      <summary>Возвращает целочисленное значение без знака, которое хранится как значение свойства.</summary>
+      <returns>Значение.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt32Array(System.UInt32[]@)">
+      <summary>Возвращает массив целых чисел без знака, который хранится как значение свойства.</summary>
+      <param name="value">Массив значений.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt64">
+      <summary>Возвращает целочисленное значение без знака, которое хранится как значение свойства.</summary>
+      <returns>Значение.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt64Array(System.UInt64[]@)">
+      <summary>Возвращает массив целых чисел без знака, который хранится как значение свойства.</summary>
+      <param name="value">Массив значений.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt8">
+      <summary>Возвращает байтовое значение, хранящееся как значение свойства.</summary>
+      <returns>Значение.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt8Array(System.Byte[]@)">
+      <summary>Возвращает массив байтов, который хранится как значение свойства.</summary>
+      <param name="value">Массив значений.</param>
+    </member><member name="T:Windows.Foundation.IReference`1">
+      <summary>Позволяет использовать произвольные перечисления, структуры и типы делегатов в качестве значения свойства.</summary>
+      <typeparam name="T">Тип.</typeparam>
+    </member><member name="P:Windows.Foundation.IReference`1.Value">
+      <summary>Получает тип, представленный в виде IPropertyValue.</summary>
+      <returns>Тип.</returns>
+    </member><member name="T:Windows.Foundation.IReferenceArray`1">
+      <summary>Позволяет использовать произвольные перечисления, структуры и типы делегатов в качестве массива значений свойств. Невозможно реализовать этот интерфейс, см. примечания.</summary>
+      <typeparam name="T">Тип.</typeparam>
+    </member><member name="P:Windows.Foundation.IReferenceArray`1.Value">
+      <summary>Получает тип, представленный в виде массива IPropertyValue.</summary>
+      <returns>Тип.</returns>
+    </member><member name="T:Windows.Foundation.IStringable">
+      <summary>Предоставляет возможность представить текущий объект в виде строки.</summary>
+    </member><member name="M:Windows.Foundation.IStringable.ToString">
+      <summary>Получает строку, представляющую текущий объект.</summary>
+      <returns>Строка, представляющая текущий объект.</returns>
+    </member><member name="T:Windows.Foundation.Point">
+      <summary>Представляет значения координат x и y, определяющие точку на двухмерной плоскости.</summary>
+    </member><member name="F:Windows.Foundation.Point.X">
+      <summary>Положение точки по горизонтали.</summary>
+    </member><member name="F:Windows.Foundation.Point.Y">
+      <summary>Положение точки по вертикали.</summary>
+    </member><member name="T:Windows.Foundation.PropertyType">
+      <summary>Задает типы значений свойства.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Boolean">
+      <summary>Значение, которое может принимать только значения true или false.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.BooleanArray">
+      <summary>Массив логических значений.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Char16">
+      <summary>Кодовая точка в виде 16-битного числа без знака (2 байта).</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Char16Array">
+      <summary>Массив значений Char.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.DateTime">
+      <summary>Текущее время, обычно выраженное в виде даты и времени суток.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.DateTimeArray">
+      <summary>Массив значений DateTime.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Double">
+      <summary>64-разрядное (8-байтовое) число с плавающей запятой со знаком.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.DoubleArray">
+      <summary>Массив значений Double.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Empty">
+      <summary>Тип не указан.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Guid">
+      <summary>Идентификатор GUID.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.GuidArray">
+      <summary>Массив значений Guid.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Inspectable">
+      <summary>Объект, реализующий интерфейс IInspectable.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.InspectableArray">
+      <summary>Массив значений Inspectable.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int16">
+      <summary>16-разрядное (2-байтовое) целое число со знаком.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int16Array">
+      <summary>Массив значений Int16.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int32">
+      <summary>32-разрядное (4-байтовое) целое число со знаком.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int32Array">
+      <summary>Массив значений Int32.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int64">
+      <summary>64-разрядное (8-байтовое) целое число со знаком.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int64Array">
+      <summary>Массив значений Int64.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.OtherType">
+      <summary>Тип не указан в этом перечислении.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.OtherTypeArray">
+      <summary>Массив неопределенного типа.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Point">
+      <summary>Упорядоченная пара координат Х и Y с плавающей запятой, определяющая точку на двумерной плоскости.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.PointArray">
+      <summary>Массив структур Point.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Rect">
+      <summary>Набор из четырех чисел с плавающей запятой, определяющих расположение и размер прямоугольника.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.RectArray">
+      <summary>Массив структур Rect.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Single">
+      <summary>32-разрядное (4-байтовое) число с плавающей запятой со знаком.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.SingleArray">
+      <summary>Массив значений Single.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Size">
+      <summary>Упорядоченная пара чисел с плавающей запятой, которые определяют высоту и ширину.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.SizeArray">
+      <summary>Массив структур Size.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.String">
+      <summary>HSTRING среды выполнения Windows.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.StringArray">
+      <summary>Массив значений String.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.TimeSpan">
+      <summary>Интервал времени.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.TimeSpanArray">
+      <summary>Массив значений TimeSpan.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt16">
+      <summary>16-разрядное (2-байтовое) целое число без знака.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt16Array">
+      <summary>Массив значений UInt16.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt32">
+      <summary>32-разрядное (4-байтовое) целое число без знака.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt32Array">
+      <summary>Массив значений UInt32.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt64">
+      <summary>64-разрядное (8-байтовое) целое число без знака.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt64Array">
+      <summary>Массив значений UInt64.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt8">
+      <summary>Байт.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt8Array">
+      <summary>Массив значений Byte.</summary>
+    </member><member name="T:Windows.Foundation.PropertyValue">
+      <summary>Представляет значение в хранилище свойств (например, экземпляр PropertySet).</summary>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateBoolean(System.Boolean)">
+      <summary>Создает значение свойства из логического значения.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Значение, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateBooleanArray(System.Boolean[])">
+      <summary>Создает значение свойства из массива логических значений.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Массив, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateChar16(System.Char)">
+      <summary>Создает значение свойства из символа Юникод.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Значение, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateChar16Array(System.Char[])">
+      <summary>Создает значение свойства из массива символов Юникод.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Массив, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateDateTime(Windows.Foundation.DateTime)">
+      <summary>Создает значение свойства из значения даты и времени.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Значение, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateDateTimeArray(Windows.Foundation.DateTime[])">
+      <summary>Создает значение свойства из массива значений даты и времени.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Массив, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateDouble(System.Double)">
+      <summary>Создает значение свойства из значения с плавающей запятой.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Значение, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateDoubleArray(System.Double[])">
+      <summary>Создает значение свойства из массива значений с плавающей запятой.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Массив, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateEmpty">
+      <summary>Создает пустое значение свойства.</summary>
+      <returns>Значение свойства.</returns>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateGuid(System.Guid)">
+      <summary>Создает значение свойства из идентификатора GUID.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Значение, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateGuidArray(System.Guid[])">
+      <summary>Создает значение свойства из массива идентификаторов GUID.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Массив, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInspectable(System.Object)">
+      <summary>Создает значение свойства из объекта, допускающего контроль.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Объект, который требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInspectableArray(System.Object[])">
+      <summary>Создает значение свойства из массива объектов, допускающих контроль.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Массив, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt16(System.Int16)">
+      <summary>Создает значение свойства из целого числа.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Значение, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt16Array(System.Int16[])">
+      <summary>Создает значение свойства из массива целых чисел.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Массив, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt32(System.Int32)">
+      <summary>Создает значение свойства из целого числа.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Значение, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt32Array(System.Int32[])">
+      <summary>Создает значение свойства из массива целых чисел.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Массив, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt64(System.Int64)">
+      <summary>Создает значение свойства из целого числа.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Значение, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt64Array(System.Int64[])">
+      <summary>Создает значение свойства из массива целых чисел.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Массив, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreatePoint(Windows.Foundation.Point)">
+      <summary>Создает значение свойства из структуры типа "точка".</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Структура, которую требуется сохранить в виде значения свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreatePointArray(Windows.Foundation.Point[])">
+      <summary>Создает значение свойства из массива структур типа "точка".</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Массив, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateRect(Windows.Foundation.Rect)">
+      <summary>Создает значение свойства из структуры типа "прямоугольник".</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Структура, которую требуется сохранить в виде значения свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateRectArray(Windows.Foundation.Rect[])">
+      <summary>Создает значение свойства из массива структур типа "прямоугольник".</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Массив, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateSingle(System.Single)">
+      <summary>Создает значение свойства из значения с плавающей запятой.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Значение, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateSingleArray(System.Single[])">
+      <summary>Создает значение свойства из массива значений с плавающей запятой.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Массив, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateSize(Windows.Foundation.Size)">
+      <summary>Создает значение свойства из структуры типа "размер".</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Структура, которую требуется сохранить в виде значения свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateSizeArray(Windows.Foundation.Size[])">
+      <summary>Создает значение свойства из массива структур типа "размер".</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Массив, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateString(System.String)">
+      <summary>Создает значение свойства из строки.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Строка, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateStringArray(System.String[])">
+      <summary>Создает значение свойства из массива строк.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Массив, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateTimeSpan(Windows.Foundation.TimeSpan)">
+      <summary>Создает значение свойства из временного интервала.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Интервал времени, который необходимо сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateTimeSpanArray(Windows.Foundation.TimeSpan[])">
+      <summary>Создает значение свойства из массива интервалов времени.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Массив, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt16(System.UInt16)">
+      <summary>Создает значение свойства из целого числа без знака.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Значение, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt16Array(System.UInt16[])">
+      <summary>Создает значение свойства из массива целых чисел без знака.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Массив, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt32(System.UInt32)">
+      <summary>Создает значение свойства из целого числа без знака.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Значение, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt32Array(System.UInt32[])">
+      <summary>Создает значение свойства из массива целых чисел без знака.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Массив, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt64(System.UInt64)">
+      <summary>Создает значение свойства из целого числа без знака.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Значение, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt64Array(System.UInt64[])">
+      <summary>Создает значение свойства из массива целых чисел без знака.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Массив, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt8(System.Byte)">
+      <summary>Создает значение свойства из байта.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Значение, которую требуется сохранить в значении свойства.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt8Array(System.Byte[])">
+      <summary>Создает значение свойства из массива байтов.</summary>
+      <returns>Значение свойства.</returns>
+      <param name="value">Массив, которую требуется сохранить в значении свойства.</param>
+    </member><member name="T:Windows.Foundation.Rect">
+      <summary>Содержит числовые значения, определяющие расположение и размер прямоугольника.</summary>
+    </member><member name="F:Windows.Foundation.Rect.Height">
+      <summary>Высота прямоугольника в пикселях.</summary>
+    </member><member name="F:Windows.Foundation.Rect.Width">
+      <summary>Ширина прямоугольника в пикселях.</summary>
+    </member><member name="F:Windows.Foundation.Rect.X">
+      <summary>Координата X верхнего левого угла прямоугольника.</summary>
+    </member><member name="F:Windows.Foundation.Rect.Y">
+      <summary>Координата по оси Y верхнего левого угла прямоугольника.</summary>
+    </member><member name="T:Windows.Foundation.Size">
+      <summary>Представляет числовые значения, которые задают высоту и ширину.</summary>
+    </member><member name="F:Windows.Foundation.Size.Height">
+      <summary>Высота.</summary>
+    </member><member name="F:Windows.Foundation.Size.Width">
+      <summary>Ширина.</summary>
+    </member><member name="T:Windows.Foundation.TimeSpan">
+      <summary>Представляет временной интервал в виде 64-разрядного целого числа со знаком.</summary>
+    </member><member name="F:Windows.Foundation.TimeSpan.Duration">
+      <summary>Интервал времени, выраженный в единицах измерения, равных 100 нс.</summary>
+    </member><member name="T:Windows.Foundation.TypedEventHandler`2">
+      <summary>Представляет метод, который обрабатывает общие события.</summary>
+      <typeparam name="TSender">Тип объекта.</typeparam>
+      <typeparam name="TResult">Тип данных события, создаваемых событием.</typeparam>
+      <param name="sender">Источник события.</param>
+      <param name="args">Данные события. Если данные события отсутствует, этот параметр содержит значение NULL.</param>
+    </member><member name="T:Windows.Foundation.Collections.CollectionChange">
+      <summary>Описывает действие, которое вызывает изменение в коллекции.</summary>
+    </member><member name="F:Windows.Foundation.Collections.CollectionChange.ItemChanged">
+      <summary>Элемент изменяется в коллекции.</summary>
+    </member><member name="F:Windows.Foundation.Collections.CollectionChange.ItemInserted">
+      <summary>Элемент добавляется в коллекцию.</summary>
+    </member><member name="F:Windows.Foundation.Collections.CollectionChange.ItemRemoved">
+      <summary>Элемент удаляется из коллекции.</summary>
+    </member><member name="F:Windows.Foundation.Collections.CollectionChange.Reset">
+      <summary>Коллекция изменена.</summary>
+    </member><member name="T:Windows.Foundation.Collections.IIterable`1">
+      <summary>Предоставляет итератор, поддерживающий простую итерацию по коллекции указанного типа.</summary>
+      <typeparam name="T">Тип объектов для итерации.</typeparam>
+    </member><member name="M:Windows.Foundation.Collections.IIterable`1.First">
+      <summary>Возвращает итератор для элементов коллекции.</summary>
+      <returns>Итератор.</returns>
+    </member><member name="T:Windows.Foundation.Collections.IIterator`1">
+      <summary>Поддерживает простую итерацию по коллекции.</summary>
+      <typeparam name="T">Тип объектов для итерации.</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IIterator`1.Current">
+      <summary>Получает текущий элемент в коллекции.</summary>
+      <returns>Текущий элемент в коллекции.</returns>
+    </member><member name="P:Windows.Foundation.Collections.IIterator`1.HasCurrent">
+      <summary>Получает значение, показывающее, указывает ли итератор на текущий элемент или находится в конце коллекции.</summary>
+      <returns>Значение true, если итератор относится к допустимому элементу в коллекции; в противном случае — значение false.</returns>
+    </member><member name="M:Windows.Foundation.Collections.IIterator`1.GetMany(`0[])">
+      <summary>Извлекает все элементы из коллекции.</summary>
+      <returns>Число элементов в коллекции.</returns>
+      <param name="items">Элементы в коллекции.</param>
+    </member><member name="M:Windows.Foundation.Collections.IIterator`1.MoveNext">
+      <summary>Переводит итератор к следующему элементу в коллекции.</summary>
+      <returns>Значение true, если итератор относится к допустимому элементу в коллекции; значение false, если итератор выходит за конец коллекции.</returns>
+    </member><member name="T:Windows.Foundation.Collections.IKeyValuePair`2">
+      <summary>Представляет пару "ключ-значение". Это обычно используется как тип ограничения, когда требуется инкапсулировать два параметра типа в один, чтобы удовлетворить ограничения другого универсального интерфейса.</summary>
+      <typeparam name="K">Тип ключей в каждой паре "ключ-значение".</typeparam>
+      <typeparam name="V">Тип значений в каждой паре "ключ-значение".</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IKeyValuePair`2.Key">
+      <summary>Получает ключ из пары "ключ-значение".</summary>
+      <returns>Ключ.</returns>
+    </member><member name="P:Windows.Foundation.Collections.IKeyValuePair`2.Value">
+      <summary>Получает значение из пары "ключ-значение".</summary>
+      <returns>Значение.</returns>
+    </member><member name="T:Windows.Foundation.Collections.IMap`2">
+      <summary>Представляет ассоциативную коллекцию, также известную как сопоставление или словарь.</summary>
+      <typeparam name="K">Тип ключей в сопоставлении.</typeparam>
+      <typeparam name="V">Тип значений в сопоставлении.</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IMap`2.Size">
+      <summary>Получает число элементов в сопоставлении.</summary>
+      <returns>Число элементов в сопоставлении.</returns>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.Clear">
+      <summary>Удаляет все элементы из сопоставления.</summary>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.GetView">
+      <summary>Возвращает постоянное представление сопоставления.</summary>
+      <returns>Представление карты.</returns>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.HasKey(`0)">
+      <summary>Определяет, содержится ли указанный ключ в сопоставлении.</summary>
+      <returns>Значение true, если ключ найден; в противном случае — значение false.</returns>
+      <param name="key">Ключ, связанный с искомым элементом.</param>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.Insert(`0,`1)">
+      <summary>Добавляет или заменяет элемент в сопоставлении.</summary>
+      <returns>Значение true, если элемент с указанным ключом представляет собой существующий элемент, который был заменен; в противном случае — значение false.</returns>
+      <param name="key">Ключ, связанный со вставляемым элементом.</param>
+      <param name="value">Вставляемый элемент.</param>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.Lookup(`0)">
+      <summary>Возвращает элемент по указанному ключу в сопоставлении.</summary>
+      <returns>Элемент, связанный с указанным ключом.</returns>
+      <param name="key">Ключ, связанный с искомым элементом.</param>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.Remove(`0)">
+      <summary>Удаляет элемент из сопоставления.</summary>
+      <param name="key">Ключ, связанный с удаляемым элементом.</param>
+    </member><member name="T:Windows.Foundation.Collections.IMapChangedEventArgs`1">
+      <summary>Предоставляет данные для события изменения коллекции сопоставлений.</summary>
+      <typeparam name="K">Тип ключей в сопоставлении.</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IMapChangedEventArgs`1.CollectionChange">
+      <summary>Получает тип изменения, которое произошло в сопоставлении.</summary>
+      <returns>Тип изменения карты.</returns>
+    </member><member name="P:Windows.Foundation.Collections.IMapChangedEventArgs`1.Key">
+      <summary>Получает ключ измененного элемента.</summary>
+      <returns>Ключ измененного элемента.</returns>
+    </member><member name="T:Windows.Foundation.Collections.IMapView`2">
+      <summary>Представляет неизменное представление в сопоставлении.</summary>
+      <typeparam name="K">Тип ключей в сопоставлении.</typeparam>
+      <typeparam name="V">Тип значений в сопоставлении.</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IMapView`2.Size">
+      <summary>Получает число элементов в сопоставлении.</summary>
+      <returns>Число элементов в сопоставлении.</returns>
+    </member><member name="M:Windows.Foundation.Collections.IMapView`2.HasKey(`0)">
+      <summary>Определяет, содержится ли указанный ключ в сопоставлении представления.</summary>
+      <returns>Значение true, если ключ найден; в противном случае — значение false.</returns>
+      <param name="key">Ключ, который нужно найти в представлении сопоставления.</param>
+    </member><member name="M:Windows.Foundation.Collections.IMapView`2.Lookup(`0)">
+      <summary>Возвращает элемент по указанному ключу в представлении сопоставления.</summary>
+      <returns>Элемент, связанный с указанным ключом.</returns>
+      <param name="key">Ключ, который нужно найти в представлении сопоставления.</param>
+    </member><member name="T:Windows.Foundation.Collections.IObservableMap`2">
+      <summary>Уведомляет прослушиватели о динамических изменениях в сопоставлении, например при добавлении или удалении элементов.</summary>
+      <typeparam name="K">Тип ключей в сопоставлении.</typeparam>
+      <typeparam name="V">Тип значений в сопоставлении.</typeparam>
+    </member><member name="E:Windows.Foundation.Collections.IObservableMap`2.MapChanged">
+      <summary>Происходит при изменении сопоставления.</summary>
+    </member><member name="T:Windows.Foundation.Collections.IObservableVector`1">
+      <summary>Уведомляет прослушиватели об изменении этого вектора.</summary>
+      <typeparam name="T">Тип значений в векторе.</typeparam>
+    </member><member name="E:Windows.Foundation.Collections.IObservableVector`1.VectorChanged">
+      <summary>Происходит при изменении вектора.</summary>
+    </member><member name="T:Windows.Foundation.Collections.IPropertySet">
+      <summary>Представляет коллекцию пар "ключ-значение", коррелируя несколько других интерфейсов коллекции.</summary>
+    </member><member name="T:Windows.Foundation.Collections.IVector`1">
+      <summary>Представляет коллекцию элементов с прямым доступом.</summary>
+      <typeparam name="T">Тип значений в векторе.</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IVector`1.Size">
+      <summary>Получает число элементов в векторе.</summary>
+      <returns>Число элементов в векторе.</returns>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.Append(`0)">
+      <summary>Добавляет элемент в конец вектора.</summary>
+      <param name="value">Элемент, добавляемый в вектор.</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.Clear">
+      <summary>Удаляет все элементы из вектора.</summary>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.GetAt(System.UInt32)">
+      <summary>Возвращает элемент по указанному индексу в векторе.</summary>
+      <returns>Элемент с заданным индексом.</returns>
+      <param name="index">Отсчитываемый от нуля индекс элемента.</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.GetView">
+      <summary>Возвращает постоянное представление вектора.</summary>
+      <returns>Представление вектора.</returns>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.IndexOf(`0,System.UInt32@)">
+      <summary>Извлекает индекс заданного элемента в векторе.</summary>
+      <returns>Значение true, если элемент найден; в противном случае — значение false.</returns>
+      <param name="value">Элемент, который требуется найти в векторе.</param>
+      <param name="index">Если элемент найден, это отсчитываемый от нуля индекс элемента; в противном случае этот параметр имеет значение 0.</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.InsertAt(System.UInt32,`0)">
+      <summary>Вставляет элемент в вектор по указанному индексу.</summary>
+      <param name="index">Отсчитываемый от нуля индекс.</param>
+      <param name="value">Вставляемый элемент.</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.RemoveAt(System.UInt32)">
+      <summary>Удаляет из вектора элемент с заданным индексом.</summary>
+      <param name="index">Отсчитываемый от нуля индекс удаляемого элемента вектора.</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.RemoveAtEnd">
+      <summary>Удаляет последний элемент из вектора.</summary>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.ReplaceAll(`0[])">
+      <summary>Заменяет все элементы в векторе указанными элементами.</summary>
+      <param name="items">Коллекция элементов для добавления в вектор.</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.SetAt(System.UInt32,`0)">
+      <summary>Задает значение по заданному индексу в векторе.</summary>
+      <param name="index">Отсчитываемый от нуля индекс, по которому требуется задать значение.</param>
+      <param name="value">Задаваемый элемент.</param>
+    </member><member name="T:Windows.Foundation.Collections.IVectorChangedEventArgs">
+      <summary>Предоставляет данные для события изменения вектора.</summary>
+    </member><member name="P:Windows.Foundation.Collections.IVectorChangedEventArgs.CollectionChange">
+      <summary>Получает тип изменения, которое произошло в векторе.</summary>
+      <returns>Тип изменения вектора.</returns>
+    </member><member name="P:Windows.Foundation.Collections.IVectorChangedEventArgs.Index">
+      <summary>Получает позицию, где произошло изменение в векторе.</summary>
+      <returns>Отсчитываемая от нуля позиция, в которой произошло изменение в векторе, если применимо.</returns>
+    </member><member name="T:Windows.Foundation.Collections.IVectorView`1">
+      <summary>Представляет неизменное представление в векторе.</summary>
+      <typeparam name="T">Тип значений в векторе.</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IVectorView`1.Size">
+      <summary>Получает число элементов в векторном представлении.</summary>
+      <returns>Число элементов в векторном представлении.</returns>
+    </member><member name="M:Windows.Foundation.Collections.IVectorView`1.GetAt(System.UInt32)">
+      <summary>Возвращает элемент по указанному индексу в векторном представлении.</summary>
+      <returns>Элемент с заданным индексом.</returns>
+      <param name="index">Отсчитываемый от нуля индекс элемента.</param>
+    </member><member name="M:Windows.Foundation.Collections.IVectorView`1.IndexOf(`0,System.UInt32@)">
+      <summary>Извлекает индекс заданного элемента в векторном представлении.</summary>
+      <returns>Значение true, если элемент найден; в противном случае — значение false.</returns>
+      <param name="value">Элемент, который требуется найти в представлении вектора.</param>
+      <param name="index">Если элемент найден, это отсчитываемый от нуля индекс элемента; в противном случае этот параметр имеет значение 0.</param>
+    </member><member name="T:Windows.Foundation.Collections.MapChangedEventHandler`2">
+      <summary>Представляет метод, обрабатывающий изменившееся событие наблюдаемого сопоставления.</summary>
+      <typeparam name="K">Тип ключей в сопоставлении.</typeparam>
+      <typeparam name="V">Тип значений в сопоставлении.</typeparam>
+      <param name="sender">Изменившееся наблюдаемое сопоставление.</param>
+      <param name="event">Описание изменения, которое произошло в сопоставлении.</param>
+    </member><member name="T:Windows.Foundation.Collections.PropertySet">
+      <summary>Представляет набор свойств, который является набором объектов PropertyValue со строковыми ключами.</summary>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.#ctor">
+      <summary>Создает и инициализирует новый экземпляр набора свойств.</summary>
+    </member><member name="P:Windows.Foundation.Collections.PropertySet.Size">
+      <summary>Получает число элементов, содержащихся в наборе свойств.</summary>
+      <returns>Число элементов в наборе свойств.</returns>
+    </member><member name="E:Windows.Foundation.Collections.PropertySet.MapChanged">
+      <summary>Происходит при изменении наблюдаемого сопоставления.</summary>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.Clear">
+      <summary>Удаляет все элементы из набора свойств.</summary>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.First">
+      <summary>Возвращает итератор для перечисления элементов в наборе свойств.</summary>
+      <returns>Итератор. Текущая позиция итератора — индекс 0 или в конце набора свойств, если набор свойств является пустым.</returns>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.GetView">
+      <summary>Получает неизменяемое представление набора свойств.</summary>
+      <returns>Неизменяемое представление.</returns>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.HasKey(System.String)">
+      <summary>Указывает, содержит ли набор свойств элемент с указанным ключом.</summary>
+      <returns>Значение true, если набор свойств содержит элемент с указанным ключом; в противном случае — значение false.</returns>
+      <param name="key">Ключ.</param>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.Insert(System.String,System.Object)">
+      <summary>Добавляет элемент в набор свойств.</summary>
+      <returns>Значение true, если метод заменяет значение, уже существовавшее для ключа; значение false, если это новый ключ.</returns>
+      <param name="key">Вставляемый ключ.</param>
+      <param name="value">Значение, которое следует вставить.</param>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.Lookup(System.String)">
+      <summary>Извлекает значение для указанного ключа.</summary>
+      <returns>Значение, если существует элемент с указанным ключом; в противном случае — значение NULL.</returns>
+      <param name="key">Ключ.</param>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.Remove(System.String)">
+      <summary>Удаляет элемент из набора свойств.</summary>
+      <param name="key">Ключ.</param>
+    </member><member name="T:Windows.Foundation.Collections.StringMap">
+      <summary>Ассоциативная коллекция, также известная как сопоставление или словарь.</summary>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.#ctor">
+      <summary>Создает и инициализирует новый экземпляр StringMap.</summary>
+    </member><member name="P:Windows.Foundation.Collections.StringMap.Size">
+      <summary>Получает число элементов в сопоставлении.</summary>
+      <returns>Число элементов в сопоставлении.</returns>
+    </member><member name="E:Windows.Foundation.Collections.StringMap.MapChanged">
+      <summary>Возникает в результате изменения содержимого сопоставления.</summary>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.Clear">
+      <summary>Удаляет все элементы из сопоставления.</summary>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.First">
+      <summary>Возвращает итератор, который содержит элементы коллекции.</summary>
+      <returns>Элементы в коллекции.</returns>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.GetView">
+      <summary>Возвращает постоянное представление сопоставления.</summary>
+      <returns>Представление карты.</returns>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.HasKey(System.String)">
+      <summary>Определяет, содержится ли указанный ключ в сопоставлении.</summary>
+      <returns>Значение true, если ключ найден; в противном случае — значение false.</returns>
+      <param name="key">Ключ, связанный с искомым элементом.</param>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.Insert(System.String,System.String)">
+      <summary>Добавляет или заменяет элемент в сопоставлении.</summary>
+      <returns>Значение true, если элемент с указанным ключом представляет собой существующий элемент, который был заменен; в противном случае — значение false.</returns>
+      <param name="key">Ключ, связанный со вставляемым элементом.</param>
+      <param name="value">Вставляемый элемент.</param>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.Lookup(System.String)">
+      <summary>Возвращает элемент по указанному ключу в сопоставлении.</summary>
+      <returns>Элемент, связанный с указанным ключом.</returns>
+      <param name="key">Ключ, связанный с искомым элементом.</param>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.Remove(System.String)">
+      <summary>Удаляет элемент из сопоставления.</summary>
+      <param name="key">Ключ, связанный с удаляемым элементом.</param>
+    </member><member name="T:Windows.Foundation.Collections.ValueSet">
+      <summary>Реализует карту с ключами типа String и значениями типа Object. Этот класс предотвращает размещение в сопоставлении несериализуемых типов.</summary>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.#ctor">
+      <summary>Создает и инициализирует новый экземпляр набора свойств.</summary>
+    </member><member name="P:Windows.Foundation.Collections.ValueSet.Size">
+      <summary>Получает число элементов, содержащихся в наборе значений.</summary>
+      <returns>Число элементов в наборе значений.</returns>
+    </member><member name="E:Windows.Foundation.Collections.ValueSet.MapChanged">
+      <summary>Происходит при изменении наблюдаемого сопоставления.</summary>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.Clear">
+      <summary>Удаляет все элементы из набора значений.</summary>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.First">
+      <summary>Возвращает итератор для перечисления элементов в наборе значений.</summary>
+      <returns>Итератор. Текущая позиция итератора — индекс 0 или в конце набора значений, если набор значений является пустым.</returns>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.GetView">
+      <summary>Получает неизменяемое представление набора значений.</summary>
+      <returns>Неизменяемое представление.</returns>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.HasKey(System.String)">
+      <summary>Указывает, содержит ли набор значений элемент с указанным ключом.</summary>
+      <returns>Значение true, если набор значений содержит элемент с указанным ключом; в противном случае — значение false.</returns>
+      <param name="key">Ключ.</param>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.Insert(System.String,System.Object)">
+      <summary>Добавляет элемент в набор значений.</summary>
+      <returns>Значение true, если метод заменяет значение, уже существовавшее для ключа; значение false, если это новый ключ.</returns>
+      <param name="key">Вставляемый ключ.</param>
+      <param name="value">Значение, которое следует вставить.</param>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.Lookup(System.String)">
+      <summary>Извлекает значение для указанного ключа.</summary>
+      <returns>Значение, если существует элемент с указанным ключом; в противном случае — значение NULL.</returns>
+      <param name="key">Ключ.</param>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.Remove(System.String)">
+      <summary>Удаляет элемент из набора значений.</summary>
+      <param name="key">Ключ.</param>
+    </member><member name="T:Windows.Foundation.Collections.VectorChangedEventHandler`1">
+      <summary>Представляет метод, обрабатывающий изменившееся событие наблюдаемого вектора.</summary>
+      <typeparam name="T">Тип значений в векторе.</typeparam>
+      <param name="sender">Изменившийся наблюдаемый вектор.</param>
+      <param name="event">Описание изменения, которое произошло в векторе.</param>
+    </member><member name="T:Windows.Foundation.Metadata.ActivatableAttribute">
+      <summary>Указывает, что класс является доступным для активации классом среды выполнения.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.Type,System.UInt32)">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+      <param name="type">Тип класса.</param>
+      <param name="version">Версия класса.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.Type,System.UInt32,System.String)">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+      <param name="type">Тип класса.</param>
+      <param name="version">Версия контракта API, реализующего класс.</param>
+      <param name="contractName">Строка, представляющая тип контракта API, реализующего класс.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.Type,System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+      <param name="type">Тип класса.</param>
+      <param name="version">Версия класса.</param>
+      <param name="platform">Значение перечисления. Значение по умолчанию — Windows.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.UInt32)">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+      <param name="version">Версия класса.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.UInt32,System.String)">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+      <param name="version">Версия класса.</param>
+      <param name="type">Строка, представляющая тип интерфейса фабрики.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+      <param name="version">Версия класса.</param>
+      <param name="platform">Значение перечисления. Значение по умолчанию — Windows.</param>
+    </member><member name="T:Windows.Foundation.Metadata.AllowForWebAttribute">
+      <summary>Позволяет разработчикам предоставлять собственный объект UWP как глобальный параметр в контексте документа верхнего уровня внутри WebView. Для проецирования объекта UWP он должен реализовать интерфейс IAgileObject и должен быть помечен атрибутом AllowForWebAttribute.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.AllowForWebAttribute.#ctor">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.AllowMultipleAttribute">
+      <summary>Указывает, что к целевому объекту можно применить несколько экземпляров настраиваемого атрибута.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.AllowMultipleAttribute.#ctor">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.ApiInformation">
+      <summary>Позволяет обнаружить наличие определенного участника, типа или контракта API, чтобы безопасно совершать вызовы API на разных устройствах.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsApiContractPresent(System.String,System.UInt16)">
+      <summary>Возвращает значение true или false, чтобы указать, присутствует ли API-контракт с заданным именем и основным номером версии.</summary>
+      <returns>Значение true, если заданный контракт API присутствует; в противном случае — значение false.</returns>
+      <param name="contractName">Имя контракта API.</param>
+      <param name="majorVersion">Основной номер версии контракта API.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsApiContractPresent(System.String,System.UInt16,System.UInt16)">
+      <summary>Возвращает значение true или false, чтобы указать, присутствует ли API-контракт с заданным именем и неосновным номером версии.</summary>
+      <returns>Значение true, если заданный контракт API присутствует; в противном случае — значение false.</returns>
+      <param name="contractName">Имя контракта API.</param>
+      <param name="majorVersion">Основной номер версии контракта API.</param>
+      <param name="minorVersion">Неосновной номер версии контракта API.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsEnumNamedValuePresent(System.String,System.String)">
+      <summary>Возвращает значение true или false, чтобы указать, присутствует ли заданная именованная константа для заданного перечисления.</summary>
+      <returns>Значение true, если заданная константа присутствует; в противном случае — значение false.</returns>
+      <param name="enumTypeName">Полное имя типа из пространства имен.</param>
+      <param name="valueName">Имя константы.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsEventPresent(System.String,System.String)">
+      <summary>Возвращает значение true или false, чтобы указать, присутствует ли заданное событие для заданного типа.</summary>
+      <returns>Значение true, если заданное событие присутствует для этого типа; в противном случае — значение false.</returns>
+      <param name="typeName">Полное имя типа из пространства имен.</param>
+      <param name="eventName">Имя события.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsMethodPresent(System.String,System.String)">
+      <summary>Возвращает значение true или false, чтобы указать, присутствует ли заданный метод для заданного типа.</summary>
+      <returns>Значение true, если заданный метод присутствует для этого типа; в противном случае — значение false.</returns>
+      <param name="typeName">Полное имя типа из пространства имен.</param>
+      <param name="methodName">Имя метода.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsMethodPresent(System.String,System.String,System.UInt32)">
+      <summary>Возвращает значение true или false, чтобы указать, присутствует ли заданная перегрузка метода с заданным количеством входных параметров для заданного типа.</summary>
+      <returns>Значение true, если заданный метод присутствует для этого типа; в противном случае — значение false.</returns>
+      <param name="typeName">Полное имя типа из пространства имен.</param>
+      <param name="methodName">Имя метода.</param>
+      <param name="inputParameterCount">Количество входных параметров для перегрузки.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsPropertyPresent(System.String,System.String)">
+      <summary>Возвращает значение true или false, чтобы указать, присутствует ли заданное свойство (доступное только для записи или чтения) для заданного типа.</summary>
+      <returns>Значение true, если заданное свойство присутствует для этого типа; в противном случае — значение false.</returns>
+      <param name="typeName">Полное имя типа из пространства имен.</param>
+      <param name="propertyName">Имя свойства.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsReadOnlyPropertyPresent(System.String,System.String)">
+      <summary>Возвращает значение true или false, чтобы указать, присутствует ли заданное доступное только для чтения свойство для заданного типа.</summary>
+      <returns>Значение true, если заданное свойство присутствует для этого типа; в противном случае — значение false.</returns>
+      <param name="typeName">Полное имя типа из пространства имен.</param>
+      <param name="propertyName">Имя свойства.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsTypePresent(System.String)">
+      <summary>Возвращает значение true или false, чтобы указать, присутствует ли заданный тип.</summary>
+      <returns>Значение true, если заданный тип присутствует; в противном случае — значение false.</returns>
+      <param name="typeName">Полное имя типа из пространства имен.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsWriteablePropertyPresent(System.String,System.String)">
+      <summary>Возвращает значение true или false, чтобы указать, присутствует ли заданное доступное только для записи свойство для заданного типа.</summary>
+      <returns>Значение true, если заданное свойство присутствует для этого типа; в противном случае — значение false.</returns>
+      <param name="typeName">Полное имя типа из пространства имен.</param>
+      <param name="propertyName">Имя свойства.</param>
+    </member><member name="T:Windows.Foundation.Metadata.AttributeTargets">
+      <summary>Задает конструкцию программирования, к которой применяется атрибут.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.All">
+      <summary>Атрибут применяется ко всем конструкциям программирования.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.ApiContract">
+      <summary>Атрибут применяется к контракту API.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Delegate">
+      <summary>Атрибут применяется к делегату.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Enum">
+      <summary>Атрибут применяется к перечислению.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Event">
+      <summary>Атрибут применяется к событию.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Field">
+      <summary>Атрибут применяется к полю.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Interface">
+      <summary>Атрибут применяется к интерфейсу.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.InterfaceImpl">
+      <summary>Атрибут применяется к реализации интерфейса.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Method">
+      <summary>Атрибут применяется к методу.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Parameter">
+      <summary>Атрибут применяется к параметру.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Property">
+      <summary>Атрибут применяется к свойству.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.RuntimeClass">
+      <summary>Атрибут применяется к классу среды выполнения.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Struct">
+      <summary>Атрибут применяется к структуре.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.AttributeUsageAttribute">
+      <summary>Задает использование другого атрибута.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.AttributeUsageAttribute.#ctor(Windows.Foundation.Metadata.AttributeTargets)">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+      <param name="A_0">Одно из несколько значений перечисления.</param>
+    </member><member name="T:Windows.Foundation.Metadata.ComposableAttribute">
+      <summary>Показывает, как составлен элемент программирования.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ComposableAttribute.#ctor(System.Type,Windows.Foundation.Metadata.CompositionType,System.UInt32)">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+      <param name="type">Тип объекта фабрики, используемый для создания элемента программирования.</param>
+      <param name="compositionType">Одно из значений перечисления.</param>
+      <param name="version">Версия.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ComposableAttribute.#ctor(System.Type,Windows.Foundation.Metadata.CompositionType,System.UInt32,System.String)">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+      <param name="type">Тип объекта фабрики, используемый для создания элемента программирования.</param>
+      <param name="compositionType">Одно из значений перечисления.</param>
+      <param name="version">Версия контракта API, в котором фабрика композиции была добавлена к фабрике активации класса среды выполнения.</param>
+      <param name="contract">Строка, представляющая тип контракта API, реализующего класс.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ComposableAttribute.#ctor(System.Type,Windows.Foundation.Metadata.CompositionType,System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+      <param name="type">Тип объекта фабрики, используемый для создания элемента программирования.</param>
+      <param name="compositionType">Одно из значений перечисления.</param>
+      <param name="version">Версия.</param>
+      <param name="platform">Значение перечисления. Значение по умолчанию — Windows.</param>
+    </member><member name="T:Windows.Foundation.Metadata.CompositionType">
+      <summary>Задает видимость элемента программирования к которому применяется атрибут с поддержкой композиции.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.CompositionType.Protected">
+      <summary>Указывает, что доступ к элементу программирования ограничен другими элементами в содержащем классе или типами, унаследованными от содержащего класса.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.CompositionType.Public">
+      <summary>Указывает, что доступ к элементу программирования не ограничен.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.DefaultAttribute">
+      <summary>Указывает интерфейс по умолчанию для класса среды выполнения.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.DefaultAttribute.#ctor">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.DefaultOverloadAttribute">
+      <summary>Указывает, что метод является методом перегрузки по умолчанию.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.DefaultOverloadAttribute.#ctor">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.DeprecatedAttribute">
+      <summary>Указывает, что тип или член должны быть отмечены в метаданных как нерекомендованные. Компиляторы и другие средства разработчика могут считывать этот атрибут и предоставлять пользователю сведения о нерекомендуемых типах и возможных альтернативах.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.DeprecatedAttribute.#ctor(System.String,Windows.Foundation.Metadata.DeprecationType,System.UInt32)">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+      <param name="message">Строковое сообщение, которое может использоваться компиляторами и другими средствами разработчика, чтобы информировать о том, что применение не рекомендуется, и предоставлять строковые имена альтернативных интерфейсов API.</param>
+      <param name="type">Значение перечисления. Значение по умолчанию — Deprecate.</param>
+      <param name="version">Константа, указывающая версию, которая является нерекомендуемой.</param>
+    </member><member name="M:Windows.Foundation.Metadata.DeprecatedAttribute.#ctor(System.String,Windows.Foundation.Metadata.DeprecationType,System.UInt32,System.String)">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+      <param name="message">Строковое сообщение, которое может использоваться компиляторами и другими средствами разработчика, чтобы информировать о том, что применение не рекомендуется, и предоставлять строковые имена альтернативных интерфейсов API.</param>
+      <param name="type">Значение перечисления. Значение по умолчанию — Deprecate.</param>
+      <param name="version">Константа, указывающая версию, которая является нерекомендуемой.</param>
+      <param name="contract">Строка, представляющая тип контракта API, реализующего нерекомендуемый тип или член.</param>
+    </member><member name="M:Windows.Foundation.Metadata.DeprecatedAttribute.#ctor(System.String,Windows.Foundation.Metadata.DeprecationType,System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>Создает и инициализирует новый экземпляр атрибутов, включая значение целевой платформы Platform.</summary>
+      <param name="message">Строковое сообщение, которое может использоваться компиляторами и другими средствами разработчика, чтобы информировать о том, что применение не рекомендуется, и предоставлять строковые имена альтернативных интерфейсов API.</param>
+      <param name="type">Значение перечисления. Значение по умолчанию — Deprecate.</param>
+      <param name="version">Константа, указывающая версию, которая является нерекомендуемой.</param>
+      <param name="platform">Значение перечисления. Значение по умолчанию — Windows.</param>
+    </member><member name="T:Windows.Foundation.Metadata.DeprecationType">
+      <summary>Указывает нерекомендованный способ Deprecate или Remove.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.DeprecationType.Deprecate">
+      <summary>Компиляторы и другие средства разработчика должны рассматривать эту сущность как нерекомендуемую. Это значение по умолчанию.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.DeprecationType.Remove">
+      <summary>Компиляторы и другие средства разработчика должны рассматривать эту сущность как удаленную.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.DualApiPartitionAttribute">
+      <summary>Указывает, что тип поддерживается в приложениях рабочего стола и в приложениях Магазина Windows.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.DualApiPartitionAttribute.#ctor">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.ExclusiveToAttribute">
+      <summary>Указывает, что заданный тип является эксклюзивным для этого типа.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ExclusiveToAttribute.#ctor(System.Type)">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+      <param name="typeName">Имя типа.</param>
+    </member><member name="T:Windows.Foundation.Metadata.ExperimentalAttribute">
+      <summary>Указывает, что тип или член должны быть отмечены в метаданных как экспериментальные и поэтому не могут присутствовать в конечной выпущенной версии пакета SDK или библиотеки.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ExperimentalAttribute.#ctor">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.GCPressureAmount">
+      <summary>Только для внутреннего использования в корпорации Майкрософт.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.GCPressureAmount.High">
+      <summary>Нехватка памяти более 100 000.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.GCPressureAmount.Low">
+      <summary>Нехватка памяти менее 10 000.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.GCPressureAmount.Medium">
+      <summary>Нехватка памяти от 10 до 100 Кбайт.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.GCPressureAttribute">
+      <summary>Только для внутреннего использования в корпорации Майкрософт.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.GCPressureAttribute.#ctor">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.GuidAttribute">
+      <summary>Указывает идентификатор GUID интерфейса или делегата.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.GuidAttribute.#ctor(System.UInt32,System.UInt16,System.UInt16,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte)">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+      <param name="a">Первые 4 байта GUID.</param>
+      <param name="b">Следующие 2 байта GUID.</param>
+      <param name="c">Следующие 2 байта GUID.</param>
+      <param name="d">Следующий байт GUID.</param>
+      <param name="e">Следующий байт GUID.</param>
+      <param name="f">Следующий байт GUID.</param>
+      <param name="g">Следующий байт GUID.</param>
+      <param name="h">Следующий байт GUID.</param>
+      <param name="i">Следующий байт GUID.</param>
+      <param name="j">Следующий байт GUID.</param>
+      <param name="k">Следующий байт GUID.</param>
+    </member><member name="T:Windows.Foundation.Metadata.HasVariantAttribute">
+      <summary>Указывает, что тип является экземпляром варианта IInspectable. Применяется к классам среды выполнения, интерфейсам и параметризованным интерфейсам.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.HasVariantAttribute.#ctor">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.InternalAttribute">
+      <summary>Указывает, что тип или член должны быть отмечены в метаданных как внутренние для SDK или платформы и предназначены для использования только системными компонентами.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.InternalAttribute.#ctor">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.LengthIsAttribute">
+      <summary>Указывает количество элементов массива.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.LengthIsAttribute.#ctor(System.Int32)">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+      <param name="indexLengthParameter">Количество элементов массива.</param>
+    </member><member name="T:Windows.Foundation.Metadata.MarshalingBehaviorAttribute">
+      <summary>Указывает поведение маршалинга компонента среды выполнения Windows.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.MarshalingBehaviorAttribute.#ctor(Windows.Foundation.Metadata.MarshalingType)">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+      <param name="behavior">Одно из значений перечисления.</param>
+    </member><member name="T:Windows.Foundation.Metadata.MarshalingType">
+      <summary>Указывает тип маршалинга для класса</summary>
+    </member><member name="F:Windows.Foundation.Metadata.MarshalingType.Agile">
+      <summary>Маршалинг и демаршалинг класса к одному и тому же значению указателя на всех интерфейсах.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.MarshalingType.InvalidMarshaling">
+      <summary>Класс невозможно маршалировать.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.MarshalingType.None">
+      <summary>Класс предотвращает маршалинг для всех интерфейсах.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.MarshalingType.Standard">
+      <summary>Класс не реализует интерфейс IMarshal или не переадресует к функции CoGetStandardMarshal на всех интерфейсах.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.MetadataMarshalAttribute">
+      <summary>Указывает, что средствам необходимо создать запись для интерфейса при создании пакета приложения.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.MetadataMarshalAttribute.#ctor">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.MuseAttribute">
+      <summary>Указывает, что класс среды выполнения совместим с приложениями Магазина Windows, являющихся веб-браузерами.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.MuseAttribute.#ctor">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.OverloadAttribute">
+      <summary>Идентифицирует метод как перегруженный в языке, поддерживающем перегрузку.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.OverloadAttribute.#ctor(System.String)">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+      <param name="method">Имя представляющее метод на языке проекта.</param>
+    </member><member name="T:Windows.Foundation.Metadata.OverridableAttribute">
+      <summary>Указывает, что интерфейс содержит переопределяемые методы.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.OverridableAttribute.#ctor">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.Platform">
+      <summary>Определяет платформы, в которых должен поддерживаться указанный тип, в соответствии с использованием в атрибутах и метаданных среды выполнения Windows.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.Platform.Windows">
+      <summary>Для использования метаданными Windows.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.Platform.WindowsPhone">
+      <summary>Для использования метаданными Windows Phone.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.PlatformAttribute">
+      <summary>Объявляет платформу, в которой должен поддерживаться тип, когда создаются метаданные для определенной платформы.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.PlatformAttribute.#ctor(Windows.Foundation.Metadata.Platform)">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+      <param name="platform">Значение перечисления. Значение по умолчанию — Windows.</param>
+    </member><member name="T:Windows.Foundation.Metadata.ProtectedAttribute">
+      <summary>Указывает, что интерфейс содержит защищенные методы.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ProtectedAttribute.#ctor">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.RangeAttribute">
+      <summary>Указывает ограничения числового диапазона для значения в поле данных.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.RangeAttribute.#ctor(System.Int32,System.Int32)">
+      <summary>Создает и инициализирует новый экземпляр атрибута с заданными минимальным и максимальным значениями.</summary>
+      <param name="minValue">Минимальное допустимое значение.</param>
+      <param name="maxValue">Максимальное допустимое значение.</param>
+    </member><member name="T:Windows.Foundation.Metadata.RemoteAsyncAttribute">
+      <summary>Указывает, что интерфейс может быть предоставлен с помощью асинхронной формы шаблона Async.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.RemoteAsyncAttribute.#ctor">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.StaticAttribute">
+      <summary>Указывает интерфейс, который содержит только статические методы.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.StaticAttribute.#ctor(System.Type,System.UInt32)">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+      <param name="type">Тип, содержащий статические методы для класса среды выполнения.</param>
+      <param name="version">Версия, в которую добавлен статический интерфейс.</param>
+    </member><member name="M:Windows.Foundation.Metadata.StaticAttribute.#ctor(System.Type,System.UInt32,System.String)">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+      <param name="type">Тип, содержащий статические методы для класса среды выполнения.</param>
+      <param name="version">Версия контракта API, в котором статическая фабрика была добавлена к фабрике активации класса среды выполнения.</param>
+      <param name="contractName">Строка, представляющая тип контракта API, реализующего класс.</param>
+    </member><member name="M:Windows.Foundation.Metadata.StaticAttribute.#ctor(System.Type,System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+      <param name="type">Тип, содержащий статические методы для класса среды выполнения.</param>
+      <param name="version">Версия, в которую добавлен статический интерфейс.</param>
+      <param name="platform">Значение перечисления. Значение по умолчанию — Windows.</param>
+    </member><member name="T:Windows.Foundation.Metadata.ThreadingAttribute">
+      <summary>Указывает модель потоков компонента среды выполнения Windows.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ThreadingAttribute.#ctor(Windows.Foundation.Metadata.ThreadingModel)">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+      <param name="model">Одно из значений перечисления.</param>
+    </member><member name="T:Windows.Foundation.Metadata.ThreadingModel">
+      <summary>Задает потоковую модель.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.ThreadingModel.Both">
+      <summary>Однопотоковое и многопотоковое подразделения.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.ThreadingModel.InvalidThreading">
+      <summary>Отсутствует допустимая потоковая модель.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.ThreadingModel.MTA">
+      <summary>Многопоточное подразделение.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.ThreadingModel.STA">
+      <summary>Однопотоковое подразделение.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.VariantAttribute">
+      <summary>Указывает, что элемент является экземпляром варианта IInspectable. Применяется к параметрам метода, его свойствам и возвращаемым значениям типов.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.VariantAttribute.#ctor">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.VersionAttribute">
+      <summary>Указывает версию типа.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.VersionAttribute.#ctor(System.UInt32)">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+      <param name="version">Версия, связываемая с помеченным объектом.</param>
+    </member><member name="M:Windows.Foundation.Metadata.VersionAttribute.#ctor(System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+      <param name="version">Версия, связываемая с помеченным объектом.</param>
+      <param name="platform">Значение перечисления. Значение по умолчанию — Windows.</param>
+    </member><member name="T:Windows.Foundation.Metadata.WebHostHiddenAttribute">
+      <summary>Идентифицирует тип как тип, функциональные возможности которого не проецируются на заданный целевой язык.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.WebHostHiddenAttribute.#ctor">
+      <summary>Создает и инициализирует новый экземпляр атрибута.</summary>
+    </member></members>
+</doc>

@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Calls.CallsVoipContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Calls.CallAnswerEventArgs">
+      <summary>Unterstützt das AnswerRequested-Ereignis der VoipPhoneCall-Klasse.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+    </member><member name="P:Windows.ApplicationModel.Calls.CallAnswerEventArgs.AcceptedMedia">
+      <summary>Ruft die Medientypen ab, die der Benutzer ausgewählt hat, wenn der Aufruf beantwortet wird.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+      <returns>Die Medientypen, die der Benutzer ausgewählt hat, wenn der Aufruf beantwortet wird.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.CallRejectEventArgs">
+      <summary>Unterstützt das RejectRequested-Ereignis der VoipPhoneCall-Klasse.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+    </member><member name="P:Windows.ApplicationModel.Calls.CallRejectEventArgs.RejectReason">
+      <summary>Ruft den Grund ab, aus dem der eingehende Aufruf abgelehnt wurde.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+      <returns>Der Grund, aus dem der eingehende Anruf abgelehnt wurde.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.CallStateChangeEventArgs">
+      <summary>Unterstützt die Ereignisse EndRequested, HoldRequested und ResumeRequested der VoipPhoneCall-Klasse.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+    </member><member name="P:Windows.ApplicationModel.Calls.CallStateChangeEventArgs.State">
+      <summary>Ruft den aktuellen Zustand des VoIP-Anrufs ab.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+      <returns>Der aktuellen Zustand des VOIP-Anrufs.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.MuteChangeEventArgs">
+      <summary>Unterstützt die Ereignisse NotifyMuted und NotifyUnmuted.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+    </member><member name="P:Windows.ApplicationModel.Calls.MuteChangeEventArgs.Muted">
+      <summary>Ruft ab, ob der Aufruf aktuell stumm geschaltet wird.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+      <returns>Ob der Aufruf aktuell stumm geschaltet ist.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.VoipCallCoordinator">
+      <summary>Lässt zu, dass eine Anwendung VoIP-Anrufe verwaltet.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+    </member><member name="E:Windows.ApplicationModel.Calls.VoipCallCoordinator.MuteStateChanged">
+      <summary>Wird ausgelöst, wenn sich der Stummschaltungsstatus für den Telefonanruf ändert.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.CancelUpgrade(System.Guid)">
+      <summary>Bricht das Upgrade zu einem VoIP-Anruf ab.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+      <param name="callUpgradeGuid">Die GUID für den VoIP-Anruf.</param>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.GetDefault">
+      <summary>Ruft die Standardinstanz der VoipCallCoordinator-Klasse ab.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+      <returns>Der Standard-Anrufkoordinator.</returns>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.NotifyMuted">
+      <summary>Benachrichtigt das System, dass der Benutzer den Anruf mit der Benutzeroberfläche der VoIP-App stumm geschaltet hat.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.NotifyUnmuted">
+      <summary>Benachrichtigt das System, dass der Benutzer das Stummschalten des Anrufs mit der Benutzeroberfläche der VoIP-App aufgehoben hat.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestIncomingUpgradeToVideoCall(System.String,System.String,System.String,Windows.Foundation.Uri,System.String,Windows.Foundation.Uri,System.String,Windows.Foundation.Uri,Windows.Foundation.TimeSpan)">
+      <summary>Stellt eine Anfrage an das System für einen eingehenden Videoanruf, der einen vorhandenen Anruf ersetzt.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+      <returns>Das Objekt, das den neuen eingehenden Aufruf darstellt.</returns>
+      <param name="context">Eine Zeichenfolge, die der entsprechenden Vordergrund-App als detaillierter Link übergeben wird. Dies kann ein Kontaktname oder andere Daten sein, die verwendet werden können, um die Benutzeroberfläche der App schneller aufzufüllen. Die maximale Länge beträgt 128 Zeichen. Dieser Parameter darf nicht NULL sein und muss sich auf eine Aufgabe beziehen, die in der Manifestdatei der App definiert ist.</param>
+      <param name="contactName">Der Kontaktname des Anrufers, der auf der Benutzeroberfläche des eingehenden Aufrufs angezeigt werden soll. Die maximale Länge beträgt 128 Zeichen.</param>
+      <param name="contactNumber">Die Telefonnummer des Anrufers, die auf der Benutzeroberfläche des eingehenden Aufrufs angezeigt wird. Die maximale Länge beträgt 128 Zeichen.</param>
+      <param name="contactImage">Der URI einer Bilddatei, die dem Anrufer zugeordnet ist, der auf der Benutzeroberfläche für eingehende Anrufe angezeigt werden soll. Der Dateityp muss PNG oder JPG sein. Die maximale Dateigröße ist 1 MB.</param>
+      <param name="serviceName">Der Name des VoIP-Diensts oder der VoIP-Anwendung. Die maximale Länge beträgt 128 Zeichen.</param>
+      <param name="brandingImage">Der URI einer Bilddatei, die ein Logo oder ein Symbol des VoIP-Diensts oder der Anwendung ist, der bzw. die auf der Benutzeroberfläche für eingehende Anrufe angezeigt werden soll. Der Dateityp muss PNG oder JPG sein. Die maximale Dateigröße ist 128 MB.</param>
+      <param name="callDetails">Eine Zeichenfolge, die angibt, für wen der Anruf erfolgt. Die maximale Länge beträgt 128 Zeichen.</param>
+      <param name="ringtone">Der URI einer Audiodatei, die den Klingelton für diesen Anruf enthält. Der Dateityp muss WMA oder MP3 sein. Die maximale Dateigröße ist 1 MB.</param>
+      <param name="ringTimeout">Die Zeit in Sekunden, die das System vor dem Ablehnen eines Anrufs warten soll um festzustellen, ob der Benutzer den Anruf annimmt oder ignoriert. Der zulässige Bereich beträgt 5 bis 120 Sekunden. Der Standardwert ist 30&amp;nbsp;Sekunden.</param>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestNewIncomingCall(System.String,System.String,System.String,Windows.Foundation.Uri,System.String,Windows.Foundation.Uri,System.String,Windows.Foundation.Uri,Windows.ApplicationModel.Calls.VoipPhoneCallMedia,Windows.Foundation.TimeSpan)">
+      <summary>Stellt eine Anfrage an das System für einen neuen eingehenden Anruf.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+      <returns>Das Objekt, das den neuen eingehenden Aufruf darstellt.</returns>
+      <param name="context">Eine Zeichenfolge, die der entsprechenden Vordergrund-App als detaillierter Link übergeben wird. Die maximale Länge beträgt 128 Zeichen. Dieser Parameter darf nicht NULL sein.</param>
+      <param name="contactName">Der Kontaktname des Anrufers, der auf der Benutzeroberfläche des eingehenden Aufrufs angezeigt werden soll. Die maximale Länge beträgt 128 Zeichen.</param>
+      <param name="contactNumber">Die Telefonnummer des Anrufers, die auf der Benutzeroberfläche des eingehenden Aufrufs angezeigt wird. Die maximale Länge beträgt 128 Zeichen.</param>
+      <param name="contactImage">Der URI einer Bilddatei, die dem Anrufer zugeordnet ist, der auf der Benutzeroberfläche für eingehende Anrufe angezeigt werden soll. Der Dateityp muss PNG oder JPG sein. Die maximale Dateigröße ist 1 MB.</param>
+      <param name="serviceName">Der Name des VoIP-Diensts oder der VoIP-Anwendung. Die maximale Länge beträgt 128 Zeichen.</param>
+      <param name="brandingImage">Der URI einer Bilddatei, die ein Logo oder ein Symbol des VoIP-Diensts oder der Anwendung ist, der bzw. die auf der Benutzeroberfläche für eingehende Anrufe angezeigt werden soll. Der Dateityp muss PNG oder JPG sein. Die maximale Dateigröße ist 128 KB.</param>
+      <param name="callDetails">Eine Zeichenfolge, die angibt, für wen der Anruf erfolgt. Die maximale Länge beträgt 128 Zeichen.</param>
+      <param name="ringtone">Der URI einer Audiodatei, die den Klingelton für diesen Anruf enthält. Der Dateityp muss WMA oder MP3 sein. Die maximale Dateigröße ist 1 MB.</param>
+      <param name="media">Die Medientypen des neuen eingehenden Aufrufs.</param>
+      <param name="ringTimeout">Die Zeit in Sekunden, die das System vor dem Ablehnen eines Anrufs warten soll um festzustellen, ob der Benutzer den Anruf annimmt oder ignoriert. Der zulässige Bereich beträgt 5 bis 120 Sekunden. Der Standardwert ist 30&amp;nbsp;Sekunden.</param>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestNewOutgoingCall(System.String,System.String,System.String,Windows.ApplicationModel.Calls.VoipPhoneCallMedia)">
+      <summary>Stellt eine Anfrage an das System für einen neuen ausgehenden Anruf.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+      <returns>Das Objekt, das den neuen eingehenden Aufruf darstellt.</returns>
+      <param name="context">Eine Zeichenfolge, die der entsprechenden Vordergrund-App als detaillierter Link übergeben wird. Die maximale Länge beträgt 128 Zeichen. Dieser Parameter darf nicht NULL sein.</param>
+      <param name="contactName">Der Name oder die ID des Anrufers, der in der minimierten Anrufbenutzeroberfläche des Telefons angezeigt wird. Die maximale Länge beträgt 128 Zeichen.</param>
+      <param name="serviceName">Der Name des VoIP-Diensts, der in der minimierten Anrufbenutzeroberfläche des Telefons angezeigt wird. Die maximale Länge beträgt 128 Zeichen.</param>
+      <param name="media">Das Objekt, das den neuen ausgehenden Aufruf darstellt.</param>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestOutgoingUpgradeToVideoCall(System.Guid,System.String,System.String,System.String)">
+      <summary>Stellt eine Anfrage an das System zur Erstellung eines ausgehenden Videoanrufs, der einen älteren Mobilanruf ersetzt.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+      <returns>Das Objekt, das den neuen ausgehenden Aufruf darstellt.</returns>
+      <param name="callUpgradeGuid">Der GUID des Anrufs.</param>
+      <param name="context">Eine Zeichenfolge, die der entsprechenden Vordergrund-App als detaillierter Link übergeben wird. Dies kann ein Kontaktname oder andere Daten sein, die verwendet werden können, um die Benutzeroberfläche der App schneller aufzufüllen. Die maximale Länge beträgt 128 Zeichen. Dieser Parameter darf nicht NULL sein und muss sich auf eine Aufgabe beziehen, die in der Manifestdatei der App definiert ist.</param>
+      <param name="contactName">Der Name oder die ID des Anrufers, der in der minimierten Anrufbenutzeroberfläche des Telefons angezeigt wird. Die maximale Länge beträgt 128 Zeichen.</param>
+      <param name="serviceName">Der Name des VoIP-Diensts, der in der minimierten Anrufbenutzeroberfläche des Telefons angezeigt wird. Die maximale Länge beträgt 128 Zeichen.</param>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.ReserveCallResourcesAsync(System.String)">
+      <summary>Reserviert die Ressourcen, die für einen VoIP-Anruf notwendig sind.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+      <returns>Das Ergebnis der Reservierungsaktion.</returns>
+      <param name="taskEntryPoint">Der Name einer anwendungsdefinierten Klasse, die die Verarbeitung eines Hintergrundtasks ausführt. Weitere Informationen finden Sie unter TaskEntryPoint.</param>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.TerminateCellularCall(System.Guid)">
+      <summary>Beendet einen Mobilanruf, um zu einem VoIP-Anruf zu aktualisieren.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+      <param name="callUpgradeGuid">Die GUID für den VoIP-Anruf.</param>
+    </member><member name="T:Windows.ApplicationModel.Calls.VoipPhoneCall">
+      <summary>Stellt einen VoIP-Anruf dar.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+    </member><member name="P:Windows.ApplicationModel.Calls.VoipPhoneCall.CallMedia">
+      <summary>Ruft die Medientypen ab, die beim Aufruf verwendet werden.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+      <returns>Die Medientypen, die beim Aufruf verwendet werden.</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.VoipPhoneCall.ContactName">
+      <summary>Ruft den Kontaktnamen ab oder legt ihn fest, der dem VoIP-Anruf zugeordnet ist.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+      <returns>Der Kontaktname, der dem VoIP-Aufruf zugeordnet ist.</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.VoipPhoneCall.StartTime">
+      <summary>Ruft die Startzeit ab, die dem VoIP-Anruf zugeordnet ist, oder legt sie fest.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+      <returns>Die mit dem Anruf verbundene Startzeit.</returns>
+    </member><member name="E:Windows.ApplicationModel.Calls.VoipPhoneCall.AnswerRequested">
+      <summary>Wird ausgelöst, wenn der Benutzer einen eingehenden Aufruf beantwortet.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+    </member><member name="E:Windows.ApplicationModel.Calls.VoipPhoneCall.EndRequested">
+      <summary>Wird ausgelöst, um die VoIP-App darauf hinzuweisen, dass der Aufruf beendet werden soll.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+    </member><member name="E:Windows.ApplicationModel.Calls.VoipPhoneCall.HoldRequested">
+      <summary>Wird ausgelöst, um die VoIP-App darauf hinzuweisen, dass der Aufruf gehalten werden sollte.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+    </member><member name="E:Windows.ApplicationModel.Calls.VoipPhoneCall.RejectRequested">
+      <summary>Wird ausgelöst, wenn ein Aufruf abgelehnt wurde.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+    </member><member name="E:Windows.ApplicationModel.Calls.VoipPhoneCall.ResumeRequested">
+      <summary>Wird ausgelöst, um anzugeben, dass ein zuvor gehaltener VoIP-Aufruf wieder aktiviert werden sollte.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallActive">
+      <summary>Benachrichtigt das System, dass der VoIP-Aufruf aktiv ist.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallEnded">
+      <summary>Benachrichtigt das System, dass der Aufruf beendet wurde.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallHeld">
+      <summary>Benachrichtigt das System, dass der Aufruf aktuell gehalten wird.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallReady">
+      <summary>Wenn ein Anruf von Mobilfunkt auf Video hochgestuft wird, wird das System benachrichtigt, dass die App die Einrichtung des Audio- und Videostreams für den Videoanruf abgeschlossen hat, damit das System den vorhandenen Mobilfunkanruf beenden kann.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+    </member><member name="T:Windows.ApplicationModel.Calls.VoipPhoneCallMedia">
+      <summary>Gibt die Medientypen an, die von einem VoIP-Aufruf verwendet werden.</summary>
+      <capability type="voipCall">Erforderlich für Anwendungen zum Zugriff auf die VOIP-Anruf-APIs im Windows.ApplicationModel.Calls-Namespace.</capability>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallMedia.Audio">
+      <summary>Der Aufruf verwendet Audio.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallMedia.None">
+      <summary>Der Aufruf verwendet keine Medien.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallMedia.Video">
+      <summary>Der Aufruf verwendet Video.</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason">
+      <summary>Gibt den Grund dafür an, dass ein eingehender Aufruf abgelehnt wurde.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason.EmergencyCallExists">
+      <summary>Ein Notruf wird ausgeführt.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason.InvalidCallState">
+      <summary>Der Anruf befindet sich in einem ungültigen Zustand.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason.OtherIncomingCall">
+      <summary>Ein weiterer eingehender Aufruf wurde angenommen.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason.TimedOut">
+      <summary>Der eingehende Aufruf hat das Zeitlimit überschritten.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason.UserIgnored">
+      <summary>Der Benutzer hat eine Schaltfläche gedrückt, um den Anruf zu ignorieren.</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.VoipPhoneCallResourceReservationStatus">
+      <summary>Zeigt das Ergebnis des Versuchs zur Reservierung von VoIP-Ressourcen an.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallResourceReservationStatus.ResourcesNotAvailable">
+      <summary>Die Ressourcen wurden nicht reserviert, da sie nicht verfügbar sind.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallResourceReservationStatus.Success">
+      <summary>Die Ressourcen wurden reserviert.</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.VoipPhoneCallState">
+      <summary>Gibt den Zustand eines VoIP-Aufrufs an.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallState.Active">
+      <summary>Der Aufruf ist aktiv.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallState.Ended">
+      <summary>Der Anruf wurde beendet.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallState.Held">
+      <summary>Der Aufruf wird gehalten.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallState.Incoming">
+      <summary>Der Aufruf ist eingehend aber bisher nicht aktiv.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallState.Outgoing">
+      <summary>Der Aufruf ist ausgehend aber bisher nicht aktiv.</summary>
+    </member></members>
+</doc>

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Networking.Sockets.ControlChannelTriggerContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Networking.Sockets.ControlChannelTrigger">
+      <summary>TCP 接続を確立し、受信トラフィックの通知を受け取ることを希望するオブジェクトが、リアルタイム通知をバックグラウンドで受け取ることができるようにします。 このクラスは、Windows Phone ではサポートされていません。</summary>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.#ctor(System.String,System.UInt32)">
+      <summary>コントロール チャンネル トリガー ID およびサーバー keep-alive 間隔値を含む新規 ControlChannelTrigger オブジェクトを作成します。 ControlChannelTrigger クラスは Windows Phone ではサポートされません。</summary>
+      <param name="channelId">ローカル コンピューター上のさまざまなコントロール チャネル トリガーを区別するために使用する文字列。 この文字列の許可される最大長は 64 文字です。</param>
+      <param name="serverKeepAliveIntervalInMinutes">使用されるアプリケーションとネットワーク接続が起動するときを示すため、システムに登録されたキープアライブ間隔 (分単位)。 このパラメーターに対して設定できる最小値は 15 分です。 設定できる最大値は 1439 分 (約 24 時間) です。</param>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.#ctor(System.String,System.UInt32,Windows.Networking.Sockets.ControlChannelTriggerResourceType)">
+      <summary>コントロール チャネル トリガー ID、サーバー keep-alive 間隔値、およびコントロール チャネル トリガーに必要なリソースの種類を含む新規 ControlChannelTrigger オブジェクトを作成します。 ControlChannelTrigger クラスは Windows Phone ではサポートされません。</summary>
+      <param name="channelId">ローカル コンピューター上のさまざまなコントロール チャネル トリガーを区別するために使用する文字列。 この文字列の許可される最大長は 64 文字です。</param>
+      <param name="serverKeepAliveIntervalInMinutes">使用されるアプリケーションとネットワーク接続が起動するときを示すため、システムに登録されたキープアライブ間隔 (分単位)。 このパラメーターに対して設定できる最小値は 15 分です。 設定できる最大値は 1439 分 (約 24 時間) です。</param>
+      <param name="resourceRequestType">コントロール チャネル トリガーで要求されるリソースの種類。</param>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.ControlChannelTriggerId">
+      <summary>ローカル コンピューター上のさまざまなコントロール チャネル トリガーを区別するために使用できる文字列を取得します。 ControlChannelTrigger クラスは Windows Phone ではサポートされません。</summary>
+      <returns>さまざまなコントロール チャネル トリガーを区別するために使用できる文字列。</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.CurrentKeepAliveIntervalInMinutes">
+      <summary>現在のネットワークの状態に基づいて TCP スタックの低レベル ネットワーク コンポーネントによって維持されるネットワークの keep-alive 間隔を分単位で取得します。 ControlChannelTrigger クラスは Windows Phone ではサポートされません。</summary>
+      <returns>現在のネットワークの状態に基づいて TCP スタックの低レベル ネットワーク コンポーネントによって維持されるネットワークの keep-alive 間隔 (分単位)。</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.IsWakeFromLowPowerSupported">
+      <summary>低電力状態からのウェイクがサポートされるかどうかを示す値を取得します。</summary>
+      <returns>true の場合、低電力状態からのウェイクがサポートされます。</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.KeepAliveTrigger">
+      <summary>バックグラウンド ブローカー インフラストラクチャを持つアクティベーション クラスをバインドするためにアプリケーションが使用する ControlChannelTrigger オブジェクトに関連付けられたキープ アライブ トリガーを表すオブジェクトを取得します。 ControlChannelTrigger クラスは Windows Phone ではサポートされません。</summary>
+      <returns>keep-alive バックグラウンド タスクのアクティベーション クラス ID を表す文字列。</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.PushNotificationTrigger">
+      <summary>バックグラウンド ブローカー インフラストラクチャを持つアクティベーション クラスをバインドするためにアプリケーションが使用する ControlChannelTrigger オブジェクトに関連付けられたプッシュ通知トリガーを表すオブジェクトを取得します。 ControlChannelTrigger クラスは Windows Phone ではサポートされません。</summary>
+      <returns>プッシュ通知のバックグラウンド タスクのアクティベーション クラス ID を表す文字列。</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.ServerKeepAliveIntervalInMinutes">
+      <summary>アプリケーションおよび関連付けられているネットワーク接続をいつ起動するかを示すシステムに登録された、サーバーの keep-alive 間隔 (分単位) を取得または設定します。 ControlChannelTrigger クラスは Windows Phone ではサポートされません。</summary>
+      <returns>アプリケーションおよび関連付けられているネットワーク接続が起動する必要があるときを示すシステムに登録された分単位のサーバーのキープアライブ間隔。</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.TransportObject">
+      <summary>ControlChannelTrigger オブジェクトに関連付けられたトランスポート接続に使用しているトランスポート オブジェクトを取得します。 ControlChannelTrigger クラスは Windows Phone ではサポートされません。</summary>
+      <returns>トランスポート接続に使用しているトランスポート オブジェクト。</returns>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.Close">
+      <summary>ControlChannelTrigger オブジェクトを閉じます。 このメソッドは、Windows Phone ではサポートされません。</summary>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.DecreaseNetworkKeepAliveInterval">
+      <summary>ネットワーク仲介者によるスリープ解除付きのネットワーク keep-alive 間隔がシステムで維持されているときに、その間隔の時間が長すぎることと時間を短くする必要があることを示す方法をアプリケーションに提供します。 このメソッドは Windows.Networking.Sockets のクラス要素と関連する名前空間に適用されます。 ControlChannelTrigger クラスは Windows Phone ではサポートされません。</summary>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.FlushTransport">
+      <summary>ControlChannelTrigger に関連付けられたトランスポート接続で使用されるすべてのネットワーク データを、ネットワーク スタックにフラッシュします。 ControlChannelTrigger クラスは Windows Phone ではサポートされません。</summary>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.UsingTransport(System.Object)">
+      <summary>Windows.Networking.Sockets および関連する名前空間のクラス要素がコントロール チャネルのトリガーで使用される転送接続を設定します。 ControlChannelTrigger クラスは Windows Phone ではサポートされません。</summary>
+      <param name="transport">ネットワーク トランスポートを表すネットワーク クラスのインスタンス。</param>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.WaitForPushEnabled">
+      <summary>接続が確立済みで、システムが制御通信路のトリガーの内部構成を完了する必要があることを、アプリケーションがシステムに知らせるようにします。 ControlChannelTrigger クラスは Windows Phone ではサポートされません。</summary>
+      <returns>ControlChannelTrigger オブジェクトの構成を完了できたかどうかを示す値。</returns>
+    </member><member name="T:Windows.Networking.Sockets.ControlChannelTriggerResetReason">
+      <summary>ControlChannelTrigger がリセットされた理由。 この列挙型は、Windows Phone ではサポートされません。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResetReason.ApplicationRestart">
+      <summary>ControlChannelTrigger は、アプリケーションの再起動の結果としてリセットされました。 この値は、Windows 8.1、Windows Server 2012 R2 以降でサポートされています。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResetReason.FastUserSwitched">
+      <summary>ControlChannelTrigger は、ユーザーの簡易切り替えの結果としてリセットされました。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResetReason.LowPowerExit">
+      <summary>ControlChannelTrigger は、低電力での終了 (接続状態のスタンバイでの終了) の結果としてリセットされました。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResetReason.QuietHoursExit">
+      <summary>ControlChannelTrigger は、デバイスに設定されている通知の停止時間および終了した通知の停止時間の結果、リセットされました。 この値は、Windows 8.1、Windows Server 2012 R2 以降でサポートされています。</summary>
+    </member><member name="T:Windows.Networking.Sockets.ControlChannelTriggerResourceType">
+      <summary>コントロール チャネル トリガーで使用されるリソースの種類。 この列挙型は、Windows Phone ではサポートされません。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResourceType.RequestHardwareSlot">
+      <summary>システムからハードウェア スロットを要求します。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResourceType.RequestSoftwareSlot">
+      <summary>システムからソフトウェア スロットを要求します。</summary>
+    </member><member name="T:Windows.Networking.Sockets.ControlChannelTriggerStatus">
+      <summary>Windows.Networking.Sockets および関連の名前空間でクラス要素によって使用される ControlChannelTrigger オブジェクトの構成をシステムで完了できたかどうかを指定します。 この列挙型は、Windows Phone ではサポートされません。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.HardwareSlotAllocated">
+      <summary>ハードウェア スロットがシステムによって割り当てられました。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.HardwareSlotRequested">
+      <summary>ポリシーのチェックが成功し、ハードウェア スロットがシステムから要求されました。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.PolicyError">
+      <summary>システムが ControlChannelTrigger の構成を完了しようとしたときに発生したポリシー エラー。 このエラーは、ハードウェアまたはソフトウェア スロットに対し、システム ポリシーで許可されている数を超えてアプリケーションが接続を要求したとき発生します。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.ServiceUnavailable">
+      <summary>ControlChannelTrigger によって提供されたサービスを利用できません。 これは、ネットワーク接続のブローカー サービスがまだ準備できていないが、アプリケーションが ControlChannelTrigger チャネルを確立しようとしている場合に発生することがあります。 このステータス コードは、高速ユーザー切り替えが行われ、新しいユーザーが ControlChannelTrigger チャネルを確立しようとした場合に生成されます。 システムが省電力モード（接続済みスタンバイ モード) になり、アプリケーションがソフトウェア スロットを作成しようとしている場合。 ソフトウェアのスロットは、システムがアクティブで、最小電源モードでない場合にのみ使用できます。 これら 2 つのケースの軽減は、システム イベント ブローカーのイベントをリッスンし、その位置の ControlChannelTrigger チャネルを登録します。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.SoftwareSlotAllocated">
+      <summary>ポリシーのチェックが成功し、ソフトウェア スロットがシステムによって割り当てられました。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.SystemError">
+      <summary>ハードウェア スロットの ControlChannelTrigger の構成を完了しようとしたときに、システム エラーが発生しました。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.TransportDisconnected">
+      <summary>ControlChannelTrigger に関連付けられたネットワーク トランスポートは切断されています。 基になる TCP 接続は、リモート送信先から受け取った TCP リセット、またはアプリケーションかリモート送信先による正常な切断によって、既に切断されました。 TCP リセットまたはリモートの宛先から送信された正常な切断が、最も一般的に発生します。</summary>
+    </member><member name="T:Windows.Networking.Sockets.IControlChannelTriggerEventDetails">
+      <summary>コントロール チャンネル トリガーの区別に使用され、バックグラウンドのブローカー インフラストラクチャによってインスタンス化されるオブジェクトです。 このインターフェイスは、Windows Phone ではサポートされません。</summary>
+    </member><member name="P:Windows.Networking.Sockets.IControlChannelTriggerEventDetails.ControlChannelTrigger">
+      <summary>IControlChannelTriggerEventDetails オブジェクトに関連付けられた ControlChannelTrigger オブジェクトを取得します。 IControlChannelTriggerEventDetails インターフェイスは Windows Phone ではサポートされません。</summary>
+      <returns>ControlChannelTrigger オブジェクト。</returns>
+    </member><member name="T:Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails">
+      <summary>ControlChannelTrigger がリセットされたことを ControlChannelReset イベントが示すためにバックグラウンドのブローカー インフラストラクチャによってインスタンス化されるオブジェクト。 このインターフェイスは、Windows Phone ではサポートされません。</summary>
+    </member><member name="P:Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails.HardwareSlotReset">
+      <summary>ハードウェア スロットが ControlChannelTrigger リセット イベントによって影響を受けたかどうかを示す値。 IControlChannelTriggerResetEventDetails インターフェイスは Windows Phone ではサポートされません。</summary>
+      <returns>ハードウェア スロットが ControlChannelTrigger リセット イベントによって影響を受けたかどうかを示す値。</returns>
+    </member><member name="P:Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails.ResetReason">
+      <summary>ControlChannelTrigger がリセットされた理由を示す値。 IControlChannelTriggerResetEventDetails インターフェイスは Windows Phone ではサポートされません。</summary>
+      <returns>ControlChannelTrigger がリセットされた理由を示す値。</returns>
+    </member><member name="P:Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails.SoftwareSlotReset">
+      <summary>ソフトウェア スロットが ControlChannelTrigger リセット イベントによって影響を受けたかどうかを示す値。 IControlChannelTriggerResetEventDetails インターフェイスは Windows Phone ではサポートされません。</summary>
+      <returns>ソフトウェア スロットが ControlChannelTrigger リセット イベントによって影響を受けたかどうかを示す値。</returns>
+    </member></members>
+</doc>

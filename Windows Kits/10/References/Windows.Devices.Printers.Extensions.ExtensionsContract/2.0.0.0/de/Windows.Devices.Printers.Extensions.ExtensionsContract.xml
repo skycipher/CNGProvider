@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Printers.Extensions.ExtensionsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Printers.Extensions.PrintExtensionContext">
+      <summary>Erstellt den Kontext für das Druckererweiterungsobjekt.</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintExtensionContext.FromDeviceId(System.String)">
+      <summary>Ruft den Kontext für das Druckererweiterungsobjekt auf der Grundlage der DeviceInformation-ID ab.</summary>
+      <returns>Zeiger auf den Kontext.</returns>
+      <param name="deviceId">Die ID der Geräteinformationen für das Druckgerät.</param>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails">
+      <summary>Enthält Eigenschaften, die einem Client ermöglichen, auf Druckereignisdaten und Angaben zum Druckernamen zuzugreifen und/oder diese zu ändern.</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails.EventData">
+      <summary>Ruft die Ereignisdaten für ein Druckbenachrichtigungsereignis ab, oder legt diese fest.</summary>
+      <returns>Die Druckbenachrichtigungs-Ereignisdaten.</returns>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails.PrinterName">
+      <summary>Ruft den Namen des Druckgeräts ab, das der Druckbenachrichtigung zugeordnet ist.</summary>
+      <returns>Der Druckergerätename.</returns>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfiguration">
+      <summary>Lässt zu, dass ein Client den Erweiterungskontext der Druckaufgabe abruft und der Druckaufgabe außerdem einen Ereignishandler hinzufügt.</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfiguration.PrinterExtensionContext">
+      <summary>Ruft den Kontext für die Druckauftragserweiterung ab.</summary>
+      <returns>Der Kontext für die Namespaceerweiterung des Druckauftrags.</returns>
+    </member><member name="E:Windows.Devices.Printers.Extensions.PrintTaskConfiguration.SaveRequested">
+      <summary>Wird vom Druckfenster für Ihre App ausgelöst, um dieser mitzuteilen, dass das Druckticket aktualisiert werden muss.</summary>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest">
+      <summary>Wird aufgerufen, wenn das Druckdialogfeld für die Anwendung ein SaveRequested-Ereignis auslöst.</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Deadline">
+      <summary>Ruft das Datum-Zeit-Objekt ab, das die Informationen zu den Fristen der Druckaufgabe bereitstellt.</summary>
+      <returns>Die Frist für den Druckauftrag.</returns>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Cancel">
+      <summary>Wird von der Geräte-App aufgerufen, um die Anforderung des Clients zur Sicherung der Druckaufgabenkonfiguration abzubrechen.</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.GetDeferral">
+      <summary>Wird von der Geräte-App aufgerufen, wenn mehrere asynchrone Aufgaben abgeschlossen werden müssen, bevor die Informationen über die Druckaufgabenkonfiguration gespeichert werden können.</summary>
+      <returns>Das Objekt, das die Verzögerung für die Speicheranforderung der Druckaufgabenkonfiguration darstellt.</returns>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Save(System.Object)">
+      <summary>Wird von der Geräte-App aufgerufen, um die Druckaufgabenkonfiguration zu speichern.</summary>
+      <param name="printerExtensionContext">Das Objekt, das den Kontext für die Druckaufgabenerweiterung darstellt.</param>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral">
+      <summary>Wird von der Geräte-App aufgerufen, um den Verzögerungsstatus zu aktualisieren.</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral.Complete">
+      <summary>Wird von der Geräte-App aufgerufen, wenn die Verzögerung abgeschlossen ist.</summary>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs">
+      <summary>Wird aufgerufen, um die Geräte-App zu benachrichtigen, dass die Druckaufgabenkonfiguration gespeichert werden muss.</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs.Request">
+      <summary>Ruft die Informationen ab, die zum Aktualisieren der Druckaufgabenkonfiguration erforderlich sind.</summary>
+      <returns>Die Speicheranforderung für die Druckaufgabenkonfiguration.</returns>
+    </member></members>
+</doc>

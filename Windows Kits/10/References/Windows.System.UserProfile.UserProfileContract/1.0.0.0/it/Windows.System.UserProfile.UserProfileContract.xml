@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.UserProfile.UserProfileContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.System.UserProfile.AccountPictureKind">
+      <summary>Consente di richiedere un tipo specifico di immagine quando si utilizza GetAccountPicture.</summary>
+    </member><member name="F:Windows.System.UserProfile.AccountPictureKind.LargeImage">
+      <summary>Indica che si desidera l'immagine grande per l'account utente.</summary>
+    </member><member name="F:Windows.System.UserProfile.AccountPictureKind.SmallImage">
+      <summary>Indica che si desidera l'immagine piccola per l'account utente.</summary>
+    </member><member name="F:Windows.System.UserProfile.AccountPictureKind.Video">
+      <summary>Indica che si desidera il video per l'account utente.</summary>
+    </member><member name="T:Windows.System.UserProfile.SetAccountPictureResult">
+      <summary>Un risultato che viene restituito quando si tenta di impostare l'immagine per un account utente.</summary>
+    </member><member name="F:Windows.System.UserProfile.SetAccountPictureResult.ChangeDisabled">
+      <summary>Indica che l'immagine non è stata impostata perché la proprietà AccountPictureChangeEnabled è disabilitata o l'utente ha annullato la richiesta di consenso.</summary>
+    </member><member name="F:Windows.System.UserProfile.SetAccountPictureResult.Failure">
+      <summary>Indica che l'immagine o il video non è stato impostato.</summary>
+    </member><member name="F:Windows.System.UserProfile.SetAccountPictureResult.FileSizeError">
+      <summary>Indica che l'immagine non è stata impostata perché la dimensione del file è troppo grande.</summary>
+    </member><member name="F:Windows.System.UserProfile.SetAccountPictureResult.LargeOrDynamicError">
+      <summary>Indica che l'immagine non è stata impostata perché troppo grande.</summary>
+    </member><member name="F:Windows.System.UserProfile.SetAccountPictureResult.Success">
+      <summary>Indica che l'immagine è stata impostata correttamente.</summary>
+    </member><member name="F:Windows.System.UserProfile.SetAccountPictureResult.VideoFrameSizeError">
+      <summary>Indica che il video non è stato impostato poiché la dimensione del fotogramma è troppo grande.</summary>
+    </member><member name="T:Windows.System.UserProfile.SetImageFeedResult">
+      <summary>Specifica il risultato di una chiamata a LockScreen.RequestSetImageFeedAsync.</summary>
+    </member><member name="F:Windows.System.UserProfile.SetImageFeedResult.ChangeDisabled">
+      <summary>Il feed non è stato impostato perché la presentazione delle immagini della schermata di blocco è disabilitata dai criteri di gruppo.</summary>
+    </member><member name="F:Windows.System.UserProfile.SetImageFeedResult.Success">
+      <summary>Il feed di immagine è stato impostato correttamente.</summary>
+    </member><member name="F:Windows.System.UserProfile.SetImageFeedResult.UserCanceled">
+      <summary>Operazione è stata annullata dall'utente.</summary>
+    </member><member name="T:Windows.System.UserProfile.UserInformation">
+      <summary>Rappresenta o imposta le informazioni sull'utente, ad esempio nome e immagine dell'account.</summary>
+    </member><member name="P:Windows.System.UserProfile.UserInformation.AccountPictureChangeEnabled">
+      <summary>Determina se è possibile modificare l'immagine dell'account dell'utente.</summary>
+      <returns>True se l'immagine dell'account utente può essere modificata; in caso contrario false.</returns>
+    </member><member name="P:Windows.System.UserProfile.UserInformation.NameAccessAllowed">
+      <summary>Consente di vedere se all'app è consentito accedere alle informazioni dell'utente.</summary>
+      <returns>True se all'applicazione è consentito l'accesso all'evento di AccountPictureChanged e il recupero delle informazioni utente tramite i metodi GetAccountPicture, GetDisplayNameAsync, GetDomainNameAsync, GetFirstNameAsync, GetLastNameAsync e GetSessionInitiationProtocolUriAsync. In caso contrario questa proprietà è sempre false.</returns>
+    </member><member name="E:Windows.System.UserProfile.UserInformation.AccountPictureChanged">
+      <summary>Si verifica quando cambia l'immagine o il nome dell'utente.</summary>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetAccountPicture(Windows.System.UserProfile.AccountPictureKind)">
+      <summary>Ottiene l'immagine dell'account per l'utente.</summary>
+      <returns>Oggetto contenente l'immagine.</returns>
+      <param name="kind">Un'enumerazione che è possibile utilizzare per determinare il tipo di immagine desiderato (piccola, grande e così via).</param>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetDisplayNameAsync">
+      <summary>Ottiene il nome visualizzato dell'account utente.</summary>
+      <returns>Il nome visualizzato dell'account utente.</returns>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetDomainNameAsync">
+      <summary>Ottiene il nome di dominio relativo all'utente.</summary>
+      <returns>Stringa che rappresenta il nome di dominio dell'utente.</returns>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetFirstNameAsync">
+      <summary>Ottiene il nome dell'utente.</summary>
+      <returns>Nome dell'utente.</returns>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetLastNameAsync">
+      <summary>Ottiene il cognome dell'utente.</summary>
+      <returns>Cognome dell'utente.</returns>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetPrincipalNameAsync">
+      <summary>Ottiene il nome dell'entità dell'utente. Questo è il nome dell'entità utente, in genere, ma non sempre, l'indirizzo dell'utente.</summary>
+      <returns>Nome principale dell'utente.</returns>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetSessionInitiationProtocolUriAsync">
+      <summary>Ottiene l'URI (Uniform Resource Identifier) del protocollo di inizializzazione della sessione per l'utente.</summary>
+      <returns>URI (Uniform Resource Identifier) del protocollo di inizializzazione della sessione.</returns>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.SetAccountPictureAsync(Windows.Storage.IStorageFile)">
+      <summary>Imposta l'immagine per l'account utente tramite un oggetto IStorageFile.</summary>
+      <returns>Valore che indica l'esito positivo o negativo dell'operazione.</returns>
+      <param name="image">Un file che contiene l'immagine.</param>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.SetAccountPictureFromStreamAsync(Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>Imposta l'immagine per l'account utente tramite un oggetto IRandomAccessStream.</summary>
+      <returns>Valore che indica l'esito positivo o negativo dell'operazione.</returns>
+      <param name="image">L'immagine.</param>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.SetAccountPicturesAsync(Windows.Storage.IStorageFile,Windows.Storage.IStorageFile,Windows.Storage.IStorageFile)">
+      <summary>Imposta le immagini per l'account utente tramite un oggetto IStorageFile. Supporta l'aggiunta di immagine di piccole e grandi dimensioni e di video.</summary>
+      <returns>Valore che indica l'esito positivo o negativo dell'operazione.</returns>
+      <param name="smallImage">Una versione di piccole dimensioni dell'immagine.</param>
+      <param name="largeImage">Una versione di grandi dimensioni dell'immagine.</param>
+      <param name="video">Un video</param>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.SetAccountPicturesFromStreamsAsync(Windows.Storage.Streams.IRandomAccessStream,Windows.Storage.Streams.IRandomAccessStream,Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>Imposta le immagini per l'account utente tramite un oggetto IRandomAccessStream. Supporta l'aggiunta di immagine di piccole e grandi dimensioni e di video.</summary>
+      <returns>Valore che indica l'esito positivo o negativo dell'operazione.</returns>
+      <param name="smallImage">Una versione di piccole dimensioni dell'immagine.</param>
+      <param name="largeImage">Una versione di grandi dimensioni dell'immagine.</param>
+      <param name="video">Un video</param>
+    </member></members>
+</doc>

@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.Core.AnimationMetrics.AnimationMetricsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.Core.AnimationMetrics.AnimationDescription">
+      <summary>公開個別動畫效果集合，這些效果會展現在特定目標上，構成完整的 Windows 半透明、縮放或轉換動畫。</summary>
+    </member><member name="M:Windows.UI.Core.AnimationMetrics.AnimationDescription.#ctor(Windows.UI.Core.AnimationMetrics.AnimationEffect,Windows.UI.Core.AnimationMetrics.AnimationEffectTarget)">
+      <summary>建立具有特定動畫和目標的 AnimationDescription 物件。</summary>
+      <param name="effect">要套用至目標的動畫效果。</param>
+      <param name="target">動畫效果的目標。</param>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.AnimationDescription.Animations">
+      <summary>取得與 AnimationDescription 物件相關聯的動畫集合。</summary>
+      <returns>IPropertyAnimation 執行個體的集合，其中每個執行個體都代表指定給這個 AnimationDescription 物件的動畫效果。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.AnimationDescription.DelayLimit">
+      <summary>取得動畫套用至目標中之物件集合的最大累計延遲時間。</summary>
+      <returns>延遲限制時間，以 100 奈秒為單位來表示。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.AnimationDescription.StaggerDelay">
+      <summary>取得在包含多個物件的目標中的每個物件套用動畫效果的間隔時間量。 StaggerDelay (再加上 StaggerDelayFactor 和 DelayLimit) 是用來控制動畫效果之相對執行時間的三個項目其中之一。</summary>
+      <returns>錯開延遲時間，以 100 奈秒為單位來表示。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.AnimationDescription.StaggerDelayFactor">
+      <summary>取得套用至每個發生的偏位延遲的乘數，以該數量增加或減少前一個延遲執行個體。</summary>
+      <returns>要套用至錯開延遲的因數。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.AnimationDescription.ZOrder">
+      <summary>取得 AnimationDescription 物件在相同動畫效果中相對於其他 AnimationDescription 物件的疊置順序 (Z-order) 位置。</summary>
+      <returns>疊置順序值。</returns>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.AnimationEffect">
+      <summary>指定動畫。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.AddToGrid">
+      <summary>物件已加入至依格線排列的集合中。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.AddToList">
+      <summary>物件已加入至清單中。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.AddToSearchGrid">
+      <summary>物件已加入至依格線排列的搜尋結果中。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.AddToSearchList">
+      <summary>物件已加入至垂直排列的搜尋結果清單。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.Collapse">
+      <summary>物件會縮減大小以隱藏內容。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.CrossFade">
+      <summary>有一個項目淡出，而另一個項目則在它的位置中淡入。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DeleteFromGrid">
+      <summary>物件已從依格線排列的集合中移除。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DeleteFromList">
+      <summary>物件已從清單中移除。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DeleteFromSearchGrid">
+      <summary>物件已從依格線排列的搜尋結果中移除。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DeleteFromSearchList">
+      <summary>物件已從垂直排列的搜尋結果清單中移除。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DragBetweenEnter">
+      <summary>拖曳來源已經移動到兩個項目之間。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DragBetweenLeave">
+      <summary>拖曳來源已經不在兩個項目之間。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DragSourceEnd">
+      <summary>使用者已停止拖曳項目。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DragSourceStart">
+      <summary>使用者已開始拖曳項目。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.EnterPage">
+      <summary>一頁內容已顯示到畫面上。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.Expand">
+      <summary>物件會增加大小以顯示其他內容。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.FadeIn">
+      <summary>內容控制項會淡入。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.FadeOut">
+      <summary>內容控制項會淡出。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.Hide">
+      <summary>UI 會在點選或按下的目標周圍摺疊。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.HideEdgeUI">
+      <summary>系統會移除顯示在螢幕邊緣的 UI。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.HidePanel">
+      <summary>從螢幕中移除一段內容。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.HidePopup">
+      <summary>快顯控制項已從螢幕中移除。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.Peek">
+      <summary>磚內容會上移或下移，以顯示通常為隱藏的磚部分。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.PointerDown">
+      <summary>指標裝置 (如滑鼠或觸控式裝置) 已經用於項目中。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.PointerUp">
+      <summary>指標裝置 (如滑鼠或觸控式裝置) 已經從項目分離。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.Reposition">
+      <summary>物件變更位置。 不再套用更多特定動畫。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.Reveal">
+      <summary>UI 會在點選或按下的目標周圍展開。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.ShowEdgeUI">
+      <summary>系統會從螢幕邊緣帶入 UI。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.ShowPanel">
+      <summary>螢幕上出現一段內容。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.ShowPopup">
+      <summary>快顯控制項出現在螢幕上。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.SwipeDeselect">
+      <summary>已透過撥動互動取消選取物件。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.SwipeReveal">
+      <summary>由按住可進行橫越滑動選取的項目所觸發。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.SwipeSelect">
+      <summary>已透過撥動互動選取物件。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.TransitionContent">
+      <summary>正在發生大規模的內容取代。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.TransitionPage">
+      <summary>另一頁取代了某一頁。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.UpdateBadge">
+      <summary>更新磚的徽章覆疊。</summary>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget">
+      <summary>指定動畫中的參與者。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Added">
+      <summary>正在加入的物件。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Affected">
+      <summary>受動畫影響的物件，例如在物件之間置放另一個物件時會移開的物件。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Background">
+      <summary>項目的背景物件。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Content">
+      <summary>項目的內容。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Deleted">
+      <summary>正在刪除的物件。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Deselected">
+      <summary>經由橫越滑動取消選取互動所取消選取的物件。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.DragSource">
+      <summary>正在拖曳的物件。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Hidden">
+      <summary>目前為隱藏的物件。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Incoming">
+      <summary>要取代舊內容的新內容。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Outgoing">
+      <summary>新內容正在取代的舊內容。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Outline">
+      <summary>區域周圍的外框線。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Primary">
+      <summary>單一目標動畫中唯一的參與者。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Remaining">
+      <summary>移除其他項目之後留下來的物件。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Revealed">
+      <summary>會在展開中變成可見的物件。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.RowIn">
+      <summary>要加入至資料格的資料列。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.RowOut">
+      <summary>即將從資料格中移除的資料列。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Selected">
+      <summary>經由橫越滑動選取互動所選取的物件。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Selection">
+      <summary>表示已選取項目的物件，例如核取記號。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Shown">
+      <summary>先前隱藏的物件變成可見。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Tapped">
+      <summary>被點選或按一下的物件。</summary>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.IPropertyAnimation">
+      <summary>說明所有動畫效果通用的動畫屬性。</summary>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.IPropertyAnimation.Control1">
+      <summary>取得三次方貝茲曲線 (Bézier Curve) 的第一個控制點位置，描述應該如何在一段時間內以動畫顯示這個物件的這個屬性。</summary>
+      <returns>控制點的位置。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.IPropertyAnimation.Control2">
+      <summary>取得三次方貝茲曲線 (Bézier Curve) 的第二個控制點位置，描述應該如何在一段時間內以動畫顯示這個物件的這個屬性。</summary>
+      <returns>控制點的位置。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.IPropertyAnimation.Delay">
+      <summary>取得動畫接到指示開始和動畫實際開始繪製之間的間隔時間量。</summary>
+      <returns>開始動畫之前延遲的時間量。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.IPropertyAnimation.Duration">
+      <summary>取得應該執行動畫的時間量。 這不包括延遲。</summary>
+      <returns>動畫的持續期間。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.IPropertyAnimation.Type">
+      <summary>取得這個物件所代表的動畫型別。</summary>
+      <returns>其中一個動畫型別值。</returns>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.OpacityAnimation">
+      <summary>提供可用來擷取不透明 (淡入或淡出) 動畫之參數的方法。</summary>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.Control1">
+      <summary>取得三次方貝茲曲線 (Bézier Curve) 的第一個控制點位置，描述應該如何在一段時間內以動畫顯示不透明度。</summary>
+      <returns>控制點的位置。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.Control2">
+      <summary>取得三次方貝茲曲線 (Bézier Curve) 的第二個控制點位置，描述應該如何在一段時間內以動畫顯示不透明度。</summary>
+      <returns>控制點的位置。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.Delay">
+      <summary>取得不透明度動畫接到指示開始和動畫實際開始繪製之間的間隔時間量。</summary>
+      <returns>開始不透明動畫之前延遲的時間量。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.Duration">
+      <summary>取得應該執行不透明度動畫的時間量。 這不包括延遲。</summary>
+      <returns>動畫的持續期間。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.FinalOpacity">
+      <summary>取得物件的最終不透明度。</summary>
+      <returns>最終不透明度。 值為 0.0 表示完全透明，而值為 1.0 表示完全不透明。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.InitialOpacity">
+      <summary>取得物件的初始不透明度。</summary>
+      <returns>初始不透明度 (如果有的話)。 值為 0.0 表示完全透明，而值為 1.0 表示完全不透明。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.Type">
+      <summary>取得這個物件所代表的動畫型別。</summary>
+      <returns>其中一個動畫型別值。</returns>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.PropertyAnimation">
+      <summary>提供可用來擷取所有屬性動畫類型共通之動畫屬性值的方法。</summary>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.PropertyAnimation.Control1">
+      <summary>取得三次方貝茲曲線 (Bézier Curve) 的第一個控制點位置，描述應該如何在一段時間內以動畫顯示這個物件的這個屬性。</summary>
+      <returns>控制點的位置。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.PropertyAnimation.Control2">
+      <summary>取得三次方貝茲曲線 (Bézier Curve) 的第二個控制點位置，描述應該如何在一段時間內以動畫顯示這個物件的這個屬性。</summary>
+      <returns>控制點的位置。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.PropertyAnimation.Delay">
+      <summary>取得動畫接到指示開始和動畫實際開始繪製之間的間隔時間量。</summary>
+      <returns>開始動畫之前延遲的時間量。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.PropertyAnimation.Duration">
+      <summary>取得應該執行動畫的時間量。 這不包括延遲。</summary>
+      <returns>動畫的持續期間。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.PropertyAnimation.Type">
+      <summary>取得這個物件所代表的動畫型別。</summary>
+      <returns>其中一個動畫型別值。</returns>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.PropertyAnimationType">
+      <summary>指定 PropertyAnimation 物件所代表的動畫型別。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.PropertyAnimationType.Opacity">
+      <summary>以動畫顯示物件的透明度。 對應的物件是 OpacityAnimation。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.PropertyAnimationType.Scale">
+      <summary>以動畫顯示物件的大小，放大或縮小。 對應的物件是 ScaleAnimation。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.PropertyAnimationType.Translation">
+      <summary>移動物件。 對應的物件是 TranslationAnimation。</summary>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.ScaleAnimation">
+      <summary>提供可用來擷取縮放 (增大或縮小) 動畫之參數的方法。</summary>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.Control1">
+      <summary>取得三次方貝茲曲線 (Bézier Curve) 的第一個控制點位置，描述應該如何在一段時間內以動畫顯示縮放。</summary>
+      <returns>控制點的位置。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.Control2">
+      <summary>取得三次方貝茲曲線 (Bézier Curve) 的第二個控制點位置，描述應該如何在一段時間內以動畫顯示縮放。</summary>
+      <returns>控制點的位置。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.Delay">
+      <summary>取得縮放動畫接到指示開始和動畫實際開始繪製之間的間隔時間量。</summary>
+      <returns>開始縮放動畫之前延遲的時間量。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.Duration">
+      <summary>取得應該執行縮放動畫的時間量。 這不包括延遲。</summary>
+      <returns>動畫的持續期間。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.FinalScaleX">
+      <summary>取得物件的最終水平縮放係數。</summary>
+      <returns>用來與此值相乘的最終水平縮放係數。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.FinalScaleY">
+      <summary>取得物件的最終垂直縮放係數。</summary>
+      <returns>用來與此值相乘的最終垂直縮放係數。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.InitialScaleX">
+      <summary>取得物件的初始水平縮放係數。</summary>
+      <returns>用來與此值相乘的初始水平縮放係數 (如果有的話)。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.InitialScaleY">
+      <summary>取得物件的初始垂直縮放係數。</summary>
+      <returns>用來與此值相乘的初始垂直縮放係數 (如果有的話)。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.NormalizedOrigin">
+      <summary>取得縮放動畫的中心點，以相對於物件標準大小的點表示。</summary>
+      <returns>標準化的中心點。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.Type">
+      <summary>取得這個物件所代表的動畫型別。</summary>
+      <returns>其中一個動畫型別值。</returns>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.TranslationAnimation">
+      <summary>提供可用來擷取平移 (移動至新位置) 動畫之參數的方法。</summary>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.TranslationAnimation.Control1">
+      <summary>取得三次方貝茲曲線 (Bézier Curve) 的第一個控制點位置，描述應該如何在一段時間內以動畫顯示平移。</summary>
+      <returns>控制點的位置。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.TranslationAnimation.Control2">
+      <summary>取得三次方貝茲曲線 (Bézier Curve) 的第二個控制點位置，描述應該如何在一段時間內以動畫顯示平移。</summary>
+      <returns>控制點的位置。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.TranslationAnimation.Delay">
+      <summary>取得平移動畫接到指示開始和動畫實際開始繪製之間的間隔時間量。</summary>
+      <returns>開始轉譯動畫之前延遲的時間量。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.TranslationAnimation.Duration">
+      <summary>取得應該執行平移動畫的時間量。 這不包括延遲。</summary>
+      <returns>動畫的持續期間。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.TranslationAnimation.Type">
+      <summary>取得這個物件所代表的動畫型別。</summary>
+      <returns>其中一個動畫型別值。</returns>
+    </member></members>
+</doc>

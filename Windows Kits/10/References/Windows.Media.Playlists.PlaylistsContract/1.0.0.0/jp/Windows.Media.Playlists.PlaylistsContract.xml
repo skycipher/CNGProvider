@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.Playlists.PlaylistsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Media.Playlists.Playlist">
+      <summary>メディア再生リストにアクセスできるようにします。</summary>
+    </member><member name="M:Windows.Media.Playlists.Playlist.#ctor">
+      <summary>Playlist オブジェクトの新しいインスタンスを作成します。</summary>
+    </member><member name="P:Windows.Media.Playlists.Playlist.Files">
+      <summary>再生リストを構成するメディア ファイルのセット。</summary>
+      <returns>再生リストを構成するメディア ファイルのリスト。</returns>
+    </member><member name="M:Windows.Media.Playlists.Playlist.LoadAsync(Windows.Storage.IStorageFile)">
+      <summary>非同期的に再生リストにファイルをロードします。</summary>
+      <returns>再生リストを読み込むための非同期操作を表します。 この IAsyncOperation オブジェクトの GetResults のメソッドは、再生リストを返します。</returns>
+      <param name="file">読み込もうとするファイルを表します。</param>
+    </member><member name="M:Windows.Media.Playlists.Playlist.SaveAsAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption)">
+      <summary>指定されたファイルおよびフォルダーに非同期的に再生リストを保存します。</summary>
+      <returns>指定したファイルおよびフォルダーに再生リストを保存する非同期操作を表します。</returns>
+      <param name="saveLocation">再生リストを保存するフォルダー。</param>
+      <param name="desiredName">保存する再生リストの名前。</param>
+      <param name="option">再生リストが既存のファイルに保存された場合に実行するアクション。 NameCollisionOption 列挙値の 1 つです。</param>
+    </member><member name="M:Windows.Media.Playlists.Playlist.SaveAsAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption,Windows.Media.Playlists.PlaylistFormat)">
+      <summary>指定したフォーマットで、指定されたファイルおよびフォルダーに非同期的に再生リストを保存します。</summary>
+      <returns>指定したファイルおよびフォルダーに再生リストを保存する非同期操作を表します。</returns>
+      <param name="saveLocation">再生リストを保存するフォルダー。</param>
+      <param name="desiredName">保存する再生リストの名前。</param>
+      <param name="option">再生リストが既存のファイルに保存された場合に実行するアクション。 NameCollisionOption 列挙値の 1 つです。</param>
+      <param name="playlistFormat">再生リスト形式。 PlaylistFormat 列挙値の 1 つです。</param>
+    </member><member name="M:Windows.Media.Playlists.Playlist.SaveAsync">
+      <summary>非同期的に再生リストを保存します。</summary>
+      <returns>再生リストを保存する非同期アクションを表します。</returns>
+    </member><member name="T:Windows.Media.Playlists.PlaylistFormat">
+      <summary>再生リストのファイル形式を示します。</summary>
+    </member><member name="F:Windows.Media.Playlists.PlaylistFormat.M3u">
+      <summary>M3U 再生リスト。</summary>
+    </member><member name="F:Windows.Media.Playlists.PlaylistFormat.WindowsMedia">
+      <summary>Windows Media の再生リスト。</summary>
+    </member><member name="F:Windows.Media.Playlists.PlaylistFormat.Zune">
+      <summary>Zune 再生リスト。</summary>
+    </member></members>
+</doc>

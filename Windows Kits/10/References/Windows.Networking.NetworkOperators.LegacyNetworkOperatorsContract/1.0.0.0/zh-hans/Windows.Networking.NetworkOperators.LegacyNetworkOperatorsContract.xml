@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Networking.NetworkOperators.LegacyNetworkOperatorsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails">
+      <summary>提供网络运算符通知的详细信息。</summary>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.EncodingType">
+      <summary>获取接收的消息的数据编码方案 (DCS)。</summary>
+      <returns>接收到的消息的数据编码方案 (DCS)。</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.Message">
+      <summary>获取网络运营商通知的消息。</summary>
+      <returns>网络运营商通知的消息。</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.NetworkAccountId">
+      <summary>获取接收通知的移动宽带帐号的唯一标识符。</summary>
+      <returns>移动宽频帐户的唯一标识符。</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.NotificationType">
+      <summary>获取网络通知的类型。</summary>
+      <returns>网络通知的类型。</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.RuleId">
+      <summary>获取与通知匹配并触发该通知的配置规则的标识符。</summary>
+      <returns>配置规则标识符。</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.SmsMessage">
+      <summary>获取接收通知的移动宽带帐号的 SMS 消息。</summary>
+      <returns>如果网络运营商通知由一个新的移动网络运营商 SMS 触发，则该通知包含网络运营商通知的 SMS 消息对象。 如果未在通知中收到 SMS 消息，则为 NULL。</returns>
+    </member><member name="M:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.AuthorizeTethering(System.Boolean,System.String)">
+      <summary>用于指示是否允许对设备使用网络共享(tethering)。 否则，可能会提供原因。</summary>
+      <param name="allow">如果允许网络共享(tethering)，则为 true，否则为 false。</param>
+      <param name="entitlementFailureReason">不允许 Tethering 原因。</param>
+    </member></members>
+</doc>

@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Calls.CallsVoipContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Calls.CallAnswerEventArgs">
+      <summary>VoipPhoneCall クラスの AnswerRequested イベントをサポートします。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+    </member><member name="P:Windows.ApplicationModel.Calls.CallAnswerEventArgs.AcceptedMedia">
+      <summary>呼び出しに応答するときにユーザーが選択したメディアの種類を取得します。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+      <returns>呼び出しに応答するときにユーザーが選択したメディアの種類。</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.CallRejectEventArgs">
+      <summary>VoipPhoneCall クラスの RejectRequested イベントをサポートします。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+    </member><member name="P:Windows.ApplicationModel.Calls.CallRejectEventArgs.RejectReason">
+      <summary>着信呼び出しが拒否された理由を取得します。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+      <returns>着信呼び出しが拒否された理由。</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.CallStateChangeEventArgs">
+      <summary>VoipPhoneCall クラスの EndRequested、HoldRequested と ResumeRequested イベントをサポートします。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+    </member><member name="P:Windows.ApplicationModel.Calls.CallStateChangeEventArgs.State">
+      <summary>VoIP 呼び出しの現在の状態を取得します。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+      <returns>VoIP 呼び出しの現在の状態。</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.MuteChangeEventArgs">
+      <summary>NotifyMuted と NotifyUnmuted イベントをサポートします。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+    </member><member name="P:Windows.ApplicationModel.Calls.MuteChangeEventArgs.Muted">
+      <summary>呼び出しが現在ミュートされているかどうかを取得します。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+      <returns>呼び出しが現在ミュートされているかどうかを示します。</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.VoipCallCoordinator">
+      <summary>VoIP の呼び出しの管理をアプリケーションに許可します。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+    </member><member name="E:Windows.ApplicationModel.Calls.VoipCallCoordinator.MuteStateChanged">
+      <summary>電話のミュート状態が変更された場合に発生します。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.CancelUpgrade(System.Guid)">
+      <summary>VoIP 呼び出しへのアップグレードを取り消します。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+      <param name="callUpgradeGuid">VoIP 通話の GUID。</param>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.GetDefault">
+      <summary>VoipCallCoordinator クラスの既定のインスタンスを取得します。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+      <returns>既定の呼び出しのコーディネーター。</returns>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.NotifyMuted">
+      <summary>ユーザーが VoIP アプリケーションの UI を使用して呼び出しをミュートしたことをシステムに通知します。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.NotifyUnmuted">
+      <summary>ユーザーが VoIP アプリケーションの UI を使用して呼び出しをミュート解除したことをシステムに通知します。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestIncomingUpgradeToVideoCall(System.String,System.String,System.String,Windows.Foundation.Uri,System.String,Windows.Foundation.Uri,System.String,Windows.Foundation.Uri,Windows.Foundation.TimeSpan)">
+      <summary>既存の通話を置き換える着信ビデオ通話の要求をシステムに行います。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+      <returns>新しい着信呼び出しを表すオブジェクト。</returns>
+      <param name="context">関連付けられたフォアグラウンド アプリにディープ リンクとして渡される文字列。 これは、アプリの UI をより迅速に表示するために使用できる連絡先名またはその他のデータとすることができます。 最大長は 128 文字です。 このパラメーターは null であり、かつ、アプリのマニフェスト ファイルで定義されているタスクを参照する必要があります。</param>
+      <param name="contactName">着信呼び出し UI に表示する呼び出し元の連絡先名。 最大長は 128 文字です。</param>
+      <param name="contactNumber">着信呼び出し UI に表示する呼び出し元の電話番号。 最大長は 128 文字です。</param>
+      <param name="contactImage">呼び出し元に関連付けられた、着信呼び出し UI に表示するイメージ ファイルの URI。 ファイルの種類は PNG または JPG にする必要があります。 ファイルの最大サイズは 1 MB です。</param>
+      <param name="serviceName">VoIP サービスまたはアプリケーションの名前。 最大長は 128 文字です。</param>
+      <param name="brandingImage">着信呼び出し UI に表示する、VoIP サービスまたはアプリケーションのロゴかアイコンであるイメージ ファイルの URI。 ファイルの種類は PNG または JPG にする必要があります。 ファイルの最大サイズは 128 KB です。</param>
+      <param name="callDetails">呼び出しが代理しているものを示す文字列。 最大長は 128 文字です。</param>
+      <param name="ringtone">この呼び出しの着信音を含むオーディオ ファイルの URI。 ファイルの種類は WMA または MP3 にする必要があります。 ファイルの最大サイズは 1 MB です。</param>
+      <param name="ringTimeout">システムが、呼び出しを拒否する前にユーザーの応答を待機するか呼び出しを無視する時間 (秒)。 指定できる範囲は 5 ～ 120 秒です。 既定値は 30 秒です。</param>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestNewIncomingCall(System.String,System.String,System.String,Windows.Foundation.Uri,System.String,Windows.Foundation.Uri,System.String,Windows.Foundation.Uri,Windows.ApplicationModel.Calls.VoipPhoneCallMedia,Windows.Foundation.TimeSpan)">
+      <summary>新しい着信呼び出しの要求をシステムに行います。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+      <returns>新しい着信呼び出しを表すオブジェクト。</returns>
+      <param name="context">関連付けられたフォアグラウンド アプリにディープ リンクとして渡される文字列。 最大長は 128 文字です。 このパラメーターの値は null 以外にする必要があります。</param>
+      <param name="contactName">着信呼び出し UI に表示する呼び出し元の連絡先名。 最大長は 128 文字です。</param>
+      <param name="contactNumber">着信呼び出し UI に表示する呼び出し元の電話番号。 最大長は 128 文字です。</param>
+      <param name="contactImage">呼び出し元に関連付けられた、着信呼び出し UI に表示するイメージ ファイルの URI。 ファイルの種類は PNG または JPG にする必要があります。 ファイルの最大サイズは 1 MB です。</param>
+      <param name="serviceName">VoIP サービスまたはアプリケーションの名前。 最大長は 128 文字です。</param>
+      <param name="brandingImage">着信呼び出し UI に表示する、VoIP サービスまたはアプリケーションのロゴかアイコンであるイメージ ファイルの URI。 ファイルの種類は PNG または JPG にする必要があります。 ファイルの最大サイズは 128 KB です。</param>
+      <param name="callDetails">呼び出しが代理しているものを示す文字列。 最大長は 128 文字です。</param>
+      <param name="ringtone">この呼び出しの着信音を含むオーディオ ファイルの URI。 ファイルの種類は WMA または MP3 にする必要があります。 ファイルの最大サイズは 1 MB です。</param>
+      <param name="media">新しい着信呼び出しのメディアの種類。</param>
+      <param name="ringTimeout">システムが、呼び出しを拒否する前にユーザーの応答を待機するか呼び出しを無視する時間 (秒)。 指定できる範囲は 5 ～ 120 秒です。 既定値は 30 秒です。</param>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestNewOutgoingCall(System.String,System.String,System.String,Windows.ApplicationModel.Calls.VoipPhoneCallMedia)">
+      <summary>新しい発信呼び出しの要求をシステムに行います。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+      <returns>新しい着信呼び出しを表すオブジェクト。</returns>
+      <param name="context">関連付けられたフォアグラウンド アプリにディープ リンクとして渡される文字列。 最大長は 128 文字です。 このパラメーターの値は null 以外にする必要があります。</param>
+      <param name="contactName">電話機の最小化呼び出し UI に表示される呼び出し元の名前または ID。 最大長は 128 文字です。</param>
+      <param name="serviceName">電話機の最小化呼び出し UI に表示される VoIP サービスの名前。 最大長は 128 文字です。</param>
+      <param name="media">新しい発信呼び出しを表すオブジェクト。</param>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestOutgoingUpgradeToVideoCall(System.Guid,System.String,System.String,System.String)">
+      <summary>既存の携帯電話通話を置き換える発信ビデオ通話を作成する要求をシステムに行います。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+      <returns>新しい発信呼び出しを表すオブジェクト。</returns>
+      <param name="callUpgradeGuid">呼び出しの GUID。</param>
+      <param name="context">関連付けられたフォアグラウンド アプリにディープ リンクとして渡される文字列。 これは、アプリの UI をより迅速に表示するために使用できる連絡先名またはその他のデータとすることができます。 最大長は 128 文字です。 このパラメーターは null であり、かつ、アプリのマニフェスト ファイルで定義されているタスクを参照する必要があります。</param>
+      <param name="contactName">電話機の最小化呼び出し UI に表示される呼び出し元の名前または ID。 最大長は 128 文字です。</param>
+      <param name="serviceName">電話機の最小化呼び出し UI に表示される VoIP サービスの名前。 最大長は 128 文字です。</param>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.ReserveCallResourcesAsync(System.String)">
+      <summary>VoIP の呼び出しに必要なリソースを予約します。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+      <returns>予約アクションの結果。</returns>
+      <param name="taskEntryPoint">バックグラウンド タスクの作業を実行するアプリケーション定義のクラスの名前。 詳しくは、「TaskEntryPoint」をご覧ください。</param>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.TerminateCellularCall(System.Guid)">
+      <summary>VoIP 呼び出しにアップグレードするために携帯電話通話を終了します。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+      <param name="callUpgradeGuid">VoIP 通話の GUID。</param>
+    </member><member name="T:Windows.ApplicationModel.Calls.VoipPhoneCall">
+      <summary>VoIP 通話を表します。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+    </member><member name="P:Windows.ApplicationModel.Calls.VoipPhoneCall.CallMedia">
+      <summary>呼び出しによって使用されるメディアの種類を取得します。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+      <returns>呼び出しによって使用されるメディアの種類。</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.VoipPhoneCall.ContactName">
+      <summary>VoIP 呼び出しに関連付けられている連絡先名を取得または設定します。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+      <returns>VoIP 呼び出しに関連付けられている連絡先名。</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.VoipPhoneCall.StartTime">
+      <summary>VoIP 呼び出しに関連付けられている開始時刻を取得または設定します。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+      <returns>通話に関連付けられている開始時間。</returns>
+    </member><member name="E:Windows.ApplicationModel.Calls.VoipPhoneCall.AnswerRequested">
+      <summary>着信呼び出しにユーザーが応答すると発生します。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+    </member><member name="E:Windows.ApplicationModel.Calls.VoipPhoneCall.EndRequested">
+      <summary>呼び出しを終了する必要があることを VoIP アプリケーションに警告するために発生します。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+    </member><member name="E:Windows.ApplicationModel.Calls.VoipPhoneCall.HoldRequested">
+      <summary>呼び出しを保留する必要があることを VoIP アプリケーションに警告するために発生します。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+    </member><member name="E:Windows.ApplicationModel.Calls.VoipPhoneCall.RejectRequested">
+      <summary>呼び出しが拒否されると発生します。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+    </member><member name="E:Windows.ApplicationModel.Calls.VoipPhoneCall.ResumeRequested">
+      <summary>前に保持していた VoIP 呼び出しをアクティブにする必要があることを示すために発生します。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallActive">
+      <summary>VoIP 呼び出しがアクティブであることをシステムに通知します。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallEnded">
+      <summary>呼び出しが終了したことをシステムに通知します。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallHeld">
+      <summary>呼び出しが現在保留中であることをシステムに通知します。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallReady">
+      <summary>通話を携帯電話からビデオにアップグレードするときに、ビデオ通話のオーディオ ストリームとビデオ ストリームの設定をアプリが済ませていることをシステムに通知して、既存の携帯電話の通話をシステムが終了できるようにします。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+    </member><member name="T:Windows.ApplicationModel.Calls.VoipPhoneCallMedia">
+      <summary>VoIP 呼び出しで使用されるメディアの種類を指定します。</summary>
+      <capability type="voipCall">アプリが Windows.ApplicationModel.Calls 名前空間の VOIP 呼び出し API にアクセスするために必要です。</capability>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallMedia.Audio">
+      <summary>呼び出しは、オーディオを使用します。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallMedia.None">
+      <summary>呼び出しは、メディアを使用しません。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallMedia.Video">
+      <summary>呼び出しは、ビデオを使用します。</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason">
+      <summary>着信呼び出しが拒否された理由を指定します。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason.EmergencyCallExists">
+      <summary>緊急呼び出しが進行中です。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason.InvalidCallState">
+      <summary>呼び出しは無効な状態にあります。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason.OtherIncomingCall">
+      <summary>別の着信呼び出しを受け付けました。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason.TimedOut">
+      <summary>着信呼び出しがタイムアウトしました。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason.UserIgnored">
+      <summary>ユーザーが呼び出しを無視するボタンを押しました。</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.VoipPhoneCallResourceReservationStatus">
+      <summary>VoIP リソースを予約しようとした結果を示しています。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallResourceReservationStatus.ResourcesNotAvailable">
+      <summary>リソースが使用できないため、予約されませんでした。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallResourceReservationStatus.Success">
+      <summary>リソースが予約されています。</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.VoipPhoneCallState">
+      <summary>VoIP 呼び出しの状態を指定します。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallState.Active">
+      <summary>呼び出しはアクティブです。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallState.Ended">
+      <summary>呼び出しは終了しています。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallState.Held">
+      <summary>呼び出しが保留中です。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallState.Incoming">
+      <summary>呼び出しは受信されますが、まだアクティブではありません。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallState.Outgoing">
+      <summary>呼び出しは送信されますが、まだアクティブではありません。</summary>
+    </member></members>
+</doc>

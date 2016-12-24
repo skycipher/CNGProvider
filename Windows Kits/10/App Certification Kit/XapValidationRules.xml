@@ -1,0 +1,579 @@
+<XapValidationRules xmlns="http://windowsphone.com/XapValidationRules.xsd">
+  <Errors>
+    <!-- messages below are used to validate that error codes raised in the rules match the format arguments 
+       - actual error messages are localized and may be different -->
+
+    <!--
+    <Error Code="1000" Message="Unable to write to a file." />
+    <Error Code="1001" Message="Unable to unpack XAP." />
+    <Error Code="1002" Message="Silverlight app manifest missing." />
+    <Error Code="1003" Message="Silverlight app manifest is not valid." />
+    <Error Code="1004" Message="Windows Phone app manifest is not valid." />
+    -->
+    <Error Code="1005" Message="Invalid platform version specified: {0}." />
+    <!--<Error Code="1007" Message="Invalid manifest description specified: {0}." />-->
+    <Error Code="1008" Message="Invalid setting specified in the manifest." />
+    <!--<Error Code="1009" Message="Invalid ProductID specified in the manifest: {0}." />-->
+    <Error Code="1010" Message="Invalid publisher specified in the manifest: {0}. Must be shorter than {1} characters." />
+    <Error Code="1011" Message="Invalid RuntimeType specified in the manifest: {0}." />
+    <Error Code="1012" Message="Invalid TaskName specified in the manifest: {0}." />
+    <Error Code="1013" Message="Invalid title specified in the manifest: {0}. Must be shorter than {1} characters." />
+    <Error Code="1014" Message="Invalid Token ID specified in the manifest: {0}." />
+    <Error Code="1015" Message="Invalid version specified in the manifest: {0}." />
+    <Error Code="1016" Message="A file registered in Silverlight App Manifest is missing: {0}." />
+    <Error Code="1017" Message="Too many DLL files in the XAP. Found {0} but only {1} are allowed." />
+    <Error Code="1018" Message="Maximum assembly size was exceeded. Assembly {0} is {1} bytes long ({2} allowed)." />
+    <Error Code="1019" Message="Embedded XAPs are not allowed, but found {0}." />
+    <!--<Error Code="1020" Message="Found assembly file not listed in the manifest: {0}." />-->
+    <!--<Error Code="1021" Message="Photo extras file is invalid: {0}." />-->
+    <!--<Error Code="1022" Message="Photo extras file contains invalid XML: {0}." />-->
+    <!--<Error Code="1023" Message="Deployment file listed in the manifest is missing: {0}." />-->
+    <Error Code="1024" Message="The file that IconPath points to does not exist: {0}." />
+    <!--<Error Code="1025" Message="The file that the BackgroundImage path points to does not exist: {0}." />-->
+    <Error Code="1026" Message="Xap file exceeds the max allowed size: {0}. Current size is: {1}." />
+    <Error Code="1028" Message="Native API {1}, not allowed in assembly {0}." />
+    <Error Code="1032" Message="Icon file format is invalid: {0}." />
+    <Error Code="1033" Message="Embedded EXEs are not allowed, but found {0}." />
+    <!--<Error Code="1034" Message="Invalid entry assembly specified in the AppManifest.xaml file." />-->
+    <!--<Error Code="1042" Message="AppManifest.xaml file was not found." />-->
+    <Error Code="1045" Message="App platform version {0} does not support detected capability {1}." />
+    <!--<Error Code="2000" Message="Cannot open resource file {0}." />-->
+    <!--<Error Code="2001" Message="Duplicate file detected in AppManifest.xaml." />-->
+    <Error Code="2002" Message="Localized title for culture: {0} is missing or empty." />
+    <Error Code="2003" Message="[NeutralResourceLanguage] attribute is missing on the entry assembly." />
+    <!--<Error Code="2004" Message="Unexpected error has occurred." />-->
+    <Error Code="2005" Message="Invalid Template ID specified in the manifest." />
+    <!--<Error Code="2006" Message="WMAppManifest.xml file is invalid." />-->
+    <Error Code="2007" Message="XAP file must include at least one assembly." />
+    <Error Code="2008" Message="Capability {0} is disallowed." />
+    <Error Code="2009" Message="Embedded file {0} is not allowed." />
+    <Error Code="2010" Message="Embedded file {0} is too large. Size={1}, maximum size={2}." />
+    <Error Code="2011" Message="Disallowed API cannot be used in the background agent. Assembly {0} was trying to use {1}." />
+    <Error Code="2012" Message="Agent {0} does not have a valid entry assembly." />
+    <Error Code="2013" Message="Agent {0} does not have a valid entry point type." />
+    <Error Code="2014" Message="Image file format is not supported: {0}." />
+    <Error Code="2015" Message="Extension is not supported: {0}." />
+    <Error Code="2017" Message="Too many manifest extensions defined. Maximum number allowed is {0}." />
+    <Error Code="2018" Message="You cannot define Photo Extras using Extras.xml for applications that target this platform. Please use Extensions element in WMAppManifest.xml instead." />
+    <Error Code="2019" Message="You cannot define more than {0} instances of background agent of type {1}." />
+    <!--<Error Code="2020" Message="You cannot use APIs from a platform version higher than indicated by AppPlatformVersion." />-->
+
+    <Error Code="2026" Message="The file {0} has invalid name. Filenames must only contain ASCII characters."/>
+    <Error Code="2027" Message="Assembly names can’t contain the '~' character. Update the name for file {0} and try again."/>
+    <Error Code="2028" Message="Xap Filename: {0} Exceeded the the maximum filename length ({1})."/>
+  </Errors>
+
+  <Set Name="MAX_XAP_SIZE_GA" Value="235929600" />
+  <Set Name="MAX_XAP_SIZE_POST_GA" Value="1073741824" />
+  <Set Name="MAX_ASSEMBLY_COUNT" Value="100" />
+  <Set Name="MAX_ASSEMBLY_FILE_SIZE" Value="100000000" />
+  <Set Name="MAX_ICON_FILE_SIZE" Value="100000000" />
+  <Set Name="MAX_IMAGE_FILE_SIZE" Value="100000000" />
+  <Set Name="MAX_PUBLISHER_NAME_LENGTH" Value="50" />
+  <Set Name="MAX_TITLE_NAME_LENGTH" Value="50" />
+  <Set Name="MAX_VERSION_NUMBER_LENGTH" Value="10" />
+  <Set Name="MAX_EXTENSIONS_ALLOWED" Value="100" />
+  <Set Name="MAX_EXTENSION_NAME_LENGTH" Value="43" />
+  <Set Name="MAX_APP_CONNECT_KEY_LENGTH" Value="128" />
+  <Set Name="MAX_FILENAME_FULLPATH" Value="165" />
+  <!-- 255 MAX_PATH - apx 90 chars for temp dir -->
+
+  <FailUnless Value="xap.AppManifest.AppPlatformVersion" OneOf="7.0;7.1;8.0;8.1" ErrorCode="1005" MessageParameter0="xap.AppManifest.AppPlatformVersion" />
+
+  <Section Id="Content">
+    <!-- check XAP file size if we know it -->
+    <Unless Value="xap.XapFileSize" Equals="0">
+      <If Value="xap.AppManifest.AppPlatformVersion" OneOf="7.0">
+        <FailIf Value="xap.XapFileSize" GreaterThan="MAX_XAP_SIZE_GA" ErrorCode="1026" MessageParameter0="MAX_XAP_SIZE_GA" MessageParameter1="xap.XapFileSize" />
+      </If>
+      <If Value="xap.AppManifest.AppPlatformVersion" OneOf="7.1;8.0">
+        <FailIf Value="xap.XapFileSize" GreaterThan="MAX_XAP_SIZE_POST_GA" ErrorCode="1026" MessageParameter0="MAX_XAP_SIZE_POST_GA" MessageParameter1="xap.XapFileSize" />
+      </If>
+    </Unless>
+
+    <!-- check assembly count-->
+    <FailIf Value="xap.Assemblies.Count" GreaterThan="MAX_ASSEMBLY_COUNT" ErrorCode="1017" MessageParameter0="xap.Assemblies.Count" MessageParameter1="MAX_ASSEMBLY_COUNT" />
+
+    <ForEach Item="a" In="xap.Assemblies">
+      <FailIf Value="a.File.Length" GreaterThan="MAX_ASSEMBLY_FILE_SIZE" ErrorCode="1018" MessageParameter0="a.File.XapRelativeName" MessageParameter1="a.File.Length" MessageParameter2="MAX_ASSEMBLY_FILE_SIZE" />
+
+      <FailIf Value="a.File.XapRelativeName" Matches="[~]" ErrorCode="2027" MessageParameter0="a.File.XapRelativeName" />
+    </ForEach>
+
+    <!-- make sure we have at least 1 assembly -->
+    <Unless Value="xap.AppManifest.RuntimeType" Equals="ModernNative">
+      <FailIf Value="xap.Assemblies.Count" Equals="0" ErrorCode="2007" />
+    </Unless>
+
+    <!-- disallowed content -->
+    <ForEach Item="f" In="xap.AllFiles">
+
+      <FailIf Value="f.XapRelativeName.Length" GreaterThan="MAX_FILENAME_FULLPATH" ErrorCode="2028" MessageParameter0="f.PhysicalFileName" MessageParameter1="MAX_FILENAME_FULLPATH" />
+
+      <!-- make sure no non-ascii file name -->
+      <FailIf Value="f.XapRelativeName" Matches="[^\u0020-\u007F]" ErrorCode="2026" MessageParameter0="f.XapRelativeName" />
+
+      <!-- make sure no embedded EXEs. Only allowed in ModernNative apps -->
+      <Unless Value="xap.AppManifest.RuntimeType" Equals="ModernNative">
+        <FailIf Value="f.Extension" Matches="\.exe$" IgnoreCase="true" ErrorCode="1033" MessageParameter0="f.XapRelativeName" />
+      </Unless>
+
+      <!-- make sure no embedded XAPs -->
+      <FailIf Value="f.Extension" Matches="\.xap$" IgnoreCase="true" ErrorCode="1019" MessageParameter0="f.XapRelativeName" />
+
+      <!-- make sure no embedded DebugSettings.xml -->
+      <FailIf Value="f.XapRelativeName" Equals="DebugSettings.xml" IgnoreCase="true" ErrorCode="2009" MessageParameter0="f.XapRelativeName" />
+
+      <!-- make sure no embedded MDILFileList.xml -->
+      <FailIf Value="f.XapRelativeName" Equals="MDILFileList.xml" IgnoreCase="true" ErrorCode="2009" MessageParameter0="f.XapRelativeName" />
+
+
+    </ForEach>
+
+    <!-- fail if the app is using Mango APIs but is targeting 7.0 -->
+    <!--
+    <If Value="xap.ApiLevel" GreaterThan="1">
+      <FailIf Value="xap.AppManifest.AppPlatformVersion" Equals="7.0" ErrorCode="2020" />
+    </If>
+    -->
+  </Section>
+
+  <Section Id="Images">
+    <!-- validate XAP images -->
+    <ForEach Item="i" In="xap.Images">
+      <!-- for all images that are file-based (not resource-based), fail if the file does not exist -->
+      <Unless Value="i.File" Equals="">
+        <FailUnless Value="i.File.Exists" Equals="True" ErrorCode="1024" MessageParameter0="i.File.XapRelativeName" />
+      </Unless>
+    </ForEach>
+
+    <Unless Value="xap.AppListIcon.File" Equals="">
+      <FailIf Value="xap.AppListIcon.File.Length" GreaterThan="MAX_ICON_FILE_SIZE" ErrorCode="2010" MessageParameter0="xap.AppListIcon.File.XapRelativeName" MessageParameter1="xap.AppListIcon.File.Length" MessageParameter2="MAX_ICON_FILE_SIZE" />
+
+      <!-- validate app icon file format -->
+      <FailUnless Value="xap.AppListIcon.File.Extension" OneOf=".ico;.png" IgnoreCase="true" ErrorCode="1032" MessageParameter0="xap.AppListIcon.File.XapRelativeName" />
+    </Unless>
+
+    <Unless Value="xap.BackgroundImage.File" Equals="">
+      <FailIf Value="xap.BackgroundImage.File.Length" GreaterThan="MAX_IMAGE_FILE_SIZE" ErrorCode="2010" MessageParameter0="xap.BackgroundImage.File.XapRelativeName" MessageParameter1="xap.BackgroundImage.File.Length" MessageParameter2="MAX_IMAGE_FILE_SIZE" />
+      <FailUnless Value="xap.BackgroundImage.File.Extension" OneOf=".png;.jpg;.jpeg" IgnoreCase="true" ErrorCode="2014" MessageParameter0="xap.BackgroundImage.File.XapRelativeName" />
+    </Unless>
+
+    <Unless Value="xap.SmallImage.File" Equals="">
+      <FailIf Value="xap.SmallImage.File.Length" GreaterThan="MAX_IMAGE_FILE_SIZE" ErrorCode="2010" MessageParameter0="xap.SmallImage.File.XapRelativeName" MessageParameter1="xap.SmallImage.File.Length" MessageParameter2="MAX_IMAGE_FILE_SIZE" />
+      <FailUnless Value="xap.SmallImage.File.Extension" OneOf=".png;.jpg;.jpeg" IgnoreCase="true" ErrorCode="2014" MessageParameter0="xap.SmallImage.File.XapRelativeName" />
+    </Unless>
+
+    <Unless Value="xap.CycleImage.File" Equals="">
+      <FailIf Value="xap.CycleImage.File.Length" GreaterThan="MAX_IMAGE_FILE_SIZE" ErrorCode="2010" MessageParameter0="xap.CycleImage.File.XapRelativeName" MessageParameter1="xap.CycleImage.File.Length" MessageParameter2="MAX_IMAGE_FILE_SIZE" />
+      <FailUnless Value="xap.CycleImage.File.Extension" OneOf=".png;.jpg;.jpeg" IgnoreCase="true" ErrorCode="2014" MessageParameter0="xap.CycleImage.File.XapRelativeName" />
+    </Unless>
+
+    <Unless Value="xap.IconImage.File" Equals="">
+      <FailIf Value="xap.IconImage.File.Length" GreaterThan="MAX_IMAGE_FILE_SIZE" ErrorCode="2010" MessageParameter0="xap.IconImage.File.XapRelativeName" MessageParameter1="xap.IconImage.File.Length" MessageParameter2="MAX_IMAGE_FILE_SIZE" />
+      <FailUnless Value="xap.IconImage.File.Extension" OneOf=".png;.jpg;.jpeg" IgnoreCase="true" ErrorCode="2014" MessageParameter0="xap.IconImage.File.XapRelativeName" />
+    </Unless>
+  </Section>
+
+  <Section Id="Localization">
+    <!-- Error code 2003 only applies to PreApollo apps. In Apollo, we check the default language straight from the manifest. The associated error code is 3008-->
+    <If Value="xap.AppManifest.AppPlatformVersion" OneOf="7.0;7.1">
+      <FailIf Value="xap.DefaultLanguageInfo.CultureName" Matches="^\s*$" ErrorCode="2003" />
+    </If>
+
+    <!-- check for missing app title -->
+    <FailIf Value="xap.DefaultLanguageInfo.AppListTitle" Matches="^\s*$" ErrorCode="2002" MessageParameter0="xap.DefaultLanguageInfo.CultureName" />
+
+    <!-- check for missing localized app titles -->
+    <ForEach Item="xli" In="xap.LocalizedInformation">
+      <FailIf Value="xli.AppListTitle" Matches="^\s*$" ErrorCode="2002" MessageParameter0="xli.CultureName" />
+    </ForEach>
+
+    <!-- localized app title length -->
+    <ForEach Item="xli" In="xap.LocalizedInformation">
+      <FailIf Value="xli.AppListTitle.Length" GreaterThan="MAX_TITLE_NAME_LENGTH" ErrorCode="1013" MessageParameter0="xli.AppListTitle" MessageParameter1="MAX_TITLE_NAME_LENGTH"/>
+    </ForEach>
+  </Section>
+
+  <Section Id="SilverlightManifest">
+    <!-- make sure all files specified in the Silverlight manifest exist in the XAP (unless XAP is "Modern Native" since it won't have a silverlight manifest) -->
+    <Unless Value="xap.AppManifest.RuntimeType" Equals="ModernNative">
+      <ForEach Item="f" In="xap.SilverlightManifest.Parts">
+        <FailUnless Value="f.Exists" Equals="True" ErrorCode="1016" MessageParameter0="f.XapRelativeName" />
+      </ForEach>
+    </Unless>
+  </Section>
+
+  <Section Id="PhoneManifestDefaultTask">
+    <!-- default task name -->
+    <FailUnless Value="xap.AppManifest.ManifestXml.App.Tasks.DefaultTask.@Name" Equals="_default" ErrorCode="1012" MessageParameter0="xap.AppManifest.ManifestXml.App.Tasks.DefaultTask.Name" />
+  </Section>
+
+  <Section Id="PhoneManifestHasSettings">
+    <!-- Settings is disallowed -->
+    <FailIf Value="xap.AppManifest.ManifestXml.App.@HasSettings" Equals="true" ErrorCode="1008" IgnoreCase="true" />
+  </Section>
+
+  <Section Id="PhoneManifestPrimaryToken">
+    <!-- primary token task name-->
+    <FailUnless Value="xap.AppManifest.ManifestXml.App.Tokens.PrimaryToken.@TaskName" Equals="_default" ErrorCode="1014" MessageParameter0="xap.AppManifest.ManifestXml.App.Tokens.PrimaryToken.TaskName" />
+
+    <!-- make sure template 6 is not used except for non-preinstalled apps -->
+    <Unless Value="xap.IsPreinstalledApp" Equals="True">
+      <FailUnless Value="xap.AppManifest.ManifestXml.App.Tokens.PrimaryToken.TemplateType6" Equals="" ErrorCode="2005" />
+    </Unless>
+  </Section>
+
+  <Section Id="PhoneManifestPublisher">
+    <!-- publisher -->
+    <FailIf Value="xap.AppManifest.ManifestXml.App.@Publisher.Length" GreaterThan="MAX_PUBLISHER_NAME_LENGTH" ErrorCode="1010" MessageParameter0="xap.AppManifest.ManifestXml.App.@Publisher" MessageParameter1="MAX_PUBLISHER_NAME_LENGTH" />
+  </Section>
+
+  <Section Id="PhoneManifestPlatformVersion">
+    <!-- validate runtime type for per-Apollo-->
+    <If Value="xap.AppManifest.AppPlatformVersion" OneOf="7.0;7.1">
+      <FailUnless Value="xap.AppManifest.RuntimeType" OneOf="XNA;Silverlight" ErrorCode="1011" MessageParameter0="xap.AppManifest.ManifestXml.App.RuntimeType" />
+    </If>
+    <!-- validate runtime type for Apollo -->
+    <If Value="xap.AppManifest.AppPlatformVersion" OneOf="8.0">
+      <FailUnless Value="xap.AppManifest.RuntimeType" OneOf="XNA;Silverlight;ModernNative;XAML" ErrorCode="1011" MessageParameter0="xap.AppManifest.ManifestXml.App.RuntimeType" />
+    </If>
+  </Section>
+
+  <Section Id="PhoneManifestTitle">
+    <!-- app title -->
+    <FailIf Value="xap.AppManifest.ManifestXml.App.@Title.Length" GreaterThan="MAX_TITLE_NAME_LENGTH" ErrorCode="1013" MessageParameter0="xap.AppManifest.ManifestXml.App.@Title" MessageParameter1="MAX_TITLE_NAME_LENGTH" />
+  </Section>
+
+  <Section Id="PhoneManifestVersion">
+    <!-- version length -->
+    <FailIf Value="xap.AppManifest.ManifestXml.App.@Version.Length" GreaterThan="MAX_VERSION_NUMBER_LENGTH" ErrorCode="1015" MessageParameter0="xap.AppManifest.ManifestXml.App.@Version" />
+  </Section>
+
+  <Section Id="Capabilities">
+    <!-- new 7.5 capabilities -->
+    <If Value="xap.Capabilities" Contains="@ID_CAP_ISV_CAMERA">
+      <FailIf Value="xap.AppManifest.AppPlatformVersion" OneOf="7.0" ErrorCode="1045" MessageParameter0="xap.AppManifest.AppPlatformVersion" MessageParameter1="@ID_CAP_ISV_CAMERA" />
+    </If>
+
+    <If Value="xap.Capabilities" Contains="@ID_CAP_APPOINTMENTS">
+      <FailIf Value="xap.AppManifest.AppPlatformVersion" OneOf="7.0" ErrorCode="1045" MessageParameter0="xap.AppManifest.AppPlatformVersion" MessageParameter1="@ID_CAP_APPOINTMENTS" />
+    </If>
+
+    <If Value="xap.Capabilities" Contains="@ID_CAP_CONTACTS">
+      <FailIf Value="xap.AppManifest.AppPlatformVersion" OneOf="7.0" ErrorCode="1045" MessageParameter0="xap.AppManifest.AppPlatformVersion" MessageParameter1="@ID_CAP_CONTACTS" />
+    </If>
+
+    <!-- disallowed capability -->
+    <If Value="xap.Capabilities" Contains="@ID_CAP_RINGTONE_ADD">
+      <Fail ErrorCode="2008" MessageParameter0="@ID_CAP_RINGTONE_ADD" />
+    </If>
+
+    <!-- hardware capabilities included in 7.1 -->
+    <If Value="xap.Capabilities" Contains="@ID_CAP_GYROSCOPE">
+      <FailIf Value="xap.AppManifest.AppPlatformVersion" OneOf="7.0" ErrorCode="1045" MessageParameter0="xap.AppManifest.AppPlatformVersion" MessageParameter1="@ID_CAP_GYROSCOPE" />
+    </If>
+
+    <If Value="xap.Capabilities" Contains="@ID_CAP_MAGNETOMETER">
+      <FailIf Value="xap.AppManifest.AppPlatformVersion" OneOf="7.0" ErrorCode="1045" MessageParameter0="xap.AppManifest.AppPlatformVersion" MessageParameter1="@ID_CAP_MAGNETOMETER" />
+    </If>
+
+    <!-- new 8.0 capabilities -->
+    <If Value="xap.Capabilities" Contains="@ID_CAP_PEOPLE_EXTENSION">
+      <FailIf Value="xap.AppManifest.AppPlatformVersion" OneOf="7.0;7.1" ErrorCode="1045" MessageParameter0="xap.AppManifest.AppPlatformVersion" MessageParameter1="@ID_CAP_PEOPLE_EXTENSION" />
+    </If>
+
+    <If Value="xap.Capabilities" Contains="@ID_CAP_MAP_WRITE">
+      <FailIf Value="xap.AppManifest.AppPlatformVersion" OneOf="7.0;7.1" ErrorCode="1045" MessageParameter0="xap.AppManifest.AppPlatformVersion" MessageParameter1="@ID_CAP_MAP_WRITE" />
+    </If>
+
+    <If Value="xap.Capabilities" Contains="@ID_CAP_WALLET_SECUREELEMENT">
+      <FailIf Value="xap.AppManifest.AppPlatformVersion" OneOf="7.0;7.1" ErrorCode="1045" MessageParameter0="xap.AppManifest.AppPlatformVersion" MessageParameter1="@ID_CAP_WALLET_SECUREELEMENT" />
+    </If>
+
+  </Section>
+
+  <Section Id="Extensions">
+    <!-- reject apps with more than 100 extensions -->
+    <If Value="xap.AppManifest.ManifestExtensions.Count" GreaterThan="MAX_EXTENSIONS_ALLOWED">
+      <Fail ErrorCode="2017" MessageParameter0="MAX_EXTENSIONS_ALLOWED" />
+    </If>
+
+    <!-- reject Mango apps that use photo extras but use old-style Extras.xml file -->
+    <If Value="xap.UsesPhotoExtras" Equals="True">
+      <Unless Value="xap.AppManifest.AppPlatformVersion" OneOf="7.0">
+        <FailIf Value="xap.AllFiles" Contains="@Extras.xml" ErrorCode="2018" />
+      </Unless>
+    </If>
+
+    <ForEach Item="extension" In="xap.AppManifest.ManifestExtensions">
+      <!-- reject all extensions above certain length-->
+      <Unless Value="extension.ExtensionName.Length" GreaterThan="MAX_EXTENSION_NAME_LENGTH">
+        <!-- No whitespace -->
+        <Unless Value="extension.ExtensionName" Matches="\s+">
+
+          <!-- photo extras are ok (for 7.0, 7.1)-->
+          <If Value="xap.AppManifest.AppPlatformVersion" OneOf="7.0;7.1">
+            <If Value="extension.ExtensionName" OneOf="Photos_Extra_Hub;Photos_Extra_Viewer;Photos_Extra_Share;Photos_Extra_Gallery;Photos_Extra_Image_Editor;Photos_Extra_Video_Share;Photos_Extra_Video_Editor;Photos_Auto_Upload;Camera_Capture_App" IgnoreCase="true">
+              <Next />
+            </If>
+          </If>
+
+          <!-- photo extras are ok (for 8.0 & 8.1)-->
+          <If Value="xap.AppManifest.AppPlatformVersion" Matches="8.0">
+            <If Value="extension.ExtensionName" OneOf="Photos_Extra_Hub;Photos_Extra_Viewer;Photos_Extra_Share;Photos_Extra_Gallery;Photos_Extra_Image_Editor;Photos_Extra_Video_Share;Photos_Extra_Video_Editor;Photos_Auto_Upload;Camera_Capture_App;Photos_Rich_Media_Edit;LockScreen_Notification_IconCount;LockScreen_Notification_TextField;LockScreen_Background;Accounts_Extension_Standard;Nab_San_Task;Service_Agent_Application;Sms_Intercept_Standard;Contact_Profile_Extension_Restricted;Contact_Profile_Extension_Restricted_Mobile" IgnoreCase="true">
+              <Next />
+            </If>
+          </If>
+
+          <!-- 8.1 Lockscreen extensions are OK -->
+          <If Value="xap.AppManifest.AppPlatformVersion" Matches="8.1">
+            <If Value="extension.ExtensionName" OneOf="LockScreen_Background;LockScreen_Notification_IconCount;LockScreen_Notification_TextField;Photos_Extra_Hub;Photos_Extra_Viewer;Photos_Extra_Share;Photos_Extra_Gallery;Photos_Extra_Image_Editor;Photos_Extra_Video_Share;Photos_Extra_Video_Editor;Photos_Auto_Upload;Camera_Capture_App;Photos_Rich_Media_Edit;LockScreen_Notification_IconCount;LockScreen_Notification_TextField;LockScreen_Background;Accounts_Extension_Standard;Nab_San_Task;Service_Agent_Application;Sms_Intercept_Standard;Contact_Profile_Extension_Restricted;Contact_Profile_Extension_Restricted_Mobile" IgnoreCase="true">
+              <Next />
+            </If>
+          </If>
+
+          <!-- Bing_ extensions are OK -->
+          <If Value="extension.ExtensionName" Matches="^Bing_" IgnoreCase="true">
+            <Next />
+          </If>
+
+          <!-- Wallet App extensions are OK -->
+          <If Value="extension.ExtensionName" OneOf="Wallet_app_payment;Wallet_app_transit;Wallet_app_loyalty;Wallet_app_membership;Wallet_app_other" IgnoreCase="true">
+            <Next />
+          </If>
+
+        </Unless>
+      </Unless>
+
+      <!-- fail for everything else -->
+      <Fail ErrorCode="2015" MessageParameter0="extension.ExtensionName" />
+    </ForEach>
+  </Section>
+
+  <Section Id="ApolloNativeCode">
+    <If Value="xap.AppManifest.AppPlatformVersion" OneOf="8.0">
+      <ForEach Item="asm" In="xap.Assemblies">
+        <If Value="asm.IsNative" Equals="True">
+          <Unless Value="xap.NativeResourceAssemblies" Contains="asm.File.XapRelativeName" IgnoreCase="true">
+            <If Value="asm.UsesNativeCode" Equals="True">
+              <ForEach Item="disallowedNativeApi" In="asm.UsedDisallowedNativeApis">
+                <Fail ErrorCode="1028" MessageParameter0="asm.File.XapRelativeName" MessageParameter1="disallowedNativeApi.DisplayName"/>
+              </ForEach>
+            </If>
+          </Unless>
+        </If>
+      </ForEach>
+    </If>
+  </Section>
+
+  <Section Id="Agents">
+    <!-- Only one Agent per AgentType is allowed unless it's a ServiceAgent (exclusive to 8.0 - enforced by schema) -->
+    <ForEach Item="abt" In="xap.AgentsByType">
+      <Unless Value="abt.AgentType" Equals="ServiceAgent">
+        <FailIf Value="abt.Agents.Count" GreaterThan="1" ErrorCode="2019" MessageParameter0="1" MessageParameter1="abt.AgentType" />
+      </Unless>
+    </ForEach>
+
+    <ForEach Item="agent" In="xap.Agents">
+      <!-- make sure entry assembly is defined for each agent -->
+      <FailIf Value="agent.EntryAssembly" Equals="" ErrorCode="2012" MessageParameter0="agent.Name" />
+
+      <!-- make sure entry point type is defined for each agent (Modern Native apps don't need to have an entry point type) -->
+      <Unless Value="xap.AppManifest.RuntimeType" Equals="ModernNative">
+        <FailIf Value="agent.EntryPointType" Equals="" ErrorCode="2013" MessageParameter0="agent.Name" />
+      </Unless>
+
+      <Unless Value="agent.AgentType" Equals="Foreground">
+        <ForEach Item="asm" In="agent.Assemblies">
+          <ForEach Item="api" In="asm.UsedApis">
+            <DefaultErrorScope ErrorCode="2011" MessageParameter0="asm.File.XapRelativeName" MessageParameter1="api.Description">
+
+              <!-- Microsoft.Devices.Sensors assembly -->
+              <FailIf Value="api.AssemblyName" OneOf="Microsoft.Devices.Sensors, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e;Microsoft.Devices.Sensors, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e" IgnoreCase="true" />
+
+              <!-- Microsoft.Phone assembly -->
+              <If Value="api.AssemblyName" OneOf="Microsoft.Phone, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e;Microsoft.Phone, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e" IgnoreCase="true">
+                <FailIf Value="api.NamespaceName" Equals="Microsoft.Devices.Radio" />
+                <FailIf Value="api.NamespaceName" Equals="Microsoft.Phone.Notification" />
+                <FailIf Value="api.NamespaceName" Equals="Microsoft.Phone.Tasks" />
+                <FailIf Value="api.NamespaceName" Equals="System.Windows.Navigation" />
+
+                <If Value="api.NamespaceName" Equals="Microsoft.Devices">
+                  <FailIf Value="api.ClassName" Equals="Camera" />
+                  <!--<FailIf Value="api.ClassName" Equals="CameraButtons" />-->
+                  <FailIf Value="api.ClassName" Equals="CameraOperationCompletedEventArgs" />
+                  <FailIf Value="api.ClassName" Equals="CameraVideoBrushExtensions" />
+                  <FailIf Value="api.ClassName" Equals="ContentReadyEventArgs" />
+                  <FailIf Value="api.ClassName" Equals="PhotoCamera" />
+                  <FailIf Value="api.ClassName" Equals="YCrCbPixelLayout" />
+                  <!--<FailIf Value="api.ClassName" Equals="YCbCrPixelLayout" />-->
+                  <!--<FailIf Value="api.ClassName" Equals="OemCameraExtensions" />-->
+                  <FailIf Value="api.ClassName" Equals="VibrateController" />
+                </If>
+
+                <If Value="api.NamespaceName" Equals="Microsoft.Phone.BackgroundTransfer">
+                  <If Value="api.ClassName" Equals="BackgroundTransferService">
+                    <FailIf Value="api.MethodName" Equals="Add" />
+                  </If>
+                </If>
+
+                <If Value="api.NamespaceName" Equals="Microsoft.Phone.Controls">
+                  <FailIf Value="api.ClassName" Equals="PhoneApplicationPage" />
+                  <FailIf Value="api.ClassName" Equals="PhoneApplicationFrame" />
+                  <FailIf Value="api.ClassName" Equals="WebBrowser" />
+                  <FailIf Value="api.ClassName" Equals="WebBrowserExt" />
+                </If>
+
+                <If Value="api.NamespaceName" Equals="Microsoft.Phone.Info">
+                  <If Value="api.ClassName" Equals="DeviceStatus">
+                    <FailIf Value="api.MethodName" Equals="get_IsKeyboardPresent" />
+                    <FailIf Value="api.MethodName" Equals="get_IsKeyboardDeployed" />
+                    <FailIf Value="api.MethodName" Equals="add_KeyboardDeployedChanged" />
+                    <FailIf Value="api.MethodName" Equals="remove_KeyboardDeployedChanged" />
+                  </If>
+                </If>
+
+                <If Value="api.NamespaceName" Equals="Microsoft.Phone.Scheduler">
+                  <If Value="api.ClassName" Equals="ScheduledActionService">
+                    <FailIf Value="api.MethodName" Equals="Add" />
+                  </If>
+                </If>
+
+                <If Value="api.NamespaceName" Equals="Microsoft.Phone.Shell">
+                  <If Value="api.ClassName" Equals="ShellTile">
+                    <!-- allow all methods except Create -->
+                    <Unless Value="api.MethodName" Equals="Create">
+                      <Next />
+                    </Unless>
+                  </If>
+
+                  <!-- allow ShellToast class -->
+                  <If Value="api.ClassName" Equals="ShellToast">
+                    <Next />
+                  </If>
+
+                  <If Value="api.ClassName" Equals="FlipTileData">
+                    <Next />
+                  </If>
+
+                  <If Value="api.ClassName" Equals="CycleTileData">
+                    <Next />
+                  </If>
+
+                  <If Value="api.ClassName" Equals="IconicTileData">
+                    <Next />
+                  </If>
+
+                  <If Value="api.ClassName" Equals="ShellTileData">
+                    <Next />
+                  </If>
+
+                  <If Value="api.ClassName" Equals="StandardTileData">
+                    <Next />
+                  </If>
+
+                  <!-- fail for everything else in this namespace-->
+                  <Fail />
+                </If>
+              </If>
+
+              <!-- Microsoft.Xna.Framework.MediaLibraryExtensions assembly -->
+              <If Value="api.AssemblyName" Equals="Microsoft.Xna.Framework.MediaLibraryExtensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553" IgnoreCase="true">
+                <If Value="xap.AppManifest.AppPlatformVersion" Equals="8.0">
+                  <If Value="api.NamespaceName" Equals="Microsoft.Xna.Framework.Media.PhoneExtensions">
+                    <If Value="api.ClassName" Equals="MediaLibraryExtensions">
+                      <FailIf Value="api.MethodName" Equals="SaveSong" />
+                    </If>
+                  </If>
+                </If>
+              </If>
+
+              <!-- Microsoft.Xna.Framework assembly -->
+              <If Value="api.AssemblyName" Equals="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553" IgnoreCase="true">
+
+                <If Value="xap.AppManifest.AppPlatformVersion" Equals="8.0">
+
+                  <If Value="api.NamespaceName" Equals="Microsoft.Xna.Framework.Media">
+                    <If Value="api.ClassName" Equals="MediaLibrary">
+                      <FailIf Value="api.MethodName" Equals="get_Albums" />
+                      <FailIf Value="api.MethodName" Equals="get_Artists" />
+                      <FailIf Value="api.MethodName" Equals="get_Genres" />
+                      <FailIf Value="api.MethodName" Equals="get_MediaSource" />
+                      <FailIf Value="api.MethodName" Equals="get_Playlists" />
+                      <FailIf Value="api.MethodName" Equals="get_Songs" />
+                      <Next />
+                    </If>
+
+                    <If Value="api.ClassName" Equals="Picture">
+                      <Next />
+                    </If>
+
+                    <If Value="api.ClassName" Equals="PictureAlbum">
+                      <Next />
+                    </If>
+
+                    <If Value="api.ClassName" Equals="PictureAlbumCollection">
+                      <Next />
+                    </If>
+
+                    <If Value="api.ClassName" Equals="PictureCollection">
+                      <Next />
+                    </If>
+                  </If>
+                </If>
+
+                <!-- fail for everything else in this namespace-->
+                <Fail />
+              </If>
+
+              <!-- System.Windows assembly -->
+              <If Value="api.AssemblyName" OneOf="System.Windows, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e;System.Windows, Version=2.0.6.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" IgnoreCase="true">
+                <If Value="api.NamespaceName" Equals="System.Windows">
+                  <If Value="api.ClassName" Equals="Application">
+                    <FailIf Value="api.MethodName" Equals="add_Exit" />
+                    <FailIf Value="api.MethodName" Equals="add_Startup" />
+                    <FailIf Value="api.MethodName" Equals="remove_Exit" />
+                    <FailIf Value="api.MethodName" Equals="remove_Startup" />
+                  </If>
+                  <FailIf Value="api.ClassName" Equals="Clipboard" />
+                  <FailIf Value="api.ClassName" Equals="MessageBox" />
+                </If>
+                <If Value="api.NamespaceName" Equals="System.Windows.Controls">
+                  <FailIf Value="api.ClassName" Equals="MediaElement" />
+                  <FailIf Value="api.ClassName" Equals="MultiScaleImage" />
+                  <FailIf Value="api.ClassName" Equals="MultiScaleSubImage" />
+                </If>
+                <If Value="api.NamespaceName" Equals="System.Windows.Media">
+                  <FailIf Value="api.ClassName" Equals="AudioCaptureDevice" />
+                  <FailIf Value="api.ClassName" Equals="AudioCaptureDeviceCollection" />
+                  <FailIf Value="api.ClassName" Equals="AudioFormat" />
+                  <FailIf Value="api.ClassName" Equals="AudioSink" />
+                  <FailIf Value="api.ClassName" Equals="CaptureDevice" />
+                  <FailIf Value="api.ClassName" Equals="CaptureDeviceConfiguration" />
+                  <FailIf Value="api.ClassName" Equals="CaptureImageCompletedEventArgs" />
+                  <FailIf Value="api.ClassName" Equals="CaptureSource" />
+                  <FailIf Value="api.ClassName" Equals="DeepZoomImageTileSource" />
+                  <FailIf Value="api.ClassName" Equals="DomainAcquirer" />
+                  <FailIf Value="api.ClassName" Equals="DomainOperationCompletedEventArgs" />
+                  <FailIf Value="api.ClassName" Equals="FileSink" />
+                  <FailIf Value="api.ClassName" Equals="JoinDomainCompletedEventArgs" />
+                  <FailIf Value="api.ClassName" Equals="LeaveDomainCompletedEventArgs" />
+                  <FailIf Value="api.ClassName" Equals="LicenseAcquirer" />
+                  <FailIf Value="api.ClassName" Equals="LogReadyRoutedEventArgs" />
+                  <FailIf Value="api.ClassName" Equals="MultiScaleTileSource" />
+                  <FailIf Value="api.ClassName" Equals="VideoBrush" />
+                  <FailIf Value="api.ClassName" Equals="VideoCaptureDevice" />
+                  <FailIf Value="api.ClassName" Equals="VideoCaptureDeviceCollection" />
+                  <FailIf Value="api.ClassName" Equals="VideoFormat" />
+                  <FailIf Value="api.ClassName" Equals="VideoSink" />
+                </If>
+              </If>
+            </DefaultErrorScope>
+          </ForEach>
+        </ForEach>
+      </Unless>
+    </ForEach>
+  </Section>
+
+</XapValidationRules>

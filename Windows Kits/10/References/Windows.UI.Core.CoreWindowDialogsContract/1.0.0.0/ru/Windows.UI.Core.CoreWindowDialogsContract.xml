@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.Core.CoreWindowDialogsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.Core.CoreWindowDialog">
+      <summary>Определяет дочернее диалоговое окно окна приложения.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowDialog.#ctor">
+      <summary>Создает экземпляр по умолчанию класса CoreWindowDialog.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowDialog.#ctor(System.String)">
+      <summary>Создает экземпляр класса CoreWindowDialog с указанным заголовком.</summary>
+      <param name="title">Заголовок диалогового окна.</param>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.BackButtonCommand">
+      <summary>Получает или задает делегат, вызываемый при выборе в диалоговом окне кнопки "Назад".</summary>
+      <returns>Делегат, вызываемый при выборе в диалоговом окне кнопки "Назад".</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.CancelCommandIndex">
+      <summary>Получает и задает значение индекса команды для операции отмены диалогового окна.</summary>
+      <returns>Значение индекса команды для операции отмены диалогового окна.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.Commands">
+      <summary>Получает набор команд пользовательского интерфейса, доступных в диалоговом окне.</summary>
+      <returns>Набор команд пользовательского интерфейса, доступных в диалоговом окне.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.DefaultCommandIndex">
+      <summary>Получает или задает индекс команды по умолчанию для диалогового окна.</summary>
+      <returns>Значение индекса команды по умолчанию для диалогового окна (например, ОК).</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.IsInteractionDelayed">
+      <summary>Получает или задает значение, указывающее, отправляется ли сообщение события взаимодействия с пользовательским интерфейсом с небольшой задержкой. Эта задержка не позволяет пользователю случайно вызвать действие в диалоговом окне.</summary>
+      <returns>Значение true, если задержка с дробным значением используется в каких-либо взаимодействиях с диалоговым окном; в противном случае — значение false.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.MaxSize">
+      <summary>Получает максимальный размер диалогового окна.</summary>
+      <returns>Максимальный размер диалогового окна в пикселях.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.MinSize">
+      <summary>Получает минимальный размер диалогового окна.</summary>
+      <returns>Минимальный размер диалогового окна в пикселях.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.Title">
+      <summary>Получает или задает заголовок диалогового окна.</summary>
+      <returns>Заголовок диалогового окна.</returns>
+    </member><member name="E:Windows.UI.Core.CoreWindowDialog.Showing">
+      <summary>Возникает при отображении диалогового окна.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowDialog.ShowAsync">
+      <summary>Отображает диалоговое окно и асинхронно ожидает, пока пользователь выполнит действие.</summary>
+      <returns>Действие, выполняемое пользователем в диалоговом окне, а также сведения о действии.</returns>
+    </member><member name="T:Windows.UI.Core.CoreWindowFlyout">
+      <summary>Определяет дочерний всплывающий элемент окна приложения.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowFlyout.#ctor(Windows.Foundation.Point)">
+      <summary>Создает экземпляр класса CoreWindowFlyout в указанном положении.</summary>
+      <param name="position">Позиция пикселя на экране, где должно возникнуть всплывающее меню. Позиция предоставляет верхний-левый угол раскрывающегося меню.</param>
+    </member><member name="M:Windows.UI.Core.CoreWindowFlyout.#ctor(Windows.Foundation.Point,System.String)">
+      <summary>Создает экземпляр класса CoreWindowFlyout в указанном положении с предоставленным заголовком.</summary>
+      <param name="position">Позиция пикселя на экране, где должно возникнуть всплывающее меню. Позиция предоставляет верхний-левый угол раскрывающегося меню.</param>
+      <param name="title">Заголовок всплывающего меню.</param>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.BackButtonCommand">
+      <summary>Получает или задает делегат, вызываемый при выборе во всплывающем меню кнопки "Назад".</summary>
+      <returns>Делегат, вызываемый при выборе во всплывающем меню кнопки "Назад".</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.Commands">
+      <summary>Получает набор команд пользовательского интерфейса, доступных во всплывающем меню.</summary>
+      <returns>Набор команд пользовательского интерфейса, доступных во всплывающем меню.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.DefaultCommandIndex">
+      <summary>Получает или задает индекс команды по умолчанию для всплывающего меню.</summary>
+      <returns>Значение индекса команды по умолчанию для всплывающего окна (например, ОК).</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.IsInteractionDelayed">
+      <summary>Получает или задает значение, указывающее, отправляется ли сообщение события взаимодействия с пользовательским интерфейсом с небольшой задержкой. Эта задержка не позволяет пользователю случайно вызвать действие во всплывающем окне.</summary>
+      <returns>Значение true, если задержка с дробным значением используется в каких-либо взаимодействиях со всплывающим окном; в противном случае — значение false.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.MaxSize">
+      <summary>Получает максимальный размер всплывающего меню.</summary>
+      <returns>Максимальный размер всплывающего меню в пикселях.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.MinSize">
+      <summary>Получает минимальный размер всплывающего меню.</summary>
+      <returns>Минимальный размер всплывающего меню в пикселях.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.Title">
+      <summary>Получает или задает заголовок всплывающего меню.</summary>
+      <returns>Заголовок всплывающего меню.</returns>
+    </member><member name="E:Windows.UI.Core.CoreWindowFlyout.Showing">
+      <summary>Возникает при отображении всплывающего меню.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowFlyout.ShowAsync">
+      <summary>Отображает всплывающее меню и асинхронно ожидает, пока пользователь выполнит действие.</summary>
+      <returns>Действие, выполняемое пользователем в диалоговом окне, а также сведения о действии.</returns>
+    </member><member name="T:Windows.UI.Core.CoreWindowPopupShowingEventArgs">
+      <summary>Определяет метод для задания нужного размера окна контекстного меню.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowPopupShowingEventArgs.SetDesiredSize(Windows.Foundation.Size)">
+      <summary>Задает требуемый размер контекстного меню.</summary>
+      <param name="value">Требуемый размер контекстного меню.</param>
+    </member></members>
+</doc>

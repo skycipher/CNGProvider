@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.Core.AnimationMetrics.AnimationMetricsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.Core.AnimationMetrics.AnimationDescription">
+      <summary>Expose une collection d'effets d'animation individuels qui sont exécutés sur une cible spécifique pour créer une opacité, une mise à l'échelle ou une animation de déplacement Windows complète.</summary>
+    </member><member name="M:Windows.UI.Core.AnimationMetrics.AnimationDescription.#ctor(Windows.UI.Core.AnimationMetrics.AnimationEffect,Windows.UI.Core.AnimationMetrics.AnimationEffectTarget)">
+      <summary>Crée un objet AnimationDescription avec une animation et une cible spécifiques.</summary>
+      <param name="effect">Effet d'animation à appliquer à la cible.</param>
+      <param name="target">Cible de l'effet d'animation.</param>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.AnimationDescription.Animations">
+      <summary>Obtient la collection d'animations associées à l'objet AnimationDescription.</summary>
+      <returns>Une collection d'instances IPropertyAnimation, chacune représentant un effet d'animation spécifié pour cet objet AnimationDescription.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.AnimationDescription.DelayLimit">
+      <summary>Obtient le délai cumulatif maximal pour que l'animation soit appliquée à la collection d'objets dans une cible.</summary>
+      <returns>Durée limite, exprimée en unités de 100 nanosecondes.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.AnimationDescription.StaggerDelay">
+      <summary>Obtient la durée entre l'application de l'effet de l'animation à chaque objet dans une cible contenant plusieurs objets. Le StaggerDelay, avec le StaggerDelayFactor et le DelayLimit, est l'un des trois éléments utilisés pour contrôler le minutage relatif des effets d'animation.</summary>
+      <returns>Délai graduel, exprimé en unités de 100 nanosecondes.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.AnimationDescription.StaggerDelayFactor">
+      <summary>Obtient un multiplicateur appliqué à chaque occurrence du délai graduel et qui augmente ou réduit l'instance de délai précédente avec cette quantité.</summary>
+      <returns>Facteur à appliquer au délai graduel.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.AnimationDescription.ZOrder">
+      <summary>Obtient la position de l'ordre de plan d'un objet AnimationDescription par rapport à d'autres objets AnimationDescription avec le même effet d'animation.</summary>
+      <returns>Valeur de l'ordre de plan.</returns>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.AnimationEffect">
+      <summary>Spécifie une animation.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.AddToGrid">
+      <summary>Un objet est ajouté à une collection qui est organisée dans une grille.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.AddToList">
+      <summary>Un objet est ajouté à une liste.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.AddToSearchGrid">
+      <summary>Un objet est ajouté aux résultats de la recherche disposés dans une grille.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.AddToSearchList">
+      <summary>Un objet est ajouté à une liste des résultats de la recherche disposée verticalement.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.Collapse">
+      <summary>Un objet réduit sa taille pour masquer le contenu.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.CrossFade">
+      <summary>Un élément est atténué sous la forme d'autres atténuations à sa place.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DeleteFromGrid">
+      <summary>Un objet est supprimé d'une collection qui est organisée dans une grille.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DeleteFromList">
+      <summary>Un objet est déplacé d'une liste.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DeleteFromSearchGrid">
+      <summary>Un objet est supprimé des résultats de la recherche disposés dans une grille.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DeleteFromSearchList">
+      <summary>Un objet est déplacé d'une liste des résultats de la recherche disposée verticalement.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DragBetweenEnter">
+      <summary>Une source de glissement a été déplacée entre deux éléments.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DragBetweenLeave">
+      <summary>Une source de glissement n'est plus présente entre deux éléments.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DragSourceEnd">
+      <summary>L'utilisateur a arrêté de faire glisser un élément.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DragSourceStart">
+      <summary>L'utilisateur a commencé à faire glisser un élément.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.EnterPage">
+      <summary>Une page de contenu est insérée dans l'affichage.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.Expand">
+      <summary>Un objet dont la taille augmente pour afficher le contenu supplémentaire.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.FadeIn">
+      <summary>Un contrôle contextuel apparaît.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.FadeOut">
+      <summary>Un contrôle contextuel disparaît.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.Hide">
+      <summary>L'interface utilisateur se réduit autour d'une cible frappée ou cliquée.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.HideEdgeUI">
+      <summary>L'interface utilisateur affichée au bord de l'écran est supprimée.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.HidePanel">
+      <summary>Une section de contenu est supprimée de l'écran.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.HidePopup">
+      <summary>Un contrôle contextuel est supprimé de l'écran.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.Peek">
+      <summary>Le contenu d'une mosaïque déplace vers le haut ou vers le bas pour afficher une partie de la mosaïque qui est normalement masquée.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.PointerDown">
+      <summary>Le dispositif de pointage (tel qu'une souris ou les fonctions tactiles) s'est engagé sur un élément.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.PointerUp">
+      <summary>Le dispositif de pointage (tel qu'une souris ou les fonctions tactiles) s'est désengagé d'un élément.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.Reposition">
+      <summary>Un objet change de position. Aucune animation spécifique ne s'applique.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.Reveal">
+      <summary>L'interface utilisateur se développe autour d'une cible frappée ou cliquée.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.ShowEdgeUI">
+      <summary>L'interface utilisateur est amenée depuis le bord de l'écran.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.ShowPanel">
+      <summary>Une section de contenu s'affiche à l'écran.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.ShowPopup">
+      <summary>Un contrôle contextuel s'affiche à l'écran.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.SwipeDeselect">
+      <summary>Un objet a été désélectionné dans le cadre de l'interaction « swipe » (glisser).</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.SwipeReveal">
+      <summary>Déclenché par la pression et le maintien d'un élément qui peut être sélectionné par glissement croisé (cross-slide).</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.SwipeSelect">
+      <summary>Un objet a été sélectionné dans le cadre de l'interaction « swipe » (glisser).</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.TransitionContent">
+      <summary>Le remplacement de contenu à grande échelle se produit.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.TransitionPage">
+      <summary>Une page est remplacée par une autre page.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.UpdateBadge">
+      <summary>Met à jour le chevauchement du badge d'une mosaïque.</summary>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget">
+      <summary>Spécifie un participant à une animation.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Added">
+      <summary>Objets qui sont ajoutés.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Affected">
+      <summary>Objets affectés par l'animation, comme les objets qui sont placés à l'écart lorsqu'un autre objet est déplacé parmi eux.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Background">
+      <summary>Objet en arrière-plan de l'élément.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Content">
+      <summary>Contenu de l'élément.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Deleted">
+      <summary>Objets qui sont supprimés.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Deselected">
+      <summary>Objets ayant été désélectionnés lors d'une interaction de désélection-glissement croisé.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.DragSource">
+      <summary>Objets qui sont déplacés.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Hidden">
+      <summary>Objets actuellement masqués.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Incoming">
+      <summary>Nouveau contenu pour remplacer le contenu ancien.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Outgoing">
+      <summary>Ancien contenu qui est remplacé par un nouveau contenu.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Outline">
+      <summary>Bordure extérieure autour d'une zone.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Primary">
+      <summary>Seul participant dans une animation à cible unique.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Remaining">
+      <summary>Objets qui sont conservés après le déplacement d'autres éléments.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Revealed">
+      <summary>Objets rendus visibles dans une expansion.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.RowIn">
+      <summary>Ligne qui est ajoutée à une grille.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.RowOut">
+      <summary>Une ligne qui va être supprimée d'une grille.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Selected">
+      <summary>Objets qui sont sélectionnés lors d'une interaction de sélection-glissement croisé.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Selection">
+      <summary>Objets, tels que les coches, indiquant qu'un élément est sélectionné.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Shown">
+      <summary>Objets précédemment invisibles qui deviennent visibles.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Tapped">
+      <summary>Objets ayant été sélectionnés par une frappe du clavier ou un clic de souris.</summary>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.IPropertyAnimation">
+      <summary>Décrit les propriétés des animations qui sont communes à tous les effets d'animation.</summary>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.IPropertyAnimation.Control1">
+      <summary>Obtient l'emplacement du premier point de contrôle de la courbe de Bézier cubique qui décrit comment l'animation de cette propriété de l'objet doit se dérouler au fil du temps.</summary>
+      <returns>Emplacement du point de contrôle.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.IPropertyAnimation.Control2">
+      <summary>Obtient l'emplacement du deuxième point de contrôle de la courbe de Bézier cubique qui décrit comment l'animation de cette propriété de l'objet doit se dérouler au fil du temps.</summary>
+      <returns>Emplacement du point de contrôle.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.IPropertyAnimation.Delay">
+      <summary>Obtient la durée entre le moment où l'animation reçoit l'instruction de démarrer et le moment où cette animation commence réellement à dessiner.</summary>
+      <returns>Délai avant le démarrage d'une animation.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.IPropertyAnimation.Duration">
+      <summary>Obtient la durée au-delà de laquelle l'animation doit être exécutée. Cela n'inclut pas le délai.</summary>
+      <returns>Durée de l'animation.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.IPropertyAnimation.Type">
+      <summary>Obtient le type d'animation représenté par cet objet.</summary>
+      <returns>L'une des valeurs de type d'animation.</returns>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.OpacityAnimation">
+      <summary>Fournit les méthodes qui vous permettent d'extraire les paramètres d'une animation d'opacité (apparition ou disparition en fondu).</summary>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.Control1">
+      <summary>Obtient l'emplacement du premier point de contrôle de la courbe de Bézier cubique qui décrit comment l'animation de l'opacité doit se dérouler au fil du temps.</summary>
+      <returns>Emplacement du point de contrôle.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.Control2">
+      <summary>Obtient l'emplacement du deuxième point de contrôle de la courbe de Bézier cubique qui décrit comment l'animation de l'opacité doit se dérouler au fil du temps.</summary>
+      <returns>Emplacement du point de contrôle.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.Delay">
+      <summary>Obtient la durée entre le moment où l'animation d'opacité reçoit l'instruction de démarrer et le moment où cette animation commence réellement à dessiner.</summary>
+      <returns>Délai avant le démarrage de l'animation d'opacité.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.Duration">
+      <summary>Obtient la durée au-delà de laquelle l'animation d'opacité doit être exécutée. Cela n'inclut pas le délai.</summary>
+      <returns>Durée de l'animation.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.FinalOpacity">
+      <summary>Obtient l'opacité finale de l'objet.</summary>
+      <returns>Opacité finale. Une valeur de 0,0 représente une transparence complète et la valeur de 1,0 représente une opacité complète.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.InitialOpacity">
+      <summary>Obtient l'opacité initiale de l'objet.</summary>
+      <returns>Opacité d'origine (le cas échéant). Une valeur de 0,0 représente une transparence complète et la valeur de 1,0 représente une opacité complète.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.Type">
+      <summary>Obtient le type d'animation représenté par cet objet.</summary>
+      <returns>L'une des valeurs de type d'animation.</returns>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.PropertyAnimation">
+      <summary>Fournit les méthodes qui vous permettent d'extraire les valeurs de propriété d'animation qui sont communes à tous les types d'animation de propriété.</summary>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.PropertyAnimation.Control1">
+      <summary>Obtient l'emplacement du premier point de contrôle de la courbe de Bézier cubique qui décrit comment l'animation de cette propriété de l'objet doit se dérouler au fil du temps.</summary>
+      <returns>Emplacement du point de contrôle.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.PropertyAnimation.Control2">
+      <summary>Obtient l'emplacement du deuxième point de contrôle de la courbe de Bézier cubique qui décrit comment l'animation de cette propriété de l'objet doit se dérouler au fil du temps.</summary>
+      <returns>Emplacement du point de contrôle.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.PropertyAnimation.Delay">
+      <summary>Obtient la durée entre le moment où l'animation reçoit l'instruction de démarrer et le moment où cette animation commence réellement à dessiner.</summary>
+      <returns>Délai avant le démarrage d'une animation.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.PropertyAnimation.Duration">
+      <summary>Obtient la durée au-delà de laquelle l'animation doit être exécutée. Cela n'inclut pas le délai.</summary>
+      <returns>Durée de l'animation.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.PropertyAnimation.Type">
+      <summary>Obtient le type d'animation représenté par cet objet.</summary>
+      <returns>L'une des valeurs de type d'animation.</returns>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.PropertyAnimationType">
+      <summary>Spécifie le type d'animation représenté par un objet PropertyAnimation.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.PropertyAnimationType.Opacity">
+      <summary>Anime la transparence de l'objet. L'objet correspondant est OpacityAnimation.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.PropertyAnimationType.Scale">
+      <summary>Anime la taille de l'objet (agrandissement ou réduction). L'objet correspondant est ScaleAnimation.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.PropertyAnimationType.Translation">
+      <summary>Déplacer l'objet. L'objet correspondant est TranslationAnimation.</summary>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.ScaleAnimation">
+      <summary>Fournit les méthodes qui vous permettent d'extraire les paramètres pour une animation de mise à l'échelle (d'agrandissement ou de réduction).</summary>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.Control1">
+      <summary>Obtient l'emplacement du premier point de contrôle de la courbe de Bézier cubique qui décrit comment l'animation de l'échelle doit se dérouler au fil du temps.</summary>
+      <returns>Emplacement du point de contrôle.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.Control2">
+      <summary>Obtient l'emplacement du deuxième point de contrôle de la courbe de Bézier cubique qui décrit comment l'animation de l'échelle doit se dérouler au fil du temps.</summary>
+      <returns>Emplacement du point de contrôle.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.Delay">
+      <summary>Obtient la durée entre le moment où l'animation d'échelle reçoit l'instruction de démarrer et le moment où cette animation commence réellement à dessiner.</summary>
+      <returns>Délai avant le démarrage de l'animation de mise à l'échelle.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.Duration">
+      <summary>Obtient la durée au-delà de laquelle l'animation d'échelle doit être exécutée. Cela n'inclut pas le délai.</summary>
+      <returns>Durée de l'animation.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.FinalScaleX">
+      <summary>Obtient le facteur d'échelle horizontale final pour l'objet.</summary>
+      <returns>Facteur d'échelle horizontale final par lequel multiplier la valeur.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.FinalScaleY">
+      <summary>Obtient le facteur d'échelle verticale final pour l'objet.</summary>
+      <returns>Facteur d'échelle verticale final par lequel multiplier la valeur.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.InitialScaleX">
+      <summary>Obtient le facteur d'échelle horizontale initial pour l'objet.</summary>
+      <returns>Facteur d'échelle horizontale initial par lequel multiplier la valeur (le cas échéant).</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.InitialScaleY">
+      <summary>Obtient le facteur d'échelle verticale initial pour l'objet.</summary>
+      <returns>Facteur d'échelle verticale initial par lequel multiplier la valeur (le cas échéant).</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.NormalizedOrigin">
+      <summary>Obtient le point central pour l'animation de mise à l'échelle, exprimé sous la forme d'un point par rapport à la taille normale de l'objet.</summary>
+      <returns>Point central normalisé.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.Type">
+      <summary>Obtient le type d'animation représenté par cet objet.</summary>
+      <returns>L'une des valeurs de type d'animation.</returns>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.TranslationAnimation">
+      <summary>Fournit les méthodes qui vous permettent d'extraire les paramètres pour une animation de déplacement (déplacement vers un nouvel emplacement).</summary>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.TranslationAnimation.Control1">
+      <summary>Obtient l'emplacement du premier point de contrôle de la courbe de Bézier cubique qui décrit comment l'animation du déplacement doit se dérouler au fil du temps.</summary>
+      <returns>Emplacement du point de contrôle.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.TranslationAnimation.Control2">
+      <summary>Obtient l'emplacement du deuxième point de contrôle de la courbe de Bézier cubique qui décrit comment l'animation du déplacement doit se dérouler au fil du temps.</summary>
+      <returns>Emplacement du point de contrôle.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.TranslationAnimation.Delay">
+      <summary>Obtient la durée entre le moment où l'animation de déplacement reçoit l'instruction de démarrer et le moment où cette animation commence réellement à dessiner.</summary>
+      <returns>Délai avant le démarrage de l'animation de déplacement.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.TranslationAnimation.Duration">
+      <summary>Obtient la durée au-delà de laquelle l'animation de déplacement doit être exécutée. Cela n'inclut pas le délai.</summary>
+      <returns>Durée de l'animation.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.TranslationAnimation.Type">
+      <summary>Obtient le type d'animation représenté par cet objet.</summary>
+      <returns>L'une des valeurs de type d'animation.</returns>
+    </member></members>
+</doc>

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.UserProfile.UserProfileContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.System.UserProfile.AccountPictureKind">
+      <summary>GetAccountPicture를 사용하는 경우 특정 이미지 형식을 요청할 수 있도록 허용합니다.</summary>
+    </member><member name="F:Windows.System.UserProfile.AccountPictureKind.LargeImage">
+      <summary>사용자 계정에 큰 이미지를 원한다는 것을 나타냅니다.</summary>
+    </member><member name="F:Windows.System.UserProfile.AccountPictureKind.SmallImage">
+      <summary>사용자 계정에 작은 이미지를 원한다는 것을 나타냅니다.</summary>
+    </member><member name="F:Windows.System.UserProfile.AccountPictureKind.Video">
+      <summary>사용자 계정에 비디오를 원한다는 것을 나타냅니다.</summary>
+    </member><member name="T:Windows.System.UserProfile.SetAccountPictureResult">
+      <summary>사용자 계정에 대해 이미지를 설정하려고 할 때 반환되는 결과입니다.</summary>
+    </member><member name="F:Windows.System.UserProfile.SetAccountPictureResult.ChangeDisabled">
+      <summary>AccountPictureChangeEnabled 속성이 비활성화되어 있거나 사용자가 동의 프롬프트를 취소하였으므로 사진이 설정되지 않았음을 나타냅니다.</summary>
+    </member><member name="F:Windows.System.UserProfile.SetAccountPictureResult.Failure">
+      <summary>그림이나 비디오가 설정되지 않았음을 나타냅니다.</summary>
+    </member><member name="F:Windows.System.UserProfile.SetAccountPictureResult.FileSizeError">
+      <summary>파일 크기가 너무 크기 때문에 그림이 설정되지 않았음을 나타냅니다.</summary>
+    </member><member name="F:Windows.System.UserProfile.SetAccountPictureResult.LargeOrDynamicError">
+      <summary>그림이 너무 크기 때문에 그림이 설정되지 않았음을 나타냅니다.</summary>
+    </member><member name="F:Windows.System.UserProfile.SetAccountPictureResult.Success">
+      <summary>그림이 성공적으로 설정되었음을 나타냅니다.</summary>
+    </member><member name="F:Windows.System.UserProfile.SetAccountPictureResult.VideoFrameSizeError">
+      <summary>프레임 크기가 너무 커 비디오를 설정하지 못했음을 나타냅니다.</summary>
+    </member><member name="T:Windows.System.UserProfile.SetImageFeedResult">
+      <summary>LockScreen.RequestSetImageFeedAsync에 대한 호출의 결과 지정합니다.</summary>
+    </member><member name="F:Windows.System.UserProfile.SetImageFeedResult.ChangeDisabled">
+      <summary>그룹 정책에 의해 잠금 화면 이미지 슬라이드 쇼가 사용하지 않도록 설정되었으므로 피드가 설정되지 않았습니다.</summary>
+    </member><member name="F:Windows.System.UserProfile.SetImageFeedResult.Success">
+      <summary>이미지 피드가 성공적으로 설정되었습니다.</summary>
+    </member><member name="F:Windows.System.UserProfile.SetImageFeedResult.UserCanceled">
+      <summary>사용자가 작업을 취소했습니다.</summary>
+    </member><member name="T:Windows.System.UserProfile.UserInformation">
+      <summary>이름 및 계정 사진 같은 사용자에 대한 정보를 나타냅니다.</summary>
+    </member><member name="P:Windows.System.UserProfile.UserInformation.AccountPictureChangeEnabled">
+      <summary>사용자의 계정 사진을 변경할 수 있는지 여부를 결정합니다.</summary>
+      <returns>사용자의 계정 그림을 변경할 수 있는 경우 True이고 그렇지 않은 경우 False입니다.</returns>
+    </member><member name="P:Windows.System.UserProfile.UserInformation.NameAccessAllowed">
+      <summary>앱에서 사용자 정보에 액세스할 수 있는지 여부를 확인할 수 있도록 허용합니다.</summary>
+      <returns>앱이 AccountPictureChanged 이벤트에 대한 액세스를 허용하고 GetAccountPicture, GetDisplayNameAsync, GetDomainNameAsync, GetFirstNameAsync, GetLastNameAsync 및 GetSessionInitiationProtocolUriAsync 메서드를 사용하여 사용자 정보를 검색하는 것이 허용되는 경우 True입니다. 그렇지 않으면 이 속성은 false입니다.</returns>
+    </member><member name="E:Windows.System.UserProfile.UserInformation.AccountPictureChanged">
+      <summary>사용자의 이미지 또는 이름이 변경되면 발생합니다.</summary>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetAccountPicture(Windows.System.UserProfile.AccountPictureKind)">
+      <summary>사용자의 계정 사진을 가져옵니다.</summary>
+      <returns>이미지를 포함하는 개체입니다.</returns>
+      <param name="kind">원하는 이미지의 종류(작은 이미지, 큰 이미지 등)를 결정하는 데 사용할 수 있는 열거형입니다.</param>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetDisplayNameAsync">
+      <summary>사용자 계정의 표시 이름을 가져옵니다.</summary>
+      <returns>사용자 계정의 표시 이름입니다.</returns>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetDomainNameAsync">
+      <summary>사용자의 도메인 이름을 가져옵니다.</summary>
+      <returns>사용자에 대한 도메인 이름을 나타내는 문자열입니다.</returns>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetFirstNameAsync">
+      <summary>사용자의 이름을 가져옵니다.</summary>
+      <returns>사용자의 이름입니다.</returns>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetLastNameAsync">
+      <summary>사용자의 성을 가져옵니다.</summary>
+      <returns>사용자의 성입니다.</returns>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetPrincipalNameAsync">
+      <summary>사용자의 이름을 가져옵니다. 이 이름은 사용자 계정 이름입니다(항상 true인 것은 아니지만 일반적으로 사용자의 주소임).</summary>
+      <returns>사용자의 Principal 이름입니다.</returns>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetSessionInitiationProtocolUriAsync">
+      <summary>사용자를 위해 세션 시작 프로토콜의 URI(Uniform Resource Identifier)를 가져옵니다.</summary>
+      <returns>세션 시작 프로토콜의 URI(Uniform Resource Identifier)입니다.</returns>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.SetAccountPictureAsync(Windows.Storage.IStorageFile)">
+      <summary>IStorageFile 개체를 사용하여 사용자 계정에 대한 사진을 설정합니다.</summary>
+      <returns>작업의 성공이나 실패를 나타내는 값입니다.</returns>
+      <param name="image">이미지를 포함하는 파일입니다.</param>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.SetAccountPictureFromStreamAsync(Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>IRandomAccessStream 개체를 사용하여 사용자 계정에 대한 사진을 설정합니다.</summary>
+      <returns>작업의 성공이나 실패를 나타내는 값입니다.</returns>
+      <param name="image">이미지입니다.</param>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.SetAccountPicturesAsync(Windows.Storage.IStorageFile,Windows.Storage.IStorageFile,Windows.Storage.IStorageFile)">
+      <summary>IStorageFile 개체를 사용하여 사용자 계정에 대한 사진을 설정합니다. 작은 이미지, 큰 이미지 및 비디오 추가를 지원합니다.</summary>
+      <returns>작업의 성공이나 실패를 나타내는 값입니다.</returns>
+      <param name="smallImage">작은 버전의 이미지입니다.</param>
+      <param name="largeImage">큰 버전의 이미지입니다.</param>
+      <param name="video">비디오입니다.</param>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.SetAccountPicturesFromStreamsAsync(Windows.Storage.Streams.IRandomAccessStream,Windows.Storage.Streams.IRandomAccessStream,Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>IRandomAccessStream 개체를 사용하여 사용자 계정에 대한 사진을 설정합니다. 작은 이미지, 큰 이미지 및 비디오 추가를 지원합니다.</summary>
+      <returns>작업의 성공이나 실패를 나타내는 값입니다.</returns>
+      <param name="smallImage">작은 버전의 이미지입니다.</param>
+      <param name="largeImage">큰 버전의 이미지입니다.</param>
+      <param name="video">비디오입니다.</param>
+    </member></members>
+</doc>

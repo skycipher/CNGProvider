@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Printers.Extensions.ExtensionsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Printers.Extensions.PrintExtensionContext">
+      <summary>为打印机扩展对象提供上下文。</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintExtensionContext.FromDeviceId(System.String)">
+      <summary>获取基于 DeviceInformation ID 的打印机扩展对象的上下文。</summary>
+      <returns>指向上下文的指针。</returns>
+      <param name="deviceId">打印设备的设备信息 ID。</param>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails">
+      <summary>包含允许客户端访问和/或操作打印事件数据并打印设备名称信息的属性。</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails.EventData">
+      <summary>获取或设置打印通知事件的事件数据。</summary>
+      <returns>打印通知事件数据。</returns>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails.PrinterName">
+      <summary>获取与打印通知关联的打印设备的名称。</summary>
+      <returns>打印设备名称。</returns>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfiguration">
+      <summary>允许客户端检索打印任务扩展上下文，还允许将事件处理程序添加到打印任务。</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfiguration.PrinterExtensionContext">
+      <summary>获取打印任务扩展的上下文。</summary>
+      <returns>打印任务扩展的上下文。</returns>
+    </member><member name="E:Windows.Devices.Printers.Extensions.PrintTaskConfiguration.SaveRequested">
+      <summary>由应用程序的打印窗口引发，以通知应用程序必须更新打印票据。</summary>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest">
+      <summary>当您的应用程序的打印对话框引发 SaveRequested 事件时调用。</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Deadline">
+      <summary>获取提供打印任务的截止日期信息的日期-时间对象。</summary>
+      <returns>打印任务的截止时间。</returns>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Cancel">
+      <summary>由设备应用程序调用以取消客户端要求保存打印任务配置的请求。</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.GetDeferral">
+      <summary>当其必须完成某些异步任务才能保存打印任务配置信息时，由设备应用程序调用。</summary>
+      <returns>表示打印任务配置保存请求延迟的对象。</returns>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Save(System.Object)">
+      <summary>由设备应用程序调用以保存打印任务配置。</summary>
+      <param name="printerExtensionContext">表示打印任务扩展上下文的对象。</param>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral">
+      <summary>由设备应用程序调用以提供延迟状态的更新。</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral.Complete">
+      <summary>完成延迟时，由设备应用程序调用。</summary>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs">
+      <summary>调用以通知设备应用程序必须保存打印任务配置。</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs.Request">
+      <summary>获取更新打印任务配置所需的信息。</summary>
+      <returns>打印任务配置保存请求。</returns>
+    </member></members>
+</doc>

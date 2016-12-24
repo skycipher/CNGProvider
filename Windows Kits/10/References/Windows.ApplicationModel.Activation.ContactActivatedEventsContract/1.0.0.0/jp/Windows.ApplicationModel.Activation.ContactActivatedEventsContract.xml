@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Activation.ContactActivatedEventsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs">
+      <summary>連絡先に電話するためにアプリをアクティブ化するとき、データを提供します。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.Contact">
+      <summary>通話の連絡先を取得します。</summary>
+      <returns>通話の連絡先。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.Kind">
+      <summary>アクティブ化の種類を取得します。</summary>
+      <returns>ActivationKind.Contact 列挙値。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.PreviousExecutionState">
+      <summary>アクティブ化する前のアプリケーションの実行状態を取得します。</summary>
+      <returns>ApplicationExecutionState-typed 値。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.ServiceId">
+      <summary>通話に使用するサービスの識別子を取得します。</summary>
+      <returns>通話に使用するサービスの識別子。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.ServiceUserId">
+      <summary>通話に使用するサービスのユーザー ID を取得します。</summary>
+      <returns>通話に使用するサービスのユーザー ID。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.SplashScreen">
+      <summary>スプラッシュ スクリーンからアクティブ化されたアプリケーションへの切り替えに関する情報を提供するスプラッシュ スクリーン オブジェクトを取得します。</summary>
+      <returns>スプラッシュ スクリーン情報を提供するオブジェクト。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.Verb">
+      <summary>実行されるアクションを取得します。</summary>
+      <returns>実行されるアクション。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs">
+      <summary>連絡先をマップするためにアプリをアクティブ化するとき、データを提供します。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Address">
+      <summary>マッピング操作の連絡先のアドレスを取得します。</summary>
+      <returns>マッピング操作の連絡先のアドレス。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Contact">
+      <summary>マッピング操作の連絡先を取得します。</summary>
+      <returns>マッピング操作の連絡先。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Kind">
+      <summary>アクティブ化の種類を取得します。</summary>
+      <returns>ActivationKind.Contact 列挙値。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.PreviousExecutionState">
+      <summary>アクティブ化する前のアプリケーションの実行状態を取得します。</summary>
+      <returns>ApplicationExecutionState-typed 値。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.SplashScreen">
+      <summary>スプラッシュ スクリーンからアクティブ化されたアプリケーションへの切り替えに関する情報を提供するスプラッシュ スクリーン オブジェクトを取得します。</summary>
+      <returns>スプラッシュ スクリーン情報を提供するオブジェクト。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Verb">
+      <summary>実行されるアクションを取得します。</summary>
+      <returns>実行されるアクション。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs">
+      <summary>連絡先にメッセージを送るためにアプリをアクティブ化するとき、データを提供します。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.Contact">
+      <summary>メッセージの連絡先を取得します。</summary>
+      <returns>メッセージの連絡先。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.Kind">
+      <summary>アクティブ化の種類を取得します。</summary>
+      <returns>ActivationKind.Contact 列挙値。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.PreviousExecutionState">
+      <summary>アクティブ化する前のアプリケーションの実行状態を取得します。</summary>
+      <returns>ApplicationExecutionState-typed 値。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.ServiceId">
+      <summary>メッセージに使用するサービスの識別子を取得します。</summary>
+      <returns>メッセージに使用するサービスの識別子。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.ServiceUserId">
+      <summary>メッセージに使用するサービスのユーザー ID を取得します。</summary>
+      <returns>メッセージに使用するサービスのユーザー ID。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.SplashScreen">
+      <summary>スプラッシュ スクリーンからアクティブ化されたアプリケーションへの切り替えに関する情報を提供するスプラッシュ スクリーン オブジェクトを取得します。</summary>
+      <returns>スプラッシュ スクリーン情報を提供するオブジェクト。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.Verb">
+      <summary>実行されるアクションを取得します。</summary>
+      <returns>実行されるアクション。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs">
+      <summary>連絡先ピッカーが使用されているためにそのアプリケーションがアクティブになると、データを提供します。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.ContactPickerUI">
+      <summary>アプリケーションによって提供される連絡先をユーザーが選択できるようにする場合に表示される連絡先ピッカーのレターボックス UI を取得します。</summary>
+      <returns>アプリケーションによって提供される連絡先をユーザーが選択できるようにする場合に表示される連絡先ピッカーのレターボックス UI を取得します。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.Kind">
+      <summary>アクティブ化の種類を取得します。</summary>
+      <returns>列挙値の 1 つ。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.PreviousExecutionState">
+      <summary>アクティブ化する前のアプリケーションの実行状態を取得します。</summary>
+      <returns>列挙値の 1 つ。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.SplashScreen">
+      <summary>スプラッシュ スクリーンからアクティブ化されたアプリケーションへの切り替えに関する情報を提供するスプラッシュ スクリーン オブジェクトを取得します。</summary>
+      <returns>スプラッシュ スクリーン情報を提供するオブジェクト。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs">
+      <summary>連絡先にポストするためにアプリをアクティブ化するとき、データを提供します。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.Contact">
+      <summary>投稿の連絡先を取得します。</summary>
+      <returns>投稿の連絡先。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.Kind">
+      <summary>アクティブ化の種類を取得します。</summary>
+      <returns>ActivationKind.Contact 列挙値。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.PreviousExecutionState">
+      <summary>アクティブ化する前のアプリケーションの実行状態を取得します。</summary>
+      <returns>ApplicationExecutionState-typed 値。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.ServiceId">
+      <summary>投稿に使用するサービスの識別子を取得します。</summary>
+      <returns>投稿に使用するサービスの識別子。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.ServiceUserId">
+      <summary>投稿に使用するサービスのユーザー ID を取得します。</summary>
+      <returns>投稿に使用するサービスのユーザー ID。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.SplashScreen">
+      <summary>スプラッシュ スクリーンからアクティブ化されたアプリケーションへの切り替えに関する情報を提供するスプラッシュ スクリーン オブジェクトを取得します。</summary>
+      <returns>スプラッシュ スクリーン情報を提供するオブジェクト。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.Verb">
+      <summary>実行されるアクションを取得します。</summary>
+      <returns>実行されるアクション。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs">
+      <summary>連絡先にビデオ電話を掛けるためにアプリをアクティブ化するとき、データを提供します。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.Contact">
+      <summary>ビデオ通話の連絡先を取得します。</summary>
+      <returns>ビデオ通話の連絡先。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.Kind">
+      <summary>アクティブ化の種類を取得します。</summary>
+      <returns>ActivationKind.Contact 列挙値。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.PreviousExecutionState">
+      <summary>アクティブ化する前のアプリケーションの実行状態を取得します。</summary>
+      <returns>ApplicationExecutionState-typed 値。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.ServiceId">
+      <summary>ビデオ通話に使用するサービスの識別子を取得します。</summary>
+      <returns>ビデオ通話に使用するサービスの識別子。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.ServiceUserId">
+      <summary>ビデオ通話に使用するサービスのユーザー ID を取得します。</summary>
+      <returns>ビデオ通話に使用するサービスのユーザー ID。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.SplashScreen">
+      <summary>スプラッシュ スクリーンからアクティブ化されたアプリケーションへの切り替えに関する情報を提供するスプラッシュ スクリーン オブジェクトを取得します。</summary>
+      <returns>スプラッシュ スクリーン情報を提供するオブジェクト。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.Verb">
+      <summary>実行されるアクションを取得します。</summary>
+      <returns>実行されるアクション。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactActivatedEventArgs">
+      <summary>ユーザーが連絡先を管理するときに発生する、アクティブ化済みイベントについての情報を提供します。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactActivatedEventArgs.Verb">
+      <summary>アクティブ化された連絡先に関連付けられている操作を取得します。</summary>
+      <returns>アクティブ化された連絡先に関連付けられている操作。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs">
+      <summary>連絡先に電話するためにアプリをアクティブ化するとき、データを提供します。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs.Contact">
+      <summary>通話の連絡先を取得します。</summary>
+      <returns>通話の連絡先。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs.ServiceId">
+      <summary>通話に使用するサービスの識別子を取得します。</summary>
+      <returns>通話に使用するサービスの識別子。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs.ServiceUserId">
+      <summary>通話に使用するサービスのユーザー ID を取得します。</summary>
+      <returns>通話に使用するサービスのユーザー ID。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs">
+      <summary>連絡先をマップするためにアプリをアクティブ化するとき、データを提供します。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs.Address">
+      <summary>マッピング操作の連絡先のアドレスを取得します。</summary>
+      <returns>マッピング操作の連絡先のアドレスを表します。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs.Contact">
+      <summary>マッピング操作の連絡先を取得します。</summary>
+      <returns>マッピング操作の連絡先。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs">
+      <summary>連絡先にメッセージを送るためにアプリをアクティブ化するとき、データを提供します。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs.Contact">
+      <summary>メッセージの連絡先を取得します。</summary>
+      <returns>メッセージの連絡先。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs.ServiceId">
+      <summary>メッセージに使用するサービスの識別子を取得します。</summary>
+      <returns>メッセージに使用するサービスの識別子。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs.ServiceUserId">
+      <summary>メッセージに使用するサービスのユーザー ID を取得します。</summary>
+      <returns>メッセージに使用するサービスのユーザー ID。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs">
+      <summary>連絡先ピッカーが使用されているためにそのアプリケーションがアクティブになると、データを提供します。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs.ContactPickerUI">
+      <summary>アプリケーションによって提供されるファイルまたはフォルダーをユーザーが選択できるようにする場合に表示される連絡先ピッカーのレターボックス UI。</summary>
+      <returns>アプリケーションによって提供されるファイルまたはフォルダーをユーザーが選択できるようにする場合に表示される連絡先ピッカーのレターボックス UI。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs">
+      <summary>連絡先にポストするためにアプリをアクティブ化するとき、データを提供します。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs.Contact">
+      <summary>投稿の連絡先を取得します。</summary>
+      <returns>投稿の連絡先。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs.ServiceId">
+      <summary>投稿に使用するサービスの識別子を取得します。</summary>
+      <returns>投稿に使用するサービスの識別子。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs.ServiceUserId">
+      <summary>投稿に使用するサービスのユーザー ID を取得します。</summary>
+      <returns>投稿に使用するサービスのユーザー ID。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactsProviderActivatedEventArgs">
+      <summary>ユーザーが、このアプリケーションで提供された連絡先を管理するときに発生する、アクティブ化済みイベントについての情報を提供します。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactsProviderActivatedEventArgs.Verb">
+      <summary>アクティブ化された連絡先プロバイダーに関連付けられているアクションを取得します。</summary>
+      <returns>アクティブ化された連絡先プロバイダーに関連付けられている操作。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs">
+      <summary>連絡先にビデオ電話を掛けるためにアプリをアクティブ化するとき、データを提供します。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs.Contact">
+      <summary>ビデオ通話の連絡先を取得します。</summary>
+      <returns>ビデオ通話の連絡先。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs.ServiceId">
+      <summary>ビデオ通話に使用するサービスの識別子を取得します。</summary>
+      <returns>ビデオ通話に使用するサービスの識別子。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs.ServiceUserId">
+      <summary>ビデオ通話に使用するサービスのユーザー ID を取得します。</summary>
+      <returns>ビデオ通話に使用するサービスのユーザー ID。</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs">
+      <summary>連絡先に電話するためにアプリをアクティブ化するとき、データを提供します。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.ActivatedOperation">
+      <summary>アプリケーションのアクティブ化操作を取得します。</summary>
+      <returns>アクティベーション操作。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.Contact">
+      <summary>通話の連絡先を取得します。</summary>
+      <returns>通話の連絡先。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.Kind">
+      <summary>アクティブ化の種類を取得します。</summary>
+      <returns>ActivationKind.Contact 列挙値。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.PreviousExecutionState">
+      <summary>アクティブ化する前のアプリケーションの実行状態を取得します。</summary>
+      <returns>ApplicationExecutionState-typed 値。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.ServiceId">
+      <summary>通話に使用するサービスの識別子を取得します。</summary>
+      <returns>通話に使用するサービスの識別子。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.ServiceUserId">
+      <summary>通話に使用するサービスのユーザー ID を取得します。</summary>
+      <returns>通話に使用するサービスのユーザー ID。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.SplashScreen">
+      <summary>スプラッシュ スクリーンからアクティブ化されたアプリケーションへの切り替えに関する情報を提供するスプラッシュ スクリーン オブジェクトを取得します。</summary>
+      <returns>スプラッシュ スクリーン情報を提供するオブジェクト。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.Verb">
+      <summary>実行されるアクションを取得します。</summary>
+      <returns>実行されるアクション。</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs">
+      <summary>連絡先をマップするためにアプリをアクティブ化するとき、データを提供します。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.ActivatedOperation">
+      <summary>アプリケーションのアクティブ化操作を取得します。</summary>
+      <returns>アクティベーション操作。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Address">
+      <summary>マッピング操作の連絡先のアドレスを取得します。</summary>
+      <returns>マッピング操作の連絡先のアドレス。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Contact">
+      <summary>マッピング操作の連絡先を取得します。</summary>
+      <returns>マッピング操作の連絡先。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Kind">
+      <summary>アクティブ化の種類を取得します。</summary>
+      <returns>ActivationKind.Contact 列挙値。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.PreviousExecutionState">
+      <summary>アクティブ化する前のアプリケーションの実行状態を取得します。</summary>
+      <returns>ApplicationExecutionState-typed 値。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.SplashScreen">
+      <summary>スプラッシュ スクリーンからアクティブ化されたアプリケーションへの切り替えに関する情報を提供するスプラッシュ スクリーン オブジェクトを取得します。</summary>
+      <returns>スプラッシュ スクリーン情報を提供するオブジェクト。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Verb">
+      <summary>実行されるアクションを取得します。</summary>
+      <returns>実行されるアクション。</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs">
+      <summary>連絡先にメッセージ送信するためにアプリをアクティブ化するとき、データを提供します。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.ActivatedOperation">
+      <summary>アプリケーションのアクティブ化操作を取得します。</summary>
+      <returns>アクティベーション操作。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.Contact">
+      <summary>メッセージの連絡先を取得します。</summary>
+      <returns>メッセージの連絡先。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.Kind">
+      <summary>アクティブ化の種類を取得します。</summary>
+      <returns>ActivationKind.Contact 列挙値。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.PreviousExecutionState">
+      <summary>アクティブ化する前のアプリケーションの実行状態を取得します。</summary>
+      <returns>ApplicationExecutionState-typed 値。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.ServiceId">
+      <summary>メッセージに使用するサービスの識別子を取得します。</summary>
+      <returns>メッセージに使用するサービスの識別子。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.ServiceUserId">
+      <summary>メッセージに使用するサービスのユーザー ID を取得します。</summary>
+      <returns>メッセージに使用するサービスのユーザー ID。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.SplashScreen">
+      <summary>スプラッシュ スクリーンからアクティブ化されたアプリケーションへの切り替えに関する情報を提供するスプラッシュ スクリーン オブジェクトを取得します。</summary>
+      <returns>スプラッシュ スクリーン情報を提供するオブジェクト。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.Verb">
+      <summary>実行されるアクションを取得します。</summary>
+      <returns>実行されるアクション。</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs">
+      <summary>連絡先ピッカーが使用されているためにそのアプリケーションがアクティブになると、データを提供します。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.ActivatedOperation">
+      <summary>アプリケーションのアクティブ化操作を取得します。</summary>
+      <returns>アクティベーション操作。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.ContactPickerUI">
+      <summary>アプリケーションによって提供される連絡先をユーザーが選択できるようにする場合に表示される連絡先ピッカーのレターボックス UI を取得します。</summary>
+      <returns>アプリケーションによって提供される連絡先をユーザーが選択できるようにする場合に表示される連絡先ピッカーのレターボックス UI を取得します。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.Kind">
+      <summary>アクティブ化の種類を取得します。</summary>
+      <returns>列挙値の 1 つ。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.PreviousExecutionState">
+      <summary>アクティブ化する前のアプリケーションの実行状態を取得します。</summary>
+      <returns>列挙値の 1 つ。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.SplashScreen">
+      <summary>スプラッシュ スクリーンからアクティブ化されたアプリケーションへの切り替えに関する情報を提供するスプラッシュ スクリーン オブジェクトを取得します。</summary>
+      <returns>スプラッシュ スクリーン情報を提供するオブジェクト。</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs">
+      <summary>連絡先にポストするためにアプリをアクティブ化するとき、データを提供します。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.ActivatedOperation">
+      <summary>アプリケーションのアクティブ化操作を取得します。</summary>
+      <returns>アクティベーション操作。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.Contact">
+      <summary>投稿の連絡先を取得します。</summary>
+      <returns>投稿の連絡先。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.Kind">
+      <summary>アクティブ化の種類を取得します。</summary>
+      <returns>ActivationKind.Contact 列挙値。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.PreviousExecutionState">
+      <summary>アクティブ化する前のアプリケーションの実行状態を取得します。</summary>
+      <returns>ApplicationExecutionState-typed 値。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.ServiceId">
+      <summary>投稿に使用するサービスの識別子を取得します。</summary>
+      <returns>投稿に使用するサービスの識別子。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.ServiceUserId">
+      <summary>投稿に使用するサービスのユーザー ID を取得します。</summary>
+      <returns>投稿に使用するサービスのユーザー ID。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.SplashScreen">
+      <summary>スプラッシュ スクリーンからアクティブ化されたアプリケーションへの切り替えに関する情報を提供するスプラッシュ スクリーン オブジェクトを取得します。</summary>
+      <returns>スプラッシュ スクリーン情報を提供するオブジェクト。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.Verb">
+      <summary>実行されるアクションを取得します。</summary>
+      <returns>実行されるアクション。</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs">
+      <summary>連絡先にビデオ電話を掛けるためにアプリをアクティブ化するとき、データを提供します。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.ActivatedOperation">
+      <summary>アプリケーションのアクティブ化操作を取得します。</summary>
+      <returns>アクティベーション操作。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.Contact">
+      <summary>ビデオ通話の連絡先を取得します。</summary>
+      <returns>ビデオ通話の連絡先。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.Kind">
+      <summary>アクティブ化の種類を取得します。</summary>
+      <returns>ActivationKind.Contact 列挙値。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.PreviousExecutionState">
+      <summary>アクティブ化する前のアプリケーションの実行状態を取得します。</summary>
+      <returns>ApplicationExecutionState-typed 値。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.ServiceId">
+      <summary>ビデオ通話に使用するサービスの識別子を取得します。</summary>
+      <returns>ビデオ通話に使用するサービスの識別子。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.ServiceUserId">
+      <summary>ビデオ通話に使用するサービスのユーザー ID を取得します。</summary>
+      <returns>ビデオ通話に使用するサービスのユーザー ID。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.SplashScreen">
+      <summary>スプラッシュ スクリーンからアクティブ化されたアプリケーションへの切り替えに関する情報を提供するスプラッシュ スクリーン オブジェクトを取得します。</summary>
+      <returns>スプラッシュ スクリーン情報を提供するオブジェクト。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.Verb">
+      <summary>実行されるアクションを取得します。</summary>
+      <returns>実行されるアクション。</returns>
+    </member></members>
+</doc>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Networking.NetworkOperators.LegacyNetworkOperatorsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails">
+      <summary>Предоставляет сведения для уведомления оператора сети.</summary>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.EncodingType">
+      <summary>Получает схему кодирования данных (DCS) полученного сообщения.</summary>
+      <returns>Схема кодирования данных (DCS) полученного сообщения.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.Message">
+      <summary>Получает сообщение для уведомления оператора сети.</summary>
+      <returns>Сообщение для уведомления оператора сети.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.NetworkAccountId">
+      <summary>Получает уникальный идентификатор для учетной записи широкополосного мобильного доступа, получившей уведомление.</summary>
+      <returns>Уникальный идентификатор учетной записи с широкополосным мобильным доступом.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.NotificationType">
+      <summary>Получает тип уведомления сети.</summary>
+      <returns>Тип уведомления сети.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.RuleId">
+      <summary>Получает идентификатор предоставленного правила, которое сопоставило и инициировало уведомление.</summary>
+      <returns>Предоставленный идентификатор правила.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.SmsMessage">
+      <summary>Получает SMS-сообщение для учетной записи широкополосного мобильного доступа, получившей уведомление.</summary>
+      <returns>Если уведомление оператора сети активировано новым SMS оператора мобильной сети, оно содержит объект "сообщение SMS" для уведомления оператора сети. Значение NULL, если в составе этого уведомления не было получено SMS-сообщение.</returns>
+    </member><member name="M:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.AuthorizeTethering(System.Boolean,System.String)">
+      <summary>Используется для обозначения разрешенности привязки для устройства. Если нет, можно указать причину.</summary>
+      <param name="allow">Значение true, если привязка разрешена; в противном случае — значение false.</param>
+      <param name="entitlementFailureReason">Привязка причины не разрешена.</param>
+    </member></members>
+</doc>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.Playlists.PlaylistsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Media.Playlists.Playlist">
+      <summary>Permet d'accéder à une sélection multimédia.</summary>
+    </member><member name="M:Windows.Media.Playlists.Playlist.#ctor">
+      <summary>Crée une instance d'un objet Playlist.</summary>
+    </member><member name="P:Windows.Media.Playlists.Playlist.Files">
+      <summary>Jeu de fichiers multimédias qui composent la sélection.</summary>
+      <returns>Liste de fichiers multimédias qui composent la sélection.</returns>
+    </member><member name="M:Windows.Media.Playlists.Playlist.LoadAsync(Windows.Storage.IStorageFile)">
+      <summary>Charge de façon asynchrone des fichiers dans une sélection.</summary>
+      <returns>Représente l'opération asynchrone pour charger la sélection. La méthode GetResults de cet objet IAsyncOperation retourne la sélection.</returns>
+      <param name="file">Représente les fichiers à charger.</param>
+    </member><member name="M:Windows.Media.Playlists.Playlist.SaveAsAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption)">
+      <summary>Enregistre de façon asynchrone la sélection dans un fichier et dossier spécifiés.</summary>
+      <returns>Représente l'opération asynchrone pour enregistrer la sélection dans un fichier et un dossier spécifiques.</returns>
+      <param name="saveLocation">Dossier dans lequel enregistrer la sélection.</param>
+      <param name="desiredName">Nom de la sélection à enregistrer.</param>
+      <param name="option">Action à effectuer si la sélection est enregistrée dans un fichier existant. Une des valeurs de l'énumération NameCollisionOption.</param>
+    </member><member name="M:Windows.Media.Playlists.Playlist.SaveAsAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption,Windows.Media.Playlists.PlaylistFormat)">
+      <summary>Enregistre de façon asynchrone la sélection dans un fichier spécifié et dans un dossier, dans un format spécifié.</summary>
+      <returns>Représente l'opération asynchrone pour enregistrer la sélection dans un fichier et un dossier spécifiques.</returns>
+      <param name="saveLocation">Dossier dans lequel enregistrer la sélection.</param>
+      <param name="desiredName">Nom de la sélection à enregistrer.</param>
+      <param name="option">Action à effectuer si la sélection est enregistrée dans un fichier existant. Une des valeurs de l'énumération NameCollisionOption.</param>
+      <param name="playlistFormat">Format de la sélection. Une des valeurs de l'énumération PlaylistFormat.</param>
+    </member><member name="M:Windows.Media.Playlists.Playlist.SaveAsync">
+      <summary>Enregistre de façon asynchrone la sélection.</summary>
+      <returns>Représente l'action asynchrone pour enregistrer la sélection.</returns>
+    </member><member name="T:Windows.Media.Playlists.PlaylistFormat">
+      <summary>Indique le format d'un fichier de sélection.</summary>
+    </member><member name="F:Windows.Media.Playlists.PlaylistFormat.M3u">
+      <summary>Sélection de M3U.</summary>
+    </member><member name="F:Windows.Media.Playlists.PlaylistFormat.WindowsMedia">
+      <summary>Sélection Windows Media.</summary>
+    </member><member name="F:Windows.Media.Playlists.PlaylistFormat.Zune">
+      <summary>Sélection de Zune.</summary>
+    </member></members>
+</doc>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.Profile.ProfileHardwareTokenContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.System.Profile.HardwareIdentification">
+      <summary>현재 하드웨어를 나타내는 하드웨어 식별자를 가져올 수 있는 기능을 제공합니다.</summary>
+    </member><member name="M:Windows.System.Profile.HardwareIdentification.GetPackageSpecificToken(Windows.Storage.Streams.IBuffer)">
+      <summary>현재 하드웨어를 나타내는 하드웨어 식별자(ASHWID)를 가져옵니다.</summary>
+      <returns>하드웨어 ID 정보입니다.</returns>
+      <param name="nonce">암호화 nonce는 선택 사항입니다. ASHWID가 재생 공격으로부터 클라우드에서 확인해야 할 때 nonce가 권장됩니다. nonce가 필요한 이 시나리오에서 원격 서버는 임의의 nonce를 생성하고 클라이언트 응용 프로그램에 전달한 후 클라이언트 시스템에서 ASHWID를 받을 경우 서명에 필요한 nonce가 있는지 확인해야 합니다.</param>
+    </member><member name="T:Windows.System.Profile.HardwareToken">
+      <summary>고유한 하드웨어 기반 ID를 포함하는 토큰을 나타냅니다.</summary>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Certificate">
+      <summary>ID를 서명하고, ID의 신뢰성을 확인하는 데 사용되는 인증서를 가져옵니다.</summary>
+      <returns>ID에 서명하는 데 사용된 인증서입니다.</returns>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Id">
+      <summary>장치를 식별하는 하드웨어 식별자를 가져옵니다.</summary>
+      <returns>장치를 식별하는 ID입니다. 이 바이트 버퍼는 장치에서 발견되는 다양한 하드웨어 구성 요소를 나타내는 식별자 집합을 포함합니다.</returns>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Signature">
+      <summary>반환된 ID의 신뢰성을 확인하는 데 도움이 되는 하드웨어 ID의 디지털 서명을 가져옵니다.</summary>
+      <returns>ID의 디지털 서명입니다.</returns>
+    </member></members>
+</doc>

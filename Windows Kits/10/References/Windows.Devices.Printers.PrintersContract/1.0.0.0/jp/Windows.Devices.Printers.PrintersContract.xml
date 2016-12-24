@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Printers.PrintersContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Printers.Print3DDevice">
+      <summary>3D プリンターを表します。</summary>
+    </member><member name="P:Windows.Devices.Printers.Print3DDevice.PrintSchema">
+      <summary>機能および印刷チケットの情報を取得するための PrintSchema オブジェクトを取得します。</summary>
+      <returns>機能および印刷チケットの情報を取得するための PrintSchema オブジェクト。</returns>
+    </member><member name="M:Windows.Devices.Printers.Print3DDevice.FromIdAsync(System.String)">
+      <summary>デバイスに接続されている 3D プリンターを表す Print3DDevice オブジェクトを作成します。</summary>
+      <returns>指定した 3D プリンターに対応する Print3DDevice オブジェクト。</returns>
+      <param name="deviceId">3D プリンターのデバイス ID。</param>
+    </member><member name="M:Windows.Devices.Printers.Print3DDevice.GetDeviceSelector">
+      <summary>デバイスに接続されているすべての 3D プリンターを見つけるのに使用できる高度なクエリ構文 (AQS) の文字列を取得します。</summary>
+      <returns>デバイスに接続されているすべての 3D プリンターを見つけるのに使用される AQS 文字列。</returns>
+    </member><member name="T:Windows.Devices.Printers.PrintSchema">
+      <summary>3D プリンターの機能と印刷チケットにアクセスするための API を提供します。</summary>
+    </member><member name="M:Windows.Devices.Printers.PrintSchema.GetCapabilitiesAsync(Windows.Storage.Streams.IRandomAccessStreamWithContentType)">
+      <summary>3D プリンターの機能を取得します。</summary>
+      <returns>3D プリンターの機能を含む XML PrintCapabilities ドキュメント。</returns>
+      <param name="constrainTicket">印刷チケット。</param>
+    </member><member name="M:Windows.Devices.Printers.PrintSchema.GetDefaultPrintTicketAsync">
+      <summary>3D プリンターの既定の印刷チケットを取得します。</summary>
+      <returns>3D プリンターの既定の印刷チケットを含む XML PrintTicket ドキュメント。</returns>
+    </member><member name="M:Windows.Devices.Printers.PrintSchema.MergeAndValidateWithDefaultPrintTicketAsync(Windows.Storage.Streams.IRandomAccessStreamWithContentType)">
+      <summary>既定の印刷チケットとユーザーの選択をマージし、それがデバイスで使用できるかどうかを検証することによって、新しい印刷チケットを作成します。</summary>
+      <returns>推奨される印刷チケットを含む XML PrintTicket ドキュメント。</returns>
+      <param name="deltaTicket">差分印刷チケットは、既定の印刷チケットとユーザーの選択との差を指定します。</param>
+    </member></members>
+</doc>

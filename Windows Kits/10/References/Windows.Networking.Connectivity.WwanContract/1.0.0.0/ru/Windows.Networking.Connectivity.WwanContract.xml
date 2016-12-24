@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Networking.Connectivity.WwanContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Networking.Connectivity.WwanConnectionProfileDetails">
+      <summary>Используется для получения сведений, относящихся к подключению WWAN.</summary>
+    </member><member name="P:Windows.Networking.Connectivity.WwanConnectionProfileDetails.AccessPointName">
+      <summary>Отображает имя точки доступа, используемой для установки подключения WWAN.</summary>
+      <returns>Имя точки доступа.</returns>
+    </member><member name="P:Windows.Networking.Connectivity.WwanConnectionProfileDetails.HomeProviderId">
+      <summary>Указывает поставщика домашней сети.</summary>
+      <returns>Идентификатор поставщика домашней сети.</returns>
+    </member><member name="M:Windows.Networking.Connectivity.WwanConnectionProfileDetails.GetCurrentDataClass">
+      <summary>Указывает класс службы данных, предложенный сетью, которая в настоящее время используется для подключения WWAN.</summary>
+      <returns>Класс предоставляемой в настоящее время службы данных.</returns>
+    </member><member name="M:Windows.Networking.Connectivity.WwanConnectionProfileDetails.GetNetworkRegistrationState">
+      <summary>Извлекает текущее состояние регистрации сети для подключения к беспроводной глобальной сети.</summary>
+      <returns>Текущее состояние регистрации в сети.</returns>
+    </member><member name="T:Windows.Networking.Connectivity.WwanDataClass">
+      <summary>Определяет значения, используемые для указания класса службы данных, которые предоставляются при WWAN-подключении.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdo">
+      <summary>Эта сеть предоставляет службу данных CDMA с оптимизацией данных об эволюции (изначально Data Only, 1xEVDO, также известная как CDMA2000 1x EV-DO или 1x EVDO).</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdoRevA">
+      <summary>Сеть предоставляет службу данных 1xEVDO RevA.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdoRevB">
+      <summary>Сеть предоставляет службу данных 1xEVDO RevB.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdv">
+      <summary>Сеть предоставляет поддерживаемую службу данных CDMA Evolution-Data/Voice (известную также как CDMA 2000 1x EV-DV или 1x EVDV).</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xRtt">
+      <summary>Сеть предоставляет службу данных CDMA 1x Radio Transmission Technology (1xRTT).</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma3xRtt">
+      <summary>Сеть предоставляет службу данных CDMA 3x Radio Transmission Technology (3xRTT).</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.CdmaUmb">
+      <summary>Сеть предоставляет службу данных UMB.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Custom">
+      <summary>Сеть предоставляет службу данных, не указанную в этой таблице.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Edge">
+      <summary>Сеть предоставляет службу Enhanced Data for Global Evolution (EDGE).</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Gprs">
+      <summary>Сеть предоставляет службу данных General Packet Radio Service (GPRS).</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Hsdpa">
+      <summary>Сеть предоставляет службу данных High-Speed Downlink Packet Access (HSDPA).</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Hsupa">
+      <summary>Сеть поддерживает службу данных HSUPA (High Speed Uplink Packet Access).</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.LteAdvanced">
+      <summary>Сеть предоставляет службу данных LTE Advanced.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.None">
+      <summary>Сеть не предоставляет службу данных.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Umts">
+      <summary>Сеть предоставляет службу данных Universal Mobile Telecommunications System (UMTS).</summary>
+    </member><member name="T:Windows.Networking.Connectivity.WwanNetworkRegistrationState">
+      <summary>Определяет состояние регистрации в сети для WWAN-подключения.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Denied">
+      <summary>В регистрации подключения ко всем доступным сетям отказано. Однако можно выполнять вызовы экстренных служб. Это значение применяется только к голосовым подключениям, а не к подключениям данных.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Deregistered">
+      <summary>Подключение не зарегистрировано в сети.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Home">
+      <summary>Подключение зарегистрировано в домашней сети.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.None">
+      <summary>Не найдено сетей для данного подключения.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Partner">
+      <summary>Подключение зарегистрировано в партнерской роуминговой сети.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Roaming">
+      <summary>Подключение зарегистрировано в роуминговой сети.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Searching">
+      <summary>Поиск доступных сетей.</summary>
+    </member></members>
+</doc>

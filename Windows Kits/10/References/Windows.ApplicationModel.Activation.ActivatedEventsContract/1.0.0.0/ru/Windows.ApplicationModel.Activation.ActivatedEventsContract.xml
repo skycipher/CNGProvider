@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Activation.ActivatedEventsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Activation.ILockScreenCallActivatedEventArgs">
+      <summary>Предоставляет сведения для событий, когда требуется взаимодействие с экраном блокировки.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ILockScreenCallActivatedEventArgs.CallUI">
+      <summary>Получает пользовательский интерфейс, обрабатывающий сообщения экрану блокировки и от него.</summary>
+      <returns>Пользовательский интерфейс, обрабатывающий сообщения экрану блокировки и от него.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IPrintTaskSettingsActivatedEventArgs">
+      <summary>Предоставляет сведения в ответ на событие, которое возникает при активировании параметров задачи печати.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IPrintTaskSettingsActivatedEventArgs.Configuration">
+      <summary>Получает сведения о конфигурации для задачи печати.</summary>
+      <returns>Сведения о конфигурации задачи печати.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs">
+      <summary>Предоставляет сведения для событий, когда требуется взаимодействие с экраном блокировки.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.Arguments">
+      <summary>Получает аргументы, передаваемые приложению для его запуска.</summary>
+      <returns>Список аргументов.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.CallUI">
+      <summary>Получает пользовательский интерфейс, обрабатывающий сообщения экрану блокировки и от него.</summary>
+      <returns>Пользовательский интерфейс, обрабатывающий сообщения экрану блокировки и от него.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.CurrentlyShownApplicationViewId">
+      <summary>Получает идентификатор для отображаемого в настоящее время представления приложения.</summary>
+      <returns>Идентификатор для отображаемого в настоящее время представления приложения.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.Kind">
+      <summary>Получает тип активации.</summary>
+      <returns>Значение перечисления ActivationKind.LockScreenCall.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.PreviousExecutionState">
+      <summary>Получает состояние выполнения приложения перед его активацией.</summary>
+      <returns>Одно из значений перечисления.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.SplashScreen">
+      <summary>Получает объект экрана-заставки, предоставляющий сведения о переходе от экрана-заставки к активированному приложению.</summary>
+      <returns>Объект, предоставляющий сведения об экране-заставке.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.TileId">
+      <summary>Получает идентификатор источника, запустившего приложение.</summary>
+      <returns>Идентификатор плитки.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs">
+      <summary>Предоставляет сведения в ответ на событие, которое возникает при активировании параметров задачи печати.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.Configuration">
+      <summary>Получает сведения о конфигурации для задачи печати.</summary>
+      <returns>Сведения о конфигурации задачи печати.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.Kind">
+      <summary>Получает тип активации для параметров задачи печати.</summary>
+      <returns>Тип активации для задачи печати.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.PreviousExecutionState">
+      <summary>Получает состояние выполнения приложения до активирования этих параметров.</summary>
+      <returns>Состояние выполнения приложения.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.SplashScreen">
+      <summary>Получает объект экрана-заставки, предоставляющий сведения о переходе от экрана-заставки к активированному приложению.</summary>
+      <returns>Объект, предоставляющий сведения об экране-заставке.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs">
+      <summary>Предоставляет сведения для событий, когда требуется взаимодействие с экраном блокировки.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.ActivatedOperation">
+      <summary>Получает операцию активации приложения.</summary>
+      <returns>Операция активации.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.Arguments">
+      <summary>Получает аргументы, передаваемые приложению во время активации его запуска.</summary>
+      <returns>Список аргументов.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.CallUI">
+      <summary>Получает пользовательский интерфейс, обрабатывающий сообщения экрану блокировки и от него.</summary>
+      <returns>Пользовательский интерфейс, обрабатывающий сообщения экрану блокировки и от него.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.CurrentlyShownApplicationViewId">
+      <summary>Получает идентификатор для отображаемого в настоящее время представления приложения.</summary>
+      <returns>Идентификатор для отображаемого в настоящее время представления приложения.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.Kind">
+      <summary>Получает тип активации.</summary>
+      <returns>Значение перечисления ActivationKind.lockScreenCall.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.PreviousExecutionState">
+      <summary>Получает состояние выполнения приложения перед его активацией.</summary>
+      <returns>Одно из значений перечисления.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.SplashScreen">
+      <summary>Получает объект экрана-заставки, предоставляющий сведения о переходе от экрана-заставки к активированному приложению.</summary>
+      <returns>Объект, предоставляющий сведения об экране-заставке.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.TileId">
+      <summary>Получает идентификатор источника, запустившего приложение.</summary>
+      <returns>Идентификатор плитки.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs">
+      <summary>Представляет аргументы, связанные с активацией рабочего процесса 3D-печати.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.ActivatedOperation">
+      <summary>Получает активированную операцию.</summary>
+      <returns>Активированная операция.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.Kind">
+      <summary>Возвращает вид активации.</summary>
+      <returns>Вид активации.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.PreviousExecutionState">
+      <summary>Получает предыдущее состояние выполнения.</summary>
+      <returns>Предыдущее состояние.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.SplashScreen">
+      <summary>Получает объект экрана-заставки, предоставляющий сведения о переходе от экрана-заставки к активированному приложению.</summary>
+      <returns>Экран-заставка.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.Workflow">
+      <summary>Получает рабочий процесс печати.</summary>
+      <returns>Рабочий процесс печати.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs">
+      <summary>Предоставляется в ответ на событие, которое возникает при активировании параметров задачи печати.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.ActivatedOperation">
+      <summary>Получает операцию активации приложения.</summary>
+      <returns>Операция активации.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.Configuration">
+      <summary>Получает сведения о конфигурации для задачи печати.</summary>
+      <returns>Сведения о конфигурации задачи печати.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.Kind">
+      <summary>Получает тип активации.</summary>
+      <returns>Одно из значений перечисления.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.PreviousExecutionState">
+      <summary>Получает состояние выполнения приложения до активирования этих параметров.</summary>
+      <returns>Одно из значений перечисления.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.SplashScreen">
+      <summary>Получает объект экрана-заставки, предоставляющий сведения о переходе от экрана-заставки к активированному приложению.</summary>
+      <returns>Объект, предоставляющий сведения об экране-заставке.</returns>
+    </member></members>
+</doc>

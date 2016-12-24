@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Security.EnterpriseData.EnterpriseDataContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Security.EnterpriseData.BufferProtectUnprotectResult">
+      <summary>Enthält Informationen über das Ergebnis des Schutzes oder der Aufhebung des Schutzes eines im Unternehmen geschützten Puffers.</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.BufferProtectUnprotectResult.Buffer">
+      <summary>Ruft den im Unternehmen geschützten Puffer ab, der geschützt wurde bzw. dessen Schutz aufgehoben wurde.</summary>
+      <returns>Im Unternehmen geschützter Puffer.</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.BufferProtectUnprotectResult.ProtectionInfo">
+      <summary>Ruft das DataProtectionInfo-Objekt in Bezug auf den im Unternehmen geschützten Puffer, der geschützt wurde bzw. dessen Schutz aufgehoben wurde.</summary>
+      <returns>Das Informationsobjekt hinsichtlich des im Unternehmen geschützten Puffers.</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.DataProtectionInfo">
+      <summary>Enthält Informationen zu einem im Unternehmen geschützten Puffer oder Stream.</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.DataProtectionInfo.Identity">
+      <summary>Die Unternehmensidentität des im Unternehmen geschützten Puffers oder Streams.</summary>
+      <returns>Die Unternehmensidentität. Dies ist eine E-Mail-Adresse oder eine Domäne, die verwaltet wird. Ihre Anwendung sollte IsIdentityManaged verwenden, um zu prüfen, ob eine E-Mail-Adresse oder eine Domäne verwaltet ist.</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.DataProtectionInfo.Status">
+      <summary>Der Schutzstatus des im Unternehmen geschützten Puffers oder Streams.</summary>
+      <returns>Ein Wert der DataProtectionStatus-Enumeration.</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.DataProtectionManager">
+      <summary>Bietet Zugriff auf die Vorgänge, die Puffer und Streams verwalten, die mit einer Unternehmensidentität geschützt werden.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+    </member><member name="M:Windows.Security.EnterpriseData.DataProtectionManager.GetProtectionInfoAsync(Windows.Storage.Streams.IBuffer)">
+      <summary>Rufen Sie den Status eines im Unternehmen geschützten Puffers ab.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+      <returns>Wenn der Aufruf dieser Methode erfolgreich abgeschlossen wurde, wird ein DataProtectionInfo-Objekt zurückgegeben, das den Status des Puffers enthält.</returns>
+      <param name="protectedData">Der Puffer, für den der Schutzstatus abgefragt wird.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.DataProtectionManager.GetStreamProtectionInfoAsync(Windows.Storage.Streams.IInputStream)">
+      <summary>Rufen Sie den Status eines im Unternehmen geschützten Streams ab.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+      <returns>Wenn der Aufruf dieser Methode erfolgreich abgeschlossen wurde, wird ein DataProtectionInfo-Objekt zurückgegeben, das den Status des Streams enthält.</returns>
+      <param name="protectedStream">Der Stream, für den der Schutzstatus abgefragt wird.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.DataProtectionManager.ProtectAsync(Windows.Storage.Streams.IBuffer,System.String)">
+      <summary>Schützen Sie die Daten in einem Puffer in einer Unternehmensidentität.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+      <returns>Wenn der Aufruf dieser Methode erfolgreich abgeschlossen wurde, wird ein BufferProtectUnprotectResult-Objekt zurückgegeben, das den Status des neu geschützten Puffers enthält.</returns>
+      <param name="data">Der Puffer, der geschützt werden soll.</param>
+      <param name="identity">Die Unternehmensidentität. Dies ist eine E-Mail-Adresse oder eine Domäne, die verwaltet wird. Ihre Anwendung sollte IsIdentityManaged verwenden, um zu prüfen, ob eine E-Mail-Adresse oder eine Domäne verwaltet ist.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.DataProtectionManager.ProtectStreamAsync(Windows.Storage.Streams.IInputStream,System.String,Windows.Storage.Streams.IOutputStream)">
+      <summary>Schützen Sie einen Stream von Daten in einer Unternehmensidentität.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+      <returns>Wenn der Aufruf dieser Methode erfolgreich abgeschlossen wurde, wird ein DataProtectionInfo-Objekt zurückgegeben, das den Status des geschützten Streams enthält.</returns>
+      <param name="unprotectedStream">Der ungeschützte Eingabestream.</param>
+      <param name="identity">Die Unternehmensidentität. Dies ist eine E-Mail-Adresse oder eine Domäne, die verwaltet wird. Ihre Anwendung sollte IsIdentityManaged verwenden, um zu prüfen, ob eine E-Mail-Adresse oder eine Domäne verwaltet ist.</param>
+      <param name="protectedStream">Der geschützte Ausgabestream.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.DataProtectionManager.UnprotectAsync(Windows.Storage.Streams.IBuffer)">
+      <summary>Entfernt den Schutz einer Unternehmensidentität von einem Puffer.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+      <returns>Wenn der Aufruf dieser Methode erfolgreich abgeschlossen wurde, wird ein BufferProtectUnprotectResult-Objekt zurückgegeben, das den Status des nicht geschützten Puffers enthält.</returns>
+      <param name="data">Der Puffer, dessen Schutz aufgehoben werden soll.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.DataProtectionManager.UnprotectStreamAsync(Windows.Storage.Streams.IInputStream,Windows.Storage.Streams.IOutputStream)">
+      <summary>Entfernt den Schutz einer Unternehmensidentität von einem Datenstream.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+      <returns>Wenn der Aufruf dieser Methode erfolgreich abgeschlossen wurde, wird ein DataProtectionInfo-Objekt zurückgegeben, das den Status des nicht geschützten Streams enthält.</returns>
+      <param name="protectedStream">Der geschützte Eingabestream.</param>
+      <param name="unprotectedStream">Der ungeschützte Ausgabestream.</param>
+    </member><member name="T:Windows.Security.EnterpriseData.DataProtectionStatus">
+      <summary>Beschreibt den Unternehmensidentitäts-Schutzstatus eines Puffers oder Streams.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.DataProtectionStatus.AccessSuspended">
+      <summary>Die Schlüssel für den Zugriff auf das geschützte Element wurden abgelegt, während das Gerät gesperrt ist.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.DataProtectionStatus.LicenseExpired">
+      <summary>Die RMS-Lizenz des Elements ist abgelaufen.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.DataProtectionStatus.Protected">
+      <summary>Das Element ist geschützt.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.DataProtectionStatus.ProtectedToOtherIdentity">
+      <summary>Das Element wird in einer anderen Unternehmensidentität geschützt.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.DataProtectionStatus.Revoked">
+      <summary>Der Schutz des Elements wurde widerrufen.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.DataProtectionStatus.Unprotected">
+      <summary>Das Element wird nicht in einer Unternehmensidentität geschützt.</summary>
+    </member><member name="T:Windows.Security.EnterpriseData.EnforcementLevel">
+      <summary>Ein Satz Enumerationswerte, die zusammen die mögliche Unternehmensdatenschutz (EDP)- Erzwingungsebenen beschreiben. Die EDP-Erzwingungsebene ist ein Aspekt der MDM- (Mobile Device Management) Konfiguration.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.EnforcementLevel.Block">
+      <summary>Die Richtlinie verlangt, dass der Benutzer gesperrt wird. Als Reaktion auf eine versuchte Aktion, wie etwa das Einfügen von Daten in eine unberechtigte Anwendung, sollte Ihre Anwendung die Aktion blockieren und überwachen.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.EnforcementLevel.NoProtection">
+      <summary>Die Richtlinie erfordert keinen Schutz. Ihre Anwendung sollte das EDP-Verhalten deaktivieren, wenn Daten geschützt sind, und den Schutz von Daten aufheben.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.EnforcementLevel.Override">
+      <summary>Die Richtlinie verlangt, dass der Benutzer eine Warnmeldung übergehen kann. Als Reaktion auf eine versuchte Aktion, z. B. das Einfügen von Daten in eine unberechtigte Anwendung, sollte die Anwendung den Benutzer mit einer übergehbaren Warnmeldung informieren. Wenn der Benutzer die Meldung übergeht, sollte Ihre Anwendung die Aktion durchführen und überwachen.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.EnforcementLevel.Silent">
+      <summary>Die Richtlinie verlangt stummen Schutz. Ihre Anwendung sollte keine Aufforderung in Reaktion auf Aktionen wie das Einfügen von Daten in eine unberechtigte Anwendung ausgeben. Stattdessen sollte die Anwendung die Aktion stillschweigend zulassen und überwachen.</summary>
+    </member><member name="T:Windows.Security.EnterpriseData.FileProtectionInfo">
+      <summary>Enthält Informationen über eine im Unternehmen geschützte Datei.</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.FileProtectionInfo.Identity">
+      <summary>Die Unternehmensidentität der im Unternehmen geschützten Datei.</summary>
+      <returns>Die Unternehmensidentität. Dies ist eine E-Mail-Adresse oder eine Domäne, die verwaltet wird. Ihre Anwendung sollte IsIdentityManaged verwenden, um zu prüfen, ob eine E-Mail-Adresse oder eine Domäne verwaltet ist.</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.FileProtectionInfo.IsRoamable">
+      <summary>Gibt an, ob der Schutz der im Unternehmen geschützten Datei per Roaming auf andere Geräte übertragen werden kann.</summary>
+      <returns>True, wenn die Dateisicherheit per Roaming auf andere Geräte übertragen werden kann.</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.FileProtectionInfo.Status">
+      <summary>Der Schutzstatus der im Unternehmen geschützten Datei.</summary>
+      <returns>Ein Wert der FileProtectionStatus-Enumeration.</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.FileProtectionManager">
+      <summary>Bietet Zugriff auf die Vorgänge, die Dateien verwalten, die im Rahmen einer Unternehmensidentität geschützt werden.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.CopyProtectionAsync(Windows.Storage.IStorageItem,Windows.Storage.IStorageItem)">
+      <summary>Replizieren des Datenschutzes von einer Datei zu einer anderen.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+      <returns>Wenn der Aufruf dieser Methode erfolgreich abgeschlossen wird, wird True ausgegeben, wenn der Dateischutz kopiert wurde, oder False, wenn ein Fehler aufgetreten ist.</returns>
+      <param name="source">Die Quelldatei, aus der der Dateischutz kopiert wird.</param>
+      <param name="target">Die Zieldatei, zu der der Dateischutz kopiert wird.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.CreateProtectedAndOpenAsync(Windows.Storage.IStorageFolder,System.String,System.String,Windows.Storage.CreationCollisionOption)">
+      <summary>Erstellen einer im Unternehmen geschützten Datei.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+      <returns>Wenn der Aufruf dieser Methode erfolgreich abgeschlossen wurde, wird ein ProtectedFileCreateResult-Objekt zurückgegeben, das die neu erstellte geschützte Datei darstellt.</returns>
+      <param name="parentFolder">Der Ordner, in dem die im Unternehmen geschützte Datei erstell werden soll.</param>
+      <param name="desiredName">Der gewünschte Name für die neue im Unternehmen geschützte Datei.</param>
+      <param name="identity">Die Unternehmensidentität. Dies ist eine E-Mail-Adresse oder eine Domäne, die verwaltet wird. Ihre Anwendung sollte IsIdentityManaged verwenden, um zu prüfen, ob eine E-Mail-Adresse oder eine Domäne verwaltet ist.</param>
+      <param name="collisionOption">Ein CreationCollisionOptions-Wert, der angibt, was zu tun ist, wenn desiredName bereits vorhanden ist.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.GetProtectionInfoAsync(Windows.Storage.IStorageItem)">
+      <summary>Ruft den Status einer im Unternehmen geschützten Datei ab.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+      <returns>Wenn der Aufruf dieser Methode erfolgreich abgeschlossen wurde, wird ein FileProtectionInfo-Objekt zurückgegeben, das den Status der Datei enthält.</returns>
+      <param name="source">Die Datei oder der Ordner, für die/den der Schutzstatus abgefragt wird.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.IsContainerAsync(Windows.Storage.IStorageFile)">
+      <summary>Verwenden Sie diese Eigenschaft, um zu festzustellen, ob die Speicherdatei tatsächlich ein Container mit einer Datei darin ist.</summary>
+      <returns>True, wenn die Speicherdatei ein Container ist, und False, wenn nicht.</returns>
+      <param name="file">Die Datei, von der Sie feststellen möchten, ob sie ein Container ist.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.LoadFileFromContainerAsync(Windows.Storage.IStorageFile)">
+      <summary>Erstellen Sie eine im Unternehmen geschützte Datei, und laden Sie sie aus einer Containerdatei.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+      <returns>Wenn der Aufruf dieser Methode erfolgreich abgeschlossen wurde, wird ein ProtectedContainerImportResult-Objekt zurückgegeben, das die neu erstellte geschützte Datei darstellt.</returns>
+      <param name="containerFile">Die im Unternehmen geschützte Datei, die erstellt und geladen werden soll.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.LoadFileFromContainerAsync(Windows.Storage.IStorageFile,Windows.Storage.IStorageItem)">
+      <summary>Erstellen Sie eine im Unternehmen geschützte Datei in einem bestimmten Speicherelement (wie einem Ordner), und laden Sie sie aus einer Containerdatei.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+      <returns>Wenn der Aufruf dieser Methode erfolgreich abgeschlossen wurde, wird ein ProtectedContainerImportResult-Objekt zurückgegeben, das die neu erstellte geschützte Datei darstellt.</returns>
+      <param name="containerFile">Die im Unternehmen geschützte Datei, die erstellt und geladen werden soll.</param>
+      <param name="target">Das Speicherelement, in dem die im Unternehmen geschützte Datei erstellt werden soll.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.LoadFileFromContainerAsync(Windows.Storage.IStorageFile,Windows.Storage.IStorageItem,Windows.Storage.NameCollisionOption)">
+      <summary>Erstellen Sie eine im Unternehmen geschützte Datei in einem bestimmten Speicherelement (wie einem Ordner), und laden Sie sie aus einer Containerdatei.</summary>
+      <returns>Wenn der Aufruf dieser Methode erfolgreich abgeschlossen wurde, wird ein ProtectedContainerImportResult-Objekt zurückgegeben, das die neu erstellte geschützte Datei darstellt.</returns>
+      <param name="containerFile">Die im Unternehmen geschützte Datei, die erstellt und geladen werden soll.</param>
+      <param name="target">Das Speicherelement, in dem die im Unternehmen geschützte Datei erstellt werden soll.</param>
+      <param name="collisionOption">Der Enum-Wert, der bestimmt, wie Windows reagiert, wenn die erstellte Datei denselben Namen hat wie ein am Standort des Containers vorhandenes Element.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.ProtectAsync(Windows.Storage.IStorageItem,System.String)">
+      <summary>Schützen Sie die Daten in einer Datei in einer Unternehmensidentität.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+      <returns>Wenn der Aufruf dieser Methode erfolgreich abgeschlossen wurde, wird ein FileProtectionInfo-Objekt zurückgegeben, das den Status der neu geschützten Datei enthält.</returns>
+      <param name="target">Die zu schützende Datei.</param>
+      <param name="identity">Die Unternehmensidentität. Dies ist eine E-Mail-Adresse oder eine Domäne, die verwaltet wird. Verwenden Sie ProtectionPolicyManager.IsIdentityManaged, um zu bestätigen, dass eine E-Mail-Adresse oder eine Domäne verwaltet ist, bevor Sie die Identität zum Schutz einer Datei verwenden.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.SaveFileAsContainerAsync(Windows.Storage.IStorageFile)">
+      <summary>Speichern Sie eine im Unternehmen geschützte Datei als Containerversion.</summary>
+      <returns>Wenn der Aufruf dieser Methode erfolgreich abgeschlossen wurde, wird ein ProtectedContainerExportResult-Objekt zurückgegeben, das die neu erstellte Containerdatei darstellt.</returns>
+      <param name="protectedFile">Die geschützte Quelldatei, die kopiert wird.</param>
+    </member><member name="T:Windows.Security.EnterpriseData.FileProtectionStatus">
+      <summary>Beschreibt den Unternehmensschutzstatus einer Datei oder eines Ordners.</summary>
+      <deprecated type="deprecate">Undetermined kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen Unknown.</deprecated>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.AccessSuspended">
+      <summary>Die Schlüssel für den Zugriff auf das geschützte Element wurden abgelegt, während das Gerät gesperrt ist.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.FileInUse">
+      <summary>Das Element wird von einem anderen Prozess verwendet. Sie können den Unternehmensschutz darauf nur anwenden, wenn es exklusiv verfügbar geworden ist.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.LicenseExpired">
+      <summary>Die RMS-Lizenz des Elements ist abgelaufen.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.NotProtectable">
+      <summary>Das Element ist verschlüsselt, oder es ist eine Systemdatei und kann nicht mithilfe des Unternehmensschutzes geschützt werden.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.Protected">
+      <summary>Das Element ist mithilfe des Unternehmensschutzes geschützt.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.ProtectedByOtherUser">
+      <summary>ProtectedByOtherUser kann in Versionen nach Windows 10 geändert oder nicht verfügbar sein. Verwenden Sie stattdessen ProtectedToOtherIdentity. Ein anderer Benutzer hat das Element mit dem Unternehmensschutz geschützt.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.ProtectedToOtherEnterprise">
+      <summary>ProtectedToOtherEnterprise kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen ProtectedToOtherIdentity. Das Element ist mit dem Unternehmensschutz für eine andere Unternehmens-ID geschützt.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.ProtectedToOtherIdentity">
+      <summary>Das Element ist für eine andere Unternehmensidentität mithilfe des Unternehmensschutzes geschützt.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.Revoked">
+      <summary>Das Element wurde mit dem Unternehmensschutz widerrufen.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.Undetermined">
+      <summary>Undetermined kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen Unknown. Das Element wird ver- oder entschlüsselt, und der Unternehmensschutzstatus kann nicht festgestellt werden. Führen Sie die Prüfung später erneut durch.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.Unknown">
+      <summary>Das Element wird ver- oder entschlüsselt, und der Unternehmensschutzstatus kann nicht festgestellt werden. Führen Sie die Prüfung später erneut durch.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.Unprotected">
+      <summary>Das Element ist nicht mithilfe des Unternehmensschutzes geschützt.</summary>
+    </member><member name="T:Windows.Security.EnterpriseData.FileRevocationManager">
+      <summary>Bietet Zugriff auf selektive Wischvorgänge.</summary>
+      <deprecated type="deprecate">FileRevocationManager kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen FileProtectionManager.</deprecated>
+    </member><member name="M:Windows.Security.EnterpriseData.FileRevocationManager.CopyProtectionAsync(Windows.Storage.IStorageItem,Windows.Storage.IStorageItem)">
+      <summary>Kopiert den selektiven Wischeffektschutzstatus einer Datei oder eines Ordners in eine neue Datei bzw. einen Ordner.</summary>
+      <deprecated type="deprecate">FileRevocationManager kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen FileProtectionManager.</deprecated>
+      <returns>TRUE, wenn der Kopiervorgang erfolgreich war, andernfalls FALSE.</returns>
+      <param name="sourceStorageItem">Das Quellelement, aus dem der selektive Zurücksetzungsschutzstatus kopiert wird.</param>
+      <param name="targetStorageItem">Das Zielelement, in den der selektive Zurücksetzungsschutzstatus kopiert wird.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileRevocationManager.GetStatusAsync(Windows.Storage.IStorageItem)">
+      <summary>Ruft den Schutzstatus in Bezug auf selektives Zurücksetzen einer Datei oder eines Ordners ab.</summary>
+      <deprecated type="deprecate">FileRevocationManager kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen FileProtectionManager.</deprecated>
+      <returns>Ein asynchroner Vorgang, der den selektiven Wischeffektschutzstatus für das storageItem abruft.</returns>
+      <param name="storageItem">Die Datei oder der Ordner, für die bzw. den der selektiven Wischschutzstatus abgerufen wird.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileRevocationManager.ProtectAsync(Windows.Storage.IStorageItem,System.String)">
+      <summary>Schützt eine Datei oder einen Ordner vor selektivem Wischen.</summary>
+      <deprecated type="deprecate">FileRevocationManager kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen FileProtectionManager.</deprecated>
+      <returns>Ein asynchroner Vorgang, der den selektiven Wischeffektschutzstatus für das storageItem abruft.</returns>
+      <param name="storageItem">Die Datei oder der Ordner, die bzw. der vor selektivem Wischen geschützt wird.</param>
+      <param name="enterpriseIdentity">Die Unternehmens-ID, für die die Datei oder der Ordner geschützt ist. Der enterpriseIdentity-Wert muss als IDN (Internationalized Domain Name) formatiert werden und darf keine Leerzeichen enthalten. Beispiel: contoso.com</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileRevocationManager.Revoke(System.String)">
+      <summary>Widerruft alle Dateien und Ordner, die für eine angegebene Unternehmens-ID durch selektives Zurücksetzen geschützt sind.</summary>
+      <deprecated type="deprecate">FileRevocationManager kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen FileProtectionManager.</deprecated>
+      <param name="enterpriseIdentity">Alle Dateien und Ordner widerrufen, die für diese Unternehmens-ID durch selektives Zurücksetzen geschützt sind. Der enterpriseIdentity-Wert muss als IDN (Internationalized Domain Name) formatiert werden und darf keine Leerzeichen enthalten. Beispiel: contoso.com</param>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedAccessResumedEventArgs">
+      <summary>Stellt Daten bereit, wenn Inhaltsschutz fortgesetzt wird.</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedAccessResumedEventArgs.Identities">
+      <summary>Enthält die Unternehmensidentitäten, für die Inhaltsschutz fortgesetzt wird.</summary>
+      <returns>Die Unternehmensidentitäten, für die Inhaltsschutz fortgesetzt wird.</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs">
+      <summary>Stellt Daten bereit, wenn Inhaltsschutz angehalten wird.</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs.Deadline">
+      <summary>Datum und Uhrzeit (DateTime) des Anhaltens des Inhaltsschutzes.</summary>
+      <returns>Datum und Uhrzeit (DateTime) des Anhaltens des Inhaltsschutzes.</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs.Identities">
+      <summary>Enthält die Unternehmensidentitäten, für die Inhaltsschutz angehalten wird.</summary>
+      <returns>Die Unternehmensidentitäten, für die Inhaltsschutz angehalten wird.</returns>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs.GetDeferral">
+      <summary>Ruft das Deferral-Objekt ab, das die Schutzunterbrechung verwaltet.</summary>
+      <returns>Das Verzögerungsobjekt.</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedContainerExportResult">
+      <summary>Stellt das Ergebnis einer im Unternehmen geschützten Datei dar, die in eine Containerdatei exportiert wurde.</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedContainerExportResult.File">
+      <summary>Die Containerdatei, die aus einer im Unternehmen geschützten Datei exportiert wurde.</summary>
+      <returns>Die Containerdatei, die aus einer im Unternehmen geschützten Datei exportiert wurde.</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedContainerExportResult.Status">
+      <summary>Der Schutzstatus, nachdem eine im Unternehmen geschützte Datei zu einer Containerdatei exportiert wurde.</summary>
+      <returns>Ein Wert der ProtectedImportExportStatus-Enumeration.</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedContainerImportResult">
+      <summary>Stellt das Ergebnis einer im Unternehmen geschützten Datei dar, die aus einer Containerdatei importiert wurde.</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedContainerImportResult.File">
+      <summary>Die im Unternehmen geschützte Datei, die aus einer Containerdatei geladen wurde.</summary>
+      <returns>Die im Unternehmen geschützte Datei, die aus einer Containerdatei geladen wurde.</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedContainerImportResult.Status">
+      <summary>Der Schutzstatus, nachdem eine im Unternehmen geschützte Datei aus einer Containerdatei importiert wurde.</summary>
+      <returns>Ein Wert der ProtectedImportExportStatus-Enumeration.</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedContentRevokedEventArgs">
+      <summary>Stellt Daten bereit, wenn Inhaltsschutz widerrufen wurde.</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedContentRevokedEventArgs.Identities">
+      <summary>Enthält die Unternehmensidentitäten, für die Inhaltsschutz widerrufen wurde.</summary>
+      <returns>Die Unternehmensidentitäten, für die Inhaltsschutz widerrufen wurde.</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedFileCreateResult">
+      <summary>Enthält Informationen über eine neu erstellte im Unternehmen geschützte Datei.</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedFileCreateResult.File">
+      <summary>Die neu erstellte im Unternehmen geschützte Datei.</summary>
+      <returns>Die neu erstellte im Unternehmen geschützte Datei.</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedFileCreateResult.ProtectionInfo">
+      <summary>Informationen über die im Unternehmen geschützte Datei.</summary>
+      <returns>Informationen über die im Unternehmen geschützte Datei.</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedFileCreateResult.Stream">
+      <summary>Der Datenstrom mit wahlfreiem Zugriff auf die neu erstellte im Unternehmen geschützte Datei.</summary>
+      <returns>Der Datenstrom mit wahlfreiem Zugriff auf die neu erstellte im Unternehmen geschützte Datei.</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedImportExportStatus">
+      <summary>Mögliche Statuswerte für eine im Unternehmen geschützte Datei, die aus einer Containerdatei importiert oder in eine Containerdatei exportiert wurde.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.AccessSuspended">
+      <summary>Die Schlüssel für den Zugriff auf die geschützte Datei wurden abgelegt, während das Gerät gesperrt ist.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.LicenseExpired">
+      <summary>Die RMS-Lizenz der Datei ist abgelaufen.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.NotRoamable">
+      <summary>Die Datei kann nicht per Roaming an ein anderes Gerät übertragen werden.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.Ok">
+      <summary>Die Datei wird geschützt.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.ProtectedToOtherIdentity">
+      <summary>Auf die Datei kann nicht zugegriffen werden, da sie in einer anderen Unternehmensidentität geschützt ist.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.Revoked">
+      <summary>Der Schutz der Datei wurde widerrufen und sie ist nicht zugänglich.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.Undetermined">
+      <summary>Der Schutzstatus der Datei kann nicht bestimmt werden.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.Unprotected">
+      <summary>Die Datei wird nicht geschützt.</summary>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectionPolicyAuditAction">
+      <summary>Definiert Konstanten, die die Überwachungsaktion angeben.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectionPolicyAuditAction.CopyToLocation">
+      <summary>Zeigt an, dass Daten an einen Speicherort kopiert werden.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectionPolicyAuditAction.Decrypt">
+      <summary>Zeigt eine Entschlüsselungsaktion an.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectionPolicyAuditAction.Other">
+      <summary>Zeigt eine andere Aktion an.</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectionPolicyAuditAction.SendToRecipient">
+      <summary>Zeigt an, dass Daten an einen Empfänger gesendet werden.</summary>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo">
+      <summary>Repräsentiert die Informationen, die für die Überwachung benötigt werden.</summary>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.#ctor(Windows.Security.EnterpriseData.ProtectionPolicyAuditAction,System.String)">
+      <summary>Initialisiert eine neue Instanz der Klasse.</summary>
+      <param name="action">Die Überwachungsaktion.</param>
+      <param name="dataDescription">Eine Beschreibung der Daten, die überwacht werden.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.#ctor(Windows.Security.EnterpriseData.ProtectionPolicyAuditAction,System.String,System.String,System.String)">
+      <summary>Initialisiert eine neue Instanz der Klasse.</summary>
+      <param name="action">Die Überwachungsaktion.</param>
+      <param name="dataDescription">Eine Beschreibung der Daten, die überwacht werden.</param>
+      <param name="sourceDescription">Eine Beschreibung der Quelle der Daten.</param>
+      <param name="targetDescription">Eine Beschreibung des Ziels der Daten.</param>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.Action">
+      <summary>Die Überwachungsaktion.</summary>
+      <returns>Die Überwachungsaktion.</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.DataDescription">
+      <summary>Eine Beschreibung der Daten, die überwacht werden.</summary>
+      <returns>Eine Beschreibung der Daten, die überwacht werden.</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.SourceDescription">
+      <summary>Eine Beschreibung der Quelle der Daten.</summary>
+      <returns>Eine Beschreibung der Quelle der Daten.</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.TargetDescription">
+      <summary>Eine Beschreibung des Ziels der Daten.</summary>
+      <returns>Eine Beschreibung des Ziels der Daten.</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectionPolicyManager">
+      <summary>Verwaltet die Unternehmensschutzrichtlinie für geschützten Inhalt.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyManager.Identity">
+      <summary>Ruft die Unternehmensidentität ab oder legt diese fest.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+      <returns>Die Unternehmensidentität. Dies ist eine E-Mail-Adresse oder eine Domäne, die verwaltet wird. Ihre Anwendung sollte IsIdentityManaged verwenden, um zu prüfen, ob eine E-Mail-Adresse oder eine Domäne verwaltet ist.</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyManager.IsProtectionEnabled">
+      <summary>Verwenden Sie diese Eigenschaft, um festzustellen, ob der Unternehmensdatenschutz (EDP) auf dem Gerät aktiviert ist.</summary>
+      <returns>True, wenn EDP auf dem Gerät aktiviert ist, andernfalls False.</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyManager.ShowEnterpriseIndicator">
+      <summary>Ein Wert, der anzeigt, ob die Shell ein Fenster ergänzen sollte, um anzuzeigen, dass es sich um ein Unternehmensfensterhandelt.</summary>
+      <returns>True, um anzuzeigen, dass die Shell ein Fenster ergänzen sollte, um anzuzeigen, dass es sich um ein Unternehmensfenster handelt; andernfalls False.</returns>
+    </member><member name="E:Windows.Security.EnterpriseData.ProtectionPolicyManager.PolicyChanged">
+      <summary>Ein Ereignis, das in Reaktion auf Änderungen der Unternehmensdatenschutz (EDP)- Richtlinie ausgelöst wird, verwaltet von Policy CSP.</summary>
+    </member><member name="E:Windows.Security.EnterpriseData.ProtectionPolicyManager.ProtectedAccessResumed">
+      <summary>Ereignis, mit dem die App registriert wird, um Benachrichtigungen zu empfangen, wenn der Schutz fortgesetzt wird.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+    </member><member name="E:Windows.Security.EnterpriseData.ProtectionPolicyManager.ProtectedAccessSuspending">
+      <summary>Ereignis, mit dem die App registriert wird, um Benachrichtigungen zu empfangen, wenn der Schutz angehalten werden soll.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+    </member><member name="E:Windows.Security.EnterpriseData.ProtectionPolicyManager.ProtectedContentRevoked">
+      <summary>Ereignis, mit dem die Anwendung registriert wird, um Benachrichtigungen zu empfangen, wenn der Schutz widerrufen werden soll.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.CheckAccess(System.String,System.String)">
+      <summary>Anfragen, ob Zugriff auf im Unternehmen geschützten Inhalt für eine Identität verfügbar ist.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+      <returns>Ein Wert der ProtectionPolicyEvaluationResult-Enumeration, der das Ergebnis der Abfrage ist.</returns>
+      <param name="sourceIdentity">Die Quellunternehmensidentität der App. Dies ist eine E-Mail-Adresse oder eine Domäne, die verwaltet wird. Ihre Anwendung sollte IsIdentityManaged verwenden, um zu prüfen, ob eine E-Mail-Adresse oder eine Domäne verwaltet ist.</param>
+      <param name="targetIdentity">Die Unternehmensidentität, die Sie überprüfen möchten, hat Zugriff zu dem geschützten Inhalt.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.CheckAccessForApp(System.String,System.String)">
+      <summary>Führen Sie die Unternehmensschutzrichtlinienevaluierung für eine Datenübertragung zwischen Ihrer Anwendung und einer angegebenen Zielanwendung durch.</summary>
+      <returns>Ein Wert der ProtectionPolicyEvaluationResult-Enumeration, der das Ergebnis der Abfrage ist.</returns>
+      <param name="sourceIdentity">Die Quellunternehmensidentität der App. Dies ist eine E-Mail-Adresse oder eine Domäne, die verwaltet wird. Ihre Anwendung sollte IsIdentityManaged verwenden, um zu prüfen, ob eine E-Mail-Adresse oder eine Domäne verwaltet ist.</param>
+      <param name="appPackageFamilyName">Der Paketfamilienname der Anwendung, die Sie überprüfen möchten, hat Zugriff zu dem geschützten Inhalt.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.ClearProcessUIPolicy">
+      <summary>Klare Benutzeroberflächenrichtlinienerzwingung für eine Unternehmensidentität.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.CreateCurrentThreadNetworkContext(System.String)">
+      <summary>Erstellt einen ThreadNetworkContext erstellt, der für eine Unternehmensidentität geschützt ist.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+      <returns>Der Kontext des geschützten Netzwerks. Die Anwendung muss nach Abschluss des Zugriffs auf die ressource ThreadNetworkContext.Close aufrufen.</returns>
+      <param name="identity">Die Unternehmensidentität. Dies ist eine E-Mail-Adresse oder eine Domäne, die verwaltet wird. Dies kan vom von GetPrimaryManagedIdentityForNetworkEndpoint zurückgegeben werden; andernfalls sollte die Anwendung IsIdentityManaged verwenden, um zu prüfen, ob eine E-Mail-Adresse oder eine Domäne verwaltet wird.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.GetEnforcementLevel(System.String)">
+      <summary>Sie können diese Methode verwenden, um die aktuelle Unternehmensdatenschutz (EDP)- Erzwingungsebene zu bestimmen. Die EDP-Erzwingungsebene ist ein Aspekt der MDM- (Mobile Device Management) Konfiguration.</summary>
+      <returns>Ein Wert der EnforcementLevel-Enumeration.</returns>
+      <param name="identity">Die Unternehmensidentität. Dies ist eine E-Mail-Adresse oder eine Domäne, die verwaltet wird. Ihre Anwendung sollte IsIdentityManaged verwenden, um zu prüfen, ob eine E-Mail-Adresse oder eine Domäne verwaltet ist.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.GetForCurrentView">
+      <summary>Gibt das ProtectionPolicyManager-Objekt zurück, das dem aktuellen Anwendungsfenster zugeordnet ist.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+      <returns>Das ProtectionPolicyManager-Objekt, das dem aktuellen Anwendungsfenster zugeordnet ist.</returns>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.GetPrimaryManagedIdentityForNetworkEndpointAsync(Windows.Networking.HostName)">
+      <summary>Gibt die Unternehmensidentität einer Netzwerkressource zurück, wenn sich die Ressource auf einem durch eine Unternehmensrichtlinie verwalteten Endpunkt befindet.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+      <returns>Die Unternehmensidentität.</returns>
+      <param name="endpointHost">Der Hostname oder die IP-Adresse der Netzwerkressource.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.HasContentBeenRevokedSince(System.String,Windows.Foundation.DateTime)">
+      <summary>Verwenden Sie diese Methode, um sicherzustellen (für eine bekannte Identität, die verwaltet wird oder jemals verwaltet wurde), ob der Zugriff auf geschützte Daten seit einem bestimmten Datum und einer Uhrzeit widerrufen wurde, oder noch zugänglich ist.</summary>
+      <returns>True, wenn der Zugriff seit dem angegebenen Datum und der Uhrzeit widerrufen wurde; andernfalls False.</returns>
+      <param name="identity">Die Unternehmensidentität, die die Daten schützt. Dies ist eine E-Mail-Adresse oder eine Domäne, die verwaltet wird. Ihre Anwendung sollte IsIdentityManaged verwenden, um zu prüfen, ob eine E-Mail-Adresse oder eine Domäne verwaltet ist.</param>
+      <param name="since">Das Datum und die Uhrzeit von dem Punkt vorwärts, den Sie in die Überprüfung einbinden möchten.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.IsIdentityManaged(System.String)">
+      <summary>Bestimmt, ob eine Unternehmensentität von einer Unternehmensrichtlinie verwaltet wird.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+      <returns>True, wenn die Unternehmensidentität verwaltet wird, oder False, wenn nicht.</returns>
+      <param name="identity">Die Unternehmensidentität. Dies ist eine E-Mail-Adresse oder eine Domäne.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.IsProtectionUnderLockRequired(System.String)">
+      <summary>Verwenden Sie diese Eigenschaft, um den Wert der ProtectionUnderLockConfigRequired-Unternehmensdatenschutz (EDP)- Richtlinie zu bestimmen.////////////////</summary>
+      <returns>True, wenn die ProtectionUnderLockConfigRequired-Richtlinie für die Identität festgelegt wird; andernfalls False.</returns>
+      <param name="identity">Für die Unternehmensidentität, die Sie überprüfen möchten, ist die ProtectionUnderLockConfigRequired-Richtlinie eingestellt.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.IsUserDecryptionAllowed(System.String)">
+      <summary>Verwenden Sie diese Eigenschaft, um festzulegen, ob Entschlüsselung von Dateien, die durch Unternehmensdatenschutz (EDP) geschützt werden, erlaubt ist.</summary>
+      <returns>True, falls Entschlüsselung von Dateien, die durch EDP geschützt werden, zulässig ist; andernfalls False.</returns>
+      <param name="identity">Die Unternehmensidentität, die Sie überprüfen möchten, hat Zugriff zu dem geschützten Inhalt.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.LogAuditEvent(System.String,System.String,Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo)">
+      <summary>Veranlasst die Protokollierung eines Überwachungsereignisses.</summary>
+      <param name="sourceIdentity">Die Unternehmensidentität, für die der Inhalt geschützt ist. Dies ist eine E-Mail-Adresse oder eine Domäne, die verwaltet wird. Ihre Anwendung sollte IsIdentityManaged verwenden, um zu prüfen, ob eine E-Mail-Adresse oder eine Domäne verwaltet ist.</param>
+      <param name="targetIdentity">Die Unternehmensidentität, für die der Inhalt offengelegt wird. Dies ist eine E-Mail-Adresse oder eine Domäne.</param>
+      <param name="auditInfo">Ein Überwachungsinformationsobjekt; eine Instanz von ProtectionPolicyAuditInfo.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessAsync(System.String,System.String)">
+      <summary>Fordert Zugriff auf den unternehmensgeschützten Inhalt für eine Identität an.</summary>
+      <returns>Ein Wert der ProtectionPolicyEvaluationResult-Enumeration, der das Ergebnis der Anforderung ist.</returns>
+      <param name="sourceIdentity">Die Unternehmensidentität, für die der Inhalt geschützt ist. Dies ist eine E-Mail-Adresse oder eine Domäne, die verwaltet wird. Ihre Anwendung sollte IsIdentityManaged verwenden, um zu prüfen, ob eine E-Mail-Adresse oder eine Domäne verwaltet ist.</param>
+      <param name="targetIdentity">Die Unternehmensidentität, für die der Inhalt offengelegt wird. Dies ist eine E-Mail-Adresse oder eine Domäne.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessAsync(System.String,System.String,Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo)">
+      <summary>Fordert Zugriff auf den unternehmensgeschützten Inhalt für eine Identität an.</summary>
+      <returns>Ein Wert der ProtectionPolicyEvaluationResult-Enumeration, der das Ergebnis der Anforderung ist.</returns>
+      <param name="sourceIdentity">Die Unternehmensidentität, für die der Inhalt geschützt ist. Dies ist eine E-Mail-Adresse oder eine Domäne, die verwaltet wird. Ihre Anwendung sollte IsIdentityManaged verwenden, um zu prüfen, ob eine E-Mail-Adresse oder eine Domäne verwaltet ist.</param>
+      <param name="targetIdentity">Die Unternehmensidentität, für die der Inhalt offengelegt wird. Dies ist eine E-Mail-Adresse oder eine Domäne.</param>
+      <param name="auditInfo">Ein Überwachungsinformationsobjekt; eine Instanz von ProtectionPolicyAuditInfo.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessAsync(System.String,System.String,Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo,System.String)">
+      <summary>Fordert Zugriff auf den unternehmensgeschützten Inhalt für eine Identität an.</summary>
+      <returns>Ein Wert der ProtectionPolicyEvaluationResult-Enumeration, der das Ergebnis der Anforderung ist.</returns>
+      <param name="sourceIdentity">Die Unternehmensidentität, für die der Inhalt geschützt ist. Dies ist eine E-Mail-Adresse oder eine Domäne, die verwaltet wird. Ihre Anwendung sollte IsIdentityManaged verwenden, um zu prüfen, ob eine E-Mail-Adresse oder eine Domäne verwaltet ist.</param>
+      <param name="targetIdentity">Die Unternehmensidentität, für die der Inhalt offengelegt wird. Dies ist eine E-Mail-Adresse oder eine Domäne.</param>
+      <param name="auditInfo">Ein Überwachungsinformationsobjekt; eine Instanz von ProtectionPolicyAuditInfo.</param>
+      <param name="messageFromApp">Eine Meldung, die im Zustimmungsdialogfeld angezeigt wird, so dass der Benutzer eine Zustimmungsentscheidung treffen kann.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessForAppAsync(System.String,System.String)">
+      <summary>Fordert Zugriff auf den unternehmensgeschützten Inhalt für eine bestimmte Zielanwendung an.</summary>
+      <returns>Ein Wert der ProtectionPolicyEvaluationResult-Enumeration, der das Ergebnis der Abfrage ist.</returns>
+      <param name="sourceIdentity">Die Unternehmensidentität, für die der Inhalt geschützt ist. Dies ist eine E-Mail-Adresse oder eine Domäne, die verwaltet wird. Ihre Anwendung sollte IsIdentityManaged verwenden, um zu prüfen, ob eine E-Mail-Adresse oder eine Domäne verwaltet ist.</param>
+      <param name="appPackageFamilyName">Die Unternehmensidentität, für die der Inhalt offengelegt wird. Dies ist eine E-Mail-Adresse oder eine Domäne.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessForAppAsync(System.String,System.String,Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo)">
+      <summary>Fordert Zugriff auf den unternehmensgeschützten Inhalt für eine bestimmte Zielanwendung an.</summary>
+      <returns>Ein Wert der ProtectionPolicyEvaluationResult-Enumeration, der das Ergebnis der Abfrage ist.</returns>
+      <param name="sourceIdentity">Die Unternehmensidentität, für die der Inhalt geschützt ist. Dies ist eine E-Mail-Adresse oder eine Domäne, die verwaltet wird. Ihre Anwendung sollte IsIdentityManaged verwenden, um zu prüfen, ob eine E-Mail-Adresse oder eine Domäne verwaltet ist.</param>
+      <param name="appPackageFamilyName">Die Unternehmensidentität, für die der Inhalt offengelegt wird. Dies ist eine E-Mail-Adresse oder eine Domäne.</param>
+      <param name="auditInfo">Ein Überwachungsinformationsobjekt; eine Instanz von ProtectionPolicyAuditInfo.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessForAppAsync(System.String,System.String,Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo,System.String)">
+      <summary>Fordert Zugriff auf den unternehmensgeschützten Inhalt für eine bestimmte Zielanwendung an.</summary>
+      <returns>Ein Wert der ProtectionPolicyEvaluationResult-Enumeration, der das Ergebnis der Abfrage ist.</returns>
+      <param name="sourceIdentity">Die Unternehmensidentität, für die der Inhalt geschützt ist. Dies ist eine E-Mail-Adresse oder eine Domäne, die verwaltet wird. Ihre Anwendung sollte IsIdentityManaged verwenden, um zu prüfen, ob eine E-Mail-Adresse oder eine Domäne verwaltet ist.</param>
+      <param name="appPackageFamilyName">Die Unternehmensidentität, für die der Inhalt offengelegt wird. Dies ist eine E-Mail-Adresse oder eine Domäne.</param>
+      <param name="auditInfo">Ein Überwachungsinformationsobjekt; eine Instanz von ProtectionPolicyAuditInfo.</param>
+      <param name="messageFromApp">Eine Meldung, die im Zustimmungsdialogfeld angezeigt wird, so dass der Benutzer eine Zustimmungsentscheidung treffen kann.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RevokeContent(System.String)">
+      <summary>Widerrufen Sie die Schlüssel, die benötigt werden, um auf alle Inhalte zuzugreifen, die in der angegebenen Unternehmensidentität geschützt sind.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+      <param name="identity">Die Unternehmensidentität. Dies ist eine E-Mail-Adresse oder eine Domäne, die verwaltet wird. Ihre Anwendung sollte IsIdentityManaged verwenden, um zu prüfen, ob eine E-Mail-Adresse oder eine Domäne verwaltet ist.</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.TryApplyProcessUIPolicy(System.String)">
+      <summary>Aktiviert Benutzeroberflächenrichtlinienerzwingung für eine Unternehmensidentität.</summary>
+      <capability type="enterpriseDataPolicy">Erforderlich für Anwendungen zur Definition und Verwendung unternehmensspezifische Richtlinien für das Gerät.</capability>
+      <returns>True, wenn die Identität von einer Unternehmensrichtlinie verwaltet wird, andernfalls False.</returns>
+      <param name="identity">Die Unternehmensidentität. Dies ist eine E-Mail-Adresse oder eine Domäne, die verwaltet wird. Ihre Anwendung sollte IsIdentityManaged verwenden, um zu prüfen, ob eine E-Mail-Adresse oder eine Domäne verwaltet ist.</param>
+    </member><member name="T:Windows.Security.EnterpriseData.ThreadNetworkContext">
+      <summary>Ein geschützter Netzwerkkontext für eine Unternehmensidentität..</summary>
+    </member><member name="M:Windows.Security.EnterpriseData.ThreadNetworkContext.Close">
+      <summary>Schließt den geschützten Netzwerkkontext.</summary>
+    </member></members>
+</doc>

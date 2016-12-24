@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Preview.Notes.PreviewNotesContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs">
+      <summary>Rappresenta le informazioni sull'evento NotePlacementChanged.</summary>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs.ViewId">
+      <summary>Identificatore univoco della nota per il quale l'evento di NotePlacementChanged è stato generato.</summary>
+      <returns>Id della nota.</returns>
+    </member><member name="T:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview">
+      <summary>Questa classe possiede molte delle funzionalità della funzionalità dell'applicazione di anteprima note (vedere la sezione Osservazioni).</summary>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.IsScreenLocked">
+      <summary>Ottiene un valore che indica se il dispositivo è attualmente bloccato.</summary>
+      <returns>True se lo schermo è bloccato; in caso contrario, false.</returns>
+    </member><member name="E:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.NotePlacementChanged">
+      <summary>Indica che un posizionamento della nota (dimensioni e posizione) è stato modificato.</summary>
+    </member><member name="E:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.NoteVisibilityChanged">
+      <summary>Indica che lo stato di visibilità di una nota è stato modificato.</summary>
+    </member><member name="E:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.SystemLockStateChanged">
+      <summary>Indica che lo stato del blocco dello schermo del dispositivo è stato modificato.</summary>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.GetNotePlacement(System.Int32)">
+      <summary>Ottiene la posizione di visualizzazione di una nota specificata, da archiviare in memoria e da ripristinare in un momento successivo.</summary>
+      <returns>Una matrice di byte contenete i dati di posizione delle note.</returns>
+      <param name="noteViewId">Identificatore univoco della nota la cui posizione deve essere recuperata.</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.HideNote(System.Int32)">
+      <summary>Rimuove la visualizzazione di una nota dallo schermo del dispositivo.</summary>
+      <param name="noteViewId">Identificatore univoco della nota da rimuovere.</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.SetFocusToNextView">
+      <summary>Passa alla visualizzazione della nota visibile successiva (finestra). Le visualizzazioni sono selezionate in un ordine ciclico determinato dal sistema.</summary>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.SetNotesThumbnailAsync(Windows.Storage.Streams.IBuffer)">
+      <summary>Imposta l'immagine dell'anteprima per l'applicazione visualizzata nell'Area di lavoro di Windows Ink, selezionando i tasti di scelta rapida Alt+TAB per spostarsi tra le attività, oppure al passaggio sulla barra delle applicazioni.</summary>
+      <returns>Questo metodo non restituisce valori.</returns>
+      <param name="thumbnail">Una matrice di byte che descrive l'immagine di anteprima e l'utilizzo (vedere la sezione Osservazioni).</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNote(System.Int32)">
+      <summary>Rende una nota visibile sullo schermo del dispositivo.</summary>
+      <param name="noteViewId">Identificatore univoco della nota da mostrare.</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNoteRelativeTo(System.Int32,System.Int32)">
+      <summary>Rende una nota visibile e la posiziona accanto a una visualizzazione di ancoraggio specificata.</summary>
+      <param name="noteViewId">Identificatore univoco della nota da mostrare.</param>
+      <param name="anchorNoteViewId">ID della visualizzazione di ancoraggio.</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNoteWithPlacement(System.Int32,Windows.Storage.Streams.IBuffer)">
+      <summary>Rende una nota visibile e imposta i dati di posizionamento (dimensioni e posizione) come specificato.</summary>
+      <param name="noteViewId">Identificatore univoco della nota da mostrare.</param>
+      <param name="data">Una matrice di byte contenete i dati di posizione delle note.</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.TrySetNoteSize(System.Int32,Windows.Foundation.Size)">
+      <summary>Ridimensiona la nota specificata alle dimensioni desiderate. Se la dimensione specificata non è consigliata a causa dei problemi di spazio o delle dimensioni dello schermo, la dimensione della nota non viene modificata.</summary>
+      <returns>True se la nota è stata ridimensionata, false se non è stata ridimensionata a causa delle restrizioni dello schermo.</returns>
+      <param name="noteViewId">Identificatore univoco della nota da ridimensionare.</param>
+      <param name="size">Dimensioni desiderate per la nota.</param>
+    </member><member name="T:Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs">
+      <summary>Rappresenta le informazioni sull'evento NoteVisibilityChanged.</summary>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs.IsVisible">
+      <summary>Indica se la nota (specificata dalla proprietà di ViewId) è visibile sullo schermo del dispositivo.</summary>
+      <returns>True se nota è visibile, false se la nota è nascosta.</returns>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs.ViewId">
+      <summary>Identificatore univoco della nota per il quale l'evento di NoteVisibilityChanged è stato generato.</summary>
+      <returns>Id della nota.</returns>
+    </member></members>
+</doc>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Calls.LockScreenCallContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral">
+      <summary>当应用程序不再需要推迟从锁定屏幕移除自身时，LockScreenCallEndCallDeferral 对象会发出信号。</summary>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral.Complete">
+      <summary>从锁定屏幕完成应用程序的删除的延迟，如果尚未通过其他方式删除应用程序，这将导致应用程序从锁定屏幕中删除。</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs">
+      <summary>控制锁定屏幕中的应用程序的删除。</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs.Deadline">
+      <summary>获取应用程序必须完成延期的截止日期。</summary>
+      <returns>应用程序必须完成延期的截止日期。</returns>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs.GetDeferral">
+      <summary>请求推迟从锁定屏幕移除应用程序的默认行为。</summary>
+      <returns>当此方法完成时，它返回一个 LockScreenCallEndCallDeferral 对象，该对象指示应用程序无需再延迟从锁定屏幕中移除其自身。</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.LockScreenCallUI">
+      <summary>处理往来于锁定屏幕的通信。</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.LockScreenCallUI.CallTitle">
+      <summary>获取和设置通话性质的简短说明。</summary>
+      <returns>对呼叫的性质的简短说明，例如，“与 Jane Doe 的视频通话”。</returns>
+    </member><member name="E:Windows.ApplicationModel.Calls.LockScreenCallUI.Closed">
+      <summary>在锁定屏幕交互完成时发生。</summary>
+    </member><member name="E:Windows.ApplicationModel.Calls.LockScreenCallUI.EndRequested">
+      <summary>在锁定屏幕要终止呼叫时发生。</summary>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallUI.Dismiss">
+      <summary>从锁定屏幕 UI 中移除应用程序。</summary>
+    </member></members>
+</doc>

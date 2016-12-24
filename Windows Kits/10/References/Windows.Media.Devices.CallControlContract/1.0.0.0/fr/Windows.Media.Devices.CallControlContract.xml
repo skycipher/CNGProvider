@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.Devices.CallControlContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Media.Devices.CallControl">
+      <summary>Représente les propriétés, les commandes et les événements de gestion des appels sur un appareil téléphonique.</summary>
+    </member><member name="P:Windows.Media.Devices.CallControl.HasRinger">
+      <summary>Indique si le périphérique de téléphonie a une sonnerie intégrée.</summary>
+      <returns>Valeur Boolean qui est True si le périphérique de téléphonie a une sonnerie, et False dans le cas contraire.</returns>
+    </member><member name="E:Windows.Media.Devices.CallControl.AnswerRequested">
+      <summary>Se produit lorsque le périphérique reçoit une demande de réponse à un appel.</summary>
+    </member><member name="E:Windows.Media.Devices.CallControl.AudioTransferRequested">
+      <summary>Se produit lorsque le périphérique reçoit une demande pour un transfert audio.</summary>
+    </member><member name="E:Windows.Media.Devices.CallControl.DialRequested">
+      <summary>Se produit lorsqu'un numéro est composé à partir de l'appareil.</summary>
+    </member><member name="E:Windows.Media.Devices.CallControl.HangUpRequested">
+      <summary>Se produit lorsque le périphérique reçoit une demande pour raccrocher suite à un appel.</summary>
+    </member><member name="E:Windows.Media.Devices.CallControl.KeypadPressed">
+      <summary>Se produit lorsqu'un clic de pavé numérique sur le périphérique a été utilisé.</summary>
+    </member><member name="E:Windows.Media.Devices.CallControl.RedialRequested">
+      <summary>Se produit lorsque le périphérique reçoit une demande de renuméroter.</summary>
+    </member><member name="M:Windows.Media.Devices.CallControl.EndCall(System.UInt64)">
+      <summary>Termine l'appel spécifié.</summary>
+      <param name="callToken">Identificateur unique de l'appel spécifié.</param>
+    </member><member name="M:Windows.Media.Devices.CallControl.FromId(System.String)">
+      <summary>Retourne une classe CallControl qui représente le périphérique de communication audio spécifié par l'ID de DeviceInformation passé.</summary>
+      <returns>Une classe qui représente le périphérique de communication audio spécifié.</returns>
+      <param name="deviceId">Identificateur de DeviceInformation du périphérique de communication audio spécifié.</param>
+    </member><member name="M:Windows.Media.Devices.CallControl.GetDefault">
+      <summary>Retourne une classe CallControl qui représente le périphérique de communication audio par défaut.</summary>
+      <returns>Une classe qui représente le périphérique de communication audio par défaut.</returns>
+    </member><member name="M:Windows.Media.Devices.CallControl.IndicateActiveCall(System.UInt64)">
+      <summary>Indique que l'appel spécifié est maintenant actif.</summary>
+      <param name="callToken">Identificateur unique de l'appel spécifié.</param>
+    </member><member name="M:Windows.Media.Devices.CallControl.IndicateNewIncomingCall(System.Boolean,System.String)">
+      <summary>Indique au périphérique qu'il existe un appel entrant.</summary>
+      <returns>Un jeton d'appel qui identifie cet appel.</returns>
+      <param name="enableRinger">Spécifie si le périphérique doit activer sa sonnerie prédéfinie.</param>
+      <param name="callerId">Une chaîne numérique qui spécifie l'ID de l'appelant entrant. Ce paramètre peut être null et l'est souvent pour de nombreux appels de VoIP.</param>
+    </member><member name="M:Windows.Media.Devices.CallControl.IndicateNewOutgoingCall">
+      <summary>Met à jour les indicateurs de périphérique pour indiquer un appel sortant.</summary>
+      <returns>Un jeton d'appel qui identifie cet appel.</returns>
+    </member><member name="T:Windows.Media.Devices.CallControlEventHandler">
+      <summary>Gère les événements AnswerRequested et AudioTransferRequested.</summary>
+      <param name="sender">L'objet CallControl ayant déclenché l'événement.</param>
+    </member><member name="T:Windows.Media.Devices.DialRequestedEventArgs">
+      <summary>Contient des informations pour l'événement DialRequested.</summary>
+    </member><member name="P:Windows.Media.Devices.DialRequestedEventArgs.Contact">
+      <summary>Retourne le contact dont le numéro a été composé.</summary>
+      <returns>Contact.</returns>
+    </member><member name="M:Windows.Media.Devices.DialRequestedEventArgs.Handled">
+      <summary>Indique que l'événement DialRequested a été géré.</summary>
+    </member><member name="T:Windows.Media.Devices.DialRequestedEventHandler">
+      <summary>Gère l'événement DialRequested.</summary>
+      <param name="sender">L'objet CallControl ayant déclenché l'événement.</param>
+      <param name="e">Classe contenant des informations pour l'événement.</param>
+    </member><member name="T:Windows.Media.Devices.KeypadPressedEventArgs">
+      <summary>Contient des informations pour l'événement KeypadPressed.</summary>
+    </member><member name="P:Windows.Media.Devices.KeypadPressedEventArgs.TelephonyKey">
+      <summary>Retourne la valeur du bouton du pavé numérique qui a été utilisé sur le périphérique.</summary>
+      <returns>Clé. Une des valeurs de l'énumération TelephonyKey.</returns>
+    </member><member name="T:Windows.Media.Devices.KeypadPressedEventHandler">
+      <summary>Gère l'événement KeypadPressed.</summary>
+      <param name="sender">L'objet CallControl ayant déclenché l'événement.</param>
+      <param name="e">Classe contenant des informations pour l'événement.</param>
+    </member><member name="T:Windows.Media.Devices.RedialRequestedEventArgs">
+      <summary>Contient des informations pour l'événement RedialRequested.</summary>
+    </member><member name="M:Windows.Media.Devices.RedialRequestedEventArgs.Handled">
+      <summary>Indique que l'événement RedialRequested a été géré.</summary>
+    </member><member name="T:Windows.Media.Devices.RedialRequestedEventHandler">
+      <summary>Gère l'événement RedialRequested.</summary>
+      <param name="sender">L'objet CallControl ayant déclenché l'événement.</param>
+      <param name="e">Classe contenant des informations pour l'événement.</param>
+    </member><member name="T:Windows.Media.Devices.TelephonyKey">
+      <summary>Indique le bouton du pavé numérique qui a été enfoncé sur un appareil de téléphonie.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.A">
+      <summary>Bouton A du pavé numérique.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.B">
+      <summary>Bouton B du pavé numérique.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.C">
+      <summary>Bouton C du pavé numérique.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D">
+      <summary>Bouton D du pavé numérique.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D0">
+      <summary>Touche 0 du pavé numérique.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D1">
+      <summary>Touche 1 du pavé numérique.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D2">
+      <summary>Touche 2 du pavé numérique.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D3">
+      <summary>Touche 3 du pavé numérique.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D4">
+      <summary>Touche 4 du pavé numérique.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D5">
+      <summary>Touche 5 du pavé numérique.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D6">
+      <summary>Touche 6 du pavé numérique.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D7">
+      <summary>Touche 7 du pavé numérique.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D8">
+      <summary>Touche 8 du pavé numérique.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D9">
+      <summary>Touche 9 du pavé numérique.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.Pound">
+      <summary>Touche # du pavé numérique.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.Star">
+      <summary>Touche * du pavé numérique.</summary>
+    </member></members>
+</doc>

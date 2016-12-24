@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.Protection.ProtectionRenewalContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Media.Protection.ComponentRenewal">
+      <summary>讓應用程式針對需要更新才能播放受保護媒體內容的元件啟始更新。</summary>
+    </member><member name="M:Windows.Media.Protection.ComponentRenewal.RenewSystemComponentsAsync(Windows.Media.Protection.RevocationAndRenewalInformation)">
+      <summary>在提示使用者之後啟始重要內容保護元件的更新。</summary>
+      <returns>用於控制非同步作業的物件。</returns>
+      <param name="information">撤銷及更新資訊。</param>
+    </member><member name="T:Windows.Media.Protection.RenewalStatus">
+      <summary>定義從 RenewSystemComponentsAsync 傳回的可能值。</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.AppComponentsMayNeedUpdating">
+      <summary>指定沒有偵測出任何需要更新的系統元件。 但是，應用程式元件可能需要更新，在此情況下，使用者可能需要從存放區中取得更新的應用程式。</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.NoComponentsFound">
+      <summary>指定找不到任何需要更新的元件。</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.NotStarted">
+      <summary>指定更新尚未啟動。</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.UpdatesInProgress">
+      <summary>指定有更新可用，而且使用者允許繼續進行更新</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.UserCancelled">
+      <summary>指定使用者拒絕允許更新繼續進行。</summary>
+    </member></members>
+</doc>

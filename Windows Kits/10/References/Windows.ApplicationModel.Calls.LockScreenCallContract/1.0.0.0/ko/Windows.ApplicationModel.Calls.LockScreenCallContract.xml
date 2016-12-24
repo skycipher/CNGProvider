@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Calls.LockScreenCallContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral">
+      <summary>LockScreenCallEndCallDeferral 개체는 앱이 잠금 화면에서 자기 자신을 제거하는 동작을 더 이상 지연할 필요가 없는 경우 신호를 보냅니다.</summary>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral.Complete">
+      <summary>잠금 화면에서 앱 제거를 지연시키므로 앱이 이미 다른 방법에 의해 제거되지 않은 경우 해당 앱이 잠금 화면에서 제거됩니다.</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs">
+      <summary>잠금 화면에서의 앱 제거를 제어합니다.</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs.Deadline">
+      <summary>앱이 지연을 완료해야 하는 마감 날짜를 가져옵니다.</summary>
+      <returns>앱이 지연을 완료해야 하는 마감 날짜입니다.</returns>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs.GetDeferral">
+      <summary>잠금 화면에서 앱을 제거하는 기본 동작을 지연하도록 요청합니다.</summary>
+      <returns>이 메서드가 완료되면 앱이 잠금 화면에서 자기 자신을 제거하는 동작을 더 이상 지연할 필요가 없을 때 신호를 보내는 LockScreenCallEndCallDeferral 개체가 반환됩니다.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.LockScreenCallUI">
+      <summary>잠금 화면에 대한 수신 및 송신 통신을 처리합니다.</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.LockScreenCallUI.CallTitle">
+      <summary>호출 특성에 대한 간략한 설명을 가져오고 설정합니다.</summary>
+      <returns>통화의 특성에 대한 간단한 설명(예: "Jane Doe와의 화상 통화")입니다.</returns>
+    </member><member name="E:Windows.ApplicationModel.Calls.LockScreenCallUI.Closed">
+      <summary>잠금 화면 상호 작용이 완료될 때 발생합니다.</summary>
+    </member><member name="E:Windows.ApplicationModel.Calls.LockScreenCallUI.EndRequested">
+      <summary>잠금 화면에서 통화를 종료하려고 할 때 발생합니다.</summary>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallUI.Dismiss">
+      <summary>잠금 화면 UI에서 앱을 제거합니다.</summary>
+    </member></members>
+</doc>

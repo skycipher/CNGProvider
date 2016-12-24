@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Custom.CustomDeviceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Custom.CustomDevice">
+      <summary>Représente un périphérique personnalisé.</summary>
+    </member><member name="P:Windows.Devices.Custom.CustomDevice.InputStream">
+      <summary>Flux d'entrée.</summary>
+      <returns>Flux d'entrée.</returns>
+    </member><member name="P:Windows.Devices.Custom.CustomDevice.OutputStream">
+      <summary>Flux de sortie.</summary>
+      <returns>Flux de sortie.</returns>
+    </member><member name="M:Windows.Devices.Custom.CustomDevice.FromIdAsync(System.String,Windows.Devices.Custom.DeviceAccessMode,Windows.Devices.Custom.DeviceSharingMode)">
+      <summary>Crée un objet CustomDevice de façon asynchrone pour le DeviceInformation.Id spécifié.</summary>
+      <capability type="optical">Obligatoire pour que les applications puissent accéder aux fonctions sur les lecteurs de disques optiques tels que CD, DVD, et Blu-ray.</capability>
+      <returns>Retourne un périphérique personnalisé.</returns>
+      <param name="deviceId">Le DeviceInformation.Id du périphérique.</param>
+      <param name="desiredAccess">L'accès souhaité.</param>
+      <param name="sharingMode">Mode de partage.</param>
+    </member><member name="M:Windows.Devices.Custom.CustomDevice.GetDeviceSelector(System.Guid)">
+      <summary>Obtient un sélecteur de périphérique.</summary>
+      <returns>Le sélecteur de périphérique.</returns>
+      <param name="classGuid">GUID de classe d'interface de périphérique de l'interface de périphérique pour lequel créer un sélecteur de périphériques.</param>
+    </member><member name="M:Windows.Devices.Custom.CustomDevice.SendIOControlAsync(Windows.Devices.Custom.IIOControlCode,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)">
+      <summary>Envoie un code de contrôle d'E/S.</summary>
+      <returns>Résultat de l'opération asynchrone.</returns>
+      <param name="ioControlCode">Le code de contrôle d'E/S.</param>
+      <param name="inputBuffer">Mémoire tampon d'entrée.</param>
+      <param name="outputBuffer">Mémoire tampon de sortie.</param>
+    </member><member name="M:Windows.Devices.Custom.CustomDevice.TrySendIOControlAsync(Windows.Devices.Custom.IIOControlCode,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)">
+      <summary>Envoie un code de contrôle d'E/S. Une valeur de retour indique si l'opération a réussi.</summary>
+      <returns>true si l'opération a réussi ; sinon, false.</returns>
+      <param name="ioControlCode">Le code de contrôle d'E/S.</param>
+      <param name="inputBuffer">Mémoire tampon d'entrée.</param>
+      <param name="outputBuffer">Mémoire tampon de sortie.</param>
+    </member><member name="T:Windows.Devices.Custom.DeviceAccessMode">
+      <summary>Le mode d'accès du périphérique.</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceAccessMode.Read">
+      <summary>Accès en lecture.</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceAccessMode.ReadWrite">
+      <summary>Accès en lecture et en écriture.</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceAccessMode.Write">
+      <summary>Accès en écriture.</summary>
+    </member><member name="T:Windows.Devices.Custom.DeviceSharingMode">
+      <summary>Le mode de partage du périphérique.</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceSharingMode.Exclusive">
+      <summary>Le périphérique est exclusif.</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceSharingMode.Shared">
+      <summary>Le périphérique est partagé.</summary>
+    </member><member name="T:Windows.Devices.Custom.IIOControlCode">
+      <summary>Représente le code de contrôle d'E/S.</summary>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.AccessMode">
+      <summary>Mode d'accès.</summary>
+      <returns>Mode d'accès.</returns>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.BufferingMethod">
+      <summary>Méthode de mise en mémoire tampon.</summary>
+      <returns>Méthode de mise en mémoire tampon.</returns>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.ControlCode">
+      <summary>Code de contrôle.</summary>
+      <returns>Code de contrôle.</returns>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.DeviceType">
+      <summary>Type d'appareil.</summary>
+      <returns>Type d'appareil.</returns>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.Function">
+      <summary>Fonction.</summary>
+      <returns>Fonction.</returns>
+    </member><member name="T:Windows.Devices.Custom.IOControlAccessMode">
+      <summary>Identifie le mode d'accès.</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlAccessMode.Any">
+      <summary>Tout mode.</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlAccessMode.Read">
+      <summary>Mode de lecture.</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlAccessMode.ReadWrite">
+      <summary>Mode de lecture/écriture.</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlAccessMode.Write">
+      <summary>Mode écriture.</summary>
+    </member><member name="T:Windows.Devices.Custom.IOControlBufferingMethod">
+      <summary>Identifie la méthode de mise en mémoire tampon.</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlBufferingMethod.Buffered">
+      <summary>Mis en mémoire tampon.</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlBufferingMethod.DirectInput">
+      <summary>Entrée directe.</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlBufferingMethod.DirectOutput">
+      <summary>Sortie directe.</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlBufferingMethod.Neither">
+      <summary>Aucun.</summary>
+    </member><member name="T:Windows.Devices.Custom.IOControlCode">
+      <summary>Représente le code de contrôle.</summary>
+    </member><member name="M:Windows.Devices.Custom.IOControlCode.#ctor(System.UInt16,System.UInt16,Windows.Devices.Custom.IOControlAccessMode,Windows.Devices.Custom.IOControlBufferingMethod)">
+      <summary>Code de contrôle.</summary>
+      <param name="deviceType">Type d'appareil.</param>
+      <param name="function">La fonction du périphérique.</param>
+      <param name="accessMode">Mode d'accès.</param>
+      <param name="bufferingMethod">Méthode de mise en mémoire tampon.</param>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.AccessMode">
+      <summary>Mode d'accès.</summary>
+      <returns>Mode d'accès.</returns>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.BufferingMethod">
+      <summary>Méthode de mise en mémoire tampon.</summary>
+      <returns>Méthode de mise en mémoire tampon.</returns>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.ControlCode">
+      <summary>Code de contrôle.</summary>
+      <returns>Code de contrôle.</returns>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.DeviceType">
+      <summary>Type d'appareil.</summary>
+      <returns>Type d'appareil.</returns>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.Function">
+      <summary>Fonction.</summary>
+      <returns>Fonction.</returns>
+    </member><member name="T:Windows.Devices.Custom.KnownDeviceTypes">
+      <summary>Représente les types de périphérique connus.</summary>
+    </member><member name="P:Windows.Devices.Custom.KnownDeviceTypes.Unknown">
+      <summary>Défini par le fournisseur de périphérique.</summary>
+      <returns>Défini par le fournisseur de périphérique.</returns>
+    </member></members>
+</doc>

@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Security.ExchangeActiveSyncProvisioning.EasContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy">
+      <summary>现代邮件应用程序评估并应用 EAS 安全策略。</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy 在 Windows 10 之后的版本中可能不可用。</deprecated>
+    </member><member name="M:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.#ctor">
+      <summary>创建允许调用方应用程序设置从计算或应用程序的交换服务器收到的策略的对象的实例。</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy 在 Windows 10 之后的版本中可能不可用。</deprecated>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.DisallowConvenienceLogon">
+      <summary>获取或设置防止方便登录的能力。</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy 在 Windows 10 之后的版本中可能不可用。</deprecated>
+      <returns>TRUE 防止便利登录。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.MaxInactivityTimeLock">
+      <summary>获取或设置计算机锁定前其可保持非活动状态的最长时间。</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy 在 Windows 10 之后的版本中可能不可用。</deprecated>
+      <returns>计算机锁定前允许处于非活动状态的事件长度。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.MaxPasswordFailedAttempts">
+      <summary>获取或设置用密码尝试登录失败的最大次数。</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy 在 Windows 10 之后的版本中可能不可用。</deprecated>
+      <returns>范围介于 4 和 16 之间。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.MinPasswordComplexCharacters">
+      <summary>获取或设置密码所需的复杂字符的最小数目。</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy 在 Windows 10 之后的版本中可能不可用。</deprecated>
+      <returns>范围介于 1 和 4 之间。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.MinPasswordLength">
+      <summary>获取或设置允许的最小密码长度。</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy 在 Windows 10 之后的版本中可能不可用。</deprecated>
+      <returns>范围介于 1 和 16 之间。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.PasswordExpiration">
+      <summary>获取或设置密码无效的时间长度。</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy 在 Windows 10 之后的版本中可能不可用。</deprecated>
+      <returns>在密码过期且必须重置之前的时间长度。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.PasswordHistory">
+      <summary>获取或设置先前使用的密码信息。</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy 在 Windows 10 之后的版本中可能不可用。</deprecated>
+      <returns>先前使用的密码信息。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.RequireEncryption">
+      <summary>获取或设置是否需要加密。</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy 在 Windows 10 之后的版本中可能不可用。</deprecated>
+      <returns>TRUE 表示需要加密。</returns>
+    </member><member name="M:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.ApplyAsync">
+      <summary>一旦用户同意，立即应用异步模式下的 EAS 策略。</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy 在 Windows 10 之后的版本中可能不可用。</deprecated>
+      <returns>返回回调结果的计算，以异步模式返回到调用应用程序。</returns>
+    </member><member name="M:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.CheckCompliance">
+      <summary>计算 EAS 策略。</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy 在 Windows 10 之后的版本中可能不可用。</deprecated>
+      <returns>在同步模式下返回合规检查的结果。</returns>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults">
+      <summary>为邮件应用程序提供 EAS 安全策略的评估结果。</summary>
+      <deprecated type="deprecate">EasComplianceResults 在 Windows 10 之后的版本中可能不可用。</deprecated>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.Compliant">
+      <summary>返回计算机是否与 EAS 策略兼容的结果。</summary>
+      <deprecated type="deprecate">EasComplianceResults 在 Windows 10 之后的版本中可能不可用。</deprecated>
+      <returns>计算机是否与 EAS 策略兼容的结果。 如果所有策略均评估为合格，则将 Compliant 属性设置为 TRUE。 否则，其将设置为 FALSE。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.DisallowConvenienceLogonResult">
+      <summary>返回方便登录是否禁止的结果。</summary>
+      <deprecated type="deprecate">EasComplianceResults 在 Windows 10 之后的版本中可能不可用。</deprecated>
+      <returns>方便登录是否禁止的结果。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.EncryptionProviderType">
+      <summary>获取 Exchange ActiveSync 加密提供程序的类型。</summary>
+      <deprecated type="deprecate">EasComplianceResults 在 Windows 10 之后的版本中可能不可用。</deprecated>
+      <returns>Exchange ActiveSync 加密提供程序的类型。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.MaxInactivityTimeLockResult">
+      <summary>返回在计算机锁定前允许最长不活动时间的结果。</summary>
+      <deprecated type="deprecate">EasComplianceResults 在 Windows 10 之后的版本中可能不可用。</deprecated>
+      <returns>在计算机锁定前允许最长不活动时间的结果。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.MaxPasswordFailedAttemptsResult">
+      <summary>返回允许密码尝试失败的最大次数的结果。</summary>
+      <deprecated type="deprecate">EasComplianceResults 在 Windows 10 之后的版本中可能不可用。</deprecated>
+      <returns>允许密码尝试失败的最大次数的结果。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.MinPasswordComplexCharactersResult">
+      <summary>返回复杂密码字符所需最小数量的结果。</summary>
+      <deprecated type="deprecate">EasComplianceResults 在 Windows 10 之后的版本中可能不可用。</deprecated>
+      <returns>复杂密码字符所需最小数量的结果。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.MinPasswordLengthResult">
+      <summary>返回密码所需最小长度的结果。</summary>
+      <deprecated type="deprecate">EasComplianceResults 在 Windows 10 之后的版本中可能不可用。</deprecated>
+      <returns>密码所需最小长度的结果。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.PasswordExpirationResult">
+      <summary>返回密码是否已过期的结果。</summary>
+      <deprecated type="deprecate">EasComplianceResults 在 Windows 10 之后的版本中可能不可用。</deprecated>
+      <returns>密码是否已过期的结果。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.PasswordHistoryResult">
+      <summary>返回密码历史记录的结果。</summary>
+      <deprecated type="deprecate">EasComplianceResults 在 Windows 10 之后的版本中可能不可用。</deprecated>
+      <returns>密码历史记录的结果。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.RequireEncryptionResult">
+      <summary>返回是否需要加密的结果。</summary>
+      <deprecated type="deprecate">EasComplianceResults 在 Windows 10 之后的版本中可能不可用。</deprecated>
+      <returns>是否需要加密的结果。</returns>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult">
+      <summary>登录是否能进行的结果。</summary>
+      <deprecated type="deprecate">EasDisallowConvenienceLogonResult 在 Windows 10 之后的版本中可能不可用。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult.CanBeCompliant">
+      <summary>此计算机可以使用 ApplyAsync 方法进行兼容。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 和用户不属于 admin。HRESULT: S_OK，但是用户不受控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult.Compliant">
+      <summary>此计算机与该策略兼容。HRESULT: S_OK 受到控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult.NotEvaluated">
+      <summary>没有为计算设置策略。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult.RequestedPolicyIsStricter">
+      <summary>请求的策略比计算机策略更为严格。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 和用户不属于 admin。</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType">
+      <summary>描述 Exchange ActiveSync 加密提供程序的类型。</summary>
+      <deprecated type="deprecate">EasEncryptionProviderType 在 Windows 10 之后的版本中可能不可用。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType.NotEvaluated">
+      <summary>尚未确定加密提供程序类型。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType.OtherEncryption">
+      <summary>加密提供程序是非 Windows 提供程序。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType.WindowsEncryption">
+      <summary>加密提供程序是 Windows 提供程序。</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult">
+      <summary>标识锁定计算机之前的最长时间长度结果。</summary>
+      <deprecated type="deprecate">EasMaxInactivityTimeLockResult 在 Windows 10 之后的版本中可能不可用。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.CanBeCompliant">
+      <summary>此计算机可以使用 ApplyAsync 方法进行兼容。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 和用户不属于 admin。HRESULT: S_OK，但是用户不受控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.Compliant">
+      <summary>此计算机与该策略兼容。HRESULT: S_OK 受到控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.InvalidParameter">
+      <summary>策略值不在有效范围中。HRESULT:HRESULT_FROM_WIN32 (ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.NotEvaluated">
+      <summary>没有为计算设置策略。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.RequestedPolicyIsStricter">
+      <summary>请求的策略比计算机策略更为严格。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 和用户不属于 admin。</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult">
+      <summary>表示最大密码尝试次数结果。</summary>
+      <deprecated type="deprecate">EasMaxPasswordFailedAttemptsResult 在 Windows 10 之后的版本中可能不可用。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.CanBeCompliant">
+      <summary>此计算机可以使用 ApplyAsync 方法进行兼容。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 和用户不属于 admin。HRESULT: S_OK，但是用户不受控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.Compliant">
+      <summary>此计算机与该策略兼容。HRESULT: S_OK 受到控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.InvalidParameter">
+      <summary>策略值不在有效范围中。HRESULT:HRESULT_FROM_WIN32 (ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.NotEvaluated">
+      <summary>没有为计算设置策略。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.RequestedPolicyIsStricter">
+      <summary>请求的策略比计算机策略更为严格。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 和用户不属于 admin。</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult">
+      <summary>表示密码的最少复杂性结果。</summary>
+      <deprecated type="deprecate">EasMinPasswordComplexCharactersResult 在 Windows 10 之后的版本中可能不可用。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.AdminsCannotChangePassword">
+      <summary>不允许一个或多个管理员更改其密码。 HRESULT: EAS_E_ADMINS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.AdminsHaveBlankPassword">
+      <summary>由于有一个或多个管理员的密码为空白，因此无法评估 EAS 密码策略。 HRESULT: EAS_E_ADMINS_HAVE_BLANK_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.CanBeCompliant">
+      <summary>此计算机可以使用 ApplyAsync 方法进行兼容。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 和用户不属于 admin。HRESULT: S_OK，但是用户不受控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.ChangeConnectedAdminsPassword">
+      <summary>至少有一名管理员的连接帐户密码必须针对 EAS 密码策略合规进行更改。HRESULT: EAS_E_CONNECTED_ADMINS_NEED_TO_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.ChangeConnectedUserPassword">
+      <summary>必须针对 EAS 密码策略合规更改当前用户的连接帐户密码。HRESULT: EAS_E_CURRENT_CONNECTED_USER_NEED_TO_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.Compliant">
+      <summary>此计算机与该策略兼容。HRESULT: S_OK 受到控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.ConnectedAdminsProviderPolicyIsWeak">
+      <summary>EAS 密码策略不能由至少一个管理员的连接帐户提供程序强制执行。HRESULT: EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CONNECTED_ADMINS</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.ConnectedUserProviderPolicyIsWeak">
+      <summary>EAS 密码策略不能由当前用户的连接帐户提供程序强制执行。HRESULT: EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CURRENT_CONNECTED_USER</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.CurrentUserHasBlankPassword">
+      <summary>由于用户的密码为空白，因此无法对用户的 EAS 密码策略进行评估。HRESULT: EAS_E_CURRENT_USER_HAS_BLANK_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.InvalidParameter">
+      <summary>策略值不在有效范围中。HRESULT:HRESULT_FROM_WIN32 (ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.LocalControlledUsersCannotChangePassword">
+      <summary>存在不允许更改其密码的其他标准用户。 HRESULT: EAS_E_LOCAL_CONTROLLED_USERS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.NotEvaluated">
+      <summary>没有为计算设置策略。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.RequestedPolicyIsStricter">
+      <summary>请求的策略比计算机策略更为严格。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 和用户不属于 admin。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.RequestedPolicyNotEnforceable">
+      <summary>本系统无法执行对 EAS 策略的评估。HRESULT:EAS_E_REQUESTED_POLICY_NOT_ENFORCEABLE</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.UserCannotChangePassword">
+      <summary>用户不允许更改密码。 HRESULT: EAS_E_USER_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult">
+      <summary>表示密码的最小长度结果。</summary>
+      <deprecated type="deprecate">EasMinPasswordLengthResult 在 Windows 10 之后的版本中可能不可用。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.AdminsCannotChangePassword">
+      <summary>不允许一个或多个管理员更改其密码。 HRESULT: EAS_E_ADMINS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.AdminsHaveBlankPassword">
+      <summary>由于有一个或多个管理员的密码为空白，因此无法评估 EAS 密码策略。 HRESULT: EAS_E_ADMINS_HAVE_BLANK_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.CanBeCompliant">
+      <summary>此计算机可以使用 ApplyAsync 方法进行兼容。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 和用户不属于 admin。HRESULT: S_OK，但是用户不受控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.ChangeConnectedAdminsPassword">
+      <summary>至少有一名管理员的连接帐户密码必须针对 EAS 密码策略合规进行更改。HRESULT: EAS_E_CONNECTED_ADMINS_NEED_TO_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.ChangeConnectedUserPassword">
+      <summary>必须针对 EAS 密码策略合规更改当前用户的连接帐户密码。HRESULT: EAS_E_CURRENT_CONNECTED_USER_NEED_TO_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.Compliant">
+      <summary>此计算机与该策略兼容。HRESULT: S_OK 受到控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.ConnectedAdminsProviderPolicyIsWeak">
+      <summary>EAS 密码策略不能由至少一个管理员的连接帐户提供程序强制执行。HRESULT: EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CONNECTED_ADMINS</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.ConnectedUserProviderPolicyIsWeak">
+      <summary>EAS 密码策略不能由当前用户的连接帐户提供程序强制执行。HRESULT: EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CURRENT_CONNECTED_USER</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.CurrentUserHasBlankPassword">
+      <summary>由于用户的密码为空白，因此无法对用户的 EAS 密码策略进行评估。HRESULT: EAS_E_CURRENT_USER_HAS_BLANK_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.InvalidParameter">
+      <summary>策略值不在有效范围中。HRESULT:HRESULT_FROM_WIN32 (ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.LocalControlledUsersCannotChangePassword">
+      <summary>存在不允许更改其密码的其他标准用户。 HRESULT: EAS_E_LOCAL_CONTROLLED_USERS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.NotEvaluated">
+      <summary>没有为计算设置策略。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.RequestedPolicyIsStricter">
+      <summary>请求的策略比计算机策略更为严格。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 和用户不属于 admin。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.RequestedPolicyNotEnforceable">
+      <summary>本系统无法执行对 EAS 策略的评估。HRESULT:EAS_E_REQUESTED_POLICY_NOT_ENFORCEABLE</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.UserCannotChangePassword">
+      <summary>用户不允许更改密码。 HRESULT: EAS_E_USER_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult">
+      <summary>查询密码过期信息的结果。</summary>
+      <deprecated type="deprecate">EasPasswordExpirationResult 在 Windows 10 之后的版本中可能不可用。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.AdminsCannotChangePassword">
+      <summary>不允许一个或多个管理员更改其密码。 HRESULT: EAS_E_ADMINS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.CanBeCompliant">
+      <summary>此计算机可以使用 ApplyAsync 方法进行兼容。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 和用户属于 admin。HRESULT: S_OK，但是用户不受控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.Compliant">
+      <summary>该计算机与该策略兼容。HRESULT: S_OK 受到控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.InvalidParameter">
+      <summary>策略值不在有效范围中。HRESULT:HRESULT_FROM_WIN32 (ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.LocalControlledUsersCannotChangePassword">
+      <summary>存在不允许更改其密码的其他标准用户。 HRESULT: EAS_E_LOCAL_CONTROLLED_USERS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.NotEvaluated">
+      <summary>没有为计算设置策略。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.RequestedExpirationIncompatible">
+      <summary>因为密码过期间隔少于系统的最小密码间隔，所以无法满足 EAS 密码过期策略。HRESULT:EAS_E_REQUESTED_POLICY_PASSWORD_EXPIRATION_INCOMPATIBLE</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.RequestedPolicyIsStricter">
+      <summary>请求的策略比计算机策略更为严格。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 和用户不属于 admin。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.UserCannotChangePassword">
+      <summary>用户不允许更改密码。 HRESULT: EAS_E_USER_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult">
+      <summary>表示密码历史记录。</summary>
+      <deprecated type="deprecate">EasPasswordHistoryResult 在 Windows 10 之后的版本中可能不可用。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.CanBeCompliant">
+      <summary>此计算机可以使用 ApplyAsync 方法进行兼容。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 和用户属于 admin。HRESULT: S_OK，但是用户不受控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.Compliant">
+      <summary>该计算机与该策略兼容。HRESULT: S_OK 受到控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.InvalidParameter">
+      <summary>策略值不在有效范围中。HRESULT:HRESULT_FROM_WIN32 (ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.NotEvaluated">
+      <summary>没有为计算设置策略。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.RequestedPolicyIsStricter">
+      <summary>请求的策略比计算机策略更为严格。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 和用户不属于 admin。</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult">
+      <summary>表示需要的加密的类型。</summary>
+      <deprecated type="deprecate">EasRequireEncryptionResult 在 Windows 10 之后的版本中可能不可用。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.CanBeCompliant">
+      <summary>此计算机可以使用 ApplyAsync 方法进行兼容。HRESULT: S_OK，但是用户不进行控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.Compliant">
+      <summary>此计算机已为 DeviceProtected。HRESULT: S_OK 和用户受到控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeFixedDataNotSupported">
+      <summary>此值不再受支持。 从 Windows 8.1 预览版开始，请使用 FixedDataNotSupported。</summary>
+      <deprecated type="deprecate">此值不再受支持。 从 Windows 8.1 预览版开始，请使用 FixedDataNotSupported。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeHardwareNotCompliant">
+      <summary>此值不再受支持。 从 Windows 8.1 预览版开始，请使用 HardwareNotCompliant。</summary>
+      <deprecated type="deprecate">此值不再受支持。 从 Windows 8.1 预览版开始，请使用 HardwareNotCompliant。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeOsVolumeNotProtected">
+      <summary>此值不再受支持。 从 Windows 8.1 预览版开始，请使用 OsVolumeNotProtected。</summary>
+      <deprecated type="deprecate">此值不再受支持。 从 Windows 8.1 预览版开始，请使用 OsVolumeNotProtected。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeProtectionNotYetEnabled">
+      <summary>此值不再受支持。 从 Windows 8.1 预览版开始，请使用 ProtectionNotYetEnabled。</summary>
+      <deprecated type="deprecate">此值不再受支持。 从 Windows 8.1 预览版开始，请使用 ProtectionNotYetEnabled。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeProtectionSuspended">
+      <summary>此值不再受支持。 从 Windows 8.1 预览版开始，请使用 ProtectionSuspended。</summary>
+      <deprecated type="deprecate">此值不再受支持。 从 Windows 8.1 预览版开始，请使用 ProtectionSuspended。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeWinReNotConfigured">
+      <summary>此值不再受支持。 从 Windows 8.1 预览版开始，请使用 LockNotConfigured。</summary>
+      <deprecated type="deprecate">此值不再受支持。 从 Windows 8.1 预览版开始，请使用 LockNotConfigured。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.FixedDataNotSupported">
+      <summary>因为存在未加密的固定数据量，此计算机无法支持设备加密。HRESULT: FVE_E_DE_FIXED_DATA_NOT_SUPPORTED</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.HardwareNotCompliant">
+      <summary>此计算机不满足支持设备加密的硬件要求。HRESULT: FVE_E_DE_HARDWARE_NOT_COMPLIANT</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.LockNotConfigured">
+      <summary>因为没有正确配置 WinRE，此计算机无法支持设备加密。HRESULT: FVE_E_DE_WINRE_NOT_CONFIGURED</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.NoFeatureLicense">
+      <summary>此计算机没有功能许可证。HRESULT: FVE_E_NO_FEATURE_LICENSE</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.NotEvaluated">
+      <summary>没有为计算设置策略。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.NotProvisionedOnAllVolumes">
+      <summary>此计算机上未提供支持设备加密。 启用所有数量的 BitLocker，使其符合设备加密策略。 HRESULT: FVE_E_NOT_PROVISIONED_ON_ALL_VOLUMES</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.OsNotProtected">
+      <summary>操作系统驱动器不受 BitLocker 驱动器加密保护。HRESULT:FVE_E_OS_NOT_PROTECTED</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.OsVolumeNotProtected">
+      <summary>此计算机上未设置设备加密。 如果受支持，则对所有卷启用设备加密以符合设备加密策略。
+HRESULT: FVE_E_DE_OS_VOLUME_NOT_PROTECTED</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.ProtectionNotYetEnabled">
+      <summary>尚未启用对该卷的保护。 启用保护需要一个已连接的帐户。 如果有已连接的帐户并看到此错误，请参见事件日志了解更多信息。HRESULT:FVE_E_DE_PROTECTION_NOT_YET_ENABLED</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.ProtectionSuspended">
+      <summary>启用在此卷上但已挂起的保护。 这可能是由于您的计算机更新。 重新启动并重试。HRESULT:FVE_E_DE_PROTECTION_SUSPENDED</summary>
+    </member></members>
+</doc>

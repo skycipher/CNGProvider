@@ -1,0 +1,22 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+
+  <PropertyGroup>
+     <WindowsSdkDir Condition="'$(WindowsSdkDir)' == ''">$([MSBUILD]::GetDirectoryNameOfFileAbove('$(MSBUILDTHISFILEDIRECTORY)', 'sdkmanifest.xml'))\</WindowsSdkDir>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <WindowsSDK_IncludePath>$(WindowsSdkDir)Include\um;$(WindowsSdkDir)Include\shared;$(WindowsSdkDir)Include\winrt;</WindowsSDK_IncludePath>
+    <WindowsSDK_MetadataPath>$(WindowsSdkDir)References\CommonConfiguration\Neutral</WindowsSDK_MetadataPath>
+    <WindowsSDK_ExecutablePath_x86>$(WindowsSdkDir)bin\x86;</WindowsSDK_ExecutablePath_x86>
+    <WindowsSDK_ExecutablePath_x64>$(WindowsSdkDir)bin\x64;</WindowsSDK_ExecutablePath_x64>
+    <WindowsSDK_LibraryPath_x86>$(WindowsSdkDir)lib\winv6.3\um\x86;</WindowsSDK_LibraryPath_x86>
+    <WindowsSDK_LibraryPath_x64>$(WindowsSdkDir)lib\winv6.3\um\x64;</WindowsSDK_LibraryPath_x64>
+  </PropertyGroup>
+
+  <Import Condition="Exists('$(WindowsSdkDir)\DesignTime\CommonConfiguration\neutral\Windows.desktop.arm.props')" Project="$(WindowsSdkDir)\DesignTime\CommonConfiguration\neutral\Windows.desktop.arm.props"/>
+
+  <Import Condition="Exists('$(WindowsSdkDir)\DesignTime\CommonConfiguration\neutral\Windows.arm.props')" Project="$(WindowsSdkDir)\DesignTime\CommonConfiguration\neutral\Windows.arm.props"/>
+
+</Project>
+

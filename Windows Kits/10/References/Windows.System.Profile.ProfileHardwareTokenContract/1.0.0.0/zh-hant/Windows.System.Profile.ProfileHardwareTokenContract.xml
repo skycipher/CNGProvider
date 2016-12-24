@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.Profile.ProfileHardwareTokenContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.System.Profile.HardwareIdentification">
+      <summary>可讓您取得代表目前硬體的硬體識別項。</summary>
+    </member><member name="M:Windows.System.Profile.HardwareIdentification.GetPackageSpecificToken(Windows.Storage.Streams.IBuffer)">
+      <summary>取得表示目前硬體的硬體識別項 (ASHWID)。</summary>
+      <returns>硬體識別碼資訊。</returns>
+      <param name="nonce">密碼編譯 nonce 是選擇性的。 當需要在雲端上針對重新執行攻擊驗證 ASHWID 時，建議使用 nonce。 在需要 nonce 的情節中，遠端伺服器應該產生隨機 nonce 並將其傳遞至用戶端應用程式，接著在收到戶端系統送來的 ASHWID 之後驗證簽章具有預期的 nonce。</param>
+    </member><member name="T:Windows.System.Profile.HardwareToken">
+      <summary>表示包含以硬體為基礎、充分唯一識別的語彙基元。</summary>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Certificate">
+      <summary>取得用來簽署識別碼和用來協助確認識別碼真實性的憑證。</summary>
+      <returns>用來簽署識別碼的憑證。</returns>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Id">
+      <summary>取得識別裝置的硬體識別項。</summary>
+      <returns>可識別裝置的識別碼。 這個位元組緩衝區包含一組識別項，代表在裝置中找到的各種硬體元件。</returns>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Signature">
+      <summary>取得協助確認所傳回識別碼之真實性的硬體識別碼的數位簽章。</summary>
+      <returns>ID 的數位簽章。</returns>
+    </member></members>
+</doc>

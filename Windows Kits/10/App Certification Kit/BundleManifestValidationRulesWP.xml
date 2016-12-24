@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+This file defines the validation rules which is used to validate the bundle manifest.
+
+Rule   - Each has a unique, case-insensitive name. It defines operation which applies 
+         to all the rule details it contains. It may have a message which will be 
+         shown in the report when failure is detected.
+
+Detail - One rule must contain at least one detail block. Each detail block must have
+         defined expected result. The detail block may have a message which will be 
+         shown in the report when failure is detected.
+         
+Constant - Defined in the Constant table, each has a unique, case-insensitive name and 
+         a string value.
+         
+Group -  Each group contains one or more rules and sub-groups. Each group must specify 
+         the logic value which is either 'AND' or 'OR'. The result of a group test is
+         the result after applying the logic operation to the results of the contained 
+         rules and sub-groups.
+-->
+<RULES xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ManifestValidationRules.xsd">
+  <RULE NAME="CheckForMaxPackageNumber" OPERATION="COMPARISON">
+    <DETAIL EXPECTED_RESULT="SMALLER_OR_EQUAL">
+      <COMPARE_SOURCE>
+        <COUNT>
+          <XPATH_QUERY PATH="ns:Packages/ns:Package"/>
+        </COUNT>
+      </COMPARE_SOURCE>
+      <COMPARE_TARGET>
+        <STRING VALUE="$(CONSTANT.MAX_PACKAGE_NUMBER)"/>
+      </COMPARE_TARGET>
+      <COMPARE_TYPE VALUE="NUMBER"/>
+      <MESSAGE_IF_FAIL ID="BundleManifestValidation_PackageCount" PARAM="$(CONSTANT.MAX_PACKAGE_NUMBER)"/>
+    </DETAIL>
+  </RULE>
+  <RULE NAME="CheckMainPackageCount" OPERATION="COMPARISON">
+    <DETAIL EXPECTED_RESULT="EQUAL">
+      <COMPARE_SOURCE>
+        <COUNT>
+          <XPATH_QUERY PATH="ns:Packages/ns:Package[@Type='application']"/>
+        </COUNT>
+      </COMPARE_SOURCE>
+      <COMPARE_TARGET>
+        <STRING VALUE="$(CONSTANT.MAX_MAIN_PACKAGE_NUMBER)"/>
+      </COMPARE_TARGET>
+      <COMPARE_TYPE VALUE="NUMBER"/>
+      <MESSAGE_IF_FAIL ID="BundleManifestValidation_MainPackageCount" PARAM="$(CONSTANT.MAX_MAIN_PACKAGE_NUMBER)"/>
+    </DETAIL>
+  </RULE>
+  <RULE NAME="CheckArchitecture" OPERATION="SEARCH">
+    <DETAIL EXPECTED_RESULT="FOUND">
+      <SEARCH_ITEM>
+          <XPATH_QUERY PATH="ns:Packages/ns:Package[@Type='application']/@Architecture"/>
+      </SEARCH_ITEM>
+      <SEARCH_FROM>
+        <STRING VALUE="arm"/>
+        <STRING VALUE="neutral"/>
+      </SEARCH_FROM>
+      <MESSAGE_IF_FAIL ID="BundleManifestValidation_InvalidArchitecture"/>
+    </DETAIL>
+  </RULE>
+  <CONSTANT_TABLE>
+    <CONSTANT NAME="MAX_PACKAGE_NUMBER" VALUE="512"/>
+    <CONSTANT NAME="MAX_MAIN_PACKAGE_NUMBER" VALUE="1"/>
+  </CONSTANT_TABLE>
+</RULES>

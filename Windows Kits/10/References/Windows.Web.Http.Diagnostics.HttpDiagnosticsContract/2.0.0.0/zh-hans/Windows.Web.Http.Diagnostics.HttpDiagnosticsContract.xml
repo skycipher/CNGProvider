@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Web.Http.Diagnostics.HttpDiagnosticsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider">
+      <summary>提供一个简单诊断工具，用于跟踪和分析基于 Microsoft 的 HTTP 堆栈构建的应用程序中的 Web 流量。</summary>
+    </member><member name="E:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.RequestResponseCompleted">
+      <summary>订阅 RequestResponseCompleted 事件以接收请求已提交通知。</summary>
+    </member><member name="E:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.RequestSent">
+      <summary>订阅 RequestSent 事件以接收请求已发送通知。</summary>
+    </member><member name="E:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.ResponseReceived">
+      <summary>订阅 ResponseReceived 事件以接收响应已接收通知。</summary>
+    </member><member name="M:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.CreateFromProcessDiagnosticInfo(Windows.System.Diagnostics.ProcessDiagnosticInfo)">
+      <summary>根据指定的 ProcessDiagnosticInfo 对象创建新 HttpDiagnosticProvider。</summary>
+      <returns>新创建的 HttpDiagnosticProvider。</returns>
+      <param name="processDiagnosticInfo">标识了要监视的进程的 ProcessDiagnosticInfo。</param>
+    </member><member name="M:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.Start">
+      <summary>启动监视附加的进程目标的 HttpDiagnosticProvider。</summary>
+    </member><member name="M:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.Stop">
+      <summary>阻止 HttpDiagnosticProvider 监视附加的进程目标。</summary>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs">
+      <summary>为 RequestResponseCompleted 事件提供数据。</summary>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.ActivityId">
+      <summary>获取此活动的本地唯一 ID，用于与其他事件关联。</summary>
+      <returns>此活动的本地唯一 ID。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.Initiator">
+      <summary>获取发起此请求的操作的类型。</summary>
+      <returns>发起程序类型。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.ProcessId">
+      <summary>获取进程 ID。</summary>
+      <returns>进程 ID。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.RequestedUri">
+      <summary>获取请求的响应的 URI。</summary>
+      <returns>请求的响应的 URI。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.SourceLocations">
+      <summary>获取源位置调用堆栈。</summary>
+      <returns>源位置调用堆栈。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.ThreadId">
+      <summary>获取线程 ID。</summary>
+      <returns>线程 ID。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.Timestamps">
+      <summary>获取连接事件的时间戳。</summary>
+      <returns>连接事件的时间戳。</returns>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps">
+      <summary>提供连接事件的所有时间戳。</summary>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.CacheCheckedTimestamp">
+      <summary>获取上次检查本地缓存的时间。</summary>
+      <returns>检查本地缓存的时间。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.ConnectionCompletedTimestamp">
+      <summary>获取 TCP 连接阶段的结束点的时间戳。</summary>
+      <returns>TCP 连接阶段的结束点的时间戳。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.ConnectionInitiatedTimestamp">
+      <summary>获取 TCP 连接阶段的起始点的时间戳。</summary>
+      <returns>TCP 连接阶段的起始点的时间戳。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.NameResolvedTimestamp">
+      <summary>获取 DNS 名称解析的时间。</summary>
+      <returns>DNS 名称解析的时间。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.RequestCompletedTimestamp">
+      <summary>获取已发送的最后一个字节的时间戳。</summary>
+      <returns>已发送的最后一个字节的时间戳。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.RequestSentTimestamp">
+      <summary>获取已发送的第一个字节的时间戳。</summary>
+      <returns>已发送的第一个字节的时间戳。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.ResponseCompletedTimestamp">
+      <summary>获取已接收的最后一个字节的时间戳。</summary>
+      <returns>已接收的最后一个字节的时间戳。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.ResponseReceivedTimestamp">
+      <summary>获取已接收的第一个字节的时间戳。</summary>
+      <returns>已接收的第一个字节的时间戳。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.SslNegotiatedTimestamp">
+      <summary>获取 SSL 握手协商的时间。</summary>
+      <returns>SSL 握手协商的时间。</returns>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs">
+      <summary>为 RequestSent 事件提供数据。</summary>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.ActivityId">
+      <summary>获取此活动的本地唯一 ID，用于与其他事件关联。</summary>
+      <returns>此活动的本地唯一 ID。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.Initiator">
+      <summary>获取发起此请求的操作的类型。</summary>
+      <returns>发起程序类型。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.Message">
+      <summary>获取包含标头的 HttpRequestMessage。</summary>
+      <returns>包含标头的 HttpRequestMessage。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.ProcessId">
+      <summary>获取进程 ID。</summary>
+      <returns>进程 ID。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.SourceLocations">
+      <summary>获取源位置调用堆栈。</summary>
+      <returns>源位置调用堆栈。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.ThreadId">
+      <summary>获取线程 ID。</summary>
+      <returns>线程 ID。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.Timestamp">
+      <summary>获取 HttpRequestMessage 的发送时间的时间戳。</summary>
+      <returns>HttpRequestMessage 的发送时间的时间戳。</returns>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs">
+      <summary>为 ResponseReceived 事件提供数据。</summary>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs.ActivityId">
+      <summary>获取此活动的本地唯一 ID，用于与其他事件关联。</summary>
+      <returns>此活动的本地唯一 ID。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs.Message">
+      <summary>获取包含标头、状态代码和数据的 HttpResponseMessage。</summary>
+      <returns>包含标头、状态代码和数据的 HttpResponseMessage。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs.Timestamp">
+      <summary>获取 HttpResponseMessage 的接收时间的时间戳。</summary>
+      <returns>HttpResponseMessage 的接收时间的时间戳。</returns>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator">
+      <summary>提供下载请求发起方类型。</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Beacon">
+      <summary>单向请求信标</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.CrossOriginPreFlight">
+      <summary>跨域实施前请求</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Fetch">
+      <summary>提取请求</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.HtmlDownload">
+      <summary>HTML 下载</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Image">
+      <summary>图像资源</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Link">
+      <summary>链接</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Media">
+      <summary>媒体资源</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Other">
+      <summary>其他资源</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.ParsedElement">
+      <summary>已分析的元素</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Prefetch">
+      <summary>预提取请求</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Script">
+      <summary>脚本资源</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Style">
+      <summary>CSS 元素</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.XmlHttpRequest">
+      <summary>XML HTTP 请求</summary>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation">
+      <summary>包含 HTTP 活动的源位置。</summary>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation.ColumnNumber">
+      <summary>获取列号。</summary>
+      <returns>列号。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation.LineNumber">
+      <summary>获取行号。</summary>
+      <returns>行号。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation.SourceUri">
+      <summary>获取源 URI。</summary>
+      <returns>源 URI。</returns>
+    </member></members>
+</doc>

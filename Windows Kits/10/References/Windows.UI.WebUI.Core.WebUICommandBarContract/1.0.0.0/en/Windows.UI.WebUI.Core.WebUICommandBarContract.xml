@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.WebUI.Core.WebUICommandBarContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.WebUI.Core.IWebUICommandBarElement">
+      <summary>The interface for the command bar elements.</summary>
+    </member><member name="T:Windows.UI.WebUI.Core.IWebUICommandBarIcon">
+      <summary>The interface for the command bar icons.</summary>
+    </member><member name="T:Windows.UI.WebUI.Core.MenuClosedEventHandler">
+      <summary>Represents the method that will handle the MenuClosed event.</summary>
+    </member><member name="T:Windows.UI.WebUI.Core.MenuOpenedEventHandler">
+      <summary>Represents the method that will handle the MenuOpened event.</summary>
+    </member><member name="T:Windows.UI.WebUI.Core.SizeChangedEventHandler">
+      <summary>Represents the method that will handle the SizeChanged event.</summary>
+      <param name="eventArgs">Provides data when the size of the command bar changes.</param>
+    </member><member name="T:Windows.UI.WebUI.Core.WebUICommandBar">
+      <summary>Represents a command bar.</summary>
+    </member><member name="P:Windows.UI.WebUI.Core.WebUICommandBar.BackgroundColor">
+      <summary>Gets or sets the background color of the command bar.</summary>
+      <returns>The background color of the command bar.</returns>
+    </member><member name="P:Windows.UI.WebUI.Core.WebUICommandBar.ClosedDisplayMode">
+      <summary>Gets or sets the closed display mode for the command bar.</summary>
+      <returns>The closed display mode for the command bar.</returns>
+    </member><member name="P:Windows.UI.WebUI.Core.WebUICommandBar.ForegroundColor">
+      <summary>Gets or sets the foreground color of the command bar.</summary>
+      <returns>The foreground color of the command bar.</returns>
+    </member><member name="P:Windows.UI.WebUI.Core.WebUICommandBar.IsOpen">
+      <summary>Gets or sets whether the command bar is open.</summary>
+      <returns>true if the command bar is open; otherwise, false.</returns>
+    </member><member name="P:Windows.UI.WebUI.Core.WebUICommandBar.Opacity">
+      <summary>Gets or sets the opacity level of the command bar.</summary>
+      <returns>The opacity level of the command bar.</returns>
+    </member><member name="P:Windows.UI.WebUI.Core.WebUICommandBar.PrimaryCommands">
+      <summary>Gets the primary commands on the command bar.</summary>
+      <returns>The primary commands on the command bar.</returns>
+    </member><member name="P:Windows.UI.WebUI.Core.WebUICommandBar.SecondaryCommands">
+      <summary>Gets the secondary commands on the command bar.</summary>
+      <returns>The secondary commands on the command bar.</returns>
+    </member><member name="P:Windows.UI.WebUI.Core.WebUICommandBar.Size">
+      <summary>Gets the size of the command bar.</summary>
+      <returns>The size of the command bar.</returns>
+    </member><member name="P:Windows.UI.WebUI.Core.WebUICommandBar.Visible">
+      <summary>Gets or sets whether the command bar is displayed.</summary>
+      <returns>true if the command bar is visible; otherwise, false.</returns>
+    </member><member name="E:Windows.UI.WebUI.Core.WebUICommandBar.MenuClosed">
+      <summary>Occurs when a menu is closed.</summary>
+    </member><member name="E:Windows.UI.WebUI.Core.WebUICommandBar.MenuOpened">
+      <summary>Occurs when a menu is opened.</summary>
+    </member><member name="E:Windows.UI.WebUI.Core.WebUICommandBar.SizeChanged">
+      <summary>Occurs when the size of the command bar changes.</summary>
+    </member><member name="M:Windows.UI.WebUI.Core.WebUICommandBar.GetForCurrentView">
+      <summary>Gets the command bar currently being presented.</summary>
+      <returns>The command bar.</returns>
+    </member><member name="T:Windows.UI.WebUI.Core.WebUICommandBarBitmapIcon">
+      <summary>Represents a Web UI command bar bitmap icon.</summary>
+    </member><member name="M:Windows.UI.WebUI.Core.WebUICommandBarBitmapIcon.#ctor">
+      <summary>Initializes a new instance of the WebUICommandBarBitmapIcon class.</summary>
+    </member><member name="M:Windows.UI.WebUI.Core.WebUICommandBarBitmapIcon.#ctor(Windows.Foundation.Uri)">
+      <summary>Initializes a new instance of the WebUICommandBarBitmapIcon class.</summary>
+      <param name="uri">The URI of the bitmap icon.</param>
+    </member><member name="P:Windows.UI.WebUI.Core.WebUICommandBarBitmapIcon.Uri">
+      <summary>Gets or sets the URI of the command bar bitmap icon.</summary>
+      <returns>The URI of the bitmap icon.</returns>
+    </member><member name="T:Windows.UI.WebUI.Core.WebUICommandBarClosedDisplayMode">
+      <summary>Represents the display mode of a closed command bar.</summary>
+    </member><member name="F:Windows.UI.WebUI.Core.WebUICommandBarClosedDisplayMode.Compact">
+      <summary>Compact display mode.</summary>
+    </member><member name="F:Windows.UI.WebUI.Core.WebUICommandBarClosedDisplayMode.Default">
+      <summary>Default display mode.</summary>
+    </member><member name="F:Windows.UI.WebUI.Core.WebUICommandBarClosedDisplayMode.Minimal">
+      <summary>Minimal display mode.</summary>
+    </member><member name="T:Windows.UI.WebUI.Core.WebUICommandBarConfirmationButton">
+      <summary>Represents a Web UI command bar confirmation button.</summary>
+    </member><member name="M:Windows.UI.WebUI.Core.WebUICommandBarConfirmationButton.#ctor">
+      <summary>Initializes a new instance of the WebUICommandBarConfirmationButton class.</summary>
+    </member><member name="P:Windows.UI.WebUI.Core.WebUICommandBarConfirmationButton.Text">
+      <summary>Gets or sets the text of the command bar confirmation button.</summary>
+      <returns>The text of the command bar confirmation button.</returns>
+    </member><member name="E:Windows.UI.WebUI.Core.WebUICommandBarConfirmationButton.ItemInvoked">
+      <summary>Occurs when the confirmation button is invoked.</summary>
+    </member><member name="T:Windows.UI.WebUI.Core.WebUICommandBarIconButton">
+      <summary>Represents a command bar button icon.</summary>
+    </member><member name="M:Windows.UI.WebUI.Core.WebUICommandBarIconButton.#ctor">
+      <summary>Initializes a new instance of the WebUICommandBarIconButton class.</summary>
+    </member><member name="P:Windows.UI.WebUI.Core.WebUICommandBarIconButton.Enabled">
+      <summary>Gets or sets if the command bar icon button is enabled.</summary>
+      <returns>true if the command bar icon button is enabled; otherwise, false.</returns>
+    </member><member name="P:Windows.UI.WebUI.Core.WebUICommandBarIconButton.Icon">
+      <summary>Gets or sets the command bar icon button icon.</summary>
+      <returns>The command bar icon button icon.</returns>
+    </member><member name="P:Windows.UI.WebUI.Core.WebUICommandBarIconButton.IsChecked">
+      <summary>Gets or sets if the command bar icon button is checked.</summary>
+      <returns>true if the command bar icon button is checked; otherwise, false.</returns>
+    </member><member name="P:Windows.UI.WebUI.Core.WebUICommandBarIconButton.IsToggleButton">
+      <summary>Gets or sets if the command bar icon button is a toggle button.</summary>
+      <returns>true if the command bar icon button is a toggle button; otherwise, false.</returns>
+    </member><member name="P:Windows.UI.WebUI.Core.WebUICommandBarIconButton.Label">
+      <summary>Gets or sets the label of the command bar icon button.</summary>
+      <returns>The label of the command bar icon.</returns>
+    </member><member name="E:Windows.UI.WebUI.Core.WebUICommandBarIconButton.ItemInvoked">
+      <summary>Occurs when a command bar icon button is invoked.</summary>
+    </member><member name="T:Windows.UI.WebUI.Core.WebUICommandBarItemInvokedEventArgs">
+      <summary>Contains event data about the WebUICommandBarIconButton ItemInvoked event.</summary>
+    </member><member name="P:Windows.UI.WebUI.Core.WebUICommandBarItemInvokedEventArgs.IsPrimaryCommand">
+      <summary>Gets if the invoked command is a primary command.</summary>
+      <returns>true if the command is a primary command; otherwise, false.</returns>
+    </member><member name="T:Windows.UI.WebUI.Core.WebUICommandBarSizeChangedEventArgs">
+      <summary>Contains event data about the WebUICommandBar SizeChanged event.</summary>
+    </member><member name="P:Windows.UI.WebUI.Core.WebUICommandBarSizeChangedEventArgs.Size">
+      <summary>Gets the size of the command bar.</summary>
+      <returns>The size of the command bar.</returns>
+    </member><member name="T:Windows.UI.WebUI.Core.WebUICommandBarSymbolIcon">
+      <summary>Represents a command bar symbol icon.</summary>
+    </member><member name="M:Windows.UI.WebUI.Core.WebUICommandBarSymbolIcon.#ctor">
+      <summary>Initializes a new instance of the WebUICommandBarSymbolIcon class.</summary>
+    </member><member name="M:Windows.UI.WebUI.Core.WebUICommandBarSymbolIcon.#ctor(System.String)">
+      <summary>Initializes a new instance of the WebUICommandBarSymbolIcon class.</summary>
+      <param name="symbol">The symbol icon.</param>
+    </member><member name="P:Windows.UI.WebUI.Core.WebUICommandBarSymbolIcon.Symbol">
+      <summary>Gets or sets the symbol of the command bar symbol icon.</summary>
+      <returns>The symbol.</returns>
+    </member></members>
+</doc>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Preview.Notes.PreviewNotesContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs">
+      <summary>Представляет сведения о событии NotePlacementChanged.</summary>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs.ViewId">
+      <summary>Уникальный идентификатор заметки, для которой вызвано событие NotePlacementChanged.</summary>
+      <returns>Идентификатор заметки.</returns>
+    </member><member name="T:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview">
+      <summary>Этот класс содержит многие из функций приложения предварительного просмотра заметок (см. примечания).</summary>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.IsScreenLocked">
+      <summary>Возвращает значение, указывающее, заблокирован ли экран устройства в данный момент.</summary>
+      <returns>Значение true, если экран заблокирован; в противном случае — значение false.</returns>
+    </member><member name="E:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.NotePlacementChanged">
+      <summary>Указывает, что положение заметки (размеры и расположение) изменилось.</summary>
+    </member><member name="E:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.NoteVisibilityChanged">
+      <summary>Указывает, что состояние видимости заметки изменилось.</summary>
+    </member><member name="E:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.SystemLockStateChanged">
+      <summary>Указывает, что состояние блокировки экрана устройства изменилось.</summary>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.GetNotePlacement(System.Int32)">
+      <summary>Получает расположение данной заметки для сохранения в памяти и восстановления приложением позднее.</summary>
+      <returns>Массив байтов, содержащий данные размещения заметки.</returns>
+      <param name="noteViewId">Уникальный идентификатор заметки, размещение которой требуется извлечь.</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.HideNote(System.Int32)">
+      <summary>Удаляет представление заметки с экрана устройства.</summary>
+      <param name="noteViewId">Уникальный идентификатор скрываемой заметки.</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.SetFocusToNextView">
+      <summary>Переключает фокус на следующее видимое представление заметки (окно). Представления выбираются в циклическом, определяемом системой порядке.</summary>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.SetNotesThumbnailAsync(Windows.Storage.Streams.IBuffer)">
+      <summary>Задает эскиз для данного приложения, как он отображается в Windows Ink Workspace, в окне переключения задач (ALT+TAB) и при наведении указателя на панель задач.</summary>
+      <returns>Этот метод не возвращает значение.</returns>
+      <param name="thumbnail">Байтовый массив, описывающий эскиз и использование (см. примечания).</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNote(System.Int32)">
+      <summary>Делает заметку видимой на экране устройства.</summary>
+      <param name="noteViewId">Уникальный идентификатор отображаемой заметки.</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNoteRelativeTo(System.Int32,System.Int32)">
+      <summary>Делает заметку видимой и размещает ее рядом с указанным представлением "привязки".</summary>
+      <param name="noteViewId">Уникальный идентификатор отображаемой заметки.</param>
+      <param name="anchorNoteViewId">Идентификатор представления привязки.</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNoteWithPlacement(System.Int32,Windows.Storage.Streams.IBuffer)">
+      <summary>Делает заметку видимой и применяет указанные данные размещения (размеры и расположение).</summary>
+      <param name="noteViewId">Уникальный идентификатор отображаемой заметки.</param>
+      <param name="data">Массив байтов, содержащий данные размещения заметки.</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.TrySetNoteSize(System.Int32,Windows.Foundation.Size)">
+      <summary>Изменяет размер указанной заметки на требуемый. Если заданный размер не рекомендуется из-за размера экрана или места на экране, размер заметки не изменяется.</summary>
+      <returns>Значение true, если размер заметки изменен; значение false, если размер не был из-за ограничений экрана.</returns>
+      <param name="noteViewId">Уникальный идентификатор заметки, размер которой меняется.</param>
+      <param name="size">Требуемый размер заметки.</param>
+    </member><member name="T:Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs">
+      <summary>Представляет сведения о событии NoteVisibilityChanged.</summary>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs.IsVisible">
+      <summary>Указывает, видна ли заметка (определенная свойством ViewId) на экране устройства.</summary>
+      <returns>Значение true, если заметка видна; в противном случае — значение false.</returns>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs.ViewId">
+      <summary>Уникальный идентификатор заметки, для которой вызвано событие NoteVisibilityChanged.</summary>
+      <returns>Идентификатор заметки.</returns>
+    </member></members>
+</doc>

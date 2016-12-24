@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Portable.PortableDeviceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Portable.ServiceDevice">
+      <summary>提供方法，以便針對支援 WPD (Windows 可攜式裝置) 以進行裝置列舉的可攜式裝置識別裝置服務。</summary>
+    </member><member name="M:Windows.Devices.Portable.ServiceDevice.GetDeviceSelector(Windows.Devices.Portable.ServiceDeviceType)">
+      <summary>傳回進階查詢語法 (AQS) 字串，用來列舉指定之 ServiceDeviceType 的裝置服務。 這個字串會傳遞至 FindAllAsync 或 CreateWatcher 方法。</summary>
+      <returns>AQS 字串。</returns>
+      <param name="serviceType">要識別的服務類型。</param>
+    </member><member name="M:Windows.Devices.Portable.ServiceDevice.GetDeviceSelectorFromServiceId(System.Guid)">
+      <summary>用於依其 GUID 識別裝置服務的進階查詢語法 (AQS) 字串。 這個字串會傳遞至 FindAllAsync 或 CreateWatcher 方法。</summary>
+      <returns>AQS 字串。</returns>
+      <param name="serviceId">服務識別項。</param>
+    </member><member name="T:Windows.Devices.Portable.ServiceDeviceType">
+      <summary>表示可攜式裝置服務的類型。</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.CalendarService">
+      <summary>提供行事曆資訊的服務。</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.ContactsService">
+      <summary>追蹤連絡人的服務。</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.DeviceStatusService">
+      <summary>裝置狀態服務。</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.NotesService">
+      <summary>筆記服務。</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.RingtonesService">
+      <summary>提供電話鈴聲的服務。</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.SmsService">
+      <summary>簡短訊息服務 (SMS) 訊息服務。</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.TasksService">
+      <summary>追蹤工作的服務。</summary>
+    </member><member name="T:Windows.Devices.Portable.StorageDevice">
+      <summary>提供方法來存取支援 WPD 之可攜式裝置的儲存功能。 卸除式存放裝置包括：USB 大型存放快閃磁碟機和相機、媒體傳輸通訊協定 (MTP) 音樂播放機、手機和相機、圖片傳輸通訊協定 (PTP) 相機</summary>
+      <capability type="removableStorage">讀取和寫入卸除式存放裝置所需。</capability>
+    </member><member name="M:Windows.Devices.Portable.StorageDevice.FromId(System.String)">
+      <summary>透過卸除式存放裝置的 DeviceInformation 識別碼取得 StorageFolder 物件。</summary>
+      <capability type="removableStorage">讀取和寫入卸除式存放裝置所需。</capability>
+      <returns>儲存資料夾物件，代表卸除式存放裝置，並提供對裝置內容的存取權。</returns>
+      <param name="DeviceId">識別卸除式存放裝置的 DeviceInformation 識別碼。 您可以從 Windows.Devices.Enumeration 或 AutoPlay 裝置事件引數的 DeviceInformationId 屬性擷取這個識別碼。 如需詳細資訊，請參閱快速入門：註冊自動播放裝置的應用程式。 為了讓 FromId 成功，應用程式必須同時宣告 removableStorage 功能 (如＜應用程式功能宣告＞中所示) 以及要在裝置上存取之檔案的檔案類型關聯(如＜如何處理檔案啟用＞中所示)。 如需詳細資訊，請參閱卸除式存放裝置範例。</param>
+    </member><member name="M:Windows.Devices.Portable.StorageDevice.GetDeviceSelector">
+      <summary>用來識別卸除式存放裝置的進階查詢語法 (AQS) 字串。 這個字串會傳遞至 FindAllAsync 或 CreateWatcher 方法。</summary>
+      <capability type="removableStorage">讀取和寫入卸除式存放裝置所需。</capability>
+      <returns>用來識別存放裝置的 AQS 字串。</returns>
+    </member></members>
+</doc>

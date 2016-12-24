@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Globalization.GlobalizationJapanesePhoneticAnalyzerContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Globalization.JapanesePhoneme">
+      <summary>Représente un mot japonais unique ( une lecture) qui a été extrait d'une chaîne japonaise par JapanesePhoneticAnalyzer.</summary>
+    </member><member name="P:Windows.Globalization.JapanesePhoneme.DisplayText">
+      <summary>Obtient le texte à afficher pour ce mot japonais.</summary>
+      <returns>Texte de ce mot japonais. Il s'agit d'une sous-chaîne de la chaîne japonaise analysée initialement par JapanesePhoneticAnalyzer.</returns>
+    </member><member name="P:Windows.Globalization.JapanesePhoneme.IsPhraseStart">
+      <summary>Obtient un Boolean qui indique si ce mot japonais est le début d'une expression.</summary>
+      <returns>true si ce mot japonais est le début d'une expression, sinon false.</returns>
+    </member><member name="P:Windows.Globalization.JapanesePhoneme.YomiText">
+      <summary>Obtient la lecture (la prononciation de DisplayText) pour ce mot japonais.</summary>
+      <returns>La lecture (la prononciation de DisplayText, représentée par une séquence de caractères Hiragana).</returns>
+    </member><member name="T:Windows.Globalization.JapanesePhoneticAnalyzer">
+      <summary>Lit une chaîne japonaise qui est une combinaison de caractères Kanji et de caractères Hiragana, et retourne une collection de lectures appropriées de la chaîne avec une séparation entre les mots.</summary>
+    </member><member name="M:Windows.Globalization.JapanesePhoneticAnalyzer.GetWords(System.String)">
+      <summary>Lit une chaîne japonaise qui est une combinaison de caractères Kanji et de caractères Hiragana, et retourne une collection de lectures appropriées de la chaîne avec une séparation entre les mots.</summary>
+      <returns>Collection d'objets JapanesePhoneme qui représentent des lectures appropriées à partir de la chaîne contenant des césures de mots.</returns>
+      <param name="input">Chaîne japonaise qui est une combinaison de caractères Kanji et de caractères Hiragana.</param>
+    </member><member name="M:Windows.Globalization.JapanesePhoneticAnalyzer.GetWords(System.String,System.Boolean)">
+      <summary>Lit une chaîne japonaise qui est une combinaison de caractères Kanji et de caractères Hiragana, et retourne une collection de lectures appropriées de la chaîne avec une séparation entre les mots. Utilise éventuellement la stratégie Mono Ruby en découpant des mots multi-Kanji en plusieurs mots Kanji.</summary>
+      <returns>Collection d'objets JapanesePhoneme qui représentent des lectures appropriées à partir de la chaîne contenant des césures de mots.</returns>
+      <param name="input">Chaîne japonaise qui est une combinaison de caractères Kanji et de caractères Hiragana.</param>
+      <param name="monoRuby">Spécifie l'utilisation de la stratégie de césure Mono Ruby. Si true, la stratégie de césure Mono Ruby est utilisée. Mono Ruby tente plus agressivement de diviser les mots composés multi-Kanji en plusieurs mots kanji. Si la valeur est false, Mono Ruby n'est pas utilisé.</param>
+    </member></members>
+</doc>

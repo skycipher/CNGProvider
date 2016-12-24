@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.Xaml.Hosting.HostingContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost">
+      <summary>代表服務，可以解析來自應用程式的資源。 這個介面是用於設計工具裝載案例，而不是供一般用途使用。</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost.ResolveFileResource(System.String)">
+      <summary>會解析路徑所指定的資源，並傳回字串檔名。</summary>
+      <returns>解析的檔案名稱。</returns>
+      <param name="path">要解析的本機路徑。</param>
+    </member><member name="T:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost2">
+      <summary>延伸 IXamlUIPresenterHost 以加入 GetGenericXamlFilePath。</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost2.GetGenericXamlFilePath">
+      <summary>在設計階段將其他 generic.xaml 檔案載入展示器主機。</summary>
+      <returns>可供選擇之 generic.xaml 檔案的位置的本機路徑。</returns>
+    </member><member name="T:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost3">
+      <summary>延伸 IXamlUIPresenterHost 以加入 ResolveDictionaryResource。</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost3.ResolveDictionaryResource(Windows.UI.Xaml.ResourceDictionary,System.Object,System.Object)">
+      <summary>解析字典和索引鍵所指定的資源。</summary>
+      <returns>資源物件。</returns>
+      <param name="dictionary">包含資源的字典。</param>
+      <param name="dictionaryKey">資源索引鍵。</param>
+      <param name="suggestedValue">建議的值。</param>
+    </member><member name="T:Windows.UI.Xaml.Hosting.XamlUIPresenter">
+      <summary>可在 Microsoft Direct3D 介面上呈現視覺化樹狀目錄。 這個型別是用於設計工具裝載案例，而不是供一般用途使用。</summary>
+    </member><member name="P:Windows.UI.Xaml.Hosting.XamlUIPresenter.CompleteTimelinesAutomatically">
+      <summary>取得或設定值，這個值會決定主機是否想要讓時間軸一律執行到結束。</summary>
+      <returns>若為 true，則一律執行時間軸直到結束。 否則為 false。</returns>
+    </member><member name="P:Windows.UI.Xaml.Hosting.XamlUIPresenter.RootElement">
+      <summary>取得或設定繪製到介面的根視覺項目。</summary>
+      <returns>要繪製的項目。</returns>
+    </member><member name="P:Windows.UI.Xaml.Hosting.XamlUIPresenter.ThemeKey">
+      <summary>取得或設定字串索引鍵，從 ThemeResourcesXaml 中識別要使用的主題集。</summary>
+      <returns>字串索引鍵。</returns>
+    </member><member name="P:Windows.UI.Xaml.Hosting.XamlUIPresenter.ThemeResourcesXaml">
+      <summary>取得或設定指定資源字典的 XAML。 資源字典包含主機應該解析而且應該套用至內容的主題。</summary>
+      <returns>以字串形式指定之 XAML 資源字典。</returns>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.GetFlyoutPlacement(Windows.Foundation.Rect,Windows.Foundation.Size,Windows.Foundation.Size,Windows.Foundation.Rect,Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode,System.Boolean,Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode@)">
+      <summary>叫用 FlyoutBase 放置邏輯，並使用建議的控制項大小來顯示放置目標及其彈出式視窗。 傳回執行放置邏輯所產生的界限。</summary>
+      <returns>由 FlyoutBase 放置邏輯計算的界限。</returns>
+      <param name="placementTargetBounds">放置目標的界限，會傳遞給 FlyoutBase 展示器邏輯。</param>
+      <param name="controlSize">顯示彈出式視窗所需的控制項大小。</param>
+      <param name="minControlSize">應顯示彈出式視窗之控制項的最小大小。</param>
+      <param name="containerRect">應保留放置目標和彈出式視窗的區域界限。</param>
+      <param name="targetPreferredPlacement">適用於 FlyoutBase 放置邏輯的放置模式。</param>
+      <param name="allowFallbacks">如果後援可用於位置模式，則為 true。 若無法使用後援，則為 false。</param>
+      <param name="chosenPlacement">叫用之 FlyoutBase 放置邏輯所使用的實際放置模式。</param>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.GetFlyoutPlacementTargetInfo(Windows.UI.Xaml.FrameworkElement,Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode,Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode@,System.Boolean@)">
+      <summary>傳回計算的放置目標界限，其目的是為了同時顯示主機中的彈出式視窗。 其他 out 參數提供更多關於如何計算界限的資訊。</summary>
+      <returns>計算的放置目標界限。</returns>
+      <param name="placementTarget">相對於放置目標項目來放置 Flyout 的方式。</param>
+      <param name="preferredPlacement">列舉的值，宣告 Flyout 相對於目標的主機慣用位置。</param>
+      <param name="targetPreferredPlacement">列舉的值，宣告 Flyout 的慣用位置。</param>
+      <param name="allowFallbacks">如果後援位置允許 Flyout 放置邏輯，則為 true。 若只考慮 targetPreferredPlacement 值，則為 false。</param>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.NotifyWindowSizeChanged">
+      <summary>在 Window.Current 上叫用 SizeChanged 事件。 主機用來從主機設定傳播大小變更至使用者程式碼，以便區別設計模式互動與執行階段互動。</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.Present">
+      <summary>以同步呼叫主機的方式來呈現介面。</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.Render">
+      <summary>呈現介面。 適用於透過計時器的非同步呼叫。</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.SetHost(Windows.UI.Xaml.Hosting.IXamlUIPresenterHost)">
+      <summary>指定 IXamlUIPresenterHost 服務實作，以用於應用程式資源解析。</summary>
+      <param name="host">服務實作。</param>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.SetSize(System.Int32,System.Int32)">
+      <summary>指定表面的寬度和高度。</summary>
+      <param name="width">寬度，以像素為單位。</param>
+      <param name="height">高度，以像素為單位。</param>
+    </member></members>
+</doc>

@@ -1,0 +1,1162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Foundation.FoundationContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Foundation.AsyncActionCompletedHandler">
+      <summary>表示处理异步操作的已完成事件的方法。</summary>
+      <param name="asyncInfo">异步操作。</param>
+      <param name="asyncStatus">枚举值之一。</param>
+    </member><member name="T:Windows.Foundation.AsyncActionProgressHandler`1">
+      <summary>表示处理提供进度更新的异步操作的进度更新事件的方法。</summary>
+      <typeparam name="TProgress">进度信息。</typeparam>
+      <param name="asyncInfo">异步操作。</param>
+      <param name="progressInfo">进度信息。</param>
+    </member><member name="T:Windows.Foundation.AsyncActionWithProgressCompletedHandler`1">
+      <summary>表示处理提供进度更新的异步操作的已完成事件的方法。</summary>
+      <typeparam name="TProgress">进度信息。</typeparam>
+      <param name="asyncInfo">异步操作。</param>
+      <param name="asyncStatus">枚举值之一。</param>
+    </member><member name="T:Windows.Foundation.AsyncOperationCompletedHandler`1">
+      <summary>表示处理异步操作的已完成事件的方法。</summary>
+      <typeparam name="TResult">结果。</typeparam>
+      <param name="asyncInfo">异步操作。</param>
+      <param name="asyncStatus">枚举值之一。</param>
+    </member><member name="T:Windows.Foundation.AsyncOperationProgressHandler`2">
+      <summary>表示处理提供进度更新的异步操作的进度更新事件的方法。</summary>
+      <typeparam name="TResult">结果。</typeparam>
+      <typeparam name="TProgress">进度信息。</typeparam>
+      <param name="asyncInfo">异步操作。</param>
+      <param name="progressInfo">进度信息。</param>
+    </member><member name="T:Windows.Foundation.AsyncOperationWithProgressCompletedHandler`2">
+      <summary>表示处理提供进度更新的异步操作的已完成事件的方法。</summary>
+      <typeparam name="TResult">结果。</typeparam>
+      <typeparam name="TProgress">进度信息。</typeparam>
+      <param name="asyncInfo">异步操作。</param>
+      <param name="asyncStatus">枚举值之一。</param>
+    </member><member name="T:Windows.Foundation.AsyncStatus">
+      <summary>指定异步操作的状态。</summary>
+    </member><member name="F:Windows.Foundation.AsyncStatus.Canceled">
+      <summary>操作已取消。</summary>
+    </member><member name="F:Windows.Foundation.AsyncStatus.Completed">
+      <summary>操作已完成。</summary>
+    </member><member name="F:Windows.Foundation.AsyncStatus.Error">
+      <summary>操作遇到错误。</summary>
+    </member><member name="F:Windows.Foundation.AsyncStatus.Started">
+      <summary>操作已开始。</summary>
+    </member><member name="T:Windows.Foundation.DateTime">
+      <summary>表示时间上的一刻，通常以日期和当天的时间表示。</summary>
+    </member><member name="F:Windows.Foundation.DateTime.UniversalTime">
+      <summary>将时间点表示为 1601 年 1 月 1 日（基于公历）午夜之前或之后的 100 纳秒间隔的数目的 64 位带符号整数。</summary>
+    </member><member name="T:Windows.Foundation.Deferral">
+      <summary>存储在延迟完成后要调用的 DeferralCompletedHandler 并操作延迟状态。</summary>
+    </member><member name="M:Windows.Foundation.Deferral.#ctor(Windows.Foundation.DeferralCompletedHandler)">
+      <summary>初始化新的 Deferral 对象并指定要在延迟完成后调用的 DeferralCompletedHandler。</summary>
+      <param name="handler">要在延迟完成后调用的 DeferralCompletedHandler。</param>
+    </member><member name="M:Windows.Foundation.Deferral.Close">
+      <summary>如果尚未调用 DeferralCompletedHandler，则将调用它并删除对委托的引用。</summary>
+    </member><member name="M:Windows.Foundation.Deferral.Complete">
+      <summary>如果尚未调用 DeferralCompletedHandler，则将调用它并删除对委托的引用。</summary>
+    </member><member name="T:Windows.Foundation.DeferralCompletedHandler">
+      <summary>表示处理延迟操作的已完成事件的方法。</summary>
+    </member><member name="T:Windows.Foundation.EventHandler`1">
+      <summary>表示处理常规事件的方法。</summary>
+      <typeparam name="T">由事件生成的事件数据的类型。</typeparam>
+      <param name="sender">事件源。</param>
+      <param name="args">事件数据。</param>
+    </member><member name="T:Windows.Foundation.EventRegistrationToken">
+      <summary>表示对收到更改通知的委托的引用。</summary>
+    </member><member name="F:Windows.Foundation.EventRegistrationToken.Value">
+      <summary>对委托的引用。</summary>
+    </member><member name="T:Windows.Foundation.HResult">
+      <summary>表示 Windows 运行时错误。</summary>
+    </member><member name="F:Windows.Foundation.HResult.Value">
+      <summary>一个描述错误的整数。</summary>
+    </member><member name="T:Windows.Foundation.IAsyncAction">
+      <summary>表示异步操作。 这是许多 Windows 运行时异步方法的返回类型，这些方法没有结果对象且不报告进度。</summary>
+    </member><member name="P:Windows.Foundation.IAsyncAction.Completed">
+      <summary>获取或设置处理操作完成通知的方法。</summary>
+      <returns>处理通知的方法。</returns>
+    </member><member name="M:Windows.Foundation.IAsyncAction.GetResults">
+      <summary>返回操作的结果。</summary>
+    </member><member name="T:Windows.Foundation.IAsyncActionWithProgress`1">
+      <summary>表示可向调用方报告进度更新的异步操作。 这是所有 Windows 运行时异步方法的返回类型，这些方法没有结果对象，但报告回调侦听器的进度。</summary>
+      <typeparam name="TProgress">进度数据的类型。</typeparam>
+    </member><member name="P:Windows.Foundation.IAsyncActionWithProgress`1.Completed">
+      <summary>获取或设置处理操作完成通知的方法。</summary>
+      <returns>处理通知的方法。</returns>
+    </member><member name="P:Windows.Foundation.IAsyncActionWithProgress`1.Progress">
+      <summary>获取或设置接收进度通知的回调方法。</summary>
+      <returns>对处理进度通知的回调方法的引用。 实现 Implement the AsyncActionProgressHandler(TProgress) 委托以定义您的回调。 TProgress 定义进度单位类型（因方法实现而异）。</returns>
+    </member><member name="M:Windows.Foundation.IAsyncActionWithProgress`1.GetResults">
+      <summary>返回操作的结果。</summary>
+    </member><member name="T:Windows.Foundation.IAsyncInfo">
+      <summary>支持异步操作。
+IAsyncInfo 是 IAsyncAction、IAsyncActionWithProgress&lt;TProgress&gt;、IAsyncOperation&lt;TResult&gt; 和 IAsyncOperationWithProgress&lt;TResult,TProgress&gt; 的基接口，它们均支持异步方法的返回类型和进度的组合。</summary>
+    </member><member name="P:Windows.Foundation.IAsyncInfo.ErrorCode">
+      <summary>获取描述异步操作错误情况的字符串。</summary>
+      <returns>错误字符串。</returns>
+    </member><member name="P:Windows.Foundation.IAsyncInfo.Id">
+      <summary>获取异步操作的句柄。</summary>
+      <returns>异步操作的句柄。</returns>
+    </member><member name="P:Windows.Foundation.IAsyncInfo.Status">
+      <summary>获取一个值，该值指示异步操作的状态。</summary>
+      <returns>操作的状态（以枚举值形式表示）。 值 Completed 指示方法已返回。 值 Started 表示其他 3 个最终结果（Completed、Error、Canceled）中的任一结果可由方法调用确定之前的转换状态。</returns>
+    </member><member name="M:Windows.Foundation.IAsyncInfo.Cancel">
+      <summary>取消异步操作。</summary>
+    </member><member name="M:Windows.Foundation.IAsyncInfo.Close">
+      <summary>结束异步操作。</summary>
+    </member><member name="T:Windows.Foundation.IAsyncOperation`1">
+      <summary>表示一个完成后返回结果的异步操作。 这是许多 Windows 运行时异步方法的返回类型，这些方法具有结果但不报告进度。</summary>
+      <typeparam name="TResult">结果的类型。</typeparam>
+    </member><member name="P:Windows.Foundation.IAsyncOperation`1.Completed">
+      <summary>获取或设置处理操作完成通知的方法。</summary>
+      <returns>处理通知的方法。</returns>
+    </member><member name="M:Windows.Foundation.IAsyncOperation`1.GetResults">
+      <summary>返回操作的结果。</summary>
+      <returns>操作的结果。</returns>
+    </member><member name="T:Windows.Foundation.IAsyncOperationWithProgress`2">
+      <summary>表示可向调用方报告进度更新的异步操作。 这是许多 Windows 运行时异步方法的返回类型，这些方法具有结果并且报告进度。</summary>
+      <typeparam name="TResult">结果的类型。</typeparam>
+      <typeparam name="TProgress">进度数据的类型。</typeparam>
+    </member><member name="P:Windows.Foundation.IAsyncOperationWithProgress`2.Completed">
+      <summary>获取或设置处理操作完成通知的方法。</summary>
+      <returns>处理通知的方法。</returns>
+    </member><member name="P:Windows.Foundation.IAsyncOperationWithProgress`2.Progress">
+      <summary>获取或设置处理进度通知的方法。</summary>
+      <returns>对处理进度通知的回调方法的引用。 实现 AsyncOperationProgressHandler&lt;TResult, TProgress&gt; 委托以定义您的回调。 TProgress 定义进度单位类型（因方法实现而异）。</returns>
+    </member><member name="M:Windows.Foundation.IAsyncOperationWithProgress`2.GetResults">
+      <summary>返回操作的结果。</summary>
+      <returns>操作的结果。</returns>
+    </member><member name="T:Windows.Foundation.IClosable">
+      <summary>定义一种释放分配的资源的方法。</summary>
+    </member><member name="M:Windows.Foundation.IClosable.Close">
+      <summary>释放由 Windows 运行时对象公开的系统资源。</summary>
+    </member><member name="T:Windows.Foundation.IPropertyValue">
+      <summary>表示属性存储中的值。 您无法实现此接口，请参见备注。</summary>
+    </member><member name="P:Windows.Foundation.IPropertyValue.IsNumericScalar">
+      <summary>获取指示属性是否为标量值的值。</summary>
+      <returns>如果值为标量，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.Foundation.IPropertyValue.Type">
+      <summary>返回存储在属性值中的类型。</summary>
+      <returns>存储在属性值中的类型。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetBoolean">
+      <summary>返回存储为属性值的布尔值。</summary>
+      <returns>值。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetBooleanArray(System.Boolean[]@)">
+      <summary>返回存储为属性值的布尔值数组。</summary>
+      <param name="value">值的数组。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetChar16">
+      <summary>返回存储为属性值的 Unicode 字符。</summary>
+      <returns>值。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetChar16Array(System.Char[]@)">
+      <summary>返回存储为属性值的 Unicode 字符的数组。</summary>
+      <param name="value">值的数组。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetDateTime">
+      <summary>返回存储为属性值的日期和时间值。</summary>
+      <returns>值。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetDateTimeArray(Windows.Foundation.DateTime[]@)">
+      <summary>返回存储为属性值的日期和时间值的数组。</summary>
+      <param name="value">值的数组。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetDouble">
+      <summary>返回存储为属性值的浮点值。</summary>
+      <returns>值。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetDoubleArray(System.Double[]@)">
+      <summary>返回存储为属性值的浮点值数组。</summary>
+      <param name="value">值的数组。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetGuid">
+      <summary>返回存储位属性值的 GUID 值。</summary>
+      <returns>值。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetGuidArray(System.Guid[]@)">
+      <summary>返回存储为属性值的 GUID 值的数组。</summary>
+      <param name="value">值的数组。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInspectableArray(System.Object[]@)">
+      <summary>返回存储为属性值的可检视对象的数组。</summary>
+      <param name="value">对象的数组。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt16">
+      <summary>返回存储为属性值的整数值。</summary>
+      <returns>值。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt16Array(System.Int16[]@)">
+      <summary>返回存储为属性值的整数值的数组。</summary>
+      <param name="value">值的数组。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt32">
+      <summary>返回存储为属性值的整数值。</summary>
+      <returns>值。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt32Array(System.Int32[]@)">
+      <summary>返回存储为属性值的整数值的数组。</summary>
+      <param name="value">值的数组。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt64">
+      <summary>返回存储为属性值的整数值。</summary>
+      <returns>值。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt64Array(System.Int64[]@)">
+      <summary>返回存储为属性值的整数值的数组。</summary>
+      <param name="value">值的数组。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetPoint">
+      <summary>返回存储为属性值的点结构。</summary>
+      <returns>结构。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetPointArray(Windows.Foundation.Point[]@)">
+      <summary>返回存储为属性值的点结构的数组。</summary>
+      <param name="value">结构的数组。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetRect">
+      <summary>返回存储为属性值的矩形结构。</summary>
+      <returns>结构。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetRectArray(Windows.Foundation.Rect[]@)">
+      <summary>返回存储为属性值的矩形结构的数组。</summary>
+      <param name="value">结构的数组。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetSingle">
+      <summary>返回存储为属性值的浮点值。</summary>
+      <returns>值。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetSingleArray(System.Single[]@)">
+      <summary>返回存储为属性值的浮点值数组。</summary>
+      <param name="value">值的数组。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetSize">
+      <summary>返回存储为属性值的大小结构。</summary>
+      <returns>结构。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetSizeArray(Windows.Foundation.Size[]@)">
+      <summary>返回存储为属性值的大小结构的数组。</summary>
+      <param name="value">结构的数组。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetString">
+      <summary>返回存储为属性值的整数值。</summary>
+      <returns>值。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetStringArray(System.String[]@)">
+      <summary>返回存储为属性值的字符串值的数组。</summary>
+      <param name="value">值的数组。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetTimeSpan">
+      <summary>返回存储为属性值的时间间隔值。</summary>
+      <returns>值。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetTimeSpanArray(Windows.Foundation.TimeSpan[]@)">
+      <summary>返回存储为属性值的时间间隔值的数组。</summary>
+      <param name="value">值的数组。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt16">
+      <summary>返回存储为属性值的无符号整数值。</summary>
+      <returns>值。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt16Array(System.UInt16[]@)">
+      <summary>返回存储为属性值的无符号整数值的数组。</summary>
+      <param name="value">值的数组。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt32">
+      <summary>返回存储为属性值的无符号整数值。</summary>
+      <returns>值。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt32Array(System.UInt32[]@)">
+      <summary>返回存储为属性值的无符号整数值的数组。</summary>
+      <param name="value">值的数组。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt64">
+      <summary>返回存储为属性值的无符号整数值。</summary>
+      <returns>值。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt64Array(System.UInt64[]@)">
+      <summary>返回存储为属性值的无符号整数值的数组。</summary>
+      <param name="value">值的数组。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt8">
+      <summary>返回存储为属性值的字节值。</summary>
+      <returns>值。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt8Array(System.Byte[]@)">
+      <summary>返回存储为属性值的字节值数组。</summary>
+      <param name="value">值的数组。</param>
+    </member><member name="T:Windows.Foundation.IReference`1">
+      <summary>使任意枚举、结构和委托类型可以用作属性值。</summary>
+      <typeparam name="T">类型。</typeparam>
+    </member><member name="P:Windows.Foundation.IReference`1.Value">
+      <summary>获取表示为 IPropertyValue 数组的类型。</summary>
+      <returns>类型。</returns>
+    </member><member name="T:Windows.Foundation.IReferenceArray`1">
+      <summary>使任意枚举、结构和委托类型可以用作属性值的数组。 您无法实现此接口，请参见备注。</summary>
+      <typeparam name="T">类型。</typeparam>
+    </member><member name="P:Windows.Foundation.IReferenceArray`1.Value">
+      <summary>获取表示为 IPropertyValue 数组的类型。</summary>
+      <returns>类型。</returns>
+    </member><member name="T:Windows.Foundation.IStringable">
+      <summary>提供一种方式以便将当前对象表示为字符串。</summary>
+    </member><member name="M:Windows.Foundation.IStringable.ToString">
+      <summary>获取表示当前对象的字符串。</summary>
+      <returns>表示当前对象的字符串。</returns>
+    </member><member name="T:Windows.Foundation.Point">
+      <summary>表示在二维平面中定义点的 x 和 y 坐标值。</summary>
+    </member><member name="F:Windows.Foundation.Point.X">
+      <summary>点的水平位置。</summary>
+    </member><member name="F:Windows.Foundation.Point.Y">
+      <summary>点的垂直位置。</summary>
+    </member><member name="T:Windows.Foundation.PropertyType">
+      <summary>指定属性值类型。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Boolean">
+      <summary>只能为 true 或 false 的值。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.BooleanArray">
+      <summary>Boolean 值的数组。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Char16">
+      <summary>未签名的 16 位（2 字节）码位。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Char16Array">
+      <summary>Char 值的数组。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.DateTime">
+      <summary>时刻，通常以当天的日期和时间表示。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.DateTimeArray">
+      <summary>DateTime 值的数组。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Double">
+      <summary>64 位（8 字节）有符号浮点数。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.DoubleArray">
+      <summary>Double 值的数组。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Empty">
+      <summary>未指定类型。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Guid">
+      <summary>全局唯一标识符。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.GuidArray">
+      <summary>Guid 值的数组。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Inspectable">
+      <summary>用于实现 IInspectable 接口的对象。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.InspectableArray">
+      <summary>Inspectable 值的数组。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int16">
+      <summary>16 位（2 字节）有符号整数。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int16Array">
+      <summary>Int16 值的数组。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int32">
+      <summary>32 位（4 字节）有符号整数。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int32Array">
+      <summary>Int32 值的数组。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int64">
+      <summary>64 位（8 字节）有符号整数。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int64Array">
+      <summary>Int64 值的数组。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.OtherType">
+      <summary>此枚举中未指定的类型。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.OtherTypeArray">
+      <summary>未指定类型的数组。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Point">
+      <summary>在二维平面中定义点的浮点 x 和 y 坐标的有序对。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.PointArray">
+      <summary>Point 结构的数组。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Rect">
+      <summary>表示矩形位置和大小的一组浮点数（四个）。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.RectArray">
+      <summary>Rect 结构的数组。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Single">
+      <summary>32 位（4 字节）有符号浮点数。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.SingleArray">
+      <summary>Single 值的数组。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Size">
+      <summary>指定高度和宽度的浮点数的有序对。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.SizeArray">
+      <summary>Size 结构的数组。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.String">
+      <summary>Windows 运行时 HSTRING。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.StringArray">
+      <summary>String 值的数组。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.TimeSpan">
+      <summary>时间间隔。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.TimeSpanArray">
+      <summary>TimeSpan 值的数组。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt16">
+      <summary>16 位（2 字节）无符号整数。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt16Array">
+      <summary>UInt16 值的数组。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt32">
+      <summary>32 位（4 字节）无符号整数。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt32Array">
+      <summary>UInt32 值的数组。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt64">
+      <summary>64 位（8 字节）无符号整数。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt64Array">
+      <summary>UInt64 值的数组。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt8">
+      <summary>字节。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt8Array">
+      <summary>Byte 值的数组。</summary>
+    </member><member name="T:Windows.Foundation.PropertyValue">
+      <summary>表示属性存储（如 PropertySet 实例）中的值。</summary>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateBoolean(System.Boolean)">
+      <summary>通过布尔值创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">要存储在数组中的值。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateBooleanArray(System.Boolean[])">
+      <summary>通过布尔值数组创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">属性值中要存储的数组。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateChar16(System.Char)">
+      <summary>通过 Unicode 字符创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">要存储在数组中的值。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateChar16Array(System.Char[])">
+      <summary>通过 Unicode 字符数组创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">属性值中要存储的数组。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateDateTime(Windows.Foundation.DateTime)">
+      <summary>通过日期和时间值创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">要存储在数组中的值。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateDateTimeArray(Windows.Foundation.DateTime[])">
+      <summary>通过日期和时间值数组创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">属性值中要存储的数组。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateDouble(System.Double)">
+      <summary>通过浮点值创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">要存储在数组中的值。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateDoubleArray(System.Double[])">
+      <summary>通过浮点值数组创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">属性值中要存储的数组。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateEmpty">
+      <summary>创建空属性值。</summary>
+      <returns>属性值。</returns>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateGuid(System.Guid)">
+      <summary>通过 GUID 创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">要存储在数组中的值。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateGuidArray(System.Guid[])">
+      <summary>通过 GUID 数组创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">属性值中要存储的数组。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInspectable(System.Object)">
+      <summary>通过可检视对象创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">要存储在属性值中的对象。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInspectableArray(System.Object[])">
+      <summary>通过可检视对象数组创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">属性值中要存储的数组。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt16(System.Int16)">
+      <summary>通过整数创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">要存储在数组中的值。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt16Array(System.Int16[])">
+      <summary>通过整数数组创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">属性值中要存储的数组。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt32(System.Int32)">
+      <summary>通过整数创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">要存储在数组中的值。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt32Array(System.Int32[])">
+      <summary>通过整数数组创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">属性值中要存储的数组。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt64(System.Int64)">
+      <summary>通过整数创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">要存储在数组中的值。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt64Array(System.Int64[])">
+      <summary>通过整数数组创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">属性值中要存储的数组。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreatePoint(Windows.Foundation.Point)">
+      <summary>通过点结构创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">要存储在属性值中的结构。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreatePointArray(Windows.Foundation.Point[])">
+      <summary>通过点结构数组创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">属性值中要存储的数组。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateRect(Windows.Foundation.Rect)">
+      <summary>通过矩形结构创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">要存储在属性值中的结构。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateRectArray(Windows.Foundation.Rect[])">
+      <summary>通过矩形结构数组创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">属性值中要存储的数组。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateSingle(System.Single)">
+      <summary>通过浮点值创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">要存储在数组中的值。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateSingleArray(System.Single[])">
+      <summary>通过浮点值数组创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">属性值中要存储的数组。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateSize(Windows.Foundation.Size)">
+      <summary>通过大小结构创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">要存储在属性值中的结构。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateSizeArray(Windows.Foundation.Size[])">
+      <summary>通过大小结构数组创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">属性值中要存储的数组。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateString(System.String)">
+      <summary>通过字符串创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">要存储在属性值中的字符串。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateStringArray(System.String[])">
+      <summary>通过字符串数组创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">属性值中要存储的数组。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateTimeSpan(Windows.Foundation.TimeSpan)">
+      <summary>通过时间间隔创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">属性值中存储的时间间隔。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateTimeSpanArray(Windows.Foundation.TimeSpan[])">
+      <summary>通过时间间隔数组创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">属性值中要存储的数组。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt16(System.UInt16)">
+      <summary>通过无符号整数创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">要存储在数组中的值。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt16Array(System.UInt16[])">
+      <summary>通过无符号整数数组创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">属性值中要存储的数组。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt32(System.UInt32)">
+      <summary>通过无符号整数创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">要存储在数组中的值。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt32Array(System.UInt32[])">
+      <summary>通过无符号整数数组创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">属性值中要存储的数组。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt64(System.UInt64)">
+      <summary>通过无符号整数创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">要存储在数组中的值。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt64Array(System.UInt64[])">
+      <summary>通过无符号整数数组创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">属性值中要存储的数组。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt8(System.Byte)">
+      <summary>通过字节创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">要存储在数组中的值。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt8Array(System.Byte[])">
+      <summary>通过字节数组创建属性值。</summary>
+      <returns>属性值。</returns>
+      <param name="value">属性值中要存储的数组。</param>
+    </member><member name="T:Windows.Foundation.Rect">
+      <summary>包含表示矩形位置和大小的数值。</summary>
+    </member><member name="F:Windows.Foundation.Rect.Height">
+      <summary>矩形的高度（以像素为单位）。</summary>
+    </member><member name="F:Windows.Foundation.Rect.Width">
+      <summary>矩形的宽度（以像素为单位）。</summary>
+    </member><member name="F:Windows.Foundation.Rect.X">
+      <summary>矩形左上角的 x 坐标。</summary>
+    </member><member name="F:Windows.Foundation.Rect.Y">
+      <summary>矩形左上角的 y 坐标。</summary>
+    </member><member name="T:Windows.Foundation.Size">
+      <summary>表示指定高度和宽度的数值。</summary>
+    </member><member name="F:Windows.Foundation.Size.Height">
+      <summary>高度。</summary>
+    </member><member name="F:Windows.Foundation.Size.Width">
+      <summary>宽度。</summary>
+    </member><member name="T:Windows.Foundation.TimeSpan">
+      <summary>以有符号 64 位整数值表示时间间隔。</summary>
+    </member><member name="F:Windows.Foundation.TimeSpan.Duration">
+      <summary>以 100 毫微秒为单位表示的时间段。</summary>
+    </member><member name="T:Windows.Foundation.TypedEventHandler`2">
+      <summary>表示处理常规事件的方法。</summary>
+      <typeparam name="TSender">对象类型。</typeparam>
+      <typeparam name="TResult">由事件生成的事件数据的类型。</typeparam>
+      <param name="sender">事件源。</param>
+      <param name="args">事件数据。 如果没有事件数据，则此参数将为 null。</param>
+    </member><member name="T:Windows.Foundation.Collections.CollectionChange">
+      <summary>描述导致集合更改的操作。</summary>
+    </member><member name="F:Windows.Foundation.Collections.CollectionChange.ItemChanged">
+      <summary>集合中的项发生变化。</summary>
+    </member><member name="F:Windows.Foundation.Collections.CollectionChange.ItemInserted">
+      <summary>向集合添加项。</summary>
+    </member><member name="F:Windows.Foundation.Collections.CollectionChange.ItemRemoved">
+      <summary>删除集合中的项。</summary>
+    </member><member name="F:Windows.Foundation.Collections.CollectionChange.Reset">
+      <summary>集合已更改。</summary>
+    </member><member name="T:Windows.Foundation.Collections.IIterable`1">
+      <summary>公开支持在指定类型的集合上进行简单迭代的迭代器。</summary>
+      <typeparam name="T">要循环访问的对象的类型。</typeparam>
+    </member><member name="M:Windows.Foundation.Collections.IIterable`1.First">
+      <summary>返回集合中项的迭代器。</summary>
+      <returns>迭代器。</returns>
+    </member><member name="T:Windows.Foundation.Collections.IIterator`1">
+      <summary>支持在集合上进行简单迭代。</summary>
+      <typeparam name="T">要循环访问的对象的类型。</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IIterator`1.Current">
+      <summary>获取集合中的当前项。</summary>
+      <returns>集合中的当前项。</returns>
+    </member><member name="P:Windows.Foundation.Collections.IIterator`1.HasCurrent">
+      <summary>获取一个值，该值指示迭代器是引用当前项，还是位于集合的末尾。</summary>
+      <returns>如果迭代器引用集合中的有效项，则为 true；否则为 false。</returns>
+    </member><member name="M:Windows.Foundation.Collections.IIterator`1.GetMany(`0[])">
+      <summary>检索集合中的所有项。</summary>
+      <returns>集合中项的数目。</returns>
+      <param name="items">集合中的项。</param>
+    </member><member name="M:Windows.Foundation.Collections.IIterator`1.MoveNext">
+      <summary>使迭代器前进到集合中的下一项。</summary>
+      <returns>如果迭代器引用集合中的有效项，则为 true；如果迭代器通过集合的末尾，则为 false。</returns>
+    </member><member name="T:Windows.Foundation.Collections.IKeyValuePair`2">
+      <summary>表示键/值对。 这通常在您需要将两个类型参数封装到一个类型参数中以满足其他泛型接口的约束时用作约束类型。</summary>
+      <typeparam name="K">每个键值对中键的类型。</typeparam>
+      <typeparam name="V">每个键值对中值的类型。</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IKeyValuePair`2.Key">
+      <summary>获取键/值对的键。</summary>
+      <returns>键。</returns>
+    </member><member name="P:Windows.Foundation.Collections.IKeyValuePair`2.Value">
+      <summary>获取键/值对的值。</summary>
+      <returns>值。</returns>
+    </member><member name="T:Windows.Foundation.Collections.IMap`2">
+      <summary>表示关联集合，也称为映射或字典。</summary>
+      <typeparam name="K">映射中的键的类型。</typeparam>
+      <typeparam name="V">映射中值的类型。</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IMap`2.Size">
+      <summary>获取映射中的项数。</summary>
+      <returns>映射中项的数目。</returns>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.Clear">
+      <summary>移除映射中的所有项。</summary>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.GetView">
+      <summary>返回不可变的映射视图。</summary>
+      <returns>映射的视图。</returns>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.HasKey(`0)">
+      <summary>确定映射是否包含指定的键。</summary>
+      <returns>如果找到了键，则为 true；否则为 false。</returns>
+      <param name="key">与要查找的项关联的键。</param>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.Insert(`0,`1)">
+      <summary>插入或替换映射中的项目。</summary>
+      <returns>如果具有指定密钥的项是被替换的现有项，则为 true，否则为 false。</returns>
+      <param name="key">与要插入的项关联的键。</param>
+      <param name="value">要插入的项。</param>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.Lookup(`0)">
+      <summary>返回映射中指定键处的项。</summary>
+      <returns>与指定键相关联的项。</returns>
+      <param name="key">与要查找的项关联的键。</param>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.Remove(`0)">
+      <summary>移除映射中的某项。</summary>
+      <param name="key">与要删除的项关联的键。</param>
+    </member><member name="T:Windows.Foundation.Collections.IMapChangedEventArgs`1">
+      <summary>为映射集合的更改事件提供数据。</summary>
+      <typeparam name="K">映射中的键的类型。</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IMapChangedEventArgs`1.CollectionChange">
+      <summary>获取映射中发生的更改的类型。</summary>
+      <returns>映射中更改的类型。</returns>
+    </member><member name="P:Windows.Foundation.Collections.IMapChangedEventArgs`1.Key">
+      <summary>获取已更改的项的键。</summary>
+      <returns>已更改的项的键。</returns>
+    </member><member name="T:Windows.Foundation.Collections.IMapView`2">
+      <summary>表示映射中的不可变视图。</summary>
+      <typeparam name="K">映射中的键的类型。</typeparam>
+      <typeparam name="V">映射中值的类型。</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IMapView`2.Size">
+      <summary>获取映射中元素的数目。</summary>
+      <returns>映射中元素的数目。</returns>
+    </member><member name="M:Windows.Foundation.Collections.IMapView`2.HasKey(`0)">
+      <summary>确定映射视图是否包含指定的键。</summary>
+      <returns>如果找到了键，则为 true；否则为 false。</returns>
+      <param name="key">要在映射视图中查找的键。</param>
+    </member><member name="M:Windows.Foundation.Collections.IMapView`2.Lookup(`0)">
+      <summary>返回映射视图中指定键处的项。</summary>
+      <returns>与指定键相关联的项。</returns>
+      <param name="key">要在映射视图中查找的键。</param>
+    </member><member name="T:Windows.Foundation.Collections.IObservableMap`2">
+      <summary>向侦听器通知映射的动态更改，例如，添加或移除项目时。</summary>
+      <typeparam name="K">映射中的键的类型。</typeparam>
+      <typeparam name="V">映射中值的类型。</typeparam>
+    </member><member name="E:Windows.Foundation.Collections.IObservableMap`2.MapChanged">
+      <summary>在映射更改时发生。</summary>
+    </member><member name="T:Windows.Foundation.Collections.IObservableVector`1">
+      <summary>向侦听器通知矢量的更改。</summary>
+      <typeparam name="T">矢量中值的类型。</typeparam>
+    </member><member name="E:Windows.Foundation.Collections.IObservableVector`1.VectorChanged">
+      <summary>当矢量更改时发生。</summary>
+    </member><member name="T:Windows.Foundation.Collections.IPropertySet">
+      <summary>表示关联了多个其他集合接口的键值对的集合。</summary>
+    </member><member name="T:Windows.Foundation.Collections.IVector`1">
+      <summary>表示元素的随机访问集合。</summary>
+      <typeparam name="T">矢量中值的类型。</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IVector`1.Size">
+      <summary>获取矢量中项的数目。</summary>
+      <returns>矢量中项的数目。</returns>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.Append(`0)">
+      <summary>将某个项追加到矢量的末尾。</summary>
+      <param name="value">要追加到矢量的项。</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.Clear">
+      <summary>移除矢量中的所有项。</summary>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.GetAt(System.UInt32)">
+      <summary>返回矢量视图中指定索引处的项。</summary>
+      <returns>指定索引处的项。</returns>
+      <param name="index">项的从零开始的索引。</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.GetView">
+      <summary>返回不可变的矢量视图。</summary>
+      <returns>矢量的视图。</returns>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.IndexOf(`0,System.UInt32@)">
+      <summary>检索矢量视图中指定项的索引。</summary>
+      <returns>如果找到该项，则为 true；否则为 false。</returns>
+      <param name="value">在矢量中要查找的项。</param>
+      <param name="index">如果找到该项，则该项具有从零开始的索引；否则，此参数为 0。</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.InsertAt(System.UInt32,`0)">
+      <summary>将项插入到矢量中的指定索引处。</summary>
+      <param name="index">从零开始的索引。</param>
+      <param name="value">要插入的项。</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.RemoveAt(System.UInt32)">
+      <summary>移除矢量中的指定索引处的项。</summary>
+      <param name="index">要移除的矢量项的从零开始的索引。</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.RemoveAtEnd">
+      <summary>删除矢量中的最后一项。</summary>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.ReplaceAll(`0[])">
+      <summary>将矢量中的所有项替换为指定的项。</summary>
+      <param name="items">要向矢量添加的项的集合。</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.SetAt(System.UInt32,`0)">
+      <summary>在矢量中的指定索引处设置该值。</summary>
+      <param name="index">要在其处设置值的从零开始的索引。</param>
+      <param name="value">要设置的项。</param>
+    </member><member name="T:Windows.Foundation.Collections.IVectorChangedEventArgs">
+      <summary>为矢量的更改事件提供数据。</summary>
+    </member><member name="P:Windows.Foundation.Collections.IVectorChangedEventArgs.CollectionChange">
+      <summary>获取矢量中发生的更改的类型。</summary>
+      <returns>矢量中更改的类型。</returns>
+    </member><member name="P:Windows.Foundation.Collections.IVectorChangedEventArgs.Index">
+      <summary>获取矢量中更改发生的位置。</summary>
+      <returns>矢量中更改发生的基于零的位置（如果适用的话）。</returns>
+    </member><member name="T:Windows.Foundation.Collections.IVectorView`1">
+      <summary>将不可变的视图表示到向量。</summary>
+      <typeparam name="T">矢量中值的类型。</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IVectorView`1.Size">
+      <summary>获取矢量视图中项的数目。</summary>
+      <returns>矢量视图中项的数目。</returns>
+    </member><member name="M:Windows.Foundation.Collections.IVectorView`1.GetAt(System.UInt32)">
+      <summary>返回矢量视图中指定索引处的项。</summary>
+      <returns>指定索引处的项。</returns>
+      <param name="index">项的从零开始的索引。</param>
+    </member><member name="M:Windows.Foundation.Collections.IVectorView`1.IndexOf(`0,System.UInt32@)">
+      <summary>检索矢量视图中指定项的索引。</summary>
+      <returns>如果找到该项，则为 true；否则为 false。</returns>
+      <param name="value">在矢量视图中要查找的项。</param>
+      <param name="index">如果找到该项，则该项具有从零开始的索引；否则，此参数为 0。</param>
+    </member><member name="T:Windows.Foundation.Collections.MapChangedEventHandler`2">
+      <summary>表示处理更改的可观测映射的方法。</summary>
+      <typeparam name="K">映射中的键的类型。</typeparam>
+      <typeparam name="V">映射中值的类型。</typeparam>
+      <param name="sender">更改的可观察映射。</param>
+      <param name="event">映射中发生的更改的说明。</param>
+    </member><member name="T:Windows.Foundation.Collections.PropertySet">
+      <summary>表示一个属性集，它是一个带字符串键的 PropertyValue 对象的集合。</summary>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.#ctor">
+      <summary>创建并初始化属性集的新实例。</summary>
+    </member><member name="P:Windows.Foundation.Collections.PropertySet.Size">
+      <summary>获取属性集中所包含项的数目。</summary>
+      <returns>属性集中项的数目。</returns>
+    </member><member name="E:Windows.Foundation.Collections.PropertySet.MapChanged">
+      <summary>在可观察映射更改时发生。</summary>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.Clear">
+      <summary>删除属性集中的所有项。</summary>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.First">
+      <summary>返回迭代器以枚举属性集中的项。</summary>
+      <returns>迭代器。 如果属性集为空，则迭代器当前处于 0 索引位置，或者在该属性集末尾。</returns>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.GetView">
+      <summary>获取属性集的不可变视图。</summary>
+      <returns>不可变的视图。</returns>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.HasKey(System.String)">
+      <summary>指示属性集是否包含具有指定键的项。</summary>
+      <returns>如果属性集包含具有指定键的项，则为 true；否则为 false。</returns>
+      <param name="key">键。</param>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.Insert(System.String,System.Object)">
+      <summary>将某个项添加到属性集。</summary>
+      <returns>如果此方法替换已存在的密钥值，则为 true；如果这是一个新的密钥，则为 false。</returns>
+      <param name="key">要插入的键。</param>
+      <param name="value">要插入的值。</param>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.Lookup(System.String)">
+      <summary>检索指定键的值。</summary>
+      <returns>如果具有指定键的项存在，则为该值；否则为 null。</returns>
+      <param name="key">键。</param>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.Remove(System.String)">
+      <summary>删除属性集中的项。</summary>
+      <param name="key">键。</param>
+    </member><member name="T:Windows.Foundation.Collections.StringMap">
+      <summary>关联集合，又称映射或字典。</summary>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.#ctor">
+      <summary>创建并初始化 StringMap 的新实例。</summary>
+    </member><member name="P:Windows.Foundation.Collections.StringMap.Size">
+      <summary>获取映射中的项数。</summary>
+      <returns>映射中项的数目。</returns>
+    </member><member name="E:Windows.Foundation.Collections.StringMap.MapChanged">
+      <summary>于映射内容更改时发生。</summary>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.Clear">
+      <summary>移除映射中的所有项。</summary>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.First">
+      <summary>返回包含集合中的项目的迭代器。</summary>
+      <returns>集合中的项。</returns>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.GetView">
+      <summary>返回不可变的映射视图。</summary>
+      <returns>映射的视图。</returns>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.HasKey(System.String)">
+      <summary>确定映射是否包含指定的键。</summary>
+      <returns>如果找到了键，则为 true；否则为 false。</returns>
+      <param name="key">与要查找的项关联的键。</param>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.Insert(System.String,System.String)">
+      <summary>插入或替换映射中的项目。</summary>
+      <returns>如果具有指定密钥的项是被替换的现有项，则为 true，否则为 false。</returns>
+      <param name="key">与要插入的项关联的键。</param>
+      <param name="value">要插入的项。</param>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.Lookup(System.String)">
+      <summary>返回映射中指定键处的项。</summary>
+      <returns>与指定键相关联的项。</returns>
+      <param name="key">与要查找的项关联的键。</param>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.Remove(System.String)">
+      <summary>移除映射中的某项。</summary>
+      <param name="key">与要删除的项关联的键。</param>
+    </member><member name="T:Windows.Foundation.Collections.ValueSet">
+      <summary>实现具有键类型 String 和值类型 Object 的映射。 此类防止将非可序列化类型放入映射中。</summary>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.#ctor">
+      <summary>创建并初始化属性集的新实例。</summary>
+    </member><member name="P:Windows.Foundation.Collections.ValueSet.Size">
+      <summary>获取值集中所包含项的数目。</summary>
+      <returns>值集中项的数目。</returns>
+    </member><member name="E:Windows.Foundation.Collections.ValueSet.MapChanged">
+      <summary>在可观察映射更改时发生。</summary>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.Clear">
+      <summary>删除值集中的所有项。</summary>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.First">
+      <summary>返回迭代器以枚举值集中的项。</summary>
+      <returns>迭代器。 如果值集为空，则迭代器当前处于 0 索引位置，或者在该值集末尾。</returns>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.GetView">
+      <summary>获取值集的不可变视图。</summary>
+      <returns>不可变的视图。</returns>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.HasKey(System.String)">
+      <summary>指示值集是否包含具有指定键的项。</summary>
+      <returns>如果值集包含具有指定键的项，则为 true；否则为 false。</returns>
+      <param name="key">键。</param>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.Insert(System.String,System.Object)">
+      <summary>将某个项添加到值集。</summary>
+      <returns>如果此方法替换已存在的密钥值，则为 true；如果这是一个新的密钥，则为 false。</returns>
+      <param name="key">要插入的键。</param>
+      <param name="value">要插入的值。</param>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.Lookup(System.String)">
+      <summary>检索指定键的值。</summary>
+      <returns>如果具有指定键的项存在，则为该值；否则为 null。</returns>
+      <param name="key">键。</param>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.Remove(System.String)">
+      <summary>删除值集中的项。</summary>
+      <param name="key">键。</param>
+    </member><member name="T:Windows.Foundation.Collections.VectorChangedEventHandler`1">
+      <summary>表示处理更改的可观测向量事件的方法。</summary>
+      <typeparam name="T">矢量中值的类型。</typeparam>
+      <param name="sender">更改的可观察矢量。</param>
+      <param name="event">矢量中发生的更改的说明。</param>
+    </member><member name="T:Windows.Foundation.Metadata.ActivatableAttribute">
+      <summary>指示该类是可激活的运行时类。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.Type,System.UInt32)">
+      <summary>创建并初始化属性的新实例。</summary>
+      <param name="type">类的类型。</param>
+      <param name="version">类的版本。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.Type,System.UInt32,System.String)">
+      <summary>创建并初始化属性的新实例。</summary>
+      <param name="type">类的类型。</param>
+      <param name="version">用于实现类的 API 协定的版本。</param>
+      <param name="contractName">一个字符串，表示用于实现类的 API 协定的类型。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.Type,System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>创建并初始化属性的新实例。</summary>
+      <param name="type">类的类型。</param>
+      <param name="version">类的版本。</param>
+      <param name="platform">枚举的一个值。 默认值为 Windows。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.UInt32)">
+      <summary>创建并初始化属性的新实例。</summary>
+      <param name="version">类的版本。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.UInt32,System.String)">
+      <summary>创建并初始化属性的新实例。</summary>
+      <param name="version">类的版本。</param>
+      <param name="type">一个字符串，表示工厂接口的类型。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>创建并初始化属性的新实例。</summary>
+      <param name="version">类的版本。</param>
+      <param name="platform">枚举的一个值。 默认值为 Windows。</param>
+    </member><member name="T:Windows.Foundation.Metadata.AllowForWebAttribute">
+      <summary>使开发人员能够公开本机通用 Windows 平台 (UWP) 对象作为 WebView 内的顶级文档的上下文中的全局参数。 对于要映射的通用 Windows 平台 (UWP) 对象，它必须实现 IAgileObject 并用 AllowForWebAttribute 属性进行修饰。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.AllowForWebAttribute.#ctor">
+      <summary>创建并初始化属性的新实例。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.AllowMultipleAttribute">
+      <summary>指示自定义特性的多个实例可应用于目标。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.AllowMultipleAttribute.#ctor">
+      <summary>创建并初始化属性的新实例。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.ApiInformation">
+      <summary>使您能够检测是否存在指定的成员、类型或 API 合约，以便您可安全地跨各种设备进行 API 调用。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsApiContractPresent(System.String,System.UInt16)">
+      <summary>返回 true 或 false 以指示是否存在带指定名称和主版本号的 API 合约。</summary>
+      <returns>如果存在指定的 API 协定，则为 true；否则为 false。</returns>
+      <param name="contractName">API 合约的名称。</param>
+      <param name="majorVersion">API 合约的主版本号。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsApiContractPresent(System.String,System.UInt16,System.UInt16)">
+      <summary>返回 true 或 false 以指示是否存在带指定名称和主版本及次版本号的 API 合约。</summary>
+      <returns>如果存在指定的 API 协定，则为 true；否则为 false。</returns>
+      <param name="contractName">API 合约的名称。</param>
+      <param name="majorVersion">API 合约的主版本号。</param>
+      <param name="minorVersion">API 合约的次版本号。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsEnumNamedValuePresent(System.String,System.String)">
+      <summary>返回 true 或 false 以指示指定枚举是否有指定的命名常量。</summary>
+      <returns>如果存在指定的常量，则为 true；否则为 false。</returns>
+      <param name="enumTypeName">类型的命名空间限定名称。</param>
+      <param name="valueName">常量的名称。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsEventPresent(System.String,System.String)">
+      <summary>返回 true 或 false 以指示指定类型是否有指定事件。</summary>
+      <returns>如果存在该类型的指定事件，则为 true；否则为 false。</returns>
+      <param name="typeName">类型的命名空间限定名称。</param>
+      <param name="eventName">事件的名称。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsMethodPresent(System.String,System.String)">
+      <summary>返回 true 或 false 以指示指定类型是否有指定方法。</summary>
+      <returns>如果存在该类型的指定方法，则为 true；否则为 false。</returns>
+      <param name="typeName">类型的命名空间限定名称。</param>
+      <param name="methodName">方法的名称。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsMethodPresent(System.String,System.String,System.UInt32)">
+      <summary>返回 true 或 false 以指示指定类型是否存在带指定数目的输入参数的指定方法重载。</summary>
+      <returns>如果存在该类型的指定方法，则为 true；否则为 false。</returns>
+      <param name="typeName">类型的命名空间限定名称。</param>
+      <param name="methodName">方法的名称。</param>
+      <param name="inputParameterCount">重载的输入参数数量。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsPropertyPresent(System.String,System.String)">
+      <summary>返回 true 或 false 以指示指定类型是否有指定属性（可写或只读）。</summary>
+      <returns>如果存在该类型的指定属性，则为 true；否则为 false。</returns>
+      <param name="typeName">类型的命名空间限定名称。</param>
+      <param name="propertyName">属性的名称。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsReadOnlyPropertyPresent(System.String,System.String)">
+      <summary>返回 true 或 false 以指示指定类型是否有指定的只读属性。</summary>
+      <returns>如果存在该类型的指定属性，则为 true；否则为 false。</returns>
+      <param name="typeName">类型的命名空间限定名称。</param>
+      <param name="propertyName">属性的名称。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsTypePresent(System.String)">
+      <summary>返回 true 或 false 以指示是否存在指定类型。</summary>
+      <returns>如果存在指定的类型，则为 true；否则为 false。</returns>
+      <param name="typeName">类型的命名空间限定名称。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsWriteablePropertyPresent(System.String,System.String)">
+      <summary>返回 true 或 false 以指示指定类型是否有指定的可写属性。</summary>
+      <returns>如果存在该类型的指定属性，则为 true；否则为 false。</returns>
+      <param name="typeName">类型的命名空间限定名称。</param>
+      <param name="propertyName">属性的名称。</param>
+    </member><member name="T:Windows.Foundation.Metadata.AttributeTargets">
+      <summary>指定属性适用的编程构造。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.All">
+      <summary>特性适用于所有编程构造。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.ApiContract">
+      <summary>该特性适用于 API 协定。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Delegate">
+      <summary>该特性适用于委托。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Enum">
+      <summary>该特性适用于枚举。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Event">
+      <summary>该特性适用于事件。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Field">
+      <summary>特性适用于字段。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Interface">
+      <summary>该特性适用于接口。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.InterfaceImpl">
+      <summary>将特性适用于接口实现。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Method">
+      <summary>该特性适用于方法。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Parameter">
+      <summary>该特性适用于参数。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Property">
+      <summary>该特性适用于属性。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.RuntimeClass">
+      <summary>该特性适用于运行时类。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Struct">
+      <summary>该特性适用于结构。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.AttributeUsageAttribute">
+      <summary>指定另一特性的用法。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.AttributeUsageAttribute.#ctor(Windows.Foundation.Metadata.AttributeTargets)">
+      <summary>创建并初始化属性的新实例。</summary>
+      <param name="A_0">一个或多个枚举值。</param>
+    </member><member name="T:Windows.Foundation.Metadata.ComposableAttribute">
+      <summary>指示如何组成编程元素。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ComposableAttribute.#ctor(System.Type,Windows.Foundation.Metadata.CompositionType,System.UInt32)">
+      <summary>创建并初始化属性的新实例。</summary>
+      <param name="type">用于创建编程元素工厂对象的类型。</param>
+      <param name="compositionType">枚举值之一。</param>
+      <param name="version">版本。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ComposableAttribute.#ctor(System.Type,Windows.Foundation.Metadata.CompositionType,System.UInt32,System.String)">
+      <summary>创建并初始化属性的新实例。</summary>
+      <param name="type">用于创建编程元素工厂对象的类型。</param>
+      <param name="compositionType">枚举值之一。</param>
+      <param name="version">API 协定的版本，在其中，复合工厂已添加到运行时类的激活工厂。</param>
+      <param name="contract">一个字符串，表示用于实现类的 API 协定的类型。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ComposableAttribute.#ctor(System.Type,Windows.Foundation.Metadata.CompositionType,System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>创建并初始化属性的新实例。</summary>
+      <param name="type">用于创建编程元素工厂对象的类型。</param>
+      <param name="compositionType">枚举值之一。</param>
+      <param name="version">版本。</param>
+      <param name="platform">枚举的一个值。 默认值为 Windows。</param>
+    </member><member name="T:Windows.Foundation.Metadata.CompositionType">
+      <summary>指定可组合实行适用的编程元素的可见性。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.CompositionType.Protected">
+      <summary>指示对编程元素的访问限于包含类或从包含派生的类型中的其他元素。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.CompositionType.Public">
+      <summary>指示对编程元素的访问不受限制。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.DefaultAttribute">
+      <summary>指示运行时类的默认界面。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.DefaultAttribute.#ctor">
+      <summary>创建并初始化属性的新实例。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.DefaultOverloadAttribute">
+      <summary>指出某方法是默认重载方法。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.DefaultOverloadAttribute.#ctor">
+      <summary>创建并初始化属性的新实例。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.DeprecatedAttribute">
+      <summary>指示应将元数据中的某个类型或成员标记为已弃用。 编译器和其他开发人员工具可读取此特性并向用户提供有关弃用类型和可能的替代项的信息。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.DeprecatedAttribute.#ctor(System.String,Windows.Foundation.Metadata.DeprecationType,System.UInt32)">
+      <summary>创建并初始化属性的新实例。</summary>
+      <param name="message">一个字符串消息，可由编译器和其他开发人员工具用来说明弃用并提供备用 API 的字符串名称。</param>
+      <param name="type">枚举的一个值。 默认值为 Deprecate。</param>
+      <param name="version">指示将弃用的版本的常量。</param>
+    </member><member name="M:Windows.Foundation.Metadata.DeprecatedAttribute.#ctor(System.String,Windows.Foundation.Metadata.DeprecationType,System.UInt32,System.String)">
+      <summary>创建并初始化属性的新实例。</summary>
+      <param name="message">一个字符串消息，可由编译器和其他开发人员工具用来说明弃用并提供备用 API 的字符串名称。</param>
+      <param name="type">枚举的一个值。 默认值为 Deprecate。</param>
+      <param name="version">指示将弃用的版本的常量。</param>
+      <param name="contract">一个字符串，表示用于实现启用的类型或成员的 API 协定的类型。</param>
+    </member><member name="M:Windows.Foundation.Metadata.DeprecatedAttribute.#ctor(System.String,Windows.Foundation.Metadata.DeprecationType,System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>创建并初始化该特性的新实例，包括用于确定目标的 Platform 值。</summary>
+      <param name="message">一个字符串消息，可由编译器和其他开发人员工具用来说明弃用并提供备用 API 的字符串名称。</param>
+      <param name="type">枚举的一个值。 默认值为 Deprecate。</param>
+      <param name="version">指示将弃用的版本的常量。</param>
+      <param name="platform">枚举的一个值。 默认值为 Windows。</param>
+    </member><member name="T:Windows.Foundation.Metadata.DeprecationType">
+      <summary>指示 Deprecate 或 Remove 形式的弃用。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.DeprecationType.Deprecate">
+      <summary>编译器和其他工具应将该实体视为已弃用。 这是默认值。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.DeprecationType.Remove">
+      <summary>编译器和其他工具应将该实体视为已删除。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.DualApiPartitionAttribute">
+      <summary>指示桌面应用和 Windows 应用商店应用支持该类型。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.DualApiPartitionAttribute.#ctor">
+      <summary>创建并初始化属性的新实例。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.ExclusiveToAttribute">
+      <summary>指示指定的类型专用于此类型。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ExclusiveToAttribute.#ctor(System.Type)">
+      <summary>创建并初始化属性的新实例。</summary>
+      <param name="typeName">类型名称。</param>
+    </member><member name="T:Windows.Foundation.Metadata.ExperimentalAttribute">
+      <summary>指示类型或成员应在元数据中标记为实验，并因此可能存在于 SDK 或库的最终发布的版本中。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ExperimentalAttribute.#ctor">
+      <summary>创建并初始化属性的新实例。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.GCPressureAmount">
+      <summary>仅由 Microsoft 内部使用。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.GCPressureAmount.High">
+      <summary>内存压力超过 100k。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.GCPressureAmount.Low">
+      <summary>内存压力小于 10k。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.GCPressureAmount.Medium">
+      <summary>内存压力在 10k 到 100k 之间。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.GCPressureAttribute">
+      <summary>仅由 Microsoft 内部使用。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.GCPressureAttribute.#ctor">
+      <summary>创建并初始化属性的新实例。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.GuidAttribute">
+      <summary>指示界面或委托的 GUID。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.GuidAttribute.#ctor(System.UInt32,System.UInt16,System.UInt16,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte)">
+      <summary>创建并初始化属性的新实例。</summary>
+      <param name="a">GUID 的前 4 个字节。</param>
+      <param name="b">GUID 的下两个字节。</param>
+      <param name="c">GUID 的下两个字节。</param>
+      <param name="d">GUID 的下一个字节。</param>
+      <param name="e">GUID 的下一个字节。</param>
+      <param name="f">GUID 的下一个字节。</param>
+      <param name="g">GUID 的下一个字节。</param>
+      <param name="h">GUID 的下一个字节。</param>
+      <param name="i">GUID 的下一个字节。</param>
+      <param name="j">GUID 的下一个字节。</param>
+      <param name="k">GUID 的下一个字节。</param>
+    </member><member name="T:Windows.Foundation.Metadata.HasVariantAttribute">
+      <summary>指示该类型是变量 IInspectable 的实例。 适用于运行时类、接口和参数化接口。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.HasVariantAttribute.#ctor">
+      <summary>创建并初始化属性的新实例。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.InternalAttribute">
+      <summary>指示类型或成员应在元数据中标记为位于 SDK 或框架的内部，并且只能由系统组件使用。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.InternalAttribute.#ctor">
+      <summary>创建并初始化属性的新实例。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.LengthIsAttribute">
+      <summary>指示数组元素的数目。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.LengthIsAttribute.#ctor(System.Int32)">
+      <summary>创建并初始化属性的新实例。</summary>
+      <param name="indexLengthParameter">数组元素的数目。</param>
+    </member><member name="T:Windows.Foundation.Metadata.MarshalingBehaviorAttribute">
+      <summary>指示 Windows 运行时组件的封送处理行为。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.MarshalingBehaviorAttribute.#ctor(Windows.Foundation.Metadata.MarshalingType)">
+      <summary>创建并初始化属性的新实例。</summary>
+      <param name="behavior">枚举值之一。</param>
+    </member><member name="T:Windows.Foundation.Metadata.MarshalingType">
+      <summary>指定该类的封送类型。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.MarshalingType.Agile">
+      <summary>对所有接口的相同指针值的类封送和取消封送。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.MarshalingType.InvalidMarshaling">
+      <summary>无法封送该类。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.MarshalingType.None">
+      <summary>该类阻止在所有接口上进行封送。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.MarshalingType.Standard">
+      <summary>该类不会实现 IMarshal，或者会在所有接口上转发到 CoGetStandardMarshal。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.MetadataMarshalAttribute">
+      <summary>指示在创建应用程序包时工具应为接口创建条目。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.MetadataMarshalAttribute.#ctor">
+      <summary>创建并初始化属性的新实例。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.MuseAttribute">
+      <summary>指示一个运行时类与 Windows 应用商店应用兼容（该应用是 Web 浏览器）。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.MuseAttribute.#ctor">
+      <summary>创建并初始化属性的新实例。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.OverloadAttribute">
+      <summary>将方法标识为支持重载的语言中的重载。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.OverloadAttribute.#ctor(System.String)">
+      <summary>创建并初始化属性的新实例。</summary>
+      <param name="method">表示投影语言中方法的名称。</param>
+    </member><member name="T:Windows.Foundation.Metadata.OverridableAttribute">
+      <summary>指示界面是否包含可重写的方法。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.OverridableAttribute.#ctor">
+      <summary>创建并初始化属性的新实例。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.Platform">
+      <summary>指定应支持指定类型的平台，如 Windows 运行时特性和元数据中使用的类型。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.Platform.Windows">
+      <summary>供 Windows 元数据使用。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.Platform.WindowsPhone">
+      <summary>供 Windows Phone 元数据使用。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.PlatformAttribute">
+      <summary>声明在生成了平台特定元数据时应在其中支持某个类型的平台。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.PlatformAttribute.#ctor(Windows.Foundation.Metadata.Platform)">
+      <summary>创建并初始化属性的新实例。</summary>
+      <param name="platform">枚举的一个值。 默认值为 Windows。</param>
+    </member><member name="T:Windows.Foundation.Metadata.ProtectedAttribute">
+      <summary>指示接口是否包含受保护的方法。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ProtectedAttribute.#ctor">
+      <summary>创建并初始化属性的新实例。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.RangeAttribute">
+      <summary>指示数据字段值的数值范围约束。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.RangeAttribute.#ctor(System.Int32,System.Int32)">
+      <summary>创建并初始化具有指定最小和最大值的属性的新实例。</summary>
+      <param name="minValue">允许的最小值。</param>
+      <param name="maxValue">允许的最大值。</param>
+    </member><member name="T:Windows.Foundation.Metadata.RemoteAsyncAttribute">
+      <summary>指示可使用异步形式的 Async 模式传递接口。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.RemoteAsyncAttribute.#ctor">
+      <summary>创建并初始化属性的新实例。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.StaticAttribute">
+      <summary>表示一个接口，其中只包含静态方法。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.StaticAttribute.#ctor(System.Type,System.UInt32)">
+      <summary>创建并初始化属性的新实例。</summary>
+      <param name="type">包含运行时类的静态方法的类型。</param>
+      <param name="version">其中已添加静态接口的版本。</param>
+    </member><member name="M:Windows.Foundation.Metadata.StaticAttribute.#ctor(System.Type,System.UInt32,System.String)">
+      <summary>创建并初始化属性的新实例。</summary>
+      <param name="type">包含运行时类的静态方法的类型。</param>
+      <param name="version">API 协定的版本，在其中，静态工厂已添加到运行时类的激活工厂。</param>
+      <param name="contractName">一个字符串，表示用于实现类的 API 协定的类型。</param>
+    </member><member name="M:Windows.Foundation.Metadata.StaticAttribute.#ctor(System.Type,System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>创建并初始化属性的新实例。</summary>
+      <param name="type">包含运行时类的静态方法的类型。</param>
+      <param name="version">其中已添加静态接口的版本。</param>
+      <param name="platform">枚举的一个值。 默认值为 Windows。</param>
+    </member><member name="T:Windows.Foundation.Metadata.ThreadingAttribute">
+      <summary>指示 Windows 运行时组件的线程模型。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ThreadingAttribute.#ctor(Windows.Foundation.Metadata.ThreadingModel)">
+      <summary>创建并初始化属性的新实例。</summary>
+      <param name="model">枚举值之一。</param>
+    </member><member name="T:Windows.Foundation.Metadata.ThreadingModel">
+      <summary>指定线程模型。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.ThreadingModel.Both">
+      <summary>单线程单元和多线程单元。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.ThreadingModel.InvalidThreading">
+      <summary>应用了无效的线程模型。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.ThreadingModel.MTA">
+      <summary>多线程单元。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.ThreadingModel.STA">
+      <summary>单线程单元。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.VariantAttribute">
+      <summary>指示该项是变量 IInspectable 的实例。 适用于方法参数、属性和返回类型的值。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.VariantAttribute.#ctor">
+      <summary>创建并初始化属性的新实例。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.VersionAttribute">
+      <summary>指示类型的版本。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.VersionAttribute.#ctor(System.UInt32)">
+      <summary>创建并初始化属性的新实例。</summary>
+      <param name="version">与标记对象关联的版本。</param>
+    </member><member name="M:Windows.Foundation.Metadata.VersionAttribute.#ctor(System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>创建并初始化属性的新实例。</summary>
+      <param name="version">与标记对象关联的版本。</param>
+      <param name="platform">枚举的一个值。 默认值为 Windows。</param>
+    </member><member name="T:Windows.Foundation.Metadata.WebHostHiddenAttribute">
+      <summary>标识其功能未投影到指定目标语言的类型。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.WebHostHiddenAttribute.#ctor">
+      <summary>创建并初始化属性的新实例。</summary>
+    </member></members>
+</doc>

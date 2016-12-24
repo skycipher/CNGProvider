@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Web.Http.Diagnostics.HttpDiagnosticsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider">
+      <summary>マイクロソフトの HTTP スタックをベースにしているアプリケーション内で、Web トラフィックのトレースとプロファイリング用の簡単な診断機能を提供します。</summary>
+    </member><member name="E:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.RequestResponseCompleted">
+      <summary>RequestResponseCompleted イベントをサブスクライブして要求の提出通知を受信します。</summary>
+    </member><member name="E:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.RequestSent">
+      <summary>RequestSent イベントをサブスクライブして要求の送信通知を受信します。</summary>
+    </member><member name="E:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.ResponseReceived">
+      <summary>ResponseReceived イベントをサブスクライブして応答の受信通知を受信します。</summary>
+    </member><member name="M:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.CreateFromProcessDiagnosticInfo(Windows.System.Diagnostics.ProcessDiagnosticInfo)">
+      <summary>指定された ProcessDiagnosticInfo オブジェクトに基づいて新しい HttpDiagnosticProvider を作成します。</summary>
+      <returns>新しく作成された HttpDiagnosticProvider。</returns>
+      <param name="processDiagnosticInfo">監視するプロセスを識別するための ProcessDiagnosticInfo。</param>
+    </member><member name="M:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.Start">
+      <summary>HttpDiagnosticProvider で、アタッチされたプロセス ターゲットの監視を開始します。</summary>
+    </member><member name="M:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.Stop">
+      <summary>HttpDiagnosticProvider で、アタッチされたプロセス ターゲットの監視を停止します。</summary>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs">
+      <summary>RequestResponseCompleted イベントのデータを指定します。</summary>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.ActivityId">
+      <summary>他のイベントと関連付けるために、このアクティビティのローカル一意 IDを取得します。</summary>
+      <returns>このアクティビティのローカル一意 ID。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.Initiator">
+      <summary>この要求を開始している操作の種類を取得します。</summary>
+      <returns>イニシエーターの種類。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.ProcessId">
+      <summary>プロセス ID を取得します。</summary>
+      <returns>プロセス ID。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.RequestedUri">
+      <summary>要求された応答の URI を取得します。</summary>
+      <returns>要求された応答の URI。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.SourceLocations">
+      <summary>ソースの場所のコール スタックを取得します。</summary>
+      <returns>ソースの場所のコール スタック。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.ThreadId">
+      <summary>スレッド ID を取得します。</summary>
+      <returns>スレッド ID。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.Timestamps">
+      <summary>接続イベントのタイムスタンプを取得します。</summary>
+      <returns>接続イベントのタイムスタンプ。</returns>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps">
+      <summary>接続イベントのタイムスタンプをすべて提供します。</summary>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.CacheCheckedTimestamp">
+      <summary>ローカル キャッシュがチェックされた最終時刻を取得します。</summary>
+      <returns>ローカル キャッシュがチェックされた最終時刻。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.ConnectionCompletedTimestamp">
+      <summary>TCP 接続フェーズの終了時のタイムスタンプを取得します。</summary>
+      <returns>TCP 接続フェーズの終了時のタイムスタンプ。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.ConnectionInitiatedTimestamp">
+      <summary>TCP 接続フェーズの開始時のタイムスタンプを取得します。</summary>
+      <returns>TCP 接続フェーズの開始時のタイムスタンプ。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.NameResolvedTimestamp">
+      <summary>DNS 名前解決の時刻を取得します。</summary>
+      <returns>DNS 名前解決の時刻。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.RequestCompletedTimestamp">
+      <summary>最後に送信されたバイトのタイムスタンプを取得します。</summary>
+      <returns>最後に送信されたバイトのタイムスタンプ。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.RequestSentTimestamp">
+      <summary>最初に送信されたバイトのタイムスタンプを取得します。</summary>
+      <returns>最初に送信されたバイトのタイムスタンプ。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.ResponseCompletedTimestamp">
+      <summary>最後に受信したバイトのタイムスタンプを取得します。</summary>
+      <returns>最後に受信したバイトのタイムスタンプ。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.ResponseReceivedTimestamp">
+      <summary>最初に受信したバイトのタイムスタンプを取得します。</summary>
+      <returns>最初に受信したバイトのタイムスタンプ。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.SslNegotiatedTimestamp">
+      <summary>SSL ハンドシェイク ネゴシエーションの時刻を取得します。</summary>
+      <returns>SSL ハンドシェイク ネゴシエーションの時刻。</returns>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs">
+      <summary>RequestSent イベントのデータを提供します。</summary>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.ActivityId">
+      <summary>他のイベントと関連付けるために、このアクティビティのローカル一意 IDを取得します。</summary>
+      <returns>このアクティビティのローカル一意 ID。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.Initiator">
+      <summary>この要求を開始している操作の種類を取得します。</summary>
+      <returns>イニシエーターの種類。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.Message">
+      <summary>ヘッダーを含む HttpRequestMessage を取得します。</summary>
+      <returns>ヘッダーを含む HttpRequestMessage。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.ProcessId">
+      <summary>プロセス ID を取得します。</summary>
+      <returns>プロセス ID。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.SourceLocations">
+      <summary>ソースの場所のコール スタックを取得します。</summary>
+      <returns>ソースの場所のコール スタック。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.ThreadId">
+      <summary>スレッド ID を取得します。</summary>
+      <returns>スレッド ID。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.Timestamp">
+      <summary>HttpRequestMessage の送信時のタイムスタンプを取得します。</summary>
+      <returns>HttpRequestMessage の送信時のタイムスタンプ。</returns>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs">
+      <summary>ResponseReceived イベントのデータを提供します。</summary>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs.ActivityId">
+      <summary>他のイベントと関連付けるために、このアクティビティのローカル一意 IDを取得します。</summary>
+      <returns>このアクティビティのローカル一意 ID。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs.Message">
+      <summary>ヘッダー、状態コード、データを含む HttpResponseMessage を取得します。</summary>
+      <returns>ヘッダー、状態コード、データを含む HttpResponseMessage。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs.Timestamp">
+      <summary>HttpResponseMessage の受信時のタイムスタンプを取得します。</summary>
+      <returns>HttpResponseMessage の受信時のタイムスタンプ。</returns>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator">
+      <summary>ダウンロード要求の開始プログラムの種類を示します。</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Beacon">
+      <summary>一方向ビーコン要求</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.CrossOriginPreFlight">
+      <summary>cross-origin プリフライト要求</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Fetch">
+      <summary>フェッチ要求</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.HtmlDownload">
+      <summary>HTML ダウンロード</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Image">
+      <summary>イメージ リソース</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Link">
+      <summary>リンク</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Media">
+      <summary>メディア リソース</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Other">
+      <summary>その他のリソース</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.ParsedElement">
+      <summary>解析された要素</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Prefetch">
+      <summary>プリフェッチ要求</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Script">
+      <summary>スクリプト リソース</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Style">
+      <summary>CSS 要素</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.XmlHttpRequest">
+      <summary>XML HTTP 要求</summary>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation">
+      <summary>HTTP アクティビティのソースの場所を格納します。</summary>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation.ColumnNumber">
+      <summary>列番号を取得します。</summary>
+      <returns>列番号。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation.LineNumber">
+      <summary>行番号を取得します。</summary>
+      <returns>行番号。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation.SourceUri">
+      <summary>ソース URI を取得します。</summary>
+      <returns>ソース URI。</returns>
+    </member></members>
+</doc>

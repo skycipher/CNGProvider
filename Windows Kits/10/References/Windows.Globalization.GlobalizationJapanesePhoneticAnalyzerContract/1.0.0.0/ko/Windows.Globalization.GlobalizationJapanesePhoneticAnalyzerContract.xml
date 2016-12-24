@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Globalization.GlobalizationJapanesePhoneticAnalyzerContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Globalization.JapanesePhoneme">
+      <summary>JapanesePhoneticAnalyzer에 의해 일본어 문자열에서 추출된 단일 일본어 단어(판독값)를 나타냅니다.</summary>
+    </member><member name="P:Windows.Globalization.JapanesePhoneme.DisplayText">
+      <summary>이 일본어 단어에 대해 표시할 텍스트를 가져옵니다.</summary>
+      <returns>이 일본어 단어의 표시 텍스트입니다. JapanesePhoneticAnalyzer에서 원래 분석된 일본어 문자열의 하위 문자열입니다.</returns>
+    </member><member name="P:Windows.Globalization.JapanesePhoneme.IsPhraseStart">
+      <summary>이 일본어 단어가 구의 시작인지 여부를 나타내는 부울을 가져옵니다.</summary>
+      <returns>이 일본어 단어가 문구의 시작이면 true이며 그렇지 않으면 false입니다.</returns>
+    </member><member name="P:Windows.Globalization.JapanesePhoneme.YomiText">
+      <summary>이 일본어 단어에 대한 reading(DisplayText 발음)을 가져옵니다.</summary>
+      <returns>읽는 법(일련의 히라가나 문자로 표현되는 DisplayText의 발음)입니다.</returns>
+    </member><member name="T:Windows.Globalization.JapanesePhoneticAnalyzer">
+      <summary>간지 문자와 히라가나 문자로 조합된 일본어 문자열을 읽고 단어 분리가 사용된 문자열로부터의 올바른 판독값 컬렉션을 반환합니다.</summary>
+    </member><member name="M:Windows.Globalization.JapanesePhoneticAnalyzer.GetWords(System.String)">
+      <summary>간지 문자와 히라가나 문자로 조합된 일본어 문자열을 읽고 단어 분리가 사용된 문자열로부터의 올바른 판독값 컬렉션을 반환합니다.</summary>
+      <returns>단어 분리를 사용한 적절한 문자열 읽기를 나타내는 JapanesePhoneme 개체의 컬렉션입니다.</returns>
+      <param name="input">간지 문자와 히라가나 문자를 조합한 일본어 문자열입니다.</param>
+    </member><member name="M:Windows.Globalization.JapanesePhoneticAnalyzer.GetWords(System.String,System.Boolean)">
+      <summary>간지 문자와 히라가나 문자로 조합된 일본어 문자열을 읽고 단어 분리가 사용된 문자열로부터의 올바른 판독값 컬렉션을 반환합니다. 선택적으로 다중 간지 단어를 여러 개의 간지 단어로 분리할 때 Mono Ruby 전략을 사용합니다.</summary>
+      <returns>단어 분리를 사용한 적절한 문자열 읽기를 나타내는 JapanesePhoneme 개체의 컬렉션입니다.</returns>
+      <param name="input">간지 문자와 히라가나 문자를 조합한 일본어 문자열입니다.</param>
+      <param name="monoRuby">단어 분리 전략 Mono Ruby를 사용하도록 지정합니다. true,이면 단어 분리 전략 Mono Ruby가 사용됩니다. Mono Ruby는 더 적극적으로 다중 간지 단어를 여러 개의 간지 단어로 분리합니다. false인 경우 Mono Ruby가 사용되지 않습니다.</param>
+    </member></members>
+</doc>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.UserProfile.UserProfileLockScreenContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.System.UserProfile.LockScreen">
+      <summary>提供属性和方法来管理用作锁屏背景的全屏图像。</summary>
+    </member><member name="P:Windows.System.UserProfile.LockScreen.OriginalImageFile">
+      <summary>获取当前锁定屏幕图像。</summary>
+      <returns>锁定屏幕图像的统一资源标识符 (URI)。</returns>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.GetImageStream">
+      <summary>获取数据流形式的的当前锁定屏幕图像。</summary>
+      <returns>包含锁定屏幕图像数据的流。</returns>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.RequestSetImageFeedAsync(Windows.Foundation.Uri)">
+      <summary>将 RSS 图像源注册为要使用的锁定屏幕幻灯片。 （仅限 Windows 8.1）</summary>
+      <deprecated type="deprecate">RequestSetImageFeedAsync 已弃用并且可能并非适用于所有平台。 有关更多信息，请参见 MSDN。</deprecated>
+      <returns>SetImageFeedResult 值之一。</returns>
+      <param name="syndicationFeedUri">RSS 图像源的统一资源标识符 (URI)。</param>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.SetImageFileAsync(Windows.Storage.IStorageFile)">
+      <summary>设置来自 StorageFile 对象的锁屏图像。</summary>
+      <returns>用于设置锁定屏幕的图像的对象。</returns>
+      <param name="value">包含锁屏新图像的 StorageFile 对象。</param>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.SetImageStreamAsync(Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>设置来自数据流的锁定屏幕图像。</summary>
+      <returns>用于设置锁定屏幕图像的对象。</returns>
+      <param name="value">包含图像数据的流。</param>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.TryRemoveImageFeed">
+      <summary>撤销注销锁屏幻灯片放映中正在使用的图像源，停止幻灯片放映。 （仅限 Windows 8.1）</summary>
+      <deprecated type="deprecate">TryRemoveImageFeed 已弃用并且可能并非适用于所有平台。 有关更多信息，请参见 MSDN。</deprecated>
+      <returns>如果图像源已禁用，则为 true；否则为 false。</returns>
+    </member></members>
+</doc>

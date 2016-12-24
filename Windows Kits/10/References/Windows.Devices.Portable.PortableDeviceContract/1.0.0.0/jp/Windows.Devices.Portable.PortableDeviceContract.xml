@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Portable.PortableDeviceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Portable.ServiceDevice">
+      <summary>デバイス列挙用 Windows ポータブル デバイス (WPD: Windows Portable Devices) をサポートする携帯機器のための、デバイス サービスを識別するためのメソッドを提供します。</summary>
+    </member><member name="M:Windows.Devices.Portable.ServiceDevice.GetDeviceSelector(Windows.Devices.Portable.ServiceDeviceType)">
+      <summary>指定した ServiceDeviceType のデバイス サービスを列挙するために使用されている高度なクエリ構文 (AQS) 文字列を返します。 この文字列は、FindAllAsync または CreateWatcher メソッドに渡されます。</summary>
+      <returns>AQS 文字列。</returns>
+      <param name="serviceType">識別するサービスの型。</param>
+    </member><member name="M:Windows.Devices.Portable.ServiceDevice.GetDeviceSelectorFromServiceId(System.Guid)">
+      <summary>GUID によってデバイス サービスを識別するための高度な検索テクニック (AQS) 文字列。 この文字列は、FindAllAsync または CreateWatcher メソッドに渡されます。</summary>
+      <returns>AQS 文字列。</returns>
+      <param name="serviceId">サービス識別子。</param>
+    </member><member name="T:Windows.Devices.Portable.ServiceDeviceType">
+      <summary>ポータブル デバイス サービスの種類を示します。</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.CalendarService">
+      <summary>カレンダー情報を提供するサービス。</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.ContactsService">
+      <summary>連絡先を追跡するサービス。</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.DeviceStatusService">
+      <summary>デバイス状態サービス。</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.NotesService">
+      <summary>ノート作成サービス。</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.RingtonesService">
+      <summary>電話の着信音を提供するサービス。</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.SmsService">
+      <summary>ショート メッセージ サービスの (SMS) メッセージング サービスです。</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.TasksService">
+      <summary>タスク追跡のサービス。</summary>
+    </member><member name="T:Windows.Devices.Portable.StorageDevice">
+      <summary>WPD をサポートするポータブル デバイスのストレージ機能にアクセスするメソッドを提供します。 リムーバブル記憶装置には次のものが含まれています。USB 大容量ストレージのフラッシュ ドライブおよびカメラ メディア転送プロトコル (MTP) による音楽プレーヤー、電話、およびカメラ 画像転送プロトコル (PTP) カメラ。</summary>
+      <capability type="removableStorage">リムーバブル ストレージに対して読み取りと書き込みを行う場合に必要です。</capability>
+    </member><member name="M:Windows.Devices.Portable.StorageDevice.FromId(System.String)">
+      <summary>切り離し可能なストレージ デバイスの DeviceInformation ID から StorageFolder オブジェクトを取得します。</summary>
+      <capability type="removableStorage">リムーバブル ストレージに対して読み取りと書き込みを行う場合に必要です。</capability>
+      <returns>リムーバブル記憶装置を表し、装置のコンテンツへのアクセスを可能にするストレージ フォルダー オブジェクト。</returns>
+      <param name="DeviceId">リムーバブル記憶装置を識別する DeviceInformation ID。 この ID は、Windows.Devices.Enumeration、または自動再生デバイスのイベント引数の DeviceInformationId プロパティから取得できます。 詳細については、「Quickstart: Register an app for an AutoPlay device (クイック スタート: 自動再生デバイス用のアプリの登録)」を参照してください。 FromId を成功させるには、アプリケーションでアプリケーション機能の宣言に示されている removableStorage 機能とファイルのアクティブ化を処理する方法に示されているデバイスにアクセスするファイルの種類の関連付けの両方を宣言する必要があります。 詳細については、リムーバブル記憶装置のサンプルを参照してください。</param>
+    </member><member name="M:Windows.Devices.Portable.StorageDevice.GetDeviceSelector">
+      <summary>削除可能なストレージ デバイスを識別するための高度クエリ構文 (AQS) の文字列です。 この文字列は、FindAllAsync または CreateWatcher メソッドに渡されます。</summary>
+      <capability type="removableStorage">リムーバブル ストレージに対して読み取りと書き込みを行う場合に必要です。</capability>
+      <returns>ストレージ デバイスを識別するための AQS の文字列です。</returns>
+    </member></members>
+</doc>

@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Scanners.ScannerDeviceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Scanners.IImageScannerFormatConfiguration">
+      <summary>スキャナー入力ソースが取得したイメージ データをアプリに転送する際のファイル形式を構成します。</summary>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerFormatConfiguration.DefaultFormat">
+      <summary>新しいスキャン セッションの開始時点におけるスキャン ソースの既定のファイル形式を取得します。</summary>
+      <returns>ファイルの種類。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerFormatConfiguration.Format">
+      <summary>デバイスからクライアント アプリケーションにイメージ データを取得するための現在のファイル転送形式を取得または設定します。</summary>
+      <returns>ファイルの種類。</returns>
+    </member><member name="M:Windows.Devices.Scanners.IImageScannerFormatConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>指定されたファイル形式を入力スキャナーがサポートしているかどうかを判断します。</summary>
+      <returns>ファイルの種類がサポートされている場合は true、それ以外の場合は false。</returns>
+      <param name="value">ファイルの種類。</param>
+    </member><member name="T:Windows.Devices.Scanners.IImageScannerSourceConfiguration">
+      <summary>フラットベッドとフィーダー ソースの両方に共通のスキャン設定を照会して構成します。</summary>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.ActualResolution">
+      <summary>スキャン ソースの実際の縦および横のスキャン解像度 (DPI 単位) を取得します。</summary>
+      <returns>ピクセル単位の横および縦のスキャン解像度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.AutoCroppingMode">
+      <summary>自動トリミング モードを取得または設定します。</summary>
+      <returns>スキャンの自動トリミング モード。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.Brightness">
+      <summary>スキャン ソースからイメージ データをキャプチャする際に使用する明るさレベルの現在値を構成します。 新しいスキャン セッションでは、このプロパティの値は DefaultBrightness プロパティになります。</summary>
+      <returns>明るさレベル。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.BrightnessStep">
+      <summary>データ ソースの明るさのレベルを最小値と最大値の間で増減できるステップ サイズを取得します。</summary>
+      <returns>1 回のインクリメントまたはデクリメントのサイズ。 一般的な値は 1 です。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.ColorMode">
+      <summary>スキャン ソースのカラー モードを取得または設定します。 新しいスキャン セッションが開始したとき、このプロパティは DefaultColorMode プロパティと同じです。</summary>
+      <returns>カラー モード。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.Contrast">
+      <summary>スキャン ソースからイメージ データをキャプチャする際に使用するコントラスト レベルの現在値を設定または取得します。 新しいスキャン セッションの開始時に、このプロパティは DefaultContrast プロパティに設定されます。</summary>
+      <returns>コントラスト レベル。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.ContrastStep">
+      <summary>データ ソースのコントラスト レベルを最小値と最大値の間で増減できるステップ サイズを取得します。</summary>
+      <returns>1 回のインクリメントまたはデクリメントのサイズ。 一般的な値は 1 です。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DefaultBrightness">
+      <summary>スキャン ソースの既定の明るさレベルを取得します。</summary>
+      <returns>スキャナーの既定の明るさレベル。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DefaultColorMode">
+      <summary>このスキャン ソースの既定のカラー モードを取得します。</summary>
+      <returns>カラー モード。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DefaultContrast">
+      <summary>スキャン ソースの既定のコントラスト レベルを取得します。</summary>
+      <returns>既定のコントラスト レベル。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DesiredResolution">
+      <summary>アプリケーションが要求する、スキャン ソースの縦および横のスキャン解像度 (DPI 単位) を取得または設定します。</summary>
+      <returns>ピクセル単位の横および縦のスキャン解像度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxBrightness">
+      <summary>スキャン ソースによってサポートされる明るさのレベルの最大値を取得します。</summary>
+      <returns>最大輝度レベルで、通常は 1000 です。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxContrast">
+      <summary>スキャン ソースによってサポートされるコントラスト レベルの最大値を取得します。</summary>
+      <returns>最大コントラスト レベルで、通常は 1000 です。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxResolution">
+      <summary>スキャン ソースの水平方向および垂直方向のスキャン解像度の最大値を DPI 単位で取得します。</summary>
+      <returns>ピクセル単位の横および縦のスキャン解像度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxScanArea">
+      <summary>スキャン領域の最大サイズをインチ単位で取得します。 最大スキャン幅は、フィーダーとフラットベッドがスキャンできるドキュメントの最大幅です。</summary>
+      <returns>領域の幅と高さ。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinBrightness">
+      <summary>スキャン ソースによってサポートされる明るさのレベルの最小値を取得します。</summary>
+      <returns>最小輝度レベルで、通常は -1000 です。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinContrast">
+      <summary>スキャン ソースによってサポートされるコントラスト レベルの最小値を取得します。</summary>
+      <returns>最小コントラスト レベルで、通常は -1000 です。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinResolution">
+      <summary>スキャン ソースの水平方向および垂直方向のスキャン解像度の最小値を DPI 単位で取得します。</summary>
+      <returns>ピクセル単位の横および縦のスキャン解像度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinScanArea">
+      <summary>スキャン領域の最小サイズをインチ単位で取得します。 最小限スキャン領域は、フラットベッドまたはフィーダーがスキャンできるドキュメントの最小サイズです。</summary>
+      <returns>領域の幅と高さ。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.OpticalResolution">
+      <summary>スキャン ソースの水平方向および垂直方向の光学スキャン解像度を DPI 単位で取得します。</summary>
+      <returns>ピクセル単位の横および縦のスキャン解像度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.SelectedScanRegion">
+      <summary>選択されているスキャン領域の原点座標 (水平および垂直) とサイズ (幅および高さ。インチ単位) を取得または設定します。 AutoCroppingMode プロパティが Disabled に設定されていない場合、このプロパティは無視されます。</summary>
+      <returns>四角形の位置とサイズ。</returns>
+    </member><member name="M:Windows.Devices.Scanners.IImageScannerSourceConfiguration.IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)">
+      <summary>スキャン ソースが指定された ImageScannerAutoCroppingMode をサポートするかどうかを判断します。</summary>
+      <returns>デバイスが value モードをサポートしている場合は True。それ以外の場合は False。</returns>
+      <param name="value">スキャン対象のイメージの自動トリミング モード。</param>
+    </member><member name="M:Windows.Devices.Scanners.IImageScannerSourceConfiguration.IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)">
+      <summary>指定されたカラー モードのイメージをスキャン ソースがスキャンして転送できるかどうかを判断します。</summary>
+      <returns>スキャナーが value モードでイメージをスキャンできる場合は True。それ以外の場合は False。</returns>
+      <param name="value">カラー モード。</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScanner">
+      <summary>スキャンするイメージのプロパティを表します。</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.AutoConfiguration">
+      <summary>スキャンされたデータの圧縮の種類を示すファイル形式などの、自動設定スキャン装置のスキャン設定を取得および設定します。 スキャナーが自動構成に対応していない場合、このプロパティは無視されます。</summary>
+      <returns>スキャン構成。 スキャナーが自動構成に対応していない場合は Null です。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.DefaultScanSource">
+      <summary>このスキャナー デバイスに選択された既定のスキャン ソースを取得します。</summary>
+      <returns>スキャン ソースの種類。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.DeviceId">
+      <summary>このスキャナー デバイスの PnP デバイス ID を取得します。</summary>
+      <returns>PnP デバイス識別子。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.FeederConfiguration">
+      <summary>ページ サイズ、向き、スキャン解像度など、フィーダー スキャン単位のスキャン設定を取得または設定します。</summary>
+      <returns>スキャナーのフィーダーの構成。 フィーダーがない場合は null。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.FlatbedConfiguration">
+      <summary>スキャン解像度やカラー モードなどの、フラットベッド スキャン装置のスキャン設定を取得および設定します。</summary>
+      <returns>スキャナーのフラットベッドのスキャン構成。 フラットベッドがない場合は null。</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.FromIdAsync(System.String)">
+      <summary>スキャナー デバイスの情報 ID に基づいて ImageScanner オブジェクトのインスタンスを作成します。 このメソッドは、ブローカーのデバイス列挙型に必要です。</summary>
+      <returns>ImageScanner オブジェクト。</returns>
+      <param name="deviceId">デバイス情報 ID。 DeviceInformation.Id プロパティを参照してください。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.GetDeviceSelector">
+      <summary>スキャナー デバイスの列挙にアプリが使用できるクラス選択文字列を返します。 このメソッドは、ブローカー対象のデバイス列挙型に必要です。</summary>
+      <returns>クラスの選択。</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.IsPreviewSupported(Windows.Devices.Scanners.ImageScannerScanSource)">
+      <summary>指定されたスキャン ソースがスキャンのプレビューをサポートしているかどうかを判断します。</summary>
+      <returns>指定したスキャン ソースがプレビューをサポートしている場合は、True を返します。それ以外の場合は、False を返します。</returns>
+      <param name="scanSource">スキャン ソース。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.IsScanSourceSupported(Windows.Devices.Scanners.ImageScannerScanSource)">
+      <summary>指定されたスキャン ソースがスキャナーで使用可能になっているかどうかを判断します。</summary>
+      <returns>スキャンのソース (フラットベッドまたはフィーダー) が使用可能な場合は True。それ以外の場合は False。</returns>
+      <param name="value">スキャン ソース。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.ScanFilesToFolderAsync(Windows.Devices.Scanners.ImageScannerScanSource,Windows.Storage.StorageFolder)">
+      <summary>指定されたスキャン ソースでスキャン ジョブを開始し、1 つ以上のイメージを TIFF、XPS、および PDF のような複数ページのファイル 1 つに書き込みます。または、DIB、PNG、JPG、および TIFF のような単一ページのファイル 1 つ以上を、指定されたフォルダーの場所に書き込みます。 スキャンの進行状況を返します。</summary>
+      <returns>ImageScannerScanResult からスキャンされたイメージ ファイルのリストと、UInt32 からの WIA スキャン ジョブの進行状況。この進行状況は、ターゲット フォルダーに転送されたファイル数を示します。</returns>
+      <param name="scanSource">イメージ スキャン ソース。</param>
+      <param name="storageFolder">スキャンされたファイルのターゲット フォルダーの位置。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.ScanPreviewToStreamAsync(Windows.Devices.Scanners.ImageScannerScanSource,Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>指定したスキャン ソースから 1 つのイメージをスキャンし、選択したイメージ ファイル形式による最低のスキャン解像度を適用します。</summary>
+      <returns>スキャンの進行状況およびスキャンされたファイル形式。</returns>
+      <param name="scanSource">イメージ スキャン ソース。</param>
+      <param name="targetStream">スキャンされたイメージ ファイル。</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerAutoConfiguration">
+      <summary>スキャナーの自動設定されたスキャン ソースを表します。</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerAutoConfiguration.DefaultFormat">
+      <summary>新しいスキャン セッションの開始時点におけるスキャン ソースの既定のファイル形式。</summary>
+      <returns>ファイルの種類。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerAutoConfiguration.Format">
+      <summary>デバイスからクライアント アプリケーションにイメージ データを取得するための現在のファイル転送形式を取得または設定します。</summary>
+      <returns>ファイルの種類。</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerAutoConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>指定されたファイル形式を入力スキャナーがサポートしているかどうかを判断します。</summary>
+      <returns>ファイルの種類がサポートされている場合は true、それ以外の場合は false。</returns>
+      <param name="value">ファイルの種類。</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerAutoCroppingMode">
+      <summary>スキャン デバイスの自動トリミング モードを指定します。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerAutoCroppingMode.Disabled">
+      <summary>自動検出は無効です。 新しいスキャン セッションの開始時に、AutoCroppingMode プロパティはデフォルトでこの値に設定されます。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerAutoCroppingMode.MultipleRegion">
+      <summary>複数のスキャン領域を個々の個別のイメージとしてスキャンします。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerAutoCroppingMode.SingleRegion">
+      <summary>単一のスキャン領域を個々の個別のイメージとしてスキャンします。</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerColorMode">
+      <summary>スキャン ソースのカラー モードを指定します。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.AutoColor">
+      <summary>デバイスがスキャンの内容に基づいて、自動的に適切なカラー モードを検出します。 この場合、たとえばカラー、グレースケール、白黒のうちでどれを使用するかは、アプリケーションではなくデバイスに依存します。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.Color">
+      <summary>24 ビット RGB カラー (チャネルあたり 8 ビット、3 チャネル)。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.Grayscale">
+      <summary>8 ビットまたは 4 ビットのグレースケール (チャネルあたり 8 または 4 ビット、1 チャネル)。 デバイスが 4 ビットおよび 8 ビットのグレースケールをサポートする場合、DefaultColorMode プロパティは 8 ビットを使用します。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.Monochrome">
+      <summary>モノクロまたは「白黒」とも呼ばれる 1 ビット ダブルトーン (1 チャネル使用、チャネルあたり 1 ビット)。</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerFeederConfiguration">
+      <summary>スキャナーのフィーダー スキャン ソースを表します。</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ActualResolution">
+      <summary>スキャナーのフィーダーの実際の縦および横のスキャン解像度 (DPI 単位) を取得します。</summary>
+      <returns>ピクセル単位の横および縦のスキャン解像度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.AutoCroppingMode">
+      <summary>自動トリミング モードを取得または設定します。</summary>
+      <returns>スキャンの自動トリミング モード。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.AutoDetectPageSize">
+      <summary>スキャナーのフィーダーのページ サイズ自動検出機能を取得または設定します。</summary>
+      <returns>ページ サイズ自動検出機能が有効な場合は True。それ以外の場合は False。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Brightness">
+      <summary>スキャナーのフィーダーからイメージ データをキャプチャする際の現在の明るさレベルを取得または設定します。 新しいスキャン セッションの開始時に、このプロパティは DefaultBrightness プロパティに設定されます。</summary>
+      <returns>現在の明るさレベル。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.BrightnessStep">
+      <summary>データ ソースの明るさのレベルを最小値と最大値の間で増減できるステップ サイズを取得します。</summary>
+      <returns>1 回のインクリメントまたはデクリメントのサイズ。 一般的な値は 1 です。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.CanAutoDetectPageSize">
+      <summary>デバイスがスキャン時にフィーダーでスキャンしたドキュメント ページのサイズを自動的に検出できる場合は True を返します。それ以外の場合は、False を返します。</summary>
+      <returns>デバイスがスキャン時にフィーダーでスキャンしたドキュメント ページのサイズを自動的に検出できる場合は True。それ以外の場合は False。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.CanScanAhead">
+      <summary>スキャナー デバイスがフィーダーから事前にスキャンできるかどうかを示す値を取得します。</summary>
+      <returns>スキャナーのフィーダーが事前にスキャンできるかどうかを示します。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.CanScanDuplex">
+      <summary>スキャナーのフィーダーが両面スキャン (ドキュメント ページの両面 (前面と裏面) をスキャン) できるかどうかを示す値を取得します。 二重モードでスキャンする場合、同じスキャン設定 (カラー モードやスキャン解像度など) がページの両側に適用されます。</summary>
+      <returns>両面をスキャンできるかどうかを示します。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ColorMode">
+      <summary>スキャナーのフィーダーのカラー モードを取得または設定します。</summary>
+      <returns>カラー モード。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Contrast">
+      <summary>スキャナーのフィーダーからイメージ データをキャプチャする際の現在のコントラスト レベルを設定または取得します。 新しいスキャン セッションの開始時に、このプロパティは DefaultContrast プロパティに設定されます。</summary>
+      <returns>コントラスト レベル。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ContrastStep">
+      <summary>データ ソースのコントラスト レベルを最小値と最大値の間で増減できるステップ サイズを取得します。</summary>
+      <returns>1 回のインクリメントまたはデクリメントのサイズ。 一般的な値は 1 です。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultBrightness">
+      <summary>スキャナーのフィーダーの既定の明るさレベルを取得します。</summary>
+      <returns>スキャナーの既定の明るさレベル。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultColorMode">
+      <summary>スキャナーのフィーダーのカラー モードを取得します。</summary>
+      <returns>カラー モード。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultContrast">
+      <summary>スキャナーのフィーダーの既定のコントラスト レベルを取得します。</summary>
+      <returns>既定のコントラスト レベル。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultFormat">
+      <summary>新しいスキャン セッションの開始時点におけるスキャナーのフィーダーの既定のファイル形式を取得します。</summary>
+      <returns>ファイルの種類。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DesiredResolution">
+      <summary>アプリケーションが要求する、スキャナーのフィーダーの縦および横のスキャン解像度 (DPI 単位) を取得または設定します。</summary>
+      <returns>ピクセル単位の横および縦のスキャン解像度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Duplex">
+      <summary>スキャナーのフィーダーがドキュメント ページの両面をスキャンできるかどうかを示します。</summary>
+      <returns>フィーダーがページの両側をスキャンできる場合は、True を返します。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Format">
+      <summary>スキャナーのフィーダーからクライアント アプリケーションにイメージ データを取得するための現在のファイル転送形式を取得または設定します。</summary>
+      <returns>ファイルの種類。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxBrightness">
+      <summary>スキャナーのフィーダーによってサポートされる明るさのレベルの最大値を取得します。</summary>
+      <returns>最大輝度レベルで、通常は 1000 です。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxContrast">
+      <summary>スキャナーのフィーダーによってサポートされるコントラスト レベルの最大値を取得します。</summary>
+      <returns>最大コントラスト レベルで、通常は 1000 です。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxNumberOfPages">
+      <summary>スキャナーが停止する前に 1 つのスキャン ジョブでアプリケーションがスキャンできる、イメージではなくページの最大数を取得または設定します。</summary>
+      <returns>ページ数。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxResolution">
+      <summary>スキャナーのフィーダーの水平方向および垂直方向のスキャン解像度の最大値を DPI 単位で取得します。</summary>
+      <returns>ピクセル単位の横および縦のスキャン解像度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxScanArea">
+      <summary>スキャン領域の最大サイズをインチ単位で取得します。 最大スキャン幅は、スキャナーのフィーダーがスキャンできるドキュメントの最大幅です。</summary>
+      <returns>領域の幅と高さ。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinBrightness">
+      <summary>スキャナーのフィーダーによってサポートされる明るさのレベルの最小値を取得します。</summary>
+      <returns>最小輝度レベルで、通常は -1000 です。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinContrast">
+      <summary>スキャナーのフィーダーによってサポートされるコントラスト レベルの最小値を取得します。</summary>
+      <returns>最小コントラスト レベルで、通常は -1000 です。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinResolution">
+      <summary>スキャナーのフィーダーの水平方向および垂直方向のスキャン解像度の最小値を DPI 単位で取得します。</summary>
+      <returns>ピクセル単位の横および縦のスキャン解像度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinScanArea">
+      <summary>スキャン領域の最小サイズをインチ単位で取得します。 最小限スキャン領域は、フィーダーがスキャンできるドキュメントの最小サイズです。</summary>
+      <returns>領域の幅と高さ。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.OpticalResolution">
+      <summary>スキャナーのフィーダーの水平方向および垂直方向の光学スキャン解像度を DPI 単位で取得します。</summary>
+      <returns>ピクセル単位の横および縦のスキャン解像度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.PageOrientation">
+      <summary>スキャナーのフィーダーの入力トレイにドキュメントを置く方法を示す、現在選択されているページの向きを取得または設定します。</summary>
+      <returns>ページの向き。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.PageSize">
+      <summary>フィーダーからのスキャンのために現在選択されているページ サイズを取得または設定します。</summary>
+      <returns>ページ サイズ。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.PageSizeDimensions">
+      <summary>選択したページ サイズのディメンション (幅と高さ) と方向を千単位 (1/1000") で取得します。</summary>
+      <returns>ページ サイズ。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ScanAhead">
+      <summary>事前にスキャンするかどうかを示します。</summary>
+      <returns>事前にスキャンする場合は True。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.SelectedScanRegion">
+      <summary>選択されているスキャン領域の原点座標 (水平および垂直) とサイズ (幅および高さ。インチ単位) を取得または設定します。 AutoCroppingMode プロパティが Disabled でない場合、このプロパティは無視されます。</summary>
+      <returns>スキャン領域 (インチ単位)。</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)">
+      <summary>スキャナーのフィーダーが、指定した ImageScannerAutoCroppingMode をサポートするかどうかを返します。</summary>
+      <returns>デバイスが value モードをサポートしているかどうかを示します。</returns>
+      <param name="value">スキャン対象のイメージの自動トリミング モード。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)">
+      <summary>指定したカラー モードのイメージをスキャナーのフィーダーがスキャンして転送できるかどうかを返します。</summary>
+      <returns>スキャナーが value モードでイメージをスキャンできるかどうかを示します。</returns>
+      <param name="value">カラー モード。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>指定されたファイル形式をスキャナーのフィーダーがサポートしているかどうかを判断します。</summary>
+      <returns>指定したファイルの種類がサポートされるかどうかを示します。</returns>
+      <param name="value">ファイルの種類。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsPageSizeSupported(Windows.Graphics.Printing.PrintMediaSize,Windows.Graphics.Printing.PrintOrientation)">
+      <summary>指定したページ サイズおよびページの向きでフィーダーがドキュメントをスキャンできるかどうかを返します。</summary>
+      <returns>pageSize と pageOrientation の値に基づいてスキャナーがスキャンを実行できることを示します。</returns>
+      <param name="pageSize">ページ サイズ。</param>
+      <param name="pageOrientation">ページの向き。</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration">
+      <summary>スキャナーのフラットベッド スキャン ソースを表します。</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.ActualResolution">
+      <summary>フラットベッド スキャナーの実際の縦および横のスキャン解像度 (DPI 単位) を取得します。</summary>
+      <returns>ピクセル単位の横および縦のスキャン解像度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.AutoCroppingMode">
+      <summary>自動トリミング モードを取得または設定します。</summary>
+      <returns>スキャンの自動トリミング モード。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.Brightness">
+      <summary>スキャナーのフラットベッドからイメージ データをキャプチャする際の現在の明るさレベルを取得または設定します。 新しいスキャン セッションの開始時に、このプロパティは DefaultBrightness プロパティに設定されます。</summary>
+      <returns>現在の明るさレベル。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.BrightnessStep">
+      <summary>データ ソースの明るさのレベルを最小値と最大値の間で増減できるステップ サイズを取得します。</summary>
+      <returns>1 回のインクリメントまたはデクリメントのサイズ。 一般的な値は 1 です。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.ColorMode">
+      <summary>フラットベッド スキャナーのカラー モードを取得または設定します。</summary>
+      <returns>カラー モード。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.Contrast">
+      <summary>スキャン ソースからイメージ データをキャプチャする際に使用するコントラスト レベルの現在値を設定または取得します。 新しいスキャン セッションの開始時に、このプロパティは DefaultContrast プロパティに設定されます。</summary>
+      <returns>コントラスト レベル。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.ContrastStep">
+      <summary>データ ソースのコントラスト レベルを最小値と最大値の間で増減できるステップ サイズを取得します。</summary>
+      <returns>1 回のインクリメントまたはデクリメントのサイズ。 一般的な値は 1 です。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultBrightness">
+      <summary>スキャナーのフラットベッドの既定の明るさレベルを取得します。</summary>
+      <returns>スキャナーの既定の明るさレベル。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultColorMode">
+      <summary>スキャナーのフラットベッドのカラー モードを取得します。</summary>
+      <returns>カラー モード。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultContrast">
+      <summary>スキャナーのフラットベッドの既定のコントラスト レベルを取得します。</summary>
+      <returns>既定のコントラスト レベル。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultFormat">
+      <summary>新しいスキャン セッションの開始時点におけるスキャナーのフラットベッドの既定のファイル形式を取得します。</summary>
+      <returns>ファイルの種類。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DesiredResolution">
+      <summary>アプリケーションが要求する、スキャナーのフラットベッドの縦および横のスキャン解像度 (DPI 単位) を取得または設定します。</summary>
+      <returns>ピクセル単位の横および縦のスキャン解像度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.Format">
+      <summary>スキャナーのフラットベッドからクライアント アプリケーションにイメージ データを取得するための現在のファイル転送形式を取得または設定します。</summary>
+      <returns>ファイルの種類。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxBrightness">
+      <summary>スキャナーのフラットベッドによってサポートされる明るさのレベルの最大値を取得します。</summary>
+      <returns>最大輝度レベルで、通常は 1000 です。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxContrast">
+      <summary>スキャナーのフラットベッドによってサポートされるコントラスト レベルの最大値を取得します。</summary>
+      <returns>最大コントラスト レベルで、通常は 1000 です。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxResolution">
+      <summary>スキャナーのフラットベッドの水平方向および垂直方向のスキャン解像度の最大値を DPI 単位で取得します。</summary>
+      <returns>ピクセル単位の横および縦のスキャン解像度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxScanArea">
+      <summary>スキャン領域の最大サイズをインチ単位で取得します。 最大スキャン幅は、スキャナーのフラットベッドがスキャンできるドキュメントの最大幅です。</summary>
+      <returns>領域の幅と高さ。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinBrightness">
+      <summary>スキャナーのフラットベッドによってサポートされる明るさのレベルの最小値を取得します。</summary>
+      <returns>最小輝度レベルで、通常は -1000 です。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinContrast">
+      <summary>スキャナーのフラットベッドによってサポートされるコントラスト レベルの最小値を取得します。</summary>
+      <returns>最小コントラスト レベルで、通常は -1000 です。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinResolution">
+      <summary>スキャナーのフラットベッドの水平方向および垂直方向のスキャン解像度の最小値を DPI 単位で取得します。</summary>
+      <returns>ピクセル単位の横および縦のスキャン解像度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinScanArea">
+      <summary>スキャン領域の最小サイズをインチ単位で取得します。 最小限スキャン領域は、フラットベッドがスキャンできるドキュメントの最小サイズです。</summary>
+      <returns>領域の幅と高さ。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.OpticalResolution">
+      <summary>フラットベッド スキャナーの光学スキャン解像度を DPI 単位で取得します。</summary>
+      <returns>ピクセル単位の横および縦のスキャン解像度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.SelectedScanRegion">
+      <summary>選択されているスキャン領域の原点座標 (水平および垂直) とサイズ (幅および高さ。インチ単位) を取得または設定します。 AutoCroppingMode プロパティが Disabled でない場合、このプロパティは無視されます。</summary>
+      <returns>四角形の位置とサイズ。</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)">
+      <summary>スキャナーのフラットベッドが、指定した ImageScannerAutoCroppingMode をサポートするかどうかを返します。</summary>
+      <returns>デバイスが value モードをサポートしているかどうかを示します。</returns>
+      <param name="value">スキャン対象のイメージの自動トリミング モード。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)">
+      <summary>指定したカラー モードのイメージをスキャナーのフラットベッドがスキャンして転送できるかどうかを返します。</summary>
+      <returns>スキャナーが value モードでイメージをスキャンできるかどうかを示します。</returns>
+      <param name="value">カラー モード。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>指定されたファイル形式をスキャナーのフラットベッドがサポートしているかどうかを判断します。</summary>
+      <returns>指定したファイルの種類がサポートされるかどうかを示します。</returns>
+      <param name="value">ファイルの種類。</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerFormat">
+      <summary>スキャン先ファイルの種類。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.DeviceIndependentBitmap">
+      <summary>Windows デバイスに依存しないビットマップ (DIB)。この値は、単一ページで非圧縮のすべての色モードをサポートしています。 これは、互換性のある WIA 2.0 スキャナー デバイスすべてがサポートしている唯一の形式です。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Jpeg">
+      <summary>交換可能イメージ ファイル形式 (EXIF) または JPEG ファイル交換形式 (JFIF)。これらのファイルは、カラー モードかグレースケール モード (チャネルとサンプルごとに 8 ビット) でのみ使用され、単一ページが圧縮されます (JPEG 圧縮には損失があります)。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.OpenXps">
+      <summary>Open XML Paper Specification (OpenXPS) ドキュメント ファイル形式。これらのファイルには、デバイスでシングル ページまたはマルチページを選択して圧縮したイメージ データを、この API でサポートされる任意のカラー モードで含めることができます。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Pdf">
+      <summary>Portable Document Format PDF/A (PDF/A は、電子ドキュメントのデジタル保存に特化された、Portable Document Format/PDF の ISO によって標準化されたバージョン) ドキュメント ファイル形式。これらのファイルには、デバイスでシングル ページまたはマルチページを選択して圧縮したイメージ データを、この API でサポートされる任意のカラー モードで含めることができます。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Png">
+      <summary>ポータブル ネットワーク グラフィックス (PNG: Portable Network Graphics) イメージ ファイル形式。この値では、任意のカラー モードと、単一のページおよび圧縮 (ロスレス PNG 圧縮) がサポートされます。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Tiff">
+      <summary>TIFF 6.0 仕様と互換性のある非圧縮の TIFF 形式 (シングル ページまたはマルチページのいずれも選択可能)。これらのファイルは、この API でサポートされる任意のカラー モードにすることができ、常に非圧縮です。また、シングル ページ (1 つのイメージのみを転送する必要がある場合) またはマルチページ (複数のイメージを転送する必要があり、デバイスがこのマルチページ ファイル形式をサポートしている場合) のいずれも選択できます。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Xps">
+      <summary>Microsoft XML Paper Specification (XPS) ドキュメント ファイル形式。これらのファイルには、デバイスでシングル ページまたはマルチページを選択して圧縮したイメージ データを、この API でサポートされる任意のカラー モードで含めることができます。</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerPreviewResult">
+      <summary>プレビュー スキャン ジョブの結果を表します。</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerPreviewResult.Format">
+      <summary>スキャンのプレビューに使用されるデータの形式を取得します。 プレビューの後、このプロパティは次のプレビューの前に値に戻されます。</summary>
+      <returns>スキャン形式。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerPreviewResult.Succeeded">
+      <summary>スキャンのプレビューが正常に実行されたかどうかを示す値を取得します。</summary>
+      <returns>スキャンのプレビューが正常に実行された場合は True。それ以外の場合は False。</returns>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerResolution">
+      <summary>スキャン解像度を指定します。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerResolution.DpiX">
+      <summary>横幅。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerResolution.DpiY">
+      <summary>縦のサイズ。</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerScanResult">
+      <summary>スキャン ジョブの結果を表します。</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerScanResult.ScannedFiles">
+      <summary>完了したスキャン ジョブによって生成されたスキャン済みイメージ ファイルのリストを取得します。</summary>
+      <returns>完了済みのスキャン ジョブからのスキャン済みイメージ ファイルのリスト。 スキャンされたファイルがない場合、IVectorView&lt;T&gt;。Size プロパティは 0 です。</returns>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerScanSource">
+      <summary>スキャン デバイスのスキャン ソースの種類。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.AutoConfigured">
+      <summary>スキャン ソースは自動的に構成されます。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.Default">
+      <summary>既定のソース。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.Feeder">
+      <summary>フィーダー スキャンのソース。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.Flatbed">
+      <summary>フラットベッド スキャンのソース。</summary>
+    </member></members>
+</doc>

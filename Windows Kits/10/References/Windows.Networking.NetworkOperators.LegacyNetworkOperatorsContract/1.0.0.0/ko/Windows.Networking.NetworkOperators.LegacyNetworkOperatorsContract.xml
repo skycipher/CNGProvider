@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Networking.NetworkOperators.LegacyNetworkOperatorsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails">
+      <summary>네트워크 운영자 알림에 대한 세부 정보를 제공합니다.</summary>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.EncodingType">
+      <summary>받은 메시지의 데이터 코딩 구성표(DC)를 가져옵니다.</summary>
+      <returns>수신된 메시지의 DCS(데이터 코딩 체계)입니다.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.Message">
+      <summary>네트워크 운영자 알림 메시지를 가져옵니다.</summary>
+      <returns>네트워크 운영자 알림 메시지입니다.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.NetworkAccountId">
+      <summary>알림을 받은 모바일 광대역 계정에 대한 고유 식별자를 가져옵니다.</summary>
+      <returns>모바일 광대역 계정에 대한 고유 식별자입니다.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.NotificationType">
+      <summary>네트워크 알림의 형식을 가져옵니다.</summary>
+      <returns>네트워크 알림의 형식입니다.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.RuleId">
+      <summary>알림을 일치시키고 트리거한 프로비저닝된 규칙의 식별자를 가져옵니다.</summary>
+      <returns>제공된 규칙 식별자입니다.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.SmsMessage">
+      <summary>알림을 받은 모바일 광대역 계정에 대한 SMS 메시지를 가져옵니다.</summary>
+      <returns>새 모바일 네트워크 운영자 SMS에 의해 네트워크 운영자 알림이 트리거되는 경우 이 알림에는 네트워크 운영자 알림용 SMS 메시지 개체가 포함됩니다. 알림의 일부로 SMS 메시지를 받지 않은 경우 NULL입니다.</returns>
+    </member><member name="M:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.AuthorizeTethering(System.Boolean,System.String)">
+      <summary>장치에 대한 테더링이 허용되는지 여부를 나타내는 데 사용합니다. 그렇지 않으면 이유가 제공될 수 있습니다.</summary>
+      <param name="allow">테더링이 허용되는 경우 true이고, 그렇지 않으면 false입니다.</param>
+      <param name="entitlementFailureReason">이유 테더링은 허용되지 않습니다.</param>
+    </member></members>
+</doc>

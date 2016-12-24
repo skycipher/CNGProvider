@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+
+<WindowsPerformanceRecorder Version="1.0" Author="EcoSystem Performance Platform" Team="EcoSystem Performance Platform" Comments="Sample" Company="Microsoft Corporation" Copyright="Microsoft Corporation">
+  <Profiles>
+
+    <EventCollector Id="EventCollector_WPREventCollectorInFileLarge" Base="" Name="WPR Event Collector" Private="false" ProcessPrivate="false" Secure="false" Realtime="false">
+      <BufferSize Value="1024"/>
+      <Buffers Value="64"/>
+    </EventCollector>
+
+    <SystemProvider Id="SystemProvider_AppPerfMemory" Base="">
+      <Keywords Operation="Add">
+        <Keyword Value="ProcessThread"/>
+        <Keyword Value="MemoryInfo"/>
+        <Keyword Value="MemoryInfoWS"/>
+        <Keyword Value="ReferenceSet"/>
+      </Keywords>
+    </SystemProvider>
+
+    <SystemProvider Id="SystemProvider_Browser" Base="SystemProvider_Base">
+      <Keywords Operation="Add">
+        <Keyword Value="DiskIO"/>
+        <Keyword Value="ReferenceSet"/>
+        <Keyword Value="Filename"/>
+        <Keyword Value="FootPrint"/>
+        <Keyword Value="HardFaults"/>
+        <Keyword Value="Memory"/>
+        <Keyword Value="MemoryInfo"/>
+        <Keyword Value="MemoryInfoWS"/>
+        <Keyword Value="CSwitch"/>
+        <Keyword Value="VirtualAllocation"/>
+        <Keyword Value="SampledProfile"/>
+        <CustomKeyword Value="0x20400000"/>
+        <CustomKeyword Value="0x00008000" />
+      </Keywords>
+      <Stacks>
+        <Stack Value="SampledProfile" />
+      </Stacks>
+    </SystemProvider>
+
+    <EventProvider Id="EventProvider_Win32HeapRanges" Name="d781ca11-61c0-4387-b83d-af52d3d2dd6a" NonPagedMemory="true" Level="15">
+      <Keywords>
+        <Keyword Value="0x000000000000000f"/>
+      </Keywords>
+    </EventProvider>
+
+    <EventProvider Id="BrowserEventProvider_IE" Name="9e3b3947-ca5d-4614-91a2-7b624e0e7244">
+      <Keywords>
+        <Keyword Value="0x10801300"/>
+      </Keywords>
+    </EventProvider>
+
+    <EventProvider Id="EventProvider_Microsoft-JScript" Name="57277741-3638-4A4B-BDBA-0AC6E45DA56C">
+      <Keywords>
+        <Keyword Value="0x3"/>
+      </Keywords>
+    </EventProvider>
+
+   <EventProvider Id="EventProvider_Microsoft-Windows_WinINet" Name="Microsoft-Windows-WinINet" />
+
+   <EventProvider Id="EventProvider_Microsoft-Windows-TCPIP" Name="Microsoft-Windows-TCPIP" />
+
+   <EventProvider Id="EventProvider_Microsoft--Windows-DNS-Client" Name="1c95126e-7eea-49a9-a3fe-a378b03ddb4d" />
+
+   <EventProvider Id="EventProvider_Microsoft-Microsoft-Windows-DirectComposition" Name="c3c5d8af-2fd5-4500-a8e7-379c2d0bbe2e" />
+
+   <EventProvider Id="EventProvider_Microsoft-Windows-Immersive-Shell" Name="315a8872-923e-4ea2-9889-33cd4754bf64" NonPagedMemory="true" Level="4">
+      <Keywords>
+        <Keyword Value="0x00000"/>
+      </Keywords>
+    </EventProvider>
+
+    <Profile
+        Id="BrowserProfile.Verbose.File"
+        DetailLevel="Verbose"
+        LoggingMode="File"
+        Name="BrowserProfile"
+        Description="BrowserProfile"
+        >
+      <Collectors>
+        <SystemCollectorId Value="SystemCollector_WPRSystemCollectorInFile">
+          <SystemProviderId Value="SystemProvider_Browser" />
+        </SystemCollectorId>
+        <EventCollectorId Value="EventCollector_WPREventCollectorInFile">
+          <EventProviders>
+            <EventProviderId Value="EventProvider_Win32HeapRanges" />
+            <EventProviderId Value="BrowserEventProvider_IE" />
+            <EventProviderId Value="EventProvider_PerfTrack" />
+            <EventProviderId Value="EventProvider_Microsoft-JScript" />
+            <EventProviderId Value="EventProvider_Microsoft-Windows_WinINet" />
+            <EventProviderId Value="EventProvider_Microsoft-Windows-TCPIP" />
+            <EventProviderId Value="EventProvider_Microsoft--Windows-DNS-Client" />
+            <EventProviderId Value="EventProvider_Microsoft-Microsoft-Windows-DirectComposition" />
+            <EventProviderId Value="EventProvider_Microsoft-Windows-Immersive-Shell" />
+          </EventProviders>
+        </EventCollectorId>
+      </Collectors>
+    </Profile>
+
+    <Profile
+        Id="BrowserProfile.Verbose.MemoryOnly"
+        DetailLevel="Light"
+        LoggingMode="File"
+        Name="MemoryProfile"
+        Description="MemoryProfile"
+        >
+      <Collectors>
+        <SystemCollectorId Value="SystemCollector_WPRSystemCollectorInFile">
+          <SystemProviderId Value="SystemProvider_AppPerfMemory" />
+        </SystemCollectorId>
+      </Collectors>
+    </Profile>
+
+  </Profiles>
+</WindowsPerformanceRecorder>

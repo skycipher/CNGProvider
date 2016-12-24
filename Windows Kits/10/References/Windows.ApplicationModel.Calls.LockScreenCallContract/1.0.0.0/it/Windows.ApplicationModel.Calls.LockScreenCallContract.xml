@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Calls.LockScreenCallContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral">
+      <summary>L'oggetto LockScreenCallEndCallDeferral indica quando l'app non deve più rinviare la rimozione di se stessa dalla schermata di blocco.</summary>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral.Complete">
+      <summary>Completa il rinvio della rimozione dell'applicazione dalla schermata di blocco, che determina questa operazione nel caso non sia già stata eseguita in altri modi.</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs">
+      <summary>Controlla la rimozione di un'applicazione dalla schermata di blocco.</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs.Deadline">
+      <summary>Ottiene la scadenza entro la quale l'applicazione deve completare il rinvio.</summary>
+      <returns>Scadenza entro la quale l'app deve completare il rinvio.</returns>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs.GetDeferral">
+      <summary>Richiede di rinviare il comportamento predefinito della rimozione dell'app dalla schermata di blocco.</summary>
+      <returns>Quando questo metodo viene completato, restituisce un oggetto LockScreenCallEndCallDeferral che indica quando l'app non deve più rinviare la rimozione di se stessa dalla schermata di blocco.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.LockScreenCallUI">
+      <summary>Gestisce la comunicazione con la schermata di blocco.</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.LockScreenCallUI.CallTitle">
+      <summary>Ottiene e imposta una breve descrizione della natura della chiamata.</summary>
+      <returns>Breve descrizione della natura della chiamata, ad esempio "Videochiamata con Jane Doe".</returns>
+    </member><member name="E:Windows.ApplicationModel.Calls.LockScreenCallUI.Closed">
+      <summary>Si verifica quando viene completata l'interazione con la schermata di blocco.</summary>
+    </member><member name="E:Windows.ApplicationModel.Calls.LockScreenCallUI.EndRequested">
+      <summary>Si verifica quando la schermata di blocco deve terminare la chiamata.</summary>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallUI.Dismiss">
+      <summary>Rimuove l'app dall'interfaccia utente della schermata di blocco.</summary>
+    </member></members>
+</doc>

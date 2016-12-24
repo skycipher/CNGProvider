@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Activation.ActivatedEventsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Activation.ILockScreenCallActivatedEventArgs">
+      <summary>ロック画面との通信が必要なとき、イベント情報を提供します。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ILockScreenCallActivatedEventArgs.CallUI">
+      <summary>ロック画面との間の通信を処理する UI を取得します。</summary>
+      <returns>ロック画面との間の通信を処理する UI。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IPrintTaskSettingsActivatedEventArgs">
+      <summary>印刷タスク設定がアクティブ化されると発生するイベントに応答して、情報を提供します。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IPrintTaskSettingsActivatedEventArgs.Configuration">
+      <summary>印刷タスクの構成情報を取得します。</summary>
+      <returns>印刷タスクの構成情報。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs">
+      <summary>ロック画面との通信が必要なとき、イベント情報を提供します。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.Arguments">
+      <summary>起動するためにアプリケーションに渡される引数を取得します。</summary>
+      <returns>引数のリスト。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.CallUI">
+      <summary>ロック画面との間の通信を処理する UI を取得します。</summary>
+      <returns>ロック画面との間の通信を処理する UI。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.CurrentlyShownApplicationViewId">
+      <summary>現在表示されているアプリ ビューの識別子を取得します。</summary>
+      <returns>現在表示されているアプリ ビューの識別子。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.Kind">
+      <summary>アクティブ化の種類を取得します。</summary>
+      <returns>ActivationKind.LockScreenCall 列挙値。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.PreviousExecutionState">
+      <summary>アクティブ化する前のアプリケーションの実行状態を取得します。</summary>
+      <returns>列挙値の 1 つ。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.SplashScreen">
+      <summary>スプラッシュ スクリーンからアクティブ化されたアプリケーションへの切り替えに関する情報を提供するスプラッシュ スクリーン オブジェクトを取得します。</summary>
+      <returns>スプラッシュ スクリーン情報を提供するオブジェクト。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.TileId">
+      <summary>アプリケーションを起動したソースの識別子を取得します。</summary>
+      <returns>タイルの識別子。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs">
+      <summary>印刷タスク設定がアクティブ化されると発生するイベントに応答して、情報を提供します。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.Configuration">
+      <summary>印刷タスクの構成情報を取得します。</summary>
+      <returns>印刷タスクの構成情報。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.Kind">
+      <summary>印刷タスクの設定のアクティブ化の種類を取得します。</summary>
+      <returns>印刷タスクのアクティブ化の種類。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.PreviousExecutionState">
+      <summary>設定がアクティブ化する前にアプリケーションの実行状態を取得します。</summary>
+      <returns>アプリケーションの実行状態。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.SplashScreen">
+      <summary>スプラッシュ スクリーンからアクティブ化されたアプリケーションへの切り替えに関する情報を提供するスプラッシュ スクリーン オブジェクトを取得します。</summary>
+      <returns>スプラッシュ スクリーン情報を提供するオブジェクト。</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs">
+      <summary>ロック画面との通信が必要なとき、イベント情報を提供します。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.ActivatedOperation">
+      <summary>アプリケーションのアクティブ化操作を取得します。</summary>
+      <returns>アクティベーション操作。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.Arguments">
+      <summary>起動アクティベーション中にアプリケーションに渡される引数を取得します。</summary>
+      <returns>引数のリスト。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.CallUI">
+      <summary>ロック画面との間の通信を処理する UI を取得します。</summary>
+      <returns>ロック画面との間の通信を処理する UI。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.CurrentlyShownApplicationViewId">
+      <summary>現在表示されているアプリ ビューの識別子を取得します。</summary>
+      <returns>現在表示されているアプリ ビューの識別子。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.Kind">
+      <summary>アクティブ化の種類を取得します。</summary>
+      <returns>ActivationKind.lockScreenCall 列挙値。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.PreviousExecutionState">
+      <summary>アクティブ化する前のアプリケーションの実行状態を取得します。</summary>
+      <returns>列挙値の 1 つ。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.SplashScreen">
+      <summary>スプラッシュ スクリーンからアクティブ化されたアプリケーションへの切り替えに関する情報を提供するスプラッシュ スクリーン オブジェクトを取得します。</summary>
+      <returns>スプラッシュ スクリーン情報を提供するオブジェクト。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.TileId">
+      <summary>アプリケーションを起動したソースの識別子を取得します。</summary>
+      <returns>タイルの識別子。</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs">
+      <summary>3D 印刷ワークフローのアクティブ化に関連する引数を表します。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.ActivatedOperation">
+      <summary>アクティブ化操作を取得します。</summary>
+      <returns>アクティブな操作。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.Kind">
+      <summary>アプリケーションの種類を取得します。</summary>
+      <returns>アプリケーションの種類。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.PreviousExecutionState">
+      <summary>直前の実行状態を取得します。</summary>
+      <returns>直前の状態。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.SplashScreen">
+      <summary>スプラッシュ スクリーンからアクティブ化されたアプリケーションへの切り替えに関する情報を提供するスプラッシュ スクリーン オブジェクトを取得します。</summary>
+      <returns>スプラッシュ スクリーン。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.Workflow">
+      <summary>印刷ワークフローを取得します。</summary>
+      <returns>印刷ワークフロー。</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs">
+      <summary>印刷タスク設定がアクティブ化されると発生するイベントに応答して提供されます。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.ActivatedOperation">
+      <summary>アプリケーションのアクティブ化操作を取得します。</summary>
+      <returns>アクティベーション操作。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.Configuration">
+      <summary>印刷タスクの構成情報を取得します。</summary>
+      <returns>印刷タスクの構成情報。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.Kind">
+      <summary>アクティブ化の種類を取得します。</summary>
+      <returns>列挙値の 1 つ。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.PreviousExecutionState">
+      <summary>設定がアクティブ化する前にアプリケーションの実行状態を取得します。</summary>
+      <returns>列挙値の 1 つ。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.SplashScreen">
+      <summary>スプラッシュ スクリーンからアクティブ化されたアプリケーションへの切り替えに関する情報を提供するスプラッシュ スクリーン オブジェクトを取得します。</summary>
+      <returns>スプラッシュ スクリーン情報を提供するオブジェクト。</returns>
+    </member></members>
+</doc>

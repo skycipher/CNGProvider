@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Scanners.ScannerDeviceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Scanners.IImageScannerFormatConfiguration">
+      <summary>在扫描仪输入源将获得的图像数据传输给应用程序时配置文件格式。</summary>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerFormatConfiguration.DefaultFormat">
+      <summary>在新扫描会话开始时获取扫描源的默认文件格式。</summary>
+      <returns>文件类型。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerFormatConfiguration.Format">
+      <summary>获取或设置从设备到客户端应用程序的图像数据获取的当前文件传输格式。</summary>
+      <returns>文件类型。</returns>
+    </member><member name="M:Windows.Devices.Scanners.IImageScannerFormatConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>确定输入扫描仪是否支持指定的文件格式。</summary>
+      <returns>如果支持指定的文件类型，则为 True；否则为 False。</returns>
+      <param name="value">文件类型。</param>
+    </member><member name="T:Windows.Devices.Scanners.IImageScannerSourceConfiguration">
+      <summary>查询并配置平板和送纸器源共同使用的扫描设置。</summary>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.ActualResolution">
+      <summary>获取扫描源实际的水平和垂直扫描分辨率（以 DPI 为单位）。</summary>
+      <returns>水平和垂直分辨率，以像素为单位。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.AutoCroppingMode">
+      <summary>获取或设置自动裁剪模式。</summary>
+      <returns>扫描的自动裁剪模式。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.Brightness">
+      <summary>配置用于从扫描源捕获图像数据的当前亮度级别。 在新扫描会话中，此属性的值为 DefaultBrightness 属性。</summary>
+      <returns>亮度级别。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.BrightnessStep">
+      <summary>获取数据源的亮度级别可在最小值和最大值之间增加或减少的步长。</summary>
+      <returns>递增或递减的步长。 典型值为 1。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.ColorMode">
+      <summary>获取或设置扫描源的颜色模式。 当启动新的扫描会话时，此属性与 DefaultColorMode 属性相同。</summary>
+      <returns>色彩模式。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.Contrast">
+      <summary>设置或获取当前从扫描源捕获图像数据时使用的对比度级别。 开始新的扫描会话时，此属性将设置为 DefaultContrast 属性。</summary>
+      <returns>对比度级别。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.ContrastStep">
+      <summary>获取数据源的对比度级别可在最小值和最大值之间增加或减少的步长。</summary>
+      <returns>递增或递减的步长。 典型值为 1。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DefaultBrightness">
+      <summary>获取扫描源的默认亮度级别。</summary>
+      <returns>扫描仪的默认亮度级别。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DefaultColorMode">
+      <summary>获取此扫描源的默认颜色模式。</summary>
+      <returns>色彩模式。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DefaultContrast">
+      <summary>获取扫描源的默认对比度级别。</summary>
+      <returns>默认对比度级别。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DesiredResolution">
+      <summary>获取或设置应用程序请求的扫描源的水平和垂直扫描分辨率（以 DPI 为单位）。</summary>
+      <returns>水平和垂直分辨率，以像素为单位。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxBrightness">
+      <summary>获取扫描源支持的最高亮度级别。</summary>
+      <returns>最大亮度级别，通常为 1000。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxContrast">
+      <summary>获取扫描源支持的最高对比度。</summary>
+      <returns>最大对比度级别，通常为 1000。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxResolution">
+      <summary>获取扫描源的最高水平扫描分辨率和最高垂直扫描分辨率（以 DPI 为单位）。</summary>
+      <returns>水平和垂直分辨率，以像素为单位。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxScanArea">
+      <summary>获取最大扫描区域维度（以英寸为单位）。 最大扫描宽度是文档为不妨碍送纸器和平板对其进行扫描而能够具有的最长宽度。</summary>
+      <returns>区域的宽度和高度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinBrightness">
+      <summary>获取扫描源支持的最低亮度级别。</summary>
+      <returns>最小亮度级别，通常为 1000。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinContrast">
+      <summary>获取扫描源支持的最低对比度。</summary>
+      <returns>最小对比度级别，通常为 1000。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinResolution">
+      <summary>获取扫描源的最低水平扫描分辨率和最低垂直扫描分辨率（以 DPI 为单位）。</summary>
+      <returns>水平和垂直分辨率，以像素为单位。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinScanArea">
+      <summary>获取最小扫描区域（以英寸为单位）。 最小扫描区域是文档为不妨碍平板或送纸器对其进行扫描而能够具有的最小尺寸。</summary>
+      <returns>区域的宽度和高度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.OpticalResolution">
+      <summary>获取扫描源的光学水平扫描分辨率和垂直扫描分辨率（以 DPI 为单位）。</summary>
+      <returns>水平和垂直扫描分辨率，以像素为单位。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.SelectedScanRegion">
+      <summary>获取或设置选定扫描区域的原始坐标（水平和垂直）和维度（宽度和高度）（以英寸为单位）。 当 AutoCroppingMode 属性未设置为 Disabled 时，将忽略此属性。</summary>
+      <returns>矩形的位置和大小。</returns>
+    </member><member name="M:Windows.Devices.Scanners.IImageScannerSourceConfiguration.IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)">
+      <summary>确定扫描源是否支持指定的 ImageScannerAutoCroppingMode。</summary>
+      <returns>如果设备支持值模式，则为 true；否则为 false。</returns>
+      <param name="value">要扫描的图像的自动裁剪模式。</param>
+    </member><member name="M:Windows.Devices.Scanners.IImageScannerSourceConfiguration.IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)">
+      <summary>确定扫描源是否可在指定的颜色模式中扫描和传输图像。</summary>
+      <returns>如果扫描仪可以在值模式下扫描图像，则为 true；否则为 false。</returns>
+      <param name="value">色彩模式。</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScanner">
+      <summary>表示要扫描的图像的属性。</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.AutoConfiguration">
+      <summary>获取并设置自动配置的扫描单元的扫描设置（如文件格式），包括将已扫描数据传入到的压缩格式。 如果扫描仪无法自动配置，将忽略此属性。</summary>
+      <returns>扫描配置。 如果扫描仪不能自动配置，则为 null。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.DefaultScanSource">
+      <summary>获取为此扫描仪设备选择的默认扫描源。</summary>
+      <returns>扫描源的类型。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.DeviceId">
+      <summary>获取此扫描仪设备的 PnP 设备标识符。</summary>
+      <returns>PnP 设备标识符。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.FeederConfiguration">
+      <summary>获取或设置送纸器扫描单元的扫描设置，如页大小、方向和扫描分辨率。</summary>
+      <returns>扫描仪的送稿器配置。 如果无送纸器，则为 null。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.FlatbedConfiguration">
+      <summary>获取并设置平板扫描单元的扫描设置，如扫描分辨率和颜色模式。</summary>
+      <returns>扫描仪平板的扫描配置。 如果无平板，则为 null。</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.FromIdAsync(System.String)">
+      <summary>创建基于扫描仪设备信息 ID 的 ImageScanner 对象的实例。 此方法是代理设备枚举所必需的。</summary>
+      <returns>ImageScanner 对象。</returns>
+      <param name="deviceId">设备信息 ID。 请参阅 DeviceInformation.Id 属性。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.GetDeviceSelector">
+      <summary>返回应用程序可用于枚举扫描仪设备的类选择字符串。 此方法是被代理设备枚举所必需的。</summary>
+      <returns>类选择。</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.IsPreviewSupported(Windows.Devices.Scanners.ImageScannerScanSource)">
+      <summary>确定指定的扫描源是否支持扫描预览。</summary>
+      <returns>如果指定的扫描源支持预览，则返回 True；否则返回 False。</returns>
+      <param name="scanSource">扫描源。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.IsScanSourceSupported(Windows.Devices.Scanners.ImageScannerScanSource)">
+      <summary>确定指定的扫描源是否适用于扫描仪。</summary>
+      <returns>如果扫描源(平板或供稿器)可用，则为 true；否则为 false。</returns>
+      <param name="value">扫描源。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.ScanFilesToFolderAsync(Windows.Devices.Scanners.ImageScannerScanSource,Windows.Storage.StorageFolder)">
+      <summary>对指定的扫描源启动一项扫描作业，并将一个或多个图像写入一个多页文件（例如 TIFF、XPS 和 PDF 中）；或将一个或多个单页文件（例如 DIB、PNG、JPG 和 TIFF）写入指定的文件夹位置。 返回扫描进度。</summary>
+      <returns>ImageScannerScanResult 中的已扫描图像文件以及 UInt32 中的 WIA 扫描作业进度列表，用于指示已将多少文件传输到目标文件夹。</returns>
+      <param name="scanSource">图像扫描源。</param>
+      <param name="storageFolder">已扫描文件的目标文件夹位置。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.ScanPreviewToStreamAsync(Windows.Devices.Scanners.ImageScannerScanSource,Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>从指定的扫描源扫描一个图像并应用最低扫描分辨率和选定的图像文件格式。</summary>
+      <returns>扫描进度和已扫描文件的格式。</returns>
+      <param name="scanSource">图像扫描源。</param>
+      <param name="targetStream">已扫描的图像文件。</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerAutoConfiguration">
+      <summary>表示扫描仪中自动配置的扫描源。</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerAutoConfiguration.DefaultFormat">
+      <summary>新扫描会话开始时扫描源的默认文件格式。</summary>
+      <returns>文件类型。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerAutoConfiguration.Format">
+      <summary>获取或设置从设备到客户端应用程序的图像数据获取的当前文件传输格式。</summary>
+      <returns>文件类型。</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerAutoConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>确定输入扫描仪是否支持指定的文件格式。</summary>
+      <returns>如果支持指定的文件类型，则为 True；否则为 False。</returns>
+      <param name="value">文件类型。</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerAutoCroppingMode">
+      <summary>指定扫描设备的自动裁切模式。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerAutoCroppingMode.Disabled">
+      <summary>已禁用自动检测。 开始新的扫描会话时，AutoCroppingMode 属性将默认设置为此值。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerAutoCroppingMode.MultipleRegion">
+      <summary>将多个扫描区域扫描到单独的各个图像中。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerAutoCroppingMode.SingleRegion">
+      <summary>将单个扫描区域扫描到单独的各个图像中。</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerColorMode">
+      <summary>指定扫描源的颜色模式。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.AutoColor">
+      <summary>设备会根据扫描内容自动检测正确的色彩模式。 例如，在此情况下，在彩色、灰阶和黑白之间选择决策依赖于设备，而非应用程序。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.Color">
+      <summary>24 位 RGB 颜色（3 个通道，每通道 8 位）。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.Grayscale">
+      <summary>8 位或 4 位灰度（1 个通道，每通道 8 或 4 位）。 如果设备同时支持 4 位和 8 位灰阶，DefaultColorMode 属性将使用 8 位。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.Monochrome">
+      <summary>1 位双调，也称为单色或“黑白”（1 个通道，每通道 1 位）。</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerFeederConfiguration">
+      <summary>表示扫描仪的送纸器扫描源。</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ActualResolution">
+      <summary>获取扫描仪的平板实际的水平和垂直扫描分辨率（以 DPI 为单位）。</summary>
+      <returns>水平和垂直分辨率，以像素为单位。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.AutoCroppingMode">
+      <summary>获取或设置自动裁剪模式。</summary>
+      <returns>扫描的自动裁剪模式。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.AutoDetectPageSize">
+      <summary>获取或设置扫描仪的送纸器的页大小自动检测功能。</summary>
+      <returns>如果页面大小自动检测功能已启用，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Brightness">
+      <summary>获取或设置用于从扫描仪的送纸器中捕获图像数据的当前亮度级别。 开始新的扫描会话时，此属性将设置为 DefaultBrightness 属性。</summary>
+      <returns>当前亮度级别。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.BrightnessStep">
+      <summary>获取数据源的亮度级别可在最小值和最大值之间增加或减少的步长。</summary>
+      <returns>递增或递减的步长。 典型值为 1。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.CanAutoDetectPageSize">
+      <summary>如果设备可以在扫描时自动检测通过送纸器扫描的文档页的大小，则返回 True；否则返回 False。</summary>
+      <returns>如果设备可以在扫描时自动检测通过送稿器扫描的文档页的大小，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.CanScanAhead">
+      <summary>获取扫描仪设备是否能够在其送纸器之前执行扫描。</summary>
+      <returns>指示扫描仪的送纸器是否可以提前扫描。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.CanScanDuplex">
+      <summary>获取扫描仪的送纸器是否能够执行双重扫描（扫描文档页面的正反两面）。 以双面打印模式扫描时，将应用相同的扫描设置(例如颜色模式和扫描分辨率)来扫描纸张的两面。</summary>
+      <returns>指示双重扫描是否可用。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ColorMode">
+      <summary>获取或设置扫描仪的送纸器的颜色模式。</summary>
+      <returns>色彩模式。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Contrast">
+      <summary>设置或获取当前从扫描仪扫送纸器捕获图像数据时使用的对比度级别。 开始新的扫描会话时，此属性将设置为 DefaultContrast 属性。</summary>
+      <returns>对比度级别。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ContrastStep">
+      <summary>获取数据源的对比度级别可在最小值和最大值之间增加或减少的步长。</summary>
+      <returns>递增或递减的步长。 典型值为 1。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultBrightness">
+      <summary>获取扫描仪的送纸器的默认亮度级别。</summary>
+      <returns>扫描仪的默认亮度级别。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultColorMode">
+      <summary>获取扫描仪的送纸器的默认颜色模式。</summary>
+      <returns>色彩模式。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultContrast">
+      <summary>获取扫描仪的送纸器的默认对比度级别。</summary>
+      <returns>默认对比度级别。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultFormat">
+      <summary>在新扫描会话开始时获取扫描仪的送纸器的默认文件格式。</summary>
+      <returns>文件类型。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DesiredResolution">
+      <summary>获取或设置应用程序请求的扫描仪送纸器的水平和垂直扫描分辨率（以 DPI 为单位）。</summary>
+      <returns>水平和垂直分辨率，以像素为单位。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Duplex">
+      <summary>指示扫描仪送纸器是否可以扫描文档页面的正反两面。</summary>
+      <returns>如果送纸器可以扫描页面的正反两面，则返回 True。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Format">
+      <summary>获取或设置从扫描仪的送纸器到客户端应用程序的图像数据获取的当前文件传输格式。</summary>
+      <returns>文件类型。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxBrightness">
+      <summary>获取扫描仪的送纸器支持的最高亮度级别。</summary>
+      <returns>最大亮度级别，通常为 1000。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxContrast">
+      <summary>获取扫描仪的送纸器支持的最高对比度。</summary>
+      <returns>最大对比度级别，通常为 1000。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxNumberOfPages">
+      <summary>获取或设置在扫描仪停止之前应用程序可在一个扫描作业中扫描的最大页数（非图像）。</summary>
+      <returns>页数。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxResolution">
+      <summary>获取扫描仪的送纸器的最高水平扫描分辨率和最高垂直扫描分辨率（以 DPI 为单位）。</summary>
+      <returns>水平和垂直分辨率，以像素为单位。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxScanArea">
+      <summary>获取最大扫描区域维度（以英寸为单位）。 最大扫描宽度是文档为不妨碍扫描仪的送纸器对其进行扫描而能够具有的最长宽度。</summary>
+      <returns>区域的宽度和高度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinBrightness">
+      <summary>获取扫描仪的送纸器支持的最低亮度级别。</summary>
+      <returns>最小亮度级别，通常为 1000。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinContrast">
+      <summary>获取扫描仪的送纸器支持的最低对比度。</summary>
+      <returns>最小对比度级别，通常为 1000。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinResolution">
+      <summary>获取扫描仪的送纸器的最低水平扫描分辨率和最低垂直扫描分辨率（以 DPI 为单位）。</summary>
+      <returns>水平和垂直分辨率，以像素为单位。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinScanArea">
+      <summary>获取最小扫描区域（以英寸为单位）。 最小扫描区域是文档为不妨碍送纸器对其进行扫描而能够具有的最小尺寸。</summary>
+      <returns>区域的宽度和高度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.OpticalResolution">
+      <summary>获取扫描仪送纸器的光学水平扫描分辨率和垂直扫描分辨率（以 DPI 为单位）。</summary>
+      <returns>水平和垂直扫描分辨率，以像素为单位。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.PageOrientation">
+      <summary>获取或设置当前选择的页面方向，该方向告知如何将文档放入扫描仪的送纸器输入纸盒。</summary>
+      <returns>页的方向。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.PageSize">
+      <summary>获取或设置当前选择的要从送纸器中扫描的页大小。</summary>
+      <returns>页大小。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.PageSizeDimensions">
+      <summary>获取选定页大小（以密耳（1/1000 英寸）为单位）的维度（宽度和高度）和方向。</summary>
+      <returns>页大小。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ScanAhead">
+      <summary>指示是否要提前扫描。</summary>
+      <returns>若为 true，则提前扫描。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.SelectedScanRegion">
+      <summary>获取或设置选定扫描区域的原始坐标（水平和垂直）和维度（宽度和高度）（以英寸为单位）。 当 AutoCroppingMode 属性不为 Disabled 时，将忽略此属性。</summary>
+      <returns>扫描区域，以英寸为单位。</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)">
+      <summary>返回扫描仪送纸器是否支持指定的 ImageScannerAutoCroppingMode。</summary>
+      <returns>指示设备是否支持值模式。</returns>
+      <param name="value">要扫描的图像的自动裁剪模式。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)">
+      <summary>返回扫描仪送纸器是否可以按照指定的颜色模式扫描和传输图像。</summary>
+      <returns>指示扫描仪是否可以在值模式下扫描图像。</returns>
+      <param name="value">色彩模式。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>确定扫描仪的送纸器是否支持指定的文件格式。</summary>
+      <returns>指示指定的文件类型是否受支持。</returns>
+      <param name="value">文件类型。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsPageSizeSupported(Windows.Graphics.Printing.PrintMediaSize,Windows.Graphics.Printing.PrintOrientation)">
+      <summary>返回送纸器是否可以按照指定的页面大小和方向扫描文档。</summary>
+      <returns>指示扫描仪可使用 pageSize 和 pageOrientation 值进行扫描。</returns>
+      <param name="pageSize">页大小。</param>
+      <param name="pageOrientation">页的方向。</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration">
+      <summary>表示扫描仪的平板扫描源。</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.ActualResolution">
+      <summary>获取平板扫描仪实际的水平和垂直扫描分辨率（以 DPI 为单位）。</summary>
+      <returns>水平和垂直分辨率，以像素为单位。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.AutoCroppingMode">
+      <summary>获取或设置自动裁剪模式。</summary>
+      <returns>扫描的自动裁剪模式。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.Brightness">
+      <summary>获取或设置用于从扫描仪的平板中捕获图像数据的当前亮度级别。 开始新的扫描会话时，此属性将设置为 DefaultBrightness 属性。</summary>
+      <returns>当前亮度级别。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.BrightnessStep">
+      <summary>获取数据源的亮度级别可在最小值和最大值之间增加或减少的步长。</summary>
+      <returns>递增或递减的步长。 典型值为 1。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.ColorMode">
+      <summary>获取或设置平板扫描仪的颜色模式。</summary>
+      <returns>色彩模式。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.Contrast">
+      <summary>设置或获取当前从扫描源捕获图像数据时使用的对比度级别。 开始新的扫描会话时，此属性将设置为 DefaultContrast 属性。</summary>
+      <returns>对比度级别。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.ContrastStep">
+      <summary>获取数据源的对比度级别可在最小值和最大值之间增加或减少的步长。</summary>
+      <returns>递增或递减的步长。 典型值为 1。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultBrightness">
+      <summary>获取扫描仪的平板的默认亮度级别。</summary>
+      <returns>扫描仪的默认亮度级别。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultColorMode">
+      <summary>获取扫描仪的平板的默认颜色模式。</summary>
+      <returns>色彩模式。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultContrast">
+      <summary>获取扫描仪的平板的默认对比度级别。</summary>
+      <returns>默认对比度级别。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultFormat">
+      <summary>在新扫描会话开始时获取扫描仪的平板的默认文件格式。</summary>
+      <returns>文件类型。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DesiredResolution">
+      <summary>获取或设置应用程序请求的扫描仪平板的水平和垂直扫描分辨率（以 DPI 为单位）。</summary>
+      <returns>水平和垂直分辨率，以像素为单位。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.Format">
+      <summary>获取或设置从扫描仪的平板到客户端应用程序的图像数据获取的当前文件传输格式。</summary>
+      <returns>文件类型。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxBrightness">
+      <summary>获取扫描仪的平板支持的最高亮度级别。</summary>
+      <returns>最大亮度级别，通常为 1000。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxContrast">
+      <summary>获取扫描仪的平板支持的最高对比度。</summary>
+      <returns>最大对比度级别，通常为 1000。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxResolution">
+      <summary>获取扫描仪的平板的最高水平扫描分辨率和最高垂直扫描分辨率（以 DPI 为单位）。</summary>
+      <returns>水平和垂直分辨率，以像素为单位。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxScanArea">
+      <summary>获取最大扫描区域维度（以英寸为单位）。 最大扫描宽度是文档为不妨碍扫描仪的平板对其进行扫描而能够具有的最长宽度。</summary>
+      <returns>区域的宽度和高度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinBrightness">
+      <summary>获取扫描仪的平板支持的最低亮度级别。</summary>
+      <returns>最小亮度级别，通常为 1000。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinContrast">
+      <summary>获取扫描仪的平板支持的最低对比度。</summary>
+      <returns>最小对比度级别，通常为 1000。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinResolution">
+      <summary>获取扫描仪的平板的最低水平扫描分辨率和最低垂直扫描分辨率（以 DPI 为单位）。</summary>
+      <returns>水平和垂直分辨率，以像素为单位。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinScanArea">
+      <summary>获取最小扫描区域（以英寸为单位）。 最小扫描区域是文档为不妨碍平板对其进行扫描而能够具有的最小尺寸。</summary>
+      <returns>区域的宽度和高度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.OpticalResolution">
+      <summary>获取平板扫描仪的光学扫描分辨率（以 DPI 为单位）。</summary>
+      <returns>水平和垂直扫描分辨率，以像素为单位。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.SelectedScanRegion">
+      <summary>获取或设置选定扫描区域的原始坐标（水平和垂直）和维度（宽度和高度）（以英寸为单位）。 当 AutoCroppingMode 属性不为 Disabled 时，将忽略此属性。</summary>
+      <returns>矩形的位置和大小。</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)">
+      <summary>返回扫描仪的平板是否支持指定的 ImageScannerAutoCroppingMode。</summary>
+      <returns>指示设备是否支持值模式。</returns>
+      <param name="value">要扫描的图像的自动裁剪模式。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)">
+      <summary>返回扫描仪平板是否可以按照指定的颜色模式扫描和传输图像。</summary>
+      <returns>指示扫描仪是否可以在值模式下扫描图像。</returns>
+      <param name="value">色彩模式。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>确定扫描仪的平板是否支持指定的文件格式。</summary>
+      <returns>指示指定的文件类型是否受支持。</returns>
+      <param name="value">文件类型。</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerFormat">
+      <summary>扫描后生成的文件类型。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.DeviceIndependentBitmap">
+      <summary>Windows 设备无关位图 (DIB) 此值支持所有颜色模式，采取单页形式，不实施压缩。 这是受所有兼容的 WIA 2.0 扫描仪设备支持的唯一格式。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Jpeg">
+      <summary>可交换图像文件格式/EXIF 或 JPEG 文件交换格式/JFIF仅在颜色或灰度模式中（8 位/通道/样本）使用这些文件，并采用单页和压缩方式（有损 JPEG 压缩）。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.OpenXps">
+      <summary>开放 XML 纸张规范 (OpenXPS) 文档文件格式。这些文件可包含此 API 支持的任何颜色模式下的图像数据，由设备选择压缩，采取单页或多页形式。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Pdf">
+      <summary>可移植文档格式 PDF/A（PDF/A 是专门用于以数字方式保存电子文档的可移植文档格式/PDF 的 ISO 标准化版本）文档文件格式这些文件可包含此 API 支持的任何颜色模式下的图像数据，由设备选择压缩，采取单页或多页形式。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Png">
+      <summary>可移植网络图形 (PNG) 图形文件格式此值支持任意颜色模式，采取单页形式，并实施压缩（无损 PNG 压缩）。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Tiff">
+      <summary>与 TIFF 6.0 规范兼容的未压缩标记图像文件格式(TIFF)，单页和/或多页 这些文件可以处于此 API 支持的任何颜色模式下，始终未经压缩，并且可以是单页(如果只须传输一个图像)或多页(如果必须传输多个图像，并且该设备支持这种多页文件格式)。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Xps">
+      <summary>Microsoft XML 纸张规范 (XPS) 文档文件格式这些文件可包含此 API 支持的任何颜色模式下的图像数据，由设备选择压缩，采取单页或多页形式。</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerPreviewResult">
+      <summary>表示预览扫描作业的结果。</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerPreviewResult.Format">
+      <summary>获取扫描预览的数据格式。 预览后，此属性将还原到预览前的值。</summary>
+      <returns>扫描格式。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerPreviewResult.Succeeded">
+      <summary>获取扫描预览是否成功。</summary>
+      <returns>如果扫描预览成功，则为 True；否则为 False。</returns>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerResolution">
+      <summary>指定扫描分辨率。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerResolution.DpiX">
+      <summary>水平尺寸。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerResolution.DpiY">
+      <summary>垂直大小。</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerScanResult">
+      <summary>表示扫描作业的结果。</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerScanResult.ScannedFiles">
+      <summary>获取由已完成的扫描作业生成的已扫描图像文件的列表。</summary>
+      <returns>来自已完成的扫描作业的已扫描图像文件的列表。 如果没有扫描文件，IVectorView&lt;T&gt;.Size 属性将为 0。</returns>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerScanSource">
+      <summary>扫描设备的扫描源的类型。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.AutoConfigured">
+      <summary>自动配置扫描源。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.Default">
+      <summary>默认源。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.Feeder">
+      <summary>送纸器扫描源。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.Flatbed">
+      <summary>平板扫描源。</summary>
+    </member></members>
+</doc>

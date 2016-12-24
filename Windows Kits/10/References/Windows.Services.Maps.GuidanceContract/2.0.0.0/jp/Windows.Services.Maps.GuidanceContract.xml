@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Services.Maps.GuidanceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem">
+      <summary>オーディオ ガイダンスに使用する測定システムを指定します。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem.Meters">
+      <summary>測定システム。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem.MilesAndFeet">
+      <summary>米国慣用単位。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem.MilesAndYards">
+      <summary>ヤードポンド法。</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind">
+      <summary>AudioNotificationRequested イベントがトリガーされたときに要求されるオーディオ通知の種類を指定します。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.Gps">
+      <summary>GPS 通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.Maneuver">
+      <summary>運転通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.Route">
+      <summary>ルート通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.SpeedLimit">
+      <summary>速度制限通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.Traffic">
+      <summary>トラフィック通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.TrafficCamera">
+      <summary>トラフィック カメラ通知。</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs">
+      <summary>AudioNotificationRequested イベントのデータを指定します。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs.AudioFilePaths">
+      <summary>再生が要求されたオーディオ ファイルのリストを取得します。</summary>
+      <returns>再生が要求されたオーディオ ファイルのリスト。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs.AudioNotification">
+      <summary>要求されたオーディオ通知の種類を取得します。</summary>
+      <returns>要求されたオーディオ通知の種類。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs.AudioText">
+      <summary>要求されたオーディオ通知のテキスト ベース バージョンを取得します。</summary>
+      <returns>要求されたオーディオ通知のテキスト ベース バージョン。</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceAudioNotifications">
+      <summary>ナビゲーション中に使用されるオーディオ通知の種類を指定します。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.Gps">
+      <summary>GPS 通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.Maneuver">
+      <summary>戦略通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.None">
+      <summary>オーディオ通知が選択されていません。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.Route">
+      <summary>ルート通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.SpeedLimit">
+      <summary>速度制限通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.Traffic">
+      <summary>トラフィック通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.TrafficCamera">
+      <summary>トラフィック カメラ通知。</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceLaneInfo">
+      <summary>現在の場所付近のレーンとルートとのその関係を表します。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceLaneInfo.IsOnRoute">
+      <summary>レーンがルート上にあるかどうかを示す値を取得します。</summary>
+      <returns>レーンがルート上にある場合は true。それ以外の場合は false。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceLaneInfo.LaneMarkers">
+      <summary>レーンのパスを表す値を取得します。</summary>
+      <returns>レーンのパスを表す値 (種類は GuidanceLaneMarkers) を取得します。</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceLaneMarkers">
+      <summary>レーンのパスを指定します。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.HardLeft">
+      <summary>急角度の左折マーカー。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.HardRight">
+      <summary>急角度の右折マーカー。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.Left">
+      <summary>左折マーカー。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.LightLeft">
+      <summary>緩い角度の左折マーカー。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.LightRight">
+      <summary>緩い角度の右折マーカー。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.None">
+      <summary>レーン マーカーがありません。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.Right">
+      <summary>右折マーカー。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.Straight">
+      <summary>直進マーカー。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.Unknown">
+      <summary>レーン マーカー情報があります。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.UTurnLeft">
+      <summary>左 U ターン マーカー。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.UTurnRight">
+      <summary>右 U ターン マーカー。</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceManeuver">
+      <summary>案内されたルートに沿った運転を表します。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.DepartureRoadName">
+      <summary>運転を開始する道路の完全名を取得します。</summary>
+      <returns>運転を開始する道路の完全名。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.DepartureShortRoadName">
+      <summary>運転を開始する道路の短縮名を取得します。 たとえば、"I-90" などの高速道路番号です。</summary>
+      <returns>運転の開始時における道路の短縮名。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.DistanceFromPreviousManeuver">
+      <summary>前の運転から今回の運転までの距離を取得します (メートル単位)。</summary>
+      <returns>前の運転から今回の運転までの距離 (メートル単位)。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.DistanceFromRouteStart">
+      <summary>ルートの開始地点から今回の運転までの距離を取得します (メートル単位)。</summary>
+      <returns>ルートの開始地点から今回の運転までの距離 (メートル単位)。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.EndAngle">
+      <summary>コントロールの終了地点の方位を示す値を度数単位 (0 または 360 = 北、90 = 東、180 = 南、270 = 西) で取得します。</summary>
+      <returns>コントロールの終了地点の度数単位の方位 (0 または 360 = 北、90 = 東、180 = 南、270 = 西)。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.InstructionText">
+      <summary>案内に関連付けられた指示のテキストを取得します。</summary>
+      <returns>コントロールに関連付けられた指示のテキスト。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.Kind">
+      <summary>案内の種類を取得します。</summary>
+      <returns>コントロールの種類。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.NextRoadName">
+      <summary>運転を終了する道路の完全名を取得します。</summary>
+      <returns>運転を終了する道路の完全名。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.NextShortRoadName">
+      <summary>運転を終了する道路の短縮名を取得します。 たとえば、"I-90" などの高速道路番号です。</summary>
+      <returns>運転を終了する道路の短縮名。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.RoadSignpost">
+      <summary>運転に関連付けられる道路の標識を表す値を取得します。</summary>
+      <returns>運転に関連付けられる道路の標識を表す値。 データを使用できない場合、この値は null を返します。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.StartAngle">
+      <summary>コントロールの開始地点の方位を示す値を度数単位 (0 または 360 = 北、90 = 東、180 = 南、270 = 西) で取得します。</summary>
+      <returns>コントロールの開始地点の度数単位の方位 (0 または 360 = 北、90 = 東、180 = 南、270 = 西)。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.StartLocation">
+      <summary>コントロールの開始位置を取得します。</summary>
+      <returns>コントロールが開始される位置。</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceManeuverKind">
+      <summary>ガイダンス運転の種類を指定します。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.End">
+      <summary>目的地に到着しました。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayEnterLeft">
+      <summary>高速道路の右レーンに入ります。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayEnterRight">
+      <summary>高速道路の左レーンに入ります。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayKeepLeft">
+      <summary>高速道路の左レーンを走行します。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayKeepRight">
+      <summary>高速道路の右レーンを走行します。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayLeaveLeft">
+      <summary>左のレーンから高速道路を出ます。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayLeaveRight">
+      <summary>右のレーンから高速道路を出ます。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.GoStraight">
+      <summary>直進します。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.KeepMiddle">
+      <summary>中央レーンを走行します。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.LeaveTransitStation">
+      <summary>公共の通過ステーションを出発します。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.None">
+      <summary>適用される運転がありません。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.PassTransitStation">
+      <summary>公共の通過ステーションを通過します。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.Start">
+      <summary>出発ポイント。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TakeFerry">
+      <summary>フェリーに入ります。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft1">
+      <summary>ラウンドアバウト出口 1 を利用します (左側通行)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft10">
+      <summary>ラウンドアバウト出口 10 を利用します (左側通行)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft11">
+      <summary>ラウンドアバウト出口 11 を利用します (左側通行)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft12">
+      <summary>ラウンドアバウト出口 12 を利用します (左側通行)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft2">
+      <summary>ラウンドアバウト出口 2 を利用します (左側通行)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft3">
+      <summary>ラウンドアバウト出口 3 を利用します (左側通行)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft4">
+      <summary>ラウンドアバウト出口 4 を利用します (左側通行)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft5">
+      <summary>ラウンドアバウト出口 5 を利用します (左側通行)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft6">
+      <summary>ラウンドアバウト出口 6 を利用します (左側通行)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft7">
+      <summary>ラウンドアバウト出口 7 を利用します (左側通行)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft8">
+      <summary>ラウンドアバウト出口 8 を利用します (左側通行)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft9">
+      <summary>ラウンドアバウト出口 9 を利用します (左側通行)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight1">
+      <summary>ラウンドアバウト出口 1 を利用します (右側通行)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight10">
+      <summary>ラウンドアバウト出口 10 を利用します (右側通行)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight11">
+      <summary>ラウンドアバウト出口 11 を利用します (右側通行)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight12">
+      <summary>ラウンドアバウト出口 12 を利用します (右側通行)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight2">
+      <summary>ラウンドアバウト出口 2 を利用します (右側通行)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight3">
+      <summary>ラウンドアバウト出口 3 を利用します (右側通行)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight4">
+      <summary>ラウンドアバウト出口 4 を利用します (右側通行)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight5">
+      <summary>ラウンドアバウト出口 5 を利用します (右側通行)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight6">
+      <summary>ラウンドアバウト出口 6 を利用します (右側通行)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight7">
+      <summary>ラウンドアバウト出口 7 を利用します (右側通行)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight8">
+      <summary>ラウンドアバウト出口 8 を利用します (右側通行)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight9">
+      <summary>ラウンドアバウト出口 9 を利用します (右側通行)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnHardLeft">
+      <summary>急角度で左に曲がります。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnHardRight">
+      <summary>急角度で右に曲がります。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnKeepLeft">
+      <summary>左レーンを走行します。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnKeepRight">
+      <summary>右レーンを走行します。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnLeft">
+      <summary>左折します (約 90 度)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnLightLeft">
+      <summary>左に軽く曲がります。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnLightRight">
+      <summary>右に軽く曲がります。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnRight">
+      <summary>右折します (約 90 度)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.UTurnLeft">
+      <summary>左側に U ターン。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.UTurnRight">
+      <summary>右側に U ターン。</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate">
+      <summary>ユーザーの現在位置におけるナビゲーション条件について説明します。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.CurrentHeading">
+      <summary>現在の向きを角度で示す値を取得します。0 または 360 は北、90 は東、180 は南、270 は西を表します。</summary>
+      <returns>現在の向きを角度で示す値 (0 または 360 = 北、90 = 東、180 = 南、270 = 西)。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.CurrentSpeed">
+      <summary>現在の速度をメートル秒で示すの値を取得します。</summary>
+      <returns>現在の速度 (メートル秒単位)。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.IsOnStreet">
+      <summary>現在位置が道路上にあるかどうかを示す値を取得します。</summary>
+      <returns>現在位置が道路上にある場合は true、それ以外の場合は false。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.Location">
+      <summary>現在の地理的位置を取得します。</summary>
+      <returns>現在の地理的位置。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.Road">
+      <summary>現在位置の道路を示す値を取得します。</summary>
+      <returns>現在位置の道路を示す値。</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceMode">
+      <summary>ナビゲーション ガイダンスの種類を指定します。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceMode.Navigation">
+      <summary>ナビゲーション ガイダンスがアクティブです。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceMode.None">
+      <summary>エンジンがアクティブではないことを示します。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceMode.Simulation">
+      <summary>ナビゲーション ガイダンスがシミュレーションされます。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceMode.Tracking">
+      <summary>ナビゲーション サポートは、指定されたルートなしで提供されます。</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceNavigator">
+      <summary>ナビゲーション ガイダンスを提供します。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceNavigator.AudioMeasurementSystem">
+      <summary>オーディオ ガイダンスに使用する測定システムを取得または設定します。</summary>
+      <returns>オーディオ ガイダンスに使用する測定システム。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceNavigator.AudioNotifications">
+      <summary>ナビゲーション ガイダンスにより提供されているオーディオ通知の種類を取得または設定します。</summary>
+      <returns>ナビゲーション ガイダンスにより提供されているオーディオ通知の種類。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceNavigator.IsGuidanceAudioMuted">
+      <summary>オーディオ ガイダンスがミュートされているかどうかを示す値を取得または設定します。</summary>
+      <returns>値が true の場合はオーディオ ガイダンスがミュートされます。それ以外、オーディオ ガイダンスはミュートされません。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceNavigator.UseAppProvidedVoice">
+      <summary>Cortana がデバイスに使用されているかどうかを示す値を取得します。</summary>
+      <returns>値が true の場合、Cortana はデバイスで使用されています。それ以外の場合は false です。</returns>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.AudioNotificationRequested">
+      <summary>次の右折/左折や出口など、ナビゲーション ガイダンスにオーディオ通知が適切な場合に発生します。</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.DestinationReached">
+      <summary>ルートの目的地に到着したときに発生します。</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.GuidanceUpdated">
+      <summary>ナビゲーション ガイダンスが更新されたときに発生します。</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.Rerouted">
+      <summary>ナビゲーション ガイダンスがルート変更されたときに発生します。</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.RerouteFailed">
+      <summary>ナビゲーション ガイダンスのルート変更に失敗したときに発生します。</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.Rerouting">
+      <summary>ナビゲーション ガイダンスがルート変更されるときに発生します。</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.UserLocationLost">
+      <summary>ユーザーの位置が失われた場合に発生します。</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.UserLocationRestored">
+      <summary>ユーザーの位置が復元された場合に発生します。</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.GetCurrent">
+      <summary>現在のナビゲーション ガイダンスを表す GuidanceNavigator オブジェクトを取得します。</summary>
+      <returns>現在のナビゲーション ガイダンスを表す GuidanceNavigator オブジェクト。</returns>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.Pause">
+      <summary>ナビゲーション ガイダンスを一時停止します。</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.RepeatLastAudioNotification">
+      <summary>最後のオーディオ通知を繰り返します。</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.Resume">
+      <summary>ナビゲーション ガイダンスを再開します。</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.SetGuidanceVoice(System.Int32,System.String)">
+      <summary>オーディオ通知用に使用する音声を設定します。</summary>
+      <param name="voiceId">音声識別子。</param>
+      <param name="voiceFolder">指定された音声のフォルダー パス。</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.StartNavigating(Windows.Services.Maps.Guidance.GuidanceRoute)">
+      <summary>指定したルートを使用してナビゲーション ガイダンスを開始します。</summary>
+      <param name="route">ナビゲーションするルート。</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.StartSimulating(Windows.Services.Maps.Guidance.GuidanceRoute,System.Int32)">
+      <summary>指定したルートを使用してナビゲーション ガイダンスのシミュレーションを開始します。</summary>
+      <param name="route">ナビゲーションするルート。</param>
+      <param name="speedInMetersPerSecond">ナビゲーション シミュレーションの速度 (メートル秒)。</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.StartTracking">
+      <summary>指定したルートなしでナビゲーション ガイダンスを開始します。</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.Stop">
+      <summary>ナビゲーション ガイダンスを停止します。</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.UpdateUserLocation(Windows.Devices.Geolocation.Geocoordinate)">
+      <summary>指定された地理的位置を使用してナビゲーション ガイダンスを更新します。</summary>
+      <param name="userLocation">ユーザーの現在位置。</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.UpdateUserLocation(Windows.Devices.Geolocation.Geocoordinate,Windows.Devices.Geolocation.BasicGeoposition)">
+      <summary>指定された地理的位置を使用してナビゲーション ガイダンスを更新します。</summary>
+      <param name="userLocation">ユーザーの現在位置。</param>
+      <param name="positionOverride">userLocation で指定されたものの代わりに使用する高度、緯度、経度。</param>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs">
+      <summary>Rerouted イベントのデータを提供します。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs.Route">
+      <summary>ルート変更によって作成された新しいルートを取得します。</summary>
+      <returns>新しいルート。</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceRoadSegment">
+      <summary>ルートのセグメント上のロードを表します。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.Id">
+      <summary>道路セグメントの識別子を取得します。</summary>
+      <returns>道路セグメントの識別子。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.IsHighway">
+      <summary>道路セグメントが高速道路であることを示す値を取得します。</summary>
+      <returns>道路セグメントが高速道路の場合は true。それ以外の場合は false。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.IsTollRoad">
+      <summary>道路セグメントが有料道路であることを示す値を取得します。</summary>
+      <returns>道路セグメントが有料道路の場合は true。それ以外の場合は false。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.IsTunnel">
+      <summary>道路セグメントがトンネルであることを示す値を取得します。</summary>
+      <returns>道路セグメントがトンネルの場合は true。それ以外の場合は false。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.Path">
+      <summary>道路セグメントを表す、順序付けられた一連の地理的ポイントを取得します。</summary>
+      <returns>道路セグメントを表す、順序付けられた一連の地理的ポイント。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.RoadName">
+      <summary>道路の完全名を取得します。</summary>
+      <returns>道路の完全名。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.ShortRoadName">
+      <summary>道路の短縮名を取得します。</summary>
+      <returns>道路の短縮名。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.SpeedLimit">
+      <summary>道路セグメントの速度制限を取得します。</summary>
+      <returns>道路セグメントの速度制限。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.TravelTime">
+      <summary>道路セグメントの移動時間を取得します。</summary>
+      <returns>道路セグメントの移動時間。</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceRoadSignpost">
+      <summary>道路の標識を表します。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.BackgroundColor">
+      <summary>標識の背景色を取得します。</summary>
+      <returns>標識の背景色。 データを使用できない場合、この値は Blue を返します。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.Exit">
+      <summary>標識に書かれたテキストを取得します。</summary>
+      <returns>標識に書かれたテキスト。 データを使用できない場合、この値は null を返します。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.ExitDirections">
+      <summary>標識に書かれた案内を取得します。 たとえば、市の名前や距離など。</summary>
+      <returns>標識に書かれた案内。 データを使用できない場合、この値は空のリストを返します。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.ExitNumber">
+      <summary>標識に書かれた出口番号を取得します。</summary>
+      <returns>標識に書かれた出口番号。 データを使用できない場合、この値は null を返します。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.ForegroundColor">
+      <summary>標識のテキストの色を取得します。</summary>
+      <returns>標識のテキストの色。 データを使用できない場合、この値は White を返します。</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceRoute">
+      <summary>ナビゲーション ガイダンスを提供するルートを表します。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.BoundingBox">
+      <summary>ルートを含む地理上の地域を取得します。</summary>
+      <returns>ルートを含む地理上の地域。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.Distance">
+      <summary>ルートの合計距離 (メートル単位) を取得します。</summary>
+      <returns>ルートの合計距離 (メートル単位)。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.Duration">
+      <summary>ルートの推定移動時間を取得します。</summary>
+      <returns>ルートの推定移動時間。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.Maneuvers">
+      <summary>ルートをナビゲーションするために必要な運転のリストを取得します。</summary>
+      <returns>ルートをナビゲーションするために必要な運転。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.Path">
+      <summary>ルートに沿った、順序付けられた一連の地理的ポイントを取得します。</summary>
+      <returns>ルートに沿った、順序付けられた一連の地理的ポイント。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.RoadSegments">
+      <summary>開始から終了まで順番に並べた、ルートを構成する道路セグメントのリストを取得します。</summary>
+      <returns>開始から終了まで順番に並べた、ルートを構成する道路セグメントのリスト。</returns>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceRoute.CanCreateFromMapRoute(Windows.Services.Maps.MapRoute)">
+      <summary>MapRoute オブジェクトを GuidanceRoute オブジェクトに変換することができるかどうかをチェックします。</summary>
+      <returns>GuidanceRoute オブジェクトを作成する場合は true。それ以外の場合は false。</returns>
+      <param name="mapRoute">ナビゲーションするルート候補。</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceRoute.ConvertToMapRoute">
+      <summary>現在の GuidanceRoute に基づく MapRoute オブジェクトを作成します。</summary>
+      <returns>現在の GuidanceRoute オブジェクトに基づく MapRoute オブジェクト。</returns>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceRoute.TryCreateFromMapRoute(Windows.Services.Maps.MapRoute)">
+      <summary>指定された MapRoute に基づく GuidanceRoute オブジェクトを作成します。</summary>
+      <returns>MapRoute オブジェクトに基づく GuidanceRoute オブジェクト。mapRoute を変換できない場合は null。</returns>
+      <param name="mapRoute">ナビゲーションするルート候補。</param>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector">
+      <summary>位置データを収集してトラフィックの状態を報告します。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.Enabled">
+      <summary>トラフィック レポートのために位置データが収集されるかどうかを示す値を取得または設定します。</summary>
+      <returns>トラフィック レポートのために位置データが収集される場合は true。それ以外の場合は false。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.SpeedTrigger">
+      <summary>データ収集を開始する速度を取得または設定します (メートル秒)。</summary>
+      <returns>データ収集を開始する速度 (メートル秒)。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.UploadFrequency">
+      <summary>トラフィックが報告される頻度を取得または設定します (秒)。</summary>
+      <returns>トラフィックが報告される頻度 (秒)。</returns>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.ClearLocalData">
+      <summary>GuidanceTelemetryCollector によりローカルに保存された位置データをクリアします。</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.GetCurrent">
+      <summary>現在のテレメトリー コレクターの GuidanceTelemetryCollector オブジェクトを作成します。</summary>
+      <returns>現在のテレメトリー コレクター。</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs">
+      <summary>GuidanceUpdated イベントのデータを提供します。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.AfterNextManeuver">
+      <summary>NextManeuver に従う運転を取得します。</summary>
+      <returns>NextManeuver に従う運転。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.AfterNextManeuverDistance">
+      <summary>現在位置と AfterNextManeuver の間のルートに沿った距離を取得します (メートル)。</summary>
+      <returns>現在位置と AfterNextManeuver の間のルートに沿った距離 (メートル)。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.CurrentLocation">
+      <summary>現在位置におけるナビゲーション条件を取得します。</summary>
+      <returns>現在位置におけるナビゲーション条件。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.DistanceToDestination">
+      <summary>ルートに沿った残りの距離 (メートル単位) を取得します。</summary>
+      <returns>ルートに沿った残りの距離 (メートル単位)。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.ElapsedDistance">
+      <summary>更新前にルートに沿って移動した距離 (メートル単位) を取得します。</summary>
+      <returns>更新前にルートに沿って移動した距離 (メートル単位)。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.ElapsedTime">
+      <summary>更新前にルートに沿って経過した時間を取得します。</summary>
+      <returns>更新前にルートに沿って経過した時間。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.IsNewManeuver">
+      <summary>更新に新しい運転が含まれているかどうかを示す値を取得します。</summary>
+      <returns>更新に新しい運転が含まれている場合は true。それ以外の場合は false。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.LaneInfo">
+      <summary>左から右に順番に並べた、現在位置付近のレーンのリストを取得します。</summary>
+      <returns>左から右に順番に並べた、現在位置付近のレーン。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.Mode">
+      <summary>ナビゲーション ガイダンスの種類を取得します。</summary>
+      <returns>ナビゲーション ガイダンスの種類。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.NextManeuver">
+      <summary>現在の運転に従う運転を取得します。</summary>
+      <returns>現在の運転に従う運転。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.NextManeuverDistance">
+      <summary>現在位置と NextManeuver の間のルートに沿った距離 (メートル) を取得します。</summary>
+      <returns>現在位置と NextManeuver の間のルートに沿った距離 (メートル)。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.RoadName">
+      <summary>現在の道路セグメントの完全名を取得します。</summary>
+      <returns>現在の道路セグメントの完全名。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.Route">
+      <summary>更新されたルートを取得します。</summary>
+      <returns>更新されたルート。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.TimeToDestination">
+      <summary>目的地に到着するまでの推定移動時間を取得します。</summary>
+      <returns>目的地に到着するまでの推定移動時間。</returns>
+    </member></members>
+</doc>

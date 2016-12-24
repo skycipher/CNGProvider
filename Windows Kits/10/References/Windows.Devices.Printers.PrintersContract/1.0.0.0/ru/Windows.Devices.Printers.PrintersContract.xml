@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Printers.PrintersContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Printers.Print3DDevice">
+      <summary>Представляет 3D-принтер.</summary>
+    </member><member name="P:Windows.Devices.Printers.Print3DDevice.PrintSchema">
+      <summary>Возвращает объект PrintSchema для получения возможностей и информации билета на печать.</summary>
+      <returns>Объект PrintSchema для получения возможностей и информации билета на печать.</returns>
+    </member><member name="M:Windows.Devices.Printers.Print3DDevice.FromIdAsync(System.String)">
+      <summary>Создает объект Print3DDevice, представляющий 3D-принтер, подключенный к устройству.</summary>
+      <returns>Объект Print3DDevice, который соответствует указанному 3D-принтеру.</returns>
+      <param name="deviceId">Идентификатор устройства для 3D-принтера.</param>
+    </member><member name="M:Windows.Devices.Printers.Print3DDevice.GetDeviceSelector">
+      <summary>Возвращает строку расширенного синтаксиса запросов (AQS), которую можно использовать для поиска всех 3D-принтеров, которые подключены к устройству.</summary>
+      <returns>Строка AQS, которую можно использовать для поиска всех 3D-принтеров, подключенных к устройству.</returns>
+    </member><member name="T:Windows.Devices.Printers.PrintSchema">
+      <summary>Предоставляет интерфейсы API для доступа к возможностям 3D-принтера и билетам на печать.</summary>
+    </member><member name="M:Windows.Devices.Printers.PrintSchema.GetCapabilitiesAsync(Windows.Storage.Streams.IRandomAccessStreamWithContentType)">
+      <summary>Возвращает возможности 3D-принтера.</summary>
+      <returns>XML-документ PrintCapabilities, содержащий возможности 3D-принтера.</returns>
+      <param name="constrainTicket">Билет на печать.</param>
+    </member><member name="M:Windows.Devices.Printers.PrintSchema.GetDefaultPrintTicketAsync">
+      <summary>Возвращает билет на печать по умолчанию для 3D-принтера.</summary>
+      <returns>XML-документ PrintTicket, содержащий билет на печать по умолчанию для 3D-принтера.</returns>
+    </member><member name="M:Windows.Devices.Printers.PrintSchema.MergeAndValidateWithDefaultPrintTicketAsync(Windows.Storage.Streams.IRandomAccessStreamWithContentType)">
+      <summary>Создает новый билет на печать путем объединения выбора пользователя с билетом на печать по умолчанию и проверке работоспособности этого сочетания для устройства.</summary>
+      <returns>XML-документ PrintTicket, содержащий рекомендуемый билет на печать.</returns>
+      <param name="deltaTicket">Разностный билет на печать определяет различия между билетом на печать по умолчанию и выбором пользователя.</param>
+    </member></members>
+</doc>

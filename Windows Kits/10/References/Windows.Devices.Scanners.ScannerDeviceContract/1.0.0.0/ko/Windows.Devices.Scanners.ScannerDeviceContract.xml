@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Scanners.ScannerDeviceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Scanners.IImageScannerFormatConfiguration">
+      <summary>스캐너 입력 소스가 획득한 이미지 데이터를 앱으로 전송할 때 사용하는 파일 형식을 구성합니다.</summary>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerFormatConfiguration.DefaultFormat">
+      <summary>새 스캔 세션을 시작할 때 스캔 소스의 기본 파일 형식을 가져옵니다.</summary>
+      <returns>파일 형식입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerFormatConfiguration.Format">
+      <summary>클라이언트 앱에서 장치의 이미지 데이터를 인식하기 위한 현재 파일 전송 형식을 가져오거나 설정합니다.</summary>
+      <returns>파일 형식입니다.</returns>
+    </member><member name="M:Windows.Devices.Scanners.IImageScannerFormatConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>입력 스캐너가 지정된 파일 형식을 지원하는지 여부를 확인합니다.</summary>
+      <returns>지정된 파일 형식이 지원되면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="value">파일 형식입니다.</param>
+    </member><member name="T:Windows.Devices.Scanners.IImageScannerSourceConfiguration">
+      <summary>평판 및 급지대 소스에 공통적인 스캔 설정을 쿼리하고 구성합니다.</summary>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.ActualResolution">
+      <summary>스캔 소스의 실제 수평 및 수직 스캔 해상도(DPI)를 가져옵니다.</summary>
+      <returns>가로 및 세로 해상도(픽셀)입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.AutoCroppingMode">
+      <summary>자동 자르기 모드를 가져오거나 설정합니다.</summary>
+      <returns>스캔을 위한 자동 자르기 모드입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.Brightness">
+      <summary>스캔 소스에서 이미지 데이터를 캡처할 때 사용할 현재 밝기 수준을 구성합니다. 새 스캔 세션에서 이 속성의 값은 DefaultBrightness 속성입니다.</summary>
+      <returns>밝기 수준입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.BrightnessStep">
+      <summary>데이터 소스의 밝기 수준을 최대값과 최소값 사이에서 늘리거나 줄일 수 있는 단계 크기를 가져옵니다.</summary>
+      <returns>증가 또는 감소시킬 단계 크기입니다. 일반적인 값은 1입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.ColorMode">
+      <summary>스캔 소스의 색 모드를 가져오거나 설정합니다. 새 스캔 세션이 시작될 경우 이 속성은 DefaultColorMode 속성과 동일합니다.</summary>
+      <returns>컬러 모드입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.Contrast">
+      <summary>스캔 소스에서 이미지 데이터를 캡처할 때 사용할 현재 대비 수준을 설정하거나 가져옵니다. 새 스캔 세션이 시작될 때 이 속성은 DefaultContrast 속성으로 설정됩니다.</summary>
+      <returns>대비 수준입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.ContrastStep">
+      <summary>데이터 소스의 대비 수준을 최대값과 최소값 사이에서 늘리거나 줄일 수 있는 단계 크기를 가져옵니다.</summary>
+      <returns>증가 또는 감소시킬 단계 크기입니다. 일반적인 값은 1입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DefaultBrightness">
+      <summary>스캔 소스의 기본 밝기 수준을 가져옵니다.</summary>
+      <returns>스캐너의 기본 밝기 수준입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DefaultColorMode">
+      <summary>이 스캔 소스의 기본 컬러 모드를 가져옵니다.</summary>
+      <returns>컬러 모드입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DefaultContrast">
+      <summary>스캔 소스의 기본 대비 수준을 가져옵니다.</summary>
+      <returns>기본 대비 수준입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DesiredResolution">
+      <summary>앱에서 요청하는 스캔 소스의 가로 및 세로 스캔 해상도를 DPI 단위로 가져오거나 설정합니다.</summary>
+      <returns>가로 및 세로 해상도(픽셀)입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxBrightness">
+      <summary>스캔 소스에서 지원하는 최대 밝기 수준을 가져옵니다.</summary>
+      <returns>최대 밝기 수준입니다(일반적으로 1000).</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxContrast">
+      <summary>스캔 소스에서 지원하는 최대 대비 수준을 가져옵니다.</summary>
+      <returns>최대 대비 수준입니다(일반적으로 1000).</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxResolution">
+      <summary>스캔 소스의 최대 수평 및 수직 스캔 해상도(DPI 단위)를 가져옵니다.</summary>
+      <returns>가로 및 세로 해상도(픽셀)입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxScanArea">
+      <summary>인치 단위의 최대 스캔 영역 크기를 가져옵니다. 최대 스캔 너비는 공급 장치 및 평판에서 스캔할 수 있는 최대 문서 너비입니다.</summary>
+      <returns>영역의 너비와 높이입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinBrightness">
+      <summary>스캔 소스에서 지원하는 최소 밝기 수준을 가져옵니다.</summary>
+      <returns>최소 밝기 수준은 일반적으로-1000입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinContrast">
+      <summary>스캔 소스에서 지원하는 최소 대비 수준을 가져옵니다.</summary>
+      <returns>최소 대비 수준은 일반적으로-1000입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinResolution">
+      <summary>스캔 소스의 최소 수평 및 수직 스캔 해상도(DPI 단위)를 가져옵니다.</summary>
+      <returns>가로 및 세로 해상도(픽셀)입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinScanArea">
+      <summary>인치 단위의 최소 스캔 영역을 가져옵니다. 최소 스캔 영역은 평판 또는 공급 장치에서 스캔할 수 있는 최소 문서 크기입니다.</summary>
+      <returns>영역의 너비와 높이입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.OpticalResolution">
+      <summary>스캔 소스의 광학 수평 및 수직 스캔 해상도(DPI 단위)를 가져옵니다.</summary>
+      <returns>가로 및 세로 스캔 해상도(픽셀)입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.SelectedScanRegion">
+      <summary>선택한 스캔 영역의 원점 좌표(가로 및 세로)와 크기(너비와 높이)를 인치 단위로 가져오거나 설정합니다. AutoCroppingMode 속성이 Disabled로 설정되어 있지 않으면 이 속성은 무시됩니다.</summary>
+      <returns>사각형의 위치와 크기입니다.</returns>
+    </member><member name="M:Windows.Devices.Scanners.IImageScannerSourceConfiguration.IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)">
+      <summary>지정된 ImageScannerAutoCroppingMode를 스캔 소스에서 지원하는지 여부를 확인합니다.</summary>
+      <returns>장치에서 value 모드를 지원하면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="value">스캔할 이미지의 자동 자르기 모드입니다.</param>
+    </member><member name="M:Windows.Devices.Scanners.IImageScannerSourceConfiguration.IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)">
+      <summary>스캔 소스가 지정된 컬러 모드로 이미지를 스캔 및 전송할 수 있는지 여부를 확인합니다.</summary>
+      <returns>스캐너에서 value 모드로 이미지를 스캔할 수 있으면 True이고, 그렇지 않으면 False입니다.</returns>
+      <param name="value">컬러 모드입니다.</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScanner">
+      <summary>스캔할 이미지의 속성을 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.AutoConfiguration">
+      <summary>스캔한 데이터를 제공하기 위한 압축을 포함하여 파일 형식과 같은 자동 구성된 스캔 장치의 스캔 설정을 가져오고 설정합니다. 이 속성은 스캐너가 자동 구성을 할 수 없는 경우 무시됩니다.</summary>
+      <returns>스캔 구성입니다. 자동 구성을 제공하지 않는 스캐너인 경우 null입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.DefaultScanSource">
+      <summary>이 스캐너 장치에 선택된 기본 스캔 소스를 가져옵니다.</summary>
+      <returns>스캔 소스 형식입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.DeviceId">
+      <summary>이 스캐너 장치의 PnP 장치 식별자를 가져옵니다.</summary>
+      <returns>PnP 장치 식별자입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.FeederConfiguration">
+      <summary>페이지 크기, 방향 및 스캔 해상도와 같은 공급 장치 스캔 장치의 스캔 설정을 가져오거나 설정합니다.</summary>
+      <returns>스캐너의 급지대 구성입니다. 급지대가 없는 경우 Null입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.FlatbedConfiguration">
+      <summary>스캔 해상도 및 컬러 모드 등 평판 스캔 장치의 스캔 설정을 가져오고 설정합니다.</summary>
+      <returns>스캐너 평판의 스캔 구성입니다. 평판이 없는 경우 Null입니다.</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.FromIdAsync(System.String)">
+      <summary>스캐너 장치 정보 ID를 기반으로 ImageScanner 개체의 인스턴스를 만듭니다. 이 메서드는 브로커 장치 열거형에 필요합니다.</summary>
+      <returns>ImageScanner 개체입니다.</returns>
+      <param name="deviceId">장치 정보 ID입니다. DeviceInformation.Id 속성을 참조하십시오.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.GetDeviceSelector">
+      <summary>앱이 스캐너 장치를 열거하는 데 사용할 수 있는 클래스 선택 문자열을 반환합니다. 이 메서드는 브로커 장치 열거형에 필요합니다.</summary>
+      <returns>클래스 선택 영역입니다.</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.IsPreviewSupported(Windows.Devices.Scanners.ImageScannerScanSource)">
+      <summary>지정된 스캔 소스가 스캔 미리 보기를 지원하는지 여부를 확인합니다.</summary>
+      <returns>지정된 스캔 소스가 미리 보기를 지원하는 경우 True를 반환하고, 그렇지 않으면 False를 반환합니다.</returns>
+      <param name="scanSource">스캔 소스입니다.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.IsScanSourceSupported(Windows.Devices.Scanners.ImageScannerScanSource)">
+      <summary>지정된 스캔 소스를 스캐너에서 사용할 수 있는지 여부를 확인합니다.</summary>
+      <returns>스캔 소스, 평판 또는 급지대를 사용할 수 있으면 True이고, 그렇지 않으면 False입니다.</returns>
+      <param name="value">스캔 소스입니다.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.ScanFilesToFolderAsync(Windows.Devices.Scanners.ImageScannerScanSource,Windows.Storage.StorageFolder)">
+      <summary>지정된 스캔 소스로 스캔 작업을 시작하고 하나 이상의 이미지를 지정된 폴더 위치에서 하나의 다중 페이지 파일(예: TIFF, XPS, PDF) 또는 하나 이상의 단일 페이지 파일(예: DIB, PNG, JPG, TIFF)에 씁니다. 스캔 진행률을 반환합니다.</summary>
+      <returns>ImageScannerScanResult의 스캔한 이미지 파일 목록 및 대상 폴더로 전송된 파일 수를 나타내는 UInt32의 WIA 스캔 작업 진행률입니다.</returns>
+      <param name="scanSource">이미지 스캔 소스입니다.</param>
+      <param name="storageFolder">스캔한 파일의 대상 폴더 위치입니다.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.ScanPreviewToStreamAsync(Windows.Devices.Scanners.ImageScannerScanSource,Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>지정된 스캔 소스에서 하나의 이미지를 스캔하고 선택한 이미지 파일 형식에서 가장 낮은 스캔 해상도를 적용합니다.</summary>
+      <returns>스캔 진행률 및 스캔한 파일 형식입니다.</returns>
+      <param name="scanSource">이미지 스캔 소스입니다.</param>
+      <param name="targetStream">스캔한 이미지 파일입니다.</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerAutoConfiguration">
+      <summary>스캐너의 자동 구성된 스캔 소스를 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerAutoConfiguration.DefaultFormat">
+      <summary>새 스캔 세션을 시작할 때 스캔 소스의 기본 파일 형식입니다.</summary>
+      <returns>파일 형식입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerAutoConfiguration.Format">
+      <summary>클라이언트 앱에서 장치의 이미지 데이터를 인식하기 위한 현재 파일 전송 형식을 가져오거나 설정합니다.</summary>
+      <returns>파일 형식입니다.</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerAutoConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>입력 스캐너가 지정된 파일 형식을 지원하는지 여부를 확인합니다.</summary>
+      <returns>지정된 파일 형식이 지원되면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="value">파일 형식입니다.</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerAutoCroppingMode">
+      <summary>스캔 장치의 자동 자르기 모드를 지정합니다.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerAutoCroppingMode.Disabled">
+      <summary>자동 검색을 사용할 수 없습니다. 새 스캔 세션이 시작될 때 AutoCroppingMode 속성은 기본적으로 이 값으로 설정됩니다.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerAutoCroppingMode.MultipleRegion">
+      <summary>여러 스캔 영역을 별도의 개별 이미지로 스캔합니다.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerAutoCroppingMode.SingleRegion">
+      <summary>단일 스캔 영역을 별도의 개별 이미지로 스캔합니다.</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerColorMode">
+      <summary>스캔 소스의 컬러 모드를 지정합니다.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.AutoColor">
+      <summary>스캔 콘텐츠를 기준으로 장치에서 올바른 컬러 모드를 자동으로 감지합니다. 이 경우 예를 들어 컬러, 회색조 및 흑백 간의 결정은 앱이 아닌 해당 장치에 따라 달라집니다.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.Color">
+      <summary>24비트 RGB 색입니다(채널당 8비트의 3개 채널).</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.Grayscale">
+      <summary>8비트 또는 4비트 회색조입니다(채널당 8비트 또는 4비트의 1개 채널). 장치에서 4비트 및 8비트 회색조를 지원하는 경우 DefaultColorMode 속성에서 8비트를 사용합니다.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.Monochrome">
+      <summary>단색 또는 '흑백'이라고도 하는 1비트 이중 색조입니다(채널당 1비트의 1개 채널).</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerFeederConfiguration">
+      <summary>스캐너의 급지대 스캔 소스를 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ActualResolution">
+      <summary>스캐너 급지대의 실제 수평 및 수직 스캔 해상도(DPI)를 가져옵니다.</summary>
+      <returns>가로 및 세로 해상도(픽셀)입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.AutoCroppingMode">
+      <summary>자동 자르기 모드를 가져오거나 설정합니다.</summary>
+      <returns>스캔을 위한 자동 자르기 모드입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.AutoDetectPageSize">
+      <summary>스캐너 급지대의 페이지 크기 자동 검색 기능을 가져오거나 설정합니다.</summary>
+      <returns>페이지 크기 자동 감지 기능을 사용하는 경우 True이고, 그렇지 않으면 false입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Brightness">
+      <summary>스캐너 급지대에서 이미지 데이터를 캡처할 때 사용할 현재 밝기 수준을 가져오거나 설정합니다. 새 스캔 세션이 시작될 때 이 속성은 DefaultBrightness 속성으로 설정됩니다.</summary>
+      <returns>현재 밝기 수준입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.BrightnessStep">
+      <summary>데이터 소스의 밝기 수준을 최대값과 최소값 사이에서 늘리거나 줄일 수 있는 단계 크기를 가져옵니다.</summary>
+      <returns>증가 또는 감소시킬 단계 크기입니다. 일반적인 값은 1입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.CanAutoDetectPageSize">
+      <summary>장치가 스캔 시 공급 장치를 통해 스캔되는 문서 페이지 크기를 자동으로 감지하면 True를 반환하고, 그렇지 않으면 False를 반환합니다.</summary>
+      <returns>장치가 스캔 시 공급 장치를 통해 스캔되는 문서 페이지 크기를 자동으로 감지하면 True이고, 그렇지 않으면 False입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.CanScanAhead">
+      <summary>스캐너 장치가 급지대에서 미리 스캔할 수 있는지 여부를 가져옵니다.</summary>
+      <returns>스캐너 급지대가 미리 스캔할 수 있는지 여부를 나타냅니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.CanScanDuplex">
+      <summary>스캐너 급지대의 양면 스캔(문서 페이지 양면, 앞면 및 뒷면 스캔) 가능 여부를 가져옵니다. 이중 모드로 스캔하는 경우 동일한 스캔 설정(예: 색상 모드 및 스캔 해상도)이 페이지 양쪽 면을 스캔하는 데 적용됩니다.</summary>
+      <returns>양면 스캔의 사용 가능 여부를 나타냅니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ColorMode">
+      <summary>스캐너 급지대의 컬러 모드를 가져오거나 설정합니다.</summary>
+      <returns>컬러 모드입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Contrast">
+      <summary>스캐너 급지대에서 이미지 데이터를 캡처할 때 사용할 현재 대비 수준을 설정하거나 가져옵니다. 새 스캔 세션이 시작될 때 이 속성은 DefaultContrast 속성으로 설정됩니다.</summary>
+      <returns>대비 수준입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ContrastStep">
+      <summary>데이터 소스의 대비 수준을 최대값과 최소값 사이에서 늘리거나 줄일 수 있는 단계 크기를 가져옵니다.</summary>
+      <returns>증가 또는 감소시킬 단계 크기입니다. 일반적인 값은 1입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultBrightness">
+      <summary>스캐너 급지대의 기본 밝기 수준을 가져옵니다.</summary>
+      <returns>스캐너의 기본 밝기 수준입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultColorMode">
+      <summary>스캐너 급지대의 기본 컬러 모드를 가져옵니다.</summary>
+      <returns>컬러 모드입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultContrast">
+      <summary>스캐너 급지대의 기본 대비 수준을 가져옵니다.</summary>
+      <returns>기본 대비 수준입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultFormat">
+      <summary>새 스캔 세션을 시작할 때 스캐너 급지대의 기본 파일 형식을 가져옵니다.</summary>
+      <returns>파일 형식입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DesiredResolution">
+      <summary>앱에서 요청하는 스캐너 공급 장치의 가로 및 세로 스캔 해상도를 DPI 단위로 가져오거나 설정합니다.</summary>
+      <returns>가로 및 세로 해상도(픽셀)입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Duplex">
+      <summary>스캐너 급지대가 문서 페이지 양면을 모두 스캔할 수 있는지 여부를 나타냅니다.</summary>
+      <returns>급지대에서 페이지 양면을 스캔할 수 있는 경우 True를 반환합니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Format">
+      <summary>클라이언트 앱에서 스캐너 공급 장치의 이미지 데이터를 인식하기 위한 현재 파일 전송 형식을 가져오거나 설정합니다.</summary>
+      <returns>파일 형식입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxBrightness">
+      <summary>스캐너 급지대에서 지원하는 최대 밝기 수준을 가져옵니다.</summary>
+      <returns>최대 밝기 수준입니다(일반적으로 1000).</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxContrast">
+      <summary>스캐너 급지대에서 지원하는 최대 대비 수준을 가져옵니다.</summary>
+      <returns>최대 대비 수준입니다(일반적으로 1000).</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxNumberOfPages">
+      <summary>스캐너가 중지되기 전에 한 스캔 작업에서 앱이 스캔할 수 있는 최대 페이지 수(이미지 수 아님)를 가져오거나 설정합니다.</summary>
+      <returns>페이지 수입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxResolution">
+      <summary>스캐너 급지대의 최대 수평 및 수직 스캔 해상도(DPI 단위)를 가져옵니다.</summary>
+      <returns>가로 및 세로 해상도(픽셀)입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxScanArea">
+      <summary>인치 단위의 최대 스캔 영역 크기를 가져옵니다. 최대 스캔 너비는 스캐너의 공급 장치에서 스캔할 수 있는 최대 문서 너비입니다.</summary>
+      <returns>영역의 너비와 높이입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinBrightness">
+      <summary>스캐너 급지대에서 지원하는 최소 밝기 수준을 가져옵니다.</summary>
+      <returns>최소 밝기 수준은 일반적으로-1000입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinContrast">
+      <summary>스캐너 급지대에서 지원하는 최소 대비 수준을 가져옵니다.</summary>
+      <returns>최소 대비 수준은 일반적으로-1000입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinResolution">
+      <summary>스캐너 급지대의 최소 수평 및 수직 스캔 해상도(DPI 단위)를 가져옵니다.</summary>
+      <returns>가로 및 세로 해상도(픽셀)입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinScanArea">
+      <summary>인치 단위의 최소 스캔 영역을 가져옵니다. 최소 스캔 영역은 공급 장치에서 스캔할 수 있는 최소 문서 크기입니다.</summary>
+      <returns>영역의 너비와 높이입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.OpticalResolution">
+      <summary>스캐너 급지대의 광학 수평 및 수직 스캔 해상도(DPI 단위)를 가져옵니다.</summary>
+      <returns>가로 및 세로 스캔 해상도(픽셀)입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.PageOrientation">
+      <summary>스캐너의 공급 장치 입력 용지함에 문서를 넣는 방법을 알 수 있는 현재 선택한 페이지 방향을 가져오거나 설정합니다.</summary>
+      <returns>페이지의 방향입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.PageSize">
+      <summary>급지대에서 스캔하기 위해 현재 선택된 페이지 크기를 가져오거나 설정합니다.</summary>
+      <returns>페이지 크기입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.PageSizeDimensions">
+      <summary>선택된 페이지 크기의 크기(너비 및 높이) 및 방향을 밀 단위(1/1000인치)로 가져옵니다.</summary>
+      <returns>페이지 크기입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ScanAhead">
+      <summary>미리 스캔할 것인지 여부를 나타냅니다.</summary>
+      <returns>미리 스캔하려면 true입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.SelectedScanRegion">
+      <summary>선택한 스캔 영역의 원점 좌표(가로 및 세로)와 크기(너비와 높이)를 인치 단위로 가져오거나 설정합니다. AutoCroppingMode 속성이 Disabled가 아니면 이 속성은 무시됩니다.</summary>
+      <returns>스캔 영역입니다(인치 단위).</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)">
+      <summary>스캐너의 급지대에서 지정된 ImageScannerAutoCroppingMode를 지원하는지 여부를 반환합니다.</summary>
+      <returns>장치의 value 모드 지원 여부를 나타냅니다.</returns>
+      <param name="value">스캔할 이미지의 자동 자르기 모드입니다.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)">
+      <summary>스캐너의 급지대에서 지정된 컬러 모드로 이미지를 스캔 및 전송할 수 있는지 여부를 반환합니다.</summary>
+      <returns>스캐너가 value 모드에서 이미지를 스캔할 수 있는지 여부를 나타냅니다.</returns>
+      <param name="value">컬러 모드입니다.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>스캐너 급지대가 지정된 파일 형식을 지원하는지 여부를 확인합니다.</summary>
+      <returns>지정된 파일 형식이 지원되는지 여부를 나타냅니다.</returns>
+      <param name="value">파일 형식입니다.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsPageSizeSupported(Windows.Graphics.Printing.PrintMediaSize,Windows.Graphics.Printing.PrintOrientation)">
+      <summary>급지대에서 지정된 페이지 크기와 방향으로 문서를 스캔할 수 있는지 여부를 반환합니다.</summary>
+      <returns>스캐너가 pageSize 및 pageOrientation 값으로 스캔할 수 있음을 나타냅니다.</returns>
+      <param name="pageSize">페이지 크기입니다.</param>
+      <param name="pageOrientation">페이지 방향입니다.</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration">
+      <summary>스캐너의 평판 스캔 소스를 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.ActualResolution">
+      <summary>평판 스캐너의 실제 수평 및 수직 스캔 해상도(DPI)를 가져옵니다.</summary>
+      <returns>가로 및 세로 해상도(픽셀)입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.AutoCroppingMode">
+      <summary>자동 자르기 모드를 가져오거나 설정합니다.</summary>
+      <returns>스캔을 위한 자동 자르기 모드입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.Brightness">
+      <summary>스캐너 평판에서 이미지 데이터를 캡처할 때 사용할 현재 밝기 수준을 가져오거나 설정합니다. 새 스캔 세션이 시작될 때 이 속성은 DefaultBrightness 속성으로 설정됩니다.</summary>
+      <returns>현재 밝기 수준입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.BrightnessStep">
+      <summary>데이터 소스의 밝기 수준을 최대값과 최소값 사이에서 늘리거나 줄일 수 있는 단계 크기를 가져옵니다.</summary>
+      <returns>증가 또는 감소시킬 단계 크기입니다. 일반적인 값은 1입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.ColorMode">
+      <summary>평판 스캐너의 컬러 모드를 가져오거나 설정합니다.</summary>
+      <returns>컬러 모드입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.Contrast">
+      <summary>스캔 소스에서 이미지 데이터를 캡처할 때 사용할 현재 대비 수준을 설정하거나 가져옵니다. 새 스캔 세션이 시작될 때 이 속성은 DefaultContrast 속성으로 설정됩니다.</summary>
+      <returns>대비 수준입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.ContrastStep">
+      <summary>데이터 소스의 대비 수준을 최대값과 최소값 사이에서 늘리거나 줄일 수 있는 단계 크기를 가져옵니다.</summary>
+      <returns>증가 또는 감소시킬 단계 크기입니다. 일반적인 값은 1입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultBrightness">
+      <summary>스캐너 평판의 기본 밝기 수준을 가져옵니다.</summary>
+      <returns>스캐너의 기본 밝기 수준입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultColorMode">
+      <summary>스캐너 평판의 기본 컬러 모드를 가져옵니다.</summary>
+      <returns>컬러 모드입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultContrast">
+      <summary>스캐너 평판의 기본 대비 수준을 가져옵니다.</summary>
+      <returns>기본 대비 수준입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultFormat">
+      <summary>새 스캔 세션을 시작할 때 스캐너 평판의 기본 파일 형식을 가져옵니다.</summary>
+      <returns>파일 형식입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DesiredResolution">
+      <summary>앱에서 요청하는 스캐너 평판의 가로 및 세로 스캔 해상도를 DPI 단위로 가져오거나 설정합니다.</summary>
+      <returns>가로 및 세로 해상도(픽셀)입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.Format">
+      <summary>클라이언트 앱에서 스캐너의 평판의 이미지 데이터를 인식하기 위한 현재 파일 전송 형식을 가져오거나 설정합니다.</summary>
+      <returns>파일 형식입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxBrightness">
+      <summary>스캐너 평판에서 지원하는 최대 밝기 수준을 가져옵니다.</summary>
+      <returns>최대 밝기 수준입니다(일반적으로 1000).</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxContrast">
+      <summary>스캐너 평판에서 지원하는 최대 대비 수준을 가져옵니다.</summary>
+      <returns>최대 대비 수준입니다(일반적으로 1000).</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxResolution">
+      <summary>스캐너 평판의 최대 수평 및 수직 스캔 해상도(DPI 단위)를 가져옵니다.</summary>
+      <returns>가로 및 세로 해상도(픽셀)입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxScanArea">
+      <summary>인치 단위의 최대 스캔 영역 크기를 가져옵니다. 최대 스캔 너비는 스캐너의 평판에서 스캔할 수 있는 최대 문서 너비입니다.</summary>
+      <returns>영역의 너비와 높이입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinBrightness">
+      <summary>스캐너 평판에서 지원하는 최소 밝기 수준을 가져옵니다.</summary>
+      <returns>최소 밝기 수준은 일반적으로-1000입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinContrast">
+      <summary>스캐너 평판에서 지원하는 최소 대비 수준을 가져옵니다.</summary>
+      <returns>최소 대비 수준은 일반적으로-1000입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinResolution">
+      <summary>스캐너 평판의 최소 수평 및 수직 스캔 해상도(DPI 단위)를 가져옵니다.</summary>
+      <returns>가로 및 세로 해상도(픽셀)입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinScanArea">
+      <summary>인치 단위의 최소 스캔 영역을 가져옵니다. 최소 스캔 영역은 평판에서 스캔할 수 있는 최소 문서 크기입니다.</summary>
+      <returns>영역의 너비와 높이입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.OpticalResolution">
+      <summary>평판 스캐너의 광학 스캔 해상도(DPI 단위)를 가져옵니다.</summary>
+      <returns>가로 및 세로 스캔 해상도(픽셀)입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.SelectedScanRegion">
+      <summary>선택한 스캔 영역의 원점 좌표(가로 및 세로)와 크기(너비와 높이)를 인치 단위로 가져오거나 설정합니다. AutoCroppingMode 속성이 Disabled가 아니면 이 속성은 무시됩니다.</summary>
+      <returns>사각형의 위치와 크기입니다.</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)">
+      <summary>스캐너의 평판에서 지정된 ImageScannerAutoCroppingMode를 지원하는지 여부를 반환합니다.</summary>
+      <returns>장치의 value 모드 지원 여부를 나타냅니다.</returns>
+      <param name="value">스캔할 이미지의 자동 자르기 모드입니다.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)">
+      <summary>스캐너의 평판에서 지정된 컬러 모드로 이미지를 스캔 및 전송할 수 있는지 여부를 반환합니다.</summary>
+      <returns>스캐너가 value 모드에서 이미지를 스캔할 수 있는지 여부를 나타냅니다.</returns>
+      <param name="value">컬러 모드입니다.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>스캐너 평판이 지정된 파일 형식을 지원하는지 여부를 확인합니다.</summary>
+      <returns>지정된 파일 형식이 지원되는지 여부를 나타냅니다.</returns>
+      <param name="value">파일 형식입니다.</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerFormat">
+      <summary>스캔하여 생성할 파일 형식입니다.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.DeviceIndependentBitmap">
+      <summary>Windows DIB(장치 독립적 비트맵) 이 값은 단일 페이지에서 압축되지 않은 형식으로 모든 색 모드를 지원합니다. 호환 가능한 모든 WIA 2.0 스캐너 장치에서 지원하는 유일한 형식입니다.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Jpeg">
+      <summary>EXIF(Exchangeable Image File Format) 형식 또는 JFIF(JPEG File Interchange Format) 단일 페이지 맟 압축(손실 JPEG 압축)을 포함하는 컬러 또는 회색조 모드(채널/샘플당 8비트)에서 이러한 파일만 사용합니다.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.OpenXps">
+      <summary>OpenXPS(Open XML Paper Specification) 문서 파일 형식 이러한 파일에는 이 API에서 지원하는 임의의 색 모드로 원하는 장치에서 압축된 단일 또는 여러 페이지의 이미지 데이터가 포함될 수 있습니다.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Pdf">
+      <summary>Portable Document Format PDF/A(PDF/A는 전자 문서를 전문적으로 디지털 보관하는 Portable Document Format/PDF의 ISO 표준화 버전) 문서 파일 형식 이러한 파일에는 이 API에서 지원하는 모든 색 모드로 원하는 장치에서 압축된 단일 또는 여러 페이지의 이미지 데이터가 포함될 수 있습니다.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Png">
+      <summary>PNG(Portable Network Graphics) 이미지 파일 형식 이 값은 단일 페이지에서 압축된 형식(PNG 압축 손실 없음)으로 원하는 모든 색 모드를 지원합니다.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Tiff">
+      <summary>TIFF 6.0 사양과 호환되는 TIFF(Uncompressed Tagged Image File Format)로, 단일 및/또는 다중 페이지입니다. 이러한 파일은 이 API에서 지원하는 모든 색상 모드를 사용할 수 있으며, 압축되는 일이 없으며, 단일 페이지이거나(이미지 한 개만 전송되어야 하는 경우) 다중 페이지입니다(이미지가 여러 개 전송되어야 하며 장치에서 이러한 다중 페이지 파일 형식을 지원하는 경우).</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Xps">
+      <summary>Microsoft XPS(XML Paper Specification) 문서 파일 형식 이러한 파일에는 이 API에서 지원하는 임의의 색 모드로 원하는 장치에서 압축된 단일 또는 여러 페이지의 이미지 데이터가 포함될 수 있습니다.</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerPreviewResult">
+      <summary>스캔 미리 보기 작업의 결과를 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerPreviewResult.Format">
+      <summary>스캔 미리 보기의 데이터 형식을 가져옵니다. 미리 보기 후 이 속성은 미리 보기 전의 값으로 복원됩니다.</summary>
+      <returns>스캔 형식입니다.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerPreviewResult.Succeeded">
+      <summary>스캔 미리 보기의 성공 여부를 가져옵니다.</summary>
+      <returns>스캔 미리 보기에 성공했으면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerResolution">
+      <summary>스캔 해상도를 지정합니다.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerResolution.DpiX">
+      <summary>가로 크기입니다.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerResolution.DpiY">
+      <summary>세로 크기입니다.</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerScanResult">
+      <summary>스캔 작업의 결과를 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerScanResult.ScannedFiles">
+      <summary>완료된 스캔 작업에 의해 생성되는 스캔된 이미지 파일의 목록을 가져옵니다.</summary>
+      <returns>완료된 스캔 작업의 스캔한 이미지 파일 목록입니다. 스캔한 파일이 없을 경우 IVectorView&lt;T&gt;.Size 속성이 0이 됩니다.</returns>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerScanSource">
+      <summary>스캔 장치에 대한 스캔 소스의 형식입니다.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.AutoConfigured">
+      <summary>스캔 소스가 자동으로 구성됩니다.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.Default">
+      <summary>기본 소스입니다.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.Feeder">
+      <summary>공급 장치 스캔 소스입니다.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.Flatbed">
+      <summary>평판 스캔 소스입니다.</summary>
+    </member></members>
+</doc>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.SystemManagementContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.System.ProcessLauncher">
+      <summary>使用相關聯的引數啟動指定的處理序 (如果有的話)。</summary>
+    </member><member name="M:Windows.System.ProcessLauncher.RunToCompletionAsync(System.String,System.String)">
+      <summary>啟動新的處理序。</summary>
+      <returns>當這個方法完成時，會傳回處理序的結果。</returns>
+      <param name="fileName">要啟動的處理序名稱。</param>
+      <param name="args">執行處理序的引數。</param>
+    </member><member name="M:Windows.System.ProcessLauncher.RunToCompletionAsync(System.String,System.String,Windows.System.ProcessLauncherOptions)">
+      <summary>啟動新的處理序，包括指定的選項。</summary>
+      <returns>當這個方法完成時，會傳回處理序的結果。</returns>
+      <param name="fileName">要啟動之處理序的檔案名稱。</param>
+      <param name="args">所指定處理序的引數。</param>
+      <param name="options">執行處理序的相關選項。</param>
+    </member><member name="T:Windows.System.ProcessLauncherOptions">
+      <summary>指定選項，用來啟動指定的處理序。</summary>
+    </member><member name="M:Windows.System.ProcessLauncherOptions.#ctor">
+      <summary>建立並初始化處理序啟動器選項物件的新執行個體。</summary>
+    </member><member name="P:Windows.System.ProcessLauncherOptions.StandardError">
+      <summary>指定標準錯誤指向的位置。</summary>
+      <returns>標準錯誤指向的資料流。</returns>
+    </member><member name="P:Windows.System.ProcessLauncherOptions.StandardInput">
+      <summary>指定標準輸入的來源。</summary>
+      <returns>標準輸入的輸入資料流。</returns>
+    </member><member name="P:Windows.System.ProcessLauncherOptions.StandardOutput">
+      <summary>指定標準輸出指向的位置。</summary>
+      <returns>標準輸出導向的資料流。</returns>
+    </member><member name="P:Windows.System.ProcessLauncherOptions.WorkingDirectory">
+      <summary>取得或設定處理序啟動器將運作的目錄。</summary>
+      <returns>工作目錄。</returns>
+    </member><member name="T:Windows.System.ProcessLauncherResult">
+      <summary>表示傳回啟動的處理序。</summary>
+    </member><member name="P:Windows.System.ProcessLauncherResult.ExitCode">
+      <summary>表示從 ProcessLauncher 執行的處理序結束代碼。</summary>
+      <returns>結束代碼。</returns>
+    </member><member name="T:Windows.System.ShutdownKind">
+      <summary>描述您可以對在固定目的模式執行之裝置執行的關閉類型。</summary>
+    </member><member name="F:Windows.System.ShutdownKind.Restart">
+      <summary>關閉固定目的裝置，然後重新啟動裝置。</summary>
+    </member><member name="F:Windows.System.ShutdownKind.Shutdown">
+      <summary>關閉固定目的裝置，但不重新啟動裝置。</summary>
+    </member><member name="T:Windows.System.ShutdownManager">
+      <summary>管理在固定目的模式執行之裝置的關閉。</summary>
+    </member><member name="M:Windows.System.ShutdownManager.BeginShutdown(Windows.System.ShutdownKind,Windows.Foundation.TimeSpan)">
+      <summary>關閉在固定目的模式執行的裝置，並選擇地在指定的秒數之後重新啟動裝置。</summary>
+      <param name="shutdownKind">要執行的關閉類型，要或不要重新啟動裝置。</param>
+      <param name="timeout">在重新啟動裝置 (如果 shutdownKind 為 ShutdownKind.Restart) 之前等待的秒數。</param>
+    </member><member name="M:Windows.System.ShutdownManager.CancelShutdown">
+      <summary>取消固定目的裝置已經在進行中的關閉。</summary>
+    </member><member name="T:Windows.System.SystemManagementContract">
+      <summary>表示 Windows.System.SystemManagementContract API 協定。</summary>
+    </member><member name="T:Windows.System.TimeZoneSettings">
+      <summary>包含與時區互動的方法和屬性。</summary>
+    </member><member name="P:Windows.System.TimeZoneSettings.CanChangeTimeZone">
+      <summary>取得時區是否可變更。</summary>
+      <returns>如果時區可以變更，則為 true，否則為 false。</returns>
+    </member><member name="P:Windows.System.TimeZoneSettings.CurrentTimeZoneDisplayName">
+      <summary>取得目前時區的顯示名稱。</summary>
+      <returns>目前時區的顯示名稱。</returns>
+    </member><member name="P:Windows.System.TimeZoneSettings.SupportedTimeZoneDisplayNames">
+      <summary>取得所有支援時區的顯示名稱。</summary>
+      <returns>所有支援時區的顯示名稱。</returns>
+    </member><member name="M:Windows.System.TimeZoneSettings.ChangeTimeZoneByDisplayName(System.String)">
+      <summary>使用顯示名稱變更時區。</summary>
+      <param name="timeZoneDisplayName">時區要變更成的顯示名稱。</param>
+    </member></members>
+</doc>

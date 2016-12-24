@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Calls.LockScreenCallContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral">
+      <summary>LockScreenCallEndCallDeferral オブジェクトは、アプリケーションがロック画面からのそれ自体の削除を保留する必要がなくなると通知します。</summary>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral.Complete">
+      <summary>アプリの削除の遅延を完了します。当該アプリは、他の方法によってまだ削除されていない場合に、ロック画面から削除されます。</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs">
+      <summary>ロック画面からのアプリの削除を制御します。</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs.Deadline">
+      <summary>アプリケーションが遅延を終了させる必要がある期限を取得します。</summary>
+      <returns>アプリケーションが遅延を完了する必要がある期限。</returns>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs.GetDeferral">
+      <summary>ロック画面からアプリケーションを削除する既定の動作の保留を要求します。</summary>
+      <returns>このメソッドが完了すると、ロック画面からアプリケーションの削除を保留する必要がなくなった場合に通知する LockScreenCallEndCallDeferral オブジェクトを返します。</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.LockScreenCallUI">
+      <summary>ロック画面との間の通信を処理します。</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.LockScreenCallUI.CallTitle">
+      <summary>呼び出しの性質に関する簡単な説明を取得および設定します。</summary>
+      <returns>呼び出しの性質の簡単な説明。たとえば、「Jane Doe とのビデオ呼び出し」。</returns>
+    </member><member name="E:Windows.ApplicationModel.Calls.LockScreenCallUI.Closed">
+      <summary>ロック画面のやり取りが完了したときに発生します。</summary>
+    </member><member name="E:Windows.ApplicationModel.Calls.LockScreenCallUI.EndRequested">
+      <summary>ロック画面で呼び出しを終了する必要があるときに発生します。</summary>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallUI.Dismiss">
+      <summary>ロック画面の UI からアプリケーションを削除します。</summary>
+    </member></members>
+</doc>

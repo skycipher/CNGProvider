@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.UserProfile.UserProfileContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.System.UserProfile.AccountPictureKind">
+      <summary>可讓您在使用 GetAccountPicture 時要求特定影像類型。</summary>
+    </member><member name="F:Windows.System.UserProfile.AccountPictureKind.LargeImage">
+      <summary>表示您想要大型的使用者帳戶影像。</summary>
+    </member><member name="F:Windows.System.UserProfile.AccountPictureKind.SmallImage">
+      <summary>表示您想要小型的使用者帳戶影像。</summary>
+    </member><member name="F:Windows.System.UserProfile.AccountPictureKind.Video">
+      <summary>表示您想要使用者帳戶的視訊。</summary>
+    </member><member name="T:Windows.System.UserProfile.SetAccountPictureResult">
+      <summary>當您嘗試設定使用者帳戶之影像時所傳回的結果。</summary>
+    </member><member name="F:Windows.System.UserProfile.SetAccountPictureResult.ChangeDisabled">
+      <summary>表示圖片因為 AccountPictureChangeEnabled 屬性已停用或使用者取消同意提示而未設定。</summary>
+    </member><member name="F:Windows.System.UserProfile.SetAccountPictureResult.Failure">
+      <summary>表示未設定圖片或視訊。</summary>
+    </member><member name="F:Windows.System.UserProfile.SetAccountPictureResult.FileSizeError">
+      <summary>指出因為檔案太大而未設定圖片。</summary>
+    </member><member name="F:Windows.System.UserProfile.SetAccountPictureResult.LargeOrDynamicError">
+      <summary>指出因為圖片太大而未設定圖片。</summary>
+    </member><member name="F:Windows.System.UserProfile.SetAccountPictureResult.Success">
+      <summary>表示已成功設定圖片。</summary>
+    </member><member name="F:Windows.System.UserProfile.SetAccountPictureResult.VideoFrameSizeError">
+      <summary>指出因為視訊的框架大小太大而未設定視訊。</summary>
+    </member><member name="T:Windows.System.UserProfile.SetImageFeedResult">
+      <summary>指定呼叫 LockScreen.RequestSetImageFeedAsync 的結果。</summary>
+    </member><member name="F:Windows.System.UserProfile.SetImageFeedResult.ChangeDisabled">
+      <summary>因為群組原則停用了鎖定螢幕的影像投影片放映，所以尚未設定摘要。</summary>
+    </member><member name="F:Windows.System.UserProfile.SetImageFeedResult.Success">
+      <summary>已成功設定影像摘要。</summary>
+    </member><member name="F:Windows.System.UserProfile.SetImageFeedResult.UserCanceled">
+      <summary>使用者已取消作業。</summary>
+    </member><member name="T:Windows.System.UserProfile.UserInformation">
+      <summary>表示使用者的相關資訊，例如名稱和帳戶圖片。</summary>
+    </member><member name="P:Windows.System.UserProfile.UserInformation.AccountPictureChangeEnabled">
+      <summary>判斷是否能變更使用者帳戶圖片。</summary>
+      <returns>如果可以變更使用者的帳戶圖片，則為 true，否則為 false。</returns>
+    </member><member name="P:Windows.System.UserProfile.UserInformation.NameAccessAllowed">
+      <summary>可讓您查看是否允許應用程式存取使用者的資訊。</summary>
+      <returns>如果允許您的應用程式存取 AccountPictureChanged 事件，而且可使用 GetAccountPicture、GetDisplayNameAsync、GetDomainNameAsync、GetFirstNameAsync、GetLastNameAsync 和 GetSessionInitiationProtocolUriAsync 方法擷取使用者資訊，則為 true。 否則這個屬性為 false。</returns>
+    </member><member name="E:Windows.System.UserProfile.UserInformation.AccountPictureChanged">
+      <summary>會在使用者的影像或名稱變更時發生。</summary>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetAccountPicture(Windows.System.UserProfile.AccountPictureKind)">
+      <summary>取得使用者的帳戶圖片。</summary>
+      <returns>包含影像的物件。</returns>
+      <param name="kind">可用來判斷您所要之影像類型 (小型、大型等) 的列舉型別。</param>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetDisplayNameAsync">
+      <summary>取得使用者帳戶的顯示名稱。</summary>
+      <returns>使用者帳戶的顯示名稱。</returns>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetDomainNameAsync">
+      <summary>取得使用者的網域名稱。</summary>
+      <returns>表示使用者網域名稱的字串。</returns>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetFirstNameAsync">
+      <summary>取得使用者的名字。</summary>
+      <returns>使用者的名字。</returns>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetLastNameAsync">
+      <summary>取得使用者的姓氏。</summary>
+      <returns>使用者的姓氏。</returns>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetPrincipalNameAsync">
+      <summary>取得使用者的主體名稱。 這個名稱是使用者主要名稱 (通常是使用者的地址，但是不一定如此)。</summary>
+      <returns>使用者的主體名稱。</returns>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.GetSessionInitiationProtocolUriAsync">
+      <summary>取得使用者之工作階段初始通訊協定的統一資源識別元 (URI)。</summary>
+      <returns>工作階段初始通訊協定的統一資源識別元 (URI)。</returns>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.SetAccountPictureAsync(Windows.Storage.IStorageFile)">
+      <summary>使用 IStorageFile 物件設定使用者帳戶的圖片。</summary>
+      <returns>表示作業成功或失敗的值。</returns>
+      <param name="image">包含影像的檔案。</param>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.SetAccountPictureFromStreamAsync(Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>使用 IRandomAccessStream 物件設定使用者帳戶的圖片。</summary>
+      <returns>表示作業成功或失敗的值。</returns>
+      <param name="image">影像。</param>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.SetAccountPicturesAsync(Windows.Storage.IStorageFile,Windows.Storage.IStorageFile,Windows.Storage.IStorageFile)">
+      <summary>使用 IStorageFile 物件設定使用者帳戶的圖片。 支援加入小型影像、大型影像和視訊。</summary>
+      <returns>表示作業成功或失敗的值。</returns>
+      <param name="smallImage">影像的小型版本。</param>
+      <param name="largeImage">影像的大型版本。</param>
+      <param name="video">視訊。</param>
+    </member><member name="M:Windows.System.UserProfile.UserInformation.SetAccountPicturesFromStreamsAsync(Windows.Storage.Streams.IRandomAccessStream,Windows.Storage.Streams.IRandomAccessStream,Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>使用 IRandomAccessStream 物件設定使用者帳戶的圖片。 支援加入小型影像、大型影像和視訊。</summary>
+      <returns>表示作業成功或失敗的值。</returns>
+      <param name="smallImage">影像的小型版本。</param>
+      <param name="largeImage">影像的大型版本。</param>
+      <param name="video">視訊。</param>
+    </member></members>
+</doc>

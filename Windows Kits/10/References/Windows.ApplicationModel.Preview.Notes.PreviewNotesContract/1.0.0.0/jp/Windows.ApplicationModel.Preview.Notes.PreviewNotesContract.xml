@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Preview.Notes.PreviewNotesContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs">
+      <summary>NotePlacementChanged イベントに関する情報を表します。</summary>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs.ViewId">
+      <summary>NotePlacementChanged イベントを発生させたノートの一意の識別子。</summary>
+      <returns>ノート ID。</returns>
+    </member><member name="T:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview">
+      <summary>このクラスは、Preview Notes アプリケーション機能の多くを所有します (「注釈」を参照)。</summary>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.IsScreenLocked">
+      <summary>デバイスの画面が現在ロックされているかどうかを示す値を取得します。</summary>
+      <returns>画面がロックされている場合は true。ロックされていない場合は false。</returns>
+    </member><member name="E:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.NotePlacementChanged">
+      <summary>ノートの配置 (サイズと位置) を変更したことを示します。</summary>
+    </member><member name="E:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.NoteVisibilityChanged">
+      <summary>ノートの表示状態が変更されたことを示します。</summary>
+    </member><member name="E:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.SystemLockStateChanged">
+      <summary>デバイスの画面のロック状態が変更されたことを示します。</summary>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.GetNotePlacement(System.Int32)">
+      <summary>メモリに格納し、後でアプリケーションにより復元する特定のノートのビュー配置を取得します。</summary>
+      <returns>ノート配置データを保持するバイトの配列。</returns>
+      <param name="noteViewId">配置を取得するノートの一意の識別子。</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.HideNote(System.Int32)">
+      <summary>デバイスの画面からノートのビューを削除します。</summary>
+      <param name="noteViewId">非表示にするノートの一意の識別子。</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.SetFocusToNextView">
+      <summary>表示可能な次のノート ビュー (ウィンドウ) にフォーカスを切り替えます。 ビューは、システムによって決定された順序で順番に選択されます。</summary>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.SetNotesThumbnailAsync(Windows.Storage.Streams.IBuffer)">
+      <summary>Windows Ink ワークスペースに表示されたとき、Alt+TAB のタスク スイッチャーに表示されたとき、またはタスク バーにマウス カーソルを置いて表示されたときに、このアプリケーションのサムネイル イメージを設定します。</summary>
+      <returns>このメソッドは値を返しません。</returns>
+      <param name="thumbnail">サムネイル イメージと使用方法を説明するバイト配列 (「注釈」を参照)。</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNote(System.Int32)">
+      <summary>デバイスの画面にノートを表示できるようにします。</summary>
+      <param name="noteViewId">表示するノートの一意の識別子。</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNoteRelativeTo(System.Int32,System.Int32)">
+      <summary>ノートを表示し、指定された "アンカー" ビューの横に配置します。</summary>
+      <param name="noteViewId">表示するノートの一意の識別子。</param>
+      <param name="anchorNoteViewId">"アンカー" ビューの ID。</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNoteWithPlacement(System.Int32,Windows.Storage.Streams.IBuffer)">
+      <summary>ノートを表示し、その配置データ (サイズと位置) を指定どおりに設定します。</summary>
+      <param name="noteViewId">表示するノートの一意の識別子。</param>
+      <param name="data">ノート配置データを保持するバイトの配列。</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.TrySetNoteSize(System.Int32,Windows.Foundation.Size)">
+      <summary>目的の大きさに指定されたノートのサイズを変更します。 特定のサイズが画面サイズ/スペースの問題のため推奨されない場合、ノートのサイズは変更されません。</summary>
+      <returns>ノートがサイズ変更された場合は true。画面制限のためサイズ変更されなかった場合は false。</returns>
+      <param name="noteViewId">サイズ変更するノートの一意の識別子。</param>
+      <param name="size">ノートの任意のサイズ。</param>
+    </member><member name="T:Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs">
+      <summary>NoteVisibilityChanged イベントに関する情報を表します。</summary>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs.IsVisible">
+      <summary>ノート (ViewId プロパティで指定) がデバイスの画面に表示されるかどうかを示します。</summary>
+      <returns>ノートが表示される場合は true。ノートが非表示の場合は false。</returns>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs.ViewId">
+      <summary>NoteVisibilityChanged イベントを発生させたノートの一意の識別子。</summary>
+      <returns>ノート ID。</returns>
+    </member></members>
+</doc>

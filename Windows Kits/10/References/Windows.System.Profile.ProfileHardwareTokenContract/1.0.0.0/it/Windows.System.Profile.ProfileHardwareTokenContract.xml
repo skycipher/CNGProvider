@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.Profile.ProfileHardwareTokenContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.System.Profile.HardwareIdentification">
+      <summary>Consente di ottenere un identificatore hardware che rappresenta l'hardware corrente.</summary>
+    </member><member name="M:Windows.System.Profile.HardwareIdentification.GetPackageSpecificToken(Windows.Storage.Streams.IBuffer)">
+      <summary>Ottiene un identificatore hardware (ASHWID) che rappresenta l'hardware corrente.</summary>
+      <returns>Le informazioni identificative dell'hardware.</returns>
+      <param name="nonce">Il parametro nonce di crittografia è facoltativo. Il parametro nonce è consigliato quando ASHWID deve essere verificato su cloud contro gli attacchi di tipo replay. Negli scenari in cui si desidera utilizzare il parametro nonce il server remoto deve generare un parametro nonce casuale, passarlo all'applicazione client e quindi verificare che la firma presenti il parametro nonce previsto alla ricezione di ASHWID dal sistema client.</param>
+    </member><member name="T:Windows.System.Profile.HardwareToken">
+      <summary>Rappresenta un token contenente un ID basato su hardware sufficientemente univoco.</summary>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Certificate">
+      <summary>Ottiene il certificato utilizzato per firmare l'ID ed è utilizzato per verificare l'autenticità dell'ID.</summary>
+      <returns>Il certificato utilizzato per firmare l'ID.</returns>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Id">
+      <summary>Ottiene l'identificatore hardware che identifica il dispositivo.</summary>
+      <returns>ID che identifica il dispositivo. Questo buffer di byte contiene un set di identificatori che rappresentano i vari componenti hardware disponibili nel dispositivo.</returns>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Signature">
+      <summary>Ottiene la firma digitale dell'ID hardware che consente di verificare l'autenticità dell'ID restituito.</summary>
+      <returns>La firma digitale dell'ID.</returns>
+    </member></members>
+</doc>

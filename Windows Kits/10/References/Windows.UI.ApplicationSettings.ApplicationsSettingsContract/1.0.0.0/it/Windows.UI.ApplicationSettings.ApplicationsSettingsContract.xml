@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.ApplicationSettings.ApplicationsSettingsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.ApplicationSettings.SettingsEdgeLocation">
+      <summary>Specifica il bordo dello schermo dove vengono visualizzati gli accessi alle impostazioni.</summary>
+      <deprecated type="deprecate">SettingsEdgeLocation è deprecato e potrebbe non funzionare su tutte le piattaforme. Per ulteriori informazioni, vedere MSDN.</deprecated>
+    </member><member name="F:Windows.UI.ApplicationSettings.SettingsEdgeLocation.Left">
+      <summary>L'accesso alle impostazioni è visualizzato sul bordo sinistro dello schermo.</summary>
+    </member><member name="F:Windows.UI.ApplicationSettings.SettingsEdgeLocation.Right">
+      <summary>L'accesso alle impostazioni è visualizzato sul bordo destro dello schermo.</summary>
+    </member><member name="T:Windows.UI.ApplicationSettings.SettingsPane">
+      <summary>Una classe statica che consente all'applicazione di controllare il riquadro del pulsante di accesso rapido Impostazioni. L'applicazione è in grado di aggiungere o rimuovere comandi, ricevere una notifica quando l'utente apre il riquadro o aprire il riquadro a livello di programmazione.</summary>
+      <deprecated type="deprecate">SettingsPane può essere modificato o non disponibile per le versioni successive a Windows 10. Anziché utilizzare SettingsPane, integrare le opzioni di impostazione nell'esperienza dell'applicazione. Per ulteriori informazioni, vedere linee guida per le impostazioni dell'applicazione.</deprecated>
+    </member><member name="P:Windows.UI.ApplicationSettings.SettingsPane.Edge">
+      <summary>Ottiene un valore che indica se l'accesso alle impostazioni viene visualizzato a sinistra o a destra dello schermo.</summary>
+      <deprecated type="deprecate">SettingsPane può essere modificato o non disponibile per le versioni successive a Windows 10. Anziché utilizzare SettingsPane, integrare le opzioni di impostazione nell'esperienza dell'applicazione. Per ulteriori informazioni, vedere linee guida per le impostazioni dell'applicazione.</deprecated>
+      <returns>Posizione dell'accesso alle impostazioni.</returns>
+    </member><member name="E:Windows.UI.ApplicationSettings.SettingsPane.CommandsRequested">
+      <summary>Si verifica quando l'utente apre il riquadro delle impostazioni. Il rilevamento di questo evento consente all'applicazione di inizializzare i comandi di impostazione e di interrompere l'interfaccia utente finché l'utente non chiude il riquadro.</summary>
+      <deprecated type="deprecate">SettingsPane può essere modificato o non disponibile per le versioni successive a Windows 10. Anziché utilizzare SettingsPane, integrare le opzioni di impostazione nell'esperienza dell'applicazione. Per ulteriori informazioni, vedere linee guida per le impostazioni dell'applicazione.</deprecated>
+    </member><member name="M:Windows.UI.ApplicationSettings.SettingsPane.GetForCurrentView">
+      <summary>Ottiene un oggetto SettingsPane associato alla visualizzazione dell'app corrente, ossia a CoreWindow).</summary>
+      <deprecated type="deprecate">SettingsPane può essere modificato o non disponibile per le versioni successive a Windows 10. Anziché utilizzare SettingsPane, integrare le opzioni di impostazione nell'esperienza dell'applicazione. Per ulteriori informazioni, vedere linee guida per le impostazioni dell'applicazione.</deprecated>
+      <returns>Riquadro delle impostazioni.</returns>
+    </member><member name="M:Windows.UI.ApplicationSettings.SettingsPane.Show">
+      <summary>Visualizza all'utente il riquadro del pulsante di accesso rapido Impostazioni.</summary>
+      <deprecated type="deprecate">SettingsPane può essere modificato o non disponibile per le versioni successive a Windows 10. Anziché utilizzare SettingsPane, integrare le opzioni di impostazione nell'esperienza dell'applicazione. Per ulteriori informazioni, vedere linee guida per le impostazioni dell'applicazione.</deprecated>
+    </member><member name="T:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest">
+      <summary>Contiene proprietà che sono disponibili solo durante l'evento CommandsRequested.</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequest può essere modificato o non disponibile per le versioni successive a Windows 10. Anziché utilizzare SettingsPane, integrare le opzioni di impostazione nell'esperienza dell'applicazione. Per ulteriori informazioni, vedere linee guida per le impostazioni dell'applicazione.</deprecated>
+    </member><member name="P:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest.ApplicationCommands">
+      <summary>Un vettore disponibile durante l'evento CommandsRequested. Accodare gli oggetti SettingsCommand per renderli disponibili all'interfaccia utente di SettingsPane.</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequest può essere modificato o non disponibile per le versioni successive a Windows 10. Anziché utilizzare SettingsPane, integrare le opzioni di impostazione nell'esperienza dell'applicazione. Per ulteriori informazioni, vedere linee guida per le impostazioni dell'applicazione.</deprecated>
+      <returns>Vettore virtualizzato di oggetti SettingsCommand.</returns>
+    </member><member name="T:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs">
+      <summary>Contiene argomenti disponibili dall'oggetto evento durante l'evento CommandsRequested.</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequestedEventArgs può essere modificato o non disponibile per le versioni successive a Windows 10. Anziché utilizzare SettingsPane, integrare le opzioni di impostazione nell'esperienza dell'applicazione. Per ulteriori informazioni, vedere linee guida per le impostazioni dell'applicazione.</deprecated>
+    </member><member name="P:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs.Request">
+      <summary>Un'istanza di SettingsPaneCommandsRequest che viene resa disponibile durante l'evento CommandsRequested.</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequestedEventArgs può essere modificato o non disponibile per le versioni successive a Windows 10. Anziché utilizzare SettingsPane, integrare le opzioni di impostazione nell'esperienza dell'applicazione. Per ulteriori informazioni, vedere linee guida per le impostazioni dell'applicazione.</deprecated>
+      <returns>Oggetto di richiesta dei comandi.</returns>
+    </member></members>
+</doc>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Portable.PortableDeviceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Portable.ServiceDevice">
+      <summary>Fournit des méthodes permettant d'identifier un service de périphérique pour un périphérique mobile prenant en charge WPD (Windows Portable Devices) pour l'énumération des périphériques.</summary>
+    </member><member name="M:Windows.Devices.Portable.ServiceDevice.GetDeviceSelector(Windows.Devices.Portable.ServiceDeviceType)">
+      <summary>Retourne une chaîne AQS (Advanced Query Syntax) qui est utilisée pour énumérer les services de périphérique du ServiceDeviceType spécifié. Cette chaîne est transmise à la méthode FindAllAsync ou CreateWatcher.</summary>
+      <returns>Chaîne AQS</returns>
+      <param name="serviceType">Type de service à identifier.</param>
+    </member><member name="M:Windows.Devices.Portable.ServiceDevice.GetDeviceSelectorFromServiceId(System.Guid)">
+      <summary>Chaîne AQS (Advanced Query Syntax) pour identifier un service de périphérique à l'aide de ses identificateurs GUID. Cette chaîne est transmise à la méthode FindAllAsync ou CreateWatcher.</summary>
+      <returns>Chaîne AQS</returns>
+      <param name="serviceId">Identificateur de service.</param>
+    </member><member name="T:Windows.Devices.Portable.ServiceDeviceType">
+      <summary>Indique le type d'un service de périphérique mobile.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.CalendarService">
+      <summary>Un service qui fournit des informations de calendrier.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.ContactsService">
+      <summary>Un service qui suit les contacts.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.DeviceStatusService">
+      <summary>Un service d'état du périphérique.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.NotesService">
+      <summary>Un service de prise de note.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.RingtonesService">
+      <summary>Un service qui fournit des sonneries pour un téléphone.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.SmsService">
+      <summary>Un service de messagerie SMS (Short Message Service).</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.TasksService">
+      <summary>Un service pour le suivi des tâches.</summary>
+    </member><member name="T:Windows.Devices.Portable.StorageDevice">
+      <summary>Fournit des méthodes d'accès à la fonctionnalité de stockage d'un périphérique mobile qui prend en charge WPD. Les dispositifs de stockage amovibles incluent : caméras et lecteurs Flash de mémoire de masse USB Lecteurs de musique, téléphones et caméras MTP (Media Transfer Protocol) et caméras PTP (Picture Transfer Protocol)</summary>
+      <capability type="removableStorage">Requis pour lire et écrire dans le stockage amovible.</capability>
+    </member><member name="M:Windows.Devices.Portable.StorageDevice.FromId(System.String)">
+      <summary>Obtient un objet StorageFolder d'un identificateur DeviceInformation pour un dispositif de stockage amovible.</summary>
+      <capability type="removableStorage">Requis pour lire et écrire dans le stockage amovible.</capability>
+      <returns>Objet dossier de stockage qui représente le dispositif de stockage amovible et permet d'accéder au contenu sur le périphérique.</returns>
+      <param name="DeviceId">ID DeviceInformation qui identifie le dispositif de stockage amovible. Cet identificateur peut être extrait de Windows.Devices.Enumeration ou de la propriété DeviceInformationId des arguments d'événements de périphérique AutoPlay. Pour plus d'informations, consultez Démarrage rapide : inscrire une application pour un périphérique de lecture automatique. Pour que FromId réussisse, l'application doit déclarer la fonctionnalité removableStorage comme indiqué dans les Déclarations des fonctionnalités d'application et les associations de types de fichiers pour les fichiers auxquels elle souhaite accéder sur le périphérique, comme indiqué dans Comment gérer l'activation des fichiers. Pour plus d'informations, consultez l'exemple de stockage amovible.</param>
+    </member><member name="M:Windows.Devices.Portable.StorageDevice.GetDeviceSelector">
+      <summary>Chaîne AQS (Advanced Query Syntax) utilisée pour identifier les dispositifs de stockage amovibles. Cette chaîne est transmise à la méthode FindAllAsync ou CreateWatcher.</summary>
+      <capability type="removableStorage">Requis pour lire et écrire dans le stockage amovible.</capability>
+      <returns>Chaîne AQS pour identifier les dispositifs de stockage.</returns>
+    </member></members>
+</doc>

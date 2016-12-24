@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.Core.CoreWindowDialogsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.Core.CoreWindowDialog">
+      <summary>アプリケーション ウィンドウの子ダイアログを定義します。</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowDialog.#ctor">
+      <summary>CoreWindowDialog クラスの既定のインスタンスを作成します。</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowDialog.#ctor(System.String)">
+      <summary>指定されたタイトルで CoreWindowDialog クラスのインスタンスを作成します。</summary>
+      <param name="title">ダイアログのタイトル。</param>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.BackButtonCommand">
+      <summary>ダイアログの [戻る] ボタンが選択されたときに呼び出されるデリゲートを取得または設定します。</summary>
+      <returns>ダイアログの [戻る] ボタンが選択されたときに呼び出されるデリゲート。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.CancelCommandIndex">
+      <summary>ダイアログのキャンセル操作のコマンド インデックス値を取得および設定します。</summary>
+      <returns>ダイアログのキャンセル操作のコマンド インデックス値。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.Commands">
+      <summary>ダイアログで使用できるユーザー インターフェイス コマンド (UI) セットを取得します。</summary>
+      <returns>ダイアログで使用できる UI コマンドのセット。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.DefaultCommandIndex">
+      <summary>ダイアログ ウィンドウの既定コマンドのインデックスを取得または設定します。</summary>
+      <returns>ダイアログ ウィンドウの既定のコマンドのインデックス値 (たとえば OK)。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.IsInteractionDelayed">
+      <summary>すべての UI 対話イベント メッセージが少し遅れるかどうかを示す値を取得または設定します。 この遅延は、ユーザーが誤ってダイアログ ウィンドウの操作を呼び出すのを防ぎます。</summary>
+      <returns>断片的な遅延がダイアログのすべての操作に導入された場合は true、そうでない場合は false。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.MaxSize">
+      <summary>ダイアログの最大サイズを取得します。</summary>
+      <returns>ダイアログの最大サイズ (ピクセル単位)。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.MinSize">
+      <summary>ダイアログの最小サイズを取得します。</summary>
+      <returns>ダイアログの最小サイズ (ピクセル単位)。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.Title">
+      <summary>ダイアログのタイトルを取得または設定します。</summary>
+      <returns>ダイアログのタイトル。</returns>
+    </member><member name="E:Windows.UI.Core.CoreWindowDialog.Showing">
+      <summary>ダイアログが表示されると発生します。</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowDialog.ShowAsync">
+      <summary>ダイアログを表示し、ユーザーによるアクションの実行を非同期的に待機します。</summary>
+      <returns>ダイアログに対してユーザーが行う操作、およびその操作についての情報。</returns>
+    </member><member name="T:Windows.UI.Core.CoreWindowFlyout">
+      <summary>アプリケーション ウィンドウの子サブメニューを定義します。</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowFlyout.#ctor(Windows.Foundation.Point)">
+      <summary>指定された位置に CoreWindowFlyout クラスのインスタンスを作成します。</summary>
+      <param name="position">フライアウトの発生元となる画面上のピクセル位置。 この位置はフライアウトの上部左端を表します。</param>
+    </member><member name="M:Windows.UI.Core.CoreWindowFlyout.#ctor(Windows.Foundation.Point,System.String)">
+      <summary>指定されたタイトルを持つ特定の位置に CoreWindowFlyout クラスのインスタンスを作成します。</summary>
+      <param name="position">フライアウトの発生元となる画面上のピクセル位置。 この位置はフライアウトの上部左端を表します。</param>
+      <param name="title">フライアウトのタイトル。</param>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.BackButtonCommand">
+      <summary>サブメニューの [戻る] ボタンが選択されたときに呼び出されるデリゲートを取得または設定します。</summary>
+      <returns>サブメニューの [戻る] ボタンが選択されたときに呼び出されるデリゲート。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.Commands">
+      <summary>サブメニューで使用できるユーザー インターフェイス コマンド セットを取得します。</summary>
+      <returns>フライアウトで使用できるユーザー インターフェイス コマンド セット。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.DefaultCommandIndex">
+      <summary>サブメニュー ウィンドウの既定コマンドのインデックスを取得または設定します。</summary>
+      <returns>フライアウト ウィンドウの既定のコマンドのインデックス値 (たとえば OK)。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.IsInteractionDelayed">
+      <summary>すべての UI 対話イベント メッセージが少し遅れるかどうかを示す値を取得または設定します。 この遅延は、ユーザーが誤ってフライアウト ウィンドウの操作を呼び出すのを防ぎます。</summary>
+      <returns>断片的な遅延がフライアウトのすべての操作に導入された場合は true、そうでない場合は false。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.MaxSize">
+      <summary>フライアウトの最大サイズを取得します。</summary>
+      <returns>フライアウトの最大サイズ (ピクセル単位)。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.MinSize">
+      <summary>サブメニューの最小サイズを取得します。</summary>
+      <returns>フライアウトの最小サイズ (ピクセル単位)。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.Title">
+      <summary>フライアウトのタイトルを取得または設定します。</summary>
+      <returns>フライアウトのタイトル。</returns>
+    </member><member name="E:Windows.UI.Core.CoreWindowFlyout.Showing">
+      <summary>サブメニューが表示されると発生します。</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowFlyout.ShowAsync">
+      <summary>サブメニューを表示し、ユーザーによるアクションの実行を非同期的に待機します。</summary>
+      <returns>サブメニューに対してユーザーが行う操作、およびその操作についての情報。</returns>
+    </member><member name="T:Windows.UI.Core.CoreWindowPopupShowingEventArgs">
+      <summary>ポップアップ ウィンドウのサイズを設定するためのメソッドを定義します。</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowPopupShowingEventArgs.SetDesiredSize(Windows.Foundation.Size)">
+      <summary>ポップアップの必要なサイズを設定します。</summary>
+      <param name="value">ポップアップの任意のサイズ。</param>
+    </member></members>
+</doc>

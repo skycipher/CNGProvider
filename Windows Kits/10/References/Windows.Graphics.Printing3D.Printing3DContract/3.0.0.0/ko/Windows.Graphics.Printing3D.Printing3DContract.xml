@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Graphics.Printing3D.Printing3DContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Graphics.Printing3D.Print3DManager">
+      <summary>3D 인쇄 환경을 만듭니다.</summary>
+    </member><member name="E:Windows.Graphics.Printing3D.Print3DManager.TaskRequested">
+      <summary>새 3D 인쇄 작업이 생성되는 경우에 발생합니다.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Print3DManager.GetForCurrentView">
+      <summary>3D 인쇄 관리자를 가져옵니다.</summary>
+      <returns>3D 인쇄 관리자입니다.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Print3DManager.ShowPrintUIAsync">
+      <summary>3D 인쇄 사용자 인터페이스를 프로그래밍 방식으로 시작합니다.</summary>
+      <returns>작업이 성공적으로 완료되었으면 True이고, 그렇지 않으면 False입니다.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTask">
+      <summary>3D 인쇄 작업을 나타냅니다.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Print3DTask.Source">
+      <summary>인쇄할 3D 인쇄 패키지를 가져옵니다.</summary>
+      <returns>인쇄할 3D 인쇄 패키지입니다.</returns>
+    </member><member name="E:Windows.Graphics.Printing3D.Print3DTask.Completed">
+      <summary>3D 프린터로 인쇄 요청을 보냈으며 3D 인쇄 작업이 생성된 경우 발생합니다.</summary>
+    </member><member name="E:Windows.Graphics.Printing3D.Print3DTask.SourceChanged">
+      <summary>워크플로에서 3D 인쇄 패키지를 수정하는 경우 발생합니다.</summary>
+    </member><member name="E:Windows.Graphics.Printing3D.Print3DTask.Submitting">
+      <summary>3D 프린터로 3D 인쇄 패키지를 제출한 경우 발생합니다.</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs">
+      <summary>3D 인쇄 요청의 Completed 이벤트에 대한 데이터를 제공합니다.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs.Completion">
+      <summary>3D 인쇄 요청의 상태를 가져옵니다.</summary>
+      <returns>3D 인쇄 요청의 완료 상태입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs.ExtendedStatus">
+      <summary>3D 인쇄 요청 중에 발생한 오류의 유형을 가져옵니다.</summary>
+      <returns>3D 인쇄 요청 중에 발생한 오류의 유형입니다.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskCompletion">
+      <summary>3D 인쇄 요청의 완료 상태를 지정합니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskCompletion.Abandoned">
+      <summary>요청이 중단되었습니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskCompletion.Canceled">
+      <summary>요청이 취소되었습니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskCompletion.Failed">
+      <summary>요청이 실패했습니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskCompletion.Slicing">
+      <summary>드라이버가 프린터의 3D 모델 조각을 층별로 준비하고 있습니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskCompletion.Submitted">
+      <summary>요청이 제출되었습니다.</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskDetail">
+      <summary>3D 인쇄 요청 중에 발생한 오류의 유형을 지정합니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.InvalidMaterialSelection">
+      <summary>잘못된 인쇄 재료를 선택 했습니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.InvalidModel">
+      <summary>3D 모델이 잘못되었습니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.InvalidPrintTicket">
+      <summary>인쇄 티켓이 잘못되었습니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.ModelExceedsPrintBed">
+      <summary>3D 모델이 인쇄판을 초과합니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.ModelNotManifold">
+      <summary>3d 모델에는 매니폴드 에지가 없습니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.Unknown">
+      <summary>더 이상의 정보가 없습니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.UploadFailed">
+      <summary>3D 인쇄 패키지 업로드에 실패했습니다.</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskRequest">
+      <summary>3D 인쇄 작업 요청을 나타냅니다.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Print3DTaskRequest.CreateTask(System.String,System.String,Windows.Graphics.Printing3D.Print3DTaskSourceRequestedHandler)">
+      <summary>3D 인쇄 작업을 만듭니다.</summary>
+      <returns>3D 인쇄 작업입니다.</returns>
+      <param name="title">인쇄 작업의 이름입니다.</param>
+      <param name="printerId">3D 프린터의 식별자입니다.</param>
+      <param name="handler">인쇄 작업 요청 소스의 콜백입니다.</param>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs">
+      <summary>TaskRequested 이벤트에 대한 데이터를 제공합니다.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs.Request">
+      <summary>Print3DManager와 관련된 3D 인쇄 작업 요청을 가져옵니다.</summary>
+      <returns>3D 인쇄 작업 요청입니다.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskSourceChangedEventArgs">
+      <summary>SourceChanged 이벤트에 대한 데이터를 제공합니다.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Print3DTaskSourceChangedEventArgs.Source">
+      <summary>워크플로에서 업데이트된 3D 인쇄 패키지를 가져옵니다.</summary>
+      <returns>업데이트된 3D 인쇄 패키지입니다.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskSourceRequestedArgs">
+      <summary>Print3DTaskSourceRequestedHandler 대리자에 대한 데이터를 제공합니다.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Print3DTaskSourceRequestedArgs.SetSource(Windows.Graphics.Printing3D.Printing3D3MFPackage)">
+      <summary>인쇄 작업에서 사용할 3D 제조 형식(3MF) 패키지를 지정합니다.</summary>
+      <param name="source">인쇄 작업에서 사용할 3D 제조 형식(3MF) 패키지입니다.</param>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskSourceRequestedHandler">
+      <summary>3D 인쇄 패키지에 대한 요청을 처리하는 메서드를 나타냅니다.</summary>
+      <param name="args">3D 인쇄 작업에서 사용할 3D 인쇄 패키지를 제공합니다.</param>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3D3MFPackage">
+      <summary>3D 제조 형식(3MF) 패키지를 나타냅니다.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3D3MFPackage.#ctor">
+      <summary>Printing3D3MFPackage 개체를 만듭니다.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3D3MFPackage.ModelPart">
+      <summary>3D 제조 형식(3MF) 패키지의 3D 모델에 대한 XML 스트림을 가져오거나 설정합니다.</summary>
+      <returns>3MF 패키지의 3D 모델에 대한 XML 스트림입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3D3MFPackage.PrintTicket">
+      <summary>3D 제조 형식(3MF) 패키지의 인쇄 티켓에 대한 스트림을 가져오거나 설정합니다.</summary>
+      <returns>3MF 패키지의 인쇄 티켓에 대한 스트림입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3D3MFPackage.Textures">
+      <summary>3D 제조 형식(3MF) 패키지에서 질감을 가져오거나 설정합니다.</summary>
+      <returns>3MF 패키지의 질감으로 Printing3DTextureResource 유형입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3D3MFPackage.Thumbnail">
+      <summary>3D 제조 형식(3MF) 패키지의 내용을 나타내는 미리 보기 이미지를 가져오거나 설정합니다.</summary>
+      <returns>3MF 패키지 내용을 나타내는 미리 보기 이미지입니다.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3D3MFPackage.LoadAsync(Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>3D 제조 형식(3MF) 파일 스트림에서 Printing3D3MFPackage 개체를 만듭니다.</summary>
+      <returns>지정된 3MF 패키지 스트림에서 생성된 Printing3D3MFPackage입니다.</returns>
+      <param name="value">3MF 파일 스트림입니다.</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3D3MFPackage.LoadModelFromPackageAsync(Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>3D 제조 형식(3MF) 파일 스트림에서 Printing3DModel 개체를 만듭니다.</summary>
+      <returns>지정된 3MF 개체 스트림에서 생성된 Printing3DModel 개체입니다.</returns>
+      <param name="value">3MF 파일 스트림입니다.</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3D3MFPackage.SaveAsync">
+      <summary>3D 제조 형식(3MF) 파일 스트림에 Printing3D3MFPackage 개체를 저장합니다.</summary>
+      <returns>패키지를 저장할 3MF 파일에 대한 스트림입니다.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3D3MFPackage.SaveModelToPackageAsync(Windows.Graphics.Printing3D.Printing3DModel)">
+      <summary>3D 제조 형식(3MF) 패키지에 대한 지정된 3D 모델을 저장합니다.</summary>
+      <returns>작업 결과입니다.</returns>
+      <param name="value">3MF 패키지에 저장할 3D 모델입니다.</param>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DBaseMaterial">
+      <summary>3D 모델의 특정 개체를 제조하는 데 사용되는 기본 재료를 나타냅니다.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DBaseMaterial.#ctor">
+      <summary>Printing3DBaseMaterial 클래스의 인스턴스를 만듭니다.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DBaseMaterial.Abs">
+      <summary>기본 재료에 사용되는 ABS(acrylonitrile butadiene styrene) 열가소성 수지의 이름을 가져옵니다.</summary>
+      <returns>기본 재료에 사용되는 ABS 열가소성 수지의 이름입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DBaseMaterial.Color">
+      <summary>기본 재료의 색을 가져오거나 설정합니다.</summary>
+      <returns>기본 재료의 색입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DBaseMaterial.Name">
+      <summary>기본 재료의 이름을 가져오거나 설정합니다.</summary>
+      <returns>기본 재료의 이름입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DBaseMaterial.Pla">
+      <summary>기본 재료에 사용되는 PLA(polylactic acid) 열가소성 수지의 이름을 가져옵니다.</summary>
+      <returns>기본 재료에 사용되는 PLA 열가소성 수지입니다.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup">
+      <summary>3D 모델에 사용되는 기본 재료의 그룹을 나타냅니다.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup.#ctor(System.UInt32)">
+      <summary>Printing3DBaseMaterialGroup 클래스의 인스턴스를 만듭니다.</summary>
+      <param name="MaterialGroupId">3D 모델에 사용되는 기본 재료의 그룹에 대한 식별자입니다. 값은 0보다 큽니다.</param>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup.Bases">
+      <summary>3D 모델에 사용되는 기본 재료의 그룹을 가져옵니다.</summary>
+      <returns>3D 모델에 사용되는 기본 재료로, 형식이 Printing3DBaseMaterial입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup.MaterialGroupId">
+      <summary>기본 재료 그룹의 식별자(ID)를 가져옵니다.</summary>
+      <returns>기본 재료 그룹의 ID입니다.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DBufferDescription">
+      <summary>버퍼의 데이터를 구문 분석하는 방법을 지정합니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferDescription.Format">
+      <summary>버퍼에서 사용되는 형식을 지정합니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferDescription.Stride">
+      <summary>데이터의 다음 단위를 찾으려면 앞으로 움직일 포인터의 거리를 지정합니다.</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DBufferFormat">
+      <summary>버퍼에서 사용되는 형식을 지정합니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.Printing3DDouble">
+      <summary>Double 형식의 버퍼입니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.Printing3DUInt">
+      <summary>uint 형식의 버퍼입니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.R32G32B32A32Float">
+      <summary>알파를 포함하여 채널당 32비트를 지원하는 네 가지 구성 요소, 128비트 부동 소수점 형식.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.R32G32B32A32UInt">
+      <summary>알파를 포함하여 채널당 32비트를 지원하는 네 가지 구성 요소, 128비트 부호 없는 정수 형식.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.R32G32B32Float">
+      <summary>색 채널당 32비트를 지원하는 세 가지 구성 요소, 96비트 부동 소수점 형식.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.R32G32B32UInt">
+      <summary>색 채널당 32비트를 지원하는 세 가지 구성 요소, 96비트 부호 없는 정수 형식.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.Unknown">
+      <summary>형식을 알 수 없습니다.</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DColorMaterial">
+      <summary>3D 모델에 사용되는 색 재료를 나타냅니다.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DColorMaterial.#ctor">
+      <summary>Printing3DColorMaterial 클래스의 인스턴스를 만듭니다.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DColorMaterial.Color">
+      <summary>재료의 색을 가져오거나 설정합니다.</summary>
+      <returns>재료의 색입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DColorMaterial.Value">
+      <summary>재료의 색 값을 가져오거나 설정합니다.</summary>
+      <returns>재료의 색상 값입니다.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DColorMaterialGroup">
+      <summary>3D 모델에 사용되는 색 재료의 그룹을 나타냅니다.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DColorMaterialGroup.#ctor(System.UInt32)">
+      <summary>Printing3DColorMaterialGroup 클래스의 인스턴스를 만듭니다.</summary>
+      <param name="MaterialGroupId">3D 모델에 사용되는 색 재료의 그룹에 대한 식별자입니다. 값은 0보다 큽니다.</param>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DColorMaterialGroup.Colors">
+      <summary>3D 모델에 사용되는 색 재료의 그룹을 가져옵니다.</summary>
+      <returns>3D 모델에 사용되는 색 재료의 그룹으로, 형식이 Printing3DColorMaterial입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DColorMaterialGroup.MaterialGroupId">
+      <summary>색 재료 그룹의 식별자(ID)를 가져옵니다.</summary>
+      <returns>색 재료 그룹의 ID입니다.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DComponent">
+      <summary>3D 제조 형식(3MF) 구성 요소를 나타냅니다. 다른 구성 요소의 컨테이너 역할을 합니다.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DComponent.#ctor">
+      <summary>Printing3DComponent 클래스의 인스턴스를 만듭니다.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponent.Components">
+      <summary>구성 요소 내에 포함된 다른 구성 요소를 가져옵니다.</summary>
+      <returns>구성 요소 내에 포함된 다른 구성 요소입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponent.Mesh">
+      <summary>구성 요소의 3D 메시를 가져오거나 설정합니다.</summary>
+      <returns>구성 요소의 3D 메시입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponent.Name">
+      <summary>3D 제조 형식(3MF) 구성 요소의 이름을 가져오거나 설정합니다.</summary>
+      <returns>3MF 구성 요소의 이름입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponent.PartNumber">
+      <summary>3D 제조 형식(3MF) 구성 요소의 부품 번호를 가져오거나 설정합니다.</summary>
+      <returns>3MF 구성 요소의 부품 번호입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponent.Thumbnail">
+      <summary>3D 제조 형식(3MF) 구성 요소의 미리 보기 이미지를 가져오거나 설정합니다.</summary>
+      <returns>3MF 구성 요소의 미리 보기 이미지입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponent.Type">
+      <summary>3D 제조 형식(3MF) 구성 요소의 형식을 가져오거나 설정합니다.</summary>
+      <returns>3MF 구성 요소의 형식입니다.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DComponentWithMatrix">
+      <summary>행렬 변환을 사용하여 개체 정의에 적용되는 3D 제조 형식(3MF) 구성 요소를 나타냅니다.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DComponentWithMatrix.#ctor">
+      <summary>Printing3DComponentWithMatrix 클래스의 인스턴스를 만듭니다.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponentWithMatrix.Component">
+      <summary>행렬 변환을 사용하여 개체 정의에 적용되는 3D 제조 형식(3MF) 기본 구성 요소를 가져오거나 설정합니다.</summary>
+      <returns>행렬 변환을 사용하여 개체 정의에 적용되는 3MF 기본 구성 요소입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponentWithMatrix.Matrix">
+      <summary>3D 제조 형식(3MF) 기본 구성 요소에 적용되는 행렬 변환을 가져오거나 설정합니다.</summary>
+      <returns>3D 제조 형식(3MF) 기본 구성 요소에 적용되는 행렬 변환입니다.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DCompositeMaterial">
+      <summary>기본 재료의 혼합을 사용하여 정의된 복합 재료를 나타냅니다.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DCompositeMaterial.#ctor">
+      <summary>Printing3DCompositeMaterial 클래스의 인스턴스를 만듭니다.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DCompositeMaterial.Values">
+      <summary>복합 재료에 사용되는 기본 재료의 혼합을 가져옵니다. 각 혼합은 각 기본 재료(0과 1 사이의 값)에 대한 전체 혼합 비율을 나열하여 정의됩니다.</summary>
+      <returns>복합 재료(0과 1 사이의 값)에 사용되는 기본 재료의 비율입니다. 비율 값은 MaterialIndices의 기본 재료와 같은 순서로 지정됩니다.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup">
+      <summary>복합 재료의 그룹을 나타냅니다.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup.#ctor(System.UInt32)">
+      <summary>Printing3DCompositeMaterialGroup 클래스의 인스턴스를 만듭니다.</summary>
+      <param name="MaterialGroupId">복합 재료 그룹의 식별자(ID)로 0보다 큰 값입니다.</param>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup.BaseMaterialGroup">
+      <summary>Printing3DBaseMaterial 멤버가 복합 재료를 생성하는 데 사용할 기존 Printing3DBaseMaterialGroup을 가져옵니다.</summary>
+      <returns>복합 재료를 생성할 Printing3DBaseMaterialGroup입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup.Composites">
+      <summary>개별 복합 재료를 정의하는 혼합 목록을 가져옵니다. 각 혼합은 각 기본 재료(0과 1 사이의 값)에 대해 전체 혼합의 비율을 나열하여 정의됩니다. 비율 값은 MaterialIndices의 기본 재료와 같은 순서로 지정됩니다.</summary>
+      <returns>개별 복합 재료를 정의하는 혼합 목록입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup.MaterialGroupId">
+      <summary>복합 재료 그룹에 사용되는 재료를 정의하는 기본 재료 그룹의 식별자(ID)를 가져옵니다.</summary>
+      <returns>복합 재료 그룹에 사용되는 재료를 정의하는 기본 재료 그룹의 식별자(ID)입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup.MaterialIndices">
+      <summary>그룹에 있는 복합 재료를 만드는 데 사용되는 기본 재료의 순서가 지정된 목록을 가져옵니다. 기본 재료의 순서는 복합으로 정의된 혼합 값에 유지됩니다.</summary>
+      <returns>MaterialGroupId에 지정된 기본 재료 그룹의 기본 재료 인덱스 값입니다.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DFaceReductionOptions">
+      <summary>Printing3DModel 클래스에서 TryReduceFacesAsync 메서드에 대한 추가 정보를 제공합니다.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DFaceReductionOptions.#ctor">
+      <summary>Printing3DFaceReductionOptions 클래스의 인스턴스를 만듭니다.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DFaceReductionOptions.MaxEdgeLength">
+      <summary>해당 가장자리를 공유하는 삼각형을 TryReduceFacesAsync 메서드를 통해 공유할 수 있는 가장자리의 최대 길이를 설정합니다. 0으로 설정한 경우 기본 제공되는 기본값이 사용됩니다.</summary>
+      <returns>해당 가장자리를 공유하는 삼각형을 공유할 수 있는 가장자리의 최대 길이입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DFaceReductionOptions.MaxReductionArea">
+      <summary>해당 삼각형을 TryReduceFacesAsync 메서드를 통해 병합할 수 없는 삼각형의 영역을 설정합니다. 0으로 설정한 경우 기본 제공되는 기본값이 사용됩니다.</summary>
+      <returns>삼각형을 병합할 수 있는 최대 영역입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DFaceReductionOptions.TargetTriangleCount">
+      <summary>메시에서 원하는 삼각형의 수를 설정합니다. TryReduceFacesAsync 메서드는 삼각형 수가 이 숫자보다 작거나 같은 경우 면 병합을 중지합니다. 0으로 설정한 경우 알고리즘은 삼각형 수가 반으로 줄어들 때까지 실행됩니다.</summary>
+      <returns>메시에서 삼각형의 원하는 수입니다.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DMaterial">
+      <summary>3D 모델에 사용되는 모든 재료 자원을 나타냅니다.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMaterial.#ctor">
+      <summary>Printing3DMaterial 클래스의 인스턴스를 만듭니다.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMaterial.BaseGroups">
+      <summary>3D 모델에 사용되는 모든 기본 재료의 그룹을 가져옵니다.</summary>
+      <returns>3D 모델에 사용되는 모든 기본 재료 그룹으로, Printing3DBaseMaterialGroup 유형입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMaterial.ColorGroups">
+      <summary>3D 모델에 사용되는 모든 색 재료 그룹을 가져옵니다.</summary>
+      <returns>3D 모델에 사용되는 모든 색 재료 그룹으로, Printing3DColorMaterialGroup 유형입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMaterial.CompositeGroups">
+      <summary>3D 모델에 사용되는 모든 복합 재료 그룹을 가져옵니다.</summary>
+      <returns>3D 모델에 사용되는 모든 복합 재료 그룹으로, Printing3DCompositeMaterialGroup 유형입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMaterial.MultiplePropertyGroups">
+      <summary>3D 모델에 사용되는 모든 다중 속성 그룹을 가져옵니다.</summary>
+      <returns>3D 모델에 사용되는 모든 다중 모델 그룹으로, Printing3DMultiplePropertyMaterialGroup 유형입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMaterial.Texture2CoordGroups">
+      <summary>3D 모델에 사용되는 모든 2D 질감 재료 그룹을 가져옵니다.</summary>
+      <returns>3D 모델에 사용되는 모든 2D 질감 재료 그룹으로, Printing3DTexture2CoordMaterialGroup 유형입니다.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DMesh">
+      <summary>3D 모델의 메시를 나타냅니다.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.#ctor">
+      <summary>Printing3DMesh 클래스의 인스턴스를 만듭니다.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.BufferDescriptionSet">
+      <summary>메시 버퍼 설명 집합을 가져옵니다.</summary>
+      <returns>메시 버퍼 설명 집합입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.BufferSet">
+      <summary>메시 버퍼 집합을 가져옵니다.</summary>
+      <returns>메시 버퍼 집합입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.IndexCount">
+      <summary>꼭짓점 인덱스의 번호를 가져오거나 설정합니다.</summary>
+      <returns>삼각형 인덱스의 번호입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.TriangleIndicesDescription">
+      <summary>삼각형 인덱스에 대한 버퍼 설명을 가져오거나 설정합니다.</summary>
+      <returns>삼각형 인덱스에 대한 버퍼 설명입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.TriangleMaterialIndicesDescription">
+      <summary>삼각형 재료 인덱스에 대한 버퍼 설명을 가져오거나 설정합니다.</summary>
+      <returns>삼각형 재료 인덱스에 대한 버퍼 설명입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.VertexCount">
+      <summary>삼각형 꼭짓점의 번호를 가져오거나 설정합니다.</summary>
+      <returns>삼각형 꼭짓점의 번호입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.VertexNormalsDescription">
+      <summary>꼭짓점 법선에 대한 버퍼 설명을 가져오거나 설정합니다.</summary>
+      <returns>꼭짓점 법선의 버퍼 설명입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.VertexPositionsDescription">
+      <summary>꼭짓점 위치에 대한 버퍼 설명을 가져오거나 설정합니다.</summary>
+      <returns>꼭짓점 위치에 대한 버퍼 설명입니다.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.CreateTriangleIndices(System.UInt32)">
+      <summary>삼각형 인덱스에 대한 버퍼를 만듭니다.</summary>
+      <param name="value">IBuffer가 수용할 수 있는 버퍼의 용량, 최대 바이트 수입니다.</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.CreateTriangleMaterialIndices(System.UInt32)">
+      <summary>삼각형 재료 인덱스의 버퍼를 만듭니다.</summary>
+      <param name="value">IBuffer가 수용할 수 있는 버퍼의 용량, 최대 바이트 수입니다.</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.CreateVertexNormals(System.UInt32)">
+      <summary>꼭짓점 법선을 위한 버퍼를 만듭니다.</summary>
+      <param name="value">IBuffer가 수용할 수 있는 버퍼의 용량, 최대 바이트 수입니다.</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.CreateVertexPositions(System.UInt32)">
+      <summary>꼭짓점 위치에 대한 버퍼를 만듭니다.</summary>
+      <param name="value">IBuffer가 수용할 수 있는 버퍼의 용량, 최대 바이트 수입니다.</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.GetTriangleIndices">
+      <summary>삼각형 인덱스의 버퍼를 가져옵니다.</summary>
+      <returns>삼각형 인덱스의 버퍼입니다.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.GetTriangleMaterialIndices">
+      <summary>삼각형 재료 인덱스의 버퍼를 가져옵니다.</summary>
+      <returns>삼각형 재료 인덱스의 버퍼입니다.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.GetVertexNormals">
+      <summary>꼭지점 법선의 버퍼를 가져옵니다.</summary>
+      <returns>꼭짓점 법선의 버퍼입니다.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.GetVertexPositions">
+      <summary>꼭짓점 위치의 버퍼를 가져옵니다.</summary>
+      <returns>꼭짓점 위치의 버퍼입니다.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.VerifyAsync(Windows.Graphics.Printing3D.Printing3DMeshVerificationMode)">
+      <summary>메시에 매니폴드 에지 및 일반 삼각형이 있는지 확인합니다.</summary>
+      <returns>확인 결과이며, Printing3DMeshVerificationResult 유형입니다.</returns>
+      <param name="value">메시를 확인하는 방법을 지정합니다.</param>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DMeshVerificationMode">
+      <summary>메시를 확인하는 방법을 지정합니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DMeshVerificationMode.FindAllErrors">
+      <summary>확인이 완료될 때까지 결과 반환을 기다립니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DMeshVerificationMode.FindFirstError">
+      <summary>첫 번째 오류를 찾으면 결과를 반환합니다.</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DMeshVerificationResult">
+      <summary>VerifyAsync 메서드에 대한 데이터를 제공합니다.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMeshVerificationResult.IsValid">
+      <summary>메시가 유효한지 여부를 나타내는 값을 가져옵니다.</summary>
+      <returns>메시가 유효하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMeshVerificationResult.NonmanifoldTriangles">
+      <summary>매니폴드 에지가 없는 삼각형을 가져옵니다(해당하는 경우).</summary>
+      <returns>매니폴드 에지가 없는 삼각형입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMeshVerificationResult.ReversedNormalTriangles">
+      <summary>일반 역삼각형을 가져옵니다(해당하는 경우).</summary>
+      <returns>일반 역삼각형입니다.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DModel">
+      <summary>3D 제조 형식(3MF) 패키지의 3D 모델을 나타냅니다.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.#ctor">
+      <summary>Printing3DModel 클래스의 인스턴스를 만듭니다.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Build">
+      <summary>루트 3D 제조 형식(3MF) 구성 요소를 가져오거나 설정합니다. 3D 프린터의 조형 판을 나타내며 인쇄될 개체를 정의합니다.</summary>
+      <returns>루트 3MF 구성 요소입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Components">
+      <summary>3D 모델에 사용되는 모든 3D 제조 형식(3MF)의 구성 요소를 가져옵니다.</summary>
+      <returns>3D 모델에 사용되는 모든 3MF 구성 요소로, Printing3DComponent 유형입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Material">
+      <summary>3D 모델의 루트 재료 컨테이너를 가져오거나 설정합니다.</summary>
+      <returns>3D 모델의 루트 재료 컨테이너입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Meshes">
+      <summary>3D 모델에 사용되는 모든 메시를 가져옵니다.</summary>
+      <returns>3D 모델에 사용되는 모든 메시로, Printing3DMesh 유형입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Metadata">
+      <summary>3D 제조 형식(3MF) 패키지의 메타데이터를 가져옵니다.</summary>
+      <returns>3MF 패키지의 메타데이터입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.RequiredExtensions">
+      <summary>3D제조 형식(3MF) 패키지에 필요한 확장 목록을 가져옵니다.</summary>
+      <returns>3MF 패키지에 필요한 확장입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Textures">
+      <summary>3D 모델에 사용되는 모든 질감을 가져옵니다.</summary>
+      <returns>3D 모델에 사용되는 모든 질감으로, Printing3DModelTexture 유형입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Unit">
+      <summary>3D 모델에 사용되는 측정 단위를 가져오거나 설정합니다.</summary>
+      <returns>3D 모델에 사용되는 측정 단위입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Version">
+      <summary>3D 제조 형식(3MF) 패키지의 버전을 가져오거나 설정합니다.</summary>
+      <returns>3MF 패키지의 버전입니다.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.Clone">
+      <summary>현재 3D 모델의 복사본을 가져옵니다.</summary>
+      <returns>현재 3D 모델의 복사본입니다.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.RepairAsync">
+      <summary>3D 모델을 복구합니다.</summary>
+      <returns>작업의 결과입니다.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.RepairWithProgressAsync">
+      <summary>작업의 진행 상황을 보고하는 기능을 사용하여 3D 모델을 수정합니다.</summary>
+      <returns>비동기 작업이 성공했는지 여부를 나타내는 Boolean 값과 0과 1 사이의 10진수로 진행 과정을 보고하는 Double 값입니다.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.TryPartialRepairAsync">
+      <summary>완료되거나 예외가 throw될 때까지 3D 모델 복구 알고리즘을 실행합니다.</summary>
+      <returns>비동기 작업이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.TryPartialRepairAsync(Windows.Foundation.TimeSpan)">
+      <summary>3D 모델 복구 알고리즘을 시작하지만 시간 제한에 도달하면 종료됩니다.</summary>
+      <returns>비동기 작업이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="maxWaitTime">알고리즘을 실행할 수 있는 시간(초)을 정의합니다. 0의 값은 다른 종료 조건이 충족될 때까지 알고리즘을 실행합니다.</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.TryReduceFacesAsync">
+      <summary>주변의 꼭짓점을 병합하여 Printing3DModel 내의 모든 메시에 있는 삼각형 면의 수를 줄이는 알고리즘을 실행합니다. 삼각형의 총 수가 절반으로 줄어들면 중지합니다.</summary>
+      <returns>비동기 작업이 성공했는지 여부를 나타내는 Boolean 값과 0과 1 사이의 10진수로 진행 과정을 보고하는 Double 값입니다.</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.TryReduceFacesAsync(Windows.Graphics.Printing3D.Printing3DFaceReductionOptions)">
+      <summary>주변의 꼭짓점을 병합하여 Printing3DModel 내의 모든 메시에 있는 삼각형 면의 수를 줄이는 알고리즘을 실행합니다. 지정된 옵션에 따라 중지합니다.</summary>
+      <returns>비동기 작업이 성공했는지 여부를 나타내는 Boolean 값과 0과 1 사이의 10진수로 진행 과정을 보고하는 Double 값입니다.</returns>
+      <param name="printing3DFaceReductionOptions">작업의 종료를 트리거하는 조건을 정의합니다.</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.TryReduceFacesAsync(Windows.Graphics.Printing3D.Printing3DFaceReductionOptions,Windows.Foundation.TimeSpan)">
+      <summary>주변의 꼭짓점을 병합하여 Printing3DModel 내의 모든 메시에 있는 삼각형 면의 수를 줄이는 알고리즘을 실행합니다. 지정된 옵션에 따라 또는 maxWait 시간에 도달하면 중지합니다.</summary>
+      <returns>비동기 작업이 성공했는지 여부를 나타내는 Boolean 값과 0과 1 사이의 10진수로 진행 과정을 보고하는 Double 값입니다.</returns>
+      <param name="printing3DFaceReductionOptions">작업의 종료를 트리거하는 조건을 정의합니다.</param>
+      <param name="maxWait">알고리즘을 실행할 수 있는 시간(초)을 정의합니다. 0의 값은 다른 종료 조건이 충족될 때까지 알고리즘을 실행합니다.</param>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DModelTexture">
+      <summary>3D 모델에 사용되는 질감을 나타냅니다.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModelTexture.#ctor">
+      <summary>Printing3DModelTexture 클래스의 인스턴스를 만듭니다.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModelTexture.TextureResource">
+      <summary>질감에 사용되는 질감 리소스를 가져오거나 설정합니다.</summary>
+      <returns>질감에 사용되는 질감 리소스입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModelTexture.TileStyleU">
+      <summary>전체 요청 영역을 채우기 위해 U축에서 바둑판식 배열이 발생하는 방식을 나타내는 값을 가져오거나 설정합니다.</summary>
+      <returns>전체 요청 영역을 채우기 위해 U축에서 바둑판식 배열이 발생하는 방식을 나타내는 값입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModelTexture.TileStyleV">
+      <summary>전체 요청 영역을 채우기 위해 V축에서 바둑판식 배열이 발생하는 방식을 나타내는 값을 가져오거나 설정합니다.</summary>
+      <returns>전체 요청 영역을 채우기 위해 V축에서 바둑판식 배열이 발생하는 방식을 나타내는 값입니다.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DModelUnit">
+      <summary>3D 모델에 사용되는 측정 단위를 지정합니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DModelUnit.Centimeter">
+      <summary>3D 모델의 단위는 센티미터 단위로 지정됩니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DModelUnit.Foot">
+      <summary>3D 모델의 단위는 피트 단위로 지정됩니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DModelUnit.Inch">
+      <summary>3D 모델의 단위는 인치 단위로 지정됩니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DModelUnit.Meter">
+      <summary>3D 모델의 단위는 미터 단위로 지정됩니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DModelUnit.Micron">
+      <summary>3D 모델의 단위는 마이크론 단위로 지정됩니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DModelUnit.Millimeter">
+      <summary>3D 모델의 단위는 밀리미터 단위로 지정됩니다.</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial">
+      <summary>(MaterialGroupIndices)에 지정된 재료 그룹에서 속성 및/또는 재료의 조합을 나타냅니다.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial.#ctor">
+      <summary>Printing3DMultiplePropertyMaterial 클래스의 인스턴스를 만듭니다.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial.MaterialIndices">
+      <summary>다중 속성 재료에 통합된 속성 및/또는 재료의 인덱스를 가져옵니다. 각 조합은 보조 재료 그룹의 항목 인덱스를 사용하여 한 재료 그룹에서 항목의 인덱스를 나열하여 정의됩니다. 인덱스 값은 MaterialGroupIndices에 나열된 재료 그룹과 같은 순서로 지정됩니다.</summary>
+      <returns>다중 속성에 통합된 속성 또는 재료의 인덱스입니다.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup">
+      <summary>다중 속성 재료의 그룹을 나타냅니다.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup.#ctor(System.UInt32)">
+      <summary>Printing3DMultiplePropertyMaterialGroup 클래스의 새 인스턴스를 만듭니다.</summary>
+      <param name="MaterialGroupId">다중 속성 재료 그룹의 식별자(ID)로 0보다 큰 값입니다.</param>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup.MaterialGroupId">
+      <summary>다중 속성 재료 그룹의 식별자(ID)를 가져옵니다.</summary>
+      <returns>다중 속성 재료 그룹의 ID입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup.MaterialGroupIndices">
+      <summary>다중 속성 그룹에 속성-재료 조합을 정의하는 데 사용되는 재료 그룹(MaterialGroupId 값)의 순서가 지정된 목록을 가져옵니다. 재료 그룹의 순서는 MultipleProperties로 정의된 조합에 유지됩니다.</summary>
+      <returns>그룹에 있는 속성 또는 재료의 인덱스입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup.MultipleProperties">
+      <summary>속성-재료 조합의 목록을 가져옵니다. 각 조합은 보조 재료 그룹의 항목 인덱스를 사용하여 한 재료 그룹에서 항목의 인덱스를 나열하여 정의됩니다. 인덱스 값은 MaterialGroupIndices에 나열된 재료 그룹과 같은 순서로 지정됩니다.</summary>
+      <returns>속성-재료 조합의 목록입니다.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DObjectType">
+      <summary>3D 모델에서 개체의 기능을 지정합니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DObjectType.Model">
+      <summary>3D 모델의 핵심 구성 요소로 작동합니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DObjectType.Others">
+      <summary>일부 다른 기능에서 작동합니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DObjectType.Support">
+      <summary>지원 개체로 작동합니다.</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial">
+      <summary>3D 모델에 사용되는 2D 질감 재료를 나타냅니다.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial.#ctor">
+      <summary>Printing3DTexture2CoordMaterial 클래스의 인스턴스를 만듭니다.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial.Texture">
+      <summary>2D 질감 재료에 사용되는 질감을 가져오거나 설정합니다.</summary>
+      <returns>2D 질감 재료에 사용되는 질감입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial.U">
+      <summary>질감 왼쪽 위의 원점으로부터 가로로 오른쪽에 있는 질감 내 U 좌표를 가져오거나 설정합니다.</summary>
+      <returns>질감 내 U 좌표입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial.V">
+      <summary>질감 왼쪽 위의 원점으로부터 세로로 아래에 있는 질감 내 V 좌표를 가져오거나 설정합니다.</summary>
+      <returns>질감 내 V 좌표입니다.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup">
+      <summary>3D 모델에 사용되는 2D 질감 재료의 그룹을 나타냅니다.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup.#ctor(System.UInt32)">
+      <summary>Printing3DTexture2CoordMaterialGroup 클래스의 인스턴스를 만듭니다.</summary>
+      <param name="MaterialGroupId">3D 모델에 사용되는 2D 질감 재료의 그룹에 대한 식별자입니다. 값은 0보다 큽니다.</param>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup.MaterialGroupId">
+      <summary>2D 질감 재료 그룹의 식별자(ID)를 가져옵니다.</summary>
+      <returns>2D 질감 재료 그룹의 ID입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup.Texture">
+      <summary>재료 그룹의 질감을 가져오거나 설정합니다.</summary>
+      <returns>재료 그룹의 질감입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup.Texture2Coords">
+      <summary>3D 모델에 사용되는 2D 질감 재료의 그룹을 가져옵니다.</summary>
+      <returns>3D 모델에 사용되는 2D 질감 재료의 그룹으로, Printing3DTexture2CoordMaterial 유형입니다.</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior">
+      <summary>요청된 전체 질감 영역을 채우기 위해 U 및 V축에서 바둑판식 배열이 나타나는 방식을 지정합니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior.Clamp">
+      <summary>질감 좌표를 [0.0, 1.0] 범위로 고정합니다. 즉, 질감을 한 번 적용하면 가장자리 픽셀의 색에 스며듭니다. 예를 들어 응용 프로그램에서 사각형 기본을 만들고 질감 좌표 (0.0,0.0), (0.0,3.0), (3.0,3.0) 및 (3.0,0.0)을 기본 꼭짓점에 할당한다고 가정합시다. 질감 가장자리 고정 동작을 설정하면 질감이 한 번 적용됩니다. 열 상단과 행 끝의 픽셀 색상이 그림처럼 각각 기본의 상단과 오른쪽으로 확장됩니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior.Mirror">
+      <summary>타일은 모든 정수 경계에서 질감을 미러링합니다. 예를 들어, 질감 좌표가 (0.0,0.0), (0.0,3.0), (3.0,3.0), (3.0,0.0)인 경우입니다. 질감 가장자리 줄바꿈 동작을 설정하면 u 및 v 방향 모두에서 질감이 세 배로 적용됩니다. 다음과 같이 적용된 기타 모든 행과 열은 앞 행 또는 열의 미러 이미지입니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior.None">
+      <summary>바둑판식 배열이 나타나지 않습니다.</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior.Wrap">
+      <summary>타일이 모든 정수 교차점에서 질감 리소스를 반복합니다. 예를 들어, 질감 좌표가 (0.0,0.0), (0.0,3.0), (3.0,3.0), (3.0,0.0)인 경우 질감 가장자리 줄바꿈 동작을 설정하면 다음과 같이 u 및 v 방향 모두에서 질감이 세 배로 적용됩니다.</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DTextureResource">
+      <summary>2D 질감 재료에 사용되는 질감 리소스를 지정합니다.</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DTextureResource.#ctor">
+      <summary>제공된 제목을 사용하여 Printing3DTextureResource 클래스의 인스턴스를 만듭니다.</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTextureResource.Name">
+      <summary>질감 리소스의 이름을 가져오거나 설정합니다.</summary>
+      <returns>질감 리소스의 이름입니다.</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTextureResource.TextureData">
+      <summary>질감 리소스의 이미지 스트림을 가져오거나 설정합니다.</summary>
+      <returns>질감 리소스의 이미지 스트림입니다.</returns>
+    </member></members>
+</doc>

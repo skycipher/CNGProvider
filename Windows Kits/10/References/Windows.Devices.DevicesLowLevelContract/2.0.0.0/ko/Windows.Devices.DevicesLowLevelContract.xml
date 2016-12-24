@@ -1,0 +1,863 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.DevicesLowLevelContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.ILowLevelDevicesAggregateProvider">
+      <summary>모든 저수준 장치 집계 공급자에 공통된 속성을 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.AdcControllerProvider">
+      <summary>기본 ADC 공급자를 가져옵니다. 기본 공급자를 명시적으로 설정하지 않은 경우 기본 드라이버/컨트롤러가 적용됩니다.</summary>
+      <returns>ADC 공급자입니다.</returns>
+    </member><member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.GpioControllerProvider">
+      <summary>기본 GPIO 공급자를 가져옵니다. 기본 공급자를 명시적으로 설정하지 않은 경우 기본 드라이버/컨트롤러가 적용됩니다.</summary>
+      <returns>GPIO 공급자입니다.</returns>
+    </member><member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.I2cControllerProvider">
+      <summary>기본 I2C 공급자를 가져옵니다. 기본 공급자를 명시적으로 설정하지 않은 경우 기본 드라이버/컨트롤러가 적용됩니다.</summary>
+      <returns>I2C 공급자입니다.</returns>
+    </member><member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.PwmControllerProvider">
+      <summary>기본 PWM 공급자를 가져옵니다. 기본 공급자를 명시적으로 설정하지 않은 경우 기본 드라이버/컨트롤러가 적용됩니다.</summary>
+      <returns>PWM 공급자입니다.</returns>
+    </member><member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.SpiControllerProvider">
+      <summary>기본 SPI 공급자를 가져옵니다. 기본 공급자를 명시적으로 설정하지 않은 경우 기본 드라이버/컨트롤러가 적용됩니다.</summary>
+      <returns>SPI 공급자입니다.</returns>
+    </member><member name="T:Windows.Devices.LowLevelDevicesAggregateProvider">
+      <summary>저수준 버스 장치 공급자를 나타냅니다. 이 클래스는 저수준 버스 컨트롤러에 대한 기본 공급자에 대한 액세스를 제공합니다.</summary>
+    </member><member name="M:Windows.Devices.LowLevelDevicesAggregateProvider.#ctor(Windows.Devices.Adc.Provider.IAdcControllerProvider,Windows.Devices.Pwm.Provider.IPwmControllerProvider,Windows.Devices.Gpio.Provider.IGpioControllerProvider,Windows.Devices.I2c.Provider.II2cControllerProvider,Windows.Devices.Spi.Provider.ISpiControllerProvider)">
+      <summary>LowLevelDevicesAggregateProvider의 인스턴스를 만들고 제공된 공급자를 해당 버스의 기본값으로 설정합니다.</summary>
+      <param name="adc">ADC 공급자입니다.</param>
+      <param name="pwm">PWM 공급자입니다.</param>
+      <param name="gpio">GPIO 공급자입니다.</param>
+      <param name="i2c">I2C 공급자입니다.</param>
+      <param name="spi">SPI 공급자입니다.</param>
+    </member><member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.AdcControllerProvider">
+      <summary>기본 ADC 공급자를 가져옵니다. 기본 공급자를 명시적으로 설정하지 않은 경우 기본 드라이버/컨트롤러가 적용됩니다.</summary>
+      <returns>ADC 공급자입니다.</returns>
+    </member><member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.GpioControllerProvider">
+      <summary>기본 GPIO 공급자를 가져옵니다. 기본 공급자를 명시적으로 설정하지 않은 경우 기본 드라이버/컨트롤러가 적용됩니다.</summary>
+      <returns>GPIO 공급자입니다.</returns>
+    </member><member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.I2cControllerProvider">
+      <summary>기본 I2C 공급자를 가져옵니다. 기본 공급자를 명시적으로 설정하지 않은 경우 기본 드라이버/컨트롤러가 적용됩니다.</summary>
+      <returns>I2C 공급자입니다.</returns>
+    </member><member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.PwmControllerProvider">
+      <summary>기본 PWM 공급자를 가져옵니다. 기본 공급자를 명시적으로 설정하지 않은 경우 기본 드라이버/컨트롤러가 적용됩니다.</summary>
+      <returns>PWM 공급자입니다.</returns>
+    </member><member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.SpiControllerProvider">
+      <summary>기본 SPI 공급자를 가져옵니다. 기본 공급자를 명시적으로 설정하지 않은 경우 기본 드라이버/컨트롤러가 적용됩니다.</summary>
+      <returns>SPI 공급자입니다.</returns>
+    </member><member name="T:Windows.Devices.LowLevelDevicesController">
+      <summary>저수준 버스 장치 컨트롤러 및 관련 공급자를 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.LowLevelDevicesController.DefaultProvider">
+      <summary>컨트롤러에 대한 기본 공급자를 가져오거나 설정합니다.</summary>
+      <returns>장치 집계 공급자입니다.</returns>
+    </member><member name="T:Windows.Devices.Adc.AdcChannel">
+      <summary>단일 ADC 채널을 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.Adc.AdcChannel.Controller">
+      <summary>이 채널의 ADC 컨트롤러를 가져옵니다.</summary>
+      <returns>ADC 컨트롤러입니다.</returns>
+    </member><member name="M:Windows.Devices.Adc.AdcChannel.Close">
+      <summary>다른 사용자가 열 수 있도록 이 채널의 연결을 닫습니다.</summary>
+    </member><member name="M:Windows.Devices.Adc.AdcChannel.ReadRatio">
+      <summary>이 컨트롤러에 가능한 최대 값의 백분율로 값을 읽습니다.</summary>
+      <returns>최대 값의 백분율 값입니다.</returns>
+    </member><member name="M:Windows.Devices.Adc.AdcChannel.ReadValue">
+      <summary>ADC에서 아날로그 값의 디지털 표현을 읽습니다.</summary>
+      <returns>디지털 값입니다.</returns>
+    </member><member name="T:Windows.Devices.Adc.AdcChannelMode">
+      <summary>ADC 컨트롤러가 입력에 사용할 수 있는 채널 모드를 설명합니다.</summary>
+    </member><member name="F:Windows.Devices.Adc.AdcChannelMode.Differential">
+      <summary>2개 핀 사이의 차이입니다.</summary>
+    </member><member name="F:Windows.Devices.Adc.AdcChannelMode.SingleEnded">
+      <summary>특정 핀의 간단한 값입니다.</summary>
+    </member><member name="T:Windows.Devices.Adc.AdcController">
+      <summary>시스템에 있는 ADC 컨트롤러를 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.Adc.AdcController.ChannelCount">
+      <summary>ADC 컨트롤러에서 사용 가능한 채널의 수입니다.</summary>
+      <returns>채널 수입니다.</returns>
+    </member><member name="P:Windows.Devices.Adc.AdcController.ChannelMode">
+      <summary>ADC 컨트롤러에 대한 채널 모드를 가져오거나 설정합니다.</summary>
+      <returns>ADC 채널 모드입니다.</returns>
+    </member><member name="P:Windows.Devices.Adc.AdcController.MaxValue">
+      <summary>컨트롤러가 보고할 수 있는 최대 값을 가져옵니다.</summary>
+      <returns>최대값입니다.</returns>
+    </member><member name="P:Windows.Devices.Adc.AdcController.MinValue">
+      <summary>컨트롤러가 보고할 수 있는 최대 값입니다.</summary>
+      <returns>최소값입니다.</returns>
+    </member><member name="P:Windows.Devices.Adc.AdcController.ResolutionInBits">
+      <summary>컨트롤러의 해상도를 비트 수로 가져옵니다.</summary>
+      <returns>ADC 컨트롤러의 비트 수입니다.</returns>
+    </member><member name="M:Windows.Devices.Adc.AdcController.GetControllersAsync(Windows.Devices.Adc.Provider.IAdcProvider)">
+      <summary>비동기적으로 시스템에 연결된 모든 컨트롤러를 가져옵니다.</summary>
+      <returns>메서드가 성공적으로 완료되면 시스템에서 사용할 수 있는 컨트롤러를 나타내는 값 목록이 반환됩니다.</returns>
+      <param name="provider">시스템에서 컨트롤러에 대한 ADC 공급자입니다.</param>
+    </member><member name="M:Windows.Devices.Adc.AdcController.GetDefaultAsync">
+      <summary>시스템에서 기본 ADC 컨트롤러를 가져옵니다.</summary>
+      <returns>시스템에 대한 기본 ADC 컨트롤러이며, 시스템에 ADC 컨트롤러가 없는 경우에는 null입니다.</returns>
+    </member><member name="M:Windows.Devices.Adc.AdcController.IsChannelModeSupported(Windows.Devices.Adc.AdcChannelMode)">
+      <summary>지정된 채널 모드가 컨트롤러에서 지원되는지 확인합니다.</summary>
+      <returns>지정된 채널 모드가 지원되는 경우 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="channelMode">채널 모드입니다.</param>
+    </member><member name="M:Windows.Devices.Adc.AdcController.OpenChannel(System.Int32)">
+      <summary>지정된 ADC 채널에 대한 연결을 엽니다.</summary>
+      <returns>ADC 채널입니다.</returns>
+      <param name="channelNumber">연결할 채널입니다.</param>
+    </member><member name="T:Windows.Devices.Adc.Provider.IAdcControllerProvider">
+      <summary>모든 ADC 컨트롤러에 공통적인 속성과 메서드를 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.ChannelCount">
+      <summary>컨트롤러에서 사용 가능한 채널의 수를 가져옵니다.</summary>
+      <returns>채널 수입니다.</returns>
+    </member><member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.ChannelMode">
+      <summary>컨트롤러 채널 모드를 가져오거나 설정합니다.</summary>
+      <returns>채널 모드입니다.</returns>
+    </member><member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.MaxValue">
+      <summary>컨트롤러가 반환할 수 있는 최대 값을 가져옵니다.</summary>
+      <returns>최대값입니다.</returns>
+    </member><member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.MinValue">
+      <summary>컨트롤러가 반환할 수 있는 최소 값을 가져옵니다.</summary>
+      <returns>최소값입니다.</returns>
+    </member><member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.ResolutionInBits">
+      <summary>컨트롤러의 해상도를 비트 수로 가져옵니다.</summary>
+      <returns>비트 수 해상도입니다.</returns>
+    </member><member name="M:Windows.Devices.Adc.Provider.IAdcControllerProvider.AcquireChannel(System.Int32)">
+      <summary>지정된 채널에 대한 연결을 획득합니다.</summary>
+      <param name="channel">연결할 채널입니다.</param>
+    </member><member name="M:Windows.Devices.Adc.Provider.IAdcControllerProvider.IsChannelModeSupported(Windows.Devices.Adc.Provider.ProviderAdcChannelMode)">
+      <summary>지정된 채널 모드가 컨트롤러에서 지원되는지 확인합니다.</summary>
+      <returns>지정된 채널 모드가 지원되는 경우 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="channelMode">해당 채널 모드입니다.</param>
+    </member><member name="M:Windows.Devices.Adc.Provider.IAdcControllerProvider.ReadValue(System.Int32)">
+      <summary>지정된 채널에서 아날로그 값의 디지털 표현을 가져옵니다.</summary>
+      <returns>아날로그 값의 디지털 표현입니다.</returns>
+      <param name="channelNumber">읽을 채널입니다.</param>
+    </member><member name="M:Windows.Devices.Adc.Provider.IAdcControllerProvider.ReleaseChannel(System.Int32)">
+      <summary>다른 사용자가 해당 채널을 열 수 있도록 채널 연결을 해제합니다.</summary>
+      <param name="channel">연결을 닫을 채널입니다.</param>
+    </member><member name="T:Windows.Devices.Adc.Provider.IAdcProvider">
+      <summary>모든 ADC 공급자에 공통되는 메서드를 나타냅니다.</summary>
+    </member><member name="M:Windows.Devices.Adc.Provider.IAdcProvider.GetControllers">
+      <summary>시스템에서 사용할 수 있는 ADC 컨트롤러를 가져옵니다.</summary>
+      <returns>메서드가 성공적으로 완료되면 시스템에서 사용할 수 있는 컨트롤러를 나타내는 값 목록이 반환됩니다.</returns>
+    </member><member name="T:Windows.Devices.Adc.Provider.ProviderAdcChannelMode">
+      <summary>핀 값이 표시되는 방법을 결정합니다. 특정 구현은 공급자에 의해 결정되므로 완전히 차이가 나거나 거의 차이가 나지 않을 수 있습니다.</summary>
+    </member><member name="F:Windows.Devices.Adc.Provider.ProviderAdcChannelMode.Differential">
+      <summary>2개 핀 사이의 차이입니다.</summary>
+    </member><member name="F:Windows.Devices.Adc.Provider.ProviderAdcChannelMode.SingleEnded">
+      <summary>특정 핀의 간단한 값입니다.</summary>
+    </member><member name="T:Windows.Devices.Gpio.GpioController">
+      <summary>시스템에 대한 기본 GPIO(범용 I/O) 컨트롤러를 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.Gpio.GpioController.PinCount">
+      <summary>GPIO(범용 I/O) 컨트롤러의 핀 수를 가져옵니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>GPIO 컨트롤러의 핀 수입니다. 사용자 모드에서 사용할 수 없는 핀도 있습니다. 핀 번호가 실제로 어떤 핀에 해당하는지에 대한 자세한 내용은 회로기판 설명서를 참조하십시오.</returns>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.GetControllersAsync(Windows.Devices.Gpio.Provider.IGpioProvider)">
+      <summary>비동기적으로 시스템에 연결된 모든 컨트롤러를 가져옵니다.</summary>
+      <returns>메서드가 성공적으로 완료되면 시스템에서 사용할 수 있는 컨트롤러를 나타내는 값 목록이 반환됩니다.</returns>
+      <param name="provider">시스템에서 컨트롤러에 대한 GPIO 공급자입니다.</param>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.GetDefault">
+      <summary>시스템에 대한 기본 GPIO(범용 I/O) 컨트롤러를 가져옵니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <deprecated type="deprecate">이 메서드는 GetDefaultAsync로 대체되어 더 이상 사용되지 않습니다.</deprecated>
+      <returns>시스템에 대한 기본 GPIO 컨트롤러이며, 시스템에 GPIO 컨트롤러가 없는 경우에는 null입니다.</returns>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.GetDefaultAsync">
+      <summary>시스템에 대한 기본 GPIO(범용 I/O) 컨트롤러를 가져옵니다.</summary>
+      <returns>시스템에 대한 기본 GPIO 컨트롤러이며, 시스템에 GPIO 컨트롤러가 없는 경우에는 null입니다.</returns>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.OpenPin(System.Int32)">
+      <summary>지정된 GPIO(범용 I/O) 핀에 대한 연결을 단독 모드로 엽니다.</summary>
+      <returns>열린 GPIO 핀입니다.</returns>
+      <param name="pinNumber">열려는 GPIO 핀의 핀 번호입니다. 사용자 모드에서 사용할 수 없는 핀도 있습니다. 핀 번호가 실제로 어떤 핀에 해당하는지에 대한 자세한 내용은 회로기판 설명서를 참조하십시오.</param>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.OpenPin(System.Int32,Windows.Devices.Gpio.GpioSharingMode)">
+      <summary>지정된 GPIO(범용 I/O) 핀을 지정된 모드로 엽니다.</summary>
+      <returns>열린 GPIO 핀입니다.</returns>
+      <param name="pinNumber">열려는 GPIO 핀의 핀 번호입니다. 사용자 모드에서 사용할 수 없는 핀도 있습니다. 핀 번호가 실제로 어떤 핀에 해당하는지에 대한 자세한 내용은 회로기판 설명서를 참조하십시오.</param>
+      <param name="sharingMode">GIPO 핀을 열려는 모드로서 핀을 열어 놓은 동안 핀에 대한 다른 연결을 열 수 있는지 여부를 결정합니다.</param>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.TryOpenPin(System.Int32,Windows.Devices.Gpio.GpioSharingMode,Windows.Devices.Gpio.GpioPin@,Windows.Devices.Gpio.GpioOpenStatus@)">
+      <summary>지정된 GPIO(범용 I/O) 핀을 지정된 모드로 열고, 핀을 프로그래밍 방식으로 열 수 없는 오류를 처리하기 위해 적용 가능한 상태 값을 가져옵니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>메서드가 핀을 성공적으로 열었으면 true이고, 그렇지 않으면 false입니다. 메서드가 true를 반환하면 pin 매개 변수는 GpioPin의 인스턴스를 수신하고 openStatus 매개 변수는 GpioOpenStatus.PinOpened를 수신합니다. 메서드가 false를 반환하면 pin 매개 변수는 null이고 openStatus 매개 변수는 작업이 실패한 이유를 수신합니다.</returns>
+      <param name="pinNumber">열려는 GPIO 핀의 핀 번호입니다. 사용자 모드에서 사용할 수 없는 핀도 있습니다. 핀 번호가 실제로 어떤 핀에 해당하는지에 대한 자세한 내용은 회로기판 설명서를 참조하십시오.</param>
+      <param name="sharingMode">GIPO 핀을 열려는 모드로서 핀을 열어 놓은 동안 핀에 대한 다른 연결을 열 수 있는지 여부를 결정합니다.</param>
+      <param name="pin">반환 값이 true이면 열려 있는 GPIO 핀이고, 그렇지 않으면 null입니다.</param>
+      <param name="openStatus">GPIO 핀을 열려는 시도가 실패한 이유나 GPIO 핀을 열려는 시도가 성공했음을 나타내는 열거형 값입니다.</param>
+    </member><member name="T:Windows.Devices.Gpio.GpioOpenStatus">
+      <summary>GpioPin.TryOpenPin 메서드를 사용하여 핀을 열 때 가능한 결과를 설명합니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioOpenStatus.PinOpened">
+      <summary>GPIO 핀을 성공적으로 열었습니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioOpenStatus.PinUnavailable">
+      <summary>핀이 시스템에 예약되어 있으며 사용자 모드로 실행 중인 앱에서는 사용할 수 없습니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioOpenStatus.SharingViolation">
+      <summary>핀이 현재 호환되지 않는 공유 모드로 열려 있습니다. 예: pin이 GpioSharingMode.Exclusive 모드에서 이미 열려 있습니다. pin을 GpioSharingMode.Exclusive 모드에서 열도록 요청하면 pin이 GpioSharingMode.SharedReadOnly 모드에서 이미 열려 있습니다.</summary>
+    </member><member name="T:Windows.Devices.Gpio.GpioPin">
+      <summary>GPIO(범용 I/O) 핀을 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.Gpio.GpioPin.DebounceTimeout">
+      <summary>핀 값 변경이 필터링되어 ValueChanged 이벤트를 발생시키지 않는 시간 간격, 즉 GPIO(범용 I/O) 핀에 대한 디바운스 시간 초과를 가져오거나 설정합니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>핀 값 변경이 필터링되어 ValueChanged 이벤트를 발생시키지 않는 시간 간격, 즉 GPIO 핀에 대한 디바운스 시간 초과입니다. 이 간격의 길이가 0이면 핀 값을 변경할 때마다 ValueChanged 이벤트가 발생합니다.</returns>
+    </member><member name="P:Windows.Devices.Gpio.GpioPin.PinNumber">
+      <summary>GPIO(범용 I/O) 핀의 핀 번호를 가져옵니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>GPIO 핀의 핀 번호입니다.</returns>
+    </member><member name="P:Windows.Devices.Gpio.GpioPin.SharingMode">
+      <summary>GPIO(범용 I/O) 핀이 열려 있는 모드를 가져옵니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>GPIO 핀이 열려 있는 공유 모드입니다.</returns>
+    </member><member name="E:Windows.Devices.Gpio.GpioPin.ValueChanged">
+      <summary>핀이 입력으로 구성된 경우 외부 자극 때문에 GPIO(범용 I/O) 핀의 값이 변경될 때 또는 핀이 출력으로 구성된 경우 핀에 값을 쓸 때 발생합니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.Close">
+      <summary>GPIO(범용 I/O) 핀을 닫고 이 핀과 연결된 리소스를 해제합니다.</summary>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.GetDriveMode">
+      <summary>GPIO(범용 I/O) 핀에 대한 현재 드라이브 모드를 가져옵니다. 드라이브 모드는 핀이 입력 또는 출력으로 구성되는지 여부를 지정하고 값이 핀으로 구동되는 방식을 결정합니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>GPIO 핀에 대한 현재 드라이브 모드를 나타내는 열거형 값입니다. 드라이브 모드는 핀이 입력 또는 출력으로 구성되는지 여부를 지정하고 값이 핀으로 구동되는 방식을 결정합니다.</returns>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.IsDriveModeSupported(Windows.Devices.Gpio.GpioPinDriveMode)">
+      <summary>GPIO(범용 I/O) 핀이 지정된 드라이브 모드를 지원하는지 여부를 가져옵니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>GPIO 핀이 driveMode가 지정하는 드라이브 모드를 지원하면 true이고, 그렇지 않으면 false입니다. SetDriveMode를 호출하면 이 메서드에서 false가 반환되는 드라이브 모드를 지정할 경우 SetDriveMode에서 예외가 발생합니다.</returns>
+      <param name="driveMode">지원 여부를 확인할 드라이브 모드입니다.</param>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.Read">
+      <summary>GPIO(범용 I/O) 핀의 현재 값을 읽습니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>GPIO 핀의 현재 값입니다. 핀이 출력으로 구성된 경우 이 값은 핀에 쓴 마지막 값입니다.</returns>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.SetDriveMode(Windows.Devices.Gpio.GpioPinDriveMode)">
+      <summary>GPIO(범용 I/O) 핀의 드라이브 모드를 설정합니다. 드라이브 모드는 핀이 입력 또는 출력으로 구성되는지 여부를 지정하고 값이 핀으로 구동되는 방식을 결정합니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <param name="value">GPIO 핀에 사용할 드라이브 모드를 지정하는 열거형 값입니다. 드라이브 모드는 핀이 입력 또는 출력으로 구성되는지 여부를 지정하고 값이 핀으로 구동되는 방식을 결정합니다.</param>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.Write(Windows.Devices.Gpio.GpioPinValue)">
+      <summary>핀이 출력으로 구성된 경우 핀에 대한 현재 드라이브 모드에 따라 지정된 값을 GPIO(범용 I/O) 핀으로 구동하거나, 핀이 입력으로 구성된 경우 핀에 대한 래치된 출력 값을 업데이트합니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <param name="value">GPIO 핀에 쓸 열거형 값입니다. GPIO 핀이 출력으로 구성된 경우 메서드는 핀에 대한 현재 드라이브 모드에 따라 지정된 값을 핀으로 구동합니다. GPIO 핀이 입력으로 구성된 경우 메서드는 핀에 대한 래치된 출력 값을 업데이트합니다. 핀에 대한 구성이 출력으로 변경되면 래치된 출력 값이 핀으로 구동됩니다.</param>
+    </member><member name="T:Windows.Devices.Gpio.GpioPinDriveMode">
+      <summary>GPIO(범용 I/O) 핀이 입력 또는 출력으로 구성되는지 여부와 값이 핀에 적용되는 방식을 설명합니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.Input">
+      <summary>높은 임피던스를 사용하여 부동 모드에서 GPIO를 구성합니다. 이 핀에 대해 GpioPin.Read 메서드를 호출하면 메서드는 외부에서 구동되는 핀의 현재 상태를 반환합니다. GpioPin.Write 메서드를 호출하면 메서드는 핀에 대해 래치된 출력 값을 설정합니다. 핀이 출력으로 변경되면 핀은 이 래치된 출력 값을 사용합니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.InputPullDown">
+      <summary>접지에 대한 풀다운 저항기를 사용하여 GPIO 핀을 높은 임피던스로 구성합니다. 이 핀에 대해 GpioPin.Read 메서드를 호출하면 메서드는 외부에서 구동되는 핀의 현재 값을 반환합니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.InputPullUp">
+      <summary>전압 충전 연결(VCC)에 대한 풀업 저항기를 사용하여 GPIO 핀을 높은 임피던스로 구성합니다. 이 핀에 대해 GpioPin.Read 메서드를 호출하면 메서드는 이전에 핀에 썼던 값을 반환합니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.Output">
+      <summary>낮은 임피던스를 사용하여 강력한 구동 모드에서 GPIO를 구성합니다. 이 핀에 대해 GpioPinValue.High 값으로 GpioPin.Write 메서드를 호출하면 메서드는 낮은 임피던스의 높은 핀 값을 생성합니다. 이 핀에 대해 GpioPinValue.Low 값으로 GpioPin.Write 메서드를 호출하면 메서드는 낮은 임피던스의 낮은 핀 값을 생성합니다. 이 핀에 대해 GpioPin.Read 메서드를 호출하면 메서드는 이전에 핀에 썼던 값을 반환합니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.OutputOpenDrain">
+      <summary>열린 드레인 모드에서 GPIO를 구성합니다. 이 핀에 대해 GpioPinValue.Low 값으로 GpioPin.Write 메서드를 호출하면 메서드는 핀에 대해 낮은 값을 구동합니다. 이 핀에 대해 GpioPinValue.High 값으로 GpioPin.Write 메서드를 호출하면 메서드는 핀을 부동 모드로 설정합니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.OutputOpenDrainPullUp">
+      <summary>저항식 풀업 모드를 사용하여 열린 드레인 모드에서 GPIO 핀을 구성합니다. 이 핀에 대해 GpioPinValue.Low 값으로 GpioPin.Write 메서드를 호출하면 메서드는 낮은 임피던스 낮은 상태를 생성합니다. 이 핀에 대해 GpioPinValue.High 값으로 GpioPin.Write 메서드를 호출하면 메서드는 VCC에 대해 풀업 레지스터를 사용하여 핀을 높은 임피던스로 구성합니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.OutputOpenSource">
+      <summary>열린 콜렉터 모드에서 GPIO 핀을 구성합니다. 이 핀에 대해 GpioPinValue.High 값으로 GpioPin.Write 메서드를 호출하면 메서드는 핀에 높은 값을 구동합니다. 이 핀에 대해 GpioPinValue.Low 값으로 GpioPin.Write 메서드를 호출하면 메서드는 부동 모드로 핀을 구성합니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.OutputOpenSourcePullDown">
+      <summary>열린 콜렉터 모드에서 저항식 풀다운 모드를 사용하여 GPIO 핀을 구성합니다. 이 핀에 대해 GpioPinValue.High 값으로 GpioPin.Write 메서드를 호출하면 메서드는 핀에 높은 값을 구동합니다. 이 핀에 대해 GpioPinValue.Low 값으로 GpioPin.Write 메서드를 호출하면 메서드는 접지에 대해 풀다운 레지스터를 사용하여 핀을 높은 임피던스로 구성합니다.</summary>
+    </member><member name="T:Windows.Devices.Gpio.GpioPinEdge">
+      <summary>GpioPin.ValueChanged 이벤트에 대한 GPIO(범용 I/O) 핀의 값에 가능한 변경 유형을 설명합니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinEdge.FallingEdge">
+      <summary>GPIO 핀의 값이 높음에서 낮음으로 변경되었습니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinEdge.RisingEdge">
+      <summary>GPIO 핀의 값이 낮음에서 높음으로 변경되었습니다.</summary>
+    </member><member name="T:Windows.Devices.Gpio.GpioPinValue">
+      <summary>GPIO(범용 I/O) 핀에 대해 가능한 값을 설명합니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinValue.High">
+      <summary>GPIO 핀의 값이 높음입니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinValue.Low">
+      <summary>GPIO 핀의 값이 낮음입니다.</summary>
+    </member><member name="T:Windows.Devices.Gpio.GpioPinValueChangedEventArgs">
+      <summary>핀이 입력으로 구성되었을 때 외부 자극으로 인해 GPIO(범용 I/O) 핀 값이 변경되는 경우, 또는 출력으로 구성된 핀에 값을 쓰는 경우 발생하는 GpioPin.ValueChanged 이벤트에 대한 데이터를 제공합니다.</summary>
+    </member><member name="P:Windows.Devices.Gpio.GpioPinValueChangedEventArgs.Edge">
+      <summary>GpioPin.ValueChanged 이벤트에 대한 GPIO(범용 I/O) 핀의 값에 발생한 변경 유형을 가져옵니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>GpioPin.ValueChanged 이벤트에 대한 GPIO(범용 I/O) 핀의 값에 발생한 변경 유형을 나타내는 열거형 값입니다.</returns>
+    </member><member name="T:Windows.Devices.Gpio.GpioSharingMode">
+      <summary>GPIO(범용 I/O) 핀을 열 수 있는 모드를 설명합니다. 이 모드는 GPIO 핀을 열어 놓은 동안 핀에 대한 다른 연결을 열 수 있는지 여부를 결정합니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioSharingMode.Exclusive">
+      <summary>GPIO 핀에 대한 다른 연결을 열 수 없도록 핀을 단독으로 엽니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioSharingMode.SharedReadOnly">
+      <summary>GPIO 핀에 대해 SharedReadOnly 모드에서 다른 연결을 열 수 있도록 핀을 공유로 엽니다. 공유 모드에서는 GPIO 핀의 상태를 변경하지 않는 작업만 수행할 수 있습니다. 공유 모드에서 GPIO 핀에 수행할 수 있는 작업은 다음과 같습니다. GpioPin.Read 메서드 호출. GpioPin.GetDriveMode 메서드 호출. GpioPin.PinNumber 및 GpioPin.DebounceTimeout 같은 속성 값 가져오기. GpioPin.ValueChanged 이벤트에 대한 이벤트 처리기 등록.</summary>
+    </member><member name="T:Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs">
+      <summary>IGpioPinProvider.ValueChanged 이벤트에 대한 정보를 제공합니다.</summary>
+    </member><member name="M:Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs.#ctor(Windows.Devices.Gpio.Provider.ProviderGpioPinEdge)">
+      <summary>지정된 가장자리 값을 사용하여 GpioPinProviderValueChangedEventArgs 클래스를 생성합니다.</summary>
+      <param name="edge">원하는 핀 가장자리입니다.</param>
+    </member><member name="P:Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs.Edge">
+      <summary>핀이 변경된 값을 가져옵니다.</summary>
+      <returns>핀 가장자리입니다.</returns>
+    </member><member name="T:Windows.Devices.Gpio.Provider.IGpioControllerProvider">
+      <summary>모든 범용 I/O(GPIO) 컨트롤러에 공통되는 작업을 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.Gpio.Provider.IGpioControllerProvider.PinCount">
+      <summary>사용할 수 있는 GPIO(범용 I/O) 핀 수를 가져옵니다.</summary>
+      <returns>사용 가능한 GPIO 핀의 수입니다.</returns>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioControllerProvider.OpenPinProvider(System.Int32,Windows.Devices.Gpio.Provider.ProviderGpioSharingMode)">
+      <summary>특정 핀에 대한 범용 I/O(GPIO) 핀 공급자를 열고 반환합니다.</summary>
+      <returns>지정된 핀의 GPIO 핀 공급자입니다.</returns>
+      <param name="pin">원하는 GPIO 핀 번호입니다.</param>
+      <param name="sharingMode">핀을 열려면 공유 모드입니다.</param>
+    </member><member name="T:Windows.Devices.Gpio.Provider.IGpioPinProvider">
+      <summary>모든 범용 I/O(GPIO) 핀 공급자에 공통되는 작업을 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.Gpio.Provider.IGpioPinProvider.DebounceTimeout">
+      <summary>핀 값 변경이 필터링되어 ValueChanged 이벤트를 발생시키지 않는 시간 간격, 즉 GPIO(범용 I/O) 핀에 대한 디바운스 시간 초과를 가져오거나 설정합니다.</summary>
+      <returns>핀 값 변경이 필터링되어 ValueChanged 이벤트를 발생시키지 않는 시간 간격, 즉 GPIO 핀에 대한 디바운스 시간 초과입니다. 이 간격의 길이가 0이면 핀 값을 변경할 때마다 ValueChanged 이벤트가 발생합니다.</returns>
+    </member><member name="P:Windows.Devices.Gpio.Provider.IGpioPinProvider.PinNumber">
+      <summary>GPIO(범용 I/O) 핀의 핀 번호를 가져옵니다.</summary>
+      <returns>GPIO 핀의 핀 번호입니다.</returns>
+    </member><member name="P:Windows.Devices.Gpio.Provider.IGpioPinProvider.SharingMode">
+      <summary>GPIO(범용 I/O) 핀이 열려 있는 모드를 가져옵니다.</summary>
+      <returns>GPIO 핀이 열려 있는 공유 모드입니다.</returns>
+    </member><member name="E:Windows.Devices.Gpio.Provider.IGpioPinProvider.ValueChanged">
+      <summary>핀 값이 변경되면 발생하는 이벤트입니다.</summary>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.GetDriveMode">
+      <summary>핀의 현재 구성된 드라이브 모드를 가져옵니다.</summary>
+      <returns>핀의 드라이브 모드입니다.</returns>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.IsDriveModeSupported(Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode)">
+      <summary>핀에 대해 드라이브 모드가 지원되는지 확인합니다.</summary>
+      <returns>드라이브 모드가 지원되는 경우 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="driveMode">원하는 드라이브 모드입니다.</param>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.Read">
+      <summary>핀의 현재 값을 읽습니다.</summary>
+      <returns>핀의 값입니다.</returns>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.SetDriveMode(Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode)">
+      <summary>핀의 드라이브 모드를 설정합니다.</summary>
+      <param name="value">핀의 원하는 드라이브 모드입니다.</param>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.Write(Windows.Devices.Gpio.Provider.ProviderGpioPinValue)">
+      <summary>핀에 값을 씁니다.</summary>
+      <param name="value">쓸 값입니다.</param>
+    </member><member name="T:Windows.Devices.Gpio.Provider.IGpioProvider">
+      <summary>모든 범용 I/O(GPIO) 컨트롤러 공급자에 공통되는 작업을 나타냅니다.</summary>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioProvider.GetControllers">
+      <summary>시스템에서 사용할 수 있는 컨트롤러를 가져옵니다.</summary>
+      <returns>시스템에서 사용할 수 있는 컨트롤러를 나타내는 값의 목록입니다.</returns>
+    </member><member name="T:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode">
+      <summary>GPIO(범용 I/O) 핀이 입력 또는 출력으로 구성되는지 여부와 값이 핀에 적용되는 방식을 설명합니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.Input">
+      <summary>높은 임피던스를 사용하여 부동 모드에서 GPIO를 구성합니다. 이 핀에 대해 IGpioPinProvider.Read 메서드를 호출하면 메서드는 외부에서 구동되는 핀의 현재 상태를 반환합니다. IGpioPinProvider.Write 메서드를 호출하면 메서드는 핀에 대해 래치된 출력 값을 설정합니다. 핀이 출력으로 변경되면 핀은 이 래치된 출력 값을 사용합니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.InputPullDown">
+      <summary>접지에 대한 풀다운 저항기를 사용하여 GPIO 핀을 높은 임피던스로 구성합니다. 이 핀에 대해 IGpioPinProvider.Read 메서드를 호출하면 메서드는 외부에서 구동되는 핀의 현재 값을 반환합니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.InputPullUp">
+      <summary>전압 충전 연결(VCC)에 대한 풀업 저항기를 사용하여 GPIO 핀을 높은 임피던스로 구성합니다. 이 핀에 대해 IGpioPinProvider.Read 메서드를 호출하면 메서드는 이전에 핀에 썼던 값을 반환합니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.Output">
+      <summary>낮은 임피던스를 사용하여 강력한 구동 모드에서 GPIO를 구성합니다. 이 핀에 대해 ProviderGpioPinValue.High 값으로 IGpioPinProvider.Write 메서드를 호출하면 메서드는 낮은 임피던스의 높은 핀 값을 생성합니다. 이 핀에 대해 ProviderGpioPinValue.Low 값으로 IGpioPinProvider.Write 메서드를 호출하면 메서드는 낮은 임피던스의 낮은 핀 값을 생성합니다. 이 핀에 대해 IGpioPinProvider.Read 메서드를 호출하면 메서드는 이전에 핀에 썼던 값을 반환합니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.OutputOpenDrain">
+      <summary>열린 드레인 모드에서 GPIO를 구성합니다. 이 핀에 대해 ProviderGpioPinValue.Low 값으로 IGpioPinProvider.Write 메서드를 호출하면 메서드는 핀에 대해 낮은 값을 구동합니다. 이 핀에 대해 ProviderGpioPinValue.High 값으로 IGpioPinProvider.Write 메서드를 호출하면 메서드는 핀을 부동 모드로 설정합니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.OutputOpenDrainPullUp">
+      <summary>저항식 풀업 모드를 사용하여 열린 드레인 모드에서 GPIO 핀을 구성합니다. 이 핀에 대해 ProviderGpioPinValue.Low 값으로 IGpioPinProvider.Write 메서드를 호출하면 메서드는 낮은 임피던스 낮은 상태를 생성합니다. 이 핀에 대해 ProviderGpioPinValue.High 값으로 IGpioPinProvider.Write 메서드를 호출하면 메서드는 VCC에 대해 풀업 레지스터를 사용하여 핀을 높은 임피던스로 구성합니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.OutputOpenSource">
+      <summary>열린 콜렉터 모드에서 GPIO 핀을 구성합니다. 이 핀에 대해 ProviderGpioPinValue.High 값으로 IGpioPinProvider.Write 메서드를 호출하면 메서드는 핀에 높은 값을 구동합니다. 이 핀에 대해 ProviderGpioPinValue.Low 값으로 IGpioPinProvider.Write 메서드를 호출하면 메서드는 핀을 부동 모드로 구성합니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.OutputOpenSourcePullDown">
+      <summary>열린 콜렉터 모드에서 저항식 풀다운 모드를 사용하여 GPIO 핀을 구성합니다. 이 핀에 대해 ProviderGpioPinValue.High 값으로 IGpioPinProvider.Write 메서드를 호출하면 메서드는 핀에 높은 값을 구동합니다. 이 핀에 대해 ProviderGpioPinValue.Low 값으로 IGpioPinProvider.Write 메서드를 호출하면 메서드는 접지에 대해 풀다운 레지스터를 사용하여 핀을 높은 임피던스로 구성합니다.</summary>
+    </member><member name="T:Windows.Devices.Gpio.Provider.ProviderGpioPinEdge">
+      <summary>GPIO(범용 I/O) 핀의 값에 가능한 변경 유형을 설명합니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinEdge.FallingEdge">
+      <summary>하강 가장자리 또는 값이 높음에서 낮음으로 이동하는 경우.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinEdge.RisingEdge">
+      <summary>상승 가장자리 또는 값이 낮음에서 높음으로 이동하는 경우.</summary>
+    </member><member name="T:Windows.Devices.Gpio.Provider.ProviderGpioPinValue">
+      <summary>GPIO(범용 I/O) 핀에 대해 가능한 값을 설명합니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinValue.High">
+      <summary>GPIO 핀의 값이 높음입니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinValue.Low">
+      <summary>GPIO 핀의 값이 낮음입니다.</summary>
+    </member><member name="T:Windows.Devices.Gpio.Provider.ProviderGpioSharingMode">
+      <summary>GPIO(범용 I/O) 핀을 열 수 있는 모드를 설명합니다. 이 모드는 GPIO 핀을 열어 놓은 동안 핀에 대한 다른 연결을 열 수 있는지 여부를 결정합니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioSharingMode.Exclusive">
+      <summary>GPIO 핀에 대한 다른 연결을 열 수 없도록 핀을 단독으로 엽니다.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioSharingMode.SharedReadOnly">
+      <summary>GPIO 핀에 대해 SharedReadOnly 모드에서 다른 연결을 열 수 있도록 핀을 공유로 엽니다. 핀의 상태를 변경하지 않는 작업만 수행할 수 있습니다.</summary>
+    </member><member name="T:Windows.Devices.I2c.I2cBusSpeed">
+      <summary>I2C(Inter-Integrated Circuit) 장치에 연결하는 데 사용할 수 있는 버스 속도를 설명합니다. 버스 속도는 장치에 액세스할 때 I2C 버스를 클록하는 빈도입니다.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cBusSpeed.FastMode">
+      <summary>빠른 속도는 400kHz입니다.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cBusSpeed.StandardMode">
+      <summary>표준 속도는 100킬로헤르츠(kHz)입니다. 이 속도가 기본 속도입니다.</summary>
+    </member><member name="T:Windows.Devices.I2c.I2cConnectionSettings">
+      <summary>I2C(Inter-Integrated Circuit) 장치에 사용할 연결 설정을 나타냅니다.</summary>
+    </member><member name="M:Windows.Devices.I2c.I2cConnectionSettings.#ctor(System.Int32)">
+      <summary>버스 속도에 대한 표준 모드 및 단독 공유 모드에 대한 기본 설정을 사용하여 지정된 버스 주소가 있는 I2C(Inter-Integrated Circuit) 장치에 대한 cConnectionSettings 클래스의 새 인스턴스를 만들고 초기화합니다.</summary>
+      <param name="slaveAddress">I2cConnectionSettings의 설정을 적용해야 하는 I2C(Inter-Integrated Circuit) 장치의 버스 주소입니다. 7비트 주소 지정만 지원되므로 유효한 값의 범위는 8에서 119까지입니다.</param>
+    </member><member name="P:Windows.Devices.I2c.I2cConnectionSettings.BusSpeed">
+      <summary>I2C(Inter-Integrated Circuit) 장치에 연결하는 데 사용할 버스 속도를 가져오거나 설정합니다. 버스 속도는 장치에 액세스할 때 I2C 버스를 클록하는 빈도입니다.</summary>
+      <returns>anI2C 장치에 연결하는 데 사용할 버스 속도입니다.</returns>
+    </member><member name="P:Windows.Devices.I2c.I2cConnectionSettings.SharingMode">
+      <summary>I2C(Inter-Integrated Circuit) 버스 주소에 연결하는 데 사용할 공유 모드를 가져오거나 설정합니다. 이 모드는 I2C 버스 주소에 연결하는 동안 I2C 버스 주소에 대한 다른 연결을 열 수 있는지 여부를 결정합니다.</summary>
+      <returns>I2C 버스 주소에 연결하는 데 사용할 공유 모드입니다.</returns>
+    </member><member name="P:Windows.Devices.I2c.I2cConnectionSettings.SlaveAddress">
+      <summary>I2C(Inter-Integrated Circuit) 장치의 버스 주소를 가져오거나 설정합니다.</summary>
+      <returns>I2C 장치의 버스 주소입니다. 7비트 주소 지정만 지원되므로 유효한 값의 범위는 8에서 119까지입니다.</returns>
+    </member><member name="T:Windows.Devices.I2c.I2cController">
+      <summary>시스템에 대한 I2C 컨트롤러를 나타냅니다.</summary>
+    </member><member name="M:Windows.Devices.I2c.I2cController.GetControllersAsync(Windows.Devices.I2c.Provider.II2cProvider)">
+      <summary>시스템에 있는 모든 I2C 컨트롤러를 가져옵니다.</summary>
+      <returns>메서드가 성공적으로 완료되면 시스템에서 사용할 수 있는 I2C 컨트롤러를 나타내는 값 목록이 반환됩니다.</returns>
+      <param name="provider">시스템에서 컨트롤러에 대한 I2C 공급자입니다.</param>
+    </member><member name="M:Windows.Devices.I2c.I2cController.GetDefaultAsync">
+      <summary>시스템에서 기본 I2C 컨트롤러를 가져옵니다.</summary>
+      <returns>시스템에 대한 기본 I2C 컨트롤러이며, 시스템에 I2C 컨트롤러가 없는 경우에는 null입니다.</returns>
+    </member><member name="M:Windows.Devices.I2c.I2cController.GetDevice(Windows.Devices.I2c.I2cConnectionSettings)">
+      <summary>지정된 설정을 사용하여 I2C 장치를 가져옵니다.</summary>
+      <returns>I2C 장치입니다.</returns>
+      <param name="settings">원하는 연결 설정입니다.</param>
+    </member><member name="T:Windows.Devices.I2c.I2cDevice">
+      <summary>I2C(Inter-Integrated Circuit) 버스의 장치에 대한 통신 채널을 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.I2c.I2cDevice.ConnectionSettings">
+      <summary>I2C(Inter-Integrated Circuit) 장치와 통신하는 데 사용하는 연결 설정을 가져옵니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>I2C(Inter-Integrated Circuit) 장치와 통신하는 데 사용하는 연결 설정입니다.</returns>
+    </member><member name="P:Windows.Devices.I2c.I2cDevice.DeviceId">
+      <summary>장치에 대한 I2C(Inter-Integrated Circuit) 버스 컨트롤러의 플러그 앤 플레이 장치 식별자를 가져옵니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>장치에 대한 I2C(Inter-Integrated Circuit) 버스 컨트롤러의 플러그 앤 플레이 장치 식별자입니다.</returns>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.Close">
+      <summary>I2C(Inter-Integrated Circuit) 장치에 대한 연결을 닫습니다.</summary>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.FromIdAsync(System.String,Windows.Devices.I2c.I2cConnectionSettings)">
+      <summary>지정된 연결 설정을 사용하여 지정된 플러그 앤 플레이 장치 식별자가 있는 I2C(Inter-Integrated Circuit) 버스 컨트롤러에 대해 비동기적으로 I2cDevice 개체를 검색합니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>I2cDevice 개체를 반환하는 비동기 작업입니다.</returns>
+      <param name="deviceId">I2cDevice 개체를 만들려는 장치에 대한 I2C 버스 컨트롤러의 플러그 앤 플레이 장치 식별자입니다.</param>
+      <param name="settings">deviceId가 지정하는 I2C 버스 컨트롤러와 통신하는 데 사용할 연결 설정입니다.</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.GetDeviceSelector">
+      <summary>시스템에 있는 모든 I2C(Inter-Integrated Circuit) 버스 컨트롤러에 대한 AQS(고급 검색 구문)를 검색합니다.</summary>
+      <returns>DeviceInformation.FindAllAsync 메서드와 함께 사용하여 해당 버스 컨트롤러에 대한 DeviceInformation 개체를 가져올 수 있는, 시스템에 있는 모든 I2C 버스 컨트롤러에 대한 AQS 문자열입니다.</returns>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.GetDeviceSelector(System.String)">
+      <summary>지정된 이름이 있는 I2C(Inter-Integrated Circuit) 버스에 대한 AQS(고급 검색 구문)을 검색합니다.</summary>
+      <returns>DeviceInformation.FindAllAsync 메서드와 함께 사용하여 해당 버스에 대한 DeviceInformation 개체를 가져올 수 있는, friendlyName이 지정하는 I2C 버스에 대한 AQS 문자열입니다.</returns>
+      <param name="friendlyName">AQS 문자열을 가져오려는 특정 하드웨어 플랫폼에 있는 특정 I2C 버스의 이름입니다.</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.Read(System.Byte[])">
+      <summary>장치가 지정된 버퍼에 연결되어 있는 I2C(Inter-Integrated Circuit) 버스에서 데이터를 읽습니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <param name="buffer">I2C 버스에서 데이터를 읽으려는 버퍼입니다. 버퍼의 길이에 따라 장치에서 요청할 데이터의 양이 결정됩니다.</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.ReadPartial(System.Byte[])">
+      <summary>장치가 지정된 버퍼에 연결되어 있고 오류 처리를 위해 사용할 수 있는 작업의 성공에 대한 정보를 반환하는 I2C(Inter-Integrated Circuit) 버스에서 데이터를 읽습니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>읽기 작업의 성공과 작업이 버퍼로 읽은 실제 바이트 수에 대한 정보를 포함하는 구조체입니다.</returns>
+      <param name="buffer">I2C 버스에서 데이터를 읽으려는 버퍼입니다. 버퍼의 길이에 따라 장치에서 요청할 데이터의 양이 결정됩니다.</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.Write(System.Byte[])">
+      <summary>I2cDevice 개체를 만드는 데 사용한 I2cConnectionSettings 개체에서 지정된 버스 주소를 기준으로, 장치가 연결되어 있는 I2C(Inter-Integrated Circuit) 버스에 데이터를 씁니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <param name="buffer">I2C 장치에 쓰려는 데이터를 포함하는 버퍼입니다. 이 데이터에는 버스 주소가 포함되지 않습니다.</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.WritePartial(System.Byte[])">
+      <summary>장치가 연결되어 있고 오류 처리를 위해 사용할 수 있는 작업의 성공에 대한 정보를 반환하는 I2C(Inter-Integrated Circuit) 버스에 데이터를 씁니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>쓰기 작업의 성공과 작업이 버퍼로 쓴 실제 바이트 수에 대한 정보를 포함하는 구조체입니다.</returns>
+      <param name="buffer">I2C 장치에 쓰려는 데이터를 포함하는 버퍼입니다. 이 데이터에는 버스 주소가 포함되지 않습니다.</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.WriteRead(System.Byte[],System.Byte[])">
+      <summary>장치가 연결되어 있는 I2C(Inter-Integrated Circuit) 버스에 데이터를 쓴 다음 이 버스에서 데이터를 읽기 위한 원자성 작업을 수행하고, 쓰기 및 읽기 작업 간의 다시 시작 조건을 전송합니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <param name="writeBuffer">I2C 장치에 쓰려는 데이터를 포함하는 버퍼입니다. 이 데이터에는 버스 주소가 포함되지 않습니다.</param>
+      <param name="readBuffer">I2C 버스에서 데이터를 읽으려는 버퍼입니다. 버퍼의 길이에 따라 장치에서 요청할 데이터의 양이 결정됩니다.</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.WriteReadPartial(System.Byte[],System.Byte[])">
+      <summary>장치가 연결되어 있고 오류 처리를 위해 사용할 수 있는 작업의 성공에 대한 정보를 반환하는 I2C(Inter-Integrated Circuit) 버스에 데이터를 쓴 다음 이 버스에서 데이터를 읽기 위한 원자성 작업을 수행합니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>작업의 읽기 및 쓰기 부분이 모두 성공했는지 여부 및 작업이 쓴 실제 바이트 수와 작업이 읽은 실제 바이트 수의 합계에 대한 정보를 포함하는 구조체입니다.</returns>
+      <param name="writeBuffer">I2C 장치에 쓰려는 데이터를 포함하는 버퍼입니다. 이 데이터에는 버스 주소가 포함되지 않습니다.</param>
+      <param name="readBuffer">I2C 버스에서 데이터를 읽으려는 버퍼입니다. 버퍼의 길이에 따라 장치에서 요청할 데이터의 양이 결정됩니다.</param>
+    </member><member name="T:Windows.Devices.I2c.I2cSharingMode">
+      <summary>I2C(Inter-Integrated Circuit) 버스 주소에 연결할 수 있는 모드를 설명합니다. 이러한 모드는 I2C 버스 주소에 연결하는 동안 I2C 버스 주소에 대한 다른 연결을 열 수 있는지 여부를 결정합니다.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cSharingMode.Exclusive">
+      <summary>연결되어 있는 동안 I2C 버스 주소에 대한 다른 연결을 열 수 없도록 I2C 버스 주소에 단독으로 연결합니다.
+이 모드가 기본 모드입니다.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cSharingMode.Shared">
+      <summary>연결되어 있는 동안 I2C 버스 주소에 대한 다른 연결이 가능하도록 I2C 버스 주소에 공유 모드로 연결합니다. 공유 연결에서 모든 작업을 수행할 수 있지만, 이러한 연결을 신중하게 사용하십시오. 여러 클라이언트 앱이 I2C 장치의 글로벌 상태를 변경할 경우 경쟁 조건이 발생할 수 있습니다. 공유 연결 사용에 대한 사용 사례의 예는 장치의 상태를 변경하지 않고 판독값을 얻는 센서입니다.</summary>
+    </member><member name="T:Windows.Devices.I2c.I2cTransferResult">
+      <summary>ReadPartial, WritePartial 또는 WriteReadPartial 메서드가 수행한 데이터 전송이 성공했는지 여부 및 메서드가 전송한 실제 바이트 수에 대한 정보를 제공합니다.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cTransferResult.BytesTransferred">
+      <summary>작업이 실제로 전송한 실제 바이트 수입니다. 다음 표에서는 이 값이 각 메서드에 대해 나타내는 의미를 설명합니다. MethodDescriptionReadPartial 읽기 작업이 버퍼로 읽는 실제 바이트 수입니다. Status 멤버의 값이 I2CTransferStatus.PartialTransfer인 경우 이 값은 buffer 매개 변수에서 지정한 버퍼에 있는 바이트 수보다 작을 수 있습니다. WritePartial 쓰기 작업이 I2C 장치에 전송한 실제 바이트 수입니다. Status 멤버의 값이 I2CTransferStatus.PartialTransfer인 경우 이 값은 buffer 매개 변수에서 지정한 버퍼에 있는 바이트 수보다 작을 수 있습니다. WriteReadPartial 작업이 쓴 바이트 수와 작업이 읽은 바이트 수의 합계인, 작업이 전송한 실제 바이트 수입니다. Status 멤버의 값이 I2CTransferStatus.PartialTransfer인 경우 이 값은 writeBuffer 및 readBuffer 매개 변수에서 지정한 버퍼의 길이 합계보다 작을 수 있습니다.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cTransferResult.Status">
+      <summary>읽기 또는 쓰기 작업이 메서드가 요청한 전체 바이트 수를 전송했는지 여부를 나타내는 열거형 값 또는 전체 전송이 성공하지 못한 이유입니다. WriteReadPartial의 경우 이 값은 쓰기 및 읽기 작업에 대한 데이터가 완전히 전송되었는지 여부를 나타냅니다.</summary>
+    </member><member name="T:Windows.Devices.I2c.I2cTransferStatus">
+      <summary>ReadPartial, WritePartial 또는 WriteReadPartial 메서드가 수행한 데이터 전송이 성공했는지 여부를 설명하거나, 전송이 성공하지 못한 이유를 제공합니다.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cTransferStatus.FullTransfer">
+      <summary>데이터가 완전히 전송되었습니다. WriteReadPartial의 경우 쓰기 및 읽기 작업에 대한 데이터가 완전히 전송되었습니다. 이 상태 코드의 경우, 메서드가 반환하는 I2cTransferResult.BytesTransferred 멤버의 값은 메서드를 호출할 때 지정한 버퍼의 크기와 동일하거나, WriteReadPartial에 대해 지정한 두 버퍼 크기의 합계와 같습니다.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cTransferStatus.PartialTransfer">
+      <summary>모든 데이터를 전송하기 전에 I2C 장치가 데이터 전송을 부정적으로 승인했습니다. 이 상태 코드의 경우, 메서드가 반환하는 I2cTransferResult.BytesTransferred 멤버의 값은 실제로 전송된 바이트 수입니다. WriteReadPartial의 경우, 이 값은 작업이 쓴 바이트 수와 작업이 읽은 바이트 수의 합계입니다.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cTransferStatus.SlaveAddressNotAcknowledged">
+      <summary>버스 주소가 승인되지 않았습니다. 이 상태 코드의 경우, 메서드가 반환하는 I2cTransferResult.BytesTransferred 멤버의 값은 0입니다.</summary>
+    </member><member name="T:Windows.Devices.I2c.II2cDeviceStatics">
+      <summary>I2C(Inter-Integrated Circuit) 버스의 장치에 대한 통신 채널을 여는 방법을 제공합니다.</summary>
+    </member><member name="M:Windows.Devices.I2c.II2cDeviceStatics.FromIdAsync(System.String,Windows.Devices.I2c.I2cConnectionSettings)">
+      <summary>지정된 연결 설정을 사용하여 지정된 플러그 앤 플레이 장치 식별자가 있는 I2C(Inter-Integrated Circuit) 버스 컨트롤러에 대해 비동기적으로 I2cDevice 개체를 검색합니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>I2cDevice 개체를 반환하는 비동기 작업입니다.</returns>
+      <param name="deviceId">I2cDevice 개체를 만들려는 장치에 대한 I2C 버스 컨트롤러의 플러그 앤 플레이 장치 식별자입니다.</param>
+      <param name="settings">deviceId가 지정하는 I2C 버스 컨트롤러와 통신하는 데 사용할 연결 설정입니다.</param>
+    </member><member name="M:Windows.Devices.I2c.II2cDeviceStatics.GetDeviceSelector">
+      <summary>시스템에 있는 모든 I2C(Inter-Integrated Circuit) 버스 컨트롤러에 대한 AQS(고급 검색 구문)를 검색합니다.</summary>
+      <returns>DeviceInformation.FindAllAsync 메서드와 함께 사용하여 해당 버스 컨트롤러에 대한 DeviceInformation 개체를 가져올 수 있는, 시스템에 있는 모든 I2C 버스 컨트롤러에 대한 AQS 문자열입니다.</returns>
+    </member><member name="M:Windows.Devices.I2c.II2cDeviceStatics.GetDeviceSelector(System.String)">
+      <summary>지정된 이름이 있는 I2C(Inter-Integrated Circuit) 버스에 대한 AQS(고급 검색 구문)을 검색합니다.</summary>
+      <returns>DeviceInformation.FindAllAsync 메서드와 함께 사용하여 해당 버스에 대한 DeviceInformation 개체를 가져올 수 있는, friendlyName이 지정하는 I2C 버스에 대한 AQS 문자열입니다.</returns>
+      <param name="friendlyName">AQS 문자열을 가져오려는 특정 하드웨어 플랫폼에 있는 특정 I2C 버스의 이름입니다.</param>
+    </member><member name="T:Windows.Devices.I2c.Provider.II2cControllerProvider">
+      <summary>모든 I2C 컨트롤러에 공통적인 속성과 메서드를 나타냅니다.</summary>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cControllerProvider.GetDeviceProvider(Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings)">
+      <summary>지정된 설정을 사용하여 I2C 장치 공급자를 가져옵니다.</summary>
+      <returns>I2C 장치 공급자입니다.</returns>
+      <param name="settings">원하는 설정입니다.</param>
+    </member><member name="T:Windows.Devices.I2c.Provider.II2cDeviceProvider">
+      <summary>모든 I2C 장치 공급자에 공통되는 메서드를 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.I2c.Provider.II2cDeviceProvider.DeviceId">
+      <summary>장치에 대한 I2C(Inter-Integrated Circuit) 버스 컨트롤러의 플러그 앤 플레이 장치 식별자를 가져옵니다.</summary>
+      <returns>장치에 대한 I2C(Inter-Integrated Circuit) 버스 컨트롤러의 플러그 앤 플레이 장치 식별자입니다.</returns>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.Read(System.Byte[])">
+      <summary>장치가 지정된 버퍼에 연결되어 있는 I2C(Inter-Integrated Circuit) 버스에서 데이터를 읽습니다.</summary>
+      <param name="buffer">I2C 버스에서 데이터를 읽으려는 버퍼입니다. 버퍼의 길이에 따라 장치에서 요청할 데이터의 양이 결정됩니다.</param>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.ReadPartial(System.Byte[])">
+      <summary>장치가 지정된 버퍼에 연결되어 있고 오류 처리를 위해 사용할 수 있는 작업의 성공에 대한 정보를 반환하는 I2C(Inter-Integrated Circuit) 버스에서 데이터를 읽습니다.</summary>
+      <returns>읽기 작업의 성공과 작업이 버퍼로 읽은 실제 바이트 수에 대한 정보를 포함하는 구조체입니다.</returns>
+      <param name="buffer">I2C 버스에서 데이터를 읽으려는 버퍼입니다. 버퍼의 길이에 따라 장치에서 요청할 데이터의 양이 결정됩니다.</param>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.Write(System.Byte[])">
+      <summary>장치가 연결된 I2C(Inter-Integrated Circuit) 버스에 데이터를 씁니다.</summary>
+      <param name="buffer">I2C 장치에 쓰려는 데이터를 포함하는 버퍼입니다. 이 데이터에는 버스 주소가 포함되지 않습니다.</param>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.WritePartial(System.Byte[])">
+      <summary>장치가 연결되어 있고 오류 처리를 위해 사용할 수 있는 작업의 성공에 대한 정보를 반환하는 I2C(Inter-Integrated Circuit) 버스에 데이터를 씁니다.</summary>
+      <returns>쓰기 작업의 성공과 작업이 버퍼로 쓴 실제 바이트 수에 대한 정보를 포함하는 구조체입니다.</returns>
+      <param name="buffer">I2C 장치에 쓰려는 데이터를 포함하는 버퍼입니다. 이 데이터에는 버스 주소가 포함되지 않습니다.</param>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.WriteRead(System.Byte[],System.Byte[])">
+      <summary>장치가 연결되어 있는 I2C(Inter-Integrated Circuit) 버스에 데이터를 쓴 다음 이 버스에서 데이터를 읽기 위한 원자성 작업을 수행하고, 쓰기 및 읽기 작업 간의 다시 시작 조건을 전송합니다.</summary>
+      <param name="writeBuffer">I2C 장치에 쓰려는 데이터를 포함하는 버퍼입니다. 이 데이터에는 버스 주소가 포함되지 않습니다.</param>
+      <param name="readBuffer">I2C 버스에서 데이터를 읽으려는 버퍼입니다. 버퍼의 길이에 따라 장치에서 요청할 데이터의 양이 결정됩니다.</param>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.WriteReadPartial(System.Byte[],System.Byte[])">
+      <summary>장치가 연결되어 있고 오류 처리를 위해 사용할 수 있는 작업의 성공에 대한 정보를 반환하는 I2C(Inter-Integrated Circuit) 버스에 데이터를 쓴 다음 이 버스에서 데이터를 읽기 위한 원자성 작업을 수행합니다.</summary>
+      <returns>작업의 읽기 및 쓰기 부분이 모두 성공했는지 여부 및 작업이 쓴 실제 바이트 수와 작업이 읽은 실제 바이트 수의 합계에 대한 정보를 포함하는 구조체입니다.</returns>
+      <param name="writeBuffer">I2C 장치에 쓰려는 데이터를 포함하는 버퍼입니다. 이 데이터에는 버스 주소가 포함되지 않습니다.</param>
+      <param name="readBuffer">I2C 버스에서 데이터를 읽으려는 버퍼입니다. 버퍼의 길이에 따라 장치에서 요청할 데이터의 양이 결정됩니다.</param>
+    </member><member name="T:Windows.Devices.I2c.Provider.II2cProvider">
+      <summary>모든 I2C 공급자에 공통되는 작업을 나타냅니다.</summary>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cProvider.GetControllersAsync">
+      <summary>시스템에 있는 모든 I2C 컨트롤러를 가져옵니다.</summary>
+      <returns>메서드가 성공적으로 완료되면 시스템에서 사용할 수 있는 I2C 컨트롤러를 나타내는 값 목록이 반환됩니다.</returns>
+    </member><member name="T:Windows.Devices.I2c.Provider.ProviderI2cBusSpeed">
+      <summary>I2C(Inter-Integrated Circuit) 장치에 연결하는 데 사용할 수 있는 버스 속도를 설명합니다. 버스 속도는 장치에 액세스할 때 I2C 버스를 클록하는 빈도입니다.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cBusSpeed.FastMode">
+      <summary>빠른 속도는 400kHz입니다.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cBusSpeed.StandardMode">
+      <summary>표준 속도는 100킬로헤르츠(kHz)입니다. 이 속도가 기본 속도입니다.</summary>
+    </member><member name="T:Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings">
+      <summary>I2C(Inter-Integrated Circuit) 장치에 사용할 연결 설정을 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings.BusSpeed">
+      <summary>I2C(Inter-Integrated Circuit) 장치에 연결하는 데 사용할 버스 속도를 가져오거나 설정합니다. 버스 속도는 장치에 액세스할 때 I2C 버스를 클록하는 빈도입니다.</summary>
+      <returns>I2C 장치에 연결하는 데 사용할 버스 속도입니다.</returns>
+    </member><member name="P:Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings.SharingMode">
+      <summary>I2C(Inter-Integrated Circuit) 버스 주소에 연결하는 데 사용할 공유 모드를 가져오거나 설정합니다. 이 모드는 I2C 버스 주소에 연결하는 동안 I2C 버스 주소에 대한 다른 연결을 열 수 있는지 여부를 결정합니다.</summary>
+      <returns>I2C 버스 주소에 연결하는 데 사용할 공유 모드입니다.</returns>
+    </member><member name="P:Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings.SlaveAddress">
+      <summary>I2C(Inter-Integrated Circuit) 장치의 버스 주소를 가져오거나 설정합니다.</summary>
+      <returns>I2C 장치의 버스 주소입니다. 7비트 주소 지정만 지원되므로 유효한 값의 범위는 8에서 119까지입니다.</returns>
+    </member><member name="T:Windows.Devices.I2c.Provider.ProviderI2cSharingMode">
+      <summary>I2C(Inter-Integrated Circuit) 버스 주소에 연결할 수 있는 모드를 설명합니다. 이러한 모드는 I2C 버스 주소에 연결하는 동안 I2C 버스 주소에 대한 다른 연결을 열 수 있는지 여부를 결정합니다.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cSharingMode.Exclusive">
+      <summary>연결되어 있는 동안 I2C 버스 주소에 대한 다른 연결을 열 수 없도록 I2C 버스 주소에 단독으로 연결합니다.
+이 모드가 기본 모드입니다.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cSharingMode.Shared">
+      <summary>연결되어 있는 동안 I2C 버스 주소에 대한 다른 연결이 가능하도록 I2C 버스 주소에 공유 모드로 연결합니다. 공유 연결에서 모든 작업을 수행할 수 있지만, 이러한 연결을 신중하게 사용하십시오. 여러 클라이언트 앱이 I2C 장치의 글로벌 상태를 변경할 경우 경쟁 조건이 발생할 수 있습니다. 공유 연결 사용에 대한 사용 사례의 예는 장치의 상태를 변경하지 않고 판독값을 얻는 센서입니다.</summary>
+    </member><member name="T:Windows.Devices.I2c.Provider.ProviderI2cTransferResult">
+      <summary>ReadPartial, WritePartial 또는 WriteReadPartial 메서드가 수행한 데이터 전송이 성공했는지 여부 및 메서드가 전송한 실제 바이트 수에 대한 정보를 제공합니다.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferResult.BytesTransferred">
+      <summary>작업이 실제로 전송한 실제 바이트 수입니다. 다음 표에서는 이 값이 각 메서드에 대해 나타내는 의미를 설명합니다. MethodDescriptionReadPartial 읽기 작업이 버퍼로 읽는 실제 바이트 수입니다. Status 멤버의 값이 ProviderI2CTransferStatus.PartialTransfer인 경우 이 값은 buffer 매개 변수에서 지정한 버퍼에 있는 바이트 수보다 작을 수 있습니다. WritePartial 쓰기 작업이 I2C 장치에 전송한 실제 바이트 수입니다. Status 멤버의 값이 ProviderI2CTransferStatus.PartialTransfer인 경우 이 값은 buffer 매개 변수에서 지정한 버퍼에 있는 바이트 수보다 작을 수 있습니다. WriteReadPartial 작업이 쓴 바이트 수와 작업이 읽은 바이트 수의 합계인, 작업이 전송한 실제 바이트 수입니다. Status 멤버의 값이 ProviderI2CTransferStatus.PartialTransfer인 경우 이 값은 writeBuffer 및 readBuffer 매개 변수에서 지정한 버퍼의 길이 합계보다 작을 수 있습니다.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferResult.Status">
+      <summary>읽기 또는 쓰기 작업이 메서드가 요청한 전체 바이트 수를 전송했는지 여부를 나타내는 열거형 값 또는 전체 전송이 성공하지 못한 이유입니다. WriteReadPartial의 경우 이 값은 쓰기 및 읽기 작업에 대한 데이터가 완전히 전송되었는지 여부를 나타냅니다.</summary>
+    </member><member name="T:Windows.Devices.I2c.Provider.ProviderI2cTransferStatus">
+      <summary>ReadPartial, WritePartial 또는 WriteReadPartial 메서드가 수행한 데이터 전송이 성공했는지 여부를 설명하거나, 전송이 성공하지 못한 이유를 제공합니다.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferStatus.FullTransfer">
+      <summary>데이터가 완전히 전송되었습니다. WriteReadPartial의 경우 쓰기 및 읽기 작업에 대한 데이터가 완전히 전송되었습니다. 이 상태 코드의 경우, 메서드가 반환하는 ProviderI2cTransferResult.BytesTransferred 멤버의 값은 메서드를 호출할 때 지정한 버퍼의 크기와 동일하거나, WriteReadPartial에 대해 지정한 두 버퍼 크기의 합계와 같습니다.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferStatus.PartialTransfer">
+      <summary>모든 데이터를 전송하기 전에 I2C 장치가 데이터 전송을 부정적으로 승인했습니다. 이 상태 코드의 경우, 메서드가 반환하는 ProviderI2cTransferResult.BytesTransferred 멤버의 값은 실제로 전송된 바이트 수입니다. WriteReadPartial의 경우, 이 값은 작업이 쓴 바이트 수와 작업이 읽은 바이트 수의 합계입니다.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferStatus.SlaveAddressNotAcknowledged">
+      <summary>버스 주소가 승인되지 않았습니다. 이 상태 코드의 경우, 메서드가 반환하는 ProviderI2cTransferResult.BytesTransferred 멤버의 값은 0입니다.</summary>
+    </member><member name="T:Windows.Devices.Pwm.PwmController">
+      <summary>시스템에 연결된 PWM 컨트롤러를 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.Pwm.PwmController.ActualFrequency">
+      <summary>PWM의 실제 주파수를 가져옵니다.</summary>
+      <returns>Hz 단위의 주파수입니다.</returns>
+    </member><member name="P:Windows.Devices.Pwm.PwmController.MaxFrequency">
+      <summary>컨트롤러에서 제공하는 최대 주파수를 가져옵니다.</summary>
+      <returns>Hz 단위의 최대 주파수입니다.</returns>
+    </member><member name="P:Windows.Devices.Pwm.PwmController.MinFrequency">
+      <summary>컨트롤러에서 제공하는 최소 주파수를 가져옵니다.</summary>
+      <returns>Hz 단위의 최소 주파수입니다.</returns>
+    </member><member name="P:Windows.Devices.Pwm.PwmController.PinCount">
+      <summary>시스템에서 사용 가능한 핀의 수를 가져옵니다.</summary>
+      <returns>핀의 수입니다.</returns>
+    </member><member name="M:Windows.Devices.Pwm.PwmController.GetControllersAsync(Windows.Devices.Pwm.Provider.IPwmProvider)">
+      <summary>시스템에 있는 모든 컨트롤러를 비동기적으로 가져옵니다.</summary>
+      <returns>메서드가 성공적으로 완료되면 시스템에서 사용할 수 있는 컨트롤러를 나타내는 값 목록이 반환됩니다.</returns>
+      <param name="provider">시스템에 있는 PWM 공급자입니다.</param>
+    </member><member name="M:Windows.Devices.Pwm.PwmController.GetDefaultAsync">
+      <summary>시스템에서 기본 PWM 컨트롤러를 가져옵니다.</summary>
+      <returns>시스템에 대한 기본 PWM 컨트롤러이며, 시스템에 PWM 컨트롤러가 없는 경우에는 null입니다.</returns>
+    </member><member name="M:Windows.Devices.Pwm.PwmController.OpenPin(System.Int32)">
+      <summary>사용할 핀을 엽니다.</summary>
+      <returns>요청하여 이제 사용할 수 있는 핀입니다.</returns>
+      <param name="pinNumber">열려는 핀입니다.</param>
+    </member><member name="M:Windows.Devices.Pwm.PwmController.SetDesiredFrequency(System.Double)">
+      <summary>PWM 주파수를 설정합니다.</summary>
+      <returns>설정된 실제 주파수입니다. 이는 공급자가 결정한 가장 가까운 지원되는 일치입니다.</returns>
+      <param name="desiredFrequency">그런 다음 원하는 주파수(Hz)의 값입니다.</param>
+    </member><member name="T:Windows.Devices.Pwm.PwmPin">
+      <summary>시스템에 있는 단일 PWM 핀을 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.Pwm.PwmPin.Controller">
+      <summary>이 핀에서 사용 중인 PWM 컨트롤러를 가져옵니다.</summary>
+      <returns>컨트롤러입니다.</returns>
+    </member><member name="P:Windows.Devices.Pwm.PwmPin.IsStarted">
+      <summary>핀의 시작된 상태를 가져옵니다.</summary>
+      <returns>이 핀에서 PWM이 시작된 경우 True, 그렇지 않으면 false입니다.</returns>
+    </member><member name="P:Windows.Devices.Pwm.PwmPin.Polarity">
+      <summary>핀의 극성을 가져오거나 설정합니다.</summary>
+      <returns>핀 극성입니다.</returns>
+    </member><member name="M:Windows.Devices.Pwm.PwmPin.Close">
+      <summary>핀의 현재 연결을 닫고 다른 사용자가 핀을 열 수 있도록 합니다.</summary>
+    </member><member name="M:Windows.Devices.Pwm.PwmPin.GetActiveDutyCyclePercentage">
+      <summary>이 핀에 대한 듀티 사이클 비율을 검색합니다.</summary>
+      <returns>듀티 사이클 백분율(0에서 100 사이)입니다.</returns>
+    </member><member name="M:Windows.Devices.Pwm.PwmPin.SetActiveDutyCyclePercentage(System.Double)">
+      <summary>이 핀에 대한 듀티 사이클 비율을 설정합니다.</summary>
+      <param name="dutyCyclePercentage">원하는 듀티 사이클 백분율(0과 100 사이의 값으로 표시)입니다.</param>
+    </member><member name="M:Windows.Devices.Pwm.PwmPin.Start">
+      <summary>이 핀에서 PWM을 시작합니다.</summary>
+    </member><member name="M:Windows.Devices.Pwm.PwmPin.Stop">
+      <summary>이 핀에서 PWM을 중지합니다.</summary>
+    </member><member name="T:Windows.Devices.Pwm.PwmPulsePolarity">
+      <summary>PWM 신호에서 시작해야 하는 극성을 설명합니다.</summary>
+    </member><member name="F:Windows.Devices.Pwm.PwmPulsePolarity.ActiveHigh">
+      <summary>높은 활성 상태로 시작하도록 PWM 신호를 구성합니다.</summary>
+    </member><member name="F:Windows.Devices.Pwm.PwmPulsePolarity.ActiveLow">
+      <summary>낮은 활성 상태로 시작하도록 PWM 신호를 구성합니다.</summary>
+    </member><member name="T:Windows.Devices.Pwm.Provider.IPwmControllerProvider">
+      <summary>모든 PWM 컨트롤러에 공통적인 속성과 메서드를 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.Pwm.Provider.IPwmControllerProvider.ActualFrequency">
+      <summary>PWM의 실제 주파수를 가져옵니다.</summary>
+      <returns>Hz 단위의 주파수입니다.</returns>
+    </member><member name="P:Windows.Devices.Pwm.Provider.IPwmControllerProvider.MaxFrequency">
+      <summary>컨트롤러에서 제공하는 최대 주파수를 가져옵니다.</summary>
+      <returns>Hz 단위의 최대 주파수입니다.</returns>
+    </member><member name="P:Windows.Devices.Pwm.Provider.IPwmControllerProvider.MinFrequency">
+      <summary>컨트롤러에서 제공하는 최소 주파수를 가져옵니다.</summary>
+      <returns>Hz 단위의 최소 주파수입니다.</returns>
+    </member><member name="P:Windows.Devices.Pwm.Provider.IPwmControllerProvider.PinCount">
+      <summary>시스템에서 사용 가능한 PWM 핀의 수를 가져옵니다.</summary>
+      <returns>사용 가능한 핀의 수입니다.</returns>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.AcquirePin(System.Int32)">
+      <summary>지정된 핀을 획득하고 해당 핀을 사용하기 위해 엽니다.</summary>
+      <param name="pin">PWM 연결을 열 핀입니다.</param>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.DisablePin(System.Int32)">
+      <summary>이 핀에서 PWM을 중지합니다.</summary>
+      <param name="pin">PWM 신호를 중지하려는 핀입니다.</param>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.EnablePin(System.Int32)">
+      <summary>지정된 핀에서 PWM 신호를 시작합니다.</summary>
+      <param name="pin">PWM 신호를 시작하려는 핀입니다.</param>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.ReleasePin(System.Int32)">
+      <summary>지정된 핀 연결을 해제하고 다른 사용자가 핀을 사용할 수 있도록 합니다.</summary>
+      <param name="pin">해제하려는 핀입니다.</param>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.SetDesiredFrequency(System.Double)">
+      <summary>원하는 PWM 주파수를 설정합니다.</summary>
+      <returns>위의 값으로 설정한 후 실제 PWM 주파수입니다. 이는 공급자가 결정한 가장 가까운 지원되는 일치입니다.</returns>
+      <param name="frequency">원하는 Hz 단위의 주파수입니다.</param>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.SetPulseParameters(System.Int32,System.Double,System.Boolean)">
+      <summary>핀, 듀티 사이클 및 극성에 대한 PWM 매개 변수를 설정합니다.</summary>
+      <param name="pin">이러한 값이 적용되는 핀을 나타냅니다.</param>
+      <param name="dutyCycle">듀티 사이클 비율(0에서 100 사이의 값)입니다.</param>
+      <param name="invertPolarity">핀의 극성이 반전이면 True, 그렇지 않으면 false입니다.</param>
+    </member><member name="T:Windows.Devices.Pwm.Provider.IPwmProvider">
+      <summary>모든 PWM 공급자에 공통되는 메서드를 나타냅니다.</summary>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmProvider.GetControllers">
+      <summary>시스템에서 사용할 수 있는 컨트롤러를 가져옵니다.</summary>
+      <returns>시스템에 사용할 수 있는 PWM 컨트롤러의 목록을 반환합니다.</returns>
+    </member><member name="T:Windows.Devices.Spi.ISpiDeviceStatics">
+      <summary>SPI 장치에 일반적인 SPI 장치 통계를 나타냅니다.</summary>
+    </member><member name="M:Windows.Devices.Spi.ISpiDeviceStatics.FromIdAsync(System.String,Windows.Devices.Spi.SpiConnectionSettings)">
+      <summary>제공된 연결 설정을 사용하여 장치를 엽니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>SPI 장치입니다.</returns>
+      <param name="busId">버스의 ID입니다.</param>
+      <param name="settings">연결 설정입니다.</param>
+    </member><member name="M:Windows.Devices.Spi.ISpiDeviceStatics.GetBusInfo(System.String)">
+      <summary>특정 버스에 대한 정보를 검색합니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>요청된 버스 정보입니다.</returns>
+      <param name="busId">버스의 ID입니다.</param>
+    </member><member name="M:Windows.Devices.Spi.ISpiDeviceStatics.GetDeviceSelector">
+      <summary>시스템에 있는 모든 SPI 버스를 가져옵니다.</summary>
+      <returns>시스템에 있는 모든 버스를 포함하는 문자열입니다.</returns>
+    </member><member name="M:Windows.Devices.Spi.ISpiDeviceStatics.GetDeviceSelector(System.String)">
+      <summary>시스템에서 입력 매개 변수와 일치하는 모든 SPI 버스를 가져옵니다.</summary>
+      <returns>이름에 입력이 있는 모든 버스를 포함하는 문자열입니다.</returns>
+      <param name="friendlyName">원하는 버스의 식별 이름을 지정하는 입력 매개 변수입니다. 이 항목은 일반적으로 계통도에 있는 이름과 일치합니다.</param>
+    </member><member name="T:Windows.Devices.Spi.SpiBusInfo">
+      <summary>SPI 버스에 대한 정보를 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.Spi.SpiBusInfo.ChipSelectLineCount">
+      <summary>버스에서 사용할 수 있는 칩 선택 줄 수를 가져옵니다.</summary>
+      <returns>칩 선택 줄 수입니다.</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiBusInfo.MaxClockFrequency">
+      <summary>버스의 최대 클록 주기 주파수입니다.</summary>
+      <returns>클록 주기입니다(Hz).</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiBusInfo.MinClockFrequency">
+      <summary>버스의 최소 클록 주기 주파수입니다.</summary>
+      <returns>클록 주기입니다(Hz).</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiBusInfo.SupportedDataBitLengths">
+      <summary>버스에서 데이터를 전송하는 데 사용할 수 있는 비트 길이를 가져옵니다.</summary>
+      <returns>지원되는 데이터 길이입니다.</returns>
+    </member><member name="T:Windows.Devices.Spi.SpiConnectionSettings">
+      <summary>장치와 연결하기 위한 설정을 나타냅니다.</summary>
+    </member><member name="M:Windows.Devices.Spi.SpiConnectionSettings.#ctor(System.Int32)">
+      <summary>SpiConnectionSettings의 새 인스턴스를 초기화합니다.</summary>
+      <param name="chipSelectLine">연결이 만들어지는 칩 선택 줄입니다.</param>
+    </member><member name="P:Windows.Devices.Spi.SpiConnectionSettings.ChipSelectLine">
+      <summary>SPI 장치에 연결하기 위한 칩 선택 줄을 가져오거나 설정합니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>칩 선택 줄입니다.</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiConnectionSettings.ClockFrequency">
+      <summary>연결을 위한 클록 주기를 가져오거나 설정합니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>클록 주기의 값입니다(Hz).</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiConnectionSettings.DataBitLength">
+      <summary>이 연결에서 데이터의 비트 길이를 가져오거나 설정합니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>데이터 비트 길이입니다.</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiConnectionSettings.Mode">
+      <summary>이 연결에 대한 SpiMode를 가져오거나 설정합니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>통신 모드입니다.</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiConnectionSettings.SharingMode">
+      <summary>SPI 연결의 공유 모드를 가져오거나 설정합니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>공유 모드입니다.</returns>
+    </member><member name="T:Windows.Devices.Spi.SpiController">
+      <summary>시스템에 있는 SPI 컨트롤러를 나타냅니다.</summary>
+    </member><member name="M:Windows.Devices.Spi.SpiController.GetControllersAsync(Windows.Devices.Spi.Provider.ISpiProvider)">
+      <summary>시스템에 있는 모든 SPI 컨트롤러를 가져옵니다.</summary>
+      <returns>메서드가 성공적으로 완료되면 시스템에서 사용할 수 있는 SPI 컨트롤러를 나타내는 값 목록이 반환됩니다.</returns>
+      <param name="provider">시스템에서 컨트롤러에 대한 SPI 공급자입니다.</param>
+    </member><member name="M:Windows.Devices.Spi.SpiController.GetDefaultAsync">
+      <summary>시스템에서 기본 SPI 컨트롤러를 가져옵니다.</summary>
+      <returns>시스템에 대한 기본 SPI 컨트롤러이며, 시스템에 SPI 컨트롤러가 없는 경우에는 null입니다.</returns>
+    </member><member name="M:Windows.Devices.Spi.SpiController.GetDevice(Windows.Devices.Spi.SpiConnectionSettings)">
+      <summary>지정된 설정을 사용하여 SPI 장치를 가져옵니다.</summary>
+      <returns>SPI 장치입니다.</returns>
+      <param name="settings">원하는 연결 설정입니다.</param>
+    </member><member name="T:Windows.Devices.Spi.SpiDevice">
+      <summary>SPI 버스를 통해 연결 된 장치를 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.Spi.SpiDevice.ConnectionSettings">
+      <summary>장치에 대한 연결 설정을 가져옵니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>연결 설정입니다.</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiDevice.DeviceId">
+      <summary>장치와 연결된 고유의 ID를 가져옵니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>ID입니다.</returns>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.Close">
+      <summary>장치에 대한 연결을 닫습니다.</summary>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.FromIdAsync(System.String,Windows.Devices.Spi.SpiConnectionSettings)">
+      <summary>제공된 연결 설정을 사용하여 장치를 엽니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>요청된 SPI 장치입니다.</returns>
+      <param name="busId">버스의 ID입니다.</param>
+      <param name="settings">연결 설정입니다.</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.GetBusInfo(System.String)">
+      <summary>특정 버스에 대한 정보를 검색합니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <returns>요청된 버스 정보입니다.</returns>
+      <param name="busId">버스의 ID입니다.</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.GetDeviceSelector">
+      <summary>시스템에 있는 모든 SPI 버스를 가져옵니다.</summary>
+      <returns>시스템에 있는 모든 버스를 포함하는 문자열입니다.</returns>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.GetDeviceSelector(System.String)">
+      <summary>시스템에서 입력 매개 변수와 일치하는 모든 SPI 버스를 가져옵니다.</summary>
+      <returns>이름에 입력이 있는 모든 버스를 포함하는 문자열입니다.</returns>
+      <param name="friendlyName">원하는 버스의 식별 이름을 지정하는 입력 매개 변수입니다. 이 항목은 일반적으로 계통도에 있는 이름과 일치합니다.</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.Read(System.Byte[])">
+      <summary>연결된 장치에서 읽습니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <param name="buffer">장치에서 읽은 데이터를 포함하는 배열입니다.</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.TransferFullDuplex(System.Byte[],System.Byte[])">
+      <summary>전이중 통신 시스템을 사용하여 데이터를 전송합니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <param name="writeBuffer">장치에 쓸 데이터를 포함하는 배열입니다.</param>
+      <param name="readBuffer">장치에서 읽은 데이터를 포함하는 배열입니다.</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.TransferSequential(System.Byte[],System.Byte[])">
+      <summary>장치에 데이터를 순차적으로 전송합니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <param name="writeBuffer">장치에 쓸 데이터를 포함하는 배열입니다.</param>
+      <param name="readBuffer">장치에서 읽은 데이터를 포함하는 배열입니다.</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.Write(System.Byte[])">
+      <summary>연결된 장치에 씁니다.</summary>
+      <capability type="lowLevelDevices">GPIO, I2C, SPI, ADC 및 PWM 같은 저수준 버스 하드웨어에 액세스하려면 IoT 장치에서 실행되는 앱이 필요합니다.</capability>
+      <param name="buffer">장치에 쓸 데이터를 포함하는 배열입니다.</param>
+    </member><member name="T:Windows.Devices.Spi.SpiMode">
+      <summary>SPI 통신 모드를 정의합니다.</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiMode.Mode0">
+      <summary>CPOL = 0, CPHA = 0.</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiMode.Mode1">
+      <summary>CPOL = 0, CPHA = 1.</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiMode.Mode2">
+      <summary>CPOL = 1, CPHA = 0.</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiMode.Mode3">
+      <summary>CPOL = 1, CPHA = 1.</summary>
+    </member><member name="T:Windows.Devices.Spi.SpiSharingMode">
+      <summary>SPI 버스의 공유 모드를 정의합니다.</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiSharingMode.Exclusive">
+      <summary>SPI 버스 세그먼트가 공유되지 않습니다.</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiSharingMode.Shared">
+      <summary>SPI 버스가 공유됩니다.</summary>
+    </member><member name="T:Windows.Devices.Spi.Provider.ISpiControllerProvider">
+      <summary>모든 SPI 컨트롤러에 공통되는 작업을 나타냅니다.</summary>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiControllerProvider.GetDeviceProvider(Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings)">
+      <summary>지정된 설정을 사용하여 SPI 장치를 가져옵니다.</summary>
+      <returns>SPI 장치입니다.</returns>
+      <param name="settings">원하는 연결 설정입니다.</param>
+    </member><member name="T:Windows.Devices.Spi.Provider.ISpiDeviceProvider">
+      <summary>SPI 버스를 통해 연결된 장치에 공통되는 작업을 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.Spi.Provider.ISpiDeviceProvider.ConnectionSettings">
+      <summary>장치에 대한 연결 설정을 가져옵니다.</summary>
+      <returns>연결 설정입니다.</returns>
+    </member><member name="P:Windows.Devices.Spi.Provider.ISpiDeviceProvider.DeviceId">
+      <summary>장치와 연결된 고유의 ID를 가져옵니다.</summary>
+      <returns>장치 ID입니다.</returns>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiDeviceProvider.Read(System.Byte[])">
+      <summary>연결된 장치에서 읽습니다.</summary>
+      <param name="buffer">장치에서 읽은 데이터를 포함하는 배열입니다.</param>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiDeviceProvider.TransferFullDuplex(System.Byte[],System.Byte[])">
+      <summary>전이중 통신 시스템을 사용하여 데이터를 전송합니다.</summary>
+      <param name="writeBuffer">장치에 쓸 데이터를 포함하는 배열입니다.</param>
+      <param name="readBuffer">장치에서 읽은 데이터를 포함하는 배열입니다.</param>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiDeviceProvider.TransferSequential(System.Byte[],System.Byte[])">
+      <summary>장치에 데이터를 순차적으로 전송합니다.</summary>
+      <param name="writeBuffer">장치에 쓸 데이터를 포함하는 배열입니다.</param>
+      <param name="readBuffer">장치에서 읽은 데이터를 포함하는 배열입니다.</param>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiDeviceProvider.Write(System.Byte[])">
+      <summary>연결된 장치에 씁니다.</summary>
+      <param name="buffer">장치에 쓸 데이터를 포함하는 배열입니다.</param>
+    </member><member name="T:Windows.Devices.Spi.Provider.ISpiProvider">
+      <summary>SPI 컨트롤러 공급자에 공통되는 작업을 나타냅니다.</summary>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiProvider.GetControllersAsync">
+      <summary>공급자에 대해 시스템에서 모든 SPI 컨트롤러를 가져옵니다.</summary>
+      <returns>메서드가 성공적으로 완료되면 시스템에서 사용할 수 있는 SPI 컨트롤러를 나타내는 값 목록이 반환됩니다.</returns>
+    </member><member name="T:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings">
+      <summary>장치에 연결하기 위한 공급자 설정을 나타냅니다.</summary>
+    </member><member name="M:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.#ctor(System.Int32)">
+      <summary>ProviderSpiConnectionSettings 클래스의 새 인스턴스를 초기화합니다.</summary>
+      <param name="chipSelectLine">연결이 만들어지는 칩 선택 줄입니다.</param>
+    </member><member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.ChipSelectLine">
+      <summary>SPI 장치에 연결하기 위한 칩 선택 줄을 가져오거나 설정합니다.</summary>
+      <returns>칩 선택 줄입니다.</returns>
+    </member><member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.ClockFrequency">
+      <summary>연결을 위한 클록 주기를 가져오거나 설정합니다.</summary>
+      <returns>클록 주기의 값입니다(Hz).</returns>
+    </member><member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.DataBitLength">
+      <summary>이 연결에서 데이터의 비트 길이를 가져오거나 설정합니다.</summary>
+      <returns>데이터 비트 길이입니다.</returns>
+    </member><member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.Mode">
+      <summary>이 연결에 대한 ProviderSpiMode를 가져오거나 설정합니다.</summary>
+      <returns>통신 모드입니다.</returns>
+    </member><member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.SharingMode">
+      <summary>SPI 연결의 공유 모드를 가져오거나 설정합니다.</summary>
+      <returns>공유 모드입니다.</returns>
+    </member><member name="T:Windows.Devices.Spi.Provider.ProviderSpiMode">
+      <summary>SPI 통신 모드를 정의합니다.</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiMode.Mode0">
+      <summary>CPOL = 0, CPHA = 0.</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiMode.Mode1">
+      <summary>CPOL = 0, CPHA = 1.</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiMode.Mode2">
+      <summary>CPOL = 1, CPHA = 0.</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiMode.Mode3">
+      <summary>CPOL = 1, CPHA = 1.</summary>
+    </member><member name="T:Windows.Devices.Spi.Provider.ProviderSpiSharingMode">
+      <summary>SPI 버스의 공유 모드를 정의합니다.</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiSharingMode.Exclusive">
+      <summary>SPI 버스 세그먼트가 공유되지 않습니다.</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiSharingMode.Shared">
+      <summary>SPI 버스가 공유됩니다.</summary>
+    </member></members>
+</doc>

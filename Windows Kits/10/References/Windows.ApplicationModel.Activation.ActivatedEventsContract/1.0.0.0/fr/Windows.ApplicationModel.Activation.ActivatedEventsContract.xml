@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Activation.ActivatedEventsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Activation.ILockScreenCallActivatedEventArgs">
+      <summary>Fournit des informations d'événement lorsqu'une communication vers et depuis l'écran de verrouillage est requise.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ILockScreenCallActivatedEventArgs.CallUI">
+      <summary>Obtient l'interface utilisateur qui gère la communication vers ou depuis l'écran de verrouillage.</summary>
+      <returns>Interface utilisateur qui gère la communication vers ou depuis l'écran de verrouillage.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IPrintTaskSettingsActivatedEventArgs">
+      <summary>Fournit des informations en réponse à l'événement qui est déclenché lorsque les paramètres de tâche d'impression sont activés.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IPrintTaskSettingsActivatedEventArgs.Configuration">
+      <summary>Obtient les informations de configuration pour la tâche d'impression.</summary>
+      <returns>Données de configuration de tâche d'impression.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs">
+      <summary>Fournit des informations d'événement lorsqu'une communication vers et depuis l'écran de verrouillage est requise.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.Arguments">
+      <summary>Obtient les arguments qui sont transmis à l'application pour la lancer.</summary>
+      <returns>Liste des arguments.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.CallUI">
+      <summary>Obtient l'interface utilisateur qui gère la communication vers ou depuis l'écran de verrouillage.</summary>
+      <returns>Interface utilisateur qui gère la communication vers ou depuis l'écran de verrouillage.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.CurrentlyShownApplicationViewId">
+      <summary>Obtient l'identificateur de la vue d'application actuellement affichée.</summary>
+      <returns>Identificateur de la vue d'application actuellement affichée.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.Kind">
+      <summary>Obtient le type d'activation.</summary>
+      <returns>La valeur d'énumération ActivationKind.LockScreenCall.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.PreviousExecutionState">
+      <summary>Obtient l'état d'exécution de l'application avant son activation.</summary>
+      <returns>L'une des valeurs de l'énumération.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.SplashScreen">
+      <summary>Obtient l'objet écran de démarrage, qui fournit des informations sur la transition de l'écran de démarrage à l'application activée.</summary>
+      <returns>Objet qui fournit les informations de l'écran de démarrage.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.TileId">
+      <summary>Obtient l'identificateur de la source qui a lancé l'application.</summary>
+      <returns>Identificateur de la mosaïque.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs">
+      <summary>Fournit des informations en réponse à l'événement qui est déclenché lorsque les paramètres de tâche d'impression sont activés.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.Configuration">
+      <summary>Obtient les informations de configuration pour la tâche d'impression.</summary>
+      <returns>Données de configuration de tâche d'impression.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.Kind">
+      <summary>Obtient le type d'activation des paramètres de tâche d'impression.</summary>
+      <returns>Type d'activation pour la tâche d'impression.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.PreviousExecutionState">
+      <summary>Obtient l'état d'exécution de l'application avant l'activation des paramètres.</summary>
+      <returns>L'état d'exécution de l'application.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.SplashScreen">
+      <summary>Obtient l'objet écran de démarrage, qui fournit des informations sur le passage de l'écran de démarrage à l'application activée.</summary>
+      <returns>Objet qui fournit les informations de l'écran de démarrage.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs">
+      <summary>Fournit des informations d'événement lorsqu'une communication vers et depuis l'écran de verrouillage est requise.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.ActivatedOperation">
+      <summary>Obtient l'opération d'activation de l'application.</summary>
+      <returns>Opération d'activation.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.Arguments">
+      <summary>Obtient les arguments qui sont transmis à l'application lors de son activation de lancement.</summary>
+      <returns>Liste des arguments.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.CallUI">
+      <summary>Obtient l'interface utilisateur qui gère la communication vers ou depuis l'écran de verrouillage.</summary>
+      <returns>Interface utilisateur qui gère la communication vers ou depuis l'écran de verrouillage.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.CurrentlyShownApplicationViewId">
+      <summary>Obtient l'identificateur de la vue d'application actuellement affichée.</summary>
+      <returns>Identificateur de la vue d'application actuellement affichée.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.Kind">
+      <summary>Obtient le type d'activation.</summary>
+      <returns>La valeur d'énumération ActivationKind.lockScreenCall.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.PreviousExecutionState">
+      <summary>Obtient l'état d'exécution de l'application avant son activation.</summary>
+      <returns>L'une des valeurs de l'énumération.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.SplashScreen">
+      <summary>Obtient l'objet écran de démarrage, qui fournit des informations sur la transition de l'écran de démarrage à l'application activée.</summary>
+      <returns>Objet qui fournit les informations de l'écran de démarrage.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.TileId">
+      <summary>Obtient l'identificateur de la source qui a lancé l'application.</summary>
+      <returns>Identificateur de la mosaïque.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs">
+      <summary>Représente les arguments liés à l'activation d'un flux de travail d'impression 3D.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.ActivatedOperation">
+      <summary>Obtient l'opération activée.</summary>
+      <returns>Opération activée.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.Kind">
+      <summary>Obtient le type d'activation.</summary>
+      <returns>Type d'activation.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.PreviousExecutionState">
+      <summary>Obtient l'état d'exécution précédent.</summary>
+      <returns>État précédent.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.SplashScreen">
+      <summary>Obtient l'objet écran de démarrage, qui fournit des informations sur le passage de l'écran de démarrage à l'application activée.</summary>
+      <returns>Écran de démarrage.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.Workflow">
+      <summary>Obtient le flux de travail d'impression.</summary>
+      <returns>Flux de travail d'impression.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs">
+      <summary>Fourni en réponse à l'événement qui est déclenché lorsque les paramètres de tâche d'impression sont activés.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.ActivatedOperation">
+      <summary>Obtient l'opération d'activation de l'application.</summary>
+      <returns>Opération d'activation.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.Configuration">
+      <summary>Obtient les informations de configuration pour la tâche d'impression.</summary>
+      <returns>Données de configuration de tâche d'impression.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.Kind">
+      <summary>Obtient le type d'activation.</summary>
+      <returns>L'une des valeurs de l'énumération.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.PreviousExecutionState">
+      <summary>Obtient l'état d'exécution de l'application avant l'activation des paramètres.</summary>
+      <returns>L'une des valeurs de l'énumération.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.SplashScreen">
+      <summary>Obtient l'objet écran de démarrage, qui fournit des informations sur le passage de l'écran de démarrage à l'application activée.</summary>
+      <returns>Objet qui fournit les informations de l'écran de démarrage.</returns>
+    </member></members>
+</doc>

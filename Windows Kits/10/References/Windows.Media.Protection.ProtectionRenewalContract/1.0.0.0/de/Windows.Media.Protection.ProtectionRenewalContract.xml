@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.Protection.ProtectionRenewalContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Media.Protection.ComponentRenewal">
+      <summary>Ermöglicht Anwendungen das Initiieren von Erneuerungen von Komponenten, die aktualisiert werden müssen, um geschützten Medieninhalt wiederzugeben.</summary>
+    </member><member name="M:Windows.Media.Protection.ComponentRenewal.RenewSystemComponentsAsync(Windows.Media.Protection.RevocationAndRenewalInformation)">
+      <summary>Initiiert nach dem Auffordern des Benutzers das Aktualisieren von wichtigen Inhaltsschutzkomponenten.</summary>
+      <returns>Ein Objekt, das verwendet wird, um den asynchronen Vorgang zu steuern.</returns>
+      <param name="information">Informationen zum Sperren und Erneuern.</param>
+    </member><member name="T:Windows.Media.Protection.RenewalStatus">
+      <summary>Definiert die möglichen Werte, die von RenewSystemComponentsAsync zurückgegeben werden.</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.AppComponentsMayNeedUpdating">
+      <summary>Gibt an, dass keine Systemkomponenten erkannt wurden, die aktualisiert werden müssen. App-Komponenten müssen jedoch möglicherweise aktualisiert werden. In diesem Fall muss der Benutzer u. U. eine aktualisierte Anwendung aus dem Speicher herunterladen.</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.NoComponentsFound">
+      <summary>Gibt an, dass keine Komponenten gefunden wurden, die aktualisiert werden müssen.</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.NotStarted">
+      <summary>Gibt an, dass die Erneuerung nicht gestartet wurde.</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.UpdatesInProgress">
+      <summary>Gibt an, dass Updates vorhanden sind und dass der Benutzer das Fortsetzen der Updates erlaubt hat.</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.UserCancelled">
+      <summary>Gibt an, dass der Benutzer das Fortsetzen der Updates abgelehnt hat.</summary>
+    </member></members>
+</doc>

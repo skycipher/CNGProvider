@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.Xaml.Hosting.HostingContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost">
+      <summary>アプリケーションのリソースを解決するサービスを表します。 このインターフェイスはシナリオをホストするデザイン ツールで使用され、通常使用するためのものではありません。</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost.ResolveFileResource(System.String)">
+      <summary>パスで指定されたリソースを解決し、文字列のファイル名を返します。</summary>
+      <returns>解決されたファイル名。</returns>
+      <param name="path">解決するローカル パス。</param>
+    </member><member name="T:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost2">
+      <summary>IXamlUIPresenterHost を拡張して GetGenericXamlFilePath を追加します。</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost2.GetGenericXamlFilePath">
+      <summary>デザイン時に代替 generic.xaml ファイルをプレゼンター ホストに読み込みます。</summary>
+      <returns>代替の generic.xaml ファイルの場所へのローカル パス。</returns>
+    </member><member name="T:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost3">
+      <summary>IXamlUIPresenterHost を拡張して ResolveDictionaryResource を追加します。</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost3.ResolveDictionaryResource(Windows.UI.Xaml.ResourceDictionary,System.Object,System.Object)">
+      <summary>ディクショナリとキーによって指定されたリソースを解決します。</summary>
+      <returns>リソース オブジェクト。</returns>
+      <param name="dictionary">リソースを含むディクショナリ。</param>
+      <param name="dictionaryKey">リソース キー。</param>
+      <param name="suggestedValue">推奨値。</param>
+    </member><member name="T:Windows.UI.Xaml.Hosting.XamlUIPresenter">
+      <summary>マイクロソフト Direct3D サーフェスでのビジュアル ツリーの表示を有効にします。 この型はシナリオをホストするデザイン ツールで使用され、通常使用するためのものではありません。</summary>
+    </member><member name="P:Windows.UI.Xaml.Hosting.XamlUIPresenter.CompleteTimelinesAutomatically">
+      <summary>ホストが常にタイムラインを終わりまで実行するかどうかを決定する値を取得または設定します。</summary>
+      <returns>常にタイムラインを終わりまで実行するなら true。 それ以外の場合は false を返します。</returns>
+    </member><member name="P:Windows.UI.Xaml.Hosting.XamlUIPresenter.RootElement">
+      <summary>サーフェイスに描画するルート ビジュアル要素を取得または設定します。</summary>
+      <returns>描画する要素。</returns>
+    </member><member name="P:Windows.UI.Xaml.Hosting.XamlUIPresenter.ThemeKey">
+      <summary>ThemeResourcesXaml から使用するように設定されたテーマを識別する文字列キーを取得または設定します。</summary>
+      <returns>文字列キー。</returns>
+    </member><member name="P:Windows.UI.Xaml.Hosting.XamlUIPresenter.ThemeResourcesXaml">
+      <summary>リソース ディクショナリを指定する XAML を取得または設定します。 リソース ディクショナリは、ホストが解決し、コンテンツに適用されるテーマを含んでいます。</summary>
+      <returns>文字列形式で指定される XAML リソース ディクショナリ。</returns>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.GetFlyoutPlacement(Windows.Foundation.Rect,Windows.Foundation.Size,Windows.Foundation.Size,Windows.Foundation.Rect,Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode,System.Boolean,Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode@)">
+      <summary>配置ターゲットとフライアウトを表示するコントロールの推奨サイズを使用して、FlyoutBase 配置ロジックを呼び出します。 配置ロジックを実行した結果となる境界を返します。</summary>
+      <returns>FlyoutBase 配置ロジックによって計算された境界。</returns>
+      <param name="placementTargetBounds">FlyoutBase プレゼンター ロジックに渡される配置ターゲット要素の境界。</param>
+      <param name="controlSize">フライアウトを表示するコントロールの指定されたサイズ。</param>
+      <param name="minControlSize">フライアウトを表示するコントロールの最小サイズ。</param>
+      <param name="containerRect">配置ターゲットとフライアウトを保持する必要がある領域の境界。</param>
+      <param name="targetPreferredPlacement">FlyoutBase 配置ロジックで使用する指定された配置モード。</param>
+      <param name="allowFallbacks">フォールバックが配置モードに使用できる場合は true。 フォールバックを使用できない場合は false。</param>
+      <param name="chosenPlacement">呼び出された FlyoutBase 配置ロジックによって使用される実際の配置モード。</param>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.GetFlyoutPlacementTargetInfo(Windows.UI.Xaml.FrameworkElement,Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode,Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode@,System.Boolean@)">
+      <summary>ホストにおいてフライアウトも表示するための配置ターゲットの計算された境界を返します。 追加の出力パラメーターは、境界の計算方法の詳細を提供します。</summary>
+      <returns>計算された配置ターゲットの境界。</returns>
+      <param name="placementTarget">フライアウトが相対的に配置される、配置ターゲット要素。</param>
+      <param name="preferredPlacement">ターゲットに対するフライアウトの、ホストによる優先配置を宣言する列挙値。</param>
+      <param name="targetPreferredPlacement">フライアウトの優先配置を宣言する列挙値。</param>
+      <param name="allowFallbacks">フライアウト配置ロジックでフォールバック配置が許可されている場合は true。 targetPreferredPlacement 値だけが考慮される場合は false。</param>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.NotifyWindowSizeChanged">
+      <summary>Window.Current で SizeChanged イベントを呼び出します。 ホストの設定からユーザー コードへのサイズ変更を反映するためにホストによって使用され、それによってデザイン モードの操作をランタイムの操作と区別できるようになります。</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.Present">
+      <summary>ホストへの同期呼び出しとしてサーフェイスを提示します。</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.Render">
+      <summary>サーフェイスに描画します。 タイマーを使った非同期の呼び出しを対象としています。</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.SetHost(Windows.UI.Xaml.Hosting.IXamlUIPresenterHost)">
+      <summary>アプリケーション リソースの解決に使用する IXamlUIPresenterHost サービスの実装を指定します。</summary>
+      <param name="host">サービス実装。</param>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.SetSize(System.Int32,System.Int32)">
+      <summary>サーフェイスの幅と高さを指定します。</summary>
+      <param name="width">幅 (ピクセル単位)。</param>
+      <param name="height">高さ (ピクセル単位)。</param>
+    </member></members>
+</doc>

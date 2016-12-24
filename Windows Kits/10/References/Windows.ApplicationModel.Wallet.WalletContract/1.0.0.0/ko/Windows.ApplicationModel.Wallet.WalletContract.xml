@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Wallet.WalletContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs">
+      <summary>전자지갑 작업의 결과로 실행된 앱에 정보를 제공합니다.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs.ActionId">
+      <summary>동사, 트랜잭션 등의 ID와 같이 작업의 ID를 가져옵니다.</summary>
+      <returns>동사, 트랜잭션 등의 ID와 같은 작업의 ID입니다.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs.ActionKind">
+      <summary>WalletItem에 대해 수행된 작업을 가져옵니다.</summary>
+      <returns>WalletItem에 대해 수행된 작업입니다.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs.ItemId">
+      <summary>사용자가 작업을 수행한 WalletItem의 ID를 가져옵니다.</summary>
+      <returns>사용자가 작업을 수행한 WalletItem의 ID입니다.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs">
+      <summary>전자지갑 작업의 결과로 실행된 앱에 정보를 제공합니다.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.ActionId">
+      <summary>동사, 트랜잭션 등의 ID와 같이 작업의 ID를 가져옵니다.</summary>
+      <returns>동사, 트랜잭션 등의 ID와 같은 작업의 ID입니다.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.ActionKind">
+      <summary>WalletItem에 대해 수행된 작업을 가져옵니다.</summary>
+      <returns>WalletItem에 대해 수행된 작업을 가져옵니다.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.ItemId">
+      <summary>사용자가 작업을 수행한 WalletItem의 ID를 가져옵니다.</summary>
+      <returns>사용자가 작업을 수행한 WalletItem의 ID입니다.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.Kind">
+      <summary>WalletItem에서 수행된 작업의 유형을 가져옵니다.</summary>
+      <returns>WalletItem에서 수행된 작업의 유형입니다.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.PreviousExecutionState">
+      <summary>응용 프로그램을 활성화하기 전 응용 프로그램의 실행 상태를 가져옵니다.</summary>
+      <returns>앱이 활성화되기 전의 앱 실행 상태입니다.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.SplashScreen">
+      <summary>시작 화면에서 활성화된 응용 프로그램으로 전환에 대한 정보를 제공하는 시작 화면 개체를 가져옵니다.</summary>
+      <returns>시작 화면에서 활성화된 앱으로의 전환에 대한 정보를 제공하는 시작 화면 개체입니다.</returns>
+    </member><member name="T:Windows.ApplicationModel.Wallet.WalletActionKind">
+      <summary>앱이 실행되도록 한 항목의 작업을 나타냅니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.Message">
+      <summary>메시지를 눌렀습니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.MoreTransactions">
+      <summary>see more transactions UI 항목을 눌렀습니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.OpenItem">
+      <summary>항목을 열었습니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.Transaction">
+      <summary>트랜잭션을 눌렀습니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.Verb">
+      <summary>동사를 눌렀습니다.</summary>
+    </member><member name="T:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs">
+      <summary>전자지갑 작업의 결과로 실행된 앱에 정보를 제공합니다.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.ActionId">
+      <summary>동사, 트랜잭션 등의 ID와 같이 작업의 ID를 가져옵니다.</summary>
+      <returns>동사, 트랜잭션 등의 ID와 같은 작업의 ID입니다.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.ActionKind">
+      <summary>WalletItem에 대해 수행된 작업을 가져옵니다.</summary>
+      <returns>WalletItem에 대해 수행된 작업을 가져옵니다.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.ActivatedOperation">
+      <summary>응용 프로그램 활성화 작업을 가져옵니다.</summary>
+      <returns>활성화된 작업입니다.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.ItemId">
+      <summary>사용자가 작업을 수행한 WalletItem의 ID를 가져옵니다.</summary>
+      <returns>사용자가 작업을 수행한 WalletItem의 ID입니다.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.Kind">
+      <summary>활성화 유형을 가져옵니다.</summary>
+      <returns>열거형 값 중 하나입니다.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.PreviousExecutionState">
+      <summary>응용 프로그램을 활성화하기 전 응용 프로그램의 실행 상태를 가져옵니다.</summary>
+      <returns>열거형 값 중 하나입니다.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.SplashScreen">
+      <summary>시작 화면에서 활성화된 응용 프로그램으로 전환에 대한 정보를 제공하는 시작 화면 개체를 가져옵니다.</summary>
+      <returns>시작 화면 정보를 제공하는 개체입니다.</returns>
+    </member></members>
+</doc>

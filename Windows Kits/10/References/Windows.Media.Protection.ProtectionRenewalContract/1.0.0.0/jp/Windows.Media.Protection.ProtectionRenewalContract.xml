@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.Protection.ProtectionRenewalContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Media.Protection.ComponentRenewal">
+      <summary>保護されたメディア コンテンツを再生するために更新する必要があるコンポーネントの更新を、アプリケーションが開始できるようにします。</summary>
+    </member><member name="M:Windows.Media.Protection.ComponentRenewal.RenewSystemComponentsAsync(Windows.Media.Protection.RevocationAndRenewalInformation)">
+      <summary>ユーザーに確認のメッセージを表示した後で、重大なコンテンツ保護コンポーネントの更新を開始します。</summary>
+      <returns>非同期操作を制御するために使用するオブジェクト。</returns>
+      <param name="information">失効および更新の情報。</param>
+    </member><member name="T:Windows.Media.Protection.RenewalStatus">
+      <summary>RenewSystemComponentsAsync によって返されることが可能な値を定義します。</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.AppComponentsMayNeedUpdating">
+      <summary>更新が必要なシステム コンポーネントが検出されなかったことを指定します。 ただし、アプリケーション コンポーネントの更新が必要な場合があります。その場合、ユーザーはストアから更新済みのアプリケーションを取得することが必要になる場合があります。</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.NoComponentsFound">
+      <summary>更新が必要なコンポーネントが見つからなかったことを指定します。</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.NotStarted">
+      <summary>更新が始まっていないことを指定します。</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.UpdatesInProgress">
+      <summary>更新があり、ユーザーが更新の進行を許可していることを指定します。</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.UserCancelled">
+      <summary>ユーザーが更新の進行を拒否したことを指定します。</summary>
+    </member></members>
+</doc>

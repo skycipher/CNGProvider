@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.ApplicationSettings.ApplicationsSettingsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.ApplicationSettings.SettingsEdgeLocation">
+      <summary>設定チャームが表示される画面の端を指定します。</summary>
+      <deprecated type="deprecate">SettingsEdgeLocation が使用されなくなり、すべてのプラットフォームで動作しない可能性があります。 詳しくは、MSDN をご覧ください。</deprecated>
+    </member><member name="F:Windows.UI.ApplicationSettings.SettingsEdgeLocation.Left">
+      <summary>設定チャームが画面の左端に表示されます。</summary>
+    </member><member name="F:Windows.UI.ApplicationSettings.SettingsEdgeLocation.Right">
+      <summary>設定チャームが画面の右端に表示されます。</summary>
+    </member><member name="T:Windows.UI.ApplicationSettings.SettingsPane">
+      <summary>設定チャーム ペインを制御するアプリケーションを有効にする静的クラス。 アプリケーションは、コマンドを追加または削除するか、ユーザーがペインを開いたときに通知を受け取るか、またはペインをプログラムで開くことができます。</summary>
+      <deprecated type="deprecate">SettingsPane は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。 SettingsPane を使用する代わりに、アプリケーション エクスペリエンスに設定オプションを統合します。 詳しくは、「アプリ設定のガイドライン (Windows ストア アプリ)」をご覧ください。</deprecated>
+    </member><member name="P:Windows.UI.ApplicationSettings.SettingsPane.Edge">
+      <summary>設定チャームが画面の左端と右端のどちらに表示されるかを示す値を取得します。</summary>
+      <deprecated type="deprecate">SettingsPane は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。 SettingsPane を使用する代わりに、アプリケーション エクスペリエンスに設定オプションを統合します。 詳しくは、「アプリ設定のガイドライン (Windows ストア アプリ)」をご覧ください。</deprecated>
+      <returns>設定チャームの場所。</returns>
+    </member><member name="E:Windows.UI.ApplicationSettings.SettingsPane.CommandsRequested">
+      <summary>ユーザーが設定ペインを開いたときに発生します。 このイベントによってアプリケーションが設定コマンドの初期化を実行し、ユーザーがペインを閉じるまで UI を一時停止するのを待機しています。</summary>
+      <deprecated type="deprecate">SettingsPane は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。 SettingsPane を使用する代わりに、アプリケーション エクスペリエンスに設定オプションを統合します。 詳しくは、「アプリ設定のガイドライン (Windows ストア アプリ)」をご覧ください。</deprecated>
+    </member><member name="M:Windows.UI.ApplicationSettings.SettingsPane.GetForCurrentView">
+      <summary>現在のアプリ ビュー (つまり、CoreWindow) に関連付けられた SettingsPane オブジェクトを取得します。</summary>
+      <deprecated type="deprecate">SettingsPane は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。 SettingsPane を使用する代わりに、アプリケーション エクスペリエンスに設定オプションを統合します。 詳しくは、「アプリ設定のガイドライン (Windows ストア アプリ)」をご覧ください。</deprecated>
+      <returns>設定ペイン。</returns>
+    </member><member name="M:Windows.UI.ApplicationSettings.SettingsPane.Show">
+      <summary>ユーザーに [設定チャーム] ウィンドウを表示します。</summary>
+      <deprecated type="deprecate">SettingsPane は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。 SettingsPane を使用する代わりに、アプリケーション エクスペリエンスに設定オプションを統合します。 詳しくは、「アプリ設定のガイドライン (Windows ストア アプリ)」をご覧ください。</deprecated>
+    </member><member name="T:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest">
+      <summary>CommandsRequested イベント中だけに使用できるプロパティを含みます。</summary>
+      <deprecated type="deprecate">Windows 10 より後のリリースでは、SettingsPaneCommandsRequest は変更または廃止される可能性があります。 SettingsPane を使用する代わりに、アプリケーション エクスペリエンスに設定オプションを統合します。 詳しくは、「アプリ設定のガイドライン (Windows ストア アプリ)」をご覧ください。</deprecated>
+    </member><member name="P:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest.ApplicationCommands">
+      <summary>CommandsRequested イベント中に使用可能なベクター。 これらを SettingsPane の UI で使用できるようにするために、この関数への SettingsCommand オブジェクトを追加します。</summary>
+      <deprecated type="deprecate">Windows 10 より後のリリースでは、SettingsPaneCommandsRequest は変更または廃止される可能性があります。 SettingsPane を使用する代わりに、アプリケーション エクスペリエンスに設定オプションを統合します。 詳しくは、「アプリ設定のガイドライン (Windows ストア アプリ)」をご覧ください。</deprecated>
+      <returns>SettingsCommand オブジェクトのベクター。</returns>
+    </member><member name="T:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs">
+      <summary>CommandsRequested イベントの間にイベント オブジェクトから使用できる引数が含まれます。</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequestedEventArgs は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。 SettingsPane を使用する代わりに、アプリケーション エクスペリエンスに設定オプションを統合します。 詳しくは、「アプリ設定のガイドライン (Windows ストア アプリ)」をご覧ください。</deprecated>
+    </member><member name="P:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs.Request">
+      <summary>CommandsRequested イベント中に使用可能になる SettingsPaneCommandsRequest のインスタンス。</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequestedEventArgs は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。 SettingsPane を使用する代わりに、アプリケーション エクスペリエンスに設定オプションを統合します。 詳しくは、「アプリ設定のガイドライン (Windows ストア アプリ)」をご覧ください。</deprecated>
+      <returns>コマンド要求オブジェクト。</returns>
+    </member></members>
+</doc>

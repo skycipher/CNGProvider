@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Calls.LockScreenCallContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral">
+      <summary>它會傳回 LockScreenCallEndCallDeferral 物件，在應用程式不再需要從鎖定螢幕中延後其自身的移除時，提供相關訊息。</summary>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral.Complete">
+      <summary>如果應用程式尚未經由其他方法移除，從鎖定螢幕完成移除應用程式的延遲，可以讓應用程式從鎖定螢幕移除。</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs">
+      <summary>控制從鎖定螢幕移除應用程式。</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs.Deadline">
+      <summary>取得應用程式必須完成延期的期限。</summary>
+      <returns>應用程式必須完成延期的期限。</returns>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs.GetDeferral">
+      <summary>要求延遲從鎖定螢幕移除應用程式的預設行為。</summary>
+      <returns>當此方法完成時，它會傳回 LockScreenCallEndCallDeferral 物件，在應用程式不再需要從鎖定螢幕中延後其自身的移除時，提供相關訊息。</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.LockScreenCallUI">
+      <summary>處理鎖定螢幕上的通訊。</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.LockScreenCallUI.CallTitle">
+      <summary>取得及設定通話性質的簡短描述。</summary>
+      <returns>呼叫性質的簡短描述，例如「與 Jane Doe 的視訊通話」。</returns>
+    </member><member name="E:Windows.ApplicationModel.Calls.LockScreenCallUI.Closed">
+      <summary>完成鎖定螢幕互動時發生。</summary>
+    </member><member name="E:Windows.ApplicationModel.Calls.LockScreenCallUI.EndRequested">
+      <summary>鎖定螢幕想要結束通話時發生。</summary>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallUI.Dismiss">
+      <summary>從鎖定螢幕 UI 中移除應用程式。</summary>
+    </member></members>
+</doc>

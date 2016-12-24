@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Networking.NetworkOperators.LegacyNetworkOperatorsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails">
+      <summary>提供詳細資料用於網路操作員通知。</summary>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.EncodingType">
+      <summary>取得接收到之訊息的資料編碼配置 (DCS)。</summary>
+      <returns>已接收之訊息的資料編碼配置 (DCS)。</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.Message">
+      <summary>取得網路操作員通知的訊息。</summary>
+      <returns>網路操作員通知的訊息。</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.NetworkAccountId">
+      <summary>取得接收到通知的行動式寬頻帳戶的唯一識別碼。</summary>
+      <returns>行動式寬頻帳戶的唯一識別項。</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.NotificationType">
+      <summary>取得網路通知的類型。</summary>
+      <returns>網路通知的類型。</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.RuleId">
+      <summary>取得符合且觸發通知之已佈建規則的識別碼。</summary>
+      <returns>已佈建的規則識別項。</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.SmsMessage">
+      <summary>取得接收到通知的行動式寬頻帳戶的 SMS 訊息。</summary>
+      <returns>如果此電信業者通知是由新的行動電信業者 SMS 所觸發，它就會包含電信業者通知的 SMS 訊息物件。 如果沒有在通知中收到任何 SMS 訊息，則為 NULL。</returns>
+    </member><member name="M:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.AuthorizeTethering(System.Boolean,System.String)">
+      <summary>用來表示裝置是否允許網際網路共用功能。 如果不是，可以提供原因。</summary>
+      <param name="allow">如果已允許共用網際網路，則為 true，否則為 false。</param>
+      <param name="entitlementFailureReason">網際網路共用功能不允許的原因。</param>
+    </member></members>
+</doc>

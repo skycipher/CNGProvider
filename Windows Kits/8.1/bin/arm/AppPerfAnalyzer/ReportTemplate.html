@@ -1,0 +1,560 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0025)http://www.microsoft.com/ -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>HTML5 App Performance Report</title>
+    <script type="text/javascript">
+        var reportResults = <!-- [REPORT_DATA] -->
+    </script>
+    <style type="text/css">
+        BODY { font-family: Segoe UI; font-size: 10.5pt; color: #2a2a2a; margin: 0 18pt; padding: 0; }
+        .titleLarge { margin-top: 9pt; font-family: Segoe UI; font-size: 25pt; font-weight: lighter; }
+        .flowTitle { font-family: Segoe UI; font-weight: initial; font-size: 15pt; margin: 0 5pt 0 5pt; }
+        .overall { font-size: 20pt; font-weight: bold; }
+        .overall p { margin: 3pt; font-size: 10.5pt; font-weight: normal; padding-bottom: 10px; }
+        dt { float: left; width: 144pt; line-height: 18pt; }
+        dd { font-weight: normal; line-height: 18pt; }
+        .testResults { font-weight: normal; line-height: 14pt; }
+        dt.testResults { text-indent: 0.35in; float: left; width: 100pt; line-height: 18pt; }
+        .appInfo dd { font-weight: bolder; }
+        .overall a { text-decoration: none; }
+        .overall li { font-size:  10.5pt; font-weight: normal; color: black; text-decoration: none;}
+        .passed { color: green; text-transform: uppercase; }
+        .warning { color: orange; text-transform: uppercase;  }
+        .failed { color: red; text-transform: uppercase;  }
+        .info { color: #808080; text-transform: uppercase; }
+        .explanatory { color: #606060; text-transform: uppercase; font-weight: bolder;}
+        .grade1 { color: green; }
+        .grade2 { color: orange; }
+        .grade3 { color: red; }
+        .flow { padding-top: 15px; }
+        .flowDescription { padding-bottom: 5px; padding-top: 10px; font-family: Segoe UI; font-size:  10.5pt; margin: 0 0;}
+        .results { padding-left: 0.55in; height: 0px; display: none; overflow: hidden; -ms-transition: height 0.1s ease-out;}
+        #failResults { font-size:  0pt; padding-bottom: 15pt;}
+        .expandedFlow { display: block; overflow: visible; height: auto;}
+        .resultTitle { line-height: 18pt; font-weight: bolder;}
+        .resultDescription { font-size: 10pt; height: 0px; display: none; overflow: hidden; -ms-transition: height 0.1s ease-out;}
+        .expandedResult { height: auto; line-height: 14pt; display: block; overflow: visible;  -ms-transition: height 0.1s ease-out;}
+        .resultDescription li { padding-bottom: 6pt; margin-left: 0.45in;}
+        .resultDescription p { padding-bottom: 6pt; margin-left: 0.7in;}
+        .collapseWidget { font-family: "Segoe UI Symbol"; float: left; width: 30px; height:  30px; border: 1px solid black; border-radius: 50% 50% 50% 50%; box-sizing: border-box; margin: 1px 8px 1px 1px; text-align: center; background-color: #fff;  -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg); -ms-transition: -ms-transform 0.1s ease-out; -webkit-transition: -webkit-transform 0.1s ease-out; -moz-transition: -moz-transform 0.1s ease-out; -o-transition: -o-transform 0.1s ease-out; transition: transform 0.1s ease-out; }
+        .collapseWidgetSmall { font-family: "Segoe UI Symbol"; float: left; width: 25px; height:  25px; border:  1px solid black; border-radius: 50% 50% 50% 50%; box-sizing: border-box; margin: 1px 8px 1px 1px; text-align: center; background-color: #fff; padding-top: -50px; padding-bottom: 3px; -ms-transform: rotate(0deg);  -webkit-transform: rotate(0deg); -moz-transform:  rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg); -ms-transition: -ms-transform 0.1s ease-out; -webkit-transition: -webkit-transform 0.1s ease-out; -moz-transition: -moz-transform 0.1s ease-out; -o-transition: -o-transform 0.1s ease-out; transition: transform 0.1s ease-out; }
+        .expandedWidget { -ms-transform: rotate(90deg); -webkit-transform:  rotate(90deg); -moz-transform:  rotate(90deg); -o-transform: rotate(90deg); transform: rotate(90deg); -ms-transition: -ms-transform 0.1s ease-out; -webkit-transition: -webkit-transform 0.1s ease-out; -moz-transition: -moz-transform 0.1s ease-out; -o-transition: -o-transform 0.1s ease-out; transition: transform 0.1s ease-out; }
+        #dataPointDetail { display: none; padding: 10px 10px 10px 10px; position: absolute; left: 0px; top: 0px; }
+    </style>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", initializePage);
+
+        // This function fills a template with its contents
+        function swapTemplate(templateName, values){
+            var template = document.getElementById(templateName).innerHTML;
+            var populatedTemplate = template.replace(/\{\{(.+?)\}\}/g, function(match){
+                var key = match.substring(2, match.length - 2);
+                return values[key];
+            });
+            return populatedTemplate;
+        }
+
+        var gradeText = {
+            "3": "Critical issues detected",
+            "2": "Some areas for improvement detected",
+            "1": "No major issues detected",
+            "0": ""
+        };
+        var fullFailContent = "";
+        var fullWarningContent = "";
+
+        function assignGrade(sevZero, sevOne, sevTwo) {
+            if (sevTwo > 0) {
+                return "3";
+            }
+            if (sevOne >= 2) {
+                return "2";
+            }
+            if (sevZero > 0) {
+                return "1";
+            }
+            return 0;
+        }
+
+        function initializePage() {
+            var sevZeroCount = 0;
+            var sevOneCount = 0;
+            var sevTwoCount = 0;
+            var sevThreeCount = 0;
+            var resultId = 0;
+            var flowId = 0;
+
+            // Count the total number of pass/fail/warning, and assign a grade
+            for (var j = 0, len = reportResults.flows.length; j < len; j++) {
+                for (var k = 0, len2 = reportResults.flows[j].results.length; k < len2; k++) {
+                    switch (reportResults.flows[j].results[k].severity) {
+                        case 0: sevZeroCount++; break;
+                        case 1: sevOneCount++; break;
+                        case 3: sevThreeCount++; break;
+                        default: sevTwoCount++; break;
+                    }
+                }
+            }
+            var grade = assignGrade(sevZeroCount, sevOneCount, sevTwoCount);
+
+            // Set up the header template
+            var headerContent = swapTemplate("headerTemplate", {
+                displayName: reportResults.details.application.displayName,
+                packageVersion: reportResults.details.application.packageVersion,
+                packageFullName: reportResults.details.application.packageFullName,
+                osVersion: reportResults.details.os.version,
+                osArchitecture: reportResults.details.os.architecture,
+                reportTime: reportResults.details.reportTime,
+                reportTraces: reportResults.details.reportTraceDirectory,
+                gradeText: gradeText[grade],
+                gradeColor: grade,
+                sevZeroCount: sevZeroCount,
+                sevOneCount: sevOneCount,
+                sevTwoCount: sevTwoCount,
+                sevThreeCount: sevThreeCount
+            });
+            var body = document.querySelector("body");
+            body.innerHTML = body.innerHTML + headerContent;
+
+            // Set up each scenario's results
+            for (var i = 0, len3 = reportResults.flows.length; i < len3; i++) {
+                sevZeroCount = 0;
+                sevOneCount = 0;
+                sevTwoCount = 0;
+                sevThreeCount = 0;
+
+                // Count the number of pass/fail/warnings per flow
+                for (var k = 0, len4 = reportResults.flows[i].results.length; k < len4; k++) {
+                    switch (reportResults.flows[i].results[k].severity) {
+                        case 0: sevZeroCount++; break;
+                        case 1: sevOneCount++; break;
+                        case 3: sevThreeCount++; break;
+                        default: sevTwoCount++; break;
+                    }
+                }
+
+                var flowContent = swapTemplate("flowTemplate",{
+                    name: reportResults.flows[i].name,
+                    description: reportResults.flows[i].description,
+                    sevZeroCount: sevZeroCount,
+                    sevOneCount: sevOneCount,
+                    sevTwoCount: sevTwoCount,
+                    sevThreeCount: sevThreeCount,
+                    id: "flow" + flowId
+                });
+                flowId++;
+
+                var flowContentDOM = document.createElement("div");
+                flowContentDOM.innerHTML = flowContent;
+
+                for (var z = 0, len5 = reportResults.flows[i].results.length; z < len5; z++) {
+                    var graphHtml = "";
+                    if (reportResults.flows[i].results[z].table) {
+                        graphHtml += generateGraph(reportResults.flows[i].results[z].table, 600, 300);
+                    }
+                    var resultJSON = {
+                        flow: reportResults.flows[i].name,
+                        description: reportResults.flows[i].results[z].description,
+                        details: reportResults.flows[i].results[z].details,
+                        graphs: graphHtml,
+                        name: reportResults.flows[i].results[z].name,
+                        severity: reportResults.flows[i].results[z].severity,
+                        severityText: reportResults.flows[i].results[z].severity === 0 ? "passed" : reportResults.flows[i].results[z].severity === 1 ? "warning" : reportResults.flows[i].results[z].severity === 3 ? "info" : "failed",
+                        id: "result" + resultId
+                    };
+                    var resultContent = swapTemplate("resultTemplate", resultJSON);
+                    var flowResults = flowContentDOM.querySelector(".results");
+                    flowResults.innerHTML = flowResults.innerHTML + resultContent;
+
+                    // Aggregate failed cases
+                    var severity = reportResults.flows[i].results[z].severity;
+                    if (severity < 0 || severity === 2 || severity > 3) {
+                        var failContent = swapTemplate("failTemplate", resultJSON);
+                        fullFailContent += failContent;
+                    } else if (severity === 1) {
+                        var warningContent = swapTemplate("failTemplate", resultJSON);
+                        fullWarningContent += warningContent;
+                    }
+                    resultId++;
+                }
+                var failures = document.querySelector("#failResults");
+                failures.innerHTML = fullFailContent + fullWarningContent;
+
+                body.innerHTML = body.innerHTML + flowContentDOM.innerHTML;
+            }
+
+            // Hide all the passed tests
+            hidePassedTests();
+
+            // After our DOM is in place, wire up the click events
+            setupClickEvents();
+        }
+
+        function generateGraph(graphData, width, height) {
+            if (!graphData || graphData.data.length <= 2) {
+                return "";
+            }
+            try {
+                var marginLeft = 40;
+                var marginRight = 10;
+                var marginTop = 20;
+                var marginBottom = 40;
+                var currentSeriesColor = "#006AB5";
+                var maxX = Math.ceil((graphData.data[graphData.data.length - 1].timeInMs - graphData.data[0].timeInMs) / 1000);
+                var maxY = graphData.fail;
+                for (var row = 0, len = graphData.data.length; row < len; row++) {
+                    if (graphData.data[row].totalWorkingSetMB > maxY) {
+                        maxY = graphData.data[row].totalWorkingSetMB;
+                    }
+                }
+                var xUnits = (width - (marginLeft + marginRight)) / maxX;
+                var yUnits = (height - (marginTop + marginBottom)) / maxY;
+                var dataPointRadius = 1.5;
+                var dataPointStrokeThickness = 0.5;
+                var xAxisLabelCount = maxX <= 10 ? maxX : Math.floor(((width - (marginLeft + marginRight)) / xUnits) / Math.floor((width - (marginLeft + marginRight)) / xUnits / 10));
+                var xAxisResolution = Math.floor((width - (marginLeft + marginRight)) / xAxisLabelCount / xUnits);
+                var yAxisLabelCount = maxY <= 5 ? maxY : Math.floor(((height - (marginTop + marginBottom)) / yUnits) / Math.floor((height - (marginTop + marginBottom)) / yUnits / 5));
+                var yAxisResolution = maxY <= 10 ? 2 : maxY <= 50 ? Math.floor(maxY / yAxisLabelCount) : Math.round(Math.floor(maxY / yAxisLabelCount) / 5) * 5;
+                var xAxisLabel = "Minutes";
+                var yAxisLabel = "MB";
+                var x;
+                var y;
+                var secs;
+
+                // Set up canvas
+                var htmlData = "<br /><svg class='graph' height='" + height + "px' width='" + width + "px' version='1.1' >";
+
+                // Draw thresholds for warning and failure
+                y = (height - (marginBottom + (graphData.warn * yUnits))).toFixed(2);
+                htmlData += "<path d='M" + marginLeft + "," + y + "H " + (width - marginRight) + "' fill='none' stroke='orange' stroke-width='0.3' />";
+                y = (height - (marginBottom + (graphData.fail * yUnits))).toFixed(2);
+                htmlData += "<path d='M" + marginLeft + "," + y + "H " + (width - marginRight) + "' fill='none' stroke='red' stroke-width='0.3' />";
+
+                // Draw axes
+                htmlData += "<path d='M" + marginLeft + "," + marginTop + " V " + (height - marginBottom) + " H " + (width - marginRight) + "' fill='none' stroke='#EBEBEB' stroke-width='2' />";
+
+                // Draw x-axis units
+                for (var i = 0; i <= xAxisLabelCount; i++) {
+                    secs = (xAxisResolution * i) % 60;
+                    x = Math.floor((xAxisResolution * i) / 60).toString() + (secs < 10 ? ":0" : ":") + secs.toString();
+                    htmlData += "<text x='" + (marginLeft + (i * xAxisResolution * xUnits)).toFixed(2) + "' y='" + (height - (marginBottom - 15)) + "' font-family='Verdana' font-size='11' fill='#808080' style='text-anchor: middle;' >" + x + "</text>";
+                }
+
+                // Draw x-axis label
+                htmlData += "<text x='" + (((width - (marginLeft + marginRight)) / 2) + marginLeft) + "' y='" + (height - (marginBottom - 35)) +
+                    "' font-family='Verdana' font-size='11' fill='#808080' style='text-anchor: middle;' >" + xAxisLabel + "</text>";
+
+                // Draw y-axis units
+                for (var i = 0; i <= yAxisLabelCount; i++) {
+                    htmlData += "<text x='" + (marginLeft - 13) + "' y='" + (height - (marginBottom + (i * yAxisResolution * yUnits)) + 3).toFixed(2) +
+                        "' font-family='Verdana' font-size='11' fill='#808080' style='text-anchor: middle;' >" + (i * yAxisResolution) + "</text>";
+                }
+
+                // Draw y-axis label
+                x = marginLeft - 32;
+                y = ((height - (marginTop + marginBottom)) / 2) + marginTop;
+                htmlData += "<text x='" + x + "' y='" + y + "' transform='rotate(270," + x + "," + y + ")' font-family='Verdana' font-size='11' fill='#808080' style='text-anchor: middle;' >" + yAxisLabel + "</text>";
+
+                // Draw series
+                if (graphData.data.length > 2) {
+                    // Draw the line
+                    var pointData = "";
+                    htmlData += "<path d='M" + marginLeft + "," + (height - (marginBottom + (graphData.data[0].totalWorkingSetMB * yUnits))).toFixed(2) + " L";
+                    var currentTime = graphData.data[0].timeInMs;
+                    var maxSize = graphData.data[0].totalWorkingSetMB;
+                    for (var p = 0, len2 = graphData.data.length; p < len2; p++) {
+
+                        if (graphData.data[p].totalWorkingSetMB > maxSize) {
+                            maxSize = graphData.data[p].totalWorkingSetMB;
+                        }
+
+                        // Collect line data - skip the first point because it was handled above
+                        if ((p === 0) || (p === (len2 - 1)) || ((graphData.data[p].timeInMs - currentTime) >= 2000)) {
+                            x = ((graphData.data[p].timeInMs - graphData.data[0].timeInMs) / 1000).toFixed(2);
+
+                            if (p > 0) {
+                                htmlData += " " + (marginLeft + (x * xUnits)).toFixed(2) + "," + (height - (marginBottom + (maxSize * yUnits))).toFixed(2);
+                            }
+                            secs = x % 60;
+                            var formattedTime = Math.floor(x / 60).toString() + (secs < 10 ? ":0" : ":") + secs.toString();
+                            pointData += "<circle cx='" + (marginLeft + (x * xUnits)).toFixed(2) + "' cy='" + (height - (marginBottom + (maxSize * yUnits))).toFixed(2) +
+                                "' r='" + dataPointRadius + "' fill='" + currentSeriesColor + "' stroke='white' stroke-width='" + dataPointStrokeThickness + "' onmouseover='showDataPoint(evt,\"" + currentSeriesColor +
+                                "\", \"" + xAxisLabel + "\", \"" + yAxisLabel + "\", \"" + formattedTime + "\", " + maxSize + ")' onmouseout='hideDataPoint(evt)' />";
+
+                            currentTime = graphData.data[p].timeInMs;
+                            maxSize = 0;
+                        }
+                    }
+
+                    htmlData += "' fill='none' stroke='" + currentSeriesColor + "' stroke-width='2' />";
+                    htmlData += pointData;
+                }
+
+                htmlData += "</svg>";
+                return htmlData;
+            }
+            catch (e) {
+                return "";
+            }
+        }
+
+        function showDataPoint(evt, color, xLabel, yLabel, x, y) {
+            var box = document.getElementById('dataPointDetail');
+            box.style.display = "inline";
+            box.style.left = (evt.pageX + 10) + "px";
+            box.style.top = (evt.pageY - 20) + "px";
+            box.style.backgroundColor = color;
+            box.style.color = "white";
+            box.innerHTML = "<div><b>" + xLabel + ":</b> " + x + "<br /><b>" + yLabel + ":</b> " + y + "</div>";
+        }
+
+        function hideDataPoint(evt) {
+            var box = document.getElementById('dataPointDetail');
+            box.style.display = "none";
+        }
+
+        function hidePassedTests(){
+            var results = document.querySelectorAll(".resultHeader .testResults .passed");
+            for (var j = 0, len = results.length; j < len; j++) {
+                var result = results[j].parentNode.parentNode.parentNode;
+                var resultDescs = result.querySelectorAll(".resultDescription");
+                for (var entry = 0, len2 = resultDescs.length; entry < len2; entry++) {
+                    toggleClass(resultDescs[entry], "expandedResult");
+                }
+                var widget = result.querySelector(".collapseWidgetSmall");
+                toggleClass(widget, "expandedWidget");
+                widget.setAttribute("aria-expanded", false);
+            }
+        }
+
+        function setupClickEvents() {
+            var flows = document.querySelectorAll(".collapseWidget");
+            for (var flowIndex = 0, len = flows.length; flowIndex < len; flowIndex++) {
+                flows[flowIndex].addEventListener("click", function () {
+                    var results = this.parentNode.parentNode.querySelector(".results");
+                    toggleClass(results, "expandedFlow");
+                    toggleClass(this, "expandedWidget");
+                    if (hasClass(this, "expandedWidget")) {
+                        this.setAttribute("aria-expanded", true);
+                    } else {
+                        this.setAttribute("aria-expanded", false);
+                    }
+                });
+            }
+
+            var results = document.querySelectorAll(".collapseWidgetSmall");
+            for (var resultIndex = 0, len2 = results.length; resultIndex < len2; resultIndex++) {
+                results[resultIndex].addEventListener("click", function () {
+                    var resultBody = this.parentNode.querySelector(".resultDescription");
+                    if (resultBody !== null) {
+                        toggleClass(resultBody, "expandedResult");
+                    }
+                    toggleClass(this, "expandedWidget");
+                    if (hasClass(this, "expandedWidget")) {
+                        this.setAttribute("aria-expanded", true);
+                    } else {
+                        this.setAttribute("aria-expanded", false);
+                    }
+                });
+            }
+
+            var links = document.querySelectorAll(".testOverviewLink");
+            for (var linkIndex = 0, len3 = links.length; linkIndex < len3; linkIndex++) {
+                links[linkIndex].addEventListener("click", function () {
+                    var id = this.attributes.getNamedItem("data-id").nodeValue;
+                    var linkTarget = document.querySelector("[id=" + id + "]");
+                    var flow = linkTarget.parentNode.parentNode;
+                    var widget = flow.parentNode.querySelector(".collapseWidget");
+                    if (!hasClass(flow, "expandedFlow")) {
+                        addClass(flow, "expandedFlow");
+                        addClass(widget, "expandedWidget");
+                        widget.setAttribute("aria-expanded", true);
+                    } else {
+                        widget.setAttribute("aria-expanded", false);
+                    }
+                });
+            }
+        }
+    </script>
+</head>
+<body>
+
+<!-- Helper functions from WinJS -->
+<script type="text/javascript">
+    function getClassName(e) {
+        var name = e.className || "";
+        if (typeof (name) == "string") {
+            return name;
+        } else {
+            return name.baseVal || "";
+        }
+    }
+
+    function setClassName(e, value) {
+        var name = e.className || "";
+        if (typeof (name) == "string") {
+            e.className = value;
+        } else {
+            e.className.baseVal = value;
+        }
+        return e;
+    }
+
+    function hasClass(e, name) {
+        var className = getClassName(e);
+        var names = className.trim().split(" ");
+        var l = names.length;
+        for (var i = 0; i < l; i++) {
+            if (names[i] == name) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function addClass(e, name) {
+        var className = getClassName(e);
+        var names = className.trim().split(" ");
+        var l = names.length;
+        var found = false;
+        for (var i = 0; i < l; i++) {
+            if (names[i] == name) {
+                found = true;
+            }
+        }
+        if (!found) {
+            if (l > 0 && names[0].length > 0) {
+                setClassName(e, className + " " + name);
+            } else {
+                setClassName(e, className + name);
+            }
+        }
+        return e;
+    }
+
+    function removeClass(e, name) {
+        var names = getClassName(e).trim().split(" ");
+        setClassName(e, names.reduce(function (r, e) {
+            if (e == name) {
+                return r;
+            } else if (r && r.length > 0) {
+                return r + " " + e;
+            } else {
+                return e;
+            }
+        }, ""));
+        return e;
+    }
+
+    function toggleClass(e, name) {
+        var className = getClassName(e);
+        var names = className.trim().split(" ");
+        var l = names.length;
+        var found = false;
+        for (var i = 0; i < l; i++) {
+            if (names[i] == name) {
+                found = true;
+            }
+        }
+        if (!found) {
+            if (l > 0 && names[0].length > 0) {
+                setClassName(e, className + " " + name);
+            } else {
+                setClassName(e, className + name);
+            }
+        } else {
+            setClassName(e, names.reduce(function (r, e) {
+                if (e == name) {
+                    return r;
+                } else if (r && r.length > 0) {
+                    return r + " " + e;
+                } else {
+                    return e;
+                }
+            }, ""));
+        }
+        return e;
+    }
+</script>
+
+<script type="text/html" id='headerTemplate'>
+    <div class="titleLarge">
+        Performance Analysis Test Results
+    </div>
+    <div class="appInfo" id='titleDiv'>
+        <dl>
+            <dt>App Name:</dt>
+            <dd>{{displayName}}</dd>
+            <dt>App Version:</dt>
+            <dd>{{packageVersion}}</dd>
+            <dt>App Package Name:</dt>
+            <dd>{{packageFullName}}</dd>
+            <dt>Windows Version:</dt>
+            <dd>{{osVersion}}</dd>
+            <dt>Windows Architecture</dt>
+            <dd>{{osArchitecture}}</dd>
+            <dt>Report Generation Time:</dt>
+            <dd>{{reportTime}}</dd>
+            <dt>Report Traces:</dt>
+            <dd>{{reportTraces}}</dd>
+        </dl>
+    </div>
+    <hr />
+    <div class="overall">
+        Overall Assessment: <span class="grade{{gradeColor}}">{{gradeText}}</span>
+        <p style="font-weight: 600"><span class="passed">{{sevZeroCount}} PASSED</span> / <span class="warning">{{sevOneCount}} WARNING</span> / <span class="failed">{{sevTwoCount}} FAILED</span> / <span class="info">{{sevThreeCount}} INFO</span></p>
+        <p>Here's a list of issues we detected. Critical issues must be fixed. Warnings should usually be fixed.</p>
+        <div id="failResults"></div>
+    </div>
+    <hr />
+    <div class="overall">
+        Detailed Results:
+        <p>The individual test results are described here, grouped by scenario.</p>
+    </div>
+    <div id="dataPointDetail"></div>
+</script>
+
+<script type="text/html" id='flowTemplate'>
+    <div class='flow'>
+        <div class="flowTitle"><button class="collapseWidget expandedWidget" aria-controls="{{id}}details" aria-expanded="true">&#x276f;</button>{{name}} (<span class="passed">{{sevZeroCount}} PASSED</span> / <span class="warning">{{sevOneCount}} WARNING</span> / <span class="failed">{{sevTwoCount}} FAILED</span> / <span class="info">{{sevThreeCount}} INFO</span>)</div>
+        <div class="results expandedFlow" id="{{id}}details">
+            <div class="flowDescription">{{description}}</div>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id='resultTemplate'>
+    <div class='testResults'>
+        <a id="{{id}}"></a>
+        <div class="resultHeader">
+            <button class="collapseWidgetSmall expandedWidget" aria-controls="{{id}}details" aria-expanded="true">&#x276f;</button>
+            <dl>
+                <dt class="testResults"><b class="{{severityText}}">{{severityText}}</b></dt>
+                <dd class="resultTitle">
+                    {{name}}
+                </dd>
+            </dl>
+            <div class="resultDescription expandedResult" id="{{id}}details">
+                <p>{{description}}</p>
+                <ul>
+                    <li><span class="explanatory">Result:</span> {{details}}{{graphs}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id='failTemplate'>
+    <div>
+        <div class="resultHeader">
+            <p><a class='testOverviewLink' data-id="{{id}}" href="#{{id}}">
+                <b class="{{severityText}}">{{severityText}}</b> : <b class="{{flow}}">{{flow}} - {{name}}</b>
+                </a>
+            </p>
+        </div>
+    </div>
+</script>
+</body>
+</html>

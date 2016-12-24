@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.UserProfile.UserProfileLockScreenContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.System.UserProfile.LockScreen">
+      <summary>Fornisce proprietà e metodi per gestire l'immagine a schermo intero visualizzata come sfondo sulla schermata di blocco.</summary>
+    </member><member name="P:Windows.System.UserProfile.LockScreen.OriginalImageFile">
+      <summary>Ottiene l'immagine della schermata di blocco corrente.</summary>
+      <returns>URI (Uniform Resource Identifier) dell'immagine della schermata di blocco.</returns>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.GetImageStream">
+      <summary>Ottiene l'immagine della schermata di blocco corrente come un flusso di dati.</summary>
+      <returns>Flusso che contiene i dati dell'immagine della schermata di blocco.</returns>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.RequestSetImageFeedAsync(Windows.Foundation.Uri)">
+      <summary>Registra un feed di immagine RSS da utilizzare come presentazione della schermata di blocco. (Solo per Windows 8.1)</summary>
+      <deprecated type="deprecate">RequestSetImageFeedAsync è deprecato e potrebbe non funzionare su tutte le piattaforme. Per ulteriori informazioni, vedere MSDN.</deprecated>
+      <returns>Uno dei valori SetImageFeedResult.</returns>
+      <param name="syndicationFeedUri">URI (Uniform Resource Identifier) del feed di immagine RSS.</param>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.SetImageFileAsync(Windows.Storage.IStorageFile)">
+      <summary>Imposta l'immagine della schermata di blocco da un oggetto StorageFile.</summary>
+      <returns>Oggetto utilizzato per impostare l'immagine per la schermata di blocco.</returns>
+      <param name="value">Oggetto StorageFile che contiene la nuova immagine per la schermata di blocco.</param>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.SetImageStreamAsync(Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>Imposta l'immagine della schermata di blocco da un flusso di dati.</summary>
+      <returns>Oggetto utilizzato per impostare l'immagine della schermata di blocco.</returns>
+      <param name="value">Flusso contenente i dati dell'immagine.</param>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.TryRemoveImageFeed">
+      <summary>Annulla la registrazione del feed di immagine utilizzato nella presentazione della schermata di blocco, arrestando la presentazione. (Solo per Windows 8.1)</summary>
+      <deprecated type="deprecate">TryRemoveImageFeed è deprecato e potrebbe non funzionare su tutte le piattaforme. Per ulteriori informazioni, vedere MSDN.</deprecated>
+      <returns>True se il feed di immagine è stata disabilitato; in caso contrario, false.</returns>
+    </member></members>
+</doc>

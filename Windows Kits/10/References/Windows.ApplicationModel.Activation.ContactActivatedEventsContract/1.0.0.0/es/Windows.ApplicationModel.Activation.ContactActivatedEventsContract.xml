@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Activation.ContactActivatedEventsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs">
+      <summary>Proporciona datos cuando una aplicación se activa para llamar a un contacto.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.Contact">
+      <summary>Obtiene el contacto de la llamada.</summary>
+      <returns>Contacto de la llamada.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.Kind">
+      <summary>Obtiene el tipo de activación.</summary>
+      <returns>Valor de la enumeración ActivationKind.Contact.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.PreviousExecutionState">
+      <summary>Obtiene el estado de la ejecución de la aplicación antes su activación.</summary>
+      <returns>Valor ApplicationExecutionState especificado.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.ServiceId">
+      <summary>Obtiene el identificador del servicio utilizado para la llamada.</summary>
+      <returns>Identificador del servicio utilizado para la llamada.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.ServiceUserId">
+      <summary>Obtiene el identificador de usuario del servicio utilizado para la llamada.</summary>
+      <returns>Identificador de usuario del servicio utilizado para la llamada.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.SplashScreen">
+      <summary>Obtiene el objeto de pantalla de presentación que proporciona información sobre la transición de la pantalla de presentación a la aplicación activada.</summary>
+      <returns>El objeto que proporciona información de la pantalla de presentación.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.Verb">
+      <summary>Obtiene la acción que se va a realizar.</summary>
+      <returns>Acción que se va a realizar.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs">
+      <summary>Proporciona datos cuando una aplicación se activa para asignar un contacto.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Address">
+      <summary>Obtiene la dirección de un contacto para la operación de asignación.</summary>
+      <returns>La dirección de un contacto para la operación de asignación.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Contact">
+      <summary>Obtiene el contacto para la operación de asignación.</summary>
+      <returns>El contacto para la operación de asignación.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Kind">
+      <summary>Obtiene el tipo de activación.</summary>
+      <returns>Valor de la enumeración ActivationKind.Contact.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.PreviousExecutionState">
+      <summary>Obtiene el estado de la ejecución de la aplicación antes su activación.</summary>
+      <returns>Valor ApplicationExecutionState especificado.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.SplashScreen">
+      <summary>Obtiene el objeto de pantalla de presentación que proporciona información sobre la transición de la pantalla de presentación a la aplicación activada.</summary>
+      <returns>El objeto que proporciona información de la pantalla de presentación.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Verb">
+      <summary>Obtiene la acción que se va a realizar.</summary>
+      <returns>Acción que se va a realizar.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs">
+      <summary>Proporciona datos cuando una aplicación se activa para enviar un mensaje a un contacto.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.Contact">
+      <summary>Obtiene el contacto del mensaje.</summary>
+      <returns>Contacto del mensaje.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.Kind">
+      <summary>Obtiene el tipo de activación.</summary>
+      <returns>Valor de la enumeración ActivationKind.Contact.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.PreviousExecutionState">
+      <summary>Obtiene el estado de la ejecución de la aplicación antes su activación.</summary>
+      <returns>Valor ApplicationExecutionState especificado.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.ServiceId">
+      <summary>Obtiene el identificador del servicio utilizado para el mensaje.</summary>
+      <returns>Identificador del servicio utilizado para el mensaje.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.ServiceUserId">
+      <summary>Obtiene el identificador de usuario del servicio utilizado para el mensaje.</summary>
+      <returns>Identificador de usuario del servicio utilizado para el mensaje.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.SplashScreen">
+      <summary>Obtiene el objeto de pantalla de presentación que proporciona información sobre la transición de la pantalla de presentación a la aplicación activada.</summary>
+      <returns>El objeto que proporciona información de la pantalla de presentación.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.Verb">
+      <summary>Obtiene la acción que se va a realizar.</summary>
+      <returns>Acción que se va a realizar.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs">
+      <summary>Proporciona datos cuando se activa una aplicación porque utiliza el Selector de contactos.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.ContactPickerUI">
+      <summary>Obtiene el formato de presentación ancho de la interfaz de usuario del selector de contactos que se muestra cuando el usuario desea escoger contactos proporcionados por la aplicación.</summary>
+      <returns>Obtiene el formato de presentación ancho de la interfaz de usuario del selector de contactos que se muestra cuando el usuario desea escoger contactos proporcionados por la aplicación.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.Kind">
+      <summary>Obtiene el tipo de activación.</summary>
+      <returns>Uno de los valores de la enumeración.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.PreviousExecutionState">
+      <summary>Obtiene el estado de la ejecución de la aplicación antes su activación.</summary>
+      <returns>Uno de los valores de la enumeración.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.SplashScreen">
+      <summary>Obtiene el objeto de pantalla de presentación que proporciona información sobre la transición de la pantalla de presentación a la aplicación activada.</summary>
+      <returns>El objeto que proporciona información de la pantalla de presentación.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs">
+      <summary>Proporciona datos cuando una aplicación se activa para publicar un contacto.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.Contact">
+      <summary>Obtiene el contacto para la publicación.</summary>
+      <returns>Contacto de la publicación.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.Kind">
+      <summary>Obtiene el tipo de activación.</summary>
+      <returns>Valor de la enumeración ActivationKind.Contact.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.PreviousExecutionState">
+      <summary>Obtiene el estado de la ejecución de la aplicación antes su activación.</summary>
+      <returns>Valor ApplicationExecutionState especificado.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.ServiceId">
+      <summary>Obtiene el identificador del servicio utilizado para la publicación.</summary>
+      <returns>Identificador del servicio utilizado para la publicación.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.ServiceUserId">
+      <summary>Obtiene el identificador de usuario del servicio utilizado para la publicación.</summary>
+      <returns>Identificador de usuario del servicio utilizado para la publicación.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.SplashScreen">
+      <summary>Obtiene el objeto de pantalla de presentación que proporciona información sobre la transición de la pantalla de presentación a la aplicación activada.</summary>
+      <returns>El objeto que proporciona información de la pantalla de presentación.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.Verb">
+      <summary>Obtiene la acción que se va a realizar.</summary>
+      <returns>Acción que se va a realizar.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs">
+      <summary>Proporciona datos cuando una aplicación se activa para hacer una videollamada con un contacto.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.Contact">
+      <summary>Obtiene el contacto de la llamada de vídeo.</summary>
+      <returns>El contacto para la llamada de vídeo.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.Kind">
+      <summary>Obtiene el tipo de activación.</summary>
+      <returns>Valor de la enumeración ActivationKind.Contact.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.PreviousExecutionState">
+      <summary>Obtiene el estado de la ejecución de la aplicación antes su activación.</summary>
+      <returns>Valor ApplicationExecutionState especificado.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.ServiceId">
+      <summary>Obtiene el identificador del servicio utilizado para la videollamada.</summary>
+      <returns>Identificador del servicio utilizado para la videollamada.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.ServiceUserId">
+      <summary>Obtiene el identificador de usuario del servicio utilizado para la videollamada.</summary>
+      <returns>Identificador de usuario del servicio utilizado para la videollamada.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.SplashScreen">
+      <summary>Obtiene el objeto de pantalla de presentación que proporciona información sobre la transición de la pantalla de presentación a la aplicación activada.</summary>
+      <returns>El objeto que proporciona información de la pantalla de presentación.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.Verb">
+      <summary>Obtiene la acción que se va a realizar.</summary>
+      <returns>Acción que se va a realizar.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactActivatedEventArgs">
+      <summary>Proporciona información sobre un evento activado que se desencadena cuando el usuario administra un contacto.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactActivatedEventArgs.Verb">
+      <summary>Obtiene la acción asociada al contacto activado.</summary>
+      <returns>La acción asociada al contacto activado.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs">
+      <summary>Proporciona datos cuando una aplicación se activa para llamar a un contacto.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs.Contact">
+      <summary>Obtiene el contacto de la llamada.</summary>
+      <returns>Contacto de la llamada.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs.ServiceId">
+      <summary>Obtiene el identificador del servicio utilizado para la llamada.</summary>
+      <returns>Identificador del servicio utilizado para la llamada.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs.ServiceUserId">
+      <summary>Obtiene el identificador de usuario del servicio utilizado para la llamada.</summary>
+      <returns>Identificador de usuario del servicio utilizado para la llamada.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs">
+      <summary>Proporciona datos cuando una aplicación se activa para asignar un contacto.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs.Address">
+      <summary>Obtiene la dirección de un contacto para la operación de asignación.</summary>
+      <returns>Representa la dirección de un contacto para la operación de asignación.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs.Contact">
+      <summary>Obtiene el contacto para la operación de asignación.</summary>
+      <returns>El contacto para la operación de asignación.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs">
+      <summary>Proporciona datos cuando una aplicación se activa para enviar un mensaje a un contacto.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs.Contact">
+      <summary>Obtiene el contacto del mensaje.</summary>
+      <returns>Contacto del mensaje.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs.ServiceId">
+      <summary>Obtiene el identificador del servicio utilizado para el mensaje.</summary>
+      <returns>Identificador del servicio utilizado para el mensaje.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs.ServiceUserId">
+      <summary>Obtiene el identificador de usuario del servicio utilizado para el mensaje.</summary>
+      <returns>Identificador de usuario del servicio utilizado para el mensaje.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs">
+      <summary>Proporciona datos cuando se activa una aplicación porque utiliza el Selector de contactos.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs.ContactPickerUI">
+      <summary>El formato de presentación ancho de la interfaz de usuario del selector de contactos que se muestra cuando el usuario desea escoger archivos o carpetas proporcionados por la aplicación.</summary>
+      <returns>El formato de presentación ancho de la interfaz de usuario del selector de contactos que se muestra cuando el usuario desea escoger archivos o carpetas proporcionados por la aplicación.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs">
+      <summary>Proporciona datos cuando una aplicación se activa para publicar un contacto.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs.Contact">
+      <summary>Obtiene el contacto para la publicación.</summary>
+      <returns>Contacto de la publicación.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs.ServiceId">
+      <summary>Obtiene el identificador del servicio utilizado para la publicación.</summary>
+      <returns>Identificador del servicio utilizado para la publicación.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs.ServiceUserId">
+      <summary>Obtiene el identificador de usuario del servicio utilizado para la publicación.</summary>
+      <returns>Identificador de usuario del servicio utilizado para la publicación.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactsProviderActivatedEventArgs">
+      <summary>Proporciona información sobre un evento activado que se desencadena cuando el usuario administra un contacto que proporciona la aplicación.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactsProviderActivatedEventArgs.Verb">
+      <summary>Obtiene la acción asociada al proveedor de contactos activado.</summary>
+      <returns>La acción asociada al proveedor de contactos activado.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs">
+      <summary>Proporciona datos cuando una aplicación se activa para hacer una videollamada con un contacto.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs.Contact">
+      <summary>Obtiene el contacto de la llamada de vídeo.</summary>
+      <returns>El contacto para la llamada de vídeo.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs.ServiceId">
+      <summary>Obtiene el identificador del servicio utilizado para la videollamada.</summary>
+      <returns>Identificador del servicio utilizado para la videollamada.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs.ServiceUserId">
+      <summary>Obtiene el identificador de usuario del servicio utilizado para la videollamada.</summary>
+      <returns>Identificador de usuario del servicio utilizado para la videollamada.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs">
+      <summary>Proporciona datos cuando una aplicación se activa para llamar a un contacto.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.ActivatedOperation">
+      <summary>Obtiene la operación de aplicación activada.</summary>
+      <returns>La operación de activación.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.Contact">
+      <summary>Obtiene el contacto de la llamada.</summary>
+      <returns>Contacto de la llamada.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.Kind">
+      <summary>Obtiene el tipo de activación.</summary>
+      <returns>Valor de la enumeración ActivationKind.Contact.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.PreviousExecutionState">
+      <summary>Obtiene el estado de la ejecución de la aplicación antes su activación.</summary>
+      <returns>Valor ApplicationExecutionState especificado.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.ServiceId">
+      <summary>Obtiene el identificador del servicio utilizado para la llamada.</summary>
+      <returns>Identificador del servicio utilizado para la llamada.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.ServiceUserId">
+      <summary>Obtiene el identificador de usuario del servicio utilizado para la llamada.</summary>
+      <returns>Identificador de usuario del servicio utilizado para la llamada.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.SplashScreen">
+      <summary>Obtiene el objeto de pantalla de presentación que proporciona información sobre la transición de la pantalla de presentación a la aplicación activada.</summary>
+      <returns>El objeto que proporciona información de la pantalla de presentación.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.Verb">
+      <summary>Obtiene la acción que se va a realizar.</summary>
+      <returns>Acción que se va a realizar.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs">
+      <summary>Proporciona datos cuando una aplicación se activa para asignar un contacto.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.ActivatedOperation">
+      <summary>Obtiene la operación de aplicación activada.</summary>
+      <returns>La operación de activación.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Address">
+      <summary>Obtiene la dirección de un contacto para la operación de asignación.</summary>
+      <returns>La dirección de un contacto para la operación de asignación.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Contact">
+      <summary>Obtiene el contacto para la operación de asignación.</summary>
+      <returns>El contacto para la operación de asignación.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Kind">
+      <summary>Obtiene el tipo de activación.</summary>
+      <returns>Valor de la enumeración ActivationKind.Contact.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.PreviousExecutionState">
+      <summary>Obtiene el estado de la ejecución de la aplicación antes su activación.</summary>
+      <returns>Valor ApplicationExecutionState especificado.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.SplashScreen">
+      <summary>Obtiene el objeto de pantalla de presentación que proporciona información sobre la transición de la pantalla de presentación a la aplicación activada.</summary>
+      <returns>El objeto que proporciona información de la pantalla de presentación.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Verb">
+      <summary>Obtiene la acción que se va a realizar.</summary>
+      <returns>Acción que se va a realizar.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs">
+      <summary>Proporciona datos cuando una aplicación se activa para enviar un mensaje a un contacto.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.ActivatedOperation">
+      <summary>Obtiene la operación de aplicación activada.</summary>
+      <returns>La operación de activación.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.Contact">
+      <summary>Obtiene el contacto del mensaje.</summary>
+      <returns>Contacto del mensaje.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.Kind">
+      <summary>Obtiene el tipo de activación.</summary>
+      <returns>Valor de la enumeración ActivationKind.Contact.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.PreviousExecutionState">
+      <summary>Obtiene el estado de la ejecución de la aplicación antes su activación.</summary>
+      <returns>Valor ApplicationExecutionState especificado.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.ServiceId">
+      <summary>Obtiene el identificador del servicio utilizado para el mensaje.</summary>
+      <returns>Identificador del servicio utilizado para el mensaje.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.ServiceUserId">
+      <summary>Obtiene el identificador de usuario del servicio utilizado para el mensaje.</summary>
+      <returns>Identificador de usuario del servicio utilizado para el mensaje.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.SplashScreen">
+      <summary>Obtiene el objeto de pantalla de presentación que proporciona información sobre la transición de la pantalla de presentación a la aplicación activada.</summary>
+      <returns>El objeto que proporciona información de la pantalla de presentación.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.Verb">
+      <summary>Obtiene la acción que se va a realizar.</summary>
+      <returns>Acción que se va a realizar.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs">
+      <summary>Proporciona datos cuando se activa una aplicación porque utiliza el Selector de contactos.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.ActivatedOperation">
+      <summary>Obtiene la operación de aplicación activada.</summary>
+      <returns>La operación de activación.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.ContactPickerUI">
+      <summary>Obtiene el formato de presentación ancho de la interfaz de usuario del selector de contactos que se muestra cuando el usuario desea escoger contactos proporcionados por la aplicación.</summary>
+      <returns>Obtiene el formato de presentación ancho de la interfaz de usuario del selector de contactos que se muestra cuando el usuario desea escoger contactos proporcionados por la aplicación.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.Kind">
+      <summary>Obtiene el tipo de activación.</summary>
+      <returns>Uno de los valores de la enumeración.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.PreviousExecutionState">
+      <summary>Obtiene el estado de la ejecución de la aplicación antes su activación.</summary>
+      <returns>Uno de los valores de la enumeración.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.SplashScreen">
+      <summary>Obtiene el objeto de pantalla de presentación que proporciona información sobre la transición de la pantalla de presentación a la aplicación activada.</summary>
+      <returns>El objeto que proporciona información de la pantalla de presentación.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs">
+      <summary>Proporciona datos cuando una aplicación se activa para publicar un contacto.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.ActivatedOperation">
+      <summary>Obtiene la operación de aplicación activada.</summary>
+      <returns>La operación de activación.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.Contact">
+      <summary>Obtiene el contacto para la publicación.</summary>
+      <returns>Contacto de la publicación.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.Kind">
+      <summary>Obtiene el tipo de activación.</summary>
+      <returns>Valor de la enumeración ActivationKind.Contact.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.PreviousExecutionState">
+      <summary>Obtiene el estado de la ejecución de la aplicación antes su activación.</summary>
+      <returns>Valor ApplicationExecutionState especificado.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.ServiceId">
+      <summary>Obtiene el identificador del servicio utilizado para la publicación.</summary>
+      <returns>Identificador del servicio utilizado para la publicación.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.ServiceUserId">
+      <summary>Obtiene el identificador de usuario del servicio utilizado para la publicación.</summary>
+      <returns>Identificador de usuario del servicio utilizado para la publicación.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.SplashScreen">
+      <summary>Obtiene el objeto de pantalla de presentación que proporciona información sobre la transición de la pantalla de presentación a la aplicación activada.</summary>
+      <returns>El objeto que proporciona información de la pantalla de presentación.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.Verb">
+      <summary>Obtiene la acción que se va a realizar.</summary>
+      <returns>Acción que se va a realizar.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs">
+      <summary>Proporciona datos cuando una aplicación se activa para hacer una videollamada con un contacto.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.ActivatedOperation">
+      <summary>Obtiene la operación de aplicación activada.</summary>
+      <returns>La operación de activación.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.Contact">
+      <summary>Obtiene el contacto de la llamada de vídeo.</summary>
+      <returns>El contacto para la llamada de vídeo.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.Kind">
+      <summary>Obtiene el tipo de activación.</summary>
+      <returns>Valor de la enumeración ActivationKind.Contact.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.PreviousExecutionState">
+      <summary>Obtiene el estado de la ejecución de la aplicación antes su activación.</summary>
+      <returns>Valor ApplicationExecutionState especificado.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.ServiceId">
+      <summary>Obtiene el identificador del servicio utilizado para la videollamada.</summary>
+      <returns>Identificador del servicio utilizado para la videollamada.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.ServiceUserId">
+      <summary>Obtiene el identificador de usuario del servicio utilizado para la videollamada.</summary>
+      <returns>Identificador de usuario del servicio utilizado para la videollamada.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.SplashScreen">
+      <summary>Obtiene el objeto de pantalla de presentación que proporciona información sobre la transición de la pantalla de presentación a la aplicación activada.</summary>
+      <returns>El objeto que proporciona información de la pantalla de presentación.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.Verb">
+      <summary>Obtiene la acción que se va a realizar.</summary>
+      <returns>Acción que se va a realizar.</returns>
+    </member></members>
+</doc>

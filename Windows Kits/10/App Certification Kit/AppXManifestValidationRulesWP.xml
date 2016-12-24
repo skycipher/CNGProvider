@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+This file defines the validation rules which is used to validate the appx manifest.
+
+Rule   - Each has a unique, case-insensitive name. It defines operation which applies 
+         to all the rule details it contains. It may have a message which will be 
+         shown in the report when failure is detected.
+
+Detail - One rule must contain at least one detail block. Each detail block must have
+         defined expected result. The detail block may have a message which will be 
+         shown in the report when failure is detected.
+         
+Constant - Defined in the Constant table, each has a unique, case-insensitive name and 
+         a string value.
+         
+Group -  Each group contains one or more rules and sub-groups. Each group must specify 
+         the logic value which is either 'AND' or 'OR'. The result of a group test is
+         the result after applying the logic operation to the results of the contained 
+         rules and sub-groups.
+
+NOTE:  - If a package may contain multiple apps, we might need to define rule scope to specify
+one rule should be applied to each app in the package.
+       - There are two context data availabe. They are useful to display extra information in 
+the message when error occurs. 
+APP_NAME    -  The application name. 
+RULE_DATA   -  Its usage depends on the operation, e.g., SearchMultiItems sets the search item 
+               to it when search operation fails.
+PACKAGE_NAME - The package name.
+-->
+<RULES xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ManifestValidationRules.xsd">
+  <RULE NAME="CheckForResourceIdExistence" OPERATION="CHECK_FOR_EXISTENCE">
+    <DETAIL EXPECTED_RESULT="NOT_PRESENT">
+      <XPATH_QUERY PATH="ns:Identity/@ResourceId"/>
+      <MESSAGE_IF_FAIL ID="AppXManifestValidationWP_ResourceId"/>
+    </DETAIL>
+  </RULE>
+  <RULE NAME="CheckOsVersion" OPERATION="SEARCH">
+    <DETAIL EXPECTED_RESULT="FOUND">
+      <SEARCH_ITEM>
+        <XPATH_QUERY PATH="ns:Prerequisites/ns:OSMinVersion"/>
+      </SEARCH_ITEM>
+      <SEARCH_FROM>
+        <STRING VALUE="6.3.1"/>
+      </SEARCH_FROM>
+      <MESSAGE_IF_FAIL ID="AppXManifestValidation_InValidMinOSVersion"/>
+    </DETAIL>
+    <DETAIL EXPECTED_RESULT="FOUND">
+      <SEARCH_ITEM>
+        <XPATH_QUERY PATH="ns:Prerequisites/ns:OSMaxVersionTested"/>
+      </SEARCH_ITEM>
+      <SEARCH_FROM>
+        <STRING VALUE="6.3.1"/>
+      </SEARCH_FROM>
+      <MESSAGE_IF_FAIL ID="AppXManifestValidation_InValidMaxOSVersion"/>
+    </DETAIL>
+  </RULE>
+  <RULE NAME="CheckMinMaxOsVersionEqual" OPERATION="COMPARISON">
+    <DETAIL EXPECTED_RESULT="EQUAL">
+      <COMPARE_SOURCE>
+        <XPATH_QUERY PATH="ns:Prerequisites/ns:OSMinVersion"/>
+      </COMPARE_SOURCE>
+      <COMPARE_TARGET>
+        <XPATH_QUERY PATH="ns:Prerequisites/ns:OSMaxVersionTested"/>
+      </COMPARE_TARGET>
+      <COMPARE_TYPE VALUE="STRING"/>
+      <MESSAGE_IF_FAIL ID="AppXManifestValidation_MinMaxOsVersionEqual"/>
+    </DETAIL>
+  </RULE>
+  <RULE NAME="CheckFileAssociations" OPERATION="SEARCH_MULTIITEMS">
+    <DETAIL EXPECTED_RESULT="ALL_NOT_FOUND">
+      <SEARCH_MULTIITEMS>
+        <XPATH_QUERY PATH="ns:Applications/ns:Application/ns:Extensions/ns:Extension[@Category='windows.fileTypeAssociation']/ns:FileTypeAssociation/ns:SupportedFileTypes/ns:FileType/@ContentType"/>
+      </SEARCH_MULTIITEMS>
+      <SEARCH_FROM>
+        <STRING VALUE="application/octet-stream"/>
+        <STRING VALUE="application/force-download"/>
+        <STRING VALUE="application/x-msdownload"/>
+        <STRING VALUE="application/unknown"/>
+      </SEARCH_FROM>
+      <MESSAGE_IF_FAIL ID="AppXManifestValidation_FileAssociations" PARAM="$(CONTEXT.APP_NAME)|$(CONTEXT.RULE_DATA)"/>
+    </DETAIL>
+  </RULE>
+  <RULE NAME="CheckFileExtensionCount" OPERATION="COMPARISON">
+    <DETAIL EXPECTED_RESULT="SMALLER_OR_EQUAL">
+      <COMPARE_SOURCE>
+        <COUNT>
+          <XPATH_QUERY PATH="ns:Applications/ns:Application/ns:Extensions/ns:Extension[@Category='windows.fileTypeAssociation']/ns:FileTypeAssociation/ns:SupportedFileTypes/ns:FileType"/>
+        </COUNT>
+      </COMPARE_SOURCE>
+      <COMPARE_TARGET>
+        <STRING VALUE="$(CONSTANT.MAX_FILE_EXTENSION_NUMBER)"/>
+      </COMPARE_TARGET>
+      <COMPARE_TYPE VALUE="NUMBER"/>
+      <MESSAGE_IF_FAIL ID="AppXManifestValidation_FileExtensionCount" PARAM="$(CONSTANT.MAX_FILE_EXTENSION_NUMBER)"/>
+    </DETAIL>
+  </RULE>
+  <RULE NAME="CheckProtocolCount" OPERATION="COMPARISON">
+    <DETAIL EXPECTED_RESULT="SMALLER_OR_EQUAL">
+      <COMPARE_SOURCE>
+        <COUNT>
+          <XPATH_QUERY PATH="ns:Applications/ns:Application/ns:Extensions/ns:Extension[@Category='windows.protocol']/ns:Protocol"/>
+        </COUNT>
+      </COMPARE_SOURCE>
+      <COMPARE_TARGET>
+        <STRING VALUE="$(CONSTANT.MAX_PROTOCOL_NUMBER)"/>
+      </COMPARE_TARGET>
+      <COMPARE_TYPE VALUE="NUMBER"/>
+      <MESSAGE_IF_FAIL ID="AppXManifestValidation_ProtocolCount" PARAM="$(CONSTANT.MAX_PROTOCOL_NUMBER)"/>
+    </DETAIL>
+  </RULE>
+  <RULE NAME="CheckArchitecture" OPERATION="SEARCH">
+    <DETAIL EXPECTED_RESULT="FOUND">
+      <SEARCH_ITEM>
+        <XPATH_QUERY PATH="ns:Identity/@ProcessorArchitecture"/>
+      </SEARCH_ITEM>
+      <SEARCH_FROM>
+        <STRING VALUE="arm"/>
+        <STRING VALUE="neutral"/>
+        <STRING VALUE="x86"/>
+      </SEARCH_FROM>
+      <MESSAGE_IF_FAIL ID="AppXManifestValidationWP_InvalidArchitecture"/>
+    </DETAIL>
+  </RULE>
+  <GROUP NAME="CheckForFramework" LOGIC="OR">
+    <RULE NAME="CheckForFrameworkExistence" OPERATION="CHECK_FOR_EXISTENCE">
+      <DETAIL EXPECTED_RESULT="NOT_PRESENT">
+        <XPATH_QUERY PATH="ns:Properties/ns:Framework"/>
+      </DETAIL>
+    </RULE>
+    <RULE NAME="CheckForFrameworkFalse" OPERATION="COMPARISON">
+      <DETAIL EXPECTED_RESULT="EQUAL">
+        <COMPARE_SOURCE>
+          <XPATH_QUERY PATH="ns:Properties/ns:Framework"/>
+        </COMPARE_SOURCE>
+        <COMPARE_TARGET>
+          <STRING VALUE="false"/>
+        </COMPARE_TARGET>
+        <COMPARE_TYPE VALUE="STRING"/>
+      </DETAIL>
+    </RULE>
+    <MESSAGE_IF_FAIL ID="AppXManifestValidation_Framework" PARAM="&lt;Framework&gt;true&lt;/Framework&gt;"/>
+  </GROUP>
+  <!-- Framework Package Dependency Test - Enforce appx package take right dependencies by referring to the matrix below.
+  Framework                         | OS Min Version  | Supports Win6.2 App | Supports Win6.3 App
+  Microsoft.VCLibs.120.00.Phone     | 6.3.1           | No                  | Yes
+  -->
+  <GROUP NAME="CheckForFrameworkDependencyVCLibs120Phone" LOGIC="OR">
+    <RULE NAME="CheckForVCLibs120Existence" OPERATION="SEARCH">
+      <DETAIL EXPECTED_RESULT="NOT_FOUND">
+        <SEARCH_ITEM>
+          <STRING VALUE="Microsoft.VCLibs.120.00.Phone"/>
+        </SEARCH_ITEM>
+        <SEARCH_FROM>
+          <XPATH_QUERY PATH="ns:Dependencies/ns:PackageDependency/@Name"/>
+        </SEARCH_FROM>
+      </DETAIL>
+    </RULE>
+    <RULE NAME="CheckForVCLibs120PhoneOsVersion" OPERATION="COMPARISON">
+      <DETAIL EXPECTED_RESULT="EQUAL">
+        <COMPARE_SOURCE>
+          <XPATH_QUERY PATH="ns:Prerequisites/ns:OSMinVersion"/>
+        </COMPARE_SOURCE>
+        <COMPARE_TARGET>
+          <STRING VALUE="6.3.1"/>
+        </COMPARE_TARGET>
+        <COMPARE_TYPE VALUE="STRING"/>
+      </DETAIL>
+    </RULE>
+    <MESSAGE_IF_FAIL ID="AppXManifestValidation_FrameworkDependency" PARAM="$(CONTEXT.PACKAGE_NAME)|Microsoft.VCLibs.120.00"/>
+  </GROUP>
+  <GROUP NAME="CheckWindowsProtocol" LOGIC="OR">
+      <RULE NAME="CheckWindowsProtocol" OPERATION="SEARCH">
+          <DETAIL EXPECTED_RESULT="NOT_FOUND">
+              <SEARCH_ITEM>
+                <XPATH_QUERY PATH="ns:Applications/ns:Application/ns:Extensions/ns:Extension[@Category='windows.protocol']/ns:Protocol/@Name"/>
+              </SEARCH_ITEM>
+              <SEARCH_FROM>
+                <STRING VALUE="ms-settings"/>
+              </SEARCH_FROM>
+          </DETAIL>
+        </RULE>
+      <RULE NAME="CheckForOsVersion" OPERATION="SEARCH">
+          <DETAIL EXPECTED_RESULT="FOUND">
+            <SEARCH_ITEM>
+              <XPATH_QUERY PATH="ns:Prerequisites/ns:OSMaxVersionTested"/>
+            </SEARCH_ITEM>
+            <SEARCH_FROM>
+              <STRING VALUE="6.2.1"/>
+              <STRING VALUE="6.3.0"/>
+            </SEARCH_FROM>
+          </DETAIL>
+      </RULE>
+    <MESSAGE_IF_FAIL ID="AppXManifestValidation_BadWindowsProtocol"/>
+  </GROUP>
+  <CONSTANT_TABLE>
+    <CONSTANT NAME="MAX_FILE_EXTENSION_NUMBER" VALUE="500"/>
+    <CONSTANT NAME="MAX_PROTOCOL_NUMBER" VALUE="10"/>
+    <CONSTANT NAME="MAX_APPX_SIZE_IN_BYTES" VALUE="4294967296"/>
+    <CONSTANT NAME="MAX_BUNDLE_SIZE_IN_BYTES" VALUE="26843545600"/>
+  </CONSTANT_TABLE>
+</RULES>

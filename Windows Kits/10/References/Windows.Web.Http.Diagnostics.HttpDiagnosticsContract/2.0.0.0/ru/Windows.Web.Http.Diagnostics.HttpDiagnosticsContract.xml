@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Web.Http.Diagnostics.HttpDiagnosticsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider">
+      <summary>Предоставляет простые диагностические средства для трассировки и профилирования веб-трафика в приложениях, построенных на стеках HTTP Майкрософт.</summary>
+    </member><member name="E:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.RequestResponseCompleted">
+      <summary>Подпишитесь на событие RequestResponseCompleted для получения уведомления об отправке запроса.</summary>
+    </member><member name="E:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.RequestSent">
+      <summary>Подпишитесь на событие RequestSent для получения уведомления о передаче запроса.</summary>
+    </member><member name="E:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.ResponseReceived">
+      <summary>Подпишитесь на событие ResponseReceived для получения уведомления о получении ответа.</summary>
+    </member><member name="M:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.CreateFromProcessDiagnosticInfo(Windows.System.Diagnostics.ProcessDiagnosticInfo)">
+      <summary>Создает новый объект HttpDiagnosticProvider на основе указанного объекта ProcessDiagnosticInfo.</summary>
+      <returns>Созданный объект HttpDiagnosticProvider.</returns>
+      <param name="processDiagnosticInfo">ProcessDiagnosticInfo, который определяет процесс для наблюдения.</param>
+    </member><member name="M:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.Start">
+      <summary>Запускает HttpDiagnosticProvider, наблюдающий за целевым объектом подключенного процесса.</summary>
+    </member><member name="M:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.Stop">
+      <summary>Останавливает наблюдение HttpDiagnosticProvider за целевым объектом подключенного процесса.</summary>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs">
+      <summary>Предоставляет данные для события RequestResponseCompleted.</summary>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.ActivityId">
+      <summary>Возвращает локально уникальный идентификатор для этого действия для сопоставления с другими событиями.</summary>
+      <returns>Локально уникальный идентификатор для этого действия.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.Initiator">
+      <summary>Возвращает тип операции, инициировавшей запрос.</summary>
+      <returns>Тип инициатора.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.ProcessId">
+      <summary>Возвращает идентификатор процесса.</summary>
+      <returns>Идентификатор процесса.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.RequestedUri">
+      <summary>Возвращает URI запрошенного ответа.</summary>
+      <returns>URI запрошенного ответа.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.SourceLocations">
+      <summary>Получает стек вызовов расположения источника.</summary>
+      <returns>Стек вызовов расположения источника.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.ThreadId">
+      <summary>Возвращает идентификатор потока.</summary>
+      <returns>Идентификатор потока.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.Timestamps">
+      <summary>Возвращает отметку времени для событий подключения.</summary>
+      <returns>Отметка времени для событий подключения.</returns>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps">
+      <summary>Предоставляет все отметки времени для событий подключения.</summary>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.CacheCheckedTimestamp">
+      <summary>Возвращает последнее время проверки локального кэша.</summary>
+      <returns>Время проверки локального кэша.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.ConnectionCompletedTimestamp">
+      <summary>Возвращает отметку времени для завершения этапа подключения TCP.</summary>
+      <returns>Отметка времени для завершения этапа подключения TCP.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.ConnectionInitiatedTimestamp">
+      <summary>Возвращает отметку времени для начала этапа подключения TCP.</summary>
+      <returns>Отметка времени для начала этапа подключения TCP.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.NameResolvedTimestamp">
+      <summary>Возвращает время разрешения имени DNS.</summary>
+      <returns>Время разрешения имени DNS.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.RequestCompletedTimestamp">
+      <summary>Возвращает отметку времени для последнего отправленного байта.</summary>
+      <returns>Отметка времени для последнего отправленного байта.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.RequestSentTimestamp">
+      <summary>Возвращает отметку времени для первого отправленного байта.</summary>
+      <returns>Отметка времени для первого отправленного байта.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.ResponseCompletedTimestamp">
+      <summary>Возвращает отметку времени для последнего полученного байта.</summary>
+      <returns>Отметка времени для последнего полученного байта.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.ResponseReceivedTimestamp">
+      <summary>Возвращает отметку времени для первого полученного байта.</summary>
+      <returns>Отметка времени для первого полученного байта.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.SslNegotiatedTimestamp">
+      <summary>Возвращает время подтверждения в SSL-согласовании.</summary>
+      <returns>Время подтверждения в SSL-согласовании.</returns>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs">
+      <summary>Предоставляет данные для события RequestSent.</summary>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.ActivityId">
+      <summary>Возвращает локально уникальный идентификатор для этого действия для сопоставления с другими событиями.</summary>
+      <returns>Локально уникальный идентификатор для этого действия.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.Initiator">
+      <summary>Возвращает тип операции, инициировавшей запрос.</summary>
+      <returns>Тип инициатора.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.Message">
+      <summary>Получает HttpRequestMessage, включая заголовки.</summary>
+      <returns>HttpRequestMessage, включая заголовки.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.ProcessId">
+      <summary>Возвращает идентификатор процесса.</summary>
+      <returns>Идентификатор процесса.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.SourceLocations">
+      <summary>Получает стек вызовов расположения источника.</summary>
+      <returns>Стек вызовов расположения источника.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.ThreadId">
+      <summary>Возвращает идентификатор потока.</summary>
+      <returns>Идентификатор потока.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.Timestamp">
+      <summary>Возвращает метку времени, когда было отправлено сообщение HttpRequestMessage.</summary>
+      <returns>Метка времени, когда было отправлено сообщение HttpRequestMessage.</returns>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs">
+      <summary>Предоставляет данные для события ResponseReceived.</summary>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs.ActivityId">
+      <summary>Возвращает локально уникальный идентификатор для этого действия для сопоставления с другими событиями.</summary>
+      <returns>Локально уникальный идентификатор для этого действия.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs.Message">
+      <summary>Возвращает HttpResponseMessage, включая заголовки, код состояния и данные.</summary>
+      <returns>HttpResponseMessage, включая заголовки, код состояния и данные.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs.Timestamp">
+      <summary>Возвращает метку времени, когда было получено сообщение HttpResponseMessage.</summary>
+      <returns>Метка времени, когда было получено сообщение HttpResponseMessage.</returns>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator">
+      <summary>Предоставляет тип инициатора запроса загрузки.</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Beacon">
+      <summary>Односторонний запрос маяка</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.CrossOriginPreFlight">
+      <summary>Предварительный запрос из другого источника</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Fetch">
+      <summary>Запрос извлечения</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.HtmlDownload">
+      <summary>HTML-загрузка</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Image">
+      <summary>Ресурс изображения</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Link">
+      <summary>Ссылка</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Media">
+      <summary>Ресурс мультимедиа</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Other">
+      <summary>Другой ресурс</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.ParsedElement">
+      <summary>Анализируемый элемент</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Prefetch">
+      <summary>Запрос упреждающей выборки</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Script">
+      <summary>Ресурс скрипта</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Style">
+      <summary>Элемент CSS</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.XmlHttpRequest">
+      <summary>HTTP-запрос XML</summary>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation">
+      <summary>Содержит расположение источника HTTP-действия.</summary>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation.ColumnNumber">
+      <summary>Возвращает номер столбца.</summary>
+      <returns>Номер столбца.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation.LineNumber">
+      <summary>Возвращает номер строки.</summary>
+      <returns>Номер строки.</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation.SourceUri">
+      <summary>Возвращает URI источника.</summary>
+      <returns>URI источника.</returns>
+    </member></members>
+</doc>

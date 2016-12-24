@@ -1,0 +1,863 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.DevicesLowLevelContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.ILowLevelDevicesAggregateProvider">
+      <summary>Representa las propiedades comunes de todos los proveedores globales de dispositivos de bajo nivel.</summary>
+    </member><member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.AdcControllerProvider">
+      <summary>Obtiene el proveedor predeterminado de ADC. Si el proveedor predeterminado no se establece explícitamente, recurrirá al controlador normal.</summary>
+      <returns>Proveedor de ADC.</returns>
+    </member><member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.GpioControllerProvider">
+      <summary>Obtiene el proveedor predeterminado de GPIO. Si el proveedor predeterminado no se establece explícitamente, recurrirá al controlador normal.</summary>
+      <returns>Proveedor de GPIO.</returns>
+    </member><member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.I2cControllerProvider">
+      <summary>Obtiene el proveedor predeterminado de I2C. Si el proveedor predeterminado no se establece explícitamente, recurrirá al controlador normal.</summary>
+      <returns>Proveedor de I2C.</returns>
+    </member><member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.PwmControllerProvider">
+      <summary>Obtiene el proveedor predeterminado de PWM. Si el proveedor predeterminado no se establece explícitamente, recurrirá al controlador normal.</summary>
+      <returns>Proveedor de PWM.</returns>
+    </member><member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.SpiControllerProvider">
+      <summary>Obtiene el proveedor predeterminado de SPI. Si el proveedor predeterminado no se establece explícitamente, recurrirá al controlador normal.</summary>
+      <returns>Proveedor de SPI.</returns>
+    </member><member name="T:Windows.Devices.LowLevelDevicesAggregateProvider">
+      <summary>Representa los proveedores de dispositivos de bus de bajo nivel. Esta clase proporciona acceso al proveedor predeterminado para los controladores de bus de bajo nivel.</summary>
+    </member><member name="M:Windows.Devices.LowLevelDevicesAggregateProvider.#ctor(Windows.Devices.Adc.Provider.IAdcControllerProvider,Windows.Devices.Pwm.Provider.IPwmControllerProvider,Windows.Devices.Gpio.Provider.IGpioControllerProvider,Windows.Devices.I2c.Provider.II2cControllerProvider,Windows.Devices.Spi.Provider.ISpiControllerProvider)">
+      <summary>Crea una instancia de LowLevelDevicesAggregateProvider y establece los proveedores proporcionados como predeterminados para el bus respectivo.</summary>
+      <param name="adc">Proveedor de ADC.</param>
+      <param name="pwm">Proveedor de PWM.</param>
+      <param name="gpio">Proveedor de GPIO.</param>
+      <param name="i2c">Proveedor de I2C.</param>
+      <param name="spi">Proveedor de SPI.</param>
+    </member><member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.AdcControllerProvider">
+      <summary>Obtiene el proveedor predeterminado de ADC. Si el proveedor predeterminado no se establece explícitamente, recurrirá al controlador normal.</summary>
+      <returns>Proveedor de ADC.</returns>
+    </member><member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.GpioControllerProvider">
+      <summary>Obtiene el proveedor predeterminado de GPIO. Si el proveedor predeterminado no se establece explícitamente, recurrirá al controlador normal.</summary>
+      <returns>Proveedor de GPIO.</returns>
+    </member><member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.I2cControllerProvider">
+      <summary>Obtiene el proveedor predeterminado de I2C. Si el proveedor predeterminado no se establece explícitamente, recurrirá al controlador normal.</summary>
+      <returns>Proveedor de I2C.</returns>
+    </member><member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.PwmControllerProvider">
+      <summary>Obtiene el proveedor predeterminado de PWM. Si el proveedor predeterminado no se establece explícitamente, recurrirá al controlador normal.</summary>
+      <returns>Proveedor de PWM.</returns>
+    </member><member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.SpiControllerProvider">
+      <summary>Obtiene el proveedor predeterminado de SPI. Si el proveedor predeterminado no se establece explícitamente, recurrirá al controlador normal.</summary>
+      <returns>Proveedor de SPI.</returns>
+    </member><member name="T:Windows.Devices.LowLevelDevicesController">
+      <summary>Representa un controlador de dispositivo de bus de bajo nivel y su proveedor asociado.</summary>
+    </member><member name="P:Windows.Devices.LowLevelDevicesController.DefaultProvider">
+      <summary>Obtiene o establece el proveedor predeterminado para el controlador.</summary>
+      <returns>Proveedor global del dispositivo.</returns>
+    </member><member name="T:Windows.Devices.Adc.AdcChannel">
+      <summary>Representa un único canal de ADC.</summary>
+    </member><member name="P:Windows.Devices.Adc.AdcChannel.Controller">
+      <summary>Obtiene el controlador de ADC para este canal.</summary>
+      <returns>Controlador de ADC.</returns>
+    </member><member name="M:Windows.Devices.Adc.AdcChannel.Close">
+      <summary>Cierra la conexión en este canal, lo que lo hace disponible para que lo puedan abrir otros.</summary>
+    </member><member name="M:Windows.Devices.Adc.AdcChannel.ReadRatio">
+      <summary>Lee el valor como un porcentaje del valor máximo posible para este controlador.</summary>
+      <returns>El valor como porcentaje del valor máximo.</returns>
+    </member><member name="M:Windows.Devices.Adc.AdcChannel.ReadValue">
+      <summary>Lee la representación digital de valor analógico de ADC.</summary>
+      <returns>Valor digital.</returns>
+    </member><member name="T:Windows.Devices.Adc.AdcChannelMode">
+      <summary>Describe los modos de canal que el controlador de ADC puede usar para la entrada.</summary>
+    </member><member name="F:Windows.Devices.Adc.AdcChannelMode.Differential">
+      <summary>Diferencia entre dos terminales.</summary>
+    </member><member name="F:Windows.Devices.Adc.AdcChannelMode.SingleEnded">
+      <summary>Valor simple de una terminal determinada.</summary>
+    </member><member name="T:Windows.Devices.Adc.AdcController">
+      <summary>Representa un controlador de ADC en el sistema</summary>
+    </member><member name="P:Windows.Devices.Adc.AdcController.ChannelCount">
+      <summary>Número de canales disponibles en el controlador de ADC.</summary>
+      <returns>Número de canales.</returns>
+    </member><member name="P:Windows.Devices.Adc.AdcController.ChannelMode">
+      <summary>Obtiene o establece el modo de canal para el controlador de ADC.</summary>
+      <returns>Modo de canal de ADC.</returns>
+    </member><member name="P:Windows.Devices.Adc.AdcController.MaxValue">
+      <summary>Obtiene el valor máximo que el controlador puede notificar.</summary>
+      <returns>El valor máximo</returns>
+    </member><member name="P:Windows.Devices.Adc.AdcController.MinValue">
+      <summary>Valor mínimo que el controlador puede notificar.</summary>
+      <returns>El valor mínimo</returns>
+    </member><member name="P:Windows.Devices.Adc.AdcController.ResolutionInBits">
+      <summary>Obtiene la resolución del controlador como número de bits que tiene.</summary>
+      <returns>Número de bits que tiene el controlador de ADC.</returns>
+    </member><member name="M:Windows.Devices.Adc.AdcController.GetControllersAsync(Windows.Devices.Adc.Provider.IAdcProvider)">
+      <summary>Obtiene todos los controladores que están conectados al sistema de forma asincrónica.</summary>
+      <returns>Cuando el método se completa correctamente, devuelve una lista de valores que representan las controladores disponibles en el sistema.</returns>
+      <param name="provider">El proveedor de ADC para los controladores en el sistema.</param>
+    </member><member name="M:Windows.Devices.Adc.AdcController.GetDefaultAsync">
+      <summary>Obtiene el controlador predeterminado de ADC en el sistema.</summary>
+      <returns>Controlador de ADC predeterminado en el sistema, o NULL si el sistema no tiene un controlador de ADC.</returns>
+    </member><member name="M:Windows.Devices.Adc.AdcController.IsChannelModeSupported(Windows.Devices.Adc.AdcChannelMode)">
+      <summary>Comprueba que el controlador admite el modo especificado de canal.</summary>
+      <returns>True si se admite el modo de canal especificado; en caso contrario, false.</returns>
+      <param name="channelMode">Modo de canal.</param>
+    </member><member name="M:Windows.Devices.Adc.AdcController.OpenChannel(System.Int32)">
+      <summary>Abre una conexión para el canal especificado de ADC.</summary>
+      <returns>Canal de ADC.</returns>
+      <param name="channelNumber">Canal al que conectarse.</param>
+    </member><member name="T:Windows.Devices.Adc.Provider.IAdcControllerProvider">
+      <summary>Representa las propiedades y métodos comunes a todos los controladores de ADC.</summary>
+    </member><member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.ChannelCount">
+      <summary>Obtiene el número de canales disponibles para el controlador.</summary>
+      <returns>Número de canales.</returns>
+    </member><member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.ChannelMode">
+      <summary>Obtiene o establece el modo de canal del controlador.</summary>
+      <returns>Modo de canal.</returns>
+    </member><member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.MaxValue">
+      <summary>Obtiene el valor máximo que el controlador puede devolver.</summary>
+      <returns>El valor máximo</returns>
+    </member><member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.MinValue">
+      <summary>Obtiene el valor mínimo que el controlador puede devolver.</summary>
+      <returns>El valor mínimo</returns>
+    </member><member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.ResolutionInBits">
+      <summary>Obtiene la resolución del controlador como número de bits que tiene.</summary>
+      <returns>Resolución como número de bits.</returns>
+    </member><member name="M:Windows.Devices.Adc.Provider.IAdcControllerProvider.AcquireChannel(System.Int32)">
+      <summary>Adquiere una conexión al canal especificado.</summary>
+      <param name="channel">Qué canal al que conectarse.</param>
+    </member><member name="M:Windows.Devices.Adc.Provider.IAdcControllerProvider.IsChannelModeSupported(Windows.Devices.Adc.Provider.ProviderAdcChannelMode)">
+      <summary>Determina si el controlador admite el modo especificado de canal.</summary>
+      <returns>True si se admite el modo de canal especificado; en caso contrario, false.</returns>
+      <param name="channelMode">Modo de canal en cuestión.</param>
+    </member><member name="M:Windows.Devices.Adc.Provider.IAdcControllerProvider.ReadValue(System.Int32)">
+      <summary>Obtiene la representación digital del valor análogo en el canal especificado.</summary>
+      <returns>Representación digital del valor analógico.</returns>
+      <param name="channelNumber">Canal del que se va a leer.</param>
+    </member><member name="M:Windows.Devices.Adc.Provider.IAdcControllerProvider.ReleaseChannel(System.Int32)">
+      <summary>Libera la conexión al canal y lo abre para que otros lo usen.</summary>
+      <param name="channel">El canal para el que se cierra la conexión.</param>
+    </member><member name="T:Windows.Devices.Adc.Provider.IAdcProvider">
+      <summary>Representa los métodos comunes para todos los proveedores de ADC.</summary>
+    </member><member name="M:Windows.Devices.Adc.Provider.IAdcProvider.GetControllers">
+      <summary>Obtiene los controladores de ADC disponibles en el sistema.</summary>
+      <returns>Cuando este método se completa, devuelve una lista de todos los controladores disponibles en el sistema.</returns>
+    </member><member name="T:Windows.Devices.Adc.Provider.ProviderAdcChannelMode">
+      <summary>Determina cómo se representa el valor del terminal. La implementación de específicos la decide el proveedor, por lo que el diferencial puede ser total o un seudodiferencial.</summary>
+    </member><member name="F:Windows.Devices.Adc.Provider.ProviderAdcChannelMode.Differential">
+      <summary>Diferencia entre dos terminales.</summary>
+    </member><member name="F:Windows.Devices.Adc.Provider.ProviderAdcChannelMode.SingleEnded">
+      <summary>Valor simple de una terminal determinada.</summary>
+    </member><member name="T:Windows.Devices.Gpio.GpioController">
+      <summary>Representa el controlador de E/S de uso general (GPIO) predeterminado del sistema.</summary>
+    </member><member name="P:Windows.Devices.Gpio.GpioController.PinCount">
+      <summary>Obtiene el número de terminales del controlador de E/S de uso general (GPIO).</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>Número de terminales del controlador de GPIO. Es posible que algunos terminales no estén disponibles en el modo de usuario. Para obtener información sobre cómo se corresponden los número de terminal con terminales físicos, vea la documentación de la placa de circuitos.</returns>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.GetControllersAsync(Windows.Devices.Gpio.Provider.IGpioProvider)">
+      <summary>Obtiene todos los controladores que están conectados al sistema de forma asincrónica.</summary>
+      <returns>Cuando el método se completa correctamente, devuelve una lista de valores que representan las controladores disponibles en el sistema.</returns>
+      <param name="provider">El proveedor de GPIO para los controladores en el sistema.</param>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.GetDefault">
+      <summary>Obtiene el controlador de E/S de uso general (GPIO) predeterminado del sistema.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <deprecated type="deprecate">Este método está en desuso y ahora se usa GetDefaultAsync.</deprecated>
+      <returns>Controlador GPIO predeterminado para el sistema, o NULL si el sistema no tiene un controlador GPIO.</returns>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.GetDefaultAsync">
+      <summary>Obtiene el controlador de E/S de uso general (GPIO) predeterminado del sistema.</summary>
+      <returns>Controlador GPIO predeterminado para el sistema, o NULL si el sistema no tiene un controlador GPIO.</returns>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.OpenPin(System.Int32)">
+      <summary>Abra una conexión con el terminal de E/S de uso general (GPIO) especificado en modo exclusivo.</summary>
+      <returns>Terminal abierto de GPIO.</returns>
+      <param name="pinNumber">Número PIN del terminal de GPIO que desea abrir. Es posible que algunos terminales no estén disponibles en el modo de usuario. Para obtener información sobre cómo se corresponden los número de terminal con terminales físicos, vea la documentación de la placa de circuitos.</param>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.OpenPin(System.Int32,Windows.Devices.Gpio.GpioSharingMode)">
+      <summary>Abre el terminal de E/S de uso general (GPIO) especificado en el modo indicado.</summary>
+      <returns>Terminal abierto de GPIO.</returns>
+      <param name="pinNumber">Número PIN del terminal de GPIO que desea abrir. Es posible que algunos terminales no estén disponibles en el modo de usuario. Para obtener información sobre cómo se corresponden los número de terminal con terminales físicos, vea la documentación de la placa de circuitos.</param>
+      <param name="sharingMode">Modo en el que desea abrir el terminal de GPIO, que determina si se pueden abrir otras conexiones con el terminal mientras el terminal está abierto.</param>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.TryOpenPin(System.Int32,Windows.Devices.Gpio.GpioSharingMode,Windows.Devices.Gpio.GpioPin@,Windows.Devices.Gpio.GpioOpenStatus@)">
+      <summary>Abre el terminal de E/S de uso general (GPIO) especificado en el modo indicado y obtiene un valor de estado que puede usar para administrar un error para abrir el terminal mediante programación.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>True si el método abrió correctamente el terminal; de lo contrario, false. Si el método devuelve true, el parámetro del terminal recibe una instancia de un GpioPin y el parámetro openStatus recibe GpioOpenStatus.PinOpened. Si el método devuelve false, el parámetro de la terminar es NULL y el parámetro openStatus recibe la razón por la que hubo un error en la operación.</returns>
+      <param name="pinNumber">Número PIN del terminal de GPIO que desea abrir. Es posible que algunos terminales no estén disponibles en el modo de usuario. Para obtener información sobre cómo se corresponden los número de terminal con terminales físicos, vea la documentación de la placa de circuitos.</param>
+      <param name="sharingMode">Modo en el que desea abrir el terminal de GPIO, que determina si se pueden abrir otras conexiones con el terminal mientras el terminal está abierto.</param>
+      <param name="pin">El terminal de GPIO abierto si el valor devuelto es true; de lo contario, NULL.</param>
+      <param name="openStatus">Valor de enumeración que indica si que el intento de abrir el terminal de GPIO se realizó correctamente, o el motivo del error al intentar abrir el terminal de GPIO.</param>
+    </member><member name="T:Windows.Devices.Gpio.GpioOpenStatus">
+      <summary>Describe los posibles resultados por abrir un terminal con el método GpioPin.TryOpenPin.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioOpenStatus.PinOpened">
+      <summary>El terminal de GPIO se ha abierto correctamente.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioOpenStatus.PinUnavailable">
+      <summary>El sistema se reserva el terminal y no está disponible para las aplicaciones que se ejecutan en modo de usuario.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioOpenStatus.SharingViolation">
+      <summary>El terminal está abierto en estos momentos en un modo de uso compartido incompatible. Por ejemplo: el terminal ya está abierta en modo GpioSharingMode.Exclusive. El terminal ya está abierta en modo GpioSharingMode.SharedReadOnly cuando solicita abrirla en modo GpioSharingMode.Exclusive.</summary>
+    </member><member name="T:Windows.Devices.Gpio.GpioPin">
+      <summary>Representa un terminal de E/S de uso general (GPIO).</summary>
+    </member><member name="P:Windows.Devices.Gpio.GpioPin.DebounceTimeout">
+      <summary>Obtiene o establece el tiempo de espera de supresión para el terminal de E/S de uso general (GPIO), que es un intervalo durante el que los cambios en el valor del terminal se filtran y no generan eventos ValueChanged.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>El tiempo de espera de supresión para el terminal de GPIO, que es un intervalo durante el cual los cambios en el valor del terminal se filtran y no generan eventos ValueChanged. Si la longitud de este intervalo es 0, todos los cambios en el valor del terminal generarán eventos ValueChanged.</returns>
+    </member><member name="P:Windows.Devices.Gpio.GpioPin.PinNumber">
+      <summary>Obtiene el número del terminal de E/S de uso general (GPIO).</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>Número del terminal GPIO.</returns>
+    </member><member name="P:Windows.Devices.Gpio.GpioPin.SharingMode">
+      <summary>Obtiene el modo de uso compartido en el que el terminal de E/S de uso general (GPIO) está abierto.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>Modo de uso compartido en el que el terminal GPIO está abierto.</returns>
+    </member><member name="E:Windows.Devices.Gpio.GpioPin.ValueChanged">
+      <summary>Se genera cuando el valor del terminal de E/S de uso general (GPIO) cambia, bien por un estímulo externo cuando el terminal se configura como entrada o cuando un valor se escribe en el terminal cuando este se configura como salida.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.Close">
+      <summary>Cierra el terminal de E/S de uso general (GPIO) y libera los recursos asociados al mismo.</summary>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.GetDriveMode">
+      <summary>Obtiene el modo de funcionamiento actual para el terminal de E/S de uso general (GPIO). El modo de funcionamiento especifica si el terminal está configurado como una entrada o salida, y determina cómo se controlan los valores en el terminal.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>Valor de enumeración que indica el modo de funcionamiento actual para el terminal de GPIO. El modo de funcionamiento especifica si el terminal está configurado como una entrada o salida, y determina cómo se controlan los valores en el terminal.</returns>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.IsDriveModeSupported(Windows.Devices.Gpio.GpioPinDriveMode)">
+      <summary>Obtiene si el terminal de E/S de uso general (GPIO) admite el modo de funcionamiento especificado.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>Es true si el terminal GPIO admite el modo de funcionamiento especificado por driveMode; de lo contrario false. Si especifica un modo de funcionamiento para el que este método devuelve false cuando se llama a SetDriveMode, SetDriveMode generará una excepción.</returns>
+      <param name="driveMode">Modo de funcionamiento para el que desea comprobar la compatibilidad.</param>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.Read">
+      <summary>Lee el valor actual del terminal de E/S de uso general (GPIO).</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>Valor actual del terminal de GPIO. Si el terminal se configura como salida, este valor es el último valor que se escribe en el terminal.</returns>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.SetDriveMode(Windows.Devices.Gpio.GpioPinDriveMode)">
+      <summary>Establece el modo de funcionamiento del terminal de E/S de uso general (GPIO). El modo de funcionamiento especifica si el terminal está configurado como una entrada o salida, y determina cómo se controlan los valores en el terminal.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <param name="value">Valor de enumeración que especifica el modo de funcionamiento para el terminal de GPIO. El modo de funcionamiento especifica si el terminal está configurado como una entrada o salida, y determina cómo se controlan los valores en el terminal.</param>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.Write(Windows.Devices.Gpio.GpioPinValue)">
+      <summary>Controla el valor especificado en el terminal de E/S de uso general (GPIO) según el modo de funcionamiento actual para el terminal si este se ha configurado como salida, o actualiza el valor enganchado de salida para el terminal si este se ha configurado como entrada.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <param name="value">Valor de enumeración que se escribirá en el terminal de GPIO. Si el terminal de GPIO se configura como salida, el método controla el valor especificado en el terminal según el modo de funcionamiento actual para el terminal. Si el terminal de GPIO se configura como entrada, el método actualiza el valor enganchado de salida para el terminal. El valor enganchado de salida se controla en el terminal cuando la configuración para el terminal cambia a salida.</param>
+    </member><member name="T:Windows.Devices.Gpio.GpioPinDriveMode">
+      <summary>Describe si un terminal de E/S de uso general (GPIO) se ha configurado como entrada o salida, y cómo se controlan los valores en el terminal.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.Input">
+      <summary>Configura el terminal de GPIO en modo flotante, con impedancia alta. Si llama al método GpioPin.Read para este terminal, el método devuelve el estado actual del terminal según control externo. Si llama al método GpioPin.Write, el método establece el valor de salida enganchado para el terminal. El terminal asume este valor enganchado de salida cuando el terminal cambia a salida.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.InputPullDown">
+      <summary>Configura el terminal de GPIO como alta impedancia con una resistencia "pull-down" a tierra. Si llama al método GpioPin.Read para este terminal, el método devuelve el estado actual del terminal según control externo.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.InputPullUp">
+      <summary>Configura el terminal de GPIO como alta impedancia con una resistencia "pull-up" a la conexión de corriente continua (VCC). Si llama al método de GpioPin.Read para este terminal, el método devuelve el valor anteriormente escrito para el terminal.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.Output">
+      <summary>Configura el terminal de GPIO en modo de funcionamiento seguro, con impedancia baja. Si llama al método GpioPin.Write para este terminal con un valor GpioPinValue.High, el método genera un valor alto de impedancia baja para el terminal. Si llama al método GpioPin.Write para este terminal con un valor GpioPinValue.Low, el método genera un valor alto de impedancia baja para el terminal. Si llama al método de GpioPin.Read para este terminal, el método devuelve el valor anteriormente escrito para el terminal.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.OutputOpenDrain">
+      <summary>Configura el GPIO en modo de desagüe abierto. Si llama al método GpioPin.Write para esta terminal con valor GpioPinValue.Low, el método genera un valor de bajo para el terminal. Si llama al método GpioPin.Write para esta terminal con un valor de GpioPinValue.High, el método coloca el terminal en modo flotante.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.OutputOpenDrainPullUp">
+      <summary>Configura el terminal de GPIO en modo desagüe abierto con modo de resistencia "pull-up". Si llama al método GpioPin.Write para esta terminal con un valor de GpioPinValue.Low, el método genera un estado bajo de impedancia baja. Si llama al método GpioPin.Write para esta terminal con un valor de GpioPinValue.High, el método configura el terminal como alta impedancia con una resistencia "pull-up" para VCC.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.OutputOpenSource">
+      <summary>Configura el terminal de GPIO en modo de colector abierto. Si llama al método de GpioPin.Write para esta terminal con un valor de GpioPinValue.High, el método general un valor de alto en el terminal. Si llama al método GpioPin.Write para esta terminal con un valor de GpioPinValue.Low, el método configura el terminal en modo flotante.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.OutputOpenSourcePullDown">
+      <summary>Configura el terminal de GPIO en modo de colector abierto con el modo de resistencia "pull-up". Si llama al método GpioPin.Write para esta terminal con un valor de GpioPinValue.High, el método genera un valor de alto en el terminal. Si llama al método GpioPin.Write para esta terminal con un valor de GpioPinValue.Low, el método configura el terminal como alta impedancia con una resistencia "pull-down" a tierra.</summary>
+    </member><member name="T:Windows.Devices.Gpio.GpioPinEdge">
+      <summary>Describe los tipos posibles de cambios que pueden realizarse en el valor del terminal de E/S de uso general (GPIO) para el evento GpioPin.ValueChanged.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinEdge.FallingEdge">
+      <summary>El valor del terminal de GPIO cambió de alto a bajo.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinEdge.RisingEdge">
+      <summary>El valor del terminal de GPIO cambió de bajo a alto.</summary>
+    </member><member name="T:Windows.Devices.Gpio.GpioPinValue">
+      <summary>Describe los valores posibles de un terminal de E/S de uso general de (GPIO).</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinValue.High">
+      <summary>El valor del terminal de GPIO es alto.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinValue.Low">
+      <summary>El valor del terminal de GPIO es bajo.</summary>
+    </member><member name="T:Windows.Devices.Gpio.GpioPinValueChangedEventArgs">
+      <summary>Proporciona datos sobre el evento GpioPin.ValueChanged que se genera cuando el valor del terminal de E/S de uso general (GPIO) cambia, bien por un estímulo externo cuando el terminal se configura como entrada o cuando un valor se escribe en el terminal cuando este se configura como salida.</summary>
+    </member><member name="P:Windows.Devices.Gpio.GpioPinValueChangedEventArgs.Edge">
+      <summary>Obtiene el tipo de cambio que se produjo en el valor del terminal de E/S de uso general (GPIO) para el evento GpioPin.ValueChanged.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>Valor de enumeración que indica el tipo de cambio que se produjo en el valor del terminal GPIO para el evento GpioPin.ValueChanged.</returns>
+    </member><member name="T:Windows.Devices.Gpio.GpioSharingMode">
+      <summary>Describe los modos en los que puede abrir un terminal de E/S de uso general (GPIO). Estos modos determinan si se pueden abrir otras conexiones con el terminal GPIO mientras el terminal está abierto.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioSharingMode.Exclusive">
+      <summary>Abre el terminal GPIO en modo exclusivo, por lo que no se puede abrir ninguna otra conexión con el terminal.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioSharingMode.SharedReadOnly">
+      <summary>Abre el terminal de GPIO como compartido, por lo que se pueden abrir otras conexiones en modo SharedReadOnly para el terminal. Solo se pueden realizar operaciones que no cambien el estado del terminal GPIO en modo compartido. Operaciones que puede realizar en el terminal de GPIO en modo compartido: llamar al método GpioPin.Read. Llamar al método GpioPin.GetDriveMode. Obtener los valores de propiedades, como GpioPin.PinNumber y GpioPin.DebounceTimeout.Registering un controlador de eventos para el evento GpioPin.ValueChanged.</summary>
+    </member><member name="T:Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs">
+      <summary>Proporciona información sobre el evento IGpioPinProvider.ValueChanged.</summary>
+    </member><member name="M:Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs.#ctor(Windows.Devices.Gpio.Provider.ProviderGpioPinEdge)">
+      <summary>Construye la clase de GpioPinProviderValueChangedEventArgs con el valor perimetral especificado.</summary>
+      <param name="edge">Borde deseado del terminal.</param>
+    </member><member name="P:Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs.Edge">
+      <summary>Obtiene el valor al que ha cambiado la terminal.</summary>
+      <returns>Borde del terminal.</returns>
+    </member><member name="T:Windows.Devices.Gpio.Provider.IGpioControllerProvider">
+      <summary>Representa las acciones comunes a todos los controladores de E/S de uso general (GPIO).</summary>
+    </member><member name="P:Windows.Devices.Gpio.Provider.IGpioControllerProvider.PinCount">
+      <summary>Obtiene el número de terminales del controlador de E/S de uso general (GPIO) disponibles.</summary>
+      <returns>Número terminales de GPIO disponibles.</returns>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioControllerProvider.OpenPinProvider(System.Int32,Windows.Devices.Gpio.Provider.ProviderGpioSharingMode)">
+      <summary>Abre y devuelve el proveedor de terminal de E/S de uso general (GPIO) para un terminal específico.</summary>
+      <returns>Proveedor del terminal de GPIO para el terminal especificado.</returns>
+      <param name="pin">Número de terminal de GPIO deseado.</param>
+      <param name="sharingMode">Modo compartido para abrir el terminal.</param>
+    </member><member name="T:Windows.Devices.Gpio.Provider.IGpioPinProvider">
+      <summary>Representa las acciones comunes a los proveedores de terminal de E/S de uso general (GPIO).</summary>
+    </member><member name="P:Windows.Devices.Gpio.Provider.IGpioPinProvider.DebounceTimeout">
+      <summary>Obtiene o establece el tiempo de espera de supresión para el terminal de E/S de uso general (GPIO), que es un intervalo durante el que los cambios en el valor del terminal se filtran y no generan eventos ValueChanged.</summary>
+      <returns>El tiempo de espera de supresión para el terminal de GPIO, que es un intervalo durante el cual los cambios en el valor del terminal se filtran y no generan eventos ValueChanged. Si la longitud de este intervalo es 0, todos los cambios en el valor del terminal generarán eventos ValueChanged.</returns>
+    </member><member name="P:Windows.Devices.Gpio.Provider.IGpioPinProvider.PinNumber">
+      <summary>Obtiene el número del terminal de E/S de uso general (GPIO).</summary>
+      <returns>Número del terminal GPIO.</returns>
+    </member><member name="P:Windows.Devices.Gpio.Provider.IGpioPinProvider.SharingMode">
+      <summary>Obtiene el modo de uso compartido en el que el terminal de E/S de uso general (GPIO) está abierto.</summary>
+      <returns>Modo de uso compartido en el que el terminal GPIO está abierto.</returns>
+    </member><member name="E:Windows.Devices.Gpio.Provider.IGpioPinProvider.ValueChanged">
+      <summary>Evento que se desencadena cuando el valor del terminal ha cambiado.</summary>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.GetDriveMode">
+      <summary>Obtiene el modo de funcionamiento actualmente configurado del terminal.</summary>
+      <returns>Modo de funcionamiento del terminal.</returns>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.IsDriveModeSupported(Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode)">
+      <summary>Determina si se admite un modo de funcionamiento para el terminal.</summary>
+      <returns>True si el modo de funcionamiento se admite; de lo contrario, false.</returns>
+      <param name="driveMode">Modo de funcionamiento deseado.</param>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.Read">
+      <summary>Lee el valor actual del terminal.</summary>
+      <returns>Valor del terminal.</returns>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.SetDriveMode(Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode)">
+      <summary>Establece el modo de funcionamiento del terminal.</summary>
+      <param name="value">Modo de funcionamiento deseado para el terminal.</param>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.Write(Windows.Devices.Gpio.Provider.ProviderGpioPinValue)">
+      <summary>Escribe un valor para el terminal.</summary>
+      <param name="value">Valor que se va a escribir.</param>
+    </member><member name="T:Windows.Devices.Gpio.Provider.IGpioProvider">
+      <summary>Representa las acciones comunes a los proveedores de controladores de E/S de uso general (GPIO).</summary>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioProvider.GetControllers">
+      <summary>Obtiene los controladores disponibles en el sistema.</summary>
+      <returns>Lista de valores que representan los controladores disponibles en el sistema.</returns>
+    </member><member name="T:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode">
+      <summary>Describe si un terminal de E/S de uso general (GPIO) se ha configurado como entrada o salida, y cómo se controlan los valores en el terminal.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.Input">
+      <summary>Configura el terminal de GPIO en modo flotante, con impedancia alta. Si llama al método IGpioPinProvider.Read para este terminal, el método devuelve el estado actual del terminal según control externo. Si llama al método IGpioPinProvider.Write, el método establece el valor de salida enganchado para el terminal. El terminal asume este valor enganchado de salida cuando el terminal cambia a salida.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.InputPullDown">
+      <summary>Configura el terminal de GPIO como alta impedancia con una resistencia "pull-down" a tierra. Si llama al método IGpioPinProvider.Read para este terminal, el método devuelve el estado actual del terminal según control externo.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.InputPullUp">
+      <summary>Configura el terminal de GPIO como alta impedancia con una resistencia "pull-up" a la conexión de corriente continua (VCC). Si llama al método de IGpioPinProvider.Read para este terminal, el método devuelve el valor anteriormente escrito para el terminal.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.Output">
+      <summary>Configura el terminal de GPIO en modo de funcionamiento seguro, con impedancia baja. Si llama al método IGpioPinProvider.Write para este terminal con un valor de ProviderGpioPinValue.High, el método genera un valor alto de impedancia baja para el terminal. Si llama al método IGpioPinProvider.Write para este terminal con un valor ProviderGpioPinValue.Low, el método genera un valor alto de impedancia baja para el terminal. Si llama al método de IGpioPinProvider.Read para este terminal, el método devuelve el valor anteriormente escrito para el terminal.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.OutputOpenDrain">
+      <summary>Configura el GPIO en modo de desagüe abierto. Si llama al método IGpioPinProvider.Write para esta terminal con valor ProviderGpioPinValue.Low, el método genera un valor de bajo para el terminal. Si llama al método IGpioPinProvider.Write para esta terminal con un valor de ProviderGpioPinValue.High, el método coloca el terminal en modo flotante.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.OutputOpenDrainPullUp">
+      <summary>Configura el terminal de GPIO en modo desagüe abierto con modo de resistencia "pull-up". Si llama al método IGpioPinProvider.Write para esta terminal con un valor de ProviderGpioPinValue.Low, el método genera un estado bajo de impedancia baja. Si llama al método IGpioPinProvider.Write para esta terminal con un valor de ProviderGpioPinValue.High, el método configura el terminal como alta impedancia con una resistencia "pull-up" para VCC.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.OutputOpenSource">
+      <summary>Configura el terminal de GPIO en modo de colector abierto. Si llama al método de IGpioPinProvider.Write para esta terminal con un valor de ProviderGpioPinValue.High, el método general un valor de alto en el terminal. Si llama al método IGpioPinProvider.Write para esta terminal con un valor de ProviderGpioPinValue.Low, el método configura el terminal en modo flotante.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.OutputOpenSourcePullDown">
+      <summary>Configura el terminal de GPIO en modo de colector abierto con el modo de resistencia "pull-up". Si llama al método IGpioPinProvider.Write para esta terminal con un valor de ProviderGpioPinValue.High, el método genera un valor de alto en el terminal. Si llama al método IGpioPinProvider.Write para esta terminal con un valor de ProviderGpioPinValue.Low, el método configura el terminal como alta impedancia con una resistencia "pull-down" a tierra.</summary>
+    </member><member name="T:Windows.Devices.Gpio.Provider.ProviderGpioPinEdge">
+      <summary>Describe los tipos posibles de cambios que pueden realizarse en el valor del terminal de E/S de uso general (GPIO).</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinEdge.FallingEdge">
+      <summary>Borde que cae o cuando el valor pasa de alto a bajo.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinEdge.RisingEdge">
+      <summary>Borde que sube o cuando el valor pasa de bajo a alto.</summary>
+    </member><member name="T:Windows.Devices.Gpio.Provider.ProviderGpioPinValue">
+      <summary>Describe los valores posibles de un terminal de E/S de uso general de (GPIO).</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinValue.High">
+      <summary>El valor del terminal de GPIO es alto.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinValue.Low">
+      <summary>El valor del terminal de GPIO es bajo.</summary>
+    </member><member name="T:Windows.Devices.Gpio.Provider.ProviderGpioSharingMode">
+      <summary>Describe los modos en los que puede abrir un terminal de E/S de uso general (GPIO). Estos modos determinan si se pueden abrir otras conexiones con el terminal GPIO mientras el terminal está abierto.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioSharingMode.Exclusive">
+      <summary>Abre el terminal GPIO en modo exclusivo, por lo que no se puede abrir ninguna otra conexión con el terminal.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioSharingMode.SharedReadOnly">
+      <summary>Abre el terminal de GPIO como compartido, por lo que se pueden abrir otras conexiones en modo SharedReadOnly para el terminal. Solo las operaciones que no cambian el estado del terminal se pueden realizar.</summary>
+    </member><member name="T:Windows.Devices.I2c.I2cBusSpeed">
+      <summary>Describe las velocidades de bus disponibles para conectarse a un dispositivo con un circuito inter-integrado (I2C). La velocidad de bus es la frecuencia de reloj del bus I2C cuando se tiene acceso al dispositivo.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cBusSpeed.FastMode">
+      <summary>Velocidad rápida de 400 kHz.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cBusSpeed.StandardMode">
+      <summary>Velocidad estándar de 100 kilohercios (kHz). Esta es la velocidad predeterminada.</summary>
+    </member><member name="T:Windows.Devices.I2c.I2cConnectionSettings">
+      <summary>Representa la configuración de conexión que desea usar para un dispositivo con un circuito inter-integrado (I2C).</summary>
+    </member><member name="M:Windows.Devices.I2c.I2cConnectionSettings.#ctor(System.Int32)">
+      <summary>Crea e inicializa una nueva instancia de la clase I2cConnectionSettings para el dispositivo de circuito inter-integrado (I2C) con la dirección especificada de bus, usando la configuración predeterminada del modo estándar para la velocidad el bus y el modo compartido exclusivo.</summary>
+      <param name="slaveAddress">Dirección del bus del dispositivo de circuito inter-integrado (I2C) al que se aplicaría la configuración de I2cConnectionSettings. Solo se admite el direccionamiento de siete bits, por tanto el intervalo de valores validos es de 8 a 119.</param>
+    </member><member name="P:Windows.Devices.I2c.I2cConnectionSettings.BusSpeed">
+      <summary>Obtiene o establece la velocidad de bus que se usará para conectarse a un dispositivo con un circuito inter-integrado (I2C). La velocidad de bus es la frecuencia de reloj del bus I2C cuando se tiene acceso al dispositivo.</summary>
+      <returns>Velocidad de bus que se usará para conectarse a un dispositivo I2C.</returns>
+    </member><member name="P:Windows.Devices.I2c.I2cConnectionSettings.SharingMode">
+      <summary>Obtiene o establece el modo de uso compartido que se usará conectarse a la dirección de bus del circuito inter-integrado (I2C). Este modo determina si se pueden abrir otras conexiones con la dirección del bus I2C mientras está conectado a la dirección del bus I2C.</summary>
+      <returns>Modo de uso compartido que se usará para conectarse a la dirección del bus I2C.</returns>
+    </member><member name="P:Windows.Devices.I2c.I2cConnectionSettings.SlaveAddress">
+      <summary>Obtiene o establece la dirección del bus del dispositivo con un circuito inter-integrado (I2C).</summary>
+      <returns>Dirección del bus del dispositivo I2C. Solo se admite el direccionamiento de siete bits, por tanto el intervalo de valores validos es de 8 a 119.</returns>
+    </member><member name="T:Windows.Devices.I2c.I2cController">
+      <summary>Representa el controlador de I2C para el sistema.</summary>
+    </member><member name="M:Windows.Devices.I2c.I2cController.GetControllersAsync(Windows.Devices.I2c.Provider.II2cProvider)">
+      <summary>Obtiene todos los controladores de I2C que están en el sistema.</summary>
+      <returns>Cuando el método se completa correctamente, devuelve una lista de valores que representan las controladores de I2C disponibles en el sistema.</returns>
+      <param name="provider">El proveedor de I2C para los controladores en el sistema.</param>
+    </member><member name="M:Windows.Devices.I2c.I2cController.GetDefaultAsync">
+      <summary>Obtiene el controlador predeterminada de I2C en el sistema.</summary>
+      <returns>Controlador de I2C predeterminada en el sistema, o NULL si el sistema no tiene un controlador de I2C.</returns>
+    </member><member name="M:Windows.Devices.I2c.I2cController.GetDevice(Windows.Devices.I2c.I2cConnectionSettings)">
+      <summary>Obtiene el dispositivo de I2C con los valores especificados.</summary>
+      <returns>Dispositivo de I2C.</returns>
+      <param name="settings">Configuración de la conexión deseada.</param>
+    </member><member name="T:Windows.Devices.I2c.I2cDevice">
+      <summary>Representa canal de comunicación S para un dispositivo en un bus de circuito inter-integrado (I2C).</summary>
+    </member><member name="P:Windows.Devices.I2c.I2cDevice.ConnectionSettings">
+      <summary>Obtiene la configuración de conexión que se usa para la comunicación con el dispositivo de circuito inter-integrado (I2C).</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>Configuración de conexión que se usa para la comunicación con el dispositivo de circuito inter-integrado (I2C).</returns>
+    </member><member name="P:Windows.Devices.I2c.I2cDevice.DeviceId">
+      <summary>Obtiene el identificador del dispositivo listo para su uso del controlador de bus del circuito (I2C) para el dispositivo.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>Identificador del dispositivo listo para su uso del controlador de bus del circuito (I2C) para el dispositivo.</returns>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.Close">
+      <summary>Cierra la conexión con el dispositivo de circuito inter-integrado (I2C).</summary>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.FromIdAsync(System.String,Windows.Devices.I2c.I2cConnectionSettings)">
+      <summary>Recupera de forma asincrónica un objeto I2cDevice para el controlador de bus de circuito inter-integrado (I2C) que tiene el identificador del dispositivo plug and play especificado, usando la configuración de conexión indicada.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>Operación asincrónica que devuelve el objeto I2cDevice.</returns>
+      <param name="deviceId">Identificador del dispositivo plug and play del controlador de bus I2C del dispositivo para el que desea crear un objeto I2cDevice.</param>
+      <param name="settings">Configuración de la conexión que se usa para la comunicación con el controlador de bus I2C que especifica deviceId.</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.GetDeviceSelector">
+      <summary>Recupera una cadena sintaxis de consulta avanzada (AQS) para todos los controladores de bus de circuito inter-integrados (I2C) en el sistema.</summary>
+      <returns>Una cadena de AQS para todos los controladores de bus I2C en el sistema, que puede usar con el método DeviceInformation.FindAllAsync para obtener objetos DeviceInformation para esos controladores de bus.</returns>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.GetDeviceSelector(System.String)">
+      <summary>Recupera una cadena de sintaxis de consulta avanzada (AQS) para el bus de circuito inter-integrado (I2C) que tiene el nombre descriptivo especificado.</summary>
+      <returns>Una cadena de AQS para el bus de I2C que especifica friendlyName y que puede usar con el método DeviceInformation.FindAllAsync para obtener un objeto DeviceInformation para ese bus.</returns>
+      <param name="friendlyName">Nombre descriptivo para el bus I2C particular en una plataforma de hardware específica para la que desea obtener la cadena de AQS.</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.Read(System.Byte[])">
+      <summary>Lee datos del bus de circuito inter-integrado (I2C) en el que el dispositivo está conectado dentro del búfer especificado.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <param name="buffer">Búfer para el que desea leer los datos desde el bus I2C. La longitud de búfer determina cuántos datos se van a solicitar del dispositivo.</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.ReadPartial(System.Byte[])">
+      <summary>Lee datos del bus de circuito inter-integrado (I2C) en el que el dispositivo está conectado en del búfer especificado, y devuelve información sobre la correcta realización de la operación que puede usar para la administración de errores.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>Estructura que contiene información sobre la correcta realización de la operación de lectura y del número de bytes real que la operación leyó en el búfer.</returns>
+      <param name="buffer">Búfer para el que desea leer los datos desde el bus I2C. La longitud de búfer determina cuántos datos se van a solicitar del dispositivo.</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.Write(System.Byte[])">
+      <summary>Escribe datos en el bus de circuito inter-integrado (I2C) en el que el dispositivo está conectado, según la dirección del bus especificada en el objeto I2cConnectionSettings que usó para crear el objeto I2cDevice.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <param name="buffer">Búfer que contiene los datos que desea escribir en el dispositivo de I2C. Estos datos no deben incluir la dirección del bus.</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.WritePartial(System.Byte[])">
+      <summary>Escribe datos en el bus de circuito inter-integrado (I2C) en el que el dispositivo está conectado, y devuelve información sobre la correcta realización de la operación que puede usar para la administración de errores.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>Estructura que contiene información sobre la correcta realización de la operación de escritura y del número de bytes real que la operación escribió en el búfer.</returns>
+      <param name="buffer">Búfer que contiene los datos que desea escribir en el dispositivo de I2C. Estos datos no deben incluir la dirección del bus.</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.WriteRead(System.Byte[],System.Byte[])">
+      <summary>Realiza una operación atómica para escribir datos y después leerlos en el bus de circuito inter-integrado (I2C) en el que el dispositivo está conectado, y envía una condición de reinicio entre las operaciones de escritura y de lectura.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <param name="writeBuffer">Búfer que contiene los datos que desea escribir en el dispositivo de I2C. Estos datos no deben incluir la dirección del bus.</param>
+      <param name="readBuffer">Búfer para el que desea leer los datos desde el bus I2C. La longitud de búfer determina cuántos datos se van a solicitar del dispositivo.</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.WriteReadPartial(System.Byte[],System.Byte[])">
+      <summary>Realiza una operación atómica para escribir datos y después leerlos en el bus de circuito inter-integrado (I2C) en el que el dispositivo está conectado, y devuelve información sobre la correcta realización de la operación que puede usar para la administración de errores.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>Estructura que contiene información sobre si las partes de lectura y escritura de la operación se completaron correctamente y la suma del número de bytes real que escribió la operación, además del número de bytes real que leyó la operación.</returns>
+      <param name="writeBuffer">Búfer que contiene los datos que desea escribir en el dispositivo de I2C. Estos datos no deben incluir la dirección del bus.</param>
+      <param name="readBuffer">Búfer para el que desea leer los datos desde el bus I2C. La longitud de búfer determina cuántos datos se van a solicitar del dispositivo.</param>
+    </member><member name="T:Windows.Devices.I2c.I2cSharingMode">
+      <summary>Describe los modos en los que puede conectarse a una dirección de bus de un circuito inter-integrado (I2C). Estos modos determinan si se pueden abrir otras conexiones con la dirección del bus I2C mientras está conectado a la dirección del bus I2C.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cSharingMode.Exclusive">
+      <summary>Se conecta con la dirección del bus I2C en modo exclusivo, por lo que no se puede establecer ninguna otra conexión con la dirección del bus I2C mientras esté conectado.
+Este es el modo predeterminado.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cSharingMode.Shared">
+      <summary>Se conecta con la dirección del bus I2C en modo compartido, por lo que no se pueden establecer otras conexiones con la dirección del bus I2C mientras esté conectado. Puede realizar todas las operaciones en conexiones compartidas, pero use estas conexiones con cautela. Cuando varias aplicaciones de cliente cambian el estado global del dispositivo de I2C, se pueden producir condiciones de carrera. Un ejemplo de uso de una conexión compartida es un sensor que obtiene lecturas sin cambiar el estado del dispositivo.</summary>
+    </member><member name="T:Windows.Devices.I2c.I2cTransferResult">
+      <summary>Proporciona información sobre si las transferencias de datos que realizaron los métodos ReadPartial, WritePartial o WriteReadPartial se efectuaron correctamente y el número de bytes real que transfirieron los métodos.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cTransferResult.BytesTransferred">
+      <summary>Número real de bytes que transfirió efectivamente la operación. La tabla siguiente describe lo que representa este valor para cada número real de bytes de method.MethodDescriptionReadPartialThe que la operación de lectura lee en el búfer. Si el valor del miembro Status es I2CTransferStatus.PartialTransfer, este valor puede ser menor que el número de bytes del búfer que especificó en el parámetro de búfer. WritePartial Número real de bytes que la operación de escritura transfirió al dispositivo de I2C. Si el valor del miembro Status es I2CTransferStatus.PartialTransfer, este valor puede ser menor que el número de bytes del búfer que especificó en el parámetro de búfer. WriteReadPartial Número real de bytes que la operación transfirió, que es la suma del número de bytes que la operación escribió y el número de bytes que la operación leyó. Si el valor del miembro Status es I2CTransferStatus.PartialTransfer, este valor puede ser menor que la suma de las longitudes de los búferes que especificó en los parámetros writeBuffer y readBuffer.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cTransferResult.Status">
+      <summary>Valor de enumeración que indica si la operación de lectura o escritura transfirió el número completo de bytes que solicitó el método o la razón por la que no se completó correctamente la transferencia en su totalidad. Para WriteReadPartial, el valor indica si los datos para las operaciones de escritura y lectura se transfirieron completamente.</summary>
+    </member><member name="T:Windows.Devices.I2c.I2cTransferStatus">
+      <summary>Describe si las transferencias de datos que realizaron los métodos ReadPartial, WritePartial o WriteReadPartial se completaron correctamente o proporciona la razón por la que las transferencias no se completan correctamente.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cTransferStatus.FullTransfer">
+      <summary>Los datos se transfirieron completamente. Para WriteReadPartial, los datos para las operaciones de escritura y lectora se transfirieron completamente. Para este código de estado, el valor del miembro I2cTransferResult.BytesTransferred que el método devuelve es igual que el tamaño del búfer que especificó al llamar al método o es igual a la suma de los tamaños de dos búferes que especificó para WriteReadPartial.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cTransferStatus.PartialTransfer">
+      <summary>El dispositivo de I2C no confirmó la transferencia de datos antes de que todos los datos se transfirieran. Para este código de estado, el valor del miembro I2cTransferResult.BytesTransferred que el método devuelve es el número de bytes transferidos realmente. Para WriteReadPartial, el valor es la suma del número de bytes que la operación escribió y el número de bytes que leyó la operación.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cTransferStatus.SlaveAddressNotAcknowledged">
+      <summary>No se confirmó la dirección del bus. Para este código de estado, el valor del miembro I2cTransferResult.BytesTransferred que el método devuelve del método es 0.</summary>
+    </member><member name="T:Windows.Devices.I2c.II2cDeviceStatics">
+      <summary>Proporciona formas de abrir un canal de comunicaciones para un dispositivo en un bus de circuito inter-integrado (I2C).</summary>
+    </member><member name="M:Windows.Devices.I2c.II2cDeviceStatics.FromIdAsync(System.String,Windows.Devices.I2c.I2cConnectionSettings)">
+      <summary>Recupera de forma asincrónica un objeto I2cDevice para el controlador de bus de circuito inter-integrado (I2C) que tiene el identificador del dispositivo plug and play especificado, usando la configuración de conexión indicada.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>Operación asincrónica que devuelve el objeto I2cDevice.</returns>
+      <param name="deviceId">Identificador del dispositivo plug and play del controlador de bus I2C del dispositivo para el que desea crear un objeto I2cDevice.</param>
+      <param name="settings">Configuración de la conexión que se usa para la comunicación con el controlador de bus I2C que especifica deviceId.</param>
+    </member><member name="M:Windows.Devices.I2c.II2cDeviceStatics.GetDeviceSelector">
+      <summary>Recupera una cadena sintaxis de consulta avanzada (AQS) para todos los controladores de bus de circuito inter-integrados (I2C) en el sistema.</summary>
+      <returns>Una cadena de AQS para todos los controladores de bus I2C en el sistema, que puede usar con el método DeviceInformation.FindAllAsync para obtener objetos DeviceInformation para esos controladores de bus.</returns>
+    </member><member name="M:Windows.Devices.I2c.II2cDeviceStatics.GetDeviceSelector(System.String)">
+      <summary>Recupera una cadena de sintaxis de consulta avanzada (AQS) para el bus de circuito inter-integrado (I2C) que tiene el nombre descriptivo especificado.</summary>
+      <returns>Una cadena de AQS para el bus de I2C que especifica friendlyName y que puede usar con el método DeviceInformation.FindAllAsync para obtener un objeto DeviceInformation para ese bus.</returns>
+      <param name="friendlyName">Nombre descriptivo para el bus I2C particular en una plataforma de hardware específica para la que desea obtener la cadena de AQS.</param>
+    </member><member name="T:Windows.Devices.I2c.Provider.II2cControllerProvider">
+      <summary>Representa las propiedades y métodos comunes a todos los controladores de I2C.</summary>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cControllerProvider.GetDeviceProvider(Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings)">
+      <summary>Obtiene el proveedor de I2C con los valores especificados.</summary>
+      <returns>Proveedor de dispositivos de I2C.</returns>
+      <param name="settings">Valores deseados.</param>
+    </member><member name="T:Windows.Devices.I2c.Provider.II2cDeviceProvider">
+      <summary>Representa los métodos comunes para todos los proveedores de dispositivos I2C.</summary>
+    </member><member name="P:Windows.Devices.I2c.Provider.II2cDeviceProvider.DeviceId">
+      <summary>Obtiene el identificador del dispositivo listo para su uso del controlador de bus del circuito (I2C) para el dispositivo.</summary>
+      <returns>Identificador del dispositivo listo para su uso del controlador de bus del circuito (I2C) para el dispositivo.</returns>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.Read(System.Byte[])">
+      <summary>Lee datos del bus de circuito inter-integrado (I2C) en el que el dispositivo está conectado dentro del búfer especificado.</summary>
+      <param name="buffer">Búfer para el que desea leer los datos desde el bus I2C. La longitud de búfer determina cuántos datos se van a solicitar del dispositivo.</param>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.ReadPartial(System.Byte[])">
+      <summary>Lee datos del bus de circuito inter-integrado (I2C) en el que el dispositivo está conectado en del búfer especificado, y devuelve información sobre la correcta realización de la operación que puede usar para la administración de errores.</summary>
+      <returns>Estructura que contiene información sobre la correcta realización de la operación de lectura y del número de bytes real que la operación leyó en el búfer.</returns>
+      <param name="buffer">Búfer para el que desea leer los datos desde el bus I2C. La longitud de búfer determina cuántos datos se van a solicitar del dispositivo.</param>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.Write(System.Byte[])">
+      <summary>Escribe datos en el bus del dispositivo con un circuito inter-integrado (I2C) al que el dispositivo está conectado.</summary>
+      <param name="buffer">Búfer que contiene los datos que desea escribir en el dispositivo de I2C. Estos datos no deben incluir la dirección del bus.</param>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.WritePartial(System.Byte[])">
+      <summary>Escribe datos en el bus de circuito inter-integrado (I2C) en el que el dispositivo está conectado, y devuelve información sobre la correcta realización de la operación que puede usar para la administración de errores.</summary>
+      <returns>Estructura que contiene información sobre la correcta realización de la operación de escritura y del número de bytes real que la operación escribió en el búfer.</returns>
+      <param name="buffer">Búfer que contiene los datos que desea escribir en el dispositivo de I2C. Estos datos no deben incluir la dirección del bus.</param>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.WriteRead(System.Byte[],System.Byte[])">
+      <summary>Realiza una operación atómica para escribir datos y después leerlos en el bus de circuito inter-integrado (I2C) en el que el dispositivo está conectado, y envía una condición de reinicio entre las operaciones de escritura y de lectura.</summary>
+      <param name="writeBuffer">Búfer que contiene los datos que desea escribir en el dispositivo de I2C. Estos datos no deben incluir la dirección del bus.</param>
+      <param name="readBuffer">Búfer para el que desea leer los datos desde el bus I2C. La longitud de búfer determina cuántos datos se van a solicitar del dispositivo.</param>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.WriteReadPartial(System.Byte[],System.Byte[])">
+      <summary>Realiza una operación atómica para escribir datos y después leerlos en el bus de circuito inter-integrado (I2C) en el que el dispositivo está conectado, y devuelve información sobre la correcta realización de la operación que puede usar para la administración de errores.</summary>
+      <returns>Estructura que contiene información sobre si las partes de lectura y escritura de la operación se completaron correctamente y la suma del número de bytes real que escribió la operación, además del número de bytes real que leyó la operación.</returns>
+      <param name="writeBuffer">Búfer que contiene los datos que desea escribir en el dispositivo de I2C. Estos datos no deben incluir la dirección del bus.</param>
+      <param name="readBuffer">Búfer para el que desea leer los datos desde el bus I2C. La longitud de búfer determina cuántos datos se van a solicitar del dispositivo.</param>
+    </member><member name="T:Windows.Devices.I2c.Provider.II2cProvider">
+      <summary>Representa las acciones comunes a todos los proveedores de I2C.</summary>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cProvider.GetControllersAsync">
+      <summary>Obtiene todos los controladores de I2C que están en el sistema.</summary>
+      <returns>Cuando el método se completa correctamente, devuelve una lista de valores que representan las controladores de I2C disponibles en el sistema.</returns>
+    </member><member name="T:Windows.Devices.I2c.Provider.ProviderI2cBusSpeed">
+      <summary>Describe las velocidades de bus disponibles para conectarse a un dispositivo con un circuito inter-integrado (I2C). La velocidad de bus es la frecuencia de reloj del bus I2C cuando se tiene acceso al dispositivo.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cBusSpeed.FastMode">
+      <summary>Velocidad rápida de 400 kHz.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cBusSpeed.StandardMode">
+      <summary>Velocidad estándar de 100 kilohercios (kHz). Esta es la velocidad predeterminada.</summary>
+    </member><member name="T:Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings">
+      <summary>Representa la configuración de conexión que desea usar para un dispositivo con un circuito inter-integrado (I2C).</summary>
+    </member><member name="P:Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings.BusSpeed">
+      <summary>Obtiene o establece la velocidad de bus que se usará para conectarse a un dispositivo con un circuito inter-integrado (I2C). La velocidad de bus es la frecuencia de reloj del bus I2C cuando se tiene acceso al dispositivo.</summary>
+      <returns>Velocidad de bus que se usará para conectarse a un dispositivo I2C.</returns>
+    </member><member name="P:Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings.SharingMode">
+      <summary>Obtiene o establece el modo de uso compartido que se usará conectarse a la dirección de bus del circuito inter-integrado (I2C). Este modo determina si se pueden abrir otras conexiones con la dirección del bus I2C mientras está conectado a la dirección del bus I2C.</summary>
+      <returns>Modo de uso compartido que se usará para conectarse a la dirección del bus I2C.</returns>
+    </member><member name="P:Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings.SlaveAddress">
+      <summary>Obtiene o establece la dirección del bus del dispositivo con un circuito inter-integrado (I2C).</summary>
+      <returns>Dirección del bus del dispositivo I2C. Solo se admite el direccionamiento de siete bits, por tanto el intervalo de valores validos es de 8 a 119.</returns>
+    </member><member name="T:Windows.Devices.I2c.Provider.ProviderI2cSharingMode">
+      <summary>Describe los modos en los que puede conectarse a una dirección de bus de un circuito inter-integrado (I2C). Estos modos determinan si se pueden abrir otras conexiones con la dirección del bus I2C mientras está conectado a la dirección del bus I2C.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cSharingMode.Exclusive">
+      <summary>Se conecta con la dirección del bus I2C en modo exclusivo, por lo que no se puede establecer ninguna otra conexión con la dirección del bus I2C mientras esté conectado.
+Este es el modo predeterminado.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cSharingMode.Shared">
+      <summary>Se conecta con la dirección del bus I2C en modo compartido, por lo que no se pueden establecer otras conexiones con la dirección del bus I2C mientras esté conectado. Puede realizar todas las operaciones en conexiones compartidas, pero use estas conexiones con cautela. Cuando varias aplicaciones de cliente cambian el estado global del dispositivo de I2C, se pueden producir condiciones de carrera. Un ejemplo de uso de una conexión compartida es un sensor que obtiene lecturas sin cambiar el estado del dispositivo.</summary>
+    </member><member name="T:Windows.Devices.I2c.Provider.ProviderI2cTransferResult">
+      <summary>Proporciona información sobre si las transferencias de datos que realizaron los métodos ReadPartial, WritePartial o WriteReadPartial se efectuaron correctamente y el número de bytes real que transfirieron los métodos.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferResult.BytesTransferred">
+      <summary>Número real de bytes que transfirió efectivamente la operación. La tabla siguiente describe lo que representa este valor para cada número real de bytes de method.MethodDescriptionReadPartialThe que la operación de lectura lee en el búfer. Si el valor del miembro Status es ProviderI2CTransferStatus.PartialTransfer, este valor puede ser menor que el número de bytes del búfer que especificó en el parámetro de búfer. WritePartial Número real de bytes que la operación de escritura transfirió al dispositivo de I2C. Si el valor del miembro Status es ProviderI2CTransferStatus.PartialTransfer, este valor puede ser menor que el número de bytes del búfer que especificó en el parámetro de búfer. WriteReadPartial Número real de bytes que la operación transfirió, que es la suma del número de bytes que la operación escribió y el número de bytes que la operación leyó. Si el valor del miembro Status es ProviderI2CTransferStatus.PartialTransfer, este valor puede ser menor que la suma de las longitudes de los búferes que especificó en los parámetros writeBuffer y readBuffer.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferResult.Status">
+      <summary>Valor de enumeración que indica si la operación de lectura o escritura transfirió el número completo de bytes que solicitó el método o la razón por la que no se completó correctamente la transferencia en su totalidad. Para WriteReadPartial, el valor indica si los datos para las operaciones de escritura y lectura se transfirieron completamente.</summary>
+    </member><member name="T:Windows.Devices.I2c.Provider.ProviderI2cTransferStatus">
+      <summary>Describe si las transferencias de datos que realizaron los métodos ReadPartial, WritePartial o WriteReadPartial se completaron correctamente o proporciona la razón por la que las transferencias no se completan correctamente.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferStatus.FullTransfer">
+      <summary>Los datos se transfirieron completamente. Para WriteReadPartial, los datos para las operaciones de escritura y lectora se transfirieron completamente. Para este código de estado, el valor del miembro ProviderI2cTransferResult.BytesTransferred que el método devuelve es igual que el tamaño del búfer que especificó al llamar al método o es igual a la suma de los tamaños de dos búferes que especificó para WriteReadPartial.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferStatus.PartialTransfer">
+      <summary>El dispositivo de I2C no confirmó la transferencia de datos antes de que todos los datos se transfirieran. Para este código de estado, el valor del miembro ProviderI2cTransferResult.BytesTransferred que el método devuelve es el número de bytes transferidos realmente. Para WriteReadPartial, el valor es la suma del número de bytes que la operación escribió y el número de bytes que leyó la operación.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferStatus.SlaveAddressNotAcknowledged">
+      <summary>No se confirmó la dirección del bus. Para este código de estado, el valor del miembro ProviderI2cTransferResult.BytesTransferred que el método devuelve del método es 0.</summary>
+    </member><member name="T:Windows.Devices.Pwm.PwmController">
+      <summary>Representa un controlador de PWM conectado al sistema.</summary>
+    </member><member name="P:Windows.Devices.Pwm.PwmController.ActualFrequency">
+      <summary>Obtiene la frecuencia real del PWM.</summary>
+      <returns>Frecuencia en Hz.</returns>
+    </member><member name="P:Windows.Devices.Pwm.PwmController.MaxFrequency">
+      <summary>Obtiene la frecuencia máxima que ofrece el controlador.</summary>
+      <returns>Frecuencia máxima en Hz.</returns>
+    </member><member name="P:Windows.Devices.Pwm.PwmController.MinFrequency">
+      <summary>Obtiene la frecuencia mínima que ofrece el controlador.</summary>
+      <returns>Frecuencia mínima en Hz.</returns>
+    </member><member name="P:Windows.Devices.Pwm.PwmController.PinCount">
+      <summary>Obtiene el número de terminales disponible en el sistema.</summary>
+      <returns>Número de terminales.</returns>
+    </member><member name="M:Windows.Devices.Pwm.PwmController.GetControllersAsync(Windows.Devices.Pwm.Provider.IPwmProvider)">
+      <summary>Obtiene todos los controladores en el sistema de forma asincrónica.</summary>
+      <returns>Cuando el método se completa correctamente, devuelve una lista de valores que representan las controladores disponibles en el sistema.</returns>
+      <param name="provider">Proveedor de PWM que está en el sistema.</param>
+    </member><member name="M:Windows.Devices.Pwm.PwmController.GetDefaultAsync">
+      <summary>Obtiene el controlador predeterminado de PWM en el sistema.</summary>
+      <returns>Controlador de PWM predeterminado en el sistema, o NULL si el sistema no tiene un controlador de PWM.</returns>
+    </member><member name="M:Windows.Devices.Pwm.PwmController.OpenPin(System.Int32)">
+      <summary>Abre el terminal para su uso.</summary>
+      <returns>Terminal solicitado ahora disponible para su uso.</returns>
+      <param name="pinNumber">Terminal que se va a abrir.</param>
+    </member><member name="M:Windows.Devices.Pwm.PwmController.SetDesiredFrequency(System.Double)">
+      <summary>Establece la frecuencia de PWM.</summary>
+      <returns>Frecuencia real establecida. Esta será la coincidencia más exacta admitida según determina el proveedor.</returns>
+      <param name="desiredFrequency">Valor de la frecuencia deseada en Hz.</param>
+    </member><member name="T:Windows.Devices.Pwm.PwmPin">
+      <summary>Representa un único terminal de PWM en el sistema.</summary>
+    </member><member name="P:Windows.Devices.Pwm.PwmPin.Controller">
+      <summary>Obtiene el controlador de PWM en uso por este terminal.</summary>
+      <returns>Controlador.</returns>
+    </member><member name="P:Windows.Devices.Pwm.PwmPin.IsStarted">
+      <summary>Obtiene el estado started del terminal.</summary>
+      <returns>True si el PWM se ha iniciado en este terminal; de lo contrario, false.</returns>
+    </member><member name="P:Windows.Devices.Pwm.PwmPin.Polarity">
+      <summary>Obtiene o establece la polaridad del terminal.</summary>
+      <returns>Polaridad del terminal.</returns>
+    </member><member name="M:Windows.Devices.Pwm.PwmPin.Close">
+      <summary>Cierra la conexión actual con el terminal y hace esté disponible para que otros lo abran.</summary>
+    </member><member name="M:Windows.Devices.Pwm.PwmPin.GetActiveDutyCyclePercentage">
+      <summary>Recupera el porcentaje del ciclo de trabajo para este terminal.</summary>
+      <returns>Porcentaje del ciclo de trabajo, entre 0 y 100.</returns>
+    </member><member name="M:Windows.Devices.Pwm.PwmPin.SetActiveDutyCyclePercentage(System.Double)">
+      <summary>Establece el porcentaje del ciclo de trabajo para este terminal.</summary>
+      <param name="dutyCyclePercentage">Porcentaje deseado del ciclo de trabajo, representado como un valor entre 0 y 100.</param>
+    </member><member name="M:Windows.Devices.Pwm.PwmPin.Start">
+      <summary>Inicia el PWM en este terminal.</summary>
+    </member><member name="M:Windows.Devices.Pwm.PwmPin.Stop">
+      <summary>Detiene el PWM en este terminal.</summary>
+    </member><member name="T:Windows.Devices.Pwm.PwmPulsePolarity">
+      <summary>Describe en qué polaridad debe iniciarse la señal del PWM.</summary>
+    </member><member name="F:Windows.Devices.Pwm.PwmPulsePolarity.ActiveHigh">
+      <summary>Configura la señal del PWM para que se inicie en el estado activo alto.</summary>
+    </member><member name="F:Windows.Devices.Pwm.PwmPulsePolarity.ActiveLow">
+      <summary>Configura la señal del PWM para que se inicie en el estado activo bajo.</summary>
+    </member><member name="T:Windows.Devices.Pwm.Provider.IPwmControllerProvider">
+      <summary>Representa las propiedades y métodos comunes a todos los controladores de PWM.</summary>
+    </member><member name="P:Windows.Devices.Pwm.Provider.IPwmControllerProvider.ActualFrequency">
+      <summary>Obtiene la frecuencia real del PWM.</summary>
+      <returns>Frecuencia en Hz.</returns>
+    </member><member name="P:Windows.Devices.Pwm.Provider.IPwmControllerProvider.MaxFrequency">
+      <summary>Obtiene la frecuencia máxima que ofrece el controlador.</summary>
+      <returns>Frecuencia máxima en Hz.</returns>
+    </member><member name="P:Windows.Devices.Pwm.Provider.IPwmControllerProvider.MinFrequency">
+      <summary>Obtiene la frecuencia mínima que ofrece el controlador.</summary>
+      <returns>Frecuencia mínima en Hz.</returns>
+    </member><member name="P:Windows.Devices.Pwm.Provider.IPwmControllerProvider.PinCount">
+      <summary>Obtiene el número de terminales de PWM disponibles en el sistema.</summary>
+      <returns>Número terminales disponibles.</returns>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.AcquirePin(System.Int32)">
+      <summary>Adquiere el terminal especificado y abre ese terminal para su uso.</summary>
+      <param name="pin">Para qué terminal abrir una conexión de PWM.</param>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.DisablePin(System.Int32)">
+      <summary>Detiene el PWM en este terminal.</summary>
+      <param name="pin">En qué terminal detener la señal de PWM.</param>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.EnablePin(System.Int32)">
+      <summary>Inicia la señal de PWM en la terminal especificada.</summary>
+      <param name="pin">En qué terminal iniciar la señal de PWM.</param>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.ReleasePin(System.Int32)">
+      <summary>Libera la conexión para un terminal especificado y hace que esté disponible para otros.</summary>
+      <param name="pin">Terminal que se va a liberar.</param>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.SetDesiredFrequency(System.Double)">
+      <summary>Establece la frecuencia deseada de PWM.</summary>
+      <returns>La frecuencia real de PWM después de establecer el valor anterior. Esta será la coincidencia más exacta admitida según determina el proveedor.</returns>
+      <param name="frequency">Frecuencia deseada en Hz.</param>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.SetPulseParameters(System.Int32,System.Double,System.Boolean)">
+      <summary>Establece los parámetros de PWM para el terminal, el ciclo de trabajo y la polaridad.</summary>
+      <param name="pin">Indica a qué terminal se aplican estos valores.</param>
+      <param name="dutyCycle">El porcentaje del ciclo de trabajo, con un valor entre 0 y 100 inclusive.</param>
+      <param name="invertPolarity">True si la polaridad del terminal se debe invertir; de lo contrario, false.</param>
+    </member><member name="T:Windows.Devices.Pwm.Provider.IPwmProvider">
+      <summary>Representa los métodos comunes para todos los proveedores de PWM.</summary>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmProvider.GetControllers">
+      <summary>Obtiene los controladores disponibles en el sistema.</summary>
+      <returns>Devuelve una lista de controladores de PWM disponibles en el sistema.</returns>
+    </member><member name="T:Windows.Devices.Spi.ISpiDeviceStatics">
+      <summary>Representa las estadísticas del dispositivo de SPI que son comunes en los dispositivos de SPI.</summary>
+    </member><member name="M:Windows.Devices.Spi.ISpiDeviceStatics.FromIdAsync(System.String,Windows.Devices.Spi.SpiConnectionSettings)">
+      <summary>Abre un dispositivo con la configuración de conexión proporcionada.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>Dispositivo de SPI.</returns>
+      <param name="busId">Identificador del bus.</param>
+      <param name="settings">Configuración de la conexión.</param>
+    </member><member name="M:Windows.Devices.Spi.ISpiDeviceStatics.GetBusInfo(System.String)">
+      <summary>Recupera la información sobre un bus en concreto.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>Información del bus solicitada.</returns>
+      <param name="busId">Identificador del bus.</param>
+    </member><member name="M:Windows.Devices.Spi.ISpiDeviceStatics.GetDeviceSelector">
+      <summary>Obtiene todos los bus de SPI encontrados en el sistema.</summary>
+      <returns>Cadena que contiene todos los bus del sistema.</returns>
+    </member><member name="M:Windows.Devices.Spi.ISpiDeviceStatics.GetDeviceSelector(System.String)">
+      <summary>Obtiene todos los buses de SPI encontrados en el sistema que coinciden con el parámetro de entrada.</summary>
+      <returns>Cadena que contiene todos los buses que tienen la entrada en el nombre.</returns>
+      <param name="friendlyName">Parámetro de entrada que especifica un nombre de identificación para el bus deseado. Esto se corresponde normalmente con un nombre en el diagrama esquemático.</param>
+    </member><member name="T:Windows.Devices.Spi.SpiBusInfo">
+      <summary>Representa la información sobre un bus de SPI.</summary>
+    </member><member name="P:Windows.Devices.Spi.SpiBusInfo.ChipSelectLineCount">
+      <summary>Obtiene el número de líneas de selección de chip disponibles en el bus.</summary>
+      <returns>Número de líneas de selección de chip.</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiBusInfo.MaxClockFrequency">
+      <summary>Frecuencia máxima del ciclo de reloj del bus.</summary>
+      <returns>Ciclo del reloj en Hz.</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiBusInfo.MinClockFrequency">
+      <summary>Frecuencia mínima del ciclo de reloj del bus.</summary>
+      <returns>Ciclo del reloj en Hz.</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiBusInfo.SupportedDataBitLengths">
+      <summary>Obtiene la longitud de bits que se pueden usar en el bus para transmitir datos.</summary>
+      <returns>Longitudes de datos admitidas.</returns>
+    </member><member name="T:Windows.Devices.Spi.SpiConnectionSettings">
+      <summary>Representa la configuración para la establecer una conexión con un dispositivo.</summary>
+    </member><member name="M:Windows.Devices.Spi.SpiConnectionSettings.#ctor(System.Int32)">
+      <summary>Inicializa una nueva instancia de SpiConnectionSettings.</summary>
+      <param name="chipSelectLine">Línea de selección del chip en la que se realizará la conexión.</param>
+    </member><member name="P:Windows.Devices.Spi.SpiConnectionSettings.ChipSelectLine">
+      <summary>Obtiene o establece la línea de selección de chip para la conexión al dispositivo de SPI.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>Línea de selección de chip.</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiConnectionSettings.ClockFrequency">
+      <summary>Obtiene o establece la frecuencia de reloj para la conexión.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>Valor de la frecuencia del reloj en Hz.</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiConnectionSettings.DataBitLength">
+      <summary>Obtiene o establece la longitud de bits para los datos en esta conexión.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>Longitud de los bits de datos.</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiConnectionSettings.Mode">
+      <summary>Obtiene o establece SpiMode para esta conexión.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>Modo de comunicación.</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiConnectionSettings.SharingMode">
+      <summary>Obtiene o establece el modo de uso compartido para la conexión de SPI.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>Modo compartido.</returns>
+    </member><member name="T:Windows.Devices.Spi.SpiController">
+      <summary>Representa el controlador de SPI en el sistema</summary>
+    </member><member name="M:Windows.Devices.Spi.SpiController.GetControllersAsync(Windows.Devices.Spi.Provider.ISpiProvider)">
+      <summary>Obtiene todos los controladores de SPI que están en el sistema.</summary>
+      <returns>Cuando el método se completa correctamente, devuelve una lista de valores que representan las controladores de SPI disponibles en el sistema.</returns>
+      <param name="provider">El proveedor de SPI para los controladores en el sistema.</param>
+    </member><member name="M:Windows.Devices.Spi.SpiController.GetDefaultAsync">
+      <summary>Obtiene el controlador predeterminado de SPI en el sistema.</summary>
+      <returns>Controlador de SPI predeterminado en el sistema, o NULL si el sistema no tiene un controlador de SPI.</returns>
+    </member><member name="M:Windows.Devices.Spi.SpiController.GetDevice(Windows.Devices.Spi.SpiConnectionSettings)">
+      <summary>Obtiene el dispositivo de SPI con los valores especificados.</summary>
+      <returns>Dispositivo de SPI.</returns>
+      <param name="settings">Configuración de la conexión deseada.</param>
+    </member><member name="T:Windows.Devices.Spi.SpiDevice">
+      <summary>Representa un dispositivo conectado a través del bus de SPI.</summary>
+    </member><member name="P:Windows.Devices.Spi.SpiDevice.ConnectionSettings">
+      <summary>Obtiene la configuración de la conexión para el dispositivo.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>Configuración de la conexión.</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiDevice.DeviceId">
+      <summary>Obtiene el identificador único asociado al dispositivo.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>El identificador.</returns>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.Close">
+      <summary>Cierra la conexión con el dispositivo.</summary>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.FromIdAsync(System.String,Windows.Devices.Spi.SpiConnectionSettings)">
+      <summary>Abre un dispositivo con la configuración de conexión proporcionada.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>Dispositivo de SPI solicitado.</returns>
+      <param name="busId">Identificador del bus.</param>
+      <param name="settings">Configuración de la conexión.</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.GetBusInfo(System.String)">
+      <summary>Recupera la información sobre un bus en concreto.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <returns>Información del bus solicitada.</returns>
+      <param name="busId">Identificador del bus.</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.GetDeviceSelector">
+      <summary>Obtiene todos los bus de SPI encontrados en el sistema.</summary>
+      <returns>Cadena que contiene todos los buses encontrados en el sistema.</returns>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.GetDeviceSelector(System.String)">
+      <summary>Obtiene todos los buses de SPI encontrados en el sistema que coinciden con el parámetro de entrada.</summary>
+      <returns>Cadena que contiene todos los buses que tienen la entrada en el nombre.</returns>
+      <param name="friendlyName">Parámetro de entrada que especifica un nombre de identificación para el bus deseado. Esto se corresponde normalmente con un nombre en el diagrama esquemático.</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.Read(System.Byte[])">
+      <summary>Lee desde el dispositivo conectado.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <param name="buffer">Matriz que contiene los datos que se leyeron en el dispositivo.</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.TransferFullDuplex(System.Byte[],System.Byte[])">
+      <summary>Transfiere los datos mediante un sistema de comunicación de dúplex completo.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <param name="writeBuffer">Matriz que contiene los datos que se van a escribir en el dispositivo.</param>
+      <param name="readBuffer">Matriz que contiene los datos que se leyeron en el dispositivo.</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.TransferSequential(System.Byte[],System.Byte[])">
+      <summary>Transferencia secuencial de datos al dispositivo.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <param name="writeBuffer">Matriz que contiene los datos que se van a escribir en el dispositivo.</param>
+      <param name="readBuffer">Matriz que contiene los datos que se leyeron en el dispositivo.</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.Write(System.Byte[])">
+      <summary>Escribe en el dispositivo conectado.</summary>
+      <capability type="lowLevelDevices">Necesario para las aplicaciones que se ejecuten en dispositivos de IoT para tener acceso al hardware de bus de bajo nivel como GPIO, I2C, SPI, ADC y PWM.</capability>
+      <param name="buffer">Matriz que contiene los datos que se van a escribir en el dispositivo.</param>
+    </member><member name="T:Windows.Devices.Spi.SpiMode">
+      <summary>Define el modo de comunicación de SPI.</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiMode.Mode0">
+      <summary>CPOL = 0, CPHA = 0.</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiMode.Mode1">
+      <summary>CPOL = 0, CPHA = 1.</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiMode.Mode2">
+      <summary>CPOL = 1, CPHA = 0.</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiMode.Mode3">
+      <summary>CPOL = 1, CPHA = 1.</summary>
+    </member><member name="T:Windows.Devices.Spi.SpiSharingMode">
+      <summary>Define el modo compartido para el bus de SPI.</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiSharingMode.Exclusive">
+      <summary>El segmento del bus de SPI no se comparte.</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiSharingMode.Shared">
+      <summary>El bus de SPI se comparte.</summary>
+    </member><member name="T:Windows.Devices.Spi.Provider.ISpiControllerProvider">
+      <summary>Representa acciones comunes para todos los controladores de SPI.</summary>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiControllerProvider.GetDeviceProvider(Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings)">
+      <summary>Obtiene el dispositivo de SPI con los valores especificados.</summary>
+      <returns>Dispositivo de SPI.</returns>
+      <param name="settings">Configuración de la conexión deseada.</param>
+    </member><member name="T:Windows.Devices.Spi.Provider.ISpiDeviceProvider">
+      <summary>Representa las acciones comunes para un dispositivo conectado a través del bus de SPI.</summary>
+    </member><member name="P:Windows.Devices.Spi.Provider.ISpiDeviceProvider.ConnectionSettings">
+      <summary>Obtiene la configuración de la conexión para el dispositivo.</summary>
+      <returns>Configuración de la conexión.</returns>
+    </member><member name="P:Windows.Devices.Spi.Provider.ISpiDeviceProvider.DeviceId">
+      <summary>Obtiene el identificador único asociado al dispositivo.</summary>
+      <returns>El identificador del dispositivo</returns>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiDeviceProvider.Read(System.Byte[])">
+      <summary>Lee desde el dispositivo conectado.</summary>
+      <param name="buffer">Matriz que contiene los datos que se leyeron en el dispositivo.</param>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiDeviceProvider.TransferFullDuplex(System.Byte[],System.Byte[])">
+      <summary>Transfiere los datos mediante un sistema de comunicación de dúplex completo.</summary>
+      <param name="writeBuffer">Matriz que contiene los datos que se van a escribir en el dispositivo.</param>
+      <param name="readBuffer">Matriz que contiene los datos que se leyeron en el dispositivo.</param>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiDeviceProvider.TransferSequential(System.Byte[],System.Byte[])">
+      <summary>Transferencia secuencial de datos al dispositivo.</summary>
+      <param name="writeBuffer">Matriz que contiene los datos que se van a escribir en el dispositivo.</param>
+      <param name="readBuffer">Matriz que contiene los datos que se leyeron en el dispositivo.</param>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiDeviceProvider.Write(System.Byte[])">
+      <summary>Escribe en el dispositivo conectado.</summary>
+      <param name="buffer">Matriz que contiene los datos que se van a escribir en el dispositivo.</param>
+    </member><member name="T:Windows.Devices.Spi.Provider.ISpiProvider">
+      <summary>Representa las acciones comunes para los proveedores del controlador de SPI.</summary>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiProvider.GetControllersAsync">
+      <summary>Obtiene todos los controladores de SPI en el sistema para el proveedor.</summary>
+      <returns>Cuando el método se completa correctamente, devuelve una lista de valores que representan las controladores de SPI disponibles en el sistema.</returns>
+    </member><member name="T:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings">
+      <summary>Representa la configuración del proveedor para la establecer una conexión con un dispositivo.</summary>
+    </member><member name="M:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.#ctor(System.Int32)">
+      <summary>Inicializa una nueva instancia de ProviderSpiConnectionSettings.</summary>
+      <param name="chipSelectLine">Línea de selección del chip en la que se realizará la conexión.</param>
+    </member><member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.ChipSelectLine">
+      <summary>Obtiene o establece la línea de selección de chip para la conexión al dispositivo de SPI.</summary>
+      <returns>Línea de selección de chip.</returns>
+    </member><member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.ClockFrequency">
+      <summary>Obtiene o establece la frecuencia de reloj para la conexión.</summary>
+      <returns>Valor de la frecuencia del reloj en Hz.</returns>
+    </member><member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.DataBitLength">
+      <summary>Obtiene o establece la longitud de bits para los datos en esta conexión.</summary>
+      <returns>Longitud de los bits de datos.</returns>
+    </member><member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.Mode">
+      <summary>Obtiene o establece ProviderSpiMode para esta conexión.</summary>
+      <returns>Modo de comunicación.</returns>
+    </member><member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.SharingMode">
+      <summary>Obtiene o establece el modo de uso compartido para la conexión de SPI.</summary>
+      <returns>Modo compartido.</returns>
+    </member><member name="T:Windows.Devices.Spi.Provider.ProviderSpiMode">
+      <summary>Define el modo de comunicación de SPI.</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiMode.Mode0">
+      <summary>CPOL = 0, CPHA = 0.</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiMode.Mode1">
+      <summary>CPOL = 0, CPHA = 1.</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiMode.Mode2">
+      <summary>CPOL = 1, CPHA = 0.</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiMode.Mode3">
+      <summary>CPOL = 1, CPHA = 1.</summary>
+    </member><member name="T:Windows.Devices.Spi.Provider.ProviderSpiSharingMode">
+      <summary>Define el modo compartido para el bus de SPI.</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiSharingMode.Exclusive">
+      <summary>El segmento del bus de SPI no se comparte.</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiSharingMode.Shared">
+      <summary>El bus de SPI se comparte.</summary>
+    </member></members>
+</doc>

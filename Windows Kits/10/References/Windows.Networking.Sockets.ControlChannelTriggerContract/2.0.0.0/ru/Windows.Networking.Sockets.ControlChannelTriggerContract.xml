@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Networking.Sockets.ControlChannelTriggerContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Networking.Sockets.ControlChannelTrigger">
+      <summary>Позволяет объектам, которые устанавливают подключение TCP и хотят получать сообщение о входящем трафике, получать уведомления в реальном времени в фоновом режиме. Этот класс не поддерживается в Windows Phone.</summary>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.#ctor(System.String,System.UInt32)">
+      <summary>Создает новый объект ControlChannelTrigger, используя идентификатор триггера канала управления и значение интервала проверки активности сервера. Класс ControlChannelTrigger не поддерживается в Windows Phone.</summary>
+      <param name="channelId">Строка, используемая для различения различных триггеров канала управления на локальном компьютере. Максимально допустимая длина этой строки — 64 символов.</param>
+      <param name="serverKeepAliveIntervalInMinutes">Интервал проверки активности сервера (в минутах), зарегистрированный в системе для указания, когда используемое приложение и сетевые подключения должны выходить из спящего режима. Минимальное значение, которое можно задать для этого параметра — 15 минут. Максимальное значение, которое можно задать, равно 1439 мин (около 24 часов).</param>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.#ctor(System.String,System.UInt32,Windows.Networking.Sockets.ControlChannelTriggerResourceType)">
+      <summary>Создает новый объект ControlChannelTrigger, используя идентификатор триггера канала управления, значение интервала проверки активности сервера и тип ресурса, запрошенный для триггера канала управления. Класс ControlChannelTrigger не поддерживается в Windows Phone.</summary>
+      <param name="channelId">Строка, используемая для различения различных триггеров канала управления на локальном компьютере. Максимально допустимая длина этой строки — 64 символов.</param>
+      <param name="serverKeepAliveIntervalInMinutes">Интервал проверки активности сервера (в минутах), зарегистрированный в системе для указания, когда используемое приложение и сетевые подключения должны выходить из спящего режима. Минимальное значение, которое можно задать для этого параметра — 15 минут. Максимальное значение, которое можно задать, равно 1439 мин (около 24 часов).</param>
+      <param name="resourceRequestType">Тип ресурса, запрашиваемый для триггера канала управления.</param>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.ControlChannelTriggerId">
+      <summary>Получает строку, которая может использоваться для различения различных триггеров канала управления на локальном компьютере. Класс ControlChannelTrigger не поддерживается в Windows Phone.</summary>
+      <returns>Строка, которую можно использовать для различения различных триггеров канала управления.</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.CurrentKeepAliveIntervalInMinutes">
+      <summary>Получает интервал поддержания активности сети (в минутах), поддерживаемый сетевыми компонентами низкого уровня в стеке TCP на основе текущего состояния сети. Класс ControlChannelTrigger не поддерживается в Windows Phone.</summary>
+      <returns>Интервал поддержания активности сети (в минутах), поддерживаемый сетевыми компонентами низкого уровня в стеке TCP на основе текущего состояния сети.</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.IsWakeFromLowPowerSupported">
+      <summary>Получает значение, указывающее, поддерживается ли возобновление работы в режимах низкой мощности.</summary>
+      <returns>Если значение true, возобновление работы в режимах низкой мощности поддерживается.</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.KeepAliveTrigger">
+      <summary>Получает объект, представляющий связанный с объектом ControlChannelTrigger триггер поддержания активности, который приложение должно использовать для привязки класса активации к инфраструктуре фонового брокера. Класс ControlChannelTrigger не поддерживается в Windows Phone.</summary>
+      <returns>Строка, представляющая идентификатор класса активации для фоновой задачи поддержания активности.</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.PushNotificationTrigger">
+      <summary>Получает объект, представляющий связанный с объектом ControlChannelTrigger триггер push-уведомлений, который приложение должно использовать для привязки класса активации к инфраструктуре фонового брокера. Класс ControlChannelTrigger не поддерживается в Windows Phone.</summary>
+      <returns>Строка, представляющая идентификатор класса активации для фоновой задачи push-уведомления.</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.ServerKeepAliveIntervalInMinutes">
+      <summary>Получает или задает интервал проверки активности сервера (в минутах), зарегистрированный в системе для указания, когда используемое приложение и связанные с ними сетевые подключения должны выходить из спящего режима. Класс ControlChannelTrigger не поддерживается в Windows Phone.</summary>
+      <returns>Интервал проверки активности сервера (в минутах), зарегистрированный в системе для указания, когда используемое приложение и связанные с ними сетевые подключения должны выходить из спящего режима.</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.TransportObject">
+      <summary>Получает объект транспорта, используемый системой для транспортного соединения, связанного с объектом ControlChannelTrigger. Класс ControlChannelTrigger не поддерживается в Windows Phone.</summary>
+      <returns>Объект транспорта, используемый системой для транспортного соединения.</returns>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.Close">
+      <summary>Закрывает объект ControlChannelTrigger. Этот метод не поддерживается в Windows Phone.</summary>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.DecreaseNetworkKeepAliveInterval">
+      <summary>Предоставляет приложению способ указать, что интервал поддержания активности, поддерживаемый системой с посредниками сети для вывода из спящего режима, слишком велик и должен быть уменьшен. Этот метод применяется к элементам класса в Windows.Networking.Sockets и связанных пространствах имен. Класс ControlChannelTrigger не поддерживается в Windows Phone.</summary>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.FlushTransport">
+      <summary>Очищает любые используемые транспортным соединением сетевые данные, связанные с объектом ControlChannelTrigger для сетевого стека. Класс ControlChannelTrigger не поддерживается в Windows Phone.</summary>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.UsingTransport(System.Object)">
+      <summary>Задает транспортное подключение, которое будет использоваться триггером канала управления элементами класса в пространстве имен Windows.Networking.Sockets и в связанных пространствах имен. Класс ControlChannelTrigger не поддерживается в Windows Phone.</summary>
+      <param name="transport">Экземпляр класса сети, который представляет сетевой транспорт.</param>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.WaitForPushEnabled">
+      <summary>Позволяет приложению уведомлять систему о том, что соединение установлено и система должна завершить внутреннюю конфигурацию триггера канала управления. Класс ControlChannelTrigger не поддерживается в Windows Phone.</summary>
+      <returns>Значение, указывающее, смогла ли система завершить настройку объекта ControlChannelTrigger.</returns>
+    </member><member name="T:Windows.Networking.Sockets.ControlChannelTriggerResetReason">
+      <summary>Причина, по которой ControlChannelTrigger был сброшен. Это перечисление не поддерживается в Windows Phone.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResetReason.ApplicationRestart">
+      <summary>Объект ControlChannelTrigger был сброшен в результате перезапуска приложения. Это значение поддерживается в Windows 8.1, Windows Server 2012 R2 и более поздних версиях.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResetReason.FastUserSwitched">
+      <summary>ControlChannelTrigger был сброшен в результате быстрого переключения пользователей.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResetReason.LowPowerExit">
+      <summary>ControlChannelTrigger был сброшен в результате выхода из режима низкого потребления (выход из подключенного режима ожидания).</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResetReason.QuietHoursExit">
+      <summary>Объект ControlChannelTrigger был сброшен, поскольку в устройстве был установлен период часов "не беспокоить" и этот период закончился. Это значение поддерживается в Windows 8.1, Windows Server 2012 R2 и более поздних версиях.</summary>
+    </member><member name="T:Windows.Networking.Sockets.ControlChannelTriggerResourceType">
+      <summary>Тип ресурса, используемый триггером канала управления. Это перечисление не поддерживается в Windows Phone.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResourceType.RequestHardwareSlot">
+      <summary>Запрос на аппаратные ресурсы системы.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResourceType.RequestSoftwareSlot">
+      <summary>Запрос на программные ресурсы системы.</summary>
+    </member><member name="T:Windows.Networking.Sockets.ControlChannelTriggerStatus">
+      <summary>Указывает, могла ли система выполнить настройку объекта ControlChannelTrigger для использования элементами класса в Windows.Networking.Sockets и связанных пространствах имен. Это перечисление не поддерживается в Windows Phone.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.HardwareSlotAllocated">
+      <summary>Аппаратное гнездо было выделено системой.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.HardwareSlotRequested">
+      <summary>Проверка политики завершилась успешно, и система запросила аппаратные ресурсы.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.PolicyError">
+      <summary>Произошла ошибка политики, когда система попыталась завершить настройку объекта ControlChannelTrigger. Эта ошибка может возникать, когда приложение запросило больше подключений для аппаратных или программных слотов, чем разрешено системной политикой.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.ServiceUnavailable">
+      <summary>Служба, предоставляемая ControlChannelTrigger, недоступна. Это может произойти, если служба брокера сетевого подключения еще не готова, но приложение пытается установить канал ControlChannelTrigger. Этот код состояния предоставляется в следующих условиях: при быстрой смене пользователей и когда новый пользователь пытается установить канал ControlChannelTrigger. Когда система переходит в режим низкой производительности (подключенный режим ожидания) и приложение пытается создать программный слот. Программные слоты доступны, только когда система активна и не находится в режиме низкого потребления. Методом устранения рисков в обоих случаях будет прослушивание событий брокера системных событий и регистрация канала ControlChannelTrigger в соответствующей точке.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.SoftwareSlotAllocated">
+      <summary>Проверка политики завершилась успешно, и система выделила программные ресурсы.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.SystemError">
+      <summary>Произошла ошибка системы, когда система попыталась завершить настройку объекта ControlChannelTrigger для аппаратного гнезда.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.TransportDisconnected">
+      <summary>Сетевой механизм передачи, связанный с объектом ControlChannelTrigger, был отключен. Основное соединение TCP уже прервано сбросом TCP, полученным от удаленного местоположения, или в ходе надлежащего отключения приложением или удаленным местоположением. Наиболее распространенным вхождением является сброс TCP или выполненное надлежащим образом отключение удаленного места назначения.</summary>
+    </member><member name="T:Windows.Networking.Sockets.IControlChannelTriggerEventDetails">
+      <summary>Экземпляр объекта создается инфраструктурой фонового брокера, которая используется для различения триггеров канала управления. Этот интерфейс не поддерживается в Windows Phone.</summary>
+    </member><member name="P:Windows.Networking.Sockets.IControlChannelTriggerEventDetails.ControlChannelTrigger">
+      <summary>Получает объект ControlChannelTrigger, связанный с объектом IControlChannelTriggerEventDetails. Интерфейс IControlChannelTriggerEventDetails не поддерживается в Windows Phone.</summary>
+      <returns>Объект ControlChannelTrigger.</returns>
+    </member><member name="T:Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails">
+      <summary>Объект, экземпляр которого создан инфраструктурой фонового брокера для события ControlChannelReset, чтобы указать, что объект ControlChannelTrigger был сброшен. Этот интерфейс не поддерживается в Windows Phone.</summary>
+    </member><member name="P:Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails.HardwareSlotReset">
+      <summary>Значение, указывающее, повлияло ли на аппаратный ресурс событие сброса ControlChannelTrigger. Интерфейс IControlChannelTriggerResetEventDetails не поддерживается в Windows Phone.</summary>
+      <returns>Значение, указывающее, повлияло ли на аппаратный ресурс событие сброса ControlChannelTrigger.</returns>
+    </member><member name="P:Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails.ResetReason">
+      <summary>Значение, указывающее причину, почему объект ControlChannelTrigger был сброшен. Интерфейс IControlChannelTriggerResetEventDetails не поддерживается в Windows Phone.</summary>
+      <returns>Значение, указывающее причину, почему объект ControlChannelTrigger был сброшен.</returns>
+    </member><member name="P:Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails.SoftwareSlotReset">
+      <summary>Значение, указывающее, повлияло ли на программный ресурс событие сброса ControlChannelTrigger. Интерфейс IControlChannelTriggerResetEventDetails не поддерживается в Windows Phone.</summary>
+      <returns>Значение, указывающее, повлияло ли на программный ресурс событие сброса ControlChannelTrigger.</returns>
+    </member></members>
+</doc>

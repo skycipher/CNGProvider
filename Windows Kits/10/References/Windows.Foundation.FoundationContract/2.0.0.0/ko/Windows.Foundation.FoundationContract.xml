@@ -1,0 +1,1162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Foundation.FoundationContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Foundation.AsyncActionCompletedHandler">
+      <summary>비동기 작업의 완료된 이벤트를 처리하는 메서드를 나타냅니다.</summary>
+      <param name="asyncInfo">비동기 작업입니다.</param>
+      <param name="asyncStatus">열거형 값 중 하나입니다.</param>
+    </member><member name="T:Windows.Foundation.AsyncActionProgressHandler`1">
+      <summary>진행률 업데이트를 제공하는 비동기 작업의 진행률 업데이트 이벤트를 처리하는 메서드를 나타냅니다.</summary>
+      <typeparam name="TProgress">진행률 정보입니다.</typeparam>
+      <param name="asyncInfo">비동기 작업입니다.</param>
+      <param name="progressInfo">진행률 정보입니다.</param>
+    </member><member name="T:Windows.Foundation.AsyncActionWithProgressCompletedHandler`1">
+      <summary>진행률 업데이트를 제공하는 비동기 작업의 완료된 이벤트를 처리하는 메서드를 나타냅니다.</summary>
+      <typeparam name="TProgress">진행률 정보입니다.</typeparam>
+      <param name="asyncInfo">비동기 작업입니다.</param>
+      <param name="asyncStatus">열거형 값 중 하나입니다.</param>
+    </member><member name="T:Windows.Foundation.AsyncOperationCompletedHandler`1">
+      <summary>비동기 작업의 완료된 이벤트를 처리하는 메서드를 나타냅니다.</summary>
+      <typeparam name="TResult">결과입니다.</typeparam>
+      <param name="asyncInfo">비동기 작업입니다.</param>
+      <param name="asyncStatus">열거형 값 중 하나입니다.</param>
+    </member><member name="T:Windows.Foundation.AsyncOperationProgressHandler`2">
+      <summary>진행률 업데이트를 제공하는 비동기 작업의 진행률 업데이트 이벤트를 처리하는 메서드를 나타냅니다.</summary>
+      <typeparam name="TResult">결과입니다.</typeparam>
+      <typeparam name="TProgress">진행률 정보입니다.</typeparam>
+      <param name="asyncInfo">비동기 작업입니다.</param>
+      <param name="progressInfo">진행률 정보입니다.</param>
+    </member><member name="T:Windows.Foundation.AsyncOperationWithProgressCompletedHandler`2">
+      <summary>진행률 업데이트를 제공하는 완료된 이벤트를 처리하는 메서드를 나타냅니다.</summary>
+      <typeparam name="TResult">결과입니다.</typeparam>
+      <typeparam name="TProgress">진행률 정보입니다.</typeparam>
+      <param name="asyncInfo">비동기 작업입니다.</param>
+      <param name="asyncStatus">열거형 값 중 하나입니다.</param>
+    </member><member name="T:Windows.Foundation.AsyncStatus">
+      <summary>비동기 작업의 상태를 지정합니다.</summary>
+    </member><member name="F:Windows.Foundation.AsyncStatus.Canceled">
+      <summary>작업이 취소되었습니다.</summary>
+    </member><member name="F:Windows.Foundation.AsyncStatus.Completed">
+      <summary>작업이 완료되었습니다.</summary>
+    </member><member name="F:Windows.Foundation.AsyncStatus.Error">
+      <summary>작업에서 오류가 발생했습니다.</summary>
+    </member><member name="F:Windows.Foundation.AsyncStatus.Started">
+      <summary>작업이 시작되었습니다.</summary>
+    </member><member name="T:Windows.Foundation.DateTime">
+      <summary>일반적으로 날짜와 시간으로 표시된 시간을 나타냅니다.</summary>
+    </member><member name="F:Windows.Foundation.DateTime.UniversalTime">
+      <summary>1601년(그레고리오력을 따름) 1월 1일 자정 전 또는 후 100 나노초 단위로 시각을 나타내는 부호 있는 64비트 정수입니다.</summary>
+    </member><member name="T:Windows.Foundation.Deferral">
+      <summary>지연 완료 시 호출할 DeferralCompletedHandler를 저장하고 지연 상태를 조작합니다.</summary>
+    </member><member name="M:Windows.Foundation.Deferral.#ctor(Windows.Foundation.DeferralCompletedHandler)">
+      <summary>새 Deferral 개체를 초기화하고 지연 완료 시 호출할 DeferralCompletedHandler를 지정합니다.</summary>
+      <param name="handler">지연 완료 시 호출할 DeferralCompletedHandler입니다.</param>
+    </member><member name="M:Windows.Foundation.Deferral.Close">
+      <summary>DeferralCompletedHandler가 아직 호출되지 않은 경우 이 이벤트를 호출하고 대리인에 대한 참조를 삭제합니다.</summary>
+    </member><member name="M:Windows.Foundation.Deferral.Complete">
+      <summary>DeferralCompletedHandler가 아직 호출되지 않은 경우 이 이벤트를 호출하고 대리인에 대한 참조를 삭제합니다.</summary>
+    </member><member name="T:Windows.Foundation.DeferralCompletedHandler">
+      <summary>지연된 작업의 완료 이벤트를 처리하는 메서드를 나타냅니다.</summary>
+    </member><member name="T:Windows.Foundation.EventHandler`1">
+      <summary>일반 이벤트를 처리하는 메서드를 나타냅니다.</summary>
+      <typeparam name="T">이벤트에서 생성한 이벤트 데이터의 형식입니다.</typeparam>
+      <param name="sender">이벤트 소스입니다.</param>
+      <param name="args">이벤트 데이터입니다.</param>
+    </member><member name="T:Windows.Foundation.EventRegistrationToken">
+      <summary>변경 알림을 받는 대리자에 대한 참조를 나타냅니다.</summary>
+    </member><member name="F:Windows.Foundation.EventRegistrationToken.Value">
+      <summary>대리자에 대한 참조입니다.</summary>
+    </member><member name="T:Windows.Foundation.HResult">
+      <summary>Windows 런타임 오류를 나타냅니다.</summary>
+    </member><member name="F:Windows.Foundation.HResult.Value">
+      <summary>오류를 설명하는 정수입니다.</summary>
+    </member><member name="T:Windows.Foundation.IAsyncAction">
+      <summary>비동기 작업을 나타냅니다. 결과 개체가 없고 진행률을 보고하지 않는 많은 Windows 런타임 비동기 메서드의 반환 형식입니다.</summary>
+    </member><member name="P:Windows.Foundation.IAsyncAction.Completed">
+      <summary>작업 완료 알림을 처리하는 메서드를 가져오거나 설정합니다.</summary>
+      <returns>알림을 처리하는 메서드입니다.</returns>
+    </member><member name="M:Windows.Foundation.IAsyncAction.GetResults">
+      <summary>작업의 결과를 반환합니다.</summary>
+    </member><member name="T:Windows.Foundation.IAsyncActionWithProgress`1">
+      <summary>진행률 업데이트를 호출자에게 보고할 수 있는 비동기 작업을 나타냅니다. 결과 개체가 없지만 진행률을 콜백 수신기에 보고하는 모든 Windows 런타임 비동기 메서드의 반환 형식입니다.</summary>
+      <typeparam name="TProgress">진행률 데이터의 형식입니다.</typeparam>
+    </member><member name="P:Windows.Foundation.IAsyncActionWithProgress`1.Completed">
+      <summary>작업 완료 알림을 처리하는 메서드를 가져오거나 설정합니다.</summary>
+      <returns>알림을 처리하는 메서드입니다.</returns>
+    </member><member name="P:Windows.Foundation.IAsyncActionWithProgress`1.Progress">
+      <summary>진행률 알림을 수신하는 콜백 메서드를 가져오거나 설정합니다.</summary>
+      <returns>진행률 알림을 처리하는 콜백 메서드에 대한 참조입니다. AsyncActionProgressHandler(TProgress) 대리자를 구현하여 콜백을 정의합니다. TProgress는 메서드 구현에 따라 달라지는 진행률 단위 형식을 정의합니다.</returns>
+    </member><member name="M:Windows.Foundation.IAsyncActionWithProgress`1.GetResults">
+      <summary>작업의 결과를 반환합니다.</summary>
+    </member><member name="T:Windows.Foundation.IAsyncInfo">
+      <summary>비동기 작업을 지원합니다.
+IAsyncInfo는 비동기 메서드에 대한 반환 형식 및 진행률 조합을 지원하는 IAsyncAction, IAsyncActionWithProgress&lt;TProgress&gt;, IAsyncOperation&lt;TResult&gt; 및IAsyncOperationWithProgress&lt;TResult,TProgress&gt;에 대한 기본 인터페이스입니다.</summary>
+    </member><member name="P:Windows.Foundation.IAsyncInfo.ErrorCode">
+      <summary>비동기 작업의 오류 조건을 설명하는 문자열을 가져옵니다.</summary>
+      <returns>오류 문자열입니다.</returns>
+    </member><member name="P:Windows.Foundation.IAsyncInfo.Id">
+      <summary>비동기 작업의 핸들을 가져옵니다.</summary>
+      <returns>비동기 작업의 핸들입니다.</returns>
+    </member><member name="P:Windows.Foundation.IAsyncInfo.Status">
+      <summary>비동기 작업의 상태를 나타내는 값을 가져옵니다.</summary>
+      <returns>작업의 상태를 나타내는 열거형 값입니다. Completed 값은 메서드가 반환되었음을 나타냅니다. Started 값은 메서드 호출에서 다른 세 최종 결과(Completed, Error, Canceled)를 확인할 수 있기 전의 전송 상태를 나타냅니다.</returns>
+    </member><member name="M:Windows.Foundation.IAsyncInfo.Cancel">
+      <summary>비동기 작업을 취소합니다.</summary>
+    </member><member name="M:Windows.Foundation.IAsyncInfo.Close">
+      <summary>비동기 작업을 종료합니다.</summary>
+    </member><member name="T:Windows.Foundation.IAsyncOperation`1">
+      <summary>완료 시 결과를 반환하는 비동기 작업을 나타냅니다. 결과가 있지만 진행률을 보고하지 않는 많은 Windows 런타임 비동기 메서드의 반환 형식입니다.</summary>
+      <typeparam name="TResult">결과의 형식입니다.</typeparam>
+    </member><member name="P:Windows.Foundation.IAsyncOperation`1.Completed">
+      <summary>작업 완료 알림을 처리하는 메서드를 가져오거나 설정합니다.</summary>
+      <returns>알림을 처리하는 메서드입니다.</returns>
+    </member><member name="M:Windows.Foundation.IAsyncOperation`1.GetResults">
+      <summary>작업의 결과를 반환합니다.</summary>
+      <returns>작업 결과입니다.</returns>
+    </member><member name="T:Windows.Foundation.IAsyncOperationWithProgress`2">
+      <summary>진행률 업데이트를 호출자에게 보고할 수 있는 비동기 작업을 나타냅니다. 결과가 있고 진행률을 보고하는 많은 Windows 런타임 비동기 메서드의 반환 형식입니다.</summary>
+      <typeparam name="TResult">결과의 형식입니다.</typeparam>
+      <typeparam name="TProgress">진행률 데이터의 형식입니다.</typeparam>
+    </member><member name="P:Windows.Foundation.IAsyncOperationWithProgress`2.Completed">
+      <summary>작업 완료 알림을 처리하는 메서드를 가져오거나 설정합니다.</summary>
+      <returns>알림을 처리하는 메서드입니다.</returns>
+    </member><member name="P:Windows.Foundation.IAsyncOperationWithProgress`2.Progress">
+      <summary>진행률 알림을 처리하는 메서드를 가져오거나 설정합니다.</summary>
+      <returns>진행률 알림을 처리하는 콜백 메서드에 대한 참조입니다. AsyncOperationProgressHandler&lt;TResult, TProgress&gt; 대리자를 구현하여 콜백을 정의합니다. TProgress는 메서드 구현에 따라 달라지는 진행률 단위 형식을 정의합니다.</returns>
+    </member><member name="M:Windows.Foundation.IAsyncOperationWithProgress`2.GetResults">
+      <summary>작업의 결과를 반환합니다.</summary>
+      <returns>작업 결과입니다.</returns>
+    </member><member name="T:Windows.Foundation.IClosable">
+      <summary>할당된 리소스를 해제하는 메서드를 정의합니다.</summary>
+    </member><member name="M:Windows.Foundation.IClosable.Close">
+      <summary>Windows 런타임 개체에 의해 노출되는 시스템 리소스를 해제합니다.</summary>
+    </member><member name="T:Windows.Foundation.IPropertyValue">
+      <summary>속성 저장소의 값을 나타냅니다. 이 인터페이스를 구현할 수 없습니다. 설명 부분을 참조하십시오.</summary>
+    </member><member name="P:Windows.Foundation.IPropertyValue.IsNumericScalar">
+      <summary>속성 값이 스칼라 값인지 여부를 나타내는 값을 가져옵니다.</summary>
+      <returns>값이 스칼라이면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member><member name="P:Windows.Foundation.IPropertyValue.Type">
+      <summary>속성 값으로 저장된 형식을 반환합니다.</summary>
+      <returns>속성 값에 저장된 형식입니다.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetBoolean">
+      <summary>속성 값으로 저장된 부울 값을 반환합니다.</summary>
+      <returns>값입니다.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetBooleanArray(System.Boolean[]@)">
+      <summary>속성 값으로 저장된 부울 값 배열을 반환합니다.</summary>
+      <param name="value">값의 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetChar16">
+      <summary>속성 값으로 저장된 유니코드 문자를 반환합니다.</summary>
+      <returns>값입니다.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetChar16Array(System.Char[]@)">
+      <summary>속성 값으로 저장된 유니코드 문자 배열을 반환합니다.</summary>
+      <param name="value">값의 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetDateTime">
+      <summary>속성 값으로 저장된 날짜 및 시간 값을 반환합니다.</summary>
+      <returns>값입니다.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetDateTimeArray(Windows.Foundation.DateTime[]@)">
+      <summary>속성 값으로 저장된 날짜 및 시간 값 배열을 반환합니다.</summary>
+      <param name="value">값의 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetDouble">
+      <summary>속성 값으로 저장된 부동 소수점 값을 반환합니다.</summary>
+      <returns>값입니다.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetDoubleArray(System.Double[]@)">
+      <summary>속성 값으로 저장된 부동 소수점 값 배열을 반환합니다.</summary>
+      <param name="value">값의 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetGuid">
+      <summary>속성 값으로 저장되는 GUID 값을 반환합니다.</summary>
+      <returns>값입니다.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetGuidArray(System.Guid[]@)">
+      <summary>속성 값으로 저장된 GUID 값 배열을 반환합니다.</summary>
+      <param name="value">값의 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInspectableArray(System.Object[]@)">
+      <summary>속성 값으로 저장된 검사할 수 있는 개체 배열을 반환합니다.</summary>
+      <param name="value">개체의 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt16">
+      <summary>속성 값으로 저장된 정수 값을 반환합니다.</summary>
+      <returns>값입니다.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt16Array(System.Int16[]@)">
+      <summary>속성 값으로 저장된 정수 값 배열을 반환합니다.</summary>
+      <param name="value">값의 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt32">
+      <summary>속성 값으로 저장된 정수 값을 반환합니다.</summary>
+      <returns>값입니다.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt32Array(System.Int32[]@)">
+      <summary>속성 값으로 저장된 정수 값 배열을 반환합니다.</summary>
+      <param name="value">값의 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt64">
+      <summary>속성 값으로 저장된 정수 값을 반환합니다.</summary>
+      <returns>값입니다.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt64Array(System.Int64[]@)">
+      <summary>속성 값으로 저장된 정수 값 배열을 반환합니다.</summary>
+      <param name="value">값의 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetPoint">
+      <summary>속성 값으로 저장되는 점 구조체를 반환합니다.</summary>
+      <returns>구조체입니다.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetPointArray(Windows.Foundation.Point[]@)">
+      <summary>속성 값으로 저장된 점 구조체 배열을 반환합니다.</summary>
+      <param name="value">구조체의 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetRect">
+      <summary>속성 값으로 저장되는 사각형 구조체를 반환합니다.</summary>
+      <returns>구조체입니다.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetRectArray(Windows.Foundation.Rect[]@)">
+      <summary>속성 값으로 저장된 사각형 구조체 배열을 반환합니다.</summary>
+      <param name="value">구조체의 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetSingle">
+      <summary>속성 값으로 저장된 부동 소수점 값을 반환합니다.</summary>
+      <returns>값입니다.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetSingleArray(System.Single[]@)">
+      <summary>속성 값으로 저장된 부동 소수점 값 배열을 반환합니다.</summary>
+      <param name="value">값의 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetSize">
+      <summary>속성 값으로 저장되는 크기 구조체를 반환합니다.</summary>
+      <returns>구조체입니다.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetSizeArray(Windows.Foundation.Size[]@)">
+      <summary>속성 값으로 저장된 크기 구조체 배열을 반환합니다.</summary>
+      <param name="value">구조체의 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetString">
+      <summary>속성 값으로 저장된 문자열 값을 반환합니다.</summary>
+      <returns>값입니다.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetStringArray(System.String[]@)">
+      <summary>속성 값으로 저장된 문자열 값 배열을 반환합니다.</summary>
+      <param name="value">값의 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetTimeSpan">
+      <summary>속성 값으로 저장된 시간 간격 값을 반환합니다.</summary>
+      <returns>값입니다.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetTimeSpanArray(Windows.Foundation.TimeSpan[]@)">
+      <summary>속성 값으로 저장된 시간 정수 값 배열을 반환합니다.</summary>
+      <param name="value">값의 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt16">
+      <summary>속성 값으로 저장된 부호 없는 정수 값을 반환합니다.</summary>
+      <returns>값입니다.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt16Array(System.UInt16[]@)">
+      <summary>속성 값으로 저장된 부호 없는 정수 값 배열을 반환합니다.</summary>
+      <param name="value">값의 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt32">
+      <summary>속성 값으로 저장된 부호 없는 정수 값을 반환합니다.</summary>
+      <returns>값입니다.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt32Array(System.UInt32[]@)">
+      <summary>속성 값으로 저장된 부호 없는 정수 값 배열을 반환합니다.</summary>
+      <param name="value">값의 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt64">
+      <summary>속성 값으로 저장된 부호 없는 정수 값을 반환합니다.</summary>
+      <returns>값입니다.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt64Array(System.UInt64[]@)">
+      <summary>속성 값으로 저장된 부호 없는 정수 값 배열을 반환합니다.</summary>
+      <param name="value">값의 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt8">
+      <summary>속성 값으로 저장된 바이트 값을 반환합니다.</summary>
+      <returns>값입니다.</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt8Array(System.Byte[]@)">
+      <summary>속성 값으로 저장된 바이트 값 배열을 반환합니다.</summary>
+      <param name="value">값의 배열입니다.</param>
+    </member><member name="T:Windows.Foundation.IReference`1">
+      <summary>임의의 열거형, 구조체 및 대리자 형식을 속성 값으로 사용할 수 있습니다.</summary>
+      <typeparam name="T">형식입니다.</typeparam>
+    </member><member name="P:Windows.Foundation.IReference`1.Value">
+      <summary>IPropertyValue 배열로 표현되는 형식을 가져옵니다.</summary>
+      <returns>형식입니다.</returns>
+    </member><member name="T:Windows.Foundation.IReferenceArray`1">
+      <summary>임의의 열거형, 구조체 및 대리자 형식을 속성 값의 배열로 사용할 수 있습니다. 이 인터페이스를 구현할 수 없습니다. 설명 부분을 참조하십시오.</summary>
+      <typeparam name="T">형식입니다.</typeparam>
+    </member><member name="P:Windows.Foundation.IReferenceArray`1.Value">
+      <summary>IPropertyValue 배열로 표현되는 형식을 가져옵니다.</summary>
+      <returns>형식입니다.</returns>
+    </member><member name="T:Windows.Foundation.IStringable">
+      <summary>현재 개체를 문자열로 나타내는 방법을 제공합니다.</summary>
+    </member><member name="M:Windows.Foundation.IStringable.ToString">
+      <summary>현재 개체를 나타내는 문자열을 가져옵니다.</summary>
+      <returns>현재 개체를 나타내는 문자열입니다.</returns>
+    </member><member name="T:Windows.Foundation.Point">
+      <summary>2차원 평면의 한 점을 정의하는 Y 좌표 및 X 좌표 값을 나타냅니다.</summary>
+    </member><member name="F:Windows.Foundation.Point.X">
+      <summary>점의 가로 위치입니다.</summary>
+    </member><member name="F:Windows.Foundation.Point.Y">
+      <summary>점의 세로 위치입니다.</summary>
+    </member><member name="T:Windows.Foundation.PropertyType">
+      <summary>속성 값 형식을 지정합니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Boolean">
+      <summary>true 또는 false만 될 수 있는 값입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.BooleanArray">
+      <summary>부울 값의 배열입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Char16">
+      <summary>부호 없는 16비트(2바이트) 코드 포인트입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Char16Array">
+      <summary>Char 값의 배열입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.DateTime">
+      <summary>일반적으로 날짜와 시간으로 표시된 시간입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.DateTimeArray">
+      <summary>DateTime 값의 배열입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Double">
+      <summary>부호 있는 64비트(8바이트) 부동 소수점 숫자입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.DoubleArray">
+      <summary>Double 값의 배열입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Empty">
+      <summary>형식을 지정하지 않았습니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Guid">
+      <summary>GUID(Globally Unique Identifiers)입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.GuidArray">
+      <summary>Guid 값의 배열입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Inspectable">
+      <summary>IInspectable 인터페이스를 구현하는 개체입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.InspectableArray">
+      <summary>Inspectable 값의 배열입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int16">
+      <summary>부호 있는 16비트(2바이트) 정수입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int16Array">
+      <summary>Int16 값의 배열입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int32">
+      <summary>부호 있는 32비트(4바이트) 정수입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int32Array">
+      <summary>Int32 값의 배열입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int64">
+      <summary>부호 있는 64비트(8바이트) 정수입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int64Array">
+      <summary>Int64 값의 배열입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.OtherType">
+      <summary>이 열거형에 지정되지 않은 형식입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.OtherTypeArray">
+      <summary>알 수 없는 형식의 배열입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Point">
+      <summary>2차원 평면의 한 점을 정의하는 부동 소수점 X 좌표와 Y 좌표의 정렬된 쌍입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.PointArray">
+      <summary>Point 구조체의 배열입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Rect">
+      <summary>사각형의 위치와 크기를 나타내는 네 개의 부동 소수점 숫자로 구성된 집합입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.RectArray">
+      <summary>Rect 구조체의 배열입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Single">
+      <summary>부호 있는 32비트(4바이트) 부동 소수점 숫자입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.SingleArray">
+      <summary>Single 값의 배열입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Size">
+      <summary>높이와 너비를 지정하는 부동 소수점 숫자의 정렬된 쌍입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.SizeArray">
+      <summary>Size 구조체의 배열입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.String">
+      <summary>Windows 런타임 HSTRING입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.StringArray">
+      <summary>String 값의 배열입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.TimeSpan">
+      <summary>시간 간격입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.TimeSpanArray">
+      <summary>TimeSpan 값의 배열입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt16">
+      <summary>부호 없는 16비트(2바이트) 정수입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt16Array">
+      <summary>UInt16 값의 배열입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt32">
+      <summary>부호 없는 32비트(4바이트) 정수입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt32Array">
+      <summary>UInt32 값의 배열입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt64">
+      <summary>부호 없는 64비트(8바이트) 정수입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt64Array">
+      <summary>UInt64 값의 배열입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt8">
+      <summary>바이트입니다.</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt8Array">
+      <summary>Byte 값의 배열입니다.</summary>
+    </member><member name="T:Windows.Foundation.PropertyValue">
+      <summary>속성 저장소(예: PropertySet 인스턴스)의 값을 나타냅니다.</summary>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateBoolean(System.Boolean)">
+      <summary>부울 값에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 값입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateBooleanArray(System.Boolean[])">
+      <summary>부울 값의 배열에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateChar16(System.Char)">
+      <summary>유니코드 문자에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 값입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateChar16Array(System.Char[])">
+      <summary>유니코드 문자의 배열에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateDateTime(Windows.Foundation.DateTime)">
+      <summary>날짜 및 시간 값에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 값입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateDateTimeArray(Windows.Foundation.DateTime[])">
+      <summary>날짜 및 시간 값의 배열에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateDouble(System.Double)">
+      <summary>부동 소수점 값에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 값입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateDoubleArray(System.Double[])">
+      <summary>부동 소수점 값의 배열에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateEmpty">
+      <summary>빈 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateGuid(System.Guid)">
+      <summary>GUID에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 값입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateGuidArray(System.Guid[])">
+      <summary>GUID 배열에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInspectable(System.Object)">
+      <summary>검사할 수 있는 개체에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 개체입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInspectableArray(System.Object[])">
+      <summary>검사할 수 있는 개체의 배열에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt16(System.Int16)">
+      <summary>정수에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 값입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt16Array(System.Int16[])">
+      <summary>정수 배열에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt32(System.Int32)">
+      <summary>정수에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 값입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt32Array(System.Int32[])">
+      <summary>정수 배열에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt64(System.Int64)">
+      <summary>정수에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 값입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt64Array(System.Int64[])">
+      <summary>정수 배열에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreatePoint(Windows.Foundation.Point)">
+      <summary>점 구조체에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 구조체입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreatePointArray(Windows.Foundation.Point[])">
+      <summary>점 구조체의 배열에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateRect(Windows.Foundation.Rect)">
+      <summary>사각형 구조체에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 구조체입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateRectArray(Windows.Foundation.Rect[])">
+      <summary>사각형 구조체의 배열에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateSingle(System.Single)">
+      <summary>부동 소수점 값에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 값입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateSingleArray(System.Single[])">
+      <summary>부동 소수점 값의 배열에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateSize(Windows.Foundation.Size)">
+      <summary>크기 구조체에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 구조체입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateSizeArray(Windows.Foundation.Size[])">
+      <summary>크기 구조체의 배열에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateString(System.String)">
+      <summary>문자열에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 문자열입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateStringArray(System.String[])">
+      <summary>문자열 배열에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateTimeSpan(Windows.Foundation.TimeSpan)">
+      <summary>시간 간격에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 시간 간격입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateTimeSpanArray(Windows.Foundation.TimeSpan[])">
+      <summary>시간 간격의 배열에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt16(System.UInt16)">
+      <summary>부호 없는 정수에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 값입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt16Array(System.UInt16[])">
+      <summary>부호 없는 정수의 배열에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt32(System.UInt32)">
+      <summary>부호 없는 정수에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 값입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt32Array(System.UInt32[])">
+      <summary>부호 없는 정수의 배열에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt64(System.UInt64)">
+      <summary>부호 없는 정수에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 값입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt64Array(System.UInt64[])">
+      <summary>부호 없는 정수의 배열에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 배열입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt8(System.Byte)">
+      <summary>바이트에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 값입니다.</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt8Array(System.Byte[])">
+      <summary>바이트의 배열에서 속성 값을 만듭니다.</summary>
+      <returns>속성 값입니다.</returns>
+      <param name="value">속성 값에 저장할 배열입니다.</param>
+    </member><member name="T:Windows.Foundation.Rect">
+      <summary>사각형의 크기와 위치를 나타내는 숫자 값을 포함합니다.</summary>
+    </member><member name="F:Windows.Foundation.Rect.Height">
+      <summary>사각형의 높이(픽셀)입니다.</summary>
+    </member><member name="F:Windows.Foundation.Rect.Width">
+      <summary>사각형의 너비(픽셀)입니다.</summary>
+    </member><member name="F:Windows.Foundation.Rect.X">
+      <summary>사각형의 왼쪽 위 모퉁이의 X 좌표입니다.</summary>
+    </member><member name="F:Windows.Foundation.Rect.Y">
+      <summary>사각형의 왼쪽 위 모퉁이의 Y 좌표입니다.</summary>
+    </member><member name="T:Windows.Foundation.Size">
+      <summary>높이와 너비를 지정하는 숫자 값을 나타냅니다.</summary>
+    </member><member name="F:Windows.Foundation.Size.Height">
+      <summary>높이입니다.</summary>
+    </member><member name="F:Windows.Foundation.Size.Width">
+      <summary>너비입니다.</summary>
+    </member><member name="T:Windows.Foundation.TimeSpan">
+      <summary>시간 간격을 부호 있는 64비트 정수 값으로 나타냅니다.</summary>
+    </member><member name="F:Windows.Foundation.TimeSpan.Duration">
+      <summary>100나노초 단위로 나타낸 기간입니다.</summary>
+    </member><member name="T:Windows.Foundation.TypedEventHandler`2">
+      <summary>일반 이벤트를 처리하는 메서드를 나타냅니다.</summary>
+      <typeparam name="TSender">개체 형식입니다.</typeparam>
+      <typeparam name="TResult">이벤트에서 생성한 이벤트 데이터의 형식입니다.</typeparam>
+      <param name="sender">이벤트 소스입니다.</param>
+      <param name="args">이벤트 데이터입니다. 이벤트 데이터가 없으면 이 매개 변수는 null이 됩니다.</param>
+    </member><member name="T:Windows.Foundation.Collections.CollectionChange">
+      <summary>컬렉션을 변경시키는 작업에 대해 설명합니다.</summary>
+    </member><member name="F:Windows.Foundation.Collections.CollectionChange.ItemChanged">
+      <summary>컬렉션에서 항목이 변경됩니다.</summary>
+    </member><member name="F:Windows.Foundation.Collections.CollectionChange.ItemInserted">
+      <summary>컬렉션에 항목이 추가됩니다.</summary>
+    </member><member name="F:Windows.Foundation.Collections.CollectionChange.ItemRemoved">
+      <summary>컬렉션에서 항목이 제거됩니다.</summary>
+    </member><member name="F:Windows.Foundation.Collections.CollectionChange.Reset">
+      <summary>컬렉션이 변경됩니다.</summary>
+    </member><member name="T:Windows.Foundation.Collections.IIterable`1">
+      <summary>지정된 형식의 컬렉션을 단순하게 반복할 수 있도록 지원하는 반복기를 노출합니다.</summary>
+      <typeparam name="T">반복할 개체의 형식입니다.</typeparam>
+    </member><member name="M:Windows.Foundation.Collections.IIterable`1.First">
+      <summary>컬렉션의 항목에 대한 반복기를 반환합니다.</summary>
+      <returns>반복기입니다.</returns>
+    </member><member name="T:Windows.Foundation.Collections.IIterator`1">
+      <summary>컬렉션에 대한 단순한 반복을 지원합니다.</summary>
+      <typeparam name="T">반복할 개체의 형식입니다.</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IIterator`1.Current">
+      <summary>컬렉션의 현재 항목을 가져옵니다.</summary>
+      <returns>컬렉션의 현재 항목입니다.</returns>
+    </member><member name="P:Windows.Foundation.Collections.IIterator`1.HasCurrent">
+      <summary>반복기가 현재 항목을 참조하는지 여부 또는 반복기가 컬렉션의 끝에 있는지 여부를 나타내는 값을 가져옵니다.</summary>
+      <returns>반복기가 컬렉션의 유효한 항목을 참조하는 경우 True이고 그렇지 않은 경우 False입니다.</returns>
+    </member><member name="M:Windows.Foundation.Collections.IIterator`1.GetMany(`0[])">
+      <summary>컬렉션의 모든 항목을 검색합니다.</summary>
+      <returns>컬렉션에 있는 항목의 수입니다.</returns>
+      <param name="items">컬렉션의 항목입니다.</param>
+    </member><member name="M:Windows.Foundation.Collections.IIterator`1.MoveNext">
+      <summary>반복기를 컬렉션의 다음 항목으로 이동합니다.</summary>
+      <returns>반복기가 컬렉션의 유효한 항목을 참조하는 경우 True이고 반복기가 컬렉션의 끝을 지나는 경우 False입니다.</returns>
+    </member><member name="T:Windows.Foundation.Collections.IKeyValuePair`2">
+      <summary>키-값 쌍을 나타냅니다. 일반적으로 다른 제네릭 인터페이스의 제약 조건을 충족하기 위해 두 형식 매개 변수를 하나로 캡슐화해야 하는 경우에 제약 조건 형식으로 사용됩니다.</summary>
+      <typeparam name="K">각 키-값 쌍의 키 형식입니다.</typeparam>
+      <typeparam name="V">각 키-값 쌍의 값 형식입니다.</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IKeyValuePair`2.Key">
+      <summary>키-값 쌍의 키를 가져옵니다.</summary>
+      <returns>키입니다.</returns>
+    </member><member name="P:Windows.Foundation.Collections.IKeyValuePair`2.Value">
+      <summary>키-값 쌍의 값을 가져옵니다.</summary>
+      <returns>값입니다.</returns>
+    </member><member name="T:Windows.Foundation.Collections.IMap`2">
+      <summary>연결 컬렉션을 나타내며, 맵 또는 사전이라고도 합니다.</summary>
+      <typeparam name="K">맵에 있는 키의 형식입니다.</typeparam>
+      <typeparam name="V">맵의 값 형식입니다.</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IMap`2.Size">
+      <summary>맵의 항목 수를 가져옵니다.</summary>
+      <returns>맵에 있는 항목의 수입니다.</returns>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.Clear">
+      <summary>맵에서 모든 항목을 제거합니다.</summary>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.GetView">
+      <summary>맵의 변경할 수 없는 뷰를 반환합니다.</summary>
+      <returns>맵의 뷰입니다.</returns>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.HasKey(`0)">
+      <summary>맵이 지정된 키를 포함하는지 여부를 확인합니다.</summary>
+      <returns>키가 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="key">찾을 항목과 관련된 키입니다.</param>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.Insert(`0,`1)">
+      <summary>맵에 항목을 삽입하거나 바꿉니다.</summary>
+      <returns>지정된 키가 있는 항목이 대체된 기존 항목인 경우 True이며 그렇지 않은 경우 False입니다.</returns>
+      <param name="key">삽입할 항목과 관련된 키입니다.</param>
+      <param name="value">삽입할 항목입니다.</param>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.Lookup(`0)">
+      <summary>맵에서 지정된 키에 있는 항목을 반환합니다.</summary>
+      <returns>지정된 키와 연결된 항목입니다.</returns>
+      <param name="key">찾을 항목과 관련된 키입니다.</param>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.Remove(`0)">
+      <summary>맵에서 항목을 제거합니다.</summary>
+      <param name="key">제거할 항목과 관련된 키입니다.</param>
+    </member><member name="T:Windows.Foundation.Collections.IMapChangedEventArgs`1">
+      <summary>맵 컬렉션의 변경된 이벤트에 대한 데이터를 제공합니다.</summary>
+      <typeparam name="K">맵에 있는 키의 형식입니다.</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IMapChangedEventArgs`1.CollectionChange">
+      <summary>맵에서 발생한 변경 내용의 형식을 가져옵니다.</summary>
+      <returns>맵의 변경 형식입니다.</returns>
+    </member><member name="P:Windows.Foundation.Collections.IMapChangedEventArgs`1.Key">
+      <summary>변경된 항목의 키를 가져옵니다.</summary>
+      <returns>변경한 항목의 키입니다.</returns>
+    </member><member name="T:Windows.Foundation.Collections.IMapView`2">
+      <summary>맵으로 변경할 수 없는 뷰를 나타냅니다.</summary>
+      <typeparam name="K">맵에 있는 키의 형식입니다.</typeparam>
+      <typeparam name="V">맵의 값 형식입니다.</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IMapView`2.Size">
+      <summary>맵의 요소 수를 가져옵니다.</summary>
+      <returns>맵의 요소 수입니다.</returns>
+    </member><member name="M:Windows.Foundation.Collections.IMapView`2.HasKey(`0)">
+      <summary>맵 뷰가 지정된 키를 포함하는지 여부를 결정합니다.</summary>
+      <returns>키가 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="key">맵 뷰에서 찾을 키입니다.</param>
+    </member><member name="M:Windows.Foundation.Collections.IMapView`2.Lookup(`0)">
+      <summary>맵 뷰에서 지정된 키에 있는 항목을 반환합니다.</summary>
+      <returns>지정된 키와 연결된 항목입니다.</returns>
+      <param name="key">맵 뷰에서 찾을 키입니다.</param>
+    </member><member name="T:Windows.Foundation.Collections.IObservableMap`2">
+      <summary>항목이 추가되거나 제거되는 경우와 같이 맵에 대한 동적 변경 내용을 수신기에 알립니다.</summary>
+      <typeparam name="K">맵에 있는 키의 형식입니다.</typeparam>
+      <typeparam name="V">맵의 값 형식입니다.</typeparam>
+    </member><member name="E:Windows.Foundation.Collections.IObservableMap`2.MapChanged">
+      <summary>맵이 변경되면 발생합니다.</summary>
+    </member><member name="T:Windows.Foundation.Collections.IObservableVector`1">
+      <summary>벡터에 대한 변경 내용을 수신기에 알립니다.</summary>
+      <typeparam name="T">벡터에 있는 값의 형식입니다.</typeparam>
+    </member><member name="E:Windows.Foundation.Collections.IObservableVector`1.VectorChanged">
+      <summary>벡터가 변경되면 발생합니다.</summary>
+    </member><member name="T:Windows.Foundation.Collections.IPropertySet">
+      <summary>다른 여러 컬렉션 인터페이스를 상호 연결하여 키-값 쌍의 컬렉션을 나타냅니다.</summary>
+    </member><member name="T:Windows.Foundation.Collections.IVector`1">
+      <summary>임의 액세스 요소 컬렉션을 나타냅니다.</summary>
+      <typeparam name="T">벡터에 있는 값의 형식입니다.</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IVector`1.Size">
+      <summary>벡터의 항목 수를 가져옵니다.</summary>
+      <returns>벡터의 항목 수입니다.</returns>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.Append(`0)">
+      <summary>벡터의 끝에 항목을 추가합니다.</summary>
+      <param name="value">벡터에 추가할 항목입니다.</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.Clear">
+      <summary>벡터에서 모든 항목을 제거합니다.</summary>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.GetAt(System.UInt32)">
+      <summary>벡터에서 지정된 인덱스의 항목을 반환합니다.</summary>
+      <returns>지정된 인덱스에 있는 항목입니다.</returns>
+      <param name="index">항목의 인덱스(0부터 시작)입니다.</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.GetView">
+      <summary>벡터의 변경할 수 없는 뷰를 반환합니다.</summary>
+      <returns>벡터의 뷰입니다.</returns>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.IndexOf(`0,System.UInt32@)">
+      <summary>벡터에서 지정된 항목의 인덱스를 검색합니다.</summary>
+      <returns>항목이 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="value">벡터에서 찾을 항목입니다.</param>
+      <param name="index">항목이 발견된 경우 항목의 0부터 시작하는 인덱스이고, 항목이 없으면 이 매개 변수는 0입니다.</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.InsertAt(System.UInt32,`0)">
+      <summary>항목을 벡터의 지정된 인덱스에 삽입합니다.</summary>
+      <param name="index">0부터 시작하는 인덱스입니다.</param>
+      <param name="value">삽입할 항목입니다.</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.RemoveAt(System.UInt32)">
+      <summary>벡터에서 지정된 인덱스의 항목을 제거합니다.</summary>
+      <param name="index">제거할 벡터 항목의 인덱스(0부터 시작)입니다.</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.RemoveAtEnd">
+      <summary>벡터에서 마지막 항목을 제거합니다.</summary>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.ReplaceAll(`0[])">
+      <summary>벡터의 모든 항목을 지정된 항목으로 바꿉니다.</summary>
+      <param name="items">벡터에 추가할 항목 컬렉션입니다.</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.SetAt(System.UInt32,`0)">
+      <summary>벡터의 지정된 인덱스에 있는 값을 설정합니다.</summary>
+      <param name="index">값을 설정할 인덱스(0부터 시작)입니다.</param>
+      <param name="value">설정할 항목입니다.</param>
+    </member><member name="T:Windows.Foundation.Collections.IVectorChangedEventArgs">
+      <summary>벡터의 변경된 이벤트에 대한 데이터를 제공합니다.</summary>
+    </member><member name="P:Windows.Foundation.Collections.IVectorChangedEventArgs.CollectionChange">
+      <summary>벡터에서 발생한 변경 내용의 형식을 가져옵니다.</summary>
+      <returns>벡터의 변경 형식입니다.</returns>
+    </member><member name="P:Windows.Foundation.Collections.IVectorChangedEventArgs.Index">
+      <summary>벡터에서 변경이 발생한 위치를 가져옵니다.</summary>
+      <returns>해당하는 경우 벡터에서 변경이 발생한 위치(0부터 시작)입니다.</returns>
+    </member><member name="T:Windows.Foundation.Collections.IVectorView`1">
+      <summary>벡터로 변경할 수 없는 뷰를 나타냅니다.</summary>
+      <typeparam name="T">벡터에 있는 값의 형식입니다.</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IVectorView`1.Size">
+      <summary>벡터 뷰의 항목 수를 가져옵니다.</summary>
+      <returns>벡터 뷰의 항목 수입니다.</returns>
+    </member><member name="M:Windows.Foundation.Collections.IVectorView`1.GetAt(System.UInt32)">
+      <summary>벡터 뷰에서 지정된 인덱스의 항목을 반환합니다.</summary>
+      <returns>지정된 인덱스에 있는 항목입니다.</returns>
+      <param name="index">항목의 인덱스(0부터 시작)입니다.</param>
+    </member><member name="M:Windows.Foundation.Collections.IVectorView`1.IndexOf(`0,System.UInt32@)">
+      <summary>벡터 뷰에서 지정된 항목의 인덱스를 검색합니다.</summary>
+      <returns>항목이 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="value">벡터 뷰에서 찾을 항목입니다.</param>
+      <param name="index">항목이 발견된 경우 항목의 0부터 시작하는 인덱스이고, 항목이 없으면 이 매개 변수는 0입니다.</param>
+    </member><member name="T:Windows.Foundation.Collections.MapChangedEventHandler`2">
+      <summary>식별할 수 있는 맵의 변경된 이벤트를 처리하는 메서드를 나타냅니다.</summary>
+      <typeparam name="K">맵에 있는 키의 형식입니다.</typeparam>
+      <typeparam name="V">맵의 값 형식입니다.</typeparam>
+      <param name="sender">식별 가능한 변경된 맵입니다.</param>
+      <param name="event">맵에서 발생한 변경 내용에 대한 설명입니다.</param>
+    </member><member name="T:Windows.Foundation.Collections.PropertySet">
+      <summary>문자열 키가 있는 PropertyValue 개체 집합인 속성 집합을 나타냅니다.</summary>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.#ctor">
+      <summary>속성 집합의 새 인스턴스를 만들어 초기화합니다.</summary>
+    </member><member name="P:Windows.Foundation.Collections.PropertySet.Size">
+      <summary>속성 집합에 포함된 항목 수를 가져옵니다.</summary>
+      <returns>속성 집합에 있는 항목의 수입니다.</returns>
+    </member><member name="E:Windows.Foundation.Collections.PropertySet.MapChanged">
+      <summary>식별할 수 있는 맵이 변경되면 발생합니다.</summary>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.Clear">
+      <summary>속성 집합에서 모든 항목을 제거합니다.</summary>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.First">
+      <summary>속성 집합의 항목을 열거하는 반복기를 반환합니다.</summary>
+      <returns>반복기입니다. 반복기의 현재 위치가 인덱스 0이거나, 속성 집합이 비어 있는 경우 속성 집합의 끝입니다.</returns>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.GetView">
+      <summary>속성 집합의 변경할 수 없는 뷰를 가져옵니다.</summary>
+      <returns>변경할 수 없는 뷰입니다.</returns>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.HasKey(System.String)">
+      <summary>속성 집합에 지정한 키를 가진 항목이 있는지 여부를 나타냅니다.</summary>
+      <returns>속성 집합에 지정한 키가 있는 항목이 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="key">키입니다.</param>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.Insert(System.String,System.Object)">
+      <summary>속성 집합에 항목을 추가합니다.</summary>
+      <returns>메서드에서 키에 이미 존재하는 값을 대체하는 경우 True이고 새 키인 경우 False입니다.</returns>
+      <param name="key">삽입할 키입니다.</param>
+      <param name="value">삽입할 값입니다.</param>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.Lookup(System.String)">
+      <summary>지정된 키의 값을 검색합니다.</summary>
+      <returns>지정된 키가 있는 항목이 있는 경우의 값이며 없으면 null입니다.</returns>
+      <param name="key">키입니다.</param>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.Remove(System.String)">
+      <summary>속성 집합에서 항목을 제거합니다.</summary>
+      <param name="key">키입니다.</param>
+    </member><member name="T:Windows.Foundation.Collections.StringMap">
+      <summary>맵 또는 사전이라고도 하는 연결 컬렉션입니다.</summary>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.#ctor">
+      <summary>StringMap의 새 인스턴스를 만들고 초기화합니다.</summary>
+    </member><member name="P:Windows.Foundation.Collections.StringMap.Size">
+      <summary>맵의 항목 수를 가져옵니다.</summary>
+      <returns>맵에 있는 항목의 수입니다.</returns>
+    </member><member name="E:Windows.Foundation.Collections.StringMap.MapChanged">
+      <summary>맵의 내용이 변경되면 발생합니다.</summary>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.Clear">
+      <summary>맵에서 모든 항목을 제거합니다.</summary>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.First">
+      <summary>컬렉션에서 항목을 포함하는 반복기를 반환합니다.</summary>
+      <returns>컬렉션의 항목입니다.</returns>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.GetView">
+      <summary>맵의 변경할 수 없는 뷰를 반환합니다.</summary>
+      <returns>맵의 뷰입니다.</returns>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.HasKey(System.String)">
+      <summary>맵이 지정된 키를 포함하는지 여부를 확인합니다.</summary>
+      <returns>키가 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="key">찾을 항목과 관련된 키입니다.</param>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.Insert(System.String,System.String)">
+      <summary>맵에 항목을 삽입하거나 바꿉니다.</summary>
+      <returns>지정된 키가 있는 항목이 대체된 기존 항목인 경우 True이며 그렇지 않은 경우 False입니다.</returns>
+      <param name="key">삽입할 항목과 관련된 키입니다.</param>
+      <param name="value">삽입할 항목입니다.</param>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.Lookup(System.String)">
+      <summary>맵에서 지정된 키에 있는 항목을 반환합니다.</summary>
+      <returns>지정된 키와 연결된 항목입니다.</returns>
+      <param name="key">찾을 항목과 관련된 키입니다.</param>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.Remove(System.String)">
+      <summary>맵에서 항목을 제거합니다.</summary>
+      <param name="key">제거할 항목과 관련된 키입니다.</param>
+    </member><member name="T:Windows.Foundation.Collections.ValueSet">
+      <summary>String 형식의 키와 Object 형식의 값으로 맵을 구현합니다. 이 클래스는 serialize할 수 없는 형식이 맵에 입력되지 않도록 합니다.</summary>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.#ctor">
+      <summary>속성 집합의 새 인스턴스를 만들어 초기화합니다.</summary>
+    </member><member name="P:Windows.Foundation.Collections.ValueSet.Size">
+      <summary>값 집합에 포함된 항목 수를 가져옵니다.</summary>
+      <returns>값 집합에 있는 항목의 수입니다.</returns>
+    </member><member name="E:Windows.Foundation.Collections.ValueSet.MapChanged">
+      <summary>식별할 수 있는 맵이 변경되면 발생합니다.</summary>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.Clear">
+      <summary>값 집합에서 모든 항목을 제거합니다.</summary>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.First">
+      <summary>값 집합의 항목을 열거하는 반복기를 반환합니다.</summary>
+      <returns>반복기입니다. 반복기의 현재 위치가 인덱스 0이거나, 값 집합이 비어 있는 경우 값 집합의 끝입니다.</returns>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.GetView">
+      <summary>값 집합의 변경할 수 없는 뷰를 가져옵니다.</summary>
+      <returns>변경할 수 없는 뷰입니다.</returns>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.HasKey(System.String)">
+      <summary>값 집합에 지정한 키를 가진 항목이 있는지 여부를 나타냅니다.</summary>
+      <returns>값 집합에 지정한 키를 가진 항목이 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="key">키입니다.</param>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.Insert(System.String,System.Object)">
+      <summary>값 집합에 항목을 추가합니다.</summary>
+      <returns>메서드에서 키에 이미 존재하는 값을 대체하는 경우 True이고 새 키인 경우 False입니다.</returns>
+      <param name="key">삽입할 키입니다.</param>
+      <param name="value">삽입할 값입니다.</param>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.Lookup(System.String)">
+      <summary>지정된 키의 값을 검색합니다.</summary>
+      <returns>지정된 키가 있는 항목이 있는 경우의 값이며 없으면 null입니다.</returns>
+      <param name="key">키입니다.</param>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.Remove(System.String)">
+      <summary>값 집합에서 항목을 제거합니다.</summary>
+      <param name="key">키입니다.</param>
+    </member><member name="T:Windows.Foundation.Collections.VectorChangedEventHandler`1">
+      <summary>식별할 수 있는 벡터의 변경된 이벤트를 처리하는 메서드를 나타냅니다.</summary>
+      <typeparam name="T">벡터에 있는 값의 형식입니다.</typeparam>
+      <param name="sender">식별 가능한 변경된 벡터입니다.</param>
+      <param name="event">벡터에서 발생한 변경 내용에 대한 설명입니다.</param>
+    </member><member name="T:Windows.Foundation.Metadata.ActivatableAttribute">
+      <summary>클래스가 활성화할 수 있는 런타임 클래스임을 나타냅니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.Type,System.UInt32)">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+      <param name="type">클래스의 형식입니다.</param>
+      <param name="version">클래스의 버전입니다.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.Type,System.UInt32,System.String)">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+      <param name="type">클래스의 형식입니다.</param>
+      <param name="version">클래스를 구현하는 API 계약의 버전입니다.</param>
+      <param name="contractName">클래스를 구현하는 API 계약의 형식을 나타내는 문자열입니다.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.Type,System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+      <param name="type">클래스의 형식입니다.</param>
+      <param name="version">클래스의 버전입니다.</param>
+      <param name="platform">열거형의 값입니다. 기본값은 Windows입니다.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.UInt32)">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+      <param name="version">클래스의 버전입니다.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.UInt32,System.String)">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+      <param name="version">클래스의 버전입니다.</param>
+      <param name="type">팩터리 인터페이스의 형식을 나타내는 문자열입니다.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+      <param name="version">클래스의 버전입니다.</param>
+      <param name="platform">열거형의 값입니다. 기본값은 Windows입니다.</param>
+    </member><member name="T:Windows.Foundation.Metadata.AllowForWebAttribute">
+      <summary>개발자는 기본 범용 Windows 플랫폼(UWP) 개체를 WebView 내의 최상위 문서의 컨텍스트에서 글로벌 매개 변수로 노출할 수 있습니다. 투영할 UWP(유니버설 Windows 플랫폼) 개체의 경우 IAgileObject를 구현하고 AllowForWebAttribute 속성으로 장식해야 합니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.AllowForWebAttribute.#ctor">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.AllowMultipleAttribute">
+      <summary>사용자 지정 특성의 여러 인스턴스를 대상에 적용할 수 있음을 나타냅니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.AllowMultipleAttribute.#ctor">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.ApiInformation">
+      <summary>다양한 장치에서 API를 안전하게 호출할 수 있도록 지정된 멤버, 형식 또는 API 계약이 있는지 여부를 검색할 수 있습니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsApiContractPresent(System.String,System.UInt16)">
+      <summary>지정된 이름과 주 버전 번호를 가진 API 계약이 있는지 여부를 나타내는 true 또는 false를 반환합니다.</summary>
+      <returns>지정된 API 계약이 있으면 True를 반환하고, 그렇지 않으면 false를 반환합니다.</returns>
+      <param name="contractName">API 계약 이름입니다.</param>
+      <param name="majorVersion">API 계약의 주 버전 번호입니다.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsApiContractPresent(System.String,System.UInt16,System.UInt16)">
+      <summary>지정된 이름과 주 버전 번호와 부 버전 번호를 가진 API 계약이 있는지 여부를 나타내는 true 또는 false를 반환합니다.</summary>
+      <returns>지정된 API 계약이 있으면 True를 반환하고, 그렇지 않으면 false를 반환합니다.</returns>
+      <param name="contractName">API 계약 이름입니다.</param>
+      <param name="majorVersion">API 계약의 주 버전 번호입니다.</param>
+      <param name="minorVersion">API 계약의 부 버전 번호입니다.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsEnumNamedValuePresent(System.String,System.String)">
+      <summary>지정된 열거형에 대해 지정된 명명된 상수가 있는지 여부를 나타내는 true 또는 false를 반환합니다.</summary>
+      <returns>지정된 상수가 있으면 True를 반환하고, 그렇지 않으면 false를 반환합니다.</returns>
+      <param name="enumTypeName">네임스페이스로 한정된 형식 이름입니다.</param>
+      <param name="valueName">상수의 이름입니다.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsEventPresent(System.String,System.String)">
+      <summary>지정된 형식에 대해 지정된 이벤트가 있는지 여부를 나타내는 true 또는 false를 반환합니다.</summary>
+      <returns>형식에 대해 지정된 이벤트가 있으면 True를 반환하고, 그렇지 않으면 false를 반환합니다.</returns>
+      <param name="typeName">네임스페이스로 한정된 형식 이름입니다.</param>
+      <param name="eventName">이벤트의 이름입니다.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsMethodPresent(System.String,System.String)">
+      <summary>지정된 형식에 대해 지정된 메서드가 있는지 여부를 나타내는 true 또는 false를 반환합니다.</summary>
+      <returns>형식에 대해 지정된 메서드가 있으면 True를 반환하고, 그렇지 않으면 false를 반환합니다.</returns>
+      <param name="typeName">네임스페이스로 한정된 형식 이름입니다.</param>
+      <param name="methodName">메서드의 이름입니다.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsMethodPresent(System.String,System.String,System.UInt32)">
+      <summary>지정된 형식에 대해 지정된 수의 입력 매개 변수를 가진 지정된 메서드 오버로드가 있는지 여부를 나타내는 true 또는 false를 반환합니다.</summary>
+      <returns>형식에 대해 지정된 메서드가 있으면 True를 반환하고, 그렇지 않으면 false를 반환합니다.</returns>
+      <param name="typeName">네임스페이스로 한정된 형식 이름입니다.</param>
+      <param name="methodName">메서드의 이름입니다.</param>
+      <param name="inputParameterCount">오버로드에 대한 입력 매개 변수 개수입니다.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsPropertyPresent(System.String,System.String)">
+      <summary>지정된 형식에 대해 지정된 속성(쓰기 가능 또는 읽기 전용)이 있는지 여부를 나타내는 true 또는 false를 반환합니다.</summary>
+      <returns>형식에 대해 지정된 속성이 있으면 True를 반환하고, 그렇지 않으면 false를 반환합니다.</returns>
+      <param name="typeName">네임스페이스로 한정된 형식 이름입니다.</param>
+      <param name="propertyName">속성의 이름입니다.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsReadOnlyPropertyPresent(System.String,System.String)">
+      <summary>지정된 형식에 대해 지정된 읽기 전용 속성이 있는지 여부를 나타내는 true 또는 false를 반환합니다.</summary>
+      <returns>형식에 대해 지정된 속성이 있으면 True를 반환하고, 그렇지 않으면 false를 반환합니다.</returns>
+      <param name="typeName">네임스페이스로 한정된 형식 이름입니다.</param>
+      <param name="propertyName">속성의 이름입니다.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsTypePresent(System.String)">
+      <summary>지정된 형식이 있는지 여부를 나타내는 true 또는 false를 반환합니다.</summary>
+      <returns>지정된 형식이 있으면 True를 반환하고, 그렇지 않으면 false를 반환합니다.</returns>
+      <param name="typeName">네임스페이스로 한정된 형식 이름입니다.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsWriteablePropertyPresent(System.String,System.String)">
+      <summary>지정된 형식에 대해 지정된 쓰기 가능한 속성이 있는지 여부를 나타내는 true 또는 false를 반환합니다.</summary>
+      <returns>형식에 대해 지정된 속성이 있으면 True를 반환하고, 그렇지 않으면 false를 반환합니다.</returns>
+      <param name="typeName">네임스페이스로 한정된 형식 이름입니다.</param>
+      <param name="propertyName">속성의 이름입니다.</param>
+    </member><member name="T:Windows.Foundation.Metadata.AttributeTargets">
+      <summary>특성이 적용되는 프로그래밍 구문을 지정합니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.All">
+      <summary>특성이 모든 프로그래밍 구문에 적용됩니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.ApiContract">
+      <summary>특성이 API 계약에 적용됩니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Delegate">
+      <summary>특성이 대리자에 적용됩니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Enum">
+      <summary>특성이 열거형에 적용됩니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Event">
+      <summary>특성이 이벤트에 적용됩니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Field">
+      <summary>특성이 필드에 적용됩니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Interface">
+      <summary>특성이 인터페이스에 적용됩니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.InterfaceImpl">
+      <summary>특성이 인터페이스 구현에 적용됩니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Method">
+      <summary>특성이 메서드에 적용됩니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Parameter">
+      <summary>특성이 매개 변수에 적용됩니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Property">
+      <summary>특성이 속성에 적용됩니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.RuntimeClass">
+      <summary>특성이 런타임 클래스에 적용됩니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Struct">
+      <summary>특성이 구조체에 적용됩니다.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.AttributeUsageAttribute">
+      <summary>다른 특성의 사용법을 지정합니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.AttributeUsageAttribute.#ctor(Windows.Foundation.Metadata.AttributeTargets)">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+      <param name="A_0">하나 이상의 열거형 값입니다.</param>
+    </member><member name="T:Windows.Foundation.Metadata.ComposableAttribute">
+      <summary>프로그래밍 요소가 어떻게 구성되어 있는지 나타냅니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ComposableAttribute.#ctor(System.Type,Windows.Foundation.Metadata.CompositionType,System.UInt32)">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+      <param name="type">프로그래밍 요소를 만드는 데 사용되는 팩터리 개체의 형식입니다.</param>
+      <param name="compositionType">열거형 값 중 하나입니다.</param>
+      <param name="version">버전입니다.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ComposableAttribute.#ctor(System.Type,Windows.Foundation.Metadata.CompositionType,System.UInt32,System.String)">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+      <param name="type">프로그래밍 요소를 만드는 데 사용되는 팩터리 개체의 형식입니다.</param>
+      <param name="compositionType">열거형 값 중 하나입니다.</param>
+      <param name="version">컴포지션 팩터리가 런타임 클래스의 활성화 팩터리에 추가되는 API 계약의 버전입니다.</param>
+      <param name="contract">클래스를 구현하는 API 계약의 형식을 나타내는 문자열입니다.</param>
+    </member><member name="M:Windows.Foundation.Metadata.ComposableAttribute.#ctor(System.Type,Windows.Foundation.Metadata.CompositionType,System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+      <param name="type">프로그래밍 요소를 만드는 데 사용되는 팩터리 개체의 형식입니다.</param>
+      <param name="compositionType">열거형 값 중 하나입니다.</param>
+      <param name="version">버전입니다.</param>
+      <param name="platform">열거형의 값입니다. 기본값은 Windows입니다.</param>
+    </member><member name="T:Windows.Foundation.Metadata.CompositionType">
+      <summary>작성 가능한 특성이 적용되는 프로그래밍 요소의 표시 여부를 지정합니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.CompositionType.Protected">
+      <summary>프로그래밍 요소에 대한 액세스가 포함 클래스의 다른 요소 또는 포함 클래스에서 파생된 형식으로 제한됨을 나타냅니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.CompositionType.Public">
+      <summary>프로그래밍 요소에 대한 액세스가 제한되었음을 나타냅니다.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.DefaultAttribute">
+      <summary>런타임 클래스의 기본 인터페이스를 나타냅니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.DefaultAttribute.#ctor">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.DefaultOverloadAttribute">
+      <summary>메서드가 기본 오버로드 메서드임을 나타냅니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.DefaultOverloadAttribute.#ctor">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.DeprecatedAttribute">
+      <summary>형식 또는 멤버가 메타데이터에서 사용되지 않는 것으로 표시되어야 함을 나타냅니다. 컴파일러와 다른 개발자 도구에서 이 특성을 읽고 사용이 중단된 형식과 가능한 대안에 대해 사용자에게 정보를 제공할 수 있습니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.DeprecatedAttribute.#ctor(System.String,Windows.Foundation.Metadata.DeprecationType,System.UInt32)">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+      <param name="message">컴파일러와 기타 개발자 도구에서 사용 중단을 설명하고 대체 API의 문자열 이름을 제공하는 데 사용할 수 있는 문자열 메시지입니다.</param>
+      <param name="type">열거형의 값입니다. 기본값은 Deprecate입니다.</param>
+      <param name="version">사용 중단이 적용되는 버전을 나타내는 상수입니다.</param>
+    </member><member name="M:Windows.Foundation.Metadata.DeprecatedAttribute.#ctor(System.String,Windows.Foundation.Metadata.DeprecationType,System.UInt32,System.String)">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+      <param name="message">컴파일러와 기타 개발자 도구에서 사용 중단을 설명하고 대체 API의 문자열 이름을 제공하는 데 사용할 수 있는 문자열 메시지입니다.</param>
+      <param name="type">열거형의 값입니다. 기본값은 Deprecate입니다.</param>
+      <param name="version">사용 중단이 적용되는 버전을 나타내는 상수입니다.</param>
+      <param name="contract">사용되지 않는 형식 또는 멤버를 구현하는 API 계약의 형식을 나타내는 문자열입니다.</param>
+    </member><member name="M:Windows.Foundation.Metadata.DeprecatedAttribute.#ctor(System.String,Windows.Foundation.Metadata.DeprecationType,System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>대상으로 하는 Platform 값을 포함하여 특성의 새 인스턴스를 만들고 초기화합니다.</summary>
+      <param name="message">컴파일러와 기타 개발자 도구에서 사용 중단을 설명하고 대체 API의 문자열 이름을 제공하는 데 사용할 수 있는 문자열 메시지입니다.</param>
+      <param name="type">열거형의 값입니다. 기본값은 Deprecate입니다.</param>
+      <param name="version">사용 중단이 적용되는 버전을 나타내는 상수입니다.</param>
+      <param name="platform">열거형의 값입니다. 기본값은 Windows입니다.</param>
+    </member><member name="T:Windows.Foundation.Metadata.DeprecationType">
+      <summary>Deprecate 또는 Remove로 사용 중단을 나타냅니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.DeprecationType.Deprecate">
+      <summary>컴파일러 및 기타 도구는 이 엔터티를 더 이상 사용되지 않는 엔터티로 처리해야 합니다. 이 값이 기본값입니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.DeprecationType.Remove">
+      <summary>컴파일러 및 기타 도구는 이 엔터티를 제거된 엔터티로 처리해야 합니다.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.DualApiPartitionAttribute">
+      <summary>데스크톱 앱과 Windows 스토어 앱에서 형식이 지원됨을 나타냅니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.DualApiPartitionAttribute.#ctor">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.ExclusiveToAttribute">
+      <summary>지정된 형식이 이 유형에 단독으로 사용됨을 나타냅니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ExclusiveToAttribute.#ctor(System.Type)">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+      <param name="typeName">형식의 이름입니다.</param>
+    </member><member name="T:Windows.Foundation.Metadata.ExperimentalAttribute">
+      <summary>형식이나 멤버가 메타데이터를 실험으로 표시되어야 함을 나타내며 결과적으로 SDK 또는 라이브러리의 최종, 릴리스된 버전에 제공될 수 없습니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ExperimentalAttribute.#ctor">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.GCPressureAmount">
+      <summary>Microsoft 내부용입니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.GCPressureAmount.High">
+      <summary>메모리 압력이 100k 이상입니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.GCPressureAmount.Low">
+      <summary>메모리 압력이 10K 미만입니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.GCPressureAmount.Medium">
+      <summary>메모리 압력의 10K와 100K 사이입니다.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.GCPressureAttribute">
+      <summary>Microsoft 내부용입니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.GCPressureAttribute.#ctor">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.GuidAttribute">
+      <summary>인터페이스나 대리자에 대한 GUID를 나타냅니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.GuidAttribute.#ctor(System.UInt32,System.UInt16,System.UInt16,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte)">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+      <param name="a">GUID의 처음 4바이트입니다.</param>
+      <param name="b">GUID의 다음 2바이트입니다.</param>
+      <param name="c">GUID의 다음 2바이트입니다.</param>
+      <param name="d">GUID의 다음 바이트입니다.</param>
+      <param name="e">GUID의 다음 바이트입니다.</param>
+      <param name="f">GUID의 다음 바이트입니다.</param>
+      <param name="g">GUID의 다음 바이트입니다.</param>
+      <param name="h">GUID의 다음 바이트입니다.</param>
+      <param name="i">GUID의 다음 바이트입니다.</param>
+      <param name="j">GUID의 다음 바이트입니다.</param>
+      <param name="k">GUID의 다음 바이트입니다.</param>
+    </member><member name="T:Windows.Foundation.Metadata.HasVariantAttribute">
+      <summary>형식이 변형 IInspectable의 인스턴스임을 나타냅니다. 런타임 클래스, 인터페이스 및 매개 변수화된 인터페이스에 적용합니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.HasVariantAttribute.#ctor">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.InternalAttribute">
+      <summary>형식 또는 멤버가 메타데이터에 SDK 또는 프레임워크 내부용으로 표시되고 시스템 구성 요소에 의해서만 소비되는 것을 나타냅니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.InternalAttribute.#ctor">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.LengthIsAttribute">
+      <summary>배열 요소 수를 나타냅니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.LengthIsAttribute.#ctor(System.Int32)">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+      <param name="indexLengthParameter">배열 요소 수입니다.</param>
+    </member><member name="T:Windows.Foundation.Metadata.MarshalingBehaviorAttribute">
+      <summary>Windows 런타임 구성 요소의 마샬링 동작을 나타냅니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.MarshalingBehaviorAttribute.#ctor(Windows.Foundation.Metadata.MarshalingType)">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+      <param name="behavior">열거형 값 중 하나입니다.</param>
+    </member><member name="T:Windows.Foundation.Metadata.MarshalingType">
+      <summary>클래스의 마샬링 형식을 지정합니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.MarshalingType.Agile">
+      <summary>클래스에서 모든 인터페이스에 대해 동일 포인터 값으로 마샬링 및 마샬링 해제합니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.MarshalingType.InvalidMarshaling">
+      <summary>클래스를 마샬링할 수 없습니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.MarshalingType.None">
+      <summary>클래스에서 모든 인터페이스에 대한 마샬링을 금지합니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.MarshalingType.Standard">
+      <summary>클래스에서 IMarshal을 구현하지 않거나 모든 인터페이스의 CoGetStandardMarshal로 전달합니다.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.MetadataMarshalAttribute">
+      <summary>응용 프로그램 패키지를 만들 때 도구가 인터페이스에 대한 항목을 만들어야 함을 나타냅니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.MetadataMarshalAttribute.#ctor">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.MuseAttribute">
+      <summary>런타임 클래스가 웹 브라우저인 Windows 스토어 앱과 호환됨을 나타냅니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.MuseAttribute.#ctor">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.OverloadAttribute">
+      <summary>오버로딩을 지원하는 언어에서 메서드를 오버로드로 식별합니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.OverloadAttribute.#ctor(System.String)">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+      <param name="method">메서드를 예상 언어로 표현하는 이름입니다.</param>
+    </member><member name="T:Windows.Foundation.Metadata.OverridableAttribute">
+      <summary>인터페이스에 재정의 가능한 메서드가 들어 있음을 나타냅니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.OverridableAttribute.#ctor">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.Platform">
+      <summary>Windows 런타임 특성 및 메타데이터에 사용되는 것처럼 지정된 형식을 지원해야 하는 플랫폼을 지정합니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.Platform.Windows">
+      <summary>Windows 메타데이터에서 사용합니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.Platform.WindowsPhone">
+      <summary>Windows Phone 메타데이터에서 사용합니다.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.PlatformAttribute">
+      <summary>플랫폼 관련 메타데이터가 생성될 때 형식이 지원되어야 하는 플랫폼을 선언합니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.PlatformAttribute.#ctor(Windows.Foundation.Metadata.Platform)">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+      <param name="platform">열거형의 값입니다. 기본값은 Windows입니다.</param>
+    </member><member name="T:Windows.Foundation.Metadata.ProtectedAttribute">
+      <summary>인터페이스에 보호된 메서드가 들어 있음을 나타냅니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ProtectedAttribute.#ctor">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.RangeAttribute">
+      <summary>데이터 필드 값에 대한 숫자 범위 제약 조건을 나타냅니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.RangeAttribute.#ctor(System.Int32,System.Int32)">
+      <summary>지정된 최소값과 최대값을 사용하여 특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+      <param name="minValue">허용되는 최소값입니다.</param>
+      <param name="maxValue">허용되는 최대값입니다.</param>
+    </member><member name="T:Windows.Foundation.Metadata.RemoteAsyncAttribute">
+      <summary>인터페이스가 비동기 패턴의 비동기 양식을 사용하여 전달될 수 있음을 나타냅니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.RemoteAsyncAttribute.#ctor">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.StaticAttribute">
+      <summary>정적 메서드만 포함된 인터페이스임을 나타냅니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.StaticAttribute.#ctor(System.Type,System.UInt32)">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+      <param name="type">런타임 클래스에 대한 정적 메서드를 포함하는 형식입니다.</param>
+      <param name="version">정적 인터페이스가 추가된 버전입니다.</param>
+    </member><member name="M:Windows.Foundation.Metadata.StaticAttribute.#ctor(System.Type,System.UInt32,System.String)">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+      <param name="type">런타임 클래스에 대한 정적 메서드를 포함하는 형식입니다.</param>
+      <param name="version">정적 팩터리가 런타임 클래스의 활성화 팩터리에 추가되는 API 계약의 버전입니다.</param>
+      <param name="contractName">클래스를 구현하는 API 계약의 형식을 나타내는 문자열입니다.</param>
+    </member><member name="M:Windows.Foundation.Metadata.StaticAttribute.#ctor(System.Type,System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+      <param name="type">런타임 클래스에 대한 정적 메서드를 포함하는 형식입니다.</param>
+      <param name="version">정적 인터페이스가 추가된 버전입니다.</param>
+      <param name="platform">열거형의 값입니다. 기본값은 Windows입니다.</param>
+    </member><member name="T:Windows.Foundation.Metadata.ThreadingAttribute">
+      <summary>Windows 런타임 구성 요소의 스레딩 모델을 나타냅니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ThreadingAttribute.#ctor(Windows.Foundation.Metadata.ThreadingModel)">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+      <param name="model">열거형 값 중 하나입니다.</param>
+    </member><member name="T:Windows.Foundation.Metadata.ThreadingModel">
+      <summary>스레딩 모델을 지정합니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.ThreadingModel.Both">
+      <summary>단일 스레드 및 다중 스레드 아파트입니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.ThreadingModel.InvalidThreading">
+      <summary>유효한 스레딩 모델이 적용되지 않습니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.ThreadingModel.MTA">
+      <summary>다중 스레드 아파트입니다.</summary>
+    </member><member name="F:Windows.Foundation.Metadata.ThreadingModel.STA">
+      <summary>단일 스레드 아파트입니다.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.VariantAttribute">
+      <summary>항목이 변형 IInspectable의 인스턴스임을 나타냅니다. 메서드 매개 변수, 속성 및 형식의 반환 값에 적용합니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.VariantAttribute.#ctor">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+    </member><member name="T:Windows.Foundation.Metadata.VersionAttribute">
+      <summary>형식의 버전을 나타냅니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.VersionAttribute.#ctor(System.UInt32)">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+      <param name="version">표시된 개체와 연결된 버전입니다.</param>
+    </member><member name="M:Windows.Foundation.Metadata.VersionAttribute.#ctor(System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+      <param name="version">표시된 개체와 연결된 버전입니다.</param>
+      <param name="platform">열거형의 값입니다. 기본값은 Windows입니다.</param>
+    </member><member name="T:Windows.Foundation.Metadata.WebHostHiddenAttribute">
+      <summary>기능이 지정한 대상 언어로 프로젝트되지 않는 것으로 형식을 식별합니다.</summary>
+    </member><member name="M:Windows.Foundation.Metadata.WebHostHiddenAttribute.#ctor">
+      <summary>특성의 새 인스턴스를 만들어 초기화합니다.</summary>
+    </member></members>
+</doc>

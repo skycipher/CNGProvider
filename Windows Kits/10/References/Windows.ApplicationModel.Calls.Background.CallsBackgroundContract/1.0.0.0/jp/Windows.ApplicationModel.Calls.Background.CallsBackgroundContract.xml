@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Calls.Background.CallsBackgroundContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Background.PhoneTrigger">
+      <summary>バックグラウンド タスクをトリガーする電話イベントを表します。</summary>
+    </member><member name="M:Windows.ApplicationModel.Background.PhoneTrigger.#ctor(Windows.ApplicationModel.Calls.Background.PhoneTriggerType,System.Boolean)">
+      <summary>PhoneTrigger クラスの新しいインスタンスを初期化します。</summary>
+      <param name="type">電話イベントの種類を指定します。</param>
+      <param name="oneShot">トリガーがワン ショット通知かどうかを示します。 ワン ショット通知が送信されたときにサブスクライブしていない場合は、何も取得できません。 ワン ショット通知を発生させたときに接続していない場合は、何も起こりません。</param>
+    </member><member name="P:Windows.ApplicationModel.Background.PhoneTrigger.OneShot">
+      <summary>トリガーがワン ショット通知かどうかを示すブール値を取得します。</summary>
+      <returns>トリガーがワン ショット通知かどうかを示すブール値。</returns>
+    </member><member name="P:Windows.ApplicationModel.Background.PhoneTrigger.TriggerType">
+      <summary>トリガーによって示された電話イベントの種類を取得します。</summary>
+      <returns>トリガーによって示された電話イベントの種類。</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason">
+      <summary>通話が拒否された理由を提供します。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason.InCallBlockingList">
+      <summary>この番号はブロック リストに登録されているため、呼び出しは拒否されました。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason.PrivateNumber">
+      <summary>この番号はプライベート番号であり、プライベート番号はブロックされているため、呼び出しは拒否されました。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason.UnknownNumber">
+      <summary>この番号は不明な番号であり、不明な番号はブロックされているため、呼び出しは拒否されました。</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails">
+      <summary>ブロックされた呼び出しについての詳細を提供するために使用されます。</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails.CallBlockedReason">
+      <summary>通話がブロックされた理由を取得します。</summary>
+      <returns>通話がブロックされた理由。</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails.LineId">
+      <summary>ブロックされた通話の ID を取得します。</summary>
+      <returns>ブロックされた通話の ID。</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails.PhoneNumber">
+      <summary>ブロックされた呼び出しの電話番号を取得します。</summary>
+      <returns>ブロックされた呼び出しの電話番号。</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails">
+      <summary>通話の発信元の詳細を提供するために使用されます。</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails.PhoneNumber">
+      <summary>通話の発信元の電話番号を取得します。</summary>
+      <returns>通話の発信元の電話番号。</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails.RequestId">
+      <summary>この通話の一意の識別子を取得します。</summary>
+      <returns>この通話の一意の識別子。</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails">
+      <summary>電話回線のプロパティに対する変更についての詳細を提供するために使用されます。</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails.ChangeType">
+      <summary>電話回線が追加、削除、変更されたかどうかを示す PhoneLineChangeKind 値を取得します。</summary>
+      <returns>電話回線が追加、削除、変更されたかどうかを示す PhoneLineChangeKind 値。</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails.LineId">
+      <summary>追加、削除、変更された電話回線の ID を取得します。</summary>
+      <returns>追加、削除、変更された電話回線の ID。</returns>
+    </member><member name="M:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails.HasLinePropertyChanged(Windows.ApplicationModel.Calls.Background.PhoneLineProperties)">
+      <summary>一連のフラグを照会して、指定した電話回線のプロパティに変更があったかどうかを確認します。</summary>
+      <returns>lineProperty パラメーターで指定されたいずれかの電話回線のプロパティが変更されている場合に true を返します。</returns>
+      <param name="lineProperty">変更があったかどうかを照会する電話回線のプロパティを示す一連のフラグ。</param>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind">
+      <summary>バックグラウンド電話回線変更トリガーの変更の種類を示します。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind.Added">
+      <summary>新しい電話回線が追加されました。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind.PropertiesChanged">
+      <summary>電話回線がプロパティを更新しました。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind.Removed">
+      <summary>電話回線が削除されました。</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneLineProperties">
+      <summary>電話回線の一部である一連のプロパティ フラグがトリガーを変更したことを示しています。 複数のプロパティを一度に設定できます。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.BrandingOptions">
+      <summary>電話回線のブランド化オプション。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.CanDial">
+      <summary>電話回線の発信機能。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.CellularDetails">
+      <summary>電話回線の携帯電話の詳細。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.DisplayColor">
+      <summary>電話回線の推奨される表示色。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.DisplayName">
+      <summary>電話回線に対してユーザーが割り当てたフレンドリ名。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.NetworkName">
+      <summary>電話回線によって使用されている現在のネットワークの名前。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.NetworkState">
+      <summary>通話回線の現在のネットワーク状態。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.None">
+      <summary>プロパティなし。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.Transport">
+      <summary>電話回線のトランスポート (携帯電話または VoIP)。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.Voicemail">
+      <summary>電話回線に関連付けられたボイス メール アカウント。</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails">
+      <summary>電話回線の新しいボイス メール メッセージについての詳細を提供するために使用されます。</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails.LineId">
+      <summary>新しいボイス メール メッセージを着信した電話回線の ID を取得します。</summary>
+      <returns>新しいボイス メールの電話回線の ID。</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails.OperatorMessage">
+      <summary>ボイス メール変更 SMS を送信するときにオペレーターが設定したオプションのボイス メール変更メッセージを取得します。</summary>
+      <returns>ボイス メール変更 SMS を送信するときにオペレーターが設定したオプションのボイス メール変更メッセージ。 メッセージが存在する場合、ボイス メールのトーストが表示されていれば、トーストにメッセージが表示されます。</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails.VoicemailCount">
+      <summary>電話回線のボイス メール メッセージの新しい数を取得します。</summary>
+      <returns>ボイス メール メッセージの現在の数。</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneTriggerType">
+      <summary>電話トリガーのイベントの種類を示します。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.AirplaneModeDisabledForEmergencyCall">
+      <summary>緊急通話に対応できるように電話回線のフライト モードが無効になりました。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.CallBlocked">
+      <summary>呼び出しがブロックされました。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.CallHistoryChanged">
+      <summary>通話履歴が変更されました。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.CallOriginDataRequest">
+      <summary>通話の発信元に対して要求が行われました。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.LineChanged">
+      <summary>PhoneLineProperties に変更があります。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.NewVoicemailMessage">
+      <summary>システムが新しいボイス メール メッセージを受信したか、ボイス メールの数が 0になりました。</summary>
+    </member></members>
+</doc>

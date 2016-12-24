@@ -1,0 +1,863 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.DevicesLowLevelContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.ILowLevelDevicesAggregateProvider">
+      <summary>Представляет общие свойства для всех агрегированных поставщиков устройства низкого уровня.</summary>
+    </member><member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.AdcControllerProvider">
+      <summary>Получает поставщик ADC по умолчанию. Если поставщик по умолчанию явно не задан, будет использоваться стандартный драйвер или контроллер.</summary>
+      <returns>Поставщик ADC.</returns>
+    </member><member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.GpioControllerProvider">
+      <summary>Получает поставщик GPIO по умолчанию. Если поставщик по умолчанию явно не задан, будет использоваться стандартный драйвер или контроллер.</summary>
+      <returns>Поставщик GPIO.</returns>
+    </member><member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.I2cControllerProvider">
+      <summary>Получает поставщик I2C по умолчанию. Если поставщик по умолчанию явно не задан, будет использоваться стандартный драйвер или контроллер.</summary>
+      <returns>Поставщик I2C.</returns>
+    </member><member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.PwmControllerProvider">
+      <summary>Получает поставщик PWM по умолчанию. Если поставщик по умолчанию явно не задан, будет использоваться стандартный драйвер или контроллер.</summary>
+      <returns>Поставщик PWM.</returns>
+    </member><member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.SpiControllerProvider">
+      <summary>Получает поставщик SPI по умолчанию. Если поставщик по умолчанию явно не задан, будет использоваться стандартный драйвер или контроллер.</summary>
+      <returns>Поставщик SPI.</returns>
+    </member><member name="T:Windows.Devices.LowLevelDevicesAggregateProvider">
+      <summary>Представляет низкоуровневых поставщиков устройства шины. Этот класс предоставляет доступ к поставщику по умолчанию для низкоуровневых контроллеров шины.</summary>
+    </member><member name="M:Windows.Devices.LowLevelDevicesAggregateProvider.#ctor(Windows.Devices.Adc.Provider.IAdcControllerProvider,Windows.Devices.Pwm.Provider.IPwmControllerProvider,Windows.Devices.Gpio.Provider.IGpioControllerProvider,Windows.Devices.I2c.Provider.II2cControllerProvider,Windows.Devices.Spi.Provider.ISpiControllerProvider)">
+      <summary>Создает экземпляр LowLevelDevicesAggregateProvider и задает предоставленных поставщиков как поставщиков по умолчанию для соответствующей шины.</summary>
+      <param name="adc">Поставщик ADC.</param>
+      <param name="pwm">Поставщик PWM.</param>
+      <param name="gpio">Поставщик GPIO.</param>
+      <param name="i2c">Поставщик I2C.</param>
+      <param name="spi">Поставщик SPI.</param>
+    </member><member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.AdcControllerProvider">
+      <summary>Получает поставщик ADC по умолчанию. Если поставщик по умолчанию явно не задан, будет использоваться стандартный драйвер или контроллер.</summary>
+      <returns>Поставщик ADC.</returns>
+    </member><member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.GpioControllerProvider">
+      <summary>Получает поставщик GPIO по умолчанию. Если поставщик по умолчанию явно не задан, будет использоваться стандартный драйвер или контроллер.</summary>
+      <returns>Поставщик GPIO.</returns>
+    </member><member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.I2cControllerProvider">
+      <summary>Получает поставщик I2C по умолчанию. Если поставщик по умолчанию явно не задан, будет использоваться стандартный драйвер или контроллер.</summary>
+      <returns>Поставщик I2C.</returns>
+    </member><member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.PwmControllerProvider">
+      <summary>Получает поставщик PWM по умолчанию. Если поставщик по умолчанию явно не задан, будет использоваться стандартный драйвер или контроллер.</summary>
+      <returns>Поставщик PWM.</returns>
+    </member><member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.SpiControllerProvider">
+      <summary>Получает поставщик SPI по умолчанию. Если поставщик по умолчанию явно не задан, будет использоваться стандартный драйвер или контроллер.</summary>
+      <returns>Поставщик SPI.</returns>
+    </member><member name="T:Windows.Devices.LowLevelDevicesController">
+      <summary>Представляет низкоуровневый контроллер устройства шины и соответствующий поставщик.</summary>
+    </member><member name="P:Windows.Devices.LowLevelDevicesController.DefaultProvider">
+      <summary>Получает или задает поставщик для контроллера по умолчанию.</summary>
+      <returns>Агрегированный поставщик устройства.</returns>
+    </member><member name="T:Windows.Devices.Adc.AdcChannel">
+      <summary>Представляет один канал ADC.</summary>
+    </member><member name="P:Windows.Devices.Adc.AdcChannel.Controller">
+      <summary>Получает контроллер ADC для данного канала.</summary>
+      <returns>Контроллер ADC.</returns>
+    </member><member name="M:Windows.Devices.Adc.AdcChannel.Close">
+      <summary>Закрывает подключение на данном канале, что делает его доступным для открытия другими.</summary>
+    </member><member name="M:Windows.Devices.Adc.AdcChannel.ReadRatio">
+      <summary>Считывает значение как процент от максимально возможного значения для этого контроллера.</summary>
+      <returns>Значение как процент от максимального значения.</returns>
+    </member><member name="M:Windows.Devices.Adc.AdcChannel.ReadValue">
+      <summary>Считывает цифровое представление аналогового значения из ADC.</summary>
+      <returns>Цифровое значение.</returns>
+    </member><member name="T:Windows.Devices.Adc.AdcChannelMode">
+      <summary>Описывает режимы канала, которые контроллер ADC может использовать для ввода.</summary>
+    </member><member name="F:Windows.Devices.Adc.AdcChannelMode.Differential">
+      <summary>Разница между 2 контактами.</summary>
+    </member><member name="F:Windows.Devices.Adc.AdcChannelMode.SingleEnded">
+      <summary>Простое значение определенного контакта.</summary>
+    </member><member name="T:Windows.Devices.Adc.AdcController">
+      <summary>Представляет контроллер ADC в системе</summary>
+    </member><member name="P:Windows.Devices.Adc.AdcController.ChannelCount">
+      <summary>Число каналов, доступных на контроллере ADC.</summary>
+      <returns>Число каналов.</returns>
+    </member><member name="P:Windows.Devices.Adc.AdcController.ChannelMode">
+      <summary>Получает или задает режим канала для контроллера ADC.</summary>
+      <returns>Режим канала ADC.</returns>
+    </member><member name="P:Windows.Devices.Adc.AdcController.MaxValue">
+      <summary>Возвращает максимальное значение, которое может указать контроллер.</summary>
+      <returns>Максимальное значение.</returns>
+    </member><member name="P:Windows.Devices.Adc.AdcController.MinValue">
+      <summary>Минимальное значение, которое может указать контроллер.</summary>
+      <returns>Минимальное значение.</returns>
+    </member><member name="P:Windows.Devices.Adc.AdcController.ResolutionInBits">
+      <summary>Получает разрешение контроллера как количество битов.</summary>
+      <returns>Количество битов на контроллере ADC.</returns>
+    </member><member name="M:Windows.Devices.Adc.AdcController.GetControllersAsync(Windows.Devices.Adc.Provider.IAdcProvider)">
+      <summary>Получает все контроллеры, которые подключены к системе асинхронно.</summary>
+      <returns>Если метод завершается успешно, возвращается список значений, представляющих контроллеры, доступные в системе.</returns>
+      <param name="provider">Поставщик ADC для контроллеров в системе.</param>
+    </member><member name="M:Windows.Devices.Adc.AdcController.GetDefaultAsync">
+      <summary>Получает контроллер ADC по умолчанию в системе.</summary>
+      <returns>Контроллер ADC для системы по умолчанию или NULL, если в системе нет контроллера ADC.</returns>
+    </member><member name="M:Windows.Devices.Adc.AdcController.IsChannelModeSupported(Windows.Devices.Adc.AdcChannelMode)">
+      <summary>Проверяет, поддерживает ли контроллер указанный режим канала.</summary>
+      <returns>Значение true, если указанный канал поддерживается; в противном случае — значение false.</returns>
+      <param name="channelMode">Режим канала.</param>
+    </member><member name="M:Windows.Devices.Adc.AdcController.OpenChannel(System.Int32)">
+      <summary>Открывает подключение к указанному каналу ADC.</summary>
+      <returns>Канал ADC.</returns>
+      <param name="channelNumber">Подключаемый канал.</param>
+    </member><member name="T:Windows.Devices.Adc.Provider.IAdcControllerProvider">
+      <summary>Представляет свойства и методы, общие для всех контроллеров ADC.</summary>
+    </member><member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.ChannelCount">
+      <summary>Возвращает число каналов, доступных для контроллера.</summary>
+      <returns>Число каналов.</returns>
+    </member><member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.ChannelMode">
+      <summary>Получает или задает режим канала для контроллера.</summary>
+      <returns>Режим канала.</returns>
+    </member><member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.MaxValue">
+      <summary>Получает максимальное значение, которое может вернуть контроллер.</summary>
+      <returns>Максимальное значение.</returns>
+    </member><member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.MinValue">
+      <summary>Получает минимальное значение, которое может вернуть контроллер.</summary>
+      <returns>Минимальное значение.</returns>
+    </member><member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.ResolutionInBits">
+      <summary>Получает разрешение контроллера как количество битов.</summary>
+      <returns>Разрешение как количество битов.</returns>
+    </member><member name="M:Windows.Devices.Adc.Provider.IAdcControllerProvider.AcquireChannel(System.Int32)">
+      <summary>Устанавливает подключение к указанному каналу.</summary>
+      <param name="channel">Подключаемый канал.</param>
+    </member><member name="M:Windows.Devices.Adc.Provider.IAdcControllerProvider.IsChannelModeSupported(Windows.Devices.Adc.Provider.ProviderAdcChannelMode)">
+      <summary>Определяет, поддерживает ли контроллер указанный режим канала.</summary>
+      <returns>Значение true, если указанный канал поддерживается; в противном случае — значение false.</returns>
+      <param name="channelMode">Режим запрашиваемого канала.</param>
+    </member><member name="M:Windows.Devices.Adc.Provider.IAdcControllerProvider.ReadValue(System.Int32)">
+      <summary>Получает цифровое представление аналогового значения на указанном канале.</summary>
+      <returns>Цифровое представление аналогового значения.</returns>
+      <param name="channelNumber">Канал для считывания.</param>
+    </member><member name="M:Windows.Devices.Adc.Provider.IAdcControllerProvider.ReleaseChannel(System.Int32)">
+      <summary>Освобождает подключения канала, открывая этот канал для других элементов.</summary>
+      <param name="channel">Канал, соединение с которым требуется закрыть.</param>
+    </member><member name="T:Windows.Devices.Adc.Provider.IAdcProvider">
+      <summary>Представляет общие методы для всех поставщиков ADC.</summary>
+    </member><member name="M:Windows.Devices.Adc.Provider.IAdcProvider.GetControllers">
+      <summary>Получает контроллеры ADC, доступные в системе.</summary>
+      <returns>Если метод завершается успешно, возвращается список доступных контроллеров в системе.</returns>
+    </member><member name="T:Windows.Devices.Adc.Provider.ProviderAdcChannelMode">
+      <summary>Определяет, как представляется значение контакта. Реализация особенностей определяется поставщиком, поэтому дифференциал может быть полным или псевдодифференциалом.</summary>
+    </member><member name="F:Windows.Devices.Adc.Provider.ProviderAdcChannelMode.Differential">
+      <summary>Разница между 2 контактами.</summary>
+    </member><member name="F:Windows.Devices.Adc.Provider.ProviderAdcChannelMode.SingleEnded">
+      <summary>Простое значение определенного контакта.</summary>
+    </member><member name="T:Windows.Devices.Gpio.GpioController">
+      <summary>Представляет контроллер ввода-вывода общего назначения (GPIO) для системы по умолчанию.</summary>
+    </member><member name="P:Windows.Devices.Gpio.GpioController.PinCount">
+      <summary>Получает количество контактов на контроллере ввода-вывода общего назначения (GPIO).</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Количество контактов на контроллере GPIO. Некоторые контакты могут оказаться недоступными в пользовательском режиме. Сведения о соответствии номеров контактов физическим контактам см. в документации к печатной плате.</returns>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.GetControllersAsync(Windows.Devices.Gpio.Provider.IGpioProvider)">
+      <summary>Получает все контроллеры, которые подключены к системе асинхронно.</summary>
+      <returns>Если метод завершается успешно, возвращается список значений, представляющих контроллеры, доступные в системе.</returns>
+      <param name="provider">Поставщик GPIO для контроллеров в системе.</param>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.GetDefault">
+      <summary>Получает контроллер ввода-вывода общего назначения (GPIO) для системы по умолчанию.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <deprecated type="deprecate">Этот метод стал нерекомендуемым и был заменен на GetDefaultAsync.</deprecated>
+      <returns>Контроллер GPIO для системы по умолчанию или NULL, если в системе нет контроллера GPIO.</returns>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.GetDefaultAsync">
+      <summary>Получает контроллер ввода-вывода общего назначения (GPIO) для системы по умолчанию.</summary>
+      <returns>Контроллер GPIO для системы по умолчанию или NULL, если в системе нет контроллера GPIO.</returns>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.OpenPin(System.Int32)">
+      <summary>Открывает подключение к заданному контакту ввода-вывода общего назначения (GPIO) в монопольном режиме.</summary>
+      <returns>Открытый контакт GPIO.</returns>
+      <param name="pinNumber">Номер контакта GPIO, который требуется открыть. Некоторые контакты могут оказаться недоступными в пользовательском режиме. Сведения о соответствии номеров контактов физическим контактам см. в документации к печатной плате.</param>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.OpenPin(System.Int32,Windows.Devices.Gpio.GpioSharingMode)">
+      <summary>Открывает заданный контакт ввода-вывода общего назначения (GPIO) в указанном режиме.</summary>
+      <returns>Открытый контакт GPIO.</returns>
+      <param name="pinNumber">Номер контакта GPIO, который требуется открыть. Некоторые контакты могут оказаться недоступными в пользовательском режиме. Сведения о соответствии номеров контактов физическим контактам см. в документации к печатной плате.</param>
+      <param name="sharingMode">Режим, в котором требуется открыть контакт GPIO, который определяет, можно ли открыть другие подключения к этому контакту, пока он открыт у вас.</param>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.TryOpenPin(System.Int32,Windows.Devices.Gpio.GpioSharingMode,Windows.Devices.Gpio.GpioPin@,Windows.Devices.Gpio.GpioOpenStatus@)">
+      <summary>Открывает указанный контакт ввода-вывода общего назначения (GPIO) в заданном режиме и возвращает значение состояния, которое можно использовать, если не удается открыть контакт программным путем.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Значение true, если метод успешно открыл контакт; в противном случае — значение false. Если метод возвращает значение true, то параметр pin получает экземпляр GpioPin, а параметр openStatus получает GpioOpenStatus.PinOpened. Если метод возвращает значение false, то параметр pin принимает значение NULL, а параметр openStatus получает причину сбоя операции.</returns>
+      <param name="pinNumber">Номер контакта GPIO, который требуется открыть. Некоторые контакты могут оказаться недоступными в пользовательском режиме. Сведения о соответствии номеров контактов физическим контактам см. в документации к печатной плате.</param>
+      <param name="sharingMode">Режим, в котором требуется открыть контакт GPIO, который определяет, можно ли открыть другие подключения к этому контакту, пока он открыт у вас.</param>
+      <param name="pin">Открытый контакт GPIO, если возвращаемое значение — true; в противном случае — значение NULL.</param>
+      <param name="openStatus">Значение перечисления, которое указывает, что попытка открыть контакт GPIO выполнена успешно, либо причину, по которой попытка открыть контакт GPIO завершилась ошибкой.</param>
+    </member><member name="T:Windows.Devices.Gpio.GpioOpenStatus">
+      <summary>Описывает возможные результаты открытия контакта с помощью метода GpioPin.TryOpenPin.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioOpenStatus.PinOpened">
+      <summary>Контакт GPIO успешно открыт.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioOpenStatus.PinUnavailable">
+      <summary>Контакт зарезервирован системой и недоступен приложениям, работающим в пользовательском режиме.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioOpenStatus.SharingViolation">
+      <summary>В данный момент контакт открыт в несовместимом режиме общего доступа. Например: контакт уже открыт в режиме GpioSharingMode.Exclusive. Контакт уже открыт в режиме GpioSharingMode.SharedReadOnly, только если вы запросили открыть его в режиме GpioSharingMode.Exclusive.</summary>
+    </member><member name="T:Windows.Devices.Gpio.GpioPin">
+      <summary>Представляет контакт ввода-вывода общего назначения (GPIO).</summary>
+    </member><member name="P:Windows.Devices.Gpio.GpioPin.DebounceTimeout">
+      <summary>Возвращает или задает время ожидания устранения ложных срабатываний для контакта ввода-вывода общего назначения (GPIO). Это интервал, в течение которого изменения значения контакта отсеиваются и не создают события ValueChanged.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Время ожидания устранения ложных срабатываний для контакта GPIO. Это интервал, в течение которого изменения значения контакта отсеиваются и не создают события ValueChanged. Если длина этого интервала равна 0, все изменения значения контакта создают события ValueChanged.</returns>
+    </member><member name="P:Windows.Devices.Gpio.GpioPin.PinNumber">
+      <summary>Получает номер контакта ввода-вывода общего назначения (GPIO).</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Номер контакта GPIO.</returns>
+    </member><member name="P:Windows.Devices.Gpio.GpioPin.SharingMode">
+      <summary>Получает режим общего использования, в котором контакт ввода-вывода общего назначения (GPIO) открыт.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Режим общего использования, в котором контакт GPIO открыт.</returns>
+    </member><member name="E:Windows.Devices.Gpio.GpioPin.ValueChanged">
+      <summary>Возникает, когда значение контакта ввода-вывода общего назначения (GPIO) изменяется из-за внешнего стимула, когда контакт настроен на ввод, либо при записи значения в контакт, когда он настроен на вывод.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.Close">
+      <summary>Закрывает контакт ввода-вывода общего назначения (GPIO) и освобождает связанные с ним ресурсы.</summary>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.GetDriveMode">
+      <summary>Возвращает текущий режим диска для контакта ввода-вывода общего назначения (GPIO). Режим диска определяет, настроен ли контакт на ввод или вывод и как значения передаются в контакт.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Значение перечисления, указывающее текущий режим диска для контакта GPIO. Режим диска определяет, настроен ли контакт на ввод или вывод и как значения передаются в контакт.</returns>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.IsDriveModeSupported(Windows.Devices.Gpio.GpioPinDriveMode)">
+      <summary>Получает значение, указывающее, поддерживает ли контакт ввода-вывода общего назначения (GPIO) указанный режим диска.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Значение true, если контакт GPIO поддерживает режим диска, которые задает driveMode; в противном случае — значение false. Если указать режим диска, для которого этот метод возвращает значение false при вызове SetDriveMode, то метод SetDriveMode создает исключение.</returns>
+      <param name="driveMode">Режим диска, поддержку которого необходимо проверить.</param>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.Read">
+      <summary>Считывает текущее значение контакта ввода-вывода общего назначения (GPIO).</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Текущее значение контакта GPIO. Если контакт настроен на вывод, это значение представляет собой последнее значение, записанное в контакт.</returns>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.SetDriveMode(Windows.Devices.Gpio.GpioPinDriveMode)">
+      <summary>Задает режим диска для контакта ввода-вывода общего назначения (GPIO). Режим диска определяет, настроен ли контакт на ввод или вывод и как значения передаются в контакт.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <param name="value">Значение перечисления, указывающее режим диска, который должен использоваться для контакта GPIO. Режим диска определяет, настроен ли контакт на ввод или вывод и как значения передаются в контакт.</param>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.Write(Windows.Devices.Gpio.GpioPinValue)">
+      <summary>Передает указанное значение на контакт ввода-вывода общего назначения (GPIO) согласно текущему режиму диска для контакта, если контакт настроен на вывод, или обновляет фиксированное значение вывода для контакта, если контакт настроен на ввод.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <param name="value">Значение перечисления, которое требуется записать в контакт GPIO. Если контакт GPIO настроен как выход, метод передает указанное значение на контакт ввода-вывода общего назначения (GPIO) согласно текущему режиму диска для контакта. Если контакт настроен как вход, метод обновляет фиксированное значение вывода для контакта. Фиксированное значение вывода передается на контакт, когда конфигурация контакта меняется на вывод.</param>
+    </member><member name="T:Windows.Devices.Gpio.GpioPinDriveMode">
+      <summary>Описывает, настроен ли контакт ввода-вывода общего назначения (GPIO) на ввод или на вывод и как значения передаются в контакт.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.Input">
+      <summary>Настраивает контакт GPIO в плавающем режиме с высоким импедансом. Метод GpioPin.Read, вызванный для этого контакта, возвращает текущее состояние контакта как управляемое извне. Вызванный метод GpioPin.Write задает фиксированное значение вывода для контакта. Контакт принимает это фиксированное значение вывода, когда переключается на вывод.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.InputPullDown">
+      <summary>Настраивает контакт GPIO как высокоимпедансный контакт с заземленным понижающим резистором. При вызове метода GpioPin.Read для этого контакта метод возвращает текущее значение контакта как управляемого извне.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.InputPullUp">
+      <summary>Настраивает контакт GPIO как высокоимпедансный контакт с повышающим резистором, подключенным к выходу VCC. При вызове метода GpioPin.Read для этого контакта метод возвращает текущее значение, ранее записанное в контакт.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.Output">
+      <summary>Настраивает контакт GPIO в усиленном режиме передачи с низким импедансом. Метод GpioPin.Write, вызванный для этого контакта со значением GpioPinValue.High, создает высокое значение с низким импедансом для контакта. При вызове метода GpioPin.Write для этого контакта со значением GpioPinValue.Low метод формирует низкое значение с низким импедансом для контакта. Если вызвать метод GpioPin.Read для этого контакта, метод возвращает значение, ранее записанное в контакт.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.OutputOpenDrain">
+      <summary>Настраивает GPIO в режиме открытого стока. При вызове метода GpioPin.Write для этого контакта со значением GpioPinValue.Low метод передает значение нижнего уровня на контакт. Метод GpioPin.Write, вызванный для этого контакта со значением GpioPinValue.High, переводит контакт в плавающий режим.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.OutputOpenDrainPullUp">
+      <summary>Настраивает контакт GPIO в режиме открытого стока с повышающим резистором. При вызове метода GpioPin.Write для этого контакта со значением GpioPinValue.Low метод активирует нижнее состояние с низким импедансом. Метод GpioPin.Write, вызванный для этого контакта со значением GpioPinValue.High, настраивает контакт как контакт с высоким импедансом и повышающим резистором, подключенным к VCC.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.OutputOpenSource">
+      <summary>Настраивает GPIO в режиме открытого коллектора. При вызове метода GpioPin.Write для этого контакта со значением GpioPinValue.High метод передает значение верхнего уровня на контакт. Метод GpioPin.Write, вызванный для этого контакта со значением GpioPinValue.Low, переводит контакт в плавающий режим.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.OutputOpenSourcePullDown">
+      <summary>Настраивает контакт GPIO в режиме открытого коллектора с понижающим резистором. При вызове метода GpioPin.Write для этого контакта со значением GpioPinValue.High метод передает значение верхнего уровня на контакт. Метод GpioPin.Write, вызванный для этого контакта со значением GpioPinValue.Low, настраивает контакт как контакт с высоким импедансом и заземленным понижающим резистором.</summary>
+    </member><member name="T:Windows.Devices.Gpio.GpioPinEdge">
+      <summary>Описывает возможные типы изменений, которые могут произойти со значением контакта ввода-вывода общего назначения (GPIO) для события GpioPin.ValueChanged.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinEdge.FallingEdge">
+      <summary>Значение контакта GPIO изменилось от высокого к низкому.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinEdge.RisingEdge">
+      <summary>Значение контакта GPIO изменилось от низкого к высокому.</summary>
+    </member><member name="T:Windows.Devices.Gpio.GpioPinValue">
+      <summary>Описывает возможные значения для контакта ввода-вывода общего назначения (GPIO).</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinValue.High">
+      <summary>Значение контакта GPIO высокое.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinValue.Low">
+      <summary>Значение контакта GPIO низкое.</summary>
+    </member><member name="T:Windows.Devices.Gpio.GpioPinValueChangedEventArgs">
+      <summary>Предоставляет данные о событии GpioPin.ValueChanged, которое возникает, когда значение контакта ввода-вывода общего назначения (GPIO) изменяется из-за внешнего стимула, когда контакт настроен на ввод, либо при записи значения в контакт, когда он настроен на вывод.</summary>
+    </member><member name="P:Windows.Devices.Gpio.GpioPinValueChangedEventArgs.Edge">
+      <summary>Получает тип изменения, которое произошло со значением контакта ввода-вывода общего назначения (GPIO) для события GpioPin.ValueChanged.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Значение перечисления, которое указывает тип изменения, которое произошло со значением контакта GPIO для события GpioPin.ValueChanged.</returns>
+    </member><member name="T:Windows.Devices.Gpio.GpioSharingMode">
+      <summary>Описывает режимы, в которых можно открыть контакт ввода-вывода общего назначения (GPIO). Эти режимы определяют, могут ли быть открыты другие подключения к контакт GPIO, если он открыт у вас.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioSharingMode.Exclusive">
+      <summary>Открывает контакт GPIO в монопольном режиме, то есть к этому контакту нельзя открыть еще подключения.</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioSharingMode.SharedReadOnly">
+      <summary>Открывает контакт GPIO в режиме общего доступа, чтобы можно было открыть другие подключения к контакту в режиме SharedReadOnly. Можно выполнять только операции, которые не изменяют состояние контакта GPIO в общем режиме. Операции, которые можно выполнять с контактом GPIO в общем режиме: вызов метода GpioPin.Read, вызов метода GpioPin.GetDriveMode, получение значений свойств GpioPin.PinNumber и GpioPin.DebounceTimeout, регистрация обработчика события GpioPin.ValueChanged.</summary>
+    </member><member name="T:Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs">
+      <summary>Предоставляет данные о событии IGpioPinProvider.ValueChanged.</summary>
+    </member><member name="M:Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs.#ctor(Windows.Devices.Gpio.Provider.ProviderGpioPinEdge)">
+      <summary>Создает класс GpioPinProviderValueChangedEventArgs с указанным значением фронта.</summary>
+      <param name="edge">Требуемый фронт контакта.</param>
+    </member><member name="P:Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs.Edge">
+      <summary>Получает новое значение контакта.</summary>
+      <returns>Фронт контакта.</returns>
+    </member><member name="T:Windows.Devices.Gpio.Provider.IGpioControllerProvider">
+      <summary>Представляет действия, общие для всех контроллеров ввода-вывода общего назначения (GPIO).</summary>
+    </member><member name="P:Windows.Devices.Gpio.Provider.IGpioControllerProvider.PinCount">
+      <summary>Получает количество доступных контактов ввода-вывода общего назначения (GPIO).</summary>
+      <returns>Число доступных контактов GPIO.</returns>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioControllerProvider.OpenPinProvider(System.Int32,Windows.Devices.Gpio.Provider.ProviderGpioSharingMode)">
+      <summary>Открывает и возвращает поставщик контактов ввода и вывода общего назначения (GPIO) для заданного контакта.</summary>
+      <returns>Поставщик контактов GPIO для указанного контакта.</returns>
+      <param name="pin">Требуемый номер контакта GPIO.</param>
+      <param name="sharingMode">Общий режим для открытия контакта.</param>
+    </member><member name="T:Windows.Devices.Gpio.Provider.IGpioPinProvider">
+      <summary>Представляет действия, общие для всех поставщиков контактов ввода-вывода общего назначения (GPIO).</summary>
+    </member><member name="P:Windows.Devices.Gpio.Provider.IGpioPinProvider.DebounceTimeout">
+      <summary>Возвращает или задает время ожидания устранения ложных срабатываний для контакта ввода-вывода общего назначения (GPIO). Это интервал, в течение которого изменения значения контакта отсеиваются и не создают события ValueChanged.</summary>
+      <returns>Время ожидания устранения ложных срабатываний для контакта GPIO. Это интервал, в течение которого изменения значения контакта отсеиваются и не создают события ValueChanged. Если длина этого интервала равна 0, все изменения значения контакта создают события ValueChanged.</returns>
+    </member><member name="P:Windows.Devices.Gpio.Provider.IGpioPinProvider.PinNumber">
+      <summary>Получает номер контакта ввода-вывода общего назначения (GPIO).</summary>
+      <returns>Номер контакта GPIO.</returns>
+    </member><member name="P:Windows.Devices.Gpio.Provider.IGpioPinProvider.SharingMode">
+      <summary>Получает режим общего использования, в котором контакт ввода-вывода общего назначения (GPIO) открыт.</summary>
+      <returns>Режим общего использования, в котором контакт GPIO открыт.</returns>
+    </member><member name="E:Windows.Devices.Gpio.Provider.IGpioPinProvider.ValueChanged">
+      <summary>Событие, которое активируется при изменении значения контакта.</summary>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.GetDriveMode">
+      <summary>Возвращает текущий режим управления контакта.</summary>
+      <returns>Режим управления контакта.</returns>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.IsDriveModeSupported(Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode)">
+      <summary>Определяет, поддерживается ли режим управления для контакта.</summary>
+      <returns>Значение true, если режим управления поддерживается; в противном случае — значение false.</returns>
+      <param name="driveMode">Требуемый режим управления.</param>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.Read">
+      <summary>Считывает текущее значение контакта.</summary>
+      <returns>Значение контакта.</returns>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.SetDriveMode(Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode)">
+      <summary>Задает режим управления контакта.</summary>
+      <param name="value">Требуемый режим управления контакта.</param>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.Write(Windows.Devices.Gpio.Provider.ProviderGpioPinValue)">
+      <summary>Записывает значение в контакт.</summary>
+      <param name="value">Записываемое значение.</param>
+    </member><member name="T:Windows.Devices.Gpio.Provider.IGpioProvider">
+      <summary>Представляет действия, общие для всех поставщиков контроллеров ввода-вывода общего назначения (GPIO).</summary>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioProvider.GetControllers">
+      <summary>Получает контроллеры, доступные в системе.</summary>
+      <returns>Список значений, представляющих контроллеры, доступные в системе.</returns>
+    </member><member name="T:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode">
+      <summary>Описывает, настроен ли контакт ввода-вывода общего назначения (GPIO) на ввод или на вывод и как значения передаются в контакт.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.Input">
+      <summary>Настраивает контакт GPIO в плавающем режиме с высоким импедансом. Метод IGpioPinProvider.Read, вызванный для этого контакта, возвращает текущее состояние контакта как управляемое извне. Вызванный метод IGpioPinProvider.Write задает фиксированное значение вывода для контакта. Контакт принимает это фиксированное значение вывода, когда переключается на вывод.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.InputPullDown">
+      <summary>Настраивает контакт GPIO как высокоимпедансный контакт с заземленным понижающим резистором. При вызове метода IGpioPinProvider.Read для этого контакта метод возвращает текущее значение контакта как управляемого извне.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.InputPullUp">
+      <summary>Настраивает контакт GPIO как высокоимпедансный контакт с повышающим резистором, подключенным к выходу VCC. При вызове метода IGpioPinProvider.Read для этого контакта метод возвращает текущее значение, ранее записанное в контакт.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.Output">
+      <summary>Настраивает контакт GPIO в усиленном режиме передачи с низким импедансом. Метод IGpioPinProvider.Write, вызванный для этого контакта со значением ProviderGpioPinValue.High, создает высокое значение с низким импедансом для контакта. При вызове метода IGpioPinProvider.Write для этого контакта со значением ProviderGpioPinValue.Low метод формирует низкое значение с низким импедансом для контакта. Если вызвать метод IGpioPinProvider.Read для этого контакта, метод возвращает значение, ранее записанное в контакт.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.OutputOpenDrain">
+      <summary>Настраивает GPIO в режиме открытого стока. При вызове метода IGpioPinProvider.Write для этого контакта со значением ProviderGpioPinValue.Low метод передает значение нижнего уровня на контакт. Метод IGpioPinProvider.Write, вызванный для этого контакта со значением ProviderGpioPinValue.High, переводит контакт в плавающий режим.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.OutputOpenDrainPullUp">
+      <summary>Настраивает контакт GPIO в режиме открытого стока с повышающим резистором. При вызове метода IGpioPinProvider.Write для этого контакта со значением ProviderGpioPinValue.Low метод активирует нижнее состояние с низким импедансом. Метод IGpioPinProvider.Write, вызванный для этого контакта со значением ProviderGpioPinValue.High, настраивает контакт как контакт с высоким импедансом и повышающим резистором, подключенным к VCC.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.OutputOpenSource">
+      <summary>Настраивает GPIO в режиме открытого коллектора. При вызове метода IGpioPinProvider.Write для этого контакта со значением ProviderGpioPinValue.High метод передает значение верхнего уровня на контакт. Метод IGpioPinProvider.Write, вызванный для этого контакта со значением ProviderGpioPinValue.Low, переводит контакт в плавающий режим.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.OutputOpenSourcePullDown">
+      <summary>Настраивает контакт GPIO в режиме открытого коллектора с понижающим резистором. При вызове метода IGpioPinProvider.Write для этого контакта со значением ProviderGpioPinValue.High метод передает значение верхнего уровня на контакт. Метод IGpioPinProvider.Write, вызванный для этого контакта со значением ProviderGpioPinValue.Low, настраивает контакт как контакт с высоким импедансом и заземленным понижающим резистором.</summary>
+    </member><member name="T:Windows.Devices.Gpio.Provider.ProviderGpioPinEdge">
+      <summary>Описывает возможные типы изменений, которые могут произойти со значением контакта ввода-вывода общего назначения (GPIO).</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinEdge.FallingEdge">
+      <summary>Спадающий фронт или переход от значения верхнего уровня к значению нижнего уровня.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinEdge.RisingEdge">
+      <summary>Нарастающий фронт или переход от значения нижнего уровня к значению верхнего уровня.</summary>
+    </member><member name="T:Windows.Devices.Gpio.Provider.ProviderGpioPinValue">
+      <summary>Описывает возможные значения для контакта ввода-вывода общего назначения (GPIO).</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinValue.High">
+      <summary>Значение контакта GPIO высокое.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinValue.Low">
+      <summary>Значение контакта GPIO низкое.</summary>
+    </member><member name="T:Windows.Devices.Gpio.Provider.ProviderGpioSharingMode">
+      <summary>Описывает режимы, в которых можно открыть контакт ввода-вывода общего назначения (GPIO). Эти режимы определяют, могут ли быть открыты другие подключения к контакт GPIO, если он открыт у вас.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioSharingMode.Exclusive">
+      <summary>Открывает контакт GPIO в монопольном режиме, то есть к этому контакту нельзя открыть еще подключения.</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioSharingMode.SharedReadOnly">
+      <summary>Открывает контакт GPIO в режиме общего доступа, чтобы можно было открыть другие подключения к контакту в режиме SharedReadOnly. Можно выполнять только операции, которые не изменяют состояние контакта.</summary>
+    </member><member name="T:Windows.Devices.I2c.I2cBusSpeed">
+      <summary>Описывает скорости шины, доступные для подключения к устройству I2C. Скорость шины — это частота шины I2C при доступе к устройству.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cBusSpeed.FastMode">
+      <summary>Высокая скорость 400 кГц.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cBusSpeed.StandardMode">
+      <summary>Стандартная скорость — 100 килогерц (кГц). Это скорость по умолчанию.</summary>
+    </member><member name="T:Windows.Devices.I2c.I2cConnectionSettings">
+      <summary>Представляет параметры соединения, которые следует использовать для устройства I2C.</summary>
+    </member><member name="M:Windows.Devices.I2c.I2cConnectionSettings.#ctor(System.Int32)">
+      <summary>Создает и инициализирует новый экземпляр класса I2cConnectionSettings для устройства I2C с указанным адресом шины, используя параметры стандартного режима по умолчанию для скорости шины и монопольного режима общего доступа.</summary>
+      <param name="slaveAddress">Адрес шины устройства I2C, к которому необходимо применить параметры I2cConnectionSettings. Поддерживается только семиразрядная адресация, поэтому допустимы значения в диапазоне от 8 до 119.</param>
+    </member><member name="P:Windows.Devices.I2c.I2cConnectionSettings.BusSpeed">
+      <summary>Получает или задает скорость шины, которую следует использовать для подключения к устройству I2C. Скорость шины — это частота шины I2C при доступе к устройству.</summary>
+      <returns>Скорость шины, которую следует использовать для подключения к устройству I2C.</returns>
+    </member><member name="P:Windows.Devices.I2c.I2cConnectionSettings.SharingMode">
+      <summary>Получает или задает режим общего использования, используемый для подключения к адресу шины I2C. Этот режим определяет, можно ли открывать другие подключения к адресу шины I2C, когда вы подключены к адресу шины I2C.</summary>
+      <returns>Режим совместного использования, используемый для подключения к адресу шины I2C.</returns>
+    </member><member name="P:Windows.Devices.I2c.I2cConnectionSettings.SlaveAddress">
+      <summary>Получает или задает адрес шины устройства I2C.</summary>
+      <returns>Адрес шины устройства I2C. Поддерживается только семиразрядная адресация, поэтому допустимы значения в диапазоне от 8 до 119.</returns>
+    </member><member name="T:Windows.Devices.I2c.I2cController">
+      <summary>Представляет контроллер I2C для системы.</summary>
+    </member><member name="M:Windows.Devices.I2c.I2cController.GetControllersAsync(Windows.Devices.I2c.Provider.II2cProvider)">
+      <summary>Получает все контроллеры I2C, доступные в системе.</summary>
+      <returns>Если метод завершается успешно, возвращается список значений, представляющих контроллеры I2C, доступные в системе.</returns>
+      <param name="provider">Поставщик I2C для контроллеров в системе.</param>
+    </member><member name="M:Windows.Devices.I2c.I2cController.GetDefaultAsync">
+      <summary>Получает контроллер I2C по умолчанию в системе.</summary>
+      <returns>Контроллер I2C для системы по умолчанию или NULL, если в системе нет контроллера I2C.</returns>
+    </member><member name="M:Windows.Devices.I2c.I2cController.GetDevice(Windows.Devices.I2c.I2cConnectionSettings)">
+      <summary>Получает устройство I2C с указанными настройками.</summary>
+      <returns>Устройство I2C.</returns>
+      <param name="settings">Требуемые настройки подключений.</param>
+    </member><member name="T:Windows.Devices.I2c.I2cDevice">
+      <summary>Представляет канал связи с устройством на шине I2C.</summary>
+    </member><member name="P:Windows.Devices.I2c.I2cDevice.ConnectionSettings">
+      <summary>Возвращает параметры подключения, используемые для связи с устройством I2C.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Параметры подключения, используемые для связи с устройством I2C.</returns>
+    </member><member name="P:Windows.Devices.I2c.I2cDevice.DeviceId">
+      <summary>Возвращает идентификатор самонастраивающегося устройства контроллера шины I2C для устройства.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Идентификатор самонастраивающегося устройства контроллера шины I2C для устройства.</returns>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.Close">
+      <summary>Закрывает соединение с устройством I2C.</summary>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.FromIdAsync(System.String,Windows.Devices.I2c.I2cConnectionSettings)">
+      <summary>Асинхронно извлекает объект I2cDevice для контроллера шины I2C с указанным идентификатором самонастраивающегося устройства, используя заданные параметры подключения.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Асинхронная операция, которая возвращает объект I2cDevice.</returns>
+      <param name="deviceId">Идентификатор самонастраивающегося устройства контроллера шины I2C, для которого требуется создать объект I2cDevice.</param>
+      <param name="settings">Параметры подключения, которые используются для связи с контроллером шины I2C, заданным идентификатором deviceId.</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.GetDeviceSelector">
+      <summary>Извлекает строку расширенного синтаксиса запросов (AQS) для всех контроллеров шины I2C в системе.</summary>
+      <returns>Строка AQS для всех контроллеров шины I2C в системе, которую можно использовать с методом DeviceInformation.FindAllAsync в целях получения объектов DeviceInformation для данных контроллеров шины.</returns>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.GetDeviceSelector(System.String)">
+      <summary>Извлекает строку расширенного синтаксиса запросов (AQS) для шины I2C, имеющей указанное понятное имя.</summary>
+      <returns>Строка AQS для шины I2C, определенной именем friendlyName, которую можно использовать с методом DeviceInformation.FindAllAsync в целях получения объекта DeviceInformation для этой шины.</returns>
+      <param name="friendlyName">Понятное имя для конкретной шины I2C на конкретной аппаратной платформе, для которой необходимо получить строку AQS.</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.Read(System.Byte[])">
+      <summary>Считывает данные с шины I2C, на которой подключено устройство, в указанный буфер.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <param name="buffer">Буфер, в который нужно считывать данные с шины I2C. Длина буфера определяет количество данных, запрашиваемых с устройства.</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.ReadPartial(System.Byte[])">
+      <summary>Считывает данные с шины I2C, на которой подключено устройство, в указанный буфер и возвращает сведения об успехе операции, которые можно использовать для обработки ошибок.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Структура, содержащая сведения об успехе операции чтения и фактическом числе байтов, которое операция считала в буфер.</returns>
+      <param name="buffer">Буфер, в который нужно считывать данные с шины I2C. Длина буфера определяет количество данных, запрашиваемых с устройства.</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.Write(System.Byte[])">
+      <summary>Записывает данные на шину (I2C), на которой подключено устройство, на основе адреса шины, указанного в объекте I2cConnectionSettings, используемом для создания объекта I2cDevice.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <param name="buffer">Буфер, содержащий данные, которые нужно записать на устройство I2C. Эти данные не должны включать адрес шины.</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.WritePartial(System.Byte[])">
+      <summary>Записывает данные на шину I2C, на которой подключено устройство, и возвращает сведения об успехе операции, которые можно использовать для обработки ошибок.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Структура, содержащая сведения об успехе операции записи и фактическом числе байтов, которое операция записала в буфер.</returns>
+      <param name="buffer">Буфер, содержащий данные, которые нужно записать на устройство I2C. Эти данные не должны включать адрес шины.</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.WriteRead(System.Byte[],System.Byte[])">
+      <summary>Выполняет атомарную операцию для записи данных на шину I2C, на которой подключено устройство, и последующего считывания данных оттуда и отправляет условие перезапуска между операциями записи и чтения.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <param name="writeBuffer">Буфер, содержащий данные, которые нужно записать на устройство I2C. Эти данные не должны включать адрес шины.</param>
+      <param name="readBuffer">Буфер, в который нужно считывать данные с шины I2C. Длина буфера определяет количество данных, запрашиваемых с устройства.</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.WriteReadPartial(System.Byte[],System.Byte[])">
+      <summary>Выполняет атомарную операцию для записи данных на шину I2C, на которой подключено устройство, и последующего считывания данных оттуда и возвращает сведения об успехе операции, которые можно использовать для обработки ошибок.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Структура, которая содержит сведения об успехе обеих частей операции — чтения и записи — и сумму фактического числа байтов, которое операция записала и считала.</returns>
+      <param name="writeBuffer">Буфер, содержащий данные, которые нужно записать на устройство I2C. Эти данные не должны включать адрес шины.</param>
+      <param name="readBuffer">Буфер, в который нужно считывать данные с шины I2C. Длина буфера определяет количество данных, запрашиваемых с устройства.</param>
+    </member><member name="T:Windows.Devices.I2c.I2cSharingMode">
+      <summary>Описывает режимы, в которых можно подключиться к адресу шины I2C. Эти режимы определяют, можно ли открывать другие подключения к адресу шины I2C, когда вы подключены к адресу шины I2C.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cSharingMode.Exclusive">
+      <summary>Подключается к адресу шины I2C в монопольном режиме, то есть к адресу шины I2C не может быть установлено другое соединение, пока вы подключены к нему.
+Этот режим установлен по умолчанию.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cSharingMode.Shared">
+      <summary>Подключается к адресу шины I2C в общем режиме, то есть к адресу шины I2C не может быть установлено другое соединение, пока вы подключены к нему. Можно выполнять все операции с общими подключениями, но использовать такие подключения с осторожностью. Если несколько клиентских приложений изменяют глобальное состояние устройства I2C, может возникнуть состояние гонки. Примером использования общего подключения служит датчик, который получает показания, не изменяя состояние устройства.</summary>
+    </member><member name="T:Windows.Devices.I2c.I2cTransferResult">
+      <summary>Предоставляет сведения об успехе передачи данных, выполненной методом ReadPartial, WritePartial или WriteReadPartial, и фактическое число байтов, переданных методом.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cTransferResult.BytesTransferred">
+      <summary>Фактическое число байтов, действительно переданных операцией. В следующей таблице описывается, что это значение представляет для каждого метода. Метод Описание ReadPartial Фактическое число байтов, прочитанных операцией чтения в буфер. Если значение члена Status равно I2CTransferStatus.PartialTransfer, то это значение может быть меньше, чем число байтов в буфере, указанное в параметре buffer. WritePartial Фактическое число байтов, перемещенных операцией записи в устройство I2C. Если значение члена Status равно I2CTransferStatus.PartialTransfer, то это значение может быть меньше, чем число байтов в буфере, указанное в параметре buffer. WriteReadPartial Фактическое число байтов, перемещенных операцией, которое представляет собой сумму числа байтов, записанных операцией, и числа байтов, прочитанных операцией. Если значение члена Status равно I2CTransferStatus.PartialTransfer, то это значение может быть меньше, чем сумма длин буферов, указанных в параметрах writeBuffer и readBuffer.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cTransferResult.Status">
+      <summary>Значение перечисления, которое указывает, переместила ли операция чтения или записи полное число байтов, затребованное методом, или причина в том, что полная передача не выполнена. Для WriteReadPartial значение указывает, были ли полностью переданы данные для операций как чтения, так и записи.</summary>
+    </member><member name="T:Windows.Devices.I2c.I2cTransferStatus">
+      <summary>Описывает, было ли успешным перемещение данных, выполненное методом ReadPartial, WritePartial или WriteReadPartial, или сообщает причину, по которой передачи не были выполнены.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cTransferStatus.FullTransfer">
+      <summary>Данные полностью переданы. Для WriteReadPartial значение указывает, были ли полностью переданы данные для операций как чтения, так и записи. Для этого кода состояния значение члена I2cTransferResult.BytesTransferred, возвращаемое методом, такое же, как размер буфера, указанный при вызове метода, или равно сумме размеров двух буферов, заданных для WriteReadPartial.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cTransferStatus.PartialTransfer">
+      <summary>Устройство I2C сообщило, что данные не переданы, прежде чем все данные были переданы. Для этого кода состояния значение члена I2cTransferResult.BytesTransferred, возвращаемого методом, представляет собой фактически перемещенное число байтов. Для WriteReadPartial значение представляет собой сумму числа байтов, записанных операцией, и числа байтов, прочитанных операцией.</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cTransferStatus.SlaveAddressNotAcknowledged">
+      <summary>Адрес шины не был подтвержден. Для этого кода состояния значение члена I2cTransferResult.BytesTransferred, возвращаемого методом, представляет собой 0.</summary>
+    </member><member name="T:Windows.Devices.I2c.II2cDeviceStatics">
+      <summary>Предоставляет способы открытия канала связи с устройством на шине I2C.</summary>
+    </member><member name="M:Windows.Devices.I2c.II2cDeviceStatics.FromIdAsync(System.String,Windows.Devices.I2c.I2cConnectionSettings)">
+      <summary>Асинхронно извлекает объект I2cDevice для контроллера шины I2C с указанным идентификатором самонастраивающегося устройства, используя заданные параметры подключения.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Асинхронная операция, которая возвращает объект I2cDevice.</returns>
+      <param name="deviceId">Идентификатор самонастраивающегося устройства контроллера шины I2C, для которого требуется создать объект I2cDevice.</param>
+      <param name="settings">Параметры подключения, которые используются для связи с контроллером шины I2C, заданным идентификатором deviceId.</param>
+    </member><member name="M:Windows.Devices.I2c.II2cDeviceStatics.GetDeviceSelector">
+      <summary>Извлекает строку расширенного синтаксиса запросов (AQS) для всех контроллеров шины I2C в системе.</summary>
+      <returns>Строка AQS для всех контроллеров шины I2C в системе, которую можно использовать с методом DeviceInformation.FindAllAsync в целях получения объектов DeviceInformation для данных контроллеров шины.</returns>
+    </member><member name="M:Windows.Devices.I2c.II2cDeviceStatics.GetDeviceSelector(System.String)">
+      <summary>Извлекает строку расширенного синтаксиса запросов (AQS) для шины I2C, имеющей указанное понятное имя.</summary>
+      <returns>Строка AQS для шины I2C, определенной именем friendlyName, которую можно использовать с методом DeviceInformation.FindAllAsync в целях получения объекта DeviceInformation для этой шины.</returns>
+      <param name="friendlyName">Понятное имя для конкретной шины I2C на конкретной аппаратной платформе, для которой необходимо получить строку AQS.</param>
+    </member><member name="T:Windows.Devices.I2c.Provider.II2cControllerProvider">
+      <summary>Представляет свойства и методы, общие для всех контроллеров I2C.</summary>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cControllerProvider.GetDeviceProvider(Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings)">
+      <summary>Получает поставщик устройства I2C с указанными настройками.</summary>
+      <returns>Поставщик устройства I2C.</returns>
+      <param name="settings">Требуемые параметры.</param>
+    </member><member name="T:Windows.Devices.I2c.Provider.II2cDeviceProvider">
+      <summary>Представляет общие методы для всех поставщиков устройств I2C.</summary>
+    </member><member name="P:Windows.Devices.I2c.Provider.II2cDeviceProvider.DeviceId">
+      <summary>Возвращает идентификатор самонастраивающегося устройства контроллера шины I2C для устройства.</summary>
+      <returns>Идентификатор самонастраивающегося устройства контроллера шины I2C для устройства.</returns>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.Read(System.Byte[])">
+      <summary>Считывает данные с шины I2C, на которой подключено устройство, в указанный буфер.</summary>
+      <param name="buffer">Буфер, в который нужно считывать данные с шины I2C. Длина буфера определяет количество данных, запрашиваемых с устройства.</param>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.ReadPartial(System.Byte[])">
+      <summary>Считывает данные с шины I2C, на которой подключено устройство, в указанный буфер и возвращает сведения об успехе операции, которые можно использовать для обработки ошибок.</summary>
+      <returns>Структура, содержащая сведения об успехе операции чтения и фактическом числе байтов, которое операция считала в буфер.</returns>
+      <param name="buffer">Буфер, в который нужно считывать данные с шины I2C. Длина буфера определяет количество данных, запрашиваемых с устройства.</param>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.Write(System.Byte[])">
+      <summary>Записывает данные на шину I2C, к которой подключено устройство.</summary>
+      <param name="buffer">Буфер, содержащий данные, которые нужно записать на устройство I2C. Эти данные не должны включать адрес шины.</param>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.WritePartial(System.Byte[])">
+      <summary>Записывает данные на шину I2C, на которой подключено устройство, и возвращает сведения об успехе операции, которые можно использовать для обработки ошибок.</summary>
+      <returns>Структура, содержащая сведения об успехе операции записи и фактическом числе байтов, которое операция записала в буфер.</returns>
+      <param name="buffer">Буфер, содержащий данные, которые нужно записать на устройство I2C. Эти данные не должны включать адрес шины.</param>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.WriteRead(System.Byte[],System.Byte[])">
+      <summary>Выполняет атомарную операцию для записи данных на шину I2C, на которой подключено устройство, и последующего считывания данных оттуда и отправляет условие перезапуска между операциями записи и чтения.</summary>
+      <param name="writeBuffer">Буфер, содержащий данные, которые нужно записать на устройство I2C. Эти данные не должны включать адрес шины.</param>
+      <param name="readBuffer">Буфер, в который нужно считывать данные с шины I2C. Длина буфера определяет количество данных, запрашиваемых с устройства.</param>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.WriteReadPartial(System.Byte[],System.Byte[])">
+      <summary>Выполняет атомарную операцию для записи данных на шину I2C, на которой подключено устройство, и последующего считывания данных оттуда и возвращает сведения об успехе операции, которые можно использовать для обработки ошибок.</summary>
+      <returns>Структура, которая содержит сведения об успехе обеих частей операции — чтения и записи — и сумму фактического числа байтов, которое операция записала и считала.</returns>
+      <param name="writeBuffer">Буфер, содержащий данные, которые нужно записать на устройство I2C. Эти данные не должны включать адрес шины.</param>
+      <param name="readBuffer">Буфер, в который нужно считывать данные с шины I2C. Длина буфера определяет количество данных, запрашиваемых с устройства.</param>
+    </member><member name="T:Windows.Devices.I2c.Provider.II2cProvider">
+      <summary>Представляет общие действия для всех поставщиков I2C.</summary>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cProvider.GetControllersAsync">
+      <summary>Получает все контроллеры I2C, доступные в системе.</summary>
+      <returns>Если метод завершается успешно, возвращается список значений, представляющих контроллеры I2C, доступные в системе.</returns>
+    </member><member name="T:Windows.Devices.I2c.Provider.ProviderI2cBusSpeed">
+      <summary>Описывает скорости шины, доступные для подключения к устройству I2C. Скорость шины — это частота шины I2C при доступе к устройству.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cBusSpeed.FastMode">
+      <summary>Высокая скорость 400 кГц.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cBusSpeed.StandardMode">
+      <summary>Стандартная скорость — 100 килогерц (кГц). Это скорость по умолчанию.</summary>
+    </member><member name="T:Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings">
+      <summary>Представляет параметры соединения, которые следует использовать для устройства I2C.</summary>
+    </member><member name="P:Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings.BusSpeed">
+      <summary>Получает или задает скорость шины, которую следует использовать для подключения к устройству I2C. Скорость шины — это частота шины I2C при доступе к устройству.</summary>
+      <returns>Скорость шины, которую следует использовать для подключения к устройству I2C.</returns>
+    </member><member name="P:Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings.SharingMode">
+      <summary>Получает или задает режим общего использования, используемый для подключения к адресу шины I2C. Этот режим определяет, можно ли открывать другие подключения к адресу шины I2C, когда вы подключены к адресу шины I2C.</summary>
+      <returns>Режим совместного использования, используемый для подключения к адресу шины I2C.</returns>
+    </member><member name="P:Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings.SlaveAddress">
+      <summary>Получает или задает адрес шины устройства I2C.</summary>
+      <returns>Адрес шины устройства I2C. Поддерживается только семиразрядная адресация, поэтому допустимы значения в диапазоне от 8 до 119.</returns>
+    </member><member name="T:Windows.Devices.I2c.Provider.ProviderI2cSharingMode">
+      <summary>Описывает режимы, в которых можно подключиться к адресу шины I2C. Эти режимы определяют, можно ли открывать другие подключения к адресу шины I2C, когда вы подключены к адресу шины I2C.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cSharingMode.Exclusive">
+      <summary>Подключается к адресу шины I2C в монопольном режиме, то есть к адресу шины I2C не может быть установлено другое соединение, пока вы подключены к нему.
+Этот режим установлен по умолчанию.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cSharingMode.Shared">
+      <summary>Подключается к адресу шины I2C в общем режиме, то есть к адресу шины I2C не может быть установлено другое соединение, пока вы подключены к нему. Можно выполнять все операции с общими подключениями, но использовать такие подключения с осторожностью. Если несколько клиентских приложений изменяют глобальное состояние устройства I2C, может возникнуть состояние гонки. Примером использования общего подключения служит датчик, который получает показания, не изменяя состояние устройства.</summary>
+    </member><member name="T:Windows.Devices.I2c.Provider.ProviderI2cTransferResult">
+      <summary>Предоставляет сведения об успехе передачи данных, выполненной методом ReadPartial, WritePartial или WriteReadPartial, и фактическое число байтов, переданных методом.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferResult.BytesTransferred">
+      <summary>Фактическое число байтов, действительно переданных операцией. В следующей таблице описывается, что это значение представляет для каждого метода. Метод Описание ReadPartial Фактическое число байтов, прочитанных операцией чтения в буфер. Если значение члена Status равно ProviderI2CTransferStatus.PartialTransfer, то это значение может быть меньше, чем число байтов в буфере, указанное в параметре buffer. WritePartial Фактическое число байтов, перемещенных операцией записи в устройство I2C. Если значение члена Status равно ProviderI2CTransferStatus.PartialTransfer, то это значение может быть меньше, чем число байтов в буфере, указанное в параметре buffer. WriteReadPartial Фактическое число байтов, перемещенных операцией, которое представляет собой сумму числа байтов, записанных операцией, и числа байтов, прочитанных операцией. Если значение члена Status равно ProviderI2CTransferStatus.PartialTransfer, то это значение может быть меньше, чем сумма длин буферов, указанных в параметрах writeBuffer и readBuffer.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferResult.Status">
+      <summary>Значение перечисления, которое указывает, переместила ли операция чтения или записи полное число байтов, затребованное методом, или причина в том, что полная передача не выполнена. Для WriteReadPartial значение указывает, были ли полностью переданы данные для операций как чтения, так и записи.</summary>
+    </member><member name="T:Windows.Devices.I2c.Provider.ProviderI2cTransferStatus">
+      <summary>Описывает, было ли успешным перемещение данных, выполненное методом ReadPartial, WritePartial или WriteReadPartial, или сообщает причину, по которой передачи не были выполнены.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferStatus.FullTransfer">
+      <summary>Данные полностью переданы. Для WriteReadPartial значение указывает, были ли полностью переданы данные для операций как чтения, так и записи. Для этого кода состояния значение члена ProviderI2cTransferResult.BytesTransferred, возвращаемое методом, такое же, как размер буфера, указанный при вызове метода, или равно сумме размеров двух буферов, заданных для WriteReadPartial.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferStatus.PartialTransfer">
+      <summary>Устройство I2C сообщило, что данные не переданы, прежде чем все данные были переданы. Для этого кода состояния значение члена ProviderI2cTransferResult.BytesTransferred, возвращаемого методом, представляет собой фактически перемещенное число байтов. Для WriteReadPartial значение представляет собой сумму числа байтов, записанных операцией, и числа байтов, прочитанных операцией.</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferStatus.SlaveAddressNotAcknowledged">
+      <summary>Адрес шины не был подтвержден. Для этого кода состояния значение члена ProviderI2cTransferResult.BytesTransferred, возвращаемого методом, представляет собой 0.</summary>
+    </member><member name="T:Windows.Devices.Pwm.PwmController">
+      <summary>Представляет контроллер PWM, подключенный к системе.</summary>
+    </member><member name="P:Windows.Devices.Pwm.PwmController.ActualFrequency">
+      <summary>Получает фактическую частоту PWM.</summary>
+      <returns>Частота в герцах.</returns>
+    </member><member name="P:Windows.Devices.Pwm.PwmController.MaxFrequency">
+      <summary>Возвращает максимальную частоту, поддерживаемую контроллером.</summary>
+      <returns>Максимальная частота в герцах.</returns>
+    </member><member name="P:Windows.Devices.Pwm.PwmController.MinFrequency">
+      <summary>Возвращает минимальную частоту, поддерживаемую контроллером.</summary>
+      <returns>Минимальная частота в герцах.</returns>
+    </member><member name="P:Windows.Devices.Pwm.PwmController.PinCount">
+      <summary>Возвращает число контактов, доступных в системе.</summary>
+      <returns>Количество контактов.</returns>
+    </member><member name="M:Windows.Devices.Pwm.PwmController.GetControllersAsync(Windows.Devices.Pwm.Provider.IPwmProvider)">
+      <summary>Получает все контроллеры в системе асинхронно.</summary>
+      <returns>Если метод завершается успешно, возвращается список значений, представляющих контроллеры, доступные в системе.</returns>
+      <param name="provider">Поставщик PWM в системе.</param>
+    </member><member name="M:Windows.Devices.Pwm.PwmController.GetDefaultAsync">
+      <summary>Получает контроллер PWM по умолчанию в системе.</summary>
+      <returns>Контроллер PWM для системы по умолчанию или NULL, если в системе нет контроллера PWM.</returns>
+    </member><member name="M:Windows.Devices.Pwm.PwmController.OpenPin(System.Int32)">
+      <summary>Открывает контакт для использования.</summary>
+      <returns>Запрошенный контакт теперь доступен для использования.</returns>
+      <param name="pinNumber">Контакт, который необходимо открыть.</param>
+    </member><member name="M:Windows.Devices.Pwm.PwmController.SetDesiredFrequency(System.Double)">
+      <summary>Задает частоту PWM.</summary>
+      <returns>Фактически заданная частота. Это будет наилучшее соответствующее значение, определяемое поставщиком.</returns>
+      <param name="desiredFrequency">Затем требуемое значение частоты в Гц.</param>
+    </member><member name="T:Windows.Devices.Pwm.PwmPin">
+      <summary>Представляет один контакт PWM в системе.</summary>
+    </member><member name="P:Windows.Devices.Pwm.PwmPin.Controller">
+      <summary>Получает контроллер PWM, используемый этим контактом.</summary>
+      <returns>Контроллер.</returns>
+    </member><member name="P:Windows.Devices.Pwm.PwmPin.IsStarted">
+      <summary>Возвращает состояние запуска контакта.</summary>
+      <returns>Значение true, если PWM запущен на этом контакте; в противном случае — значение false.</returns>
+    </member><member name="P:Windows.Devices.Pwm.PwmPin.Polarity">
+      <summary>Получает или задает полярность контакта.</summary>
+      <returns>Полярность контакта.</returns>
+    </member><member name="M:Windows.Devices.Pwm.PwmPin.Close">
+      <summary>Закрывает текущее соединение с контактом и делает его доступным для других элементов.</summary>
+    </member><member name="M:Windows.Devices.Pwm.PwmPin.GetActiveDutyCyclePercentage">
+      <summary>Получает процент максимальной нагрузки для этого контакта.</summary>
+      <returns>Процент максимальной нагрузки (от 0 до 100).</returns>
+    </member><member name="M:Windows.Devices.Pwm.PwmPin.SetActiveDutyCyclePercentage(System.Double)">
+      <summary>Задает процент максимальной нагрузки для этого контакта.</summary>
+      <param name="dutyCyclePercentage">Нужный процент максимальной нагрузки, представленный как значение от 0 до 100.</param>
+    </member><member name="M:Windows.Devices.Pwm.PwmPin.Start">
+      <summary>Запускает PWM на этом контакте.</summary>
+    </member><member name="M:Windows.Devices.Pwm.PwmPin.Stop">
+      <summary>Останавливает PWM на этом контакте.</summary>
+    </member><member name="T:Windows.Devices.Pwm.PwmPulsePolarity">
+      <summary>Описывает полярность сигнала, с которой должен запуститься PWM.</summary>
+    </member><member name="F:Windows.Devices.Pwm.PwmPulsePolarity.ActiveHigh">
+      <summary>Настраивает сигнал PWM для запуска в активном состоянии верхнего уровня.</summary>
+    </member><member name="F:Windows.Devices.Pwm.PwmPulsePolarity.ActiveLow">
+      <summary>Настраивает сигнал PWM для запуска в активном состоянии нижнего уровня.</summary>
+    </member><member name="T:Windows.Devices.Pwm.Provider.IPwmControllerProvider">
+      <summary>Представляет свойства и методы, общие для всех контроллеров PWM.</summary>
+    </member><member name="P:Windows.Devices.Pwm.Provider.IPwmControllerProvider.ActualFrequency">
+      <summary>Получает фактическую частоту PWM.</summary>
+      <returns>Частота в герцах.</returns>
+    </member><member name="P:Windows.Devices.Pwm.Provider.IPwmControllerProvider.MaxFrequency">
+      <summary>Возвращает максимальную частоту, поддерживаемую контроллером.</summary>
+      <returns>Максимальная частота в герцах.</returns>
+    </member><member name="P:Windows.Devices.Pwm.Provider.IPwmControllerProvider.MinFrequency">
+      <summary>Возвращает минимальную частоту, поддерживаемую контроллером.</summary>
+      <returns>Минимальная частота в герцах.</returns>
+    </member><member name="P:Windows.Devices.Pwm.Provider.IPwmControllerProvider.PinCount">
+      <summary>Возвращает число контактов PWM, доступных в системе.</summary>
+      <returns>Число доступных контактов.</returns>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.AcquirePin(System.Int32)">
+      <summary>Получает указанный контакт и открывает его для использования.</summary>
+      <param name="pin">Контакт, для которого требуется открыть подключение к PWM.</param>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.DisablePin(System.Int32)">
+      <summary>Останавливает PWM на этом контакте.</summary>
+      <param name="pin">Контакт, для которого требуется остановить сигнал PWM.</param>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.EnablePin(System.Int32)">
+      <summary>Запускает сигнал PWM на заданном контакте.</summary>
+      <param name="pin">Контакт, для которого требуется запустить сигнал PWM.</param>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.ReleasePin(System.Int32)">
+      <summary>Освобождает подключение к указанному контакту и делает его доступным для других.</summary>
+      <param name="pin">Освобождаемый контакт.</param>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.SetDesiredFrequency(System.Double)">
+      <summary>Задает требуемую частоту PWM.</summary>
+      <returns>Фактическая скорость PWM после установки вышеуказанного значения. Это будет наилучшее соответствующее значение, определяемое поставщиком.</returns>
+      <param name="frequency">Требуемая частота в герцах.</param>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.SetPulseParameters(System.Int32,System.Double,System.Boolean)">
+      <summary>Задает параметры PWM (контакт, максимальная загрузка и полярность).</summary>
+      <param name="pin">Указывает, к какому контакту применяются эти значения.</param>
+      <param name="dutyCycle">Процент максимальной загрузки (от 0 до 100 включительно).</param>
+      <param name="invertPolarity">Значение true, если полярность контакта должна быть инвертирована; в противном случае — значение false.</param>
+    </member><member name="T:Windows.Devices.Pwm.Provider.IPwmProvider">
+      <summary>Представляет общие методы для всех поставщиков PWM.</summary>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmProvider.GetControllers">
+      <summary>Получает контроллеры, доступные в системе.</summary>
+      <returns>Возвращает список контроллеров PWM, доступных в системе.</returns>
+    </member><member name="T:Windows.Devices.Spi.ISpiDeviceStatics">
+      <summary>Представляет статистику устройства SPI, типовую для устройств SPI.</summary>
+    </member><member name="M:Windows.Devices.Spi.ISpiDeviceStatics.FromIdAsync(System.String,Windows.Devices.Spi.SpiConnectionSettings)">
+      <summary>Открывает устройство с предоставленными параметрами соединения.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Устройство SPI.</returns>
+      <param name="busId">Идентификатор шины.</param>
+      <param name="settings">Настройки подключений.</param>
+    </member><member name="M:Windows.Devices.Spi.ISpiDeviceStatics.GetBusInfo(System.String)">
+      <summary>Возвращает сведения об определенной шине.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Запрошенная информация о шине.</returns>
+      <param name="busId">Идентификатор шины.</param>
+    </member><member name="M:Windows.Devices.Spi.ISpiDeviceStatics.GetDeviceSelector">
+      <summary>Возвращает все шины SPI, обнаруженные в системе.</summary>
+      <returns>Строка, содержащая все шины SPI, имеющиеся в системе.</returns>
+    </member><member name="M:Windows.Devices.Spi.ISpiDeviceStatics.GetDeviceSelector(System.String)">
+      <summary>Возвращает все шины SPI, обнаруженные в системе, которые соответствуют входному параметру.</summary>
+      <returns>Строка, содержащая все шины, которые имеют ввод в имени.</returns>
+      <param name="friendlyName">Входной параметр, предоставляющий идентифицирующее имя для требуемой шины. Обычно оно соответствует имени на схеме.</param>
+    </member><member name="T:Windows.Devices.Spi.SpiBusInfo">
+      <summary>Представляет сведения о шине SPI.</summary>
+    </member><member name="P:Windows.Devices.Spi.SpiBusInfo.ChipSelectLineCount">
+      <summary>Возвращает количество линий выбора микросхемы, доступных на шине.</summary>
+      <returns>Количество линий выбора микросхемы.</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiBusInfo.MaxClockFrequency">
+      <summary>Максимальная тактовая частота шины.</summary>
+      <returns>Тактовая частота в Гц.</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiBusInfo.MinClockFrequency">
+      <summary>Минимальная тактовая частота шины.</summary>
+      <returns>Тактовая частота в Гц.</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiBusInfo.SupportedDataBitLengths">
+      <summary>Возвращает длины в битах, которые можно использовать в шине для передачи данных.</summary>
+      <returns>Поддерживаемые длины данных.</returns>
+    </member><member name="T:Windows.Devices.Spi.SpiConnectionSettings">
+      <summary>Представляет параметры для соединения с устройством.</summary>
+    </member><member name="M:Windows.Devices.Spi.SpiConnectionSettings.#ctor(System.Int32)">
+      <summary>Инициализирует новый экземпляр SpiConnectionSettings.</summary>
+      <param name="chipSelectLine">Линия выбора микросхемы, для которой будет выполнено подключение.</param>
+    </member><member name="P:Windows.Devices.Spi.SpiConnectionSettings.ChipSelectLine">
+      <summary>Возвращает или задает линию выбора микросхемы для подключения к устройству SPI.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Линия выбора микросхемы.</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiConnectionSettings.ClockFrequency">
+      <summary>Возвращает или задает тактовую частоту для соединения.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Значение тактовой частоты в Гц.</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiConnectionSettings.DataBitLength">
+      <summary>Возвращает или задает длину в битах для данных в этом соединении.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Длина данных в битах.</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiConnectionSettings.Mode">
+      <summary>Возвращает или задает SpiMode для этого соединения.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Режим связи.</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiConnectionSettings.SharingMode">
+      <summary>Возвращает или задает режим общего доступа для соединения SPI.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Режим общего доступа.</returns>
+    </member><member name="T:Windows.Devices.Spi.SpiController">
+      <summary>Представляет контроллер SPI в системе.</summary>
+    </member><member name="M:Windows.Devices.Spi.SpiController.GetControllersAsync(Windows.Devices.Spi.Provider.ISpiProvider)">
+      <summary>Получает все контроллеры SPI доступные в системе.</summary>
+      <returns>Если метод завершается успешно, возвращается список значений, представляющих контроллеры SPI доступные в системе.</returns>
+      <param name="provider">Поставщик SPI для контроллеров в системе.</param>
+    </member><member name="M:Windows.Devices.Spi.SpiController.GetDefaultAsync">
+      <summary>Получает контроллер SPI по умолчанию в системе.</summary>
+      <returns>Контроллер SPI для системы по умолчанию или NULL, если в системе нет контроллера SPI.</returns>
+    </member><member name="M:Windows.Devices.Spi.SpiController.GetDevice(Windows.Devices.Spi.SpiConnectionSettings)">
+      <summary>Получает устройство SPI с указанными настройками.</summary>
+      <returns>Устройство SPI.</returns>
+      <param name="settings">Требуемые настройки подключений.</param>
+    </member><member name="T:Windows.Devices.Spi.SpiDevice">
+      <summary>Представляет устройство, подключенное через шину SPI.</summary>
+    </member><member name="P:Windows.Devices.Spi.SpiDevice.ConnectionSettings">
+      <summary>Возвращает параметры подключения для устройства.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Настройки подключений.</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiDevice.DeviceId">
+      <summary>Возвращает уникальный идентификатор устройства, связанный с устройством.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Идентификатор.</returns>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.Close">
+      <summary>Закрывает соединение с устройством.</summary>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.FromIdAsync(System.String,Windows.Devices.Spi.SpiConnectionSettings)">
+      <summary>Открывает устройство с предоставленными параметрами соединения.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Запрошенное устройство SPI.</returns>
+      <param name="busId">Идентификатор шины.</param>
+      <param name="settings">Настройки подключений.</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.GetBusInfo(System.String)">
+      <summary>Возвращает сведения об определенной шине.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <returns>Запрошенная информация о шине.</returns>
+      <param name="busId">Идентификатор шины.</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.GetDeviceSelector">
+      <summary>Возвращает все шины SPI, обнаруженные в системе.</summary>
+      <returns>Строка, содержащая все шины, обнаруженные в системе.</returns>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.GetDeviceSelector(System.String)">
+      <summary>Возвращает все шины SPI, обнаруженные в системе, которые соответствуют входному параметру.</summary>
+      <returns>Строка, содержащая все шины, которые имеют ввод в имени.</returns>
+      <param name="friendlyName">Входной параметр, предоставляющий идентифицирующее имя для требуемой шины. Обычно оно соответствует имени на схеме.</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.Read(System.Byte[])">
+      <summary>Считывает из подключенного устройства.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <param name="buffer">Массив, содержащий данные, прочитанные из устройства.</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.TransferFullDuplex(System.Byte[],System.Byte[])">
+      <summary>Передача данных с помощью дуплексной системы связи.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <param name="writeBuffer">Массив, содержащий данные для записи в устройство.</param>
+      <param name="readBuffer">Массив, содержащий данные, прочитанные из устройства.</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.TransferSequential(System.Byte[],System.Byte[])">
+      <summary>Последовательная передача данных устройству.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <param name="writeBuffer">Массив, содержащий данные для записи в устройство.</param>
+      <param name="readBuffer">Массив, содержащий данные, прочитанные из устройства.</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.Write(System.Byte[])">
+      <summary>Выполняет запись в подключенное устройство.</summary>
+      <capability type="lowLevelDevices">Требуется для приложений, запущенных на устройствах IoT, чтобы получать доступ к оборудованию шины нижнего уровня, например, GPIO, I2C, SPI, ADC и PWM.</capability>
+      <param name="buffer">Массив, содержащий данные для записи в устройство.</param>
+    </member><member name="T:Windows.Devices.Spi.SpiMode">
+      <summary>Определяет режим связи SPI.</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiMode.Mode0">
+      <summary>CPOL = 0, CPHA = 0.</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiMode.Mode1">
+      <summary>CPOL = 0, CPHA = 1.</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiMode.Mode2">
+      <summary>CPOL = 1, CPHA = 0.</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiMode.Mode3">
+      <summary>CPOL = 1, CPHA = 1.</summary>
+    </member><member name="T:Windows.Devices.Spi.SpiSharingMode">
+      <summary>Определяет режим общего доступа для шины SPI.</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiSharingMode.Exclusive">
+      <summary>Общий доступ для сегмента шины SPI отсутствует.</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiSharingMode.Shared">
+      <summary>Открыт общий доступ для шины SPI.</summary>
+    </member><member name="T:Windows.Devices.Spi.Provider.ISpiControllerProvider">
+      <summary>Представляет общие действия для всех контроллеров SPI.</summary>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiControllerProvider.GetDeviceProvider(Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings)">
+      <summary>Получает устройство SPI с указанными настройками.</summary>
+      <returns>Устройство SPI.</returns>
+      <param name="settings">Требуемые настройки подключений.</param>
+    </member><member name="T:Windows.Devices.Spi.Provider.ISpiDeviceProvider">
+      <summary>Представляет общие действия для устройства, подключенного через шину SPI.</summary>
+    </member><member name="P:Windows.Devices.Spi.Provider.ISpiDeviceProvider.ConnectionSettings">
+      <summary>Возвращает параметры подключения для устройства.</summary>
+      <returns>Настройки подключений.</returns>
+    </member><member name="P:Windows.Devices.Spi.Provider.ISpiDeviceProvider.DeviceId">
+      <summary>Возвращает уникальный идентификатор устройства, связанный с устройством.</summary>
+      <returns>Идентификатор устройства.</returns>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiDeviceProvider.Read(System.Byte[])">
+      <summary>Считывает из подключенного устройства.</summary>
+      <param name="buffer">Массив, содержащий данные, прочитанные из устройства.</param>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiDeviceProvider.TransferFullDuplex(System.Byte[],System.Byte[])">
+      <summary>Передача данных с помощью дуплексной системы связи.</summary>
+      <param name="writeBuffer">Массив, содержащий данные для записи в устройство.</param>
+      <param name="readBuffer">Массив, содержащий данные, прочитанные из устройства.</param>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiDeviceProvider.TransferSequential(System.Byte[],System.Byte[])">
+      <summary>Последовательная передача данных устройству.</summary>
+      <param name="writeBuffer">Массив, содержащий данные для записи в устройство.</param>
+      <param name="readBuffer">Массив, содержащий данные, прочитанные из устройства.</param>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiDeviceProvider.Write(System.Byte[])">
+      <summary>Выполняет запись в подключенное устройство.</summary>
+      <param name="buffer">Массив, содержащий данные для записи в устройство.</param>
+    </member><member name="T:Windows.Devices.Spi.Provider.ISpiProvider">
+      <summary>Представляет общие действия для всех поставщиков контроллеров SPI.</summary>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiProvider.GetControllersAsync">
+      <summary>Получает все контроллеры SPI в системе для поставщика.</summary>
+      <returns>Если метод завершается успешно, возвращается список значений, представляющих контроллеры SPI доступные в системе.</returns>
+    </member><member name="T:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings">
+      <summary>Представляет параметры поставщика для соединения с устройством.</summary>
+    </member><member name="M:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.#ctor(System.Int32)">
+      <summary>Инициализирует новый экземпляр класса ProviderSpiConnectionSettings.</summary>
+      <param name="chipSelectLine">Линия выбора микросхемы, для которой будет выполнено подключение.</param>
+    </member><member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.ChipSelectLine">
+      <summary>Возвращает или задает линию выбора микросхемы для подключения к устройству SPI.</summary>
+      <returns>Линия выбора микросхемы.</returns>
+    </member><member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.ClockFrequency">
+      <summary>Возвращает или задает тактовую частоту для соединения.</summary>
+      <returns>Значение тактовой частоты в Гц.</returns>
+    </member><member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.DataBitLength">
+      <summary>Возвращает или задает длину в битах для данных в этом соединении.</summary>
+      <returns>Длина данных в битах.</returns>
+    </member><member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.Mode">
+      <summary>Возвращает или задает ProviderSpiMode для этого соединения.</summary>
+      <returns>Режим связи.</returns>
+    </member><member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.SharingMode">
+      <summary>Возвращает или задает режим общего доступа для соединения SPI.</summary>
+      <returns>Режим общего доступа.</returns>
+    </member><member name="T:Windows.Devices.Spi.Provider.ProviderSpiMode">
+      <summary>Определяет режим связи SPI.</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiMode.Mode0">
+      <summary>CPOL = 0, CPHA = 0.</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiMode.Mode1">
+      <summary>CPOL = 0, CPHA = 1.</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiMode.Mode2">
+      <summary>CPOL = 1, CPHA = 0.</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiMode.Mode3">
+      <summary>CPOL = 1, CPHA = 1.</summary>
+    </member><member name="T:Windows.Devices.Spi.Provider.ProviderSpiSharingMode">
+      <summary>Определяет режим общего доступа для шины SPI.</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiSharingMode.Exclusive">
+      <summary>Общий доступ для сегмента шины SPI отсутствует.</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiSharingMode.Shared">
+      <summary>Открыт общий доступ для шины SPI.</summary>
+    </member></members>
+</doc>

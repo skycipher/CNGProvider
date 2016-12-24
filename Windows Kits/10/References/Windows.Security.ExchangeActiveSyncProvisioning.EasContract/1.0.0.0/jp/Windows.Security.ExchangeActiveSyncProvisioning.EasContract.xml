@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Security.ExchangeActiveSyncProvisioning.EasContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy">
+      <summary>最新のメール アプリケーションでは、EAS セキュリティ ポリシーが評価されてから適用されます。</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy は、Windows 10 より後のリリースでは使用できなくなる可能性があります。</deprecated>
+    </member><member name="M:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.#ctor">
+      <summary>評価または適用の目的で呼び出し元アプリケーションが Exchange サーバーからセット ポリシーを検索するために使用するオブジェクトのインスタンスを作成します。</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy は、Windows 10 より後のリリースでは使用できなくなる可能性があります。</deprecated>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.DisallowConvenienceLogon">
+      <summary>簡便なログオンを防ぐ機能を取得または設定します。</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy は、Windows 10 より後のリリースでは使用できなくなる可能性があります。</deprecated>
+      <returns>簡便なログオンを防ぐ場合は TRUE。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.MaxInactivityTimeLock">
+      <summary>コンピューターがロックされるまで非アクティブ状態を維持できる最大時間を取得または設定します。</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy は、Windows 10 より後のリリースでは使用できなくなる可能性があります。</deprecated>
+      <returns>コンピューターがロックされるまでに許可されるアクティブでない状態の時間の長さ。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.MaxPasswordFailedAttempts">
+      <summary>ログオンするためのパスワード試行の失敗の最大数を取得または設定します。</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy は、Windows 10 より後のリリースでは使用できなくなる可能性があります。</deprecated>
+      <returns>範囲は 4 と 16 の間です。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.MinPasswordComplexCharacters">
+      <summary>パスワードに必要な複雑な文字の最小数を取得または設定します。</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy は、Windows 10 より後のリリースでは使用できなくなる可能性があります。</deprecated>
+      <returns>範囲は 1 と 4 の間です。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.MinPasswordLength">
+      <summary>パスワードで許可される最小長を取得または設定します。</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy は、Windows 10 より後のリリースでは使用できなくなる可能性があります。</deprecated>
+      <returns>範囲は 1 と 16 の間です。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.PasswordExpiration">
+      <summary>パスワードが有効な期間を取得または設定します。</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy は、Windows 10 より後のリリースでは使用できなくなる可能性があります。</deprecated>
+      <returns>パスワードが期限切れになり、リセットしなければならなくなるまでの時間の長さ。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.PasswordHistory">
+      <summary>前に使用されたパスワード情報の取得と設定。</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy は、Windows 10 より後のリリースでは使用できなくなる可能性があります。</deprecated>
+      <returns>前に使用されたパスワード情報。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.RequireEncryption">
+      <summary>暗号化が必要かどうかを取得または設定します。</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy は、Windows 10 より後のリリースでは使用できなくなる可能性があります。</deprecated>
+      <returns>暗号化が必要である場合は TRUE。</returns>
+    </member><member name="M:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.ApplyAsync">
+      <summary>ユーザーが同意すると非同期モードで EAS ポリシーが適用されます。</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy は、Windows 10 より後のリリースでは使用できなくなる可能性があります。</deprecated>
+      <returns>コールバック結果の評価を、呼び出し側アプリケーションに非同期モードで返します。</returns>
+    </member><member name="M:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.CheckCompliance">
+      <summary>EAS ポリシーを評価します。</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy は、Windows 10 より後のリリースでは使用できなくなる可能性があります。</deprecated>
+      <returns>コンプライアンス チェックの結果を同期モードで返します。</returns>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults">
+      <summary>EAS セキュリティ ポリシーの評価の結果をメール アプリに提供します。</summary>
+      <deprecated type="deprecate">EasComplianceResults は、Windows 10 よりも後のリリースで使用できなくなる可能性があります。</deprecated>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.Compliant">
+      <summary>コンピューターが EAS ポリシーに準拠しているかどうかに関する結果を返します。</summary>
+      <deprecated type="deprecate">EasComplianceResults は、Windows 10 よりも後のリリースで使用できなくなる可能性があります。</deprecated>
+      <returns>コンピューターが EAS ポリシーに準拠しているかどうかに関する結果。 評価されるすべてのポリシーが準拠している場合は、Compliant プロパティが TRUE に設定されます。 それ以外の場合、FALSE に設定されます。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.DisallowConvenienceLogonResult">
+      <summary>簡便なログオンが拒否されるかどうかに関する結果を返します。</summary>
+      <deprecated type="deprecate">EasComplianceResults は、Windows 10 よりも後のリリースで使用できなくなる可能性があります。</deprecated>
+      <returns>簡便なログオンが拒否されるかどうかに関する結果。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.EncryptionProviderType">
+      <summary>Exchange ActiveSync 暗号化プロバイダーの種類を取得します。</summary>
+      <deprecated type="deprecate">EasComplianceResults は、Windows 10 よりも後のリリースで使用できなくなる可能性があります。</deprecated>
+      <returns>Exchange ActiveSync 暗号化プロバイダーの種類。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.MaxInactivityTimeLockResult">
+      <summary>コンピューターがロックされるまでに許可される最大非アクティブ時間に関する結果を返します。</summary>
+      <deprecated type="deprecate">EasComplianceResults は、Windows 10 よりも後のリリースで使用できなくなる可能性があります。</deprecated>
+      <returns>コンピューターがロックされるまでの非アクティブ最大時間の結果。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.MaxPasswordFailedAttemptsResult">
+      <summary>パスワード試行の失敗に対して許可される最大回数に関する結果を返します。</summary>
+      <deprecated type="deprecate">EasComplianceResults は、Windows 10 よりも後のリリースで使用できなくなる可能性があります。</deprecated>
+      <returns>許可されるパスワード最大試行回数の結果。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.MinPasswordComplexCharactersResult">
+      <summary>複雑なパスワードに必要な最小文字数に関する結果を返します。</summary>
+      <deprecated type="deprecate">EasComplianceResults は、Windows 10 よりも後のリリースで使用できなくなる可能性があります。</deprecated>
+      <returns>必要とされる複雑なパスワード文字の最小数の結果。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.MinPasswordLengthResult">
+      <summary>パスワードに必要な最小の長さに関する結果を返します。</summary>
+      <deprecated type="deprecate">EasComplianceResults は、Windows 10 よりも後のリリースで使用できなくなる可能性があります。</deprecated>
+      <returns>必要とされるパスワードの最小長の結果。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.PasswordExpirationResult">
+      <summary>パスワードが期限切れであるかどうかに関する結果を返します。</summary>
+      <deprecated type="deprecate">EasComplianceResults は、Windows 10 よりも後のリリースで使用できなくなる可能性があります。</deprecated>
+      <returns>パスワードが期限切れであるかどうかに関する結果。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.PasswordHistoryResult">
+      <summary>パスワード履歴の結果を返します。</summary>
+      <deprecated type="deprecate">EasComplianceResults は、Windows 10 よりも後のリリースで使用できなくなる可能性があります。</deprecated>
+      <returns>パスワードの履歴の結果。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.RequireEncryptionResult">
+      <summary>暗号化が必要かどうかに関する結果を返します。</summary>
+      <deprecated type="deprecate">EasComplianceResults は、Windows 10 よりも後のリリースで使用できなくなる可能性があります。</deprecated>
+      <returns>暗号化が必要かどうかに関する結果。</returns>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult">
+      <summary>ログオンを実行できるかどうかの結果です。</summary>
+      <deprecated type="deprecate">EasDisallowConvenienceLogonResult は、Windows 10 よりも後のリリースで使用できなくなる可能性があります。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult.CanBeCompliant">
+      <summary>このコンピューターは ApplyAsync メソッドの使用に準拠しています。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS およびユーザーは管理者です。HRESULT: S_OK ただし、ユーザーは制御されていません。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult.Compliant">
+      <summary>このコンピューターはポリシーに準拠していますHRESULT: S_OK およびユーザーが制御されます。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult.NotEvaluated">
+      <summary>ポリシーは評価に設定されません。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult.RequestedPolicyIsStricter">
+      <summary>要求されたポリシーは、コンピューター ポリシーより厳密です。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS およびユーザーは管理者ではありません。</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType">
+      <summary>Exchange ActiveSync 暗号化プロバイダーの種類を記述します。</summary>
+      <deprecated type="deprecate">EasEncryptionProviderType は、Windows 10 より後のリリースでは使用できなくなる可能性があります。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType.NotEvaluated">
+      <summary>暗号化プロバイダーの種類は未定義です。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType.OtherEncryption">
+      <summary>暗号化プロバイダーは、Windows 以外のプロバイダーです。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType.WindowsEncryption">
+      <summary>暗号化プロバイダーは、Windows プロバイダーです。</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult">
+      <summary>コンピューターをロックする前の時間の最大の長さに関する結果を表します。</summary>
+      <deprecated type="deprecate">EasMaxInactivityTimeLockResult は、Windows 10 よりも後のリリースで変更されたり使用できなくなる可能性があります。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.CanBeCompliant">
+      <summary>このコンピューターは ApplyAsync メソッドの使用に準拠しています。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS およびユーザーは管理者です。HRESULT: S_OK ただし、ユーザーは制御されていません。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.Compliant">
+      <summary>このコンピューターはポリシーに準拠していますHRESULT: S_OK およびユーザーが制御されます。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.InvalidParameter">
+      <summary>ポリシー値は有効な範囲にありません。HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.NotEvaluated">
+      <summary>ポリシーは評価に設定されません。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.RequestedPolicyIsStricter">
+      <summary>要求されたポリシーは、コンピューター ポリシーより厳密です。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS およびユーザーは管理者ではありません。</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult">
+      <summary>パスワード試行の最大回数に関する結果を表します。</summary>
+      <deprecated type="deprecate">EasMaxPasswordFailedAttemptsResult は、Windows 10 より後のリリースでは使用できなくなる可能性があります。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.CanBeCompliant">
+      <summary>このコンピューターは ApplyAsync メソッドの使用に準拠しています。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS およびユーザーは管理者です。HRESULT: S_OK ただし、ユーザーは制御されていません。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.Compliant">
+      <summary>このコンピューターはポリシーに準拠していますHRESULT: S_OK およびユーザーが制御されます。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.InvalidParameter">
+      <summary>ポリシー値は有効な範囲にありません。HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.NotEvaluated">
+      <summary>ポリシーは評価に設定されません。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.RequestedPolicyIsStricter">
+      <summary>要求されたポリシーは、コンピューター ポリシーより厳密です。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS およびユーザーは管理者ではありません。</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult">
+      <summary>パスワードの最低限の複雑さに関する結果を表します。</summary>
+      <deprecated type="deprecate">EasMinPasswordComplexCharactersResult は、Windows 10 よりも後のリリースで変更されたり使用できなくなる可能性があります。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.AdminsCannotChangePassword">
+      <summary>1 人以上の管理者がパスワードの変更を許されていません。 HRESULT: EAS_E_ADMINS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.AdminsHaveBlankPassword">
+      <summary>1 人以上の管理者が空白のパスワードを使用しているため、EAS のパスワード ポリシーを評価できません。 HRESULT: EAS_E_ADMINS_HAVE_BLANK_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.CanBeCompliant">
+      <summary>このコンピューターは ApplyAsync メソッドの使用に準拠しています。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS およびユーザーは管理者です。HRESULT: S_OK ただし、ユーザーは制御されていません。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.ChangeConnectedAdminsPassword">
+      <summary>EAS のパスワード ポリシーに準拠するため、接続されたアカウントのパスワードを変更する必要がある管理者が 1 人以上います。HRESULT: EAS_E_CONNECTED_ADMINS_NEED_TO_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.ChangeConnectedUserPassword">
+      <summary>EAS のパスワード ポリシーに準拠するため、接続された現在のユーザーのアカウント パスワードを変更する必要があります。HRESULT: EAS_E_CONNECTED_ADMINS_NEED_TO_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.Compliant">
+      <summary>このコンピューターはポリシーに準拠していますHRESULT: S_OK およびユーザーが制御されます。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.ConnectedAdminsProviderPolicyIsWeak">
+      <summary>EAS パスワード ポリシーは、少なくとも 1 人の管理者が利用する接続アカウント プロバイダーでは適用できません。HRESULT: EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CONNECTED_ADMINS</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.ConnectedUserProviderPolicyIsWeak">
+      <summary>EAS パスワード ポリシーは、現在のユーザーが利用する接続アカウント プロバイダーでは適用できません。HRESULT: EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CURRENT_CONNECTED_USER</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.CurrentUserHasBlankPassword">
+      <summary>ユーザーが空白のパスワードを使用しているため、このユーザーに対する EAS のパスワード ポリシーを評価できません。HRESULT: EAS_E_CURRENT_USER_HAS_BLANK_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.InvalidParameter">
+      <summary>ポリシー値は有効な範囲にありません。HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.LocalControlledUsersCannotChangePassword">
+      <summary>パスワードの変更を許可されていない他の標準ユーザーが存在します。 HRESULT: EAS_E_LOCAL_CONTROLLED_USERS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.NotEvaluated">
+      <summary>ポリシーは評価に設定されません。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.RequestedPolicyIsStricter">
+      <summary>要求されたポリシーは、コンピューター ポリシーより厳密です。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS およびユーザーは管理者ではありません。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.RequestedPolicyNotEnforceable">
+      <summary>評価している EAS ポリシーはシステムによって強制的に適用できません。HRESULT: EAS_E_REQUESTED_POLICY_NOT_ENFORCEABLE</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.UserCannotChangePassword">
+      <summary>ユーザーがパスワードを変更することは許可されません。 HRESULT: EAS_E_USER_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult">
+      <summary>パスワードの最小の長さに関する結果を表します。</summary>
+      <deprecated type="deprecate">EasMinPasswordLengthResult は、Windows 10 より後のリリースでは使用できなくなる可能性があります。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.AdminsCannotChangePassword">
+      <summary>1 人以上の管理者がパスワードの変更を許されていません。 HRESULT: EAS_E_ADMINS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.AdminsHaveBlankPassword">
+      <summary>1 人以上の管理者が空白のパスワードを使用しているため、EAS のパスワード ポリシーを評価できません。 HRESULT: EAS_E_ADMINS_HAVE_BLANK_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.CanBeCompliant">
+      <summary>このコンピューターは ApplyAsync メソッドの使用に準拠しています。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS およびユーザーは管理者ではありません。HRESULT: S_OK ただし、ユーザーは制御されていません。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.ChangeConnectedAdminsPassword">
+      <summary>EAS のパスワード ポリシーに準拠するため、接続されたアカウントのパスワードを変更する必要がある管理者が 1 人以上います。HRESULT: EAS_E_CONNECTED_ADMINS_NEED_TO_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.ChangeConnectedUserPassword">
+      <summary>EAS のパスワード ポリシーに準拠するため、接続された現在のユーザーのアカウント パスワードを変更する必要があります。HRESULT: EAS_E_CONNECTED_ADMINS_NEED_TO_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.Compliant">
+      <summary>このコンピューターはポリシーに準拠していますHRESULT: S_OK およびユーザーが制御されます。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.ConnectedAdminsProviderPolicyIsWeak">
+      <summary>EAS パスワード ポリシーは、少なくとも 1 人の管理者が利用する接続アカウント プロバイダーでは適用できません。HRESULT: EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CONNECTED_ADMINS</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.ConnectedUserProviderPolicyIsWeak">
+      <summary>EAS パスワード ポリシーは、現在のユーザーが利用する接続アカウント プロバイダーでは適用できません。HRESULT: EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CURRENT_CONNECTED_USER</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.CurrentUserHasBlankPassword">
+      <summary>ユーザーが空白のパスワードを使用しているため、このユーザーに対する EAS のパスワード ポリシーを評価できません。HRESULT: EAS_E_CURRENT_USER_HAS_BLANK_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.InvalidParameter">
+      <summary>ポリシー値は有効な範囲にありません。HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.LocalControlledUsersCannotChangePassword">
+      <summary>パスワードの変更を許可されていない他の標準ユーザーが存在します。 HRESULT: EAS_E_LOCAL_CONTROLLED_USERS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.NotEvaluated">
+      <summary>ポリシーは評価に設定されません。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.RequestedPolicyIsStricter">
+      <summary>要求されたポリシーは、コンピューター ポリシーより厳密です。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS およびユーザーは管理者ではありません。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.RequestedPolicyNotEnforceable">
+      <summary>評価している EAS ポリシーはシステムによって強制的に適用できません。HRESULT: EAS_E_REQUESTED_POLICY_NOT_ENFORCEABLE</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.UserCannotChangePassword">
+      <summary>ユーザーがパスワードを変更することは許可されません。 HRESULT: EAS_E_USER_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult">
+      <summary>パスワード期限切れ情報の問い合わせに関する結果です。</summary>
+      <deprecated type="deprecate">EasPasswordExpirationResult は、Windows 10 より後のリリースでは使用できなくなる可能性があります。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.AdminsCannotChangePassword">
+      <summary>1 人以上の管理者がパスワードの変更を許されていません。 HRESULT: EAS_E_ADMINS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.CanBeCompliant">
+      <summary>コンピューターは ApplyAsync メソッドを使用して準拠できます。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS およびユーザーは管理者です。HRESULT: S_OK ただし、ユーザーは制御されていません。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.Compliant">
+      <summary>コンピューターはポリシーに準拠しています。HRESULT: S_OK およびユーザーが制御されます。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.InvalidParameter">
+      <summary>ポリシー値は有効な範囲にありません。HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.LocalControlledUsersCannotChangePassword">
+      <summary>パスワードの変更を許可されていない他の標準ユーザーが存在します。 HRESULT: EAS_E_LOCAL_CONTROLLED_USERS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.NotEvaluated">
+      <summary>ポリシーは評価に設定されません。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.RequestedExpirationIncompatible">
+      <summary>パスワードの有効期限が切れる間隔がシステムの最小のパスワード間隔より短いため、EAS のパスワード有効期限ポリシーを満足できません。HRESULT: EAS_E_REQUESTED_POLICY_PASSWORD_EXPIRATION_INCOMPATIBLE</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.RequestedPolicyIsStricter">
+      <summary>要求されたポリシーは、コンピューター ポリシーより厳密です。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS およびユーザーは管理者ではありません。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.UserCannotChangePassword">
+      <summary>ユーザーがパスワードを変更することは許可されません。 HRESULT: EAS_E_USER_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult">
+      <summary>パスワードの履歴を表します。</summary>
+      <deprecated type="deprecate">EasPasswordHistoryResult は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.CanBeCompliant">
+      <summary>コンピューターは ApplyAsync メソッドを使用して準拠できます。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS およびユーザーは管理者です。HRESULT: S_OK ただし、ユーザーは制御されていません。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.Compliant">
+      <summary>コンピューターはポリシーに準拠しています。HRESULT: S_OK およびユーザーが制御されます。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.InvalidParameter">
+      <summary>ポリシー値は有効な範囲にありません。HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.NotEvaluated">
+      <summary>ポリシーは評価に設定されません。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.RequestedPolicyIsStricter">
+      <summary>要求されたポリシーは、コンピューター ポリシーより厳密です。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS およびユーザーは管理者ではありません。</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult">
+      <summary>暗号化の必要性に関する種類を表します。</summary>
+      <deprecated type="deprecate">EasRequireEncryptionResult は、Windows 10 より後のリリースでは使用できなくなる可能性があります。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.CanBeCompliant">
+      <summary>このコンピューターは ApplyAsync メソッドを使用して、準拠させることができます。HRESULT: S_OK ただし、ユーザーは制御されていません。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.Compliant">
+      <summary>このコンピューターは既にデバイス保護されていますHRESULT: S_OK およびユーザーが制御されます。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeFixedDataNotSupported">
+      <summary>この値はサポートされなくなりました。 Windows 8.1 以降は FixedDataNotSupported を使用します。</summary>
+      <deprecated type="deprecate">この値はサポートされなくなりました。 Windows 8.1 以降は FixedDataNotSupported を使用します。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeHardwareNotCompliant">
+      <summary>この値はサポートされなくなりました。 Windows 8.1 以降は HardwareNotCompliant を使用します。</summary>
+      <deprecated type="deprecate">この値はサポートされなくなりました。 Windows 8.1 以降は HardwareNotCompliant を使用します。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeOsVolumeNotProtected">
+      <summary>この値はサポートされなくなりました。 Windows 8.1 以降は OsVolumeNotProtected を使用します。</summary>
+      <deprecated type="deprecate">この値はサポートされなくなりました。 Windows 8.1 以降は OsVolumeNotProtected を使用します。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeProtectionNotYetEnabled">
+      <summary>この値はサポートされなくなりました。 Windows 8.1 以降は ProtectionNotYetEnabled を使用します。</summary>
+      <deprecated type="deprecate">この値はサポートされなくなりました。 Windows 8.1 以降は ProtectionNotYetEnabled を使用します。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeProtectionSuspended">
+      <summary>この値はサポートされなくなりました。 Windows 8.1 以降は ProtectionSuspended を使用します。</summary>
+      <deprecated type="deprecate">この値はサポートされなくなりました。 Windows 8.1 以降は ProtectionSuspended を使用します。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeWinReNotConfigured">
+      <summary>この値はサポートされなくなりました。 Windows 8.1 以降は LockNotConfigured を使用します。</summary>
+      <deprecated type="deprecate">この値はサポートされなくなりました。 Windows 8.1 以降は LockNotConfigured を使用します。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.FixedDataNotSupported">
+      <summary>暗号化されていない固定データ ボリュームが存在するので、このコンピューターはデバイス暗号化をサポートできません。HRESULT: FVE_E_DE_FIXED_DATA_NOT_SUPPORTED</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.HardwareNotCompliant">
+      <summary>このコンピューターは、デバイス暗号化をサポートするハードウェア要件を満たしていません。HRESULT: FVE_E_DE_HARDWARE_NOT_COMPLIANT</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.LockNotConfigured">
+      <summary>WinRE が正常に構成されていないので、このコンピューターはデバイス暗号化をサポートできません。HRESULT: FVE_E_DE_WINRE_NOT_CONFIGURED</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.NoFeatureLicense">
+      <summary>このコンピューターには機能ライセンスがありませんHRESULT: FVE_E_NO_FEATURE_LICENSE</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.NotEvaluated">
+      <summary>ポリシーは評価に設定されません。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.NotProvisionedOnAllVolumes">
+      <summary>このコンピューターはデバイスの暗号化をサポートするようにプロビジョニングされていません。 デバイス暗号化ポリシーに準拠するには、すべてのボリュームで BitLocker を有効にします。 HRESULT: FVE_E_NOT_PROVISIONED_ON_ALL_VOLUMES</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.OsNotProtected">
+      <summary>オペレーティング システム ドライブは BitLocker ドライブ暗号化の保護を受けていません。HRESULT: FVE_E_OS_NOT_PROTECTED</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.OsVolumeNotProtected">
+      <summary>このコンピューターはデバイスの暗号化でプロビジョニングされていません。 すべてのボリュームでのデバイス暗号化が、デバイスの暗号化ポリシー (サポートされている場合) に準拠することを可能にします。
+HRESULT: FVE_E_DE_OS_VOLUME_NOT_PROTECTED</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.ProtectionNotYetEnabled">
+      <summary>保護がこのボリュームで有効になっていません。 保護を有効にするには、接続されたアカウントが必要です。 接続アカウントが既にあり、このエラーが表示された場合は、詳細についてイベント ログを参照してください。HRESULT: FVE_E_DE_PROTECTION_NOT_YET_ENABLED</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.ProtectionSuspended">
+      <summary>保護はこのボリュームで有効ですが、中断されています。 これは、ほとんどの場合、コンピューターの更新が原因です。 再起動して、もう一度やり直してください。HRESULT: FVE_E_DE_PROTECTION_SUSPENDED</summary>
+    </member></members>
+</doc>

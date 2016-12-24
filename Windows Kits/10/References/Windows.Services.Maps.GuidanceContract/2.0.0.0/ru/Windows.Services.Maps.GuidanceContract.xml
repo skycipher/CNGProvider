@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Services.Maps.GuidanceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem">
+      <summary>Определяет измерительную систему, используемую для звуковых подсказок.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem.Meters">
+      <summary>Метрическая система.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem.MilesAndFeet">
+      <summary>Традиционная американская система единиц.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem.MilesAndYards">
+      <summary>Британская имперская система.</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind">
+      <summary>Определяет типы звуковых уведомлений, запрашиваемых при возникновении события AudioNotificationRequested.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.Gps">
+      <summary>Уведомления GPS.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.Maneuver">
+      <summary>Уведомления о маневрах.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.Route">
+      <summary>Уведомления о маршруте.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.SpeedLimit">
+      <summary>Уведомления об ограничении скорости.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.Traffic">
+      <summary>Уведомления о пробках.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.TrafficCamera">
+      <summary>Уведомления о дорожных камерах.</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs">
+      <summary>Предоставляет данные для события AudioNotificationRequested.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs.AudioFilePaths">
+      <summary>Получает список запрошенных звуковых файлов.</summary>
+      <returns>Список запрошенных звуковых файлов.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs.AudioNotification">
+      <summary>Получает тип запрошенного звукового уведомления.</summary>
+      <returns>Тип запрошенного звукового уведомления.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs.AudioText">
+      <summary>Получает текстовую версию запрошенного звукового уведомления.</summary>
+      <returns>Текстовая версия запрошенного звукового уведомления.</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceAudioNotifications">
+      <summary>Определяет типы звуковых уведомлений, используемых во время навигации.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.Gps">
+      <summary>Уведомления GPS.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.Maneuver">
+      <summary>Уведомления о маневрах.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.None">
+      <summary>Звуковые уведомления не выбраны.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.Route">
+      <summary>Уведомления о маршруте.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.SpeedLimit">
+      <summary>Уведомления об ограничении скорости.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.Traffic">
+      <summary>Уведомления о пробках.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.TrafficCamera">
+      <summary>Уведомления о дорожных камерах.</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceLaneInfo">
+      <summary>Представляет полосу рядом с текущим местоположением и ее отношение к маршруту.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceLaneInfo.IsOnRoute">
+      <summary>Получает значение, указывающее, на маршруте ли полоса.</summary>
+      <returns>Значение true, если полоса на маршруте; в противном случае — значение false.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceLaneInfo.LaneMarkers">
+      <summary>Получает значение, которое описывает путь полосы.</summary>
+      <returns>Значение типа GuidanceLaneMarkers, которое описывает путь полосы.</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceLaneMarkers">
+      <summary>Задает путь полосы.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.HardLeft">
+      <summary>Знак крутого поворота налево.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.HardRight">
+      <summary>Знак крутого поворота направо.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.Left">
+      <summary>Знак поворота налево.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.LightLeft">
+      <summary>Знак простого поворота налево.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.LightRight">
+      <summary>Знак простого поворота направо.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.None">
+      <summary>Указатели полос отсутствуют.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.Right">
+      <summary>Знак поворота направо.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.Straight">
+      <summary>Знак "Только прямо".</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.Unknown">
+      <summary>Информация об указателях полос недоступна.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.UTurnLeft">
+      <summary>Знак левого разворота.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.UTurnRight">
+      <summary>Знак правого разворота.</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceManeuver">
+      <summary>Представляет маневр вдоль маршрута.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.DepartureRoadName">
+      <summary>Получает полное название дороги в начале маневра.</summary>
+      <returns>Полное название дороги в начале маневра.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.DepartureShortRoadName">
+      <summary>Получает короткое название дороги в начале маневра. Например, номер шоссе, такой как "I-90".</summary>
+      <returns>Короткое название дороги в начале маневра.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.DistanceFromPreviousManeuver">
+      <summary>Получает расстояние от предыдущего маневра до этого маневра в метрах.</summary>
+      <returns>Расстояние от предыдущего маневра до этого маневра в метрах.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.DistanceFromRouteStart">
+      <summary>Получает расстояние от начала маршрута до этого маневра в метрах.</summary>
+      <returns>Расстояние от начала маршрута до этого маневра в метрах.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.EndAngle">
+      <summary>Возвращает значение, указывающее азимут в конце маневра в градусах, где 0 или 360 = север, 90 = восток, 180 = юг и 270 = запад.</summary>
+      <returns>Азимут в конце маневра в градусах, где 0 или 360 = север, 90 = восток, 180 = юг и 270 = запад.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.InstructionText">
+      <summary>Получает или задает текст инструкции, связанный с маневром.</summary>
+      <returns>Текст инструкции, связанный с маневром.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.Kind">
+      <summary>Получает тип маневра.</summary>
+      <returns>Тип маневра.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.NextRoadName">
+      <summary>Получает полное название дороги в конце маневра.</summary>
+      <returns>Полное название дороги в конце маневра.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.NextShortRoadName">
+      <summary>Получает короткое название дороги в конце маневра. Например, номер шоссе, такой как "I-90".</summary>
+      <returns>Короткое название дороги в конце маневра.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.RoadSignpost">
+      <summary>Возвращает значение, представляющее знак на дороге, связанный с маневром.</summary>
+      <returns>Значение, представляющее знак на дороге, связанный с маневром. Если данные недоступны, возвращает значение NULL.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.StartAngle">
+      <summary>Возвращает значение, указывающее азимут в начале маневра в градусах, где 0 или 360 = север, 90 = восток, 180 = юг и 270 = запад.</summary>
+      <returns>Направление в начале маневра в градусах, где 0 или 360 = север, 90 = восток, 180 = юг и 270 = запад</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.StartLocation">
+      <summary>Получает расположение начала маневра.</summary>
+      <returns>Расположение, где начинается маневр.</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceManeuverKind">
+      <summary>Определяет типы маневров.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.End">
+      <summary>Вы прибыли в пункт назначения.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayEnterLeft">
+      <summary>Выезжайте на правую полосу шоссе.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayEnterRight">
+      <summary>Выезжайте на левую полосу шоссе.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayKeepLeft">
+      <summary>На шоссе держитесь левее.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayKeepRight">
+      <summary>На шоссе держитесь правее.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayLeaveLeft">
+      <summary>Выезжайте с шоссе с левой полосы.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayLeaveRight">
+      <summary>Выезжайте с шоссе с правой полосы.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.GoStraight">
+      <summary>Двигайтесь прямо.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.KeepMiddle">
+      <summary>Держитесь в средней полосе.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.LeaveTransitStation">
+      <summary>Выезжаем из станции общественного транспорта.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.None">
+      <summary>Маневры невозможны.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.PassTransitStation">
+      <summary>Проезжаем станцию общественного транспорта.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.Start">
+      <summary>Начальная точка.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TakeFerry">
+      <summary>Выезжайте на паром.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft1">
+      <summary>На круге сверните на съезд 1 (левостороннее движение).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft10">
+      <summary>На круге сверните на съезд 10 (левостороннее движение).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft11">
+      <summary>На круге сверните на съезд 11 (левостороннее движение).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft12">
+      <summary>На круге сверните на съезд 12 (левостороннее движение).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft2">
+      <summary>На круге сверните на съезд 2 (левостороннее движение).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft3">
+      <summary>На круге сверните на съезд 3 (левостороннее движение).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft4">
+      <summary>На круге сверните на съезд 4 (левостороннее движение).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft5">
+      <summary>На круге сверните на съезд 5 (левостороннее движение).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft6">
+      <summary>На круге сверните на съезд 6 (левостороннее движение).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft7">
+      <summary>На круге сверните на съезд 7 (левостороннее движение).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft8">
+      <summary>На круге сверните на съезд 8 (левостороннее движение).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft9">
+      <summary>На круге сверните на съезд 9 (левостороннее движение).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight1">
+      <summary>На круге сверните на съезд 1 (правостороннее движение).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight10">
+      <summary>На круге сверните на съезд 10 (правостороннее движение).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight11">
+      <summary>На круге сверните на съезд 11 (правостороннее движение).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight12">
+      <summary>На круге сверните на съезд 12 (правостороннее движение).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight2">
+      <summary>На круге сверните на съезд 2 (правостороннее движение).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight3">
+      <summary>На круге сверните на съезд 3 (правостороннее движение).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight4">
+      <summary>На круге сверните на съезд 4 (правостороннее движение).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight5">
+      <summary>На круге сверните на съезд 5 (правостороннее движение).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight6">
+      <summary>На круге сверните на съезд 6 (правостороннее движение).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight7">
+      <summary>На круге сверните на съезд 7 (правостороннее движение).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight8">
+      <summary>На круге сверните на съезд 8 (правостороннее движение).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight9">
+      <summary>На круге сверните на съезд 9 (правостороннее движение).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnHardLeft">
+      <summary>Резко поверните влево.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnHardRight">
+      <summary>Резко поверните вправо.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnKeepLeft">
+      <summary>Держитесь в левой полосе.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnKeepRight">
+      <summary>Держитесь в правой полосе.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnLeft">
+      <summary>Поверните влево (около 90 градусов).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnLightLeft">
+      <summary>Поверните слегка влево.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnLightRight">
+      <summary>Поверните слегка вправо.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnRight">
+      <summary>Поверните вправо (около 90 градусов).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.UTurnLeft">
+      <summary>Выполните разворот влево.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.UTurnRight">
+      <summary>Выполните разворот вправо.</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate">
+      <summary>Описывает навигационные условия в текущем местоположении пользователя.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.CurrentHeading">
+      <summary>Получает значение, которое указывает текущее направление карты в градусах, где 0 или 360 — это север, 90 — восток, 180 — юг, а 270 — запад.</summary>
+      <returns>Текущее направление в градусах, где 0 или 360 = север, 90 = восток, 180 = юг и 270 = запад.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.CurrentSpeed">
+      <summary>Возвращает значение, указывающее текущую скорость в метрах в секунду.</summary>
+      <returns>Текущая скорость в метрах в секунду.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.IsOnStreet">
+      <summary>Получает значение, указывающее, на улице ли текущее местоположение.</summary>
+      <returns>Значение true, если текущее местоположение на улице; в противном случае — значение false.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.Location">
+      <summary>Возвращает текущее географическое местоположение.</summary>
+      <returns>Текущее географическое местоположение.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.Road">
+      <summary>Возвращает значение, описывающее дорогу в текущем местоположении.</summary>
+      <returns>Значение, описывающее дорогу в текущем местоположении.</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceMode">
+      <summary>Определяет тип навигационных подсказок.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceMode.Navigation">
+      <summary>Навигационные подсказки включены.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceMode.None">
+      <summary>Указывает, что двигатель выключен.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceMode.Simulation">
+      <summary>Навигационные подсказки моделируются.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceMode.Tracking">
+      <summary>Навигационная помощь предоставляется без указанного маршрута.</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceNavigator">
+      <summary>Предоставляет навигационные подсказки.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceNavigator.AudioMeasurementSystem">
+      <summary>Получает или задает измерительную систему, используемую для звуковых подсказок.</summary>
+      <returns>Измерительная система, используемая для звуковых подсказок.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceNavigator.AudioNotifications">
+      <summary>Возвращает или задает типы звуковых уведомлений системы навигации.</summary>
+      <returns>Типы звуковых уведомлений системы навигации.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceNavigator.IsGuidanceAudioMuted">
+      <summary>Получает или задает значение, указывающее, выключен ли звук навигационных подсказок.</summary>
+      <returns>Звуковые подсказки отключены, если значение равно true; в противном случае звуковые подсказки не отключены.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceNavigator.UseAppProvidedVoice">
+      <summary>Получает значение, указывающее, используется ли Кортана на устройстве.</summary>
+      <returns>Если значение равно true, Кортана используется на устройстве; в противном случае — значение false.</returns>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.AudioNotificationRequested">
+      <summary>Возникает, когда звуковые уведомления подходят для навигационных подсказок, например перед поворотом или съездом.</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.DestinationReached">
+      <summary>Возникает после прибытия в пункт назначения.</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.GuidanceUpdated">
+      <summary>Возникает после обновления навигационных подсказок.</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.Rerouted">
+      <summary>Возникает после перестройки маршрута.</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.RerouteFailed">
+      <summary>Возникает при ошибке перестроения маршрута.</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.Rerouting">
+      <summary>Возникает при перестройке маршрута.</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.UserLocationLost">
+      <summary>Возникает после потери местоположения пользователя.</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.UserLocationRestored">
+      <summary>Возникает после восстановления местоположения пользователя.</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.GetCurrent">
+      <summary>Возвращает объект GuidanceNavigator, представляющий текущие навигационные подсказки.</summary>
+      <returns>Объект GuidanceNavigator, представляющий текущие навигационные подсказки.</returns>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.Pause">
+      <summary>Приостанавливает навигационные подсказки.</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.RepeatLastAudioNotification">
+      <summary>Повторяет последнее звуковое уведомление.</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.Resume">
+      <summary>Возобновляет навигационные подсказки.</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.SetGuidanceVoice(System.Int32,System.String)">
+      <summary>Задает голос, используемый для звуковых уведомлений.</summary>
+      <param name="voiceId">Идентификатор голоса.</param>
+      <param name="voiceFolder">Путь к папке с указанным голосом.</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.StartNavigating(Windows.Services.Maps.Guidance.GuidanceRoute)">
+      <summary>Запускает навигационные подсказки, используя заданный маршрут.</summary>
+      <param name="route">Маршрут для навигации.</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.StartSimulating(Windows.Services.Maps.Guidance.GuidanceRoute,System.Int32)">
+      <summary>Запускает моделирование навигационных подсказок, используя заданный маршрут.</summary>
+      <param name="route">Маршрут для навигации.</param>
+      <param name="speedInMetersPerSecond">Скорость навигационного моделирования в метрах в секунду.</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.StartTracking">
+      <summary>Запускает навигационные подсказки без определенного маршрута.</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.Stop">
+      <summary>Останавливает навигационные подсказки.</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.UpdateUserLocation(Windows.Devices.Geolocation.Geocoordinate)">
+      <summary>Обновляет навигационные подсказки, используя указанное географическое положение.</summary>
+      <param name="userLocation">Текущее местоположение пользователя.</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.UpdateUserLocation(Windows.Devices.Geolocation.Geocoordinate,Windows.Devices.Geolocation.BasicGeoposition)">
+      <summary>Обновляет навигационные подсказки, используя указанное географическое положение.</summary>
+      <param name="userLocation">Текущее местоположение пользователя.</param>
+      <param name="positionOverride">Высота, широта и долгота, используемые вместо userLocation.</param>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs">
+      <summary>Предоставляет данные для события Rerouted.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs.Route">
+      <summary>Получает новый маршрут, созданный при перестроении.</summary>
+      <returns>Новый маршрут.</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceRoadSegment">
+      <summary>Представляет дорогу на сегменте маршрута.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.Id">
+      <summary>Получает идентификатор сегмента дороги.</summary>
+      <returns>Идентификатор сегмента дороги.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.IsHighway">
+      <summary>Возвращает значение, указывающее, что сегмент дороги — это шоссе.</summary>
+      <returns>Значение true, если сегмент дороги — это шоссе; в противном случае — значение false.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.IsTollRoad">
+      <summary>Возвращает значение, указывающее, что сегмент дороги — это платная дорога.</summary>
+      <returns>Значение true, если сегмент дороги — это платный участок; в противном случае — значение false.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.IsTunnel">
+      <summary>Возвращает значение, указывающее, что сегмент дороги — это туннель.</summary>
+      <returns>Значение true, если сегмент дороги — это туннель; в противном случае — значение false.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.Path">
+      <summary>Получает упорядоченную последовательность географических точек, которые описывают сегмент дороги.</summary>
+      <returns>Упорядоченная последовательность географических точек, которые описывают сегмент дороги.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.RoadName">
+      <summary>Получает полное название дороги.</summary>
+      <returns>Полное название дороги.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.ShortRoadName">
+      <summary>Получает короткое название дороги.</summary>
+      <returns>Короткое название дороги.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.SpeedLimit">
+      <summary>Получает ограничение скорости сегмента дороги.</summary>
+      <returns>Ограничение скорости сегмента дороги.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.TravelTime">
+      <summary>Получает время поездки по сегменту дороги.</summary>
+      <returns>Время поездки по сегменту дороги.</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceRoadSignpost">
+      <summary>Представляет знак на дороге.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.BackgroundColor">
+      <summary>Получает цвет фона знака.</summary>
+      <returns>Цвет фона знака. Если данные недоступны, возвращает значение Blue.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.Exit">
+      <summary>Получает текст на знаке.</summary>
+      <returns>Текст на знаке. Если данные недоступны, возвращает значение NULL.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.ExitDirections">
+      <summary>Получает направления, указанные на знаке. Например, названия городов и расстояния.</summary>
+      <returns>Направления, указанные на знаке. Если данные недоступны, возвращает пустой список.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.ExitNumber">
+      <summary>Получает номер съезда, указанный на знаке.</summary>
+      <returns>Номер съезда, указанный на знаке. Если данные недоступны, возвращает значение NULL.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.ForegroundColor">
+      <summary>Получает цвет текста на знаке.</summary>
+      <returns>Цвет текста на знаке. Если данные недоступны, возвращает значение White.</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceRoute">
+      <summary>Представляет маршрут, для которого предоставляются навигационные подсказки.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.BoundingBox">
+      <summary>Возвращает географическую область, содержащую маршрут.</summary>
+      <returns>Географическая область, содержащая маршрут.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.Distance">
+      <summary>Получает общую длину маршрута в метрах.</summary>
+      <returns>Общая длина маршрута в метрах.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.Duration">
+      <summary>Получает приблизительную длительность поездки по маршруту.</summary>
+      <returns>Приблизительная длительность поездки по маршруту.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.Maneuvers">
+      <summary>Получает список маневров, которые требуются для поездки по маршруту.</summary>
+      <returns>Маневры, которые требуются для поездки по маршруту.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.Path">
+      <summary>Возвращает упорядоченную последовательность географических точек вдоль маршрута.</summary>
+      <returns>Упорядоченная последовательность географических точек вдоль маршрута.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.RoadSegments">
+      <summary>Получает список сегментов дороги, упорядоченных от начала до конца и составляющих маршрут.</summary>
+      <returns>Список сегментов дороги, упорядоченных от начала до конца и составляющих маршрут.</returns>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceRoute.CanCreateFromMapRoute(Windows.Services.Maps.MapRoute)">
+      <summary>Проверяет, можно ли преобразовать указанный объект MapRoute в объект GuidanceRoute.</summary>
+      <returns>Значение true, если объект GuidanceRoute можно создать; в противном случае — значение false.</returns>
+      <param name="mapRoute">Потенциальный маршрут для навигации.</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceRoute.ConvertToMapRoute">
+      <summary>Создает объект MapRoute, основанный на текущем объекте GuidanceRoute.</summary>
+      <returns>Объект MapRoute, основанный на текущем объекте GuidanceRoute.</returns>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceRoute.TryCreateFromMapRoute(Windows.Services.Maps.MapRoute)">
+      <summary>Создает объект GuidanceRoute, основанный на указанном объекте MapRoute.</summary>
+      <returns>Объект GuidanceRoute, основанный на указанном объекте MapRoute; в противном случае (если mapRoute невозможно преобразовать) — значение NULL.</returns>
+      <param name="mapRoute">Потенциальный маршрут для навигации.</param>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector">
+      <summary>Получает данные о местоположении для уведомления о ситуации на дорогах.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.Enabled">
+      <summary>Возвращает или задает значение, которое указывает, собираются ли данные для уведомления о ситуации на дорогах.</summary>
+      <returns>Значение true, если данные о местоположении собираются для уведомления о ситуации на дорогах; в противном случае — значение false.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.SpeedTrigger">
+      <summary>Получает или задает скорость, при которой начинается сбор данных, в метрах в секунду.</summary>
+      <returns>Скорость, при которой начинается сбор данных, в метрах в секунду.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.UploadFrequency">
+      <summary>Возвращает или задает частоту уведомления о ситуации на дорогах в секундах.</summary>
+      <returns>Частота уведомления о пробках в секундах.</returns>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.ClearLocalData">
+      <summary>Удаляет данные о местоположении, сохраненные локально объектом GuidanceTelemetryCollector.</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.GetCurrent">
+      <summary>Создает объект GuidanceTelemetryCollector для текущего сборщика данных телеметрии.</summary>
+      <returns>Текущий сборщик данных телеметрии.</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs">
+      <summary>Предоставляет данные для события GuidanceUpdated.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.AfterNextManeuver">
+      <summary>Получает маневр после NextManeuver.</summary>
+      <returns>Маневр после NextManeuver.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.AfterNextManeuverDistance">
+      <summary>Получает расстояние по маршруту между текущим местоположением и AfterNextManeuver в метрах.</summary>
+      <returns>Расстояние по маршруту между текущим местоположением и AfterNextManeuver в метрах.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.CurrentLocation">
+      <summary>Получает навигационные условия в текущем местоположении.</summary>
+      <returns>Навигационные условия в текущем местоположении.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.DistanceToDestination">
+      <summary>Получает оставшееся расстояние по маршруту в метрах.</summary>
+      <returns>Оставшееся расстояние по маршруту в метрах.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.ElapsedDistance">
+      <summary>Получает пройденное по маршруту расстояние до обновления в метрах.</summary>
+      <returns>Пройденное по маршруту расстояние до обновления в метрах.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.ElapsedTime">
+      <summary>Получает время с начала маршрута до обновления.</summary>
+      <returns>Время с начала маршрута до обновления.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.IsNewManeuver">
+      <summary>Возвращает значение, указывающее, содержит ли обновление новый маневр.</summary>
+      <returns>Значение true, если обновление содержит новый маневр; в противном случае — значение false.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.LaneInfo">
+      <summary>Получает список полос возле текущего местоположения, упорядоченных слева направо.</summary>
+      <returns>Список полос возле текущего местоположения, упорядоченных слева направо.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.Mode">
+      <summary>Получает тип навигационных подсказок.</summary>
+      <returns>Тип навигационных подсказок.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.NextManeuver">
+      <summary>Получает маневр после текущего маневра.</summary>
+      <returns>Маневр после текущего маневра.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.NextManeuverDistance">
+      <summary>Получает расстояние по маршруту между текущим местоположением и NextManeuver в метрах.</summary>
+      <returns>Расстояние по маршруту между текущим местоположением и NextManeuver в метрах.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.RoadName">
+      <summary>Получает полное название текущего сегмента дороги.</summary>
+      <returns>Полное название текущего сегмента дороги.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.Route">
+      <summary>Получает обновленный маршрут.</summary>
+      <returns>Обновленный маршрут.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.TimeToDestination">
+      <summary>Возвращает приблизительное время поездки до пункта назначения.</summary>
+      <returns>Приблизительное время поездки до пункта назначения.</returns>
+    </member></members>
+</doc>

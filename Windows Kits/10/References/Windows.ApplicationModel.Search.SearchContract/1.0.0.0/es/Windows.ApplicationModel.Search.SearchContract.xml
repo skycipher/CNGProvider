@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Search.SearchContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs">
+      <summary>Proporciona datos para un evento querychanged que está asociado a un objeto searchPane.</summary>
+      <deprecated type="deprecate">Puede que ISearchPaneQueryChangedEventArgs se haya modificado o no esté disponible para versiones posteriores a Windows 10.</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs.Language">
+      <summary>La etiqueta de idioma (BCP47 estándar) del Grupo de trabajo de ingeniería de Internet (IETF) que identifica el idioma asociado al dispositivo de entrada de texto del usuario.</summary>
+      <returns>Etiqueta de idioma (BCP-47 estándar) del Grupo de trabajo de ingeniería de Internet (IETF).</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs.LinguisticDetails">
+      <summary>Un objeto que proporciona información sobre el texto de la consulta que el usuario especifica mediante un editor de métodos de entrada (IME).</summary>
+      <returns>Un objeto que proporciona información sobre el texto de la consulta.</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs.QueryText">
+      <summary>El texto del cuadro de búsqueda cuando se desencadena el evento querychanged.</summary>
+      <returns>El texto actual de la consulta.</returns>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPane">
+      <summary>Obsoleto. Use Windows.UI.Xaml.Controls.SearchBox (XAML) o el control WinJS.UI.SearchBox (HTML) en su lugar.</summary>
+      <deprecated type="deprecate">Puede que SearchPane se haya modificado o que no esté disponible para versiones posteriores a Windows 10.</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.Language">
+      <summary>La etiqueta de idioma (BCP47 estándar) del Grupo de trabajo de ingeniería de Internet (IETF) que identifica el idioma asociado al dispositivo de entrada de texto del usuario.</summary>
+      <returns>Etiqueta de idioma (BCP-47 estándar) del Grupo de trabajo de ingeniería de Internet (IETF).</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.PlaceholderText">
+      <summary>El texto del marcador de posición en el cuadro de búsqueda cuando el usuario no ha especificado ningún carácter.</summary>
+      <returns>El texto del marcador de posición que se va a mostrar en el cuadro de búsqueda.</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.QueryText">
+      <summary>El texto actual del cuadro de búsqueda del panel de búsqueda.</summary>
+      <returns>El texto actual de la consulta. Si no se utilizó el panel de búsqueda, es una cadena vacía.</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.SearchHistoryContext">
+      <summary>Una cadena que identifica el contexto de la búsqueda y se usa para almacenar el historial de búsqueda del usuario en la aplicación.</summary>
+      <returns>La cadena de contexto del historial de búsqueda.</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.SearchHistoryEnabled">
+      <summary>Indica si se guardan automáticamente las búsquedas anteriores realizadas por el usuario con la aplicación y se utilizan para proporcionar sugerencias.</summary>
+      <returns>True si se realiza un seguimiento automático del historial de búsqueda del usuario y se utiliza este para proporcionar sugerencias; de lo contrario, false. El valor predeterminado es true.</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.ShowOnKeyboardInput">
+      <summary>Obtiene o establece si el usuario puede abrir el panel de búsqueda escribiendo.</summary>
+      <returns>True si el usuario puede escribir para buscar. De lo contrario, es false.</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.Visible">
+      <summary>Indica si el panel de búsqueda está abierto.</summary>
+      <returns>True si se muestra el panel de búsqueda; de lo contrario, false.</returns>
+    </member><member name="E:Windows.ApplicationModel.Search.SearchPane.QueryChanged">
+      <summary>Se desencadena cuando el usuario cambia el texto en el cuadro de búsqueda.</summary>
+    </member><member name="E:Windows.ApplicationModel.Search.SearchPane.QuerySubmitted">
+      <summary>Se desencadena cuando el usuario envía el texto del cuadro de búsqueda y la aplicación debe mostrar resultados de la búsqueda.</summary>
+    </member><member name="E:Windows.ApplicationModel.Search.SearchPane.ResultSuggestionChosen">
+      <summary>Se desencadena cuando el usuario selecciona uno de los resultados sugeridos que proporciona la aplicación y se muestran en el panel de búsqueda.</summary>
+    </member><member name="E:Windows.ApplicationModel.Search.SearchPane.SuggestionsRequested">
+      <summary>Se desencadena cuando cambia el texto de consulta de usuario y la aplicación necesita proporcionar nuevas sugerencias para mostrar en el panel de búsqueda.</summary>
+    </member><member name="E:Windows.ApplicationModel.Search.SearchPane.VisibilityChanged">
+      <summary>Se desencadena cuando el usuario abre o cierra el panel de búsqueda.</summary>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPane.GetForCurrentView">
+      <summary>Recupera una instancia del panel de búsqueda desde el que los usuarios pueden buscar en la aplicación.</summary>
+      <deprecated type="deprecate">Puede que el método ISearchPaneStatics se haya modificado o que no esté disponible para versiones posteriores a Windows 10.</deprecated>
+      <returns>Una instancia del panel de búsqueda, que ofrece un cuadro de búsqueda coherente y compatible con la entrada táctil, así como sugerencias de búsqueda opcionales para usar en la aplicación actual.</returns>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPane.HideThisApplication">
+      <summary>Oculta la UI actual de la aplicación.</summary>
+      <deprecated type="deprecate">Puede que ISearchPaneStaticsWithHideThisApplication se haya modificado o que no esté disponible para versiones posteriores a Windows 10.</deprecated>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPane.SetLocalContentSuggestionSettings(Windows.ApplicationModel.Search.LocalContentSuggestionSettings)">
+      <summary>Especifica si las sugerencias basadas en los archivos locales se muestran automáticamente en el panel de búsqueda, y define los criterios que Windows utiliza para buscar y filtrar estas sugerencias.</summary>
+      <deprecated type="deprecate">Puede que ISearchPane se haya modificado o que no esté disponible para versiones posteriores a Windows 10.</deprecated>
+      <param name="settings">La nueva configuración para las sugerencias de contenido local.</param>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPane.Show">
+      <summary>Muestra el panel de búsqueda.</summary>
+      <deprecated type="deprecate">Puede que ISearchPane se haya modificado o que no esté disponible para versiones posteriores a Windows 10.</deprecated>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPane.Show(System.String)">
+      <summary>Muestra el panel de búsqueda con la cadena de consulta inicial especificada.</summary>
+      <deprecated type="deprecate">Puede que ISearchPane se haya modificado o que no esté disponible para versiones posteriores a Windows 10.</deprecated>
+      <param name="query">Cadena de consulta inicial.</param>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPane.TrySetQueryText(System.String)">
+      <summary>Intenta establecer el texto actual del cuadro de búsqueda del panel de búsqueda.</summary>
+      <deprecated type="deprecate">Puede que ISearchPane se haya modificado o que no esté disponible para versiones posteriores a Windows 10.</deprecated>
+      <returns>True si el texto del cuadro de búsqueda se estableció correctamente. De lo contrario, es false.</returns>
+      <param name="query">El texto de la consulta para mostrar en el cuadro de búsqueda del panel de búsqueda.</param>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs">
+      <summary>Proporciona datos para un evento querychanged que está asociado a un objeto searchPane.</summary>
+      <deprecated type="deprecate">Puede que SearchPaneQueryChangedEventArgs se haya modificado o no esté disponible para versiones posteriores a Windows 10.</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs.Language">
+      <summary>La etiqueta de idioma (BCP47 estándar) del Grupo de trabajo de ingeniería de Internet (IETF) que identifica el idioma asociado al dispositivo de entrada de texto del usuario.</summary>
+      <returns>Etiqueta de idioma (BCP-47 estándar) del Grupo de trabajo de ingeniería de Internet (IETF).</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs.LinguisticDetails">
+      <summary>Un objeto que proporciona información lingüística sobre el texto de la consulta que el usuario especifica mediante un editor de métodos de entrada (IME).</summary>
+      <returns>Un objeto que proporciona información lingüística sobre el texto de la consulta.</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs.QueryText">
+      <summary>El texto del cuadro de búsqueda cuando se desencadena el evento querychanged.</summary>
+      <returns>El texto del cuadro de búsqueda cuando se desencadena el evento querychanged.</returns>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs">
+      <summary>Proporciona datos para un evento querysubmitted que está asociado a un objeto searchPane.</summary>
+      <deprecated type="deprecate">Puede que SearchPaneQuerySubmittedEventArgs se haya modificado o no esté disponible para versiones posteriores a Windows 10.</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs.Language">
+      <summary>La etiqueta de idioma (BCP47 estándar) del Grupo de trabajo de ingeniería de Internet (IETF) que identifica el idioma asociado al dispositivo de entrada de texto del usuario.</summary>
+      <returns>Etiqueta de idioma (BCP-47 estándar) del Grupo de trabajo de ingeniería de Internet (IETF).</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs.LinguisticDetails">
+      <summary>Un objeto que proporciona información lingüística sobre el texto de la consulta que el usuario especifica mediante un editor de métodos de entrada (IME).</summary>
+      <returns>Un objeto que proporciona información lingüística sobre el texto de la consulta.</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs.QueryText">
+      <summary>El texto que se envió mediante el panel de búsqueda.</summary>
+      <returns>El texto de la consulta enviado.</returns>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs">
+      <summary>Proporciona datos para un evento resultsuggestionchosen en que está asociado a un objeto searchPane.</summary>
+      <deprecated type="deprecate">Puede que SearchPaneResultSuggestionChosenEventArgs se haya modificado o que no esté disponible para versiones posteriores a Windows 10.</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs.Tag">
+      <summary>La etiqueta del resultado sugerido seleccionado por el usuario.</summary>
+      <returns>La etiqueta definida por la aplicación para el resultado de búsqueda seleccionado.</returns>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest">
+      <summary>Almacena sugerencias e información sobre la solicitud de sugerencias.</summary>
+      <deprecated type="deprecate">Puede que SearchPaneSuggestionsRequest se haya modificado o no esté disponible para versiones posteriores a Windows 10.</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest.IsCanceled">
+      <summary>Indica si se ha cancelado la solicitud de sugerencias que se van a mostrar.</summary>
+      <returns>True si se canceló la solicitud; de lo contrario, false. El valor predeterminado es false.</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest.SearchSuggestionCollection">
+      <summary>Las sugerencias que se van a mostrar en el panel de búsqueda para la consulta actual. Las aplicaciones proporcionan sugerencias para mostrar anexándolas a este objeto de searchSuggestionCollection.</summary>
+      <returns>Sugerencias que se van a mostrar. Las aplicaciones proporcionan sugerencias anexándolas a este objeto de searchSuggestionCollection.</returns>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest.GetDeferral">
+      <summary>Recupera un objeto que permite a una aplicación responder a una solicitud de sugerencias de forma asincrónica.</summary>
+      <deprecated type="deprecate">Puede que ISearchPaneSuggestionsRequest se haya modificado o no esté disponible para versiones posteriores a Windows 10.</deprecated>
+      <returns>Un objeto que permite una señal de la aplicación cuando se haya cumplido la solicitud de sugerencias de búsqueda.</returns>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral">
+      <summary>Habilita la aplicación para señalar cuándo ha terminado de rellenar un objeto de searchSuggestionCollection mientras controla el evento suggestionsrequested.</summary>
+      <deprecated type="deprecate">Puede que SearchPaneSuggestionsRequestDeferral se haya modificado o no esté disponible para versiones posteriores a Windows 10.</deprecated>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral.Complete">
+      <summary>Indica que la aplicación ha terminado de rellenar un objeto de searchSuggestionCollection mientras controla el evento suggestionsrequested.</summary>
+      <deprecated type="deprecate">Puede que ISearchPaneSuggestionsRequestDeferral se haya modificado o no esté disponible para versiones posteriores a Windows 10.</deprecated>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs">
+      <summary>Proporciona datos para un evento suggestionsrequested en que está asociado a un objeto searchPane.</summary>
+      <deprecated type="deprecate">Puede que SearchPaneSuggestionsRequestedEventArgs se haya modificado o no esté disponible para versiones posteriores a Windows 10.</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs.Language">
+      <summary>La etiqueta de idioma (BCP47 estándar) del Grupo de trabajo de ingeniería de Internet (IETF) que identifica el idioma asociado al dispositivo de entrada de texto del usuario.</summary>
+      <returns>Etiqueta de idioma (BCP-47 estándar) del Grupo de trabajo de ingeniería de Internet (IETF).</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs.LinguisticDetails">
+      <summary>Un objeto que proporciona información lingüística sobre el texto de la consulta que el usuario especifica mediante un editor de métodos de entrada (IME).</summary>
+      <returns>Un objeto que proporciona información lingüística sobre el texto de la consulta.</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs.QueryText">
+      <summary>El texto para el que la aplicación debe proporcionar sugerencias y que estaba en el cuadro de búsqueda cuando se desencadenó el evento suggestionsrequested.</summary>
+      <returns>El texto de la consulta para el que la aplicación debe proporcionar sugerencias.</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs.Request">
+      <summary>Un objeto que almacena sugerencias e información sobre la solicitud.</summary>
+      <returns>El objeto que almacena sugerencias e información sobre la solicitud.</returns>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs">
+      <summary>Proporciona datos para un evento visibilitychanged que está asociado a un objeto searchPane.</summary>
+      <deprecated type="deprecate">Puede que SearchPaneVisibilityChangedEventArgs se haya modificado o no esté disponible para versiones posteriores a Windows 10.</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs.Visible">
+      <summary>Indica si el panel de búsqueda está abierto.</summary>
+      <returns>True si el panel de búsqueda está abierto; de lo contrario, false.</returns>
+    </member></members>
+</doc>

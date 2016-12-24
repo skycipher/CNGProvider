@@ -1,0 +1,1587 @@
+<!-- Copyright (c) Microsoft Corporation.  All Rights Reserved. -->
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+    <script language="javascript">
+
+function toggle(showHideDiv, switchImage, block) {
+    var ele = document.getElementById(showHideDiv);
+    var img = document.getElementById(switchImage);
+    if(ele.style.display == "block" && !block) {
+        ele.style.display = "none";
+        ele.style.visibility = "hidden";
+        img.src = "Resources/Plus.png";
+    }
+    else {
+        ele.style.display = "block";
+        ele.style.visibility = "visible";
+        img.src = "Resources/Minus.png";
+    }
+    
+    // This is used to refresh the gifs after we block them (IE issue)
+    // NOTE: its faster to refresh, then looks at the parent (plus the IE version running in .NET is really old)
+    var gifs = document.getElementsByName("gif");
+    
+    var i;
+    for (i = 0; i < gifs.length; i++) {
+        refreshImage(gifs[i]);
+    }
+}
+
+function refreshImage(image)
+{
+    image.src = image.src.replace(/\?.*$/,"")+"?x="+Math.random();
+}
+
+    </script>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 14">
+<meta name=Originator content="Microsoft Word 14">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Janet Thomas</o:Author>
+  <o:LastAuthor>Janet Thomas</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>2</o:TotalTime>
+  <o:Created>2014-10-21T19:32:00Z</o:Created>
+  <o:LastSaved>2014-10-21T19:34:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>85</o:Words>
+  <o:Characters>486</o:Characters>
+  <o:Company>Microsoft Corporation</o:Company>
+  <o:Lines>4</o:Lines>
+  <o:Paragraphs>1</o:Paragraphs>
+  <o:CharactersWithSpaces>570</o:CharactersWithSpaces>
+  <o:Version>14.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:StyleSortMethod>0</w:StyleSortMethod>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+    {font-family:Calibri;
+    panose-1:2 15 5 2 2 2 4 3 2 4;
+    mso-font-charset:0;
+    mso-generic-font-family:swiss;
+    mso-font-pitch:variable;
+    mso-font-signature:-536870145 1073786111 1 0 415 0;}
+@font-face
+    {font-family:Tahoma;
+    panose-1:2 11 6 4 3 5 4 4 2 4;
+    mso-font-charset:0;
+    mso-generic-font-family:swiss;
+    mso-font-pitch:variable;
+    mso-font-signature:-520081665 -1073717157 41 0 66047 0;}
+@font-face
+    {font-family:"Segoe UI";
+    panose-1:2 11 5 2 4 2 4 2 2 3;
+    mso-font-charset:0;
+    mso-generic-font-family:swiss;
+    mso-font-pitch:variable;
+    mso-font-signature:-469750017 -1073683329 9 0 511 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+    {mso-style-unhide:no;
+    mso-style-qformat:yes;
+    mso-style-parent:"";
+    margin:0in;
+    margin-bottom:.0001pt;
+    mso-pagination:widow-orphan;
+    font-size:10.0pt;
+    font-family:"Times New Roman","serif";
+    mso-fareast-font-family:Calibri;
+    mso-fareast-theme-font:minor-latin;}
+a:link, span.MsoHyperlink
+    {mso-style-priority:99;
+    color:#0563C1;
+    mso-themecolor:hyperlink;
+    text-decoration:underline;
+    text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+    {mso-style-noshow:yes;
+    mso-style-priority:99;
+    color:#954F72;
+    mso-themecolor:followedhyperlink;
+    text-decoration:underline;
+    text-underline:single;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+    {mso-style-noshow:yes;
+    mso-style-priority:99;
+    mso-style-link:"Balloon Text Char";
+    margin:0in;
+    margin-bottom:.0001pt;
+    mso-pagination:widow-orphan;
+    font-size:8.0pt;
+    font-family:"Tahoma","sans-serif";
+    mso-fareast-font-family:Calibri;
+    mso-fareast-theme-font:minor-latin;}
+span.BalloonTextChar
+    {mso-style-name:"Balloon Text Char";
+    mso-style-noshow:yes;
+    mso-style-priority:99;
+    mso-style-unhide:no;
+    mso-style-locked:yes;
+    mso-style-link:"Balloon Text";
+    mso-ansi-font-size:8.0pt;
+    mso-bidi-font-size:8.0pt;
+    font-family:"Tahoma","sans-serif";
+    mso-ascii-font-family:Tahoma;
+    mso-hansi-font-family:Tahoma;
+    mso-bidi-font-family:Tahoma;}
+.MsoChpDefault
+    {mso-style-type:export-only;
+    mso-default-props:yes;
+    font-size:10.0pt;
+    mso-ansi-font-size:10.0pt;
+    mso-bidi-font-size:10.0pt;
+    mso-fareast-font-family:Calibri;
+    mso-fareast-theme-font:minor-latin;}
+@page WordSection1
+    {size:8.5in 11.0in;
+    margin:1.0in 1.0in 1.0in 1.0in;
+    mso-header-margin:.5in;
+    mso-footer-margin:.5in;
+    mso-paper-source:0;}
+div.WordSection1
+    {page:WordSection1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+    {mso-style-name:"Table Normal";
+    mso-tstyle-rowband-size:0;
+    mso-tstyle-colband-size:0;
+    mso-style-noshow:yes;
+    mso-style-priority:99;
+    mso-style-parent:"";
+    mso-padding-alt:0in 5.4pt 0in 5.4pt;
+    mso-para-margin:0in;
+    mso-para-margin-bottom:.0001pt;
+    mso-pagination:widow-orphan;
+    font-size:10.0pt;
+    font-family:"Times New Roman","serif";}
+table.MsoTableGrid
+    {mso-style-name:"Table Grid";
+    mso-tstyle-rowband-size:0;
+    mso-tstyle-colband-size:0;
+    mso-style-priority:39;
+    mso-style-unhide:no;
+    border:solid windowtext 1.0pt;
+    mso-border-alt:solid windowtext .5pt;
+    mso-padding-alt:0in 5.4pt 0in 5.4pt;
+    mso-border-insideh:.5pt solid windowtext;
+    mso-border-insidev:.5pt solid windowtext;
+    mso-para-margin:0in;
+    mso-para-margin-bottom:.0001pt;
+    mso-pagination:widow-orphan;
+    font-size:10.0pt;
+    font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1033"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+ 
+</head>
+
+<body lang=EN-US link="#0563C1" vlink="#954F72" style='tab-interval:.5in'>
+
+<div class=WordSection1>
+
+    <table id="header" class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=638
+           style='width:478.55pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid white .5pt;mso-border-themecolor:background1;mso-yfti-tbllook:1184;
+ mso-padding-alt:0in 5.75pt 0in .15in;mso-border-insideh:.5pt solid white;
+ mso-border-insideh-themecolor:background1;mso-border-insidev:.5pt solid white;
+ mso-border-insidev-themecolor:background1'>
+        <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-row-margin-left:22.1pt'>
+            <td style='mso-cell-special:placeholder;border:none;padding:0in 0in 0in 0in'
+                width=29>
+                <p class='MsoNormal'>&nbsp;
+            </td>
+            <td width=435 colspan=2 style='width:326.45pt;border:solid white 1.0pt;
+  mso-border-themecolor:background1;mso-border-alt:solid white .5pt;mso-border-themecolor:
+  background1;padding:0in 5.75pt 0in .15in'>
+                <p class=MsoNormal>
+                    <span style='font-size:14.0pt;font-family:"Segoe UI","sans-serif";
+  color:#7F7F7F;mso-themecolor:text1;mso-themetint:128'>
+                        Tips for using Windows
+                        Performance Analyzer
+                    </span><span style='color:#7F7F7F;mso-themecolor:text1;
+  mso-themetint:128'><o:p></o:p></span>
+                </p>
+            </td>
+            <td width=173 colspan=2 valign=top style='width:130.0pt;border:solid white 1.0pt;
+  mso-border-themecolor:background1;border-left:none;mso-border-left-alt:solid white .5pt;
+  mso-border-left-themecolor:background1;mso-border-alt:solid white .5pt;
+  mso-border-themecolor:background1;padding:0in 5.75pt 0in .15in'>
+                <p class=MsoNormal>
+                    <span style='mso-no-proof:yes'>
+<img width=109 height=92
+                                         src="Resources/WpaIcon.png" v:shapes="Picture_x0020_20">
+                    </span>
+                </p>
+            </td>
+        </tr>
+        <tr style='mso-yfti-irow:1;mso-row-margin-left:22.1pt'>
+            <td style='mso-cell-special:placeholder;border:none;border-bottom:solid white 1.0pt;
+  mso-border-bottom-themecolor:background1' width=29>
+                <p class='MsoNormal'>&nbsp;
+            </td>
+            <td width=609 colspan=4 style='width:456.45pt;border:solid white 1.0pt;
+  mso-border-themecolor:background1;border-top:none;mso-border-top-alt:solid white .5pt;
+  mso-border-top-themecolor:background1;mso-border-alt:solid white .5pt;
+  mso-border-themecolor:background1;padding:0in 5.75pt 0in .15in'>
+                <p class=MsoNormal>
+                    <span style='font-size:11.0pt;font-family:"Segoe UI","sans-serif";
+  mso-no-proof:yes'><o:p>&nbsp;</o:p></span>
+                </p>
+            </td>
+        </tr>
+
+    </table>
+    <table id="gettingStartedTable" class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=638
+           style='width:478.55pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid white .5pt;mso-border-themecolor:background1;mso-yfti-tbllook:1184;
+ mso-padding-alt:0in 5.75pt 0in .15in;mso-border-insideh:.5pt solid white;
+ mso-border-insideh-themecolor:background1;mso-border-insidev:.5pt solid white;
+ mso-border-insidev-themecolor:background1'>
+
+
+        <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes;mso-row-margin-right:21.85pt'>
+            <td width=38 colspan=2 style='width:28.55pt;border:solid white 1.0pt;
+  mso-border-themecolor:background1;border-top:none;mso-border-top-alt:solid white .5pt;
+  mso-border-top-themecolor:background1;mso-border-alt:solid white .5pt;
+  mso-border-themecolor:background1;padding:0in 5.75pt 0in .15in'>
+                <p class=MsoNormal>
+                <a href="javascript:toggle('gettingStarted','gettingStartedImage');">
+                    <img id="gettingStartedImage" width=15 style="border:none"
+                         src="Resources/Plus.png">
+                    <span style='font-size:11.0pt;font-family:"Segoe UI","sans-serif";mso-no-proof:yes'><o:p></o:p></span>
+                </a>
+                </p>
+            </td>
+            <td width=571 colspan=2 style='width:428.15pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;mso-border-bottom-themecolor:background1;
+  border-right:solid white 1.0pt;mso-border-right-themecolor:background1;
+  mso-border-top-alt:solid white .5pt;mso-border-top-themecolor:background1;
+  mso-border-left-alt:solid white .5pt;mso-border-left-themecolor:background1;
+  mso-border-alt:solid white .5pt;mso-border-themecolor:background1;background:
+  #9CC2E5;mso-background-themecolor:accent1;mso-background-themetint:153;
+  padding:0in 5.75pt 0in .15in'>
+                <p class=MsoNormal>
+                    <span style='font-size:11.0pt;font-family:"Segoe UI","sans-serif";
+  color:white;mso-themecolor:background1'>
+                        <a href="javascript:toggle('gettingStarted','gettingStartedImage');">
+                            <span style='color:white;mso-themecolor:background1;text-decoration:none;
+  text-underline:none'>Get Started</span>
+                        </a>
+                    </span><span style='font-size:
+  11.0pt;font-family:"Segoe UI","sans-serif";mso-no-proof:yes'><o:p></o:p></span>
+                </p>
+            </td>
+            <td style='mso-cell-special:placeholder;border:none;padding:0in 0in 0in 0in'
+                width=29>
+                <p class='MsoNormal'>&nbsp;
+            </td>
+        </tr>
+
+        <tr height=0>
+            <td width=29 style='border:none'></td>
+            <td width=9 style='border:none'></td>
+            <td width=427 style='border:none'></td>
+            <td width=144 style='border:none'></td>
+            <td width=29 style='border:none'></td>
+        </tr>
+    </table>
+    <div id="gettingStarted" style="display:none">
+    <p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+    <p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+    <p class=MsoNormal style='margin-left:.5in'>
+        <span style='font-family:"Segoe UI","sans-serif";
+color:#2E74B5;mso-themecolor:accent1;mso-themeshade:191'>
+            Step 1: Open a Trace
+            file<o:p></o:p>
+        </span>
+    </p>
+
+    <p class=MsoNormal style='margin-left:.5in'>
+        <span style='font-family:"Segoe UI","sans-serif"'>
+            To
+            open a trace file, choose <b style='mso-bidi-font-weight:normal'>File</b>&gt;<b style='mso-bidi-font-weight:normal'>Open</b>.<o:p></o:p>
+        </span>
+    </p>
+
+    <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+    <p class=MsoNormal style='margin-left:.5in'>
+        <span style='font-family:"Segoe UI","sans-serif"'>
+            When
+            you open a trace file, events are categorized in
+        </span><a href="#AddGraphs">
+            <b style='mso-bidi-font-weight:normal'>
+                <span style='font-family:"Segoe UI","sans-serif"'>
+                    Graph
+                    Explorer
+                </span>
+            </b>
+        </a><span style='font-family:"Segoe UI","sans-serif"'>
+            on
+            the left, and the <o:p></o:p>
+        </span>
+    </p>
+
+    <p class=MsoNormal style='margin-left:.5in'>
+        <a href="#AnalysisAssistant" onclick="javascript:toggle('basicActions','basicActionsImage', true);">
+            <b style='mso-bidi-font-weight:normal'>
+                <span style='font-family:"Segoe UI","sans-serif"'>
+                    Analysis
+                    Assistant
+                </span>
+            </b>
+        </a><span style='font-family:"Segoe UI","sans-serif"'>
+            opens in the pane on the right. The <b style='mso-bidi-font-weight:normal'>Analysis</b>
+            tab is in the center.<o:p></o:p>
+        </span>
+    </p>
+
+    <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+    <p class=MsoNormal style='margin-left:.5in'>
+        <span style='font-family:"Segoe UI","sans-serif";
+mso-no-proof:yes'>
+<img border=0 width=574 height=491
+                             src="Resources/1GS_Step1.png">
+        </span><span style='font-family:"Segoe UI","sans-serif"'><o:p></o:p></span>
+    </p>
+
+    <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+    <p class=MsoNormal style='margin-left:.5in'>
+        <span style='font-family:"Segoe UI","sans-serif";
+color:#2E74B5;mso-themecolor:accent1;mso-themeshade:191'>
+            Step 2: Configure
+            symbols<o:p></o:p>
+        </span>
+    </p>
+
+    <p class=MsoNormal style='margin-left:.5in'>
+        <span style='font-family:"Segoe UI","sans-serif"'>
+            After
+            a trace file is loaded, choose <b style='mso-bidi-font-weight:normal'>File</b>&gt;<b style='mso-bidi-font-weight:normal'>Configure Symbols</b> to control the
+            processes and images that have symbols. <o:p></o:p>
+        </span>
+    </p>
+
+    <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+    <p class=MsoNormal style='margin-left:.5in'>
+        <span style='font-family:"Segoe UI","sans-serif";
+mso-no-proof:yes'>
+<img border=0 width=574 height=480 name="gif"
+                             src="Resources/1GS_Step2_Animated.gif"
+                             alt="		WPA Getting Started&#13;&#10;Author:		Microsoft Corporation">
+        </span><span style='font-family:"Segoe UI","sans-serif"'><o:p></o:p></span>
+    </p>
+
+    <p class=MsoNormal style='margin-left:.5in'>
+        <span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:
+minor-latin'><o:p>&nbsp;</o:p></span>
+    </p>
+
+    <p class=MsoNormal style='margin-left:.5in'>
+        <span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:
+minor-latin'>
+            Symbols must be loaded correctly for all the data to appear in the
+            Analysis tab.<span style='mso-spacerun:yes'>  </span>Choose <b style='mso-bidi-font-weight:normal'>File</b>&gt;<b style='mso-bidi-font-weight:
+normal'>Load Symbols</b> after the settings are configured. <o:p></o:p>
+        </span>
+    </p>
+
+    <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+    <p class=MsoNormal style='margin-left:.5in'>
+        <span style='font-family:"Segoe UI","sans-serif";
+color:#2E74B5;mso-themecolor:accent1;mso-themeshade:191'>
+            Step 3: Apply a
+            profile<o:p></o:p>
+        </span>
+    </p>
+
+    <p class=MsoNormal style='margin-left:.5in'>
+        <span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:
+minor-latin'>Profiles optimize the information displayed in the Analysis tab.<o:p></o:p></span>
+    </p>
+
+    <p class=MsoNormal style='margin-left:.5in'>
+        <span style='font-family:"Segoe UI","sans-serif"'>
+            Choose
+            <b style='mso-bidi-font-weight:normal'>File</b>&gt;<b style='mso-bidi-font-weight:
+normal'>Apply Profile</b>&gt;<b style='mso-bidi-font-weight:normal'>Catalog</b>,
+            and then select a profile applicable to your analysis. <o:p></o:p>
+        </span>
+    </p>
+
+    <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+    <p class=MsoNormal style='margin-left:.5in'>
+        <span style='font-family:"Segoe UI","sans-serif";
+mso-no-proof:yes'>
+<img border=0 width=574 height=484
+                             src="Resources/1GS_Step3.png">
+        </span><span style='font-family:"Segoe UI","sans-serif"'><o:p></o:p></span>
+    </p>
+
+    <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+    <p class=MsoNormal style='margin-left:.5in'><o:p>&nbsp;</o:p></p>
+
+    <p class=MsoNormal style='margin-left:.5in'>
+        <a name=AddGraphs>
+            <span style='font-family:"Segoe UI","sans-serif";color:#2E74B5;mso-themecolor:accent1;
+mso-themeshade:191'>Step 4: Add graphs to the Analysis tab<o:p></o:p></span>
+        </a>
+    </p>
+
+    <span style='mso-bookmark:AddGraphs'></span>
+
+    <p class=MsoNormal style='margin-left:.5in'>
+        <b style='mso-bidi-font-weight:
+normal'>
+            <span style='font-size:11.0pt;font-family:"Calibri","sans-serif";
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>
+                Graph
+                Explorer
+            </span>
+        </b><span style='font-size:11.0pt;font-family:"Calibri","sans-serif";
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>
+            lists the
+            available graphs. <o:p></o:p>
+        </span>
+    </p>
+
+    <p class=MsoNormal style='margin-left:.5in'>
+        <span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:
+minor-latin'>
+            Drag a graph to the <b style='mso-bidi-font-weight:normal'>Analysis</b>
+            tab to start your performance analysis. <o:p></o:p>
+        </span>
+    </p>
+
+    <p class=MsoNormal style='margin-left:.5in'>
+        <span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:
+minor-latin'>
+            You can also double-click a graph to add it to the <b style='mso-bidi-font-weight:normal'>Analysis</b> tab. <o:p></o:p>
+        </span>
+    </p>
+
+    <p class=MsoNormal style='margin-left:.5in'>
+        <span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:
+minor-latin'><o:p>&nbsp;</o:p></span>
+    </p>
+
+    <p class=MsoNormal style='margin-left:.5in'>
+        <span style='mso-no-proof:yes'>
+<img border=0 width=574 height=480 loop=infinite name="gif"
+                             src="Resources/1GS_Step4_Animated.gif"
+                             alt="		WPA Getting Started&#13;&#10;Author:		Microsoft Corporation">
+        </span>
+    </p>
+
+    <p class=MsoNormal style='margin-left:.5in'><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+    <p class=MsoNormal style='margin-left:.5in'><o:p>&nbsp;</o:p></p>
+        </div>
+
+    <table id="basicActionsTable" class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=638
+           style='width:478.55pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid white .5pt;mso-border-themecolor:background1;mso-yfti-tbllook:1184;
+ mso-padding-alt:0in 5.75pt 0in .15in;mso-border-insideh:.5pt solid white;
+ mso-border-insideh-themecolor:background1;mso-border-insidev:.5pt solid white;
+ mso-border-insidev-themecolor:background1'>
+
+       
+        <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes;mso-row-margin-right:21.85pt'>
+            <td width=38 colspan=2 style='width:28.55pt;border:solid white 1.0pt;
+  mso-border-themecolor:background1;border-top:none;mso-border-top-alt:solid white .5pt;
+  mso-border-top-themecolor:background1;mso-border-alt:solid white .5pt;
+  mso-border-themecolor:background1;padding:0in 5.75pt 0in .15in'>
+                <p class=MsoNormal>
+                <a href="javascript:toggle('basicActions','basicActionsImage');">
+                <img id="basicActionsImage" width=15 src="Resources/Plus.png" style="border:none">
+                    <span style='font-size:11.0pt;font-family:"Segoe UI","sans-serif";mso-no-proof:yes'><o:p></o:p></span>
+                </a>
+                </p>
+            </td>
+            <td width=571 colspan=2 style='width:428.15pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;mso-border-bottom-themecolor:background1;
+  border-right:solid white 1.0pt;mso-border-right-themecolor:background1;
+  mso-border-top-alt:solid white .5pt;mso-border-top-themecolor:background1;
+  mso-border-left-alt:solid white .5pt;mso-border-left-themecolor:background1;
+  mso-border-alt:solid white .5pt;mso-border-themecolor:background1;background:
+  #9CC2E5;mso-background-themecolor:accent1;mso-background-themetint:153;
+  padding:0in 5.75pt 0in .15in'>
+                <p class=MsoNormal>
+                    <span style='font-size:11.0pt;font-family:"Segoe UI","sans-serif";
+  color:white;mso-themecolor:background1'>
+                        <a href="javascript:toggle('basicActions','basicActionsImage');">
+                            <span style='color:white;mso-themecolor:background1;text-decoration:none;
+  text-underline:none'>Basic Actions</span>
+                        </a>
+                    </span><span style='font-size:
+  11.0pt;font-family:"Segoe UI","sans-serif";mso-no-proof:yes'><o:p></o:p></span>
+                </p>
+            </td>
+            <td style='mso-cell-special:placeholder;border:none;padding:0in 0in 0in 0in'
+                width=29>
+                <p class='MsoNormal'>&nbsp;
+            </td>
+        </tr>
+
+        <tr height=0>
+            <td width=29 style='border:none'></td>
+            <td width=9 style='border:none'></td>
+            <td width=427 style='border:none'></td>
+            <td width=144 style='border:none'></td>
+            <td width=29 style='border:none'></td>
+        </tr>
+    </table>
+
+    <div id="basicActions" style="display:none">
+        <p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <a name=AnalysisAssistant>
+                <span style='font-family:"Segoe UI","sans-serif";color:#2E74B5;mso-themecolor:accent1;
+mso-themeshade:191'>Use the Analysis Assistant<o:p></o:p></span>
+            </a>
+        </p>
+
+        <span style='mso-bookmark:AnalysisAssistant'></span>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Segoe UI","sans-serif"'>Analysis Assistant</span></b><span style='font-family:"Segoe UI","sans-serif"'>
+                provides useful information about
+                the profile, tab, graph and
+            </span>
+            <span style='font-family:"Segoe UI","sans-serif"'>
+            <a href="#Customization" onclick="javascript:toggle('customization','customizationImage', true);">preset</a>. When<o:p></o:p></span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span class=GramE>
+                <span style='font-family:"Segoe UI","sans-serif"'>you</span>
+            </span><span style='font-family:"Segoe UI","sans-serif"'>
+                select a specific graphs or data
+                table, information about that specific graph and table is <o:p></o:p>
+            </span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span class=GramE>
+                <span style='font-family:"Segoe UI","sans-serif"'>shown</span>
+            </span><span style='font-family:"Segoe UI","sans-serif"'>
+                in the <b style='mso-bidi-font-weight:
+normal'>Analysis Assistant</b>. Use this as a guide during your analysis.<o:p></o:p>
+            </span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span style='font-family:"Segoe UI","sans-serif";
+mso-no-proof:yes'>
+<img border=0 width=574 height=480 name="gif"
+                                 src="Resources/2BA_1UseAA_Animated.gif"
+                                 alt="		WPA Getting Started&#13;&#10;Author:		Microsoft Corporation" >
+            </span><span style='font-family:"Segoe UI","sans-serif"'><o:p></o:p></span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span style='font-family:"Segoe UI","sans-serif";
+color:#2E74B5;mso-themecolor:accent1;mso-themeshade:191'><o:p>&nbsp;</o:p></span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span style='font-family:"Segoe UI","sans-serif";
+color:#2E74B5;mso-themecolor:accent1;mso-themeshade:191'>
+                Highlight a time
+                interval<o:p></o:p>
+            </span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span style='font-family:"Segoe UI","sans-serif"'>
+                Click
+                and drag the mouse pointer over a time interval on the graph where system
+                activity indicates <o:p></o:p>
+            </span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span class=GramE>
+                <span style='font-family:"Segoe UI","sans-serif"'>a</span>
+            </span><span style='font-family:"Segoe UI","sans-serif"'>
+                potential performance issue, for
+                example high CPU usage. Information in the table will sync to<o:p></o:p>
+            </span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span class=GramE>
+                <span style='font-family:"Segoe UI","sans-serif"'>your</span>
+            </span><span style='font-family:"Segoe UI","sans-serif"'>selection.<o:p></o:p></span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <i style='mso-bidi-font-style:normal'>
+                <span style='font-family:"Calibri","sans-serif";mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'><o:p>&nbsp;</o:p></span>
+            </i>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span style='font-family:"Segoe UI","sans-serif";
+mso-no-proof:yes'>
+                <img border=0 width=574 height=480 name="gif"
+                                 src="Resources/2BA_2HighlightGraph_Animated.gif"
+                                 alt="		WPA Getting Started&#13;&#10;Author:		Microsoft Corporation">
+            </span><span style='font-family:"Segoe UI","sans-serif"'><o:p></o:p></span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span style='font-family:"Segoe UI","sans-serif";
+color:#2E74B5;mso-themecolor:accent1;mso-themeshade:191'>
+                Zoom, Search and
+                Filter<o:p></o:p>
+            </span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span class=GramE>
+                <span style='font-family:"Segoe UI","sans-serif"'>In the <a href="#DataTables" onclick="javascript:toggle('viewData','viewDataImage', true);">Data table</span></a>, select and right-click on a row
+                    to filter the data that is displayed in the table.
+                </span>
+            </span><span style='font-family:"Segoe UI","sans-serif"'><o:p></o:p></span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span style='font-family:"Segoe UI","sans-serif";
+mso-no-proof:yes'>
+                <img border=0 width=248 height=455
+                                 src="Resources/2BA_3FilterMenu.png">
+            </span><span style='font-family:"Segoe UI","sans-serif"'><o:p></o:p></span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span style='font-family:"Segoe UI","sans-serif"'>
+                Select
+                an area in the
+            </span><a href="#Graphs" onclick="javascript:toggle('viewData','viewDataImage', true);"><span style='font-family:"Segoe UI","sans-serif"'>graph</span></a><span style='font-family:"Segoe UI","sans-serif"'>
+                and then right-click and select <b style='mso-bidi-font-weight:normal'>Zoom</b>. <o:p></o:p>
+            </span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span style='font-family:"Segoe UI","sans-serif";
+mso-no-proof:yes'>
+                <img border=0 width=324 height=272
+                                 src="Resources/2BA_4ZoomMenu.png">
+            </span><span style='font-family:"Segoe UI","sans-serif"'><o:p></o:p></span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span style='font-family:"Segoe UI","sans-serif"'>
+                Press
+                <span class=SpellE>Ctrl+F</span> to search for data. <o:p></o:p>
+            </span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span style='font-family:"Segoe UI","sans-serif";
+mso-no-proof:yes'>
+
+                <img border=0 width=429 height=258
+                                 src="Resources/2BA_5Search.png">
+            </span><span style='font-family:"Segoe UI","sans-serif"'><o:p></o:p></span>
+        </p>
+
+        <p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+        <p class=MsoNormal style='margin-left:.5in'><o:p>&nbsp;</o:p></p>
+    </div>
+
+    <table id="viewDataTable" class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=638
+           style='width:478.55pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid white .5pt;mso-border-themecolor:background1;mso-yfti-tbllook:1184;
+ mso-padding-alt:0in 5.75pt 0in .15in;mso-border-insideh:.5pt solid white;
+ mso-border-insideh-themecolor:background1;mso-border-insidev:.5pt solid white;
+ mso-border-insidev-themecolor:background1'>
+
+        
+        <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes;mso-row-margin-right:21.85pt'>
+            <td width=38 colspan=2 style='width:28.55pt;border:solid white 1.0pt;
+  mso-border-themecolor:background1;border-top:none;mso-border-top-alt:solid white .5pt;
+  mso-border-top-themecolor:background1;mso-border-alt:solid white .5pt;
+  mso-border-themecolor:background1;padding:0in 5.75pt 0in .15in'>
+                <p class=MsoNormal>
+                <a href="javascript:toggle('viewData','viewDataImage');">
+                    <img id="viewDataImage" width=15 style="border:none"
+                                     src="Resources/Plus.png" v:shapes="Rectangle_x0020_2104">
+                    <span style='font-size:11.0pt;font-family:"Segoe UI","sans-serif";mso-no-proof:yes'><o:p></o:p></span>
+                </a>
+                </p>
+            </td>
+            <td width=571 colspan=2 style='width:428.15pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;mso-border-bottom-themecolor:background1;
+  border-right:solid white 1.0pt;mso-border-right-themecolor:background1;
+  mso-border-top-alt:solid white .5pt;mso-border-top-themecolor:background1;
+  mso-border-left-alt:solid white .5pt;mso-border-left-themecolor:background1;
+  mso-border-alt:solid white .5pt;mso-border-themecolor:background1;background:
+  #9CC2E5;mso-background-themecolor:accent1;mso-background-themetint:153;
+  padding:0in 5.75pt 0in .15in'>
+                <p class=MsoNormal>
+                    <span style='font-size:11.0pt;font-family:"Segoe UI","sans-serif";
+  color:white;mso-themecolor:background1'>
+                        <a href="javascript:toggle('viewData','viewDataImage');">
+                            <span style='color:white;mso-themecolor:background1;text-decoration:none;
+  text-underline:none'>View Data</span>
+                        </a>
+                    </span><span style='font-size:
+  11.0pt;font-family:"Segoe UI","sans-serif";mso-no-proof:yes'><o:p></o:p></span>
+                </p>
+            </td>
+            <td style='mso-cell-special:placeholder;border:none;padding:0in 0in 0in 0in'
+                width=29>
+                <p class='MsoNormal'>&nbsp;
+            </td>
+        </tr>
+        
+        <tr height=0>
+            <td width=29 style='border:none'></td>
+            <td width=9 style='border:none'></td>
+            <td width=427 style='border:none'></td>
+            <td width=144 style='border:none'></td>
+            <td width=29 style='border:none'></td>
+        </tr>
+        
+    </table>
+
+    <div id="viewData" style="display:none">
+        <p class=MsoNormal>
+            <span style='font-family:"Segoe UI","sans-serif";color:#2E74B5;
+mso-themecolor:accent1;mso-themeshade:191'><o:p>&nbsp;</o:p></span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <a name=Graphs>
+                <span style='font-family:"Segoe UI","sans-serif";color:#2E74B5;mso-themecolor:accent1;
+mso-themeshade:191'>Graphs<o:p></o:p></span>
+            </a>
+        </p>
+
+        <span style='mso-bookmark:Graphs'></span>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span style='font-family:"Segoe UI","sans-serif"'>
+                Graphs
+                are the primary way to visualize the recorded data. The style of the graph is
+                dependent <o:p></o:p>
+            </span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span class=GramE>
+                <span style='font-family:"Segoe UI","sans-serif"'>on</span>
+            </span><span style='font-family:"Segoe UI","sans-serif"'>the type of data.<o:p></o:p></span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span style='font-family:"Segoe UI","sans-serif";
+mso-no-proof:yes'>
+                <img border=0 width=574 height=322
+                                 src="Resources/3VD_1graphs.png">
+            </span><span style='font-family:"Segoe UI","sans-serif"'><o:p></o:p></span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span style='font-family:"Segoe UI","sans-serif";
+color:#2E74B5;mso-themecolor:accent1;mso-themeshade:191'><o:p>&nbsp;</o:p></span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <a name=DataTables>
+                <span style='font-family:"Segoe UI","sans-serif";color:#2E74B5;mso-themecolor:accent1;
+mso-themeshade:191'>Data Tables<o:p></o:p></span>
+            </a>
+        </p>
+
+        <span style='mso-bookmark:DataTables'></span>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span lang=EN style='font-family:
+"Segoe UI","sans-serif";mso-ansi-language:EN'>
+                The data from your trace log file
+                is also available in tabular form, in the data table. It is divided into three
+                areas: keys, data and graphing.
+            </span><span style='mso-no-proof:yes'><o:p></o:p></span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'><span style='mso-no-proof:yes'><o:p>&nbsp;</o:p></span></p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span style='mso-no-proof:yes'>
+                <img border=0 width=506 height=321
+                                 src="Resources/3VD_2DataTable.png"><o:p></o:p>
+            </span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+        <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+    </div>
+
+    <table id="customizationTable" class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=638
+           style='width:478.55pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid white .5pt;mso-border-themecolor:background1;mso-yfti-tbllook:1184;
+ mso-padding-alt:0in 5.75pt 0in .15in;mso-border-insideh:.5pt solid white;
+ mso-border-insideh-themecolor:background1;mso-border-insidev:.5pt solid white;
+ mso-border-insidev-themecolor:background1'>
+
+        <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes;mso-row-margin-right:21.85pt'>
+            <td width=38 colspan=2 style='width:28.55pt;border:solid white 1.0pt;
+  mso-border-themecolor:background1;border-top:none;mso-border-top-alt:solid white .5pt;
+  mso-border-top-themecolor:background1;mso-border-alt:solid white .5pt;
+  mso-border-themecolor:background1;padding:0in 5.75pt 0in .15in'>
+                <p class=MsoNormal>
+                <a href="javascript:toggle('customization','customizationImage');">
+                    <img id="customizationImage" width=15 style="border:none"
+                                     src="Resources/Plus.png">
+                    <span style='font-size:11.0pt;font-family:"Segoe UI","sans-serif";mso-no-proof:yes'><o:p></o:p></span>
+                </a>
+                </p>
+            </td>
+            <td width=571 colspan=2 style='width:428.15pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;mso-border-bottom-themecolor:background1;
+  border-right:solid white 1.0pt;mso-border-right-themecolor:background1;
+  mso-border-top-alt:solid white .5pt;mso-border-top-themecolor:background1;
+  mso-border-left-alt:solid white .5pt;mso-border-left-themecolor:background1;
+  mso-border-alt:solid white .5pt;mso-border-themecolor:background1;background:
+  #9CC2E5;mso-background-themecolor:accent1;mso-background-themetint:153;
+  padding:0in 5.75pt 0in .15in'>
+                <p class=MsoNormal>
+                    <span style='font-size:11.0pt;font-family:"Segoe UI","sans-serif";
+  color:white;mso-themecolor:background1'>
+                        <a href="javascript:toggle('customization','customizationImage');">
+                            <span style='color:white;mso-themecolor:background1;text-decoration:none;
+  text-underline:none'>Customization</span>
+                        </a>
+                    </span><span style='font-size:
+  11.0pt;font-family:"Segoe UI","sans-serif";mso-no-proof:yes'><o:p></o:p></span>
+                </p>
+            </td>
+            <td style='mso-cell-special:placeholder;border:none;padding:0in 0in 0in 0in'
+                width=29>
+                <p class='MsoNormal'>&nbsp;
+            </td>
+        </tr>
+        
+        <tr height=0>
+            <td width=29 style='border:none'></td>
+            <td width=9 style='border:none'></td>
+            <td width=427 style='border:none'></td>
+            <td width=144 style='border:none'></td>
+            <td width=29 style='border:none'></td>
+        </tr>
+        
+    </table>
+
+    <div id="customization" style="display:none">
+        <p class=MsoNormal>
+            <span style='font-family:"Segoe UI","sans-serif";color:#2E74B5;
+mso-themecolor:accent1;mso-themeshade:191'>
+                <span style='mso-spacerun:yes'></span><o:p></o:p>
+            </span>
+        </p>
+        <br />
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span style='font-family:"Segoe UI","sans-serif"'>
+                You
+                can customize any data table by right clicking on the columns and adding more
+                columns. Once required columns are added, save the changes to allow faster
+                repeat analysis.<o:p></o:p>
+            </span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+        <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span style='font-family:"Segoe UI","sans-serif";
+mso-no-proof:yes'>
+                <img border=0 width=574 height=480 name="gif"
+                                 src="Resources/4Customization_Animated.gif"
+                                 alt="		WPA Getting Started&#13;&#10;Author:		Microsoft Corporation">
+            </span><span style='font-family:"Segoe UI","sans-serif"'><o:p></o:p></span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+        <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+        <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+    </div>
+
+    <table id="demosTable" class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=638
+           style='width:478.55pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid white .5pt;mso-border-themecolor:background1;mso-yfti-tbllook:1184;
+ mso-padding-alt:0in 5.75pt 0in .15in;mso-border-insideh:.5pt solid white;
+ mso-border-insideh-themecolor:background1;mso-border-insidev:.5pt solid white;
+ mso-border-insidev-themecolor:background1'>
+
+        <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes;mso-row-margin-right:21.85pt'>
+            <td width=38 colspan=2 style='width:28.55pt;border:solid white 1.0pt;
+  mso-border-themecolor:background1;border-top:none;mso-border-top-alt:solid white .5pt;
+  mso-border-top-themecolor:background1;mso-border-alt:solid white .5pt;
+  mso-border-themecolor:background1;padding:0in 5.75pt 0in .15in'>
+                <p class=MsoNormal>
+                <a href="javascript:toggle('demos','demosImage');">
+                    <img id="demosImage" width=15 style="border:none"
+                                     src="Resources/Plus.png">
+                    <span style='font-size:11.0pt;font-family:"Segoe UI","sans-serif";mso-no-proof:yes'><o:p></o:p></span>
+                </a>
+                </p>
+            </td>
+            <td width=571 colspan=2 style='width:428.15pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;mso-border-bottom-themecolor:background1;
+  border-right:solid white 1.0pt;mso-border-right-themecolor:background1;
+  mso-border-top-alt:solid white .5pt;mso-border-top-themecolor:background1;
+  mso-border-left-alt:solid white .5pt;mso-border-left-themecolor:background1;
+  mso-border-alt:solid white .5pt;mso-border-themecolor:background1;background:
+  #9CC2E5;mso-background-themecolor:accent1;mso-background-themetint:153;
+  padding:0in 5.75pt 0in .15in'>
+                <p class=MsoNormal>
+                    <span style='font-size:11.0pt;font-family:"Segoe UI","sans-serif";
+  color:white;mso-themecolor:background1'>
+                        <a href="javascript:toggle('demos','demosImage');">
+                            <span style='color:white;mso-themecolor:background1;text-decoration:none;
+  text-underline:none'>Demos</span>
+                        </a>
+                    </span><span style='font-size:
+  11.0pt;font-family:"Segoe UI","sans-serif";mso-no-proof:yes'><o:p></o:p></span>
+                </p>
+            </td>
+            <td style='mso-cell-special:placeholder;border:none;padding:0in 0in 0in 0in'
+                width=29>
+                <p class='MsoNormal'>&nbsp;
+            </td>
+        </tr>
+        
+        <tr height=0>
+            <td width=29 style='border:none'></td>
+            <td width=9 style='border:none'></td>
+            <td width=427 style='border:none'></td>
+            <td width=144 style='border:none'></td>
+            <td width=29 style='border:none'></td>
+        </tr>
+        
+    </table>
+
+    <div id="demos" style="display:none">
+        <p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+        <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span style='font-family:"Segoe UI","sans-serif"'>
+                Click
+                a link to watch a video demonstration. <o:p></o:p>
+            </span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></b>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Segoe UI","sans-serif"'>WPA Basics</span></b><span style='font-family:"Segoe UI","sans-serif"'>–</span><a href="http://msdn.microsoft.com/en-us/library/hh448170.aspx" target="_blank">
+    <span style='font-family:"Segoe UI","sans-serif"'>learning to navigate in WPA</span>
+</a><span style='font-family:"Segoe UI","sans-serif"'><o:p></o:p></span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in;tab-stops:center 280.1pt'>
+            <span style='font-family:"Segoe UI","sans-serif"'><span style='mso-tab-count:1'>                                                                                 </span><o:p></o:p></span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Segoe UI","sans-serif"'>Beyond the basics</span></b><span style='font-family:"Segoe UI","sans-serif"'>–</span><a href="http://msdn.microsoft.com/en-us/library/hh448170.aspx" target="_blank">
+    <span style='font-family:"Segoe UI","sans-serif"'>
+        customization using presets,
+        profiles and sessions
+    </span>
+</a><span style='font-family:"Segoe UI","sans-serif"'><o:p></o:p></span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Segoe UI","sans-serif"'>Store App analysis:</span></b><span style='font-family:"Segoe UI","sans-serif"'>
+                <span style='mso-spacerun:yes'>
+                </span><o:p></o:p>
+            </span>
+        </p>
+
+        <p class=MsoListParagraphCxSpFirst style='margin-left:1.0in;mso-add-space:auto;
+text-indent:-.25in;mso-list:l0 level1 lfo2'>
+            <![if !supportLists]><span style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'>
+                <span style='mso-list:Ignore'>
+                    ·<span style='font:7.0pt "Times New Roman"'>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </span>
+                </span>
+            </span><a href="http://msdn.microsoft.com/en-us/library/dn441476.aspx" target="_blank">
+    <span style='font-family:"Segoe UI","sans-serif"'>DWM Frames</span>
+</a><span style='font-family:"Segoe UI","sans-serif"'><o:p></o:p></span>
+        </p>
+
+        <p class=MsoListParagraphCxSpMiddle style='margin-left:1.0in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l0 level1 lfo2'>
+            <![if !supportLists]><span style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'>
+                <span style='mso-list:Ignore'>
+                    ·<span style='font:7.0pt "Times New Roman"'>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </span>
+                </span>
+            </span><a href="http://msdn.microsoft.com/en-us/library/dn441476.aspx" target="_blank">
+    <span style='font-family:"Segoe UI","sans-serif"'>UI Framework and end-to-end frames</span>
+</a><span style='font-family:"Segoe UI","sans-serif"'><o:p></o:p></span>
+        </p>
+
+        <p class=MsoListParagraphCxSpMiddle style='margin-left:1.0in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l0 level1 lfo2'>
+            <![if !supportLists]><span style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'>
+                <span style='mso-list:Ignore'>
+                    ·<span style='font:7.0pt "Times New Roman"'>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </span>
+                </span>
+            </span><a href="http://msdn.microsoft.com/en-us/library/dn441475.aspx" target="_blank">
+                <span style='font-family:"Segoe UI","sans-serif"'>Big Picture</span>
+            </a><span style='font-family:"Segoe UI","sans-serif"'>
+                tab of the Windows Store App
+                Analysis profile<o:p></o:p>
+            </span>
+        </p>
+
+        <p class=MsoListParagraphCxSpLast style='margin-left:1.0in;mso-add-space:auto;
+text-indent:-.25in;mso-list:l0 level1 lfo2'>
+            <![if !supportLists]><span style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'>
+                <span style='mso-list:Ignore'>
+                    ·<span style='font:7.0pt "Times New Roman"'>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </span>
+                </span>
+            </span><a href="http://msdn.microsoft.com/en-us/library/dn282269.aspx" target="_blank">
+    <span style='font-family:"Segoe UI","sans-serif"'>how your app is spending CPU time</span>
+</a><span style='font-family:"Segoe UI","sans-serif"'><o:p></o:p></span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+        <p class=MsoNormal style='margin-left:.5in'><o:p>&nbsp;</o:p></p>
+    </div>
+
+    <table id="otherTopicsTable" class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=638
+           style='width:478.55pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid white .5pt;mso-border-themecolor:background1;mso-yfti-tbllook:1184;
+ mso-padding-alt:0in 5.75pt 0in .15in;mso-border-insideh:.5pt solid white;
+ mso-border-insideh-themecolor:background1;mso-border-insidev:.5pt solid white;
+ mso-border-insidev-themecolor:background1'>
+
+        <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes;mso-row-margin-right:21.85pt'>
+            <td width=38 colspan=2 style='width:28.55pt;border:solid white 1.0pt;
+  mso-border-themecolor:background1;border-top:none;mso-border-top-alt:solid white .5pt;
+  mso-border-top-themecolor:background1;mso-border-alt:solid white .5pt;
+  mso-border-themecolor:background1;padding:0in 5.75pt 0in .15in'>
+                <p class=MsoNormal>
+                <a href="javascript:toggle('otherTopics','otherTopicsImage');">
+                    <img id="otherTopicsImage" width=15 style="border:none"
+                                     src="Resources/Plus.png">
+                    <span style='font-size:11.0pt;font-family:"Segoe UI","sans-serif";mso-no-proof:yes'><o:p></o:p></span>
+                </a>
+                </p>
+            </td>
+            <td width=571 colspan=2 style='width:428.15pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;mso-border-bottom-themecolor:background1;
+  border-right:solid white 1.0pt;mso-border-right-themecolor:background1;
+  mso-border-top-alt:solid white .5pt;mso-border-top-themecolor:background1;
+  mso-border-left-alt:solid white .5pt;mso-border-left-themecolor:background1;
+  mso-border-alt:solid white .5pt;mso-border-themecolor:background1;background:
+  #9CC2E5;mso-background-themecolor:accent1;mso-background-themetint:153;
+  padding:0in 5.75pt 0in .15in'>
+                <p class=MsoNormal>
+                    <span style='font-size:11.0pt;font-family:"Segoe UI","sans-serif";
+  color:white;mso-themecolor:background1'>
+                        <a href="javascript:toggle('otherTopics','otherTopicsImage');">
+                            <span style='color:white;mso-themecolor:background1;text-decoration:none;
+  text-underline:none'>Other Topics</span>
+                        </a>
+                    </span><span style='font-size:
+  11.0pt;font-family:"Segoe UI","sans-serif";mso-no-proof:yes'><o:p></o:p></span>
+                </p>
+            </td>
+            <td style='mso-cell-special:placeholder;border:none;padding:0in 0in 0in 0in'
+                width=29>
+                <p class='MsoNormal'>&nbsp;
+            </td>
+        </tr>
+        
+        <tr height=0>
+            <td width=29 style='border:none'></td>
+            <td width=9 style='border:none'></td>
+            <td width=427 style='border:none'></td>
+            <td width=144 style='border:none'></td>
+            <td width=29 style='border:none'></td>
+        </tr>
+        
+    </table>
+
+    <div id="otherTopics" style="display:none">
+        <p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+        <p class=MsoNormal style='margin-left:.5in'><o:p>&nbsp;</o:p></p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <span style='font-family:"Segoe UI","sans-serif"'>
+                For
+                more information about WPA visit the
+            </span><a href="http://dev.windows.com/en-us" target="_blank">
+    <span style='font-family:"Segoe UI","sans-serif"'>
+        MSDN
+        Dev Center
+    </span>
+</a><span style='font-family:"Segoe UI","sans-serif"'>. <o:p></o:p></span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <b style='mso-bidi-font-weight:
+normal'>
+                <span style='font-family:"Segoe UI","sans-serif"'>
+                    Popular performance
+                    topics<o:p></o:p>
+                </span>
+            </b>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <a href="http://msdn.microsoft.com/en-us/library/jj679884.aspx" target="_blank">
+                <span style='font-family:"Segoe UI","sans-serif"'>CPU Analysis</span>
+            </a><span style='font-family:"Segoe UI","sans-serif"'><o:p></o:p></span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <a href="http://msdn.microsoft.com/en-us/library/windows/hardware/hh162945.aspx" target="_blank">
+                <span style='font-family:"Segoe UI","sans-serif"'>
+                    Windows Performance Toolkit
+                    Technical Reference
+                </span>
+            </a><span style='font-family:"Segoe UI","sans-serif"'><o:p></o:p></span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <a href="http://msdn.microsoft.com/en-us/library/windows/hardware/hh448205.aspx" target="_blank">
+                <span style='font-family:"Segoe UI","sans-serif"'>
+                    Windows Performance Recorder
+                    Technical Reference
+                </span>
+            </a><span style='font-family:"Segoe UI","sans-serif"'><o:p></o:p></span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <a href="http://msdn.microsoft.com/en-us/library/windows/hardware/hh448170.aspx" target="_blank">
+                <span style='font-family:"Segoe UI","sans-serif"'>
+                    Windows Performance Analyzer
+                    Technical Reference
+                </span>
+            </a><span style='font-family:"Segoe UI","sans-serif"'><o:p></o:p></span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'>
+            <a href="http://msdn.microsoft.com/en-us/windows/desktop/bg162891.aspx" target="_blank">
+                <span style='font-family:"Segoe UI","sans-serif"'>
+                    Windows Software Development Kit
+                    (SDK)
+                </span>
+            </a><span style='font-family:"Segoe UI","sans-serif"'><o:p></o:p></span>
+        </p>
+
+        <p class=MsoNormal style='margin-left:.5in'><o:p>&nbsp;</o:p></p>
+    </div>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:"Segoe UI","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+   
+
+</body>
+
+</html>

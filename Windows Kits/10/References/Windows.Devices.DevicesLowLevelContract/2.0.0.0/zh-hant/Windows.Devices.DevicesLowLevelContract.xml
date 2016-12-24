@@ -1,0 +1,863 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.DevicesLowLevelContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.ILowLevelDevicesAggregateProvider">
+      <summary>表示通用於所有低階裝置彙總提供者的屬性。</summary>
+    </member><member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.AdcControllerProvider">
+      <summary>取得預設 ADC 提供者。 如果預設提供者未明確設定，則會回到一般驅動程式/控制器。</summary>
+      <returns>ADC 提供者。</returns>
+    </member><member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.GpioControllerProvider">
+      <summary>取得預設 GPIO 提供者。 如果預設提供者未明確設定，則會回到一般驅動程式/控制器。</summary>
+      <returns>GPIO 提供者。</returns>
+    </member><member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.I2cControllerProvider">
+      <summary>取得預設 I2C 提供者。 如果預設提供者未明確設定，則會回到一般驅動程式/控制器。</summary>
+      <returns>I2C 提供者。</returns>
+    </member><member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.PwmControllerProvider">
+      <summary>取得預設 PWM 提供者。 如果預設提供者未明確設定，則會回到一般驅動程式/控制器。</summary>
+      <returns>PWM 提供者。</returns>
+    </member><member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.SpiControllerProvider">
+      <summary>取得預設 SPI 提供者。 如果預設提供者未明確設定，則會回到一般驅動程式/控制器。</summary>
+      <returns>SPI 提供者。</returns>
+    </member><member name="T:Windows.Devices.LowLevelDevicesAggregateProvider">
+      <summary>代表低階匯流排裝置提供者。 這個類別允許存取低階匯流排控制器的預設提供者。</summary>
+    </member><member name="M:Windows.Devices.LowLevelDevicesAggregateProvider.#ctor(Windows.Devices.Adc.Provider.IAdcControllerProvider,Windows.Devices.Pwm.Provider.IPwmControllerProvider,Windows.Devices.Gpio.Provider.IGpioControllerProvider,Windows.Devices.I2c.Provider.II2cControllerProvider,Windows.Devices.Spi.Provider.ISpiControllerProvider)">
+      <summary>建立 LowLevelDevicesAggregateProvider 執行個體並設定提供的提供者做為個別匯流排的預設值。</summary>
+      <param name="adc">ADC 提供者。</param>
+      <param name="pwm">PWM 提供者。</param>
+      <param name="gpio">GPIO 提供者。</param>
+      <param name="i2c">I2C 提供者。</param>
+      <param name="spi">SPI 提供者。</param>
+    </member><member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.AdcControllerProvider">
+      <summary>取得預設 ADC 提供者。 如果預設提供者未明確設定，則會回到一般驅動程式/控制器。</summary>
+      <returns>ADC 提供者。</returns>
+    </member><member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.GpioControllerProvider">
+      <summary>取得預設 GPIO 提供者。 如果預設提供者未明確設定，則會回到一般驅動程式/控制器。</summary>
+      <returns>GPIO 提供者。</returns>
+    </member><member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.I2cControllerProvider">
+      <summary>取得預設 I2C 提供者。 如果預設提供者未明確設定，則會回到一般驅動程式/控制器。</summary>
+      <returns>I2C 提供者。</returns>
+    </member><member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.PwmControllerProvider">
+      <summary>取得預設 PWM 提供者。 如果預設提供者未明確設定，則會回到一般驅動程式/控制器。</summary>
+      <returns>PWM 提供者。</returns>
+    </member><member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.SpiControllerProvider">
+      <summary>取得預設 SPI 提供者。 如果預設提供者未明確設定，則會回到一般驅動程式/控制器。</summary>
+      <returns>SPI 提供者。</returns>
+    </member><member name="T:Windows.Devices.LowLevelDevicesController">
+      <summary>代表低階匯流排裝置控制器，及其關聯的提供者。</summary>
+    </member><member name="P:Windows.Devices.LowLevelDevicesController.DefaultProvider">
+      <summary>取得或設定控制器的預設提供者。</summary>
+      <returns>裝置彙總提供者。</returns>
+    </member><member name="T:Windows.Devices.Adc.AdcChannel">
+      <summary>表示單一 ADC 通道。</summary>
+    </member><member name="P:Windows.Devices.Adc.AdcChannel.Controller">
+      <summary>取得這個通道的 ADC 控制器。</summary>
+      <returns>ADC 控制器。</returns>
+    </member><member name="M:Windows.Devices.Adc.AdcChannel.Close">
+      <summary>關閉此通道的連接，以供其他人開啟。</summary>
+    </member><member name="M:Windows.Devices.Adc.AdcChannel.ReadRatio">
+      <summary>讀取值，以這個控制器的最大值的百分比表示。</summary>
+      <returns>以最大值的百分比表示的值。</returns>
+    </member><member name="M:Windows.Devices.Adc.AdcChannel.ReadValue">
+      <summary>從 ADC 讀取類比值的數位表示方式。</summary>
+      <returns>數位值。</returns>
+    </member><member name="T:Windows.Devices.Adc.AdcChannelMode">
+      <summary>描述 ADC 控制器可以用於輸入的通道模式。</summary>
+    </member><member name="F:Windows.Devices.Adc.AdcChannelMode.Differential">
+      <summary>兩個 pin 之間的差異。</summary>
+    </member><member name="F:Windows.Devices.Adc.AdcChannelMode.SingleEnded">
+      <summary>特定 pin 的簡單值。</summary>
+    </member><member name="T:Windows.Devices.Adc.AdcController">
+      <summary>表示系統上的 ADC 控制器</summary>
+    </member><member name="P:Windows.Devices.Adc.AdcController.ChannelCount">
+      <summary>ADC 控制器上可用的通道數目。</summary>
+      <returns>通道數目。</returns>
+    </member><member name="P:Windows.Devices.Adc.AdcController.ChannelMode">
+      <summary>取得或設定 ADC 控制器的通道模式。</summary>
+      <returns>ADC 通道模式。</returns>
+    </member><member name="P:Windows.Devices.Adc.AdcController.MaxValue">
+      <summary>取得控制器可以報告的最大值。</summary>
+      <returns>最大值。</returns>
+    </member><member name="P:Windows.Devices.Adc.AdcController.MinValue">
+      <summary>控制器可以報告的最小值。</summary>
+      <returns>最小值。</returns>
+    </member><member name="P:Windows.Devices.Adc.AdcController.ResolutionInBits">
+      <summary>取得控制器的解析度，以它擁有的位元數表示。</summary>
+      <returns>ADC 控制器擁有的位元數。</returns>
+    </member><member name="M:Windows.Devices.Adc.AdcController.GetControllersAsync(Windows.Devices.Adc.Provider.IAdcProvider)">
+      <summary>取得所有非同步連接到系統的控制器。</summary>
+      <returns>方法順利完成時，它會傳回值的清單，代表系統上提供的控制器。</returns>
+      <param name="provider">系統上控制器的 ADC 提供者。</param>
+    </member><member name="M:Windows.Devices.Adc.AdcController.GetDefaultAsync">
+      <summary>取得系統上的預設 ADC 控制器。</summary>
+      <returns>系統上的預設 ADC 控制器，如果系統沒有 ADC 控制器則為 null。</returns>
+    </member><member name="M:Windows.Devices.Adc.AdcController.IsChannelModeSupported(Windows.Devices.Adc.AdcChannelMode)">
+      <summary>確認指定的通道模式受到控制器支援。</summary>
+      <returns>如果可支援指定的通道模式，則為 true；否則為 false。</returns>
+      <param name="channelMode">通道模式。</param>
+    </member><member name="M:Windows.Devices.Adc.AdcController.OpenChannel(System.Int32)">
+      <summary>開啟指定 ADC 通道的連接。</summary>
+      <returns>ADC 通道。</returns>
+      <param name="channelNumber">要連接的通道。</param>
+    </member><member name="T:Windows.Devices.Adc.Provider.IAdcControllerProvider">
+      <summary>表示通用於所有 ADC 控制器的屬性和方法。</summary>
+    </member><member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.ChannelCount">
+      <summary>取得控制器上可用的通道數目。</summary>
+      <returns>通道數目。</returns>
+    </member><member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.ChannelMode">
+      <summary>取得或設定控制器通道模式。</summary>
+      <returns>通道模式。</returns>
+    </member><member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.MaxValue">
+      <summary>取得控制器可以傳回的最大值。</summary>
+      <returns>最大值。</returns>
+    </member><member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.MinValue">
+      <summary>取得控制器可以傳回的最小值。</summary>
+      <returns>最小值。</returns>
+    </member><member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.ResolutionInBits">
+      <summary>取得控制器的解析度，以它擁有的位元數表示。</summary>
+      <returns>解析為位元數。</returns>
+    </member><member name="M:Windows.Devices.Adc.Provider.IAdcControllerProvider.AcquireChannel(System.Int32)">
+      <summary>取得指定通道的連接。</summary>
+      <param name="channel">要連接的通道。</param>
+    </member><member name="M:Windows.Devices.Adc.Provider.IAdcControllerProvider.IsChannelModeSupported(Windows.Devices.Adc.Provider.ProviderAdcChannelMode)">
+      <summary>判斷指定的通道模式是否受到控制器支援。</summary>
+      <returns>如果可支援指定的通道模式，則為 true；否則為 false。</returns>
+      <param name="channelMode">所指通道模式。</param>
+    </member><member name="M:Windows.Devices.Adc.Provider.IAdcControllerProvider.ReadValue(System.Int32)">
+      <summary>取得指定的通道上類比值的數位表示方式。</summary>
+      <returns>類比值的數位表示方式。</returns>
+      <param name="channelNumber">要從哪個通道讀取。</param>
+    </member><member name="M:Windows.Devices.Adc.Provider.IAdcControllerProvider.ReleaseChannel(System.Int32)">
+      <summary>釋放通道連接，將該通道開放給其他人使用。</summary>
+      <param name="channel">要關閉連接的通道。</param>
+    </member><member name="T:Windows.Devices.Adc.Provider.IAdcProvider">
+      <summary>通用於所有 ADC 提供者的表示方法。</summary>
+    </member><member name="M:Windows.Devices.Adc.Provider.IAdcProvider.GetControllers">
+      <summary>取得系統上可用的 ADC 控制器。</summary>
+      <returns>此方法完成時，它會傳回系統上所有可用控制器的清單。</returns>
+    </member><member name="T:Windows.Devices.Adc.Provider.ProviderAdcChannelMode">
+      <summary>判斷 pin 值如何表示。 實作特點是由提供者決定，因此差異可能是實質或虛擬差異。</summary>
+    </member><member name="F:Windows.Devices.Adc.Provider.ProviderAdcChannelMode.Differential">
+      <summary>兩個 pin 之間的差異。</summary>
+    </member><member name="F:Windows.Devices.Adc.Provider.ProviderAdcChannelMode.SingleEnded">
+      <summary>特定 pin 的簡單值。</summary>
+    </member><member name="T:Windows.Devices.Gpio.GpioController">
+      <summary>表示系統的預設通用 I/O (GPIO) 控制器。</summary>
+    </member><member name="P:Windows.Devices.Gpio.GpioController.PinCount">
+      <summary>取得通用 I/O (GPIO) 控制器的 pin 數目。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>GPIO 控制器上的 pin 數目。 某些 Pin 可能無法在使用者模式中使用。 如需 Pin 編號如何對應至實體 Pin 的詳細資訊，請參閱您電路板的文件。</returns>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.GetControllersAsync(Windows.Devices.Gpio.Provider.IGpioProvider)">
+      <summary>取得所有非同步連接到系統的控制器。</summary>
+      <returns>方法順利完成時，它會傳回值的清單，代表系統上提供的控制器。</returns>
+      <param name="provider">系統上控制器的 GPIO 提供者。</param>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.GetDefault">
+      <summary>取得系統的預設通用 I/O (GPIO) 控制器。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <deprecated type="deprecate">這個方法已取代為 GetDefaultAsync。</deprecated>
+      <returns>系統的預設 GPIO 控制器，如果系統沒有 GPIO 控制器則為 null。</returns>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.GetDefaultAsync">
+      <summary>取得系統的預設通用 I/O (GPIO) 控制器。</summary>
+      <returns>系統的預設 GPIO 控制器，如果系統沒有 GPIO 控制器則為 null。</returns>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.OpenPin(System.Int32)">
+      <summary>以獨佔模式開啟與指定的通用 I/O (GPIO) pin 的連線。</summary>
+      <returns>開啟的 GPIO pin。</returns>
+      <param name="pinNumber">您要開啟 GPIO pin 的 pin 號碼。 某些 Pin 可能無法在使用者模式中使用。 如需 Pin 編號如何對應至實體 Pin 的詳細資訊，請參閱您電路板的文件。</param>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.OpenPin(System.Int32,Windows.Devices.Gpio.GpioSharingMode)">
+      <summary>以指定模式開啟指定的通用 I/O (GPIO) pin。</summary>
+      <returns>開啟的 GPIO pin。</returns>
+      <param name="pinNumber">您要開啟 GPIO pin 的 pin 號碼。 某些 Pin 可能無法在使用者模式中使用。 如需 Pin 編號如何對應至實體 Pin 的詳細資訊，請參閱您電路板的文件。</param>
+      <param name="sharingMode">您要開啟 GPIO pin 的模式，決定當您開啟 pin 時是否可以開啟 pin 的其他連線。</param>
+    </member><member name="M:Windows.Devices.Gpio.GpioController.TryOpenPin(System.Int32,Windows.Devices.Gpio.GpioSharingMode,Windows.Devices.Gpio.GpioPin@,Windows.Devices.Gpio.GpioOpenStatus@)">
+      <summary>以指定的模式開啟指定的通用 I/O (GPIO) Pin，並取得狀態值，您可用該值來處理無法以程式設計方式開啟 Pin 的情況。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>如果方法成功開啟 Pin，則為 true，否則為 false。 如果方法傳回 true，則 pin 參數會收到 GpioPin 執行個體，且 openStatus 參數會收到 GpioOpenStatus.PinOpened。 如果方法傳回 false，則 pin 參數為 null 且 openStatus 參數會收到作業失敗的原因。</returns>
+      <param name="pinNumber">您要開啟 GPIO pin 的 pin 號碼。 某些 Pin 可能無法在使用者模式中使用。 如需 Pin 編號如何對應至實體 Pin 的詳細資訊，請參閱您電路板的文件。</param>
+      <param name="sharingMode">您要開啟 GPIO pin 的模式，決定當您開啟 pin 時是否可以開啟 pin 的其他連線。</param>
+      <param name="pin">如果傳回值為 true，則為開啟的 GPIO Pin，否則為 null。</param>
+      <param name="openStatus">列舉值，表示嘗試開啟 GPIO pin 成功或嘗試開啟 GPIO pin 失敗的原因。</param>
+    </member><member name="T:Windows.Devices.Gpio.GpioOpenStatus">
+      <summary>描述使用 GpioPin.TryOpenPin 方法開啟 Pin 的可能結果。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioOpenStatus.PinOpened">
+      <summary>順利開啟 GPIO pin。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioOpenStatus.PinUnavailable">
+      <summary>系統會保留這個 Pin，且不會提供以使用者模式執行的應用程式使用。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioOpenStatus.SharingViolation">
+      <summary>Pin 目前以不相容的共用模式開啟。 例如：pin 已經以 GpioSharingMode.Exclusive 模式開啟。當您要求以 GpioSharingMode.Exclusive 模式開啟 pin 時，它已經以 GpioSharingMode.SharedReadOnly 模式開啟。</summary>
+    </member><member name="T:Windows.Devices.Gpio.GpioPin">
+      <summary>表示通用 I/O (GPIO) pin。</summary>
+    </member><member name="P:Windows.Devices.Gpio.GpioPin.DebounceTimeout">
+      <summary>取得或設定通用 I/O (GPIO) Pin 的防彈跳逾時，Pin 的值變更在這段期間會被篩選掉且不會產生 ValueChanged 事件。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>GPIO Pin 的防彈跳逾時，Pin 的值變更在這段期間會被篩選掉且不會產生 ValueChanged 事件。 如果這段時間間隔的長度為 0，則所有的 Pin 值變更都會產生 ValueChanged 事件。</returns>
+    </member><member name="P:Windows.Devices.Gpio.GpioPin.PinNumber">
+      <summary>取得通用 I/O (GPIO) pin 的 pin 編號。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>GPIO pin 的 pin 編號。</returns>
+    </member><member name="P:Windows.Devices.Gpio.GpioPin.SharingMode">
+      <summary>取得通用 I/O (GPIO) pin 開啟的共用模式。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>GPIO pin 開啟的共用模式。</returns>
+    </member><member name="E:Windows.Devices.Gpio.GpioPin.ValueChanged">
+      <summary>發生於通用 I/O (GPIO) Pin 的值變更時，可能是因為 Pin 設定為輸入時的外部刺激，或是值寫入 Pin，而 Pin 設定為輸出。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.Close">
+      <summary>關閉通用 I/O (GPIO) Pin 並釋出與它相關聯的資源。</summary>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.GetDriveMode">
+      <summary>取得通用 I/O (GPIO) Pin 目前的驅動模式。 驅動模式指定 Pin 設定為輸入或輸出，並決定如何將值驅動至 Pin。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>表示 GPIO Pin 目前驅動模式的列舉值。 驅動模式指定 Pin 設定為輸入或輸出，並決定如何將值驅動至 Pin。</returns>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.IsDriveModeSupported(Windows.Devices.Gpio.GpioPinDriveMode)">
+      <summary>取得通用 I/O (GPIO) pin 是否支援指定的驅動模式。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>如果 GPIO pin 支援 driveMode 指定之驅動模式則為 true，否則為 false。 如果您指定這個方法會傳回 false 的驅動模式，當您呼叫 SetDriveMode 時，SetDriveMode 會產生例外狀況。</returns>
+      <param name="driveMode">要檢查是否支援的驅動模式。</param>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.Read">
+      <summary>讀取通用 I/O (GPIO) Pin 的目前值。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>GPIO Pin 的目前值。 如果 Pin 設定為輸出，這個值會是最後寫入 Pin 的值。</returns>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.SetDriveMode(Windows.Devices.Gpio.GpioPinDriveMode)">
+      <summary>設定通用 I/O (GPIO) Pin 的驅動模式。 驅動模式指定 Pin 設定為輸入或輸出，並決定如何將值驅動至 Pin。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <param name="value">列舉值，指定要用於 GPIO Pin 的驅動模式。 驅動模式指定 Pin 設定為輸入或輸出，並決定如何將值驅動至 Pin。</param>
+    </member><member name="M:Windows.Devices.Gpio.GpioPin.Write(Windows.Devices.Gpio.GpioPinValue)">
+      <summary>Pin 設定為輸出時，根據 Pin 目前的驅動模式將指定的值驅動至通用 I/O (GPIO) Pin 上，如果 Pin 設定為輸入，則更新 Pin 的鎖定輸出值。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <param name="value">要寫入至 GPIO Pin 的列舉值。 如果 GPIO pin 設定為輸出，方法會根據 Pin 目前的驅動模式將指定的值驅動至 Pin 上。如果 GPIO pin 設定為輸入，則方法會更新 Pin 的鎖定輸出值。 鎖定輸出值會在 Pin 的設定變更為輸出時驅動至 Pin。</param>
+    </member><member name="T:Windows.Devices.Gpio.GpioPinDriveMode">
+      <summary>描述通用 I/O (GPIO) Pin 設定為輸入或輸出，以及如何將值驅動至 Pin。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.Input">
+      <summary>設定 GPIO Pin 採用浮動模式，且含高阻抗。 如果您針對這個 Pin 呼叫 GpioPin.Read 方法，該方法會傳回 Pin 目前的狀態為外部驅動。 如果您呼叫 GpioPin.Write 方法，該方法會為 Pin 設定鎖定的輸出值。 當 Pin 變更為輸出時，就會採用這個鎖定的輸出值。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.InputPullDown">
+      <summary>設定 GPIO pin 為高阻抗，並且有接地的下拉電阻器。如果您針對此 pin 呼叫 GpioPin.Read 方法，該方法會傳回 pin 的目前值為外部驅動。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.InputPullUp">
+      <summary>設定 GPIO pin 為高阻抗，並且有連接至充電連接 (VCC) 的上拉電阻器。如果您針對此 pin 呼叫 GpioPin.Read 方法，該方法會傳回先前寫入 pin 的值。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.Output">
+      <summary>設定 GPIO Pin 採用強制驅動模式，且含低阻抗。 如果您針對值為 GpioPinValue.High 的這個 Pin 呼叫 GpioPin.Write 方法，則該方法會為 Pin 產生低阻抗的高值。 如果您針對值為 GpioPinValue.Low 的這個 pin 呼叫 GpioPin.Write 方法，該方法會針對 pin 產生低阻抗低值。如果您針對這個 pin 呼叫 GpioPin.Read 方法，該方法會傳回先前寫入 pin 的值。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.OutputOpenDrain">
+      <summary>將 GPIO 設定為開啟放電模式。如果您針對值為 GpioPinValue.Low 的這個 pin 呼叫 GpioPin.Write 方法，該方法會驅動低值至 pin。 如果您針對值為 GpioPinValue.High 的這個 Pin 呼叫 GpioPin.Write 方法，則該方法會讓 Pin 採用浮動模式。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.OutputOpenDrainPullUp">
+      <summary>將 GPIO 設定為開啟放電模式並採用有電阻值的上拉模式。如果您針對值為 GpioPinValue.Low 的這個 pin 呼叫 GpioPin.Write 方法，該方法會產生低阻抗低狀態。 如果您針對值為 GpioPinValue.High 的這個 Pin 呼叫 GpioPin.Write 方法，則該方法會將 Pin 設定為高阻抗且帶有對 VCC 的上拉電阻器。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.OutputOpenSource">
+      <summary>將 GPIO pin 設定為開啟集電器模式。如果您針對值為 GpioPinValue.High 的這個 pin 呼叫 GpioPin.Write 方法，該方法會驅動高值至 pin。 如果您針對值為 GpioPinValue.Low 的這個 Pin 呼叫 GpioPin.Write 方法，則該方法會將 Pin 設為採用浮動模式。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinDriveMode.OutputOpenSourcePullDown">
+      <summary>將 GPIO pin 設定為開啟集電器模式與有電阻值的下拉模式。如果您針對值為 GpioPinValue.High 的這個 pin 呼叫 GpioPin.Write 方法，該方法會驅動高值至 pin。 如果您針對值為 GpioPinValue.Low 的這個 Pin 呼叫 GpioPin.Write 方法，則該方法會將 Pin 設定為高阻抗且帶有接地的下拉電阻器。</summary>
+    </member><member name="T:Windows.Devices.Gpio.GpioPinEdge">
+      <summary>描述發生 GpioPin.ValueChanged 事件時通用 I/O (GPIO) pin 值變更的可能類型。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinEdge.FallingEdge">
+      <summary>GPIO pin 的值從高變低。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinEdge.RisingEdge">
+      <summary>GPIO pin 的值從低變高。</summary>
+    </member><member name="T:Windows.Devices.Gpio.GpioPinValue">
+      <summary>描述通用 I/O (GPIO) pin 的可能值。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinValue.High">
+      <summary>GPIO pin 的值是高。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioPinValue.Low">
+      <summary>GPIO pin 的值是低。</summary>
+    </member><member name="T:Windows.Devices.Gpio.GpioPinValueChangedEventArgs">
+      <summary>提供當通用 I/O (GPIO) Pin 的值變更時發生的 GpioPin.ValueChanged 事件的相關資料，可能是因為 Pin 設定為輸入時的外部刺激，或是值寫入 Pin，而 Pin 設定為輸出。</summary>
+    </member><member name="P:Windows.Devices.Gpio.GpioPinValueChangedEventArgs.Edge">
+      <summary>取得發生 GpioPin.ValueChanged 事件時通用 I/O (GPIO) pin 值變更的類型。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>列舉值，指出發生 GpioPin.ValueChanged 事件時通用 GPIO pin 值變更的類型。</returns>
+    </member><member name="T:Windows.Devices.Gpio.GpioSharingMode">
+      <summary>描述您可以開啟通用 I/O (GPIO) pin 的模式。 這些模式判斷 pin 已開啟時是否可以開啟與 GPIO pin 的其他連線。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioSharingMode.Exclusive">
+      <summary>獨佔開啟 GPIO pin，因此無法開啟 pin 的任何其他連線。</summary>
+    </member><member name="F:Windows.Devices.Gpio.GpioSharingMode.SharedReadOnly">
+      <summary>共用開啟 GPIO pin，如此就可以開啟其他 SharedReadOnly 模式的 Pin 連線。 您只可以在共用模式下執行不會變更 GPIO pin 狀態的作業。 您可在共用模式的 GPIO Pin 上執行的作業包括：呼叫 GpioPin.Read 方法。呼叫 GpioPin.GetDriveMode 方法。取得屬性的值，例如 GpioPin.PinNumber 和 GpioPin.DebounceTimeout。為 GpioPin.ValueChanged 事件登錄事件處理常式。</summary>
+    </member><member name="T:Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs">
+      <summary>提供有關 IGpioPinProvider.ValueChanged 事件的資訊。</summary>
+    </member><member name="M:Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs.#ctor(Windows.Devices.Gpio.Provider.ProviderGpioPinEdge)">
+      <summary>建構 GpioPinProviderValueChangedEventArgs 類別，包含指定的邊緣值。</summary>
+      <param name="edge">所需的 pin 邊緣。</param>
+    </member><member name="P:Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs.Edge">
+      <summary>取得 pin 變更成的值。</summary>
+      <returns>pin 邊緣。</returns>
+    </member><member name="T:Windows.Devices.Gpio.Provider.IGpioControllerProvider">
+      <summary>表示通用於所有通用 I/O (GPIO) 控制器的動作。</summary>
+    </member><member name="P:Windows.Devices.Gpio.Provider.IGpioControllerProvider.PinCount">
+      <summary>取得可用的通用 I/O (GPIO) pin 數目。</summary>
+      <returns>可用的 GPIO Pin 數目。</returns>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioControllerProvider.OpenPinProvider(System.Int32,Windows.Devices.Gpio.Provider.ProviderGpioSharingMode)">
+      <summary>開啟並傳回特定 pin 的通用 I/O (GPIO) pin 提供者。</summary>
+      <returns>所指定 pin 的 GPIO pin 提供者。</returns>
+      <param name="pin">所需的 GPIO pin 數目。</param>
+      <param name="sharingMode">用於開啟 pin 的共用模式。</param>
+    </member><member name="T:Windows.Devices.Gpio.Provider.IGpioPinProvider">
+      <summary>表示通用於通用 I/O (GPIO) pin 提供者的動作。</summary>
+    </member><member name="P:Windows.Devices.Gpio.Provider.IGpioPinProvider.DebounceTimeout">
+      <summary>取得或設定通用 I/O (GPIO) Pin 的防彈跳逾時，Pin 的值變更在這段期間會被篩選掉且不會產生 ValueChanged 事件。</summary>
+      <returns>GPIO Pin 的防彈跳逾時，Pin 的值變更在這段期間會被篩選掉且不會產生 ValueChanged 事件。 如果這段時間間隔的長度為 0，則所有的 Pin 值變更都會產生 ValueChanged 事件。</returns>
+    </member><member name="P:Windows.Devices.Gpio.Provider.IGpioPinProvider.PinNumber">
+      <summary>取得通用 I/O (GPIO) pin 的 pin 編號。</summary>
+      <returns>GPIO pin 的 pin 編號。</returns>
+    </member><member name="P:Windows.Devices.Gpio.Provider.IGpioPinProvider.SharingMode">
+      <summary>取得通用 I/O (GPIO) pin 開啟的共用模式。</summary>
+      <returns>GPIO pin 開啟的共用模式。</returns>
+    </member><member name="E:Windows.Devices.Gpio.Provider.IGpioPinProvider.ValueChanged">
+      <summary>pin 的值變更時引發的事件。</summary>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.GetDriveMode">
+      <summary>取得 pin 目前設定的驅動模式。</summary>
+      <returns>pin 的驅動模式。</returns>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.IsDriveModeSupported(Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode)">
+      <summary>判斷 pin 是否支援某種驅動模式。</summary>
+      <returns>如果可支援驅動模式，則為 true；否則為 false。</returns>
+      <param name="driveMode">所需的驅動模式。</param>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.Read">
+      <summary>讀取 Pin 的目前值。</summary>
+      <returns>pin 的值。</returns>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.SetDriveMode(Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode)">
+      <summary>設定 pin 的驅動模式。</summary>
+      <param name="value">pin 所需的驅動模式。</param>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.Write(Windows.Devices.Gpio.Provider.ProviderGpioPinValue)">
+      <summary>將值寫入 pin。</summary>
+      <param name="value">要寫入的值。</param>
+    </member><member name="T:Windows.Devices.Gpio.Provider.IGpioProvider">
+      <summary>表示通用於通用 I/O (GPIO) 控制器提供者的動作。</summary>
+    </member><member name="M:Windows.Devices.Gpio.Provider.IGpioProvider.GetControllers">
+      <summary>取得系統上可用的控制器。</summary>
+      <returns>值清單，表示系統上可用的控制器。</returns>
+    </member><member name="T:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode">
+      <summary>描述通用 I/O (GPIO) Pin 設定為輸入或輸出，以及如何將值驅動至 Pin。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.Input">
+      <summary>設定 GPIO Pin 採用浮動模式，且含高阻抗。 如果您針對這個 Pin 呼叫 IGpioPinProvider.Read 方法，該方法會傳回 Pin 目前的狀態為外部驅動。 如果您呼叫 IGpioPinProvider.Write 方法，該方法會為 Pin 設定鎖定的輸出值。 當 Pin 變更為輸出時，就會採用這個鎖定的輸出值。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.InputPullDown">
+      <summary>設定 GPIO pin 為高阻抗，並且有接地的下拉電阻器。如果您針對此 pin 呼叫 IGpioPinProvider.Read 方法，該方法會傳回 pin 的目前值為外部驅動。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.InputPullUp">
+      <summary>設定 GPIO pin 為高阻抗，並且有連接至充電連接 (VCC) 的上拉電阻器。如果您針對此 pin 呼叫 IGpioPinProvider.Read 方法，該方法會傳回先前寫入 pin 的值。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.Output">
+      <summary>設定 GPIO Pin 採用強制驅動模式，且含低阻抗。 如果您針對值為 ProviderGpioPinValue.High 的這個 Pin 呼叫 IGpioPinProvider.Write 方法，則該方法會為 Pin 產生低阻抗的高值。 如果您針對值為 ProviderGpioPinValue.Low 的這個 pin 呼叫 IGpioPinProvider.Write 方法，該方法會針對 pin 產生低阻抗低值。如果您針對這個 pin 呼叫 IGpioPinProvider.Read 方法，該方法會傳回先前寫入 pin 的值。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.OutputOpenDrain">
+      <summary>將 GPIO 設定為開啟放電模式。如果您針對值為 ProviderGpioPinValue.Low 的這個 pin 呼叫 IGpioPinProvider.Write 方法，該方法會驅動低值至 pin。 如果您針對值為 ProviderGpioPinValue.High 的這個 Pin 呼叫 IGpioPinProvider.Write 方法，則該方法會讓 Pin 採用浮動模式。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.OutputOpenDrainPullUp">
+      <summary>將 GPIO 設定為開啟放電模式並採用有電阻值的上拉模式。如果您針對值為 ProviderGpioPinValue.Low 的這個 pin 呼叫 IGpioPinProvider.Write 方法，該方法會產生低阻抗低狀態。 如果您針對值為 ProviderGpioPinValue.High 的這個 Pin 呼叫 IGpioPinProvider.Write 方法，則該方法會將 Pin 設定為高阻抗且帶有對 VCC 的上拉電阻器。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.OutputOpenSource">
+      <summary>將 GPIO pin 設定為開啟集電器模式。如果您針對值為 ProviderGpioPinValue.High 的這個 pin 呼叫 IGpioPinProvider.Write 方法，該方法會驅動高值至 pin。 如果您針對值為 ProviderGpioPinValue.Low 的這個 Pin 呼叫 IGpioPinProvider.Write 方法，則該方法會將 Pin 設為採用浮動模式。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.OutputOpenSourcePullDown">
+      <summary>將 GPIO pin 設定為開啟集電器模式與有電阻值的下拉模式。如果您針對值為 ProviderGpioPinValue.High 的這個 pin 呼叫 IGpioPinProvider.Write 方法，該方法會驅動高值至 pin。 如果您針對值為 ProviderGpioPinValue.Low 的這個 Pin 呼叫 IGpioPinProvider.Write 方法，則該方法會將 Pin 設定為高阻抗且帶有接地的下拉電阻器。</summary>
+    </member><member name="T:Windows.Devices.Gpio.Provider.ProviderGpioPinEdge">
+      <summary>描述通用 I/O (GPIO) pin 值發生變更的可能類型。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinEdge.FallingEdge">
+      <summary>下落邊緣，或是值從高轉變成低時。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinEdge.RisingEdge">
+      <summary>上升邊緣，或是值從低轉變成高時。</summary>
+    </member><member name="T:Windows.Devices.Gpio.Provider.ProviderGpioPinValue">
+      <summary>描述通用 I/O (GPIO) pin 的可能值。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinValue.High">
+      <summary>GPIO pin 的值是高。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinValue.Low">
+      <summary>GPIO pin 的值是低。</summary>
+    </member><member name="T:Windows.Devices.Gpio.Provider.ProviderGpioSharingMode">
+      <summary>描述您可以開啟通用 I/O (GPIO) pin 的模式。 這些模式判斷 pin 已開啟時是否可以開啟與 GPIO pin 的其他連線。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioSharingMode.Exclusive">
+      <summary>獨佔開啟 GPIO pin，因此無法開啟 pin 的任何其他連線。</summary>
+    </member><member name="F:Windows.Devices.Gpio.Provider.ProviderGpioSharingMode.SharedReadOnly">
+      <summary>共用開啟 GPIO pin，如此就可以開啟其他 SharedReadOnly 模式的 Pin 連線。 只能執行不會變更 pin 狀態的作業。</summary>
+    </member><member name="T:Windows.Devices.I2c.I2cBusSpeed">
+      <summary>描述可用於連接至積體電路間 (I2C) 裝置的匯流排速度。 匯流排速度是存取裝置時 I2C 匯流排的工作時鐘頻率。</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cBusSpeed.FastMode">
+      <summary>400 kHz 的快速度。</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cBusSpeed.StandardMode">
+      <summary>100 千赫 (kHz) 的標準速度。 這是預設速度。</summary>
+    </member><member name="T:Windows.Devices.I2c.I2cConnectionSettings">
+      <summary>表示要用於積體電路間 (I2C) 裝置的連接設定。</summary>
+    </member><member name="M:Windows.Devices.I2c.I2cConnectionSettings.#ctor(System.Int32)">
+      <summary>使用標準模式的預設設定做為匯流排速度及獨佔共用模式的設定，針對擁有指定匯流排位址的積體電路間 (I2C) 裝置，建立並初始化 I2cConnectionSettings 類別的新執行個體。</summary>
+      <param name="slaveAddress">積體電路間 (I2C) 裝置的匯流排位址，應套用 I2cConnectionSettings 的設定。 只支援 7 位元定址，因此有效的值範圍是從 8 到 119。</param>
+    </member><member name="P:Windows.Devices.I2c.I2cConnectionSettings.BusSpeed">
+      <summary>取得或設定可用於連接至積體電路間 (I2C) 裝置的匯流排速度。 匯流排速度是存取裝置時 I2C 匯流排的工作時鐘頻率。</summary>
+      <returns>用於連接至 I2C 裝置的匯流排速率。</returns>
+    </member><member name="P:Windows.Devices.I2c.I2cConnectionSettings.SharingMode">
+      <summary>取得或設定共用模式，用來連接至積體電路間 (I2C) 匯流排位址。 這個模式判斷連接至 I2C 匯流排位址時是否可以開啟 I2C 匯流排位址的其他連線。</summary>
+      <returns>用來連接至 I2C 匯流排位址的共用模式。</returns>
+    </member><member name="P:Windows.Devices.I2c.I2cConnectionSettings.SlaveAddress">
+      <summary>取得或設定積體電路間 (I2C) 裝置的匯流排位址。</summary>
+      <returns>I2C 裝置的匯流排位址。 只支援 7 位元定址，因此有效的值範圍是從 8 到 119。</returns>
+    </member><member name="T:Windows.Devices.I2c.I2cController">
+      <summary>表示系統的 I2C 控制器。</summary>
+    </member><member name="M:Windows.Devices.I2c.I2cController.GetControllersAsync(Windows.Devices.I2c.Provider.II2cProvider)">
+      <summary>取得系統上所有的 I2C 控制器。</summary>
+      <returns>方法順利完成時，它會傳回值的清單，代表系統上可用的 I2C 控制器。</returns>
+      <param name="provider">系統上控制器的 I2C 提供者。</param>
+    </member><member name="M:Windows.Devices.I2c.I2cController.GetDefaultAsync">
+      <summary>取得系統上的預設 I2C 控制器。</summary>
+      <returns>系統上的預設 I2C 控制器，如果系統沒有 I2C 控制器則為 null。</returns>
+    </member><member name="M:Windows.Devices.I2c.I2cController.GetDevice(Windows.Devices.I2c.I2cConnectionSettings)">
+      <summary>取得包含指定設定的 I2C 裝置。</summary>
+      <returns>I2C 裝置。</returns>
+      <param name="settings">所需的連接設定。</param>
+    </member><member name="T:Windows.Devices.I2c.I2cDevice">
+      <summary>表示積體電路間 (I2C) 匯流排上裝置的通訊通道。</summary>
+    </member><member name="P:Windows.Devices.I2c.I2cDevice.ConnectionSettings">
+      <summary>取得用於與積體電路間 (I2C) 裝置進行通訊的連接設定。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>用於與積體電路間 (I2C) 裝置進行通訊的連接設定。</returns>
+    </member><member name="P:Windows.Devices.I2c.I2cDevice.DeviceId">
+      <summary>取得裝置的積體電路間 (I2C) 匯流排控制器的隨插即用裝置識別碼。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>裝置的積體電路間 (I2C) 匯流排控制器的隨插即用裝置識別碼。</returns>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.Close">
+      <summary>關閉與積體電路間 (I2C) 裝置的連線。</summary>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.FromIdAsync(System.String,Windows.Devices.I2c.I2cConnectionSettings)">
+      <summary>為有指定的隨插即用裝置識別碼的積體電路間 (I2C) 匯流排控制器，使用指定的連接設定，以非同步方式擷取 I2cDevice 物件。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>會傳回 I2cDevice 物件的非同步作業。</returns>
+      <param name="deviceId">I2C 匯流排控制器的隨插即用裝置識別碼，要為其建立 I2cDevice 物件。</param>
+      <param name="settings">要用來與 deviceId 指定的 I2C 匯流排控制器通訊的連接設定。</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.GetDeviceSelector">
+      <summary>擷取系統上所有積體電路間 (I2C) 匯流排控制器的進階查詢語法 (AQS) 字串。</summary>
+      <returns>系統上所有 I2C 匯流排控制器的 AQS 字串，您可以使用該字串搭配 DeviceInformation.FindAllAsync 方法取得這些匯流排控制器的 DeviceInformation 物件。</returns>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.GetDeviceSelector(System.String)">
+      <summary>擷取具有指定的易記名稱的積體電路間 (I2C) 匯流排的進階查詢語法 (AQS) 字串。</summary>
+      <returns>friendlyName 指定之 I2C 匯流排的 AQS 字串，您可以使用該字串搭配 DeviceInformation.FindAllAsync 方法取得該匯流排的 DeviceInformation 物件。</returns>
+      <param name="friendlyName">要取得其 AQS 字串的特定硬體平台上特定 I2C 匯流排的易記名稱。</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.Read(System.Byte[])">
+      <summary>從積體電路間 (I2C) 匯流排讀取資料，該匯流排上的裝置會連接到指定的緩衝區內。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <param name="buffer">緩衝區，您要從 I2C 匯流排讀取資料到其中。 緩衝區的長度決定要從裝置要求的資料量。</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.ReadPartial(System.Byte[])">
+      <summary>從積體電路間 (I2C) 匯流排讀取資料，該匯流排上的裝置會連接到指定的緩衝區內，並傳回作業成功的資訊，您可利用該資訊處理錯誤。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>結構，當中包含讀取作業成功及作業讀取至緩衝區內實際位元組數的相關資訊。</returns>
+      <param name="buffer">緩衝區，您要從 I2C 匯流排讀取資料到其中。 緩衝區的長度決定要從裝置要求的資料量。</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.Write(System.Byte[])">
+      <summary>將資料寫入裝置連接的積體電路間 (I2C) 匯流排，根據您用來建立 I2cDevice 物件的 I2cConnectionSettings 物件中指定的匯流排位址。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <param name="buffer">緩衝區，當中包含您要寫入 I2C 裝置中的資料。 這些資料不應包含匯流排位址。</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.WritePartial(System.Byte[])">
+      <summary>將資料寫入至裝置連接的積體電路間 (I2C) 匯流排，並傳回作業成功的資訊，您可利用該資訊處理錯誤。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>結構，當中包含寫入作業成功及作業寫入緩衝區內實際位元組數的相關資訊。</returns>
+      <param name="buffer">緩衝區，當中包含您要寫入 I2C 裝置中的資料。 這些資料不應包含匯流排位址。</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.WriteRead(System.Byte[],System.Byte[])">
+      <summary>執行不可部分完成作業將資料寫入，然後從裝置連接的積體電路間 (I2C) 匯流排讀取資料，並且在寫入和讀取作業之間傳送重新啟動條件。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <param name="writeBuffer">緩衝區，當中包含您要寫入 I2C 裝置中的資料。 這些資料不應包含匯流排位址。</param>
+      <param name="readBuffer">緩衝區，您要從 I2C 匯流排讀取資料到其中。 緩衝區的長度決定要從裝置要求的資料量。</param>
+    </member><member name="M:Windows.Devices.I2c.I2cDevice.WriteReadPartial(System.Byte[],System.Byte[])">
+      <summary>執行不可部分完成作業將資料寫入，然後再從裝置連接的積體電路間 (I2C) 匯流排讀取資料，並傳回作業成功的資訊，您可利用該資訊處理錯誤。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>結構，當中包含讀取和寫入作業是否成功，以及作業寫入的實際位元組數與作業讀取的實際位元組數總和的相關資訊。</returns>
+      <param name="writeBuffer">緩衝區，當中包含您要寫入 I2C 裝置中的資料。 這些資料不應包含匯流排位址。</param>
+      <param name="readBuffer">緩衝區，您要從 I2C 匯流排讀取資料到其中。 緩衝區的長度決定要從裝置要求的資料量。</param>
+    </member><member name="T:Windows.Devices.I2c.I2cSharingMode">
+      <summary>描述您可以連接到積體電路間 (I2C) 匯流排位址的模式。 這些模式判斷連接至 I2C 匯流排位址時是否可以開啟 I2C 匯流排位址的其他連線。</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cSharingMode.Exclusive">
+      <summary>獨佔連接至 I2C 匯流排位址，因此當您保持連接時，與 I2C 匯流排位址的其他連線無法建立。
+這是預設模式。</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cSharingMode.Shared">
+      <summary>連接至共用模式的 I2C 匯流排位址，因此當您保持連接時，與 I2C 匯流排位址的其他連線也能建立。 您可以在共用連線上執行所有作業，不過，請小心使用這類連線。 當多個用戶端應用程式變更 I2C 裝置的全域狀態時，可能發生競爭條件。使用共用連線的範例使用案例，就是取得讀數而不變更裝置狀態的感應器。</summary>
+    </member><member name="T:Windows.Devices.I2c.I2cTransferResult">
+      <summary>提供 ReadPartial、WritePartial 或 WriteReadPartial 方法執行的資料傳輸是否成功，以及方法傳輸的實際位元組數目的相關資訊。</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cTransferResult.BytesTransferred">
+      <summary>作業實際傳輸的實際位元組數目。 下表說明這個值對於每個方法各代表什麼意義。| 方法 | 說明 | ReadPartial | 讀取作業讀入緩衝區的實際位元組數目。| 如果 Status 成員的值是 I2CTransferStatus.PartialTransfer，則這個值可能少於您在 buffer 參數中指定之緩衝區中的位元組數目。 WritePartial | 寫入作業傳輸至 I2C 裝置的實際位元組數目。 如果 Status 成員的值是 I2CTransferStatus.PartialTransfer，則這個值可能少於您在 buffer 參數中指定之緩衝區中的位元組數目。 WriteReadPartial 作業傳輸的實際位元組數目，也就是作業寫入的位元組數目和作業讀取的位元組數目的總和。 如果 Status 成員的值是 I2CTransferStatus.PartialTransfer，則這個值可能少於您在 writeBuffer 和 readBuffer 參數中指定之緩衝區長度的總和。</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cTransferResult.Status">
+      <summary>列舉值，指出讀取或寫入作業是否傳輸了方法要求的完整位元組數目，或是完整傳輸失敗的原因。 對於 WriteReadPartial，這個值表示寫入和讀取作業的資料是否完整傳輸。</summary>
+    </member><member name="T:Windows.Devices.I2c.I2cTransferStatus">
+      <summary>描述 ReadPartial、WritePartial 或 WriteReadPartial 方法執行的資料傳輸是否成功，或提供傳輸失敗的原因。</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cTransferStatus.FullTransfer">
+      <summary>資料完整傳輸。 對於 WriteReadPartial，寫入和讀取作業的資料已完整傳輸。對於這個狀態碼，方法傳回的 I2cTransferResult.BytesTransferred 成員值與您呼叫方法時指定的緩衝區大小相同，或是等於您為 WriteReadPartial 指定的兩個緩衝區大小的總和。</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cTransferStatus.PartialTransfer">
+      <summary>在所有資料傳輸之前，I2C 裝置以否定方式確認資料傳輸。對於這個狀態碼，方法傳回的 I2cTransferResult.BytesTransferred 成員值就是實際傳輸的位元組數目。 對於 WriteReadPartial，值是作業寫入的位元組數目和作業讀取的位元組數目的總和。</summary>
+    </member><member name="F:Windows.Devices.I2c.I2cTransferStatus.SlaveAddressNotAcknowledged">
+      <summary>匯流排位址未經確認。對於這個狀態碼，方法傳回的 I2cTransferResult.BytesTransferred 成員值為 0。</summary>
+    </member><member name="T:Windows.Devices.I2c.II2cDeviceStatics">
+      <summary>提供開啟積體電路間 (I2C) 匯流排上裝置的通訊通道的方式。</summary>
+    </member><member name="M:Windows.Devices.I2c.II2cDeviceStatics.FromIdAsync(System.String,Windows.Devices.I2c.I2cConnectionSettings)">
+      <summary>為有指定的隨插即用裝置識別碼的積體電路間 (I2C) 匯流排控制器，使用指定的連接設定，以非同步方式擷取 I2cDevice 物件。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>會傳回 I2cDevice 物件的非同步作業。</returns>
+      <param name="deviceId">I2C 匯流排控制器的隨插即用裝置識別碼，要為其建立 I2cDevice 物件。</param>
+      <param name="settings">要用來與 deviceId 指定的 I2C 匯流排控制器通訊的連接設定。</param>
+    </member><member name="M:Windows.Devices.I2c.II2cDeviceStatics.GetDeviceSelector">
+      <summary>擷取系統上所有積體電路間 (I2C) 匯流排控制器的進階查詢語法 (AQS) 字串。</summary>
+      <returns>系統上所有 I2C 匯流排控制器的 AQS 字串，您可以使用該字串搭配 DeviceInformation.FindAllAsync 方法取得這些匯流排控制器的 DeviceInformation 物件。</returns>
+    </member><member name="M:Windows.Devices.I2c.II2cDeviceStatics.GetDeviceSelector(System.String)">
+      <summary>擷取具有指定的易記名稱的積體電路間 (I2C) 匯流排的進階查詢語法 (AQS) 字串。</summary>
+      <returns>friendlyName 指定之 I2C 匯流排的 AQS 字串，您可以使用該字串搭配 DeviceInformation.FindAllAsync 方法取得該匯流排的 DeviceInformation 物件。</returns>
+      <param name="friendlyName">要取得其 AQS 字串的特定硬體平台上特定 I2C 匯流排的易記名稱。</param>
+    </member><member name="T:Windows.Devices.I2c.Provider.II2cControllerProvider">
+      <summary>表示通用於所有 I2C 控制器的屬性和方法。</summary>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cControllerProvider.GetDeviceProvider(Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings)">
+      <summary>取得包含指定設定的 I2C 裝置提供者。</summary>
+      <returns>I2C 裝置提供者。</returns>
+      <param name="settings">所需的設定。</param>
+    </member><member name="T:Windows.Devices.I2c.Provider.II2cDeviceProvider">
+      <summary>通用於所有 I2C 裝置提供者的表示方法。</summary>
+    </member><member name="P:Windows.Devices.I2c.Provider.II2cDeviceProvider.DeviceId">
+      <summary>取得裝置的積體電路間 (I2C) 匯流排控制器的隨插即用裝置識別碼。</summary>
+      <returns>裝置的積體電路間 (I2C) 匯流排控制器的隨插即用裝置識別碼。</returns>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.Read(System.Byte[])">
+      <summary>從積體電路間 (I2C) 匯流排讀取資料，該匯流排上的裝置會連接到指定的緩衝區內。</summary>
+      <param name="buffer">緩衝區，您要從 I2C 匯流排讀取資料到其中。 緩衝區的長度決定要從裝置要求的資料量。</param>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.ReadPartial(System.Byte[])">
+      <summary>從積體電路間 (I2C) 匯流排讀取資料，該匯流排上的裝置會連接到指定的緩衝區內，並傳回作業成功的資訊，您可利用該資訊處理錯誤。</summary>
+      <returns>結構，當中包含讀取作業成功及作業讀取至緩衝區內實際位元組數的相關資訊。</returns>
+      <param name="buffer">緩衝區，您要從 I2C 匯流排讀取資料到其中。 緩衝區的長度決定要從裝置要求的資料量。</param>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.Write(System.Byte[])">
+      <summary>將資料寫入裝置連接的積體電路間 (I2C) 匯流排。</summary>
+      <param name="buffer">緩衝區，當中包含您要寫入 I2C 裝置中的資料。 這些資料不應包含匯流排位址。</param>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.WritePartial(System.Byte[])">
+      <summary>將資料寫入至裝置連接的積體電路間 (I2C) 匯流排，並傳回作業成功的資訊，您可利用該資訊處理錯誤。</summary>
+      <returns>結構，當中包含寫入作業成功及作業寫入緩衝區內實際位元組數的相關資訊。</returns>
+      <param name="buffer">緩衝區，當中包含您要寫入 I2C 裝置中的資料。 這些資料不應包含匯流排位址。</param>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.WriteRead(System.Byte[],System.Byte[])">
+      <summary>執行不可部分完成作業將資料寫入，然後從裝置連接的積體電路間 (I2C) 匯流排讀取資料，並且在寫入和讀取作業之間傳送重新啟動條件。</summary>
+      <param name="writeBuffer">緩衝區，當中包含您要寫入 I2C 裝置中的資料。 這些資料不應包含匯流排位址。</param>
+      <param name="readBuffer">緩衝區，您要從 I2C 匯流排讀取資料到其中。 緩衝區的長度決定要從裝置要求的資料量。</param>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.WriteReadPartial(System.Byte[],System.Byte[])">
+      <summary>執行不可部分完成作業將資料寫入，然後再從裝置連接的積體電路間 (I2C) 匯流排讀取資料，並傳回作業成功的資訊，您可利用該資訊處理錯誤。</summary>
+      <returns>結構，當中包含讀取和寫入作業是否成功，以及作業寫入的實際位元組數與作業讀取的實際位元組數總和的相關資訊。</returns>
+      <param name="writeBuffer">緩衝區，當中包含您要寫入 I2C 裝置中的資料。 這些資料不應包含匯流排位址。</param>
+      <param name="readBuffer">緩衝區，您要從 I2C 匯流排讀取資料到其中。 緩衝區的長度決定要從裝置要求的資料量。</param>
+    </member><member name="T:Windows.Devices.I2c.Provider.II2cProvider">
+      <summary>通用於所有 I2C 提供者的動作。</summary>
+    </member><member name="M:Windows.Devices.I2c.Provider.II2cProvider.GetControllersAsync">
+      <summary>取得系統上所有的 I2C 控制器。</summary>
+      <returns>方法順利完成時，它會傳回值的清單，代表系統上可用的 I2C 控制器。</returns>
+    </member><member name="T:Windows.Devices.I2c.Provider.ProviderI2cBusSpeed">
+      <summary>描述可用於連接至積體電路間 (I2C) 裝置的匯流排速度。 匯流排速度是存取裝置時 I2C 匯流排的工作時鐘頻率。</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cBusSpeed.FastMode">
+      <summary>400 kHz 的快速度。</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cBusSpeed.StandardMode">
+      <summary>100 千赫 (kHz) 的標準速度。 這是預設速度。</summary>
+    </member><member name="T:Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings">
+      <summary>表示要用於積體電路間 (I2C) 裝置的連接設定。</summary>
+    </member><member name="P:Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings.BusSpeed">
+      <summary>取得或設定可用於連接至積體電路間 (I2C) 裝置的匯流排速度。 匯流排速度是存取裝置時 I2C 匯流排的工作時鐘頻率。</summary>
+      <returns>用於連接至 I2C 裝置的匯流排速率。</returns>
+    </member><member name="P:Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings.SharingMode">
+      <summary>取得或設定共用模式，用來連接至積體電路間 (I2C) 匯流排位址。 這個模式判斷連接至 I2C 匯流排位址時是否可以開啟 I2C 匯流排位址的其他連線。</summary>
+      <returns>用來連接至 I2C 匯流排位址的共用模式。</returns>
+    </member><member name="P:Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings.SlaveAddress">
+      <summary>取得或設定積體電路間 (I2C) 裝置的匯流排位址。</summary>
+      <returns>I2C 裝置的匯流排位址。 只支援 7 位元定址，因此有效的值範圍是從 8 到 119。</returns>
+    </member><member name="T:Windows.Devices.I2c.Provider.ProviderI2cSharingMode">
+      <summary>描述您可以連接到積體電路間 (I2C) 匯流排位址的模式。 這些模式判斷連接至 I2C 匯流排位址時是否可以開啟 I2C 匯流排位址的其他連線。</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cSharingMode.Exclusive">
+      <summary>獨佔連接至 I2C 匯流排位址，因此當您保持連接時，與 I2C 匯流排位址的其他連線無法建立。
+這是預設模式。</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cSharingMode.Shared">
+      <summary>連接至共用模式的 I2C 匯流排位址，因此當您保持連接時，與 I2C 匯流排位址的其他連線也能建立。 您可以在共用連線上執行所有作業，不過，請小心使用這類連線。 當多個用戶端應用程式變更 I2C 裝置的全域狀態時，可能發生競爭條件。使用共用連線的範例使用案例，就是取得讀數而不變更裝置狀態的感應器。</summary>
+    </member><member name="T:Windows.Devices.I2c.Provider.ProviderI2cTransferResult">
+      <summary>提供 ReadPartial、WritePartial 或 WriteReadPartial 方法執行的資料傳輸是否成功，以及方法傳輸的實際位元組數目的相關資訊。</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferResult.BytesTransferred">
+      <summary>作業實際傳輸的實際位元組數目。 下表說明這個值對於每個方法各代表什麼意義。| 方法 | 說明 | ReadPartial | 讀取作業讀入緩衝區的實際位元組數目。| 如果 Status 成員的值是 ProviderI2CTransferStatus.PartialTransfer，則這個值可能少於您在 buffer 參數中指定之緩衝區中的位元組數目。 WritePartial | 寫入作業傳輸至 I2C 裝置的實際位元組數目。 如果 Status 成員的值是 ProviderI2CTransferStatus.PartialTransfer，則這個值可能少於您在 buffer 參數中指定之緩衝區中的位元組數目。 WriteReadPartial 作業傳輸的實際位元組數目，也就是作業寫入的位元組數目和作業讀取的位元組數目的總和。 如果 Status 成員的值是 ProviderI2CTransferStatus.PartialTransfer，則這個值可能少於您在 writeBuffer 和 readBuffer 參數中指定之緩衝區長度的總和。</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferResult.Status">
+      <summary>列舉值，指出讀取或寫入作業是否傳輸了方法要求的完整位元組數目，或是完整傳輸失敗的原因。 對於 WriteReadPartial，這個值表示寫入和讀取作業的資料是否完整傳輸。</summary>
+    </member><member name="T:Windows.Devices.I2c.Provider.ProviderI2cTransferStatus">
+      <summary>描述 ReadPartial、WritePartial 或 WriteReadPartial 方法執行的資料傳輸是否成功，或提供傳輸失敗的原因。</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferStatus.FullTransfer">
+      <summary>資料完整傳輸。 對於 WriteReadPartial，寫入和讀取作業的資料已完整傳輸。對於這個狀態碼，方法傳回的 ProviderI2cTransferResult.BytesTransferred 成員值與您呼叫方法時指定的緩衝區大小相同，或是等於您為 WriteReadPartial 指定的兩個緩衝區大小的總和。</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferStatus.PartialTransfer">
+      <summary>在所有資料傳輸之前，I2C 裝置以否定方式確認資料傳輸。對於這個狀態碼，方法傳回的 ProviderI2cTransferResult.BytesTransferred 成員值就是實際傳輸的位元組數目。 對於 WriteReadPartial，值是作業寫入的位元組數目和作業讀取的位元組數目的總和。</summary>
+    </member><member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferStatus.SlaveAddressNotAcknowledged">
+      <summary>匯流排位址未經確認。對於這個狀態碼，方法傳回的 ProviderI2cTransferResult.BytesTransferred 成員值為 0。</summary>
+    </member><member name="T:Windows.Devices.Pwm.PwmController">
+      <summary>表示連接至系統的 PWM 控制器。</summary>
+    </member><member name="P:Windows.Devices.Pwm.PwmController.ActualFrequency">
+      <summary>取得 PWM 的實際頻率。</summary>
+      <returns>頻率，單位 Hz。</returns>
+    </member><member name="P:Windows.Devices.Pwm.PwmController.MaxFrequency">
+      <summary>取得控制器提供的最大頻率。</summary>
+      <returns>最大頻率，單位 Hz。</returns>
+    </member><member name="P:Windows.Devices.Pwm.PwmController.MinFrequency">
+      <summary>取得控制器提供的最小頻率。</summary>
+      <returns>最小頻率，單位 Hz。</returns>
+    </member><member name="P:Windows.Devices.Pwm.PwmController.PinCount">
+      <summary>取得系統上可用的 Pin 數目。</summary>
+      <returns>pin 的數目。</returns>
+    </member><member name="M:Windows.Devices.Pwm.PwmController.GetControllersAsync(Windows.Devices.Pwm.Provider.IPwmProvider)">
+      <summary>以非同步方式取得系統上所有控制器。</summary>
+      <returns>方法順利完成時，它會傳回值的清單，代表系統上提供的控制器。</returns>
+      <param name="provider">位於系統上的 PWM 提供者。</param>
+    </member><member name="M:Windows.Devices.Pwm.PwmController.GetDefaultAsync">
+      <summary>取得系統上的預設 PWM 控制器。</summary>
+      <returns>系統上的預設 PWM 控制器，如果系統沒有 PWM 控制器則為 null。</returns>
+    </member><member name="M:Windows.Devices.Pwm.PwmController.OpenPin(System.Int32)">
+      <summary>開啟 Pin 提供使用。</summary>
+      <returns>要求的 pin 現在可供使用。</returns>
+      <param name="pinNumber">要開啟的 pin。</param>
+    </member><member name="M:Windows.Devices.Pwm.PwmController.SetDesiredFrequency(System.Double)">
+      <summary>設定 PWM 頻率。</summary>
+      <returns>設定的實際頻率。 這將是提供者所決定最接近的支援相符項目。</returns>
+      <param name="desiredFrequency">然後是所需頻率的值，單位 Hz。</param>
+    </member><member name="T:Windows.Devices.Pwm.PwmPin">
+      <summary>表示系統上的單一 PWM pin。</summary>
+    </member><member name="P:Windows.Devices.Pwm.PwmPin.Controller">
+      <summary>取得這個 pin 正在使用的 PWM 控制器。</summary>
+      <returns>控制器。</returns>
+    </member><member name="P:Windows.Devices.Pwm.PwmPin.IsStarted">
+      <summary>取得 pin 的啟動狀態。</summary>
+      <returns>如果 PWM 是在這個 pin 上啟動，則為 true，否則為 false。</returns>
+    </member><member name="P:Windows.Devices.Pwm.PwmPin.Polarity">
+      <summary>取得或設定 pin 的相位。</summary>
+      <returns>pin 的相位。</returns>
+    </member><member name="M:Windows.Devices.Pwm.PwmPin.Close">
+      <summary>關閉目前與 pin 的連接，讓 pin 可供其他人開啟。</summary>
+    </member><member name="M:Windows.Devices.Pwm.PwmPin.GetActiveDutyCyclePercentage">
+      <summary>擷取這個 Pin 的工作循環百分比。</summary>
+      <returns>工作循環百分比，介於 0 和 100 之間。</returns>
+    </member><member name="M:Windows.Devices.Pwm.PwmPin.SetActiveDutyCyclePercentage(System.Double)">
+      <summary>設定這個 Pin 的工作循環百分比。</summary>
+      <param name="dutyCyclePercentage">所需的工作循環百分比，以介於 0 和 100 之間的值表示。</param>
+    </member><member name="M:Windows.Devices.Pwm.PwmPin.Start">
+      <summary>在這個 pin 上開始 PWM。</summary>
+    </member><member name="M:Windows.Devices.Pwm.PwmPin.Stop">
+      <summary>在這個 pin 上停止 PWM。</summary>
+    </member><member name="T:Windows.Devices.Pwm.PwmPulsePolarity">
+      <summary>描述 PWM 訊號應開始的相位。</summary>
+    </member><member name="F:Windows.Devices.Pwm.PwmPulsePolarity.ActiveHigh">
+      <summary>設定 PWM 訊號以作用中高狀態開始。</summary>
+    </member><member name="F:Windows.Devices.Pwm.PwmPulsePolarity.ActiveLow">
+      <summary>設定 PWM 訊號以作用中低狀態開始。</summary>
+    </member><member name="T:Windows.Devices.Pwm.Provider.IPwmControllerProvider">
+      <summary>表示通用於所有 PWM 控制器的屬性和方法。</summary>
+    </member><member name="P:Windows.Devices.Pwm.Provider.IPwmControllerProvider.ActualFrequency">
+      <summary>取得 PWM 的實際頻率。</summary>
+      <returns>頻率，單位 Hz。</returns>
+    </member><member name="P:Windows.Devices.Pwm.Provider.IPwmControllerProvider.MaxFrequency">
+      <summary>取得控制器提供的最大頻率。</summary>
+      <returns>最大頻率，單位 Hz。</returns>
+    </member><member name="P:Windows.Devices.Pwm.Provider.IPwmControllerProvider.MinFrequency">
+      <summary>取得控制器提供的最小頻率。</summary>
+      <returns>最小頻率，單位 Hz。</returns>
+    </member><member name="P:Windows.Devices.Pwm.Provider.IPwmControllerProvider.PinCount">
+      <summary>取得系統上可用的 PWM Pin 數目。</summary>
+      <returns>可用的 pin 數目。</returns>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.AcquirePin(System.Int32)">
+      <summary>取得指定的 pin 並開放使用該 pin。</summary>
+      <param name="pin">要開放 PWM 連接的 pin。</param>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.DisablePin(System.Int32)">
+      <summary>在這個 pin 上停止 PWM。</summary>
+      <param name="pin">PWM 訊號停止所在的 pin。</param>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.EnablePin(System.Int32)">
+      <summary>在指定的 pin 上開始 PWM 訊號。</summary>
+      <param name="pin">PWM 訊號開始所在的 pin。</param>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.ReleasePin(System.Int32)">
+      <summary>釋放與指定的 Pin 的連接，讓其他人可以使用該 pin。</summary>
+      <param name="pin">要釋放的 pin。</param>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.SetDesiredFrequency(System.Double)">
+      <summary>設定所需的 PWM 頻率。</summary>
+      <returns>設定至上述值之後的實際 PWM 頻率。 這將是提供者所決定最接近的支援相符項目。</returns>
+      <param name="frequency">所需頻率，單位 Hz。</param>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.SetPulseParameters(System.Int32,System.Double,System.Boolean)">
+      <summary>設定 pin、工作循環和相位的 PWM 參數。</summary>
+      <param name="pin">指出要套用這些值的 pin。</param>
+      <param name="dutyCycle">工作循環百分比，其值介於 0 和 100 (含) 之間。</param>
+      <param name="invertPolarity">如果 pin 的相位應反轉，則為 true，否則為 false。</param>
+    </member><member name="T:Windows.Devices.Pwm.Provider.IPwmProvider">
+      <summary>通用於所有 PWM 提供者的表示方法。</summary>
+    </member><member name="M:Windows.Devices.Pwm.Provider.IPwmProvider.GetControllers">
+      <summary>取得系統上可用的控制器。</summary>
+      <returns>傳回系統上可用的 PWM 控制器清單。</returns>
+    </member><member name="T:Windows.Devices.Spi.ISpiDeviceStatics">
+      <summary>表示 SPI 裝置通用的 SPI 裝置統計資料。</summary>
+    </member><member name="M:Windows.Devices.Spi.ISpiDeviceStatics.FromIdAsync(System.String,Windows.Devices.Spi.SpiConnectionSettings)">
+      <summary>以提供的連接設定開啟裝置。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>SPI 裝置。</returns>
+      <param name="busId">匯流排的識別碼。</param>
+      <param name="settings">連接設定。</param>
+    </member><member name="M:Windows.Devices.Spi.ISpiDeviceStatics.GetBusInfo(System.String)">
+      <summary>擷取特定匯流排的相關資訊。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>要求的匯流排資訊。</returns>
+      <param name="busId">匯流排的識別碼。</param>
+    </member><member name="M:Windows.Devices.Spi.ISpiDeviceStatics.GetDeviceSelector">
+      <summary>取得所有 SPI 匯流排 系統上所找到的.</summary>
+      <returns>包含系統上所有匯流排的字串。</returns>
+    </member><member name="M:Windows.Devices.Spi.ISpiDeviceStatics.GetDeviceSelector(System.String)">
+      <summary>取得系統上所找到符合輸入參數的所有 SPI 匯流排。</summary>
+      <returns>包含所有在名稱中出現該輸入之匯流排的字串。</returns>
+      <param name="friendlyName">輸入指定所需匯流排之識別名稱的參數。 這通常對應於圖解上的名稱。</param>
+    </member><member name="T:Windows.Devices.Spi.SpiBusInfo">
+      <summary>表示 SPI 匯流排的相關資訊。</summary>
+    </member><member name="P:Windows.Devices.Spi.SpiBusInfo.ChipSelectLineCount">
+      <summary>取得匯流排上可用的晶片選擇線數目。</summary>
+      <returns>晶片選擇線數目。</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiBusInfo.MaxClockFrequency">
+      <summary>匯流排的最大時脈週期頻率。</summary>
+      <returns>時脈週期，以 Hz 為單位。</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiBusInfo.MinClockFrequency">
+      <summary>匯流排的最小時脈週期頻率。</summary>
+      <returns>時脈週期，以 Hz 為單位。</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiBusInfo.SupportedDataBitLengths">
+      <summary>取得可以在匯流排上用於傳輸資料的位元長度。</summary>
+      <returns>支援的資料長度。</returns>
+    </member><member name="T:Windows.Devices.Spi.SpiConnectionSettings">
+      <summary>表示與裝置進行連線的設定。</summary>
+    </member><member name="M:Windows.Devices.Spi.SpiConnectionSettings.#ctor(System.Int32)">
+      <summary>初始化新的 SpiConnectionSettings 執行個體。</summary>
+      <param name="chipSelectLine">要用來進行連線的晶片選擇線。</param>
+    </member><member name="P:Windows.Devices.Spi.SpiConnectionSettings.ChipSelectLine">
+      <summary>取得或設定用來與 SPI 裝置連線的晶片選擇線。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>晶片選擇線。</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiConnectionSettings.ClockFrequency">
+      <summary>取得或設定連線的時脈頻率。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>時脈頻率值，以 Hz 為單位。</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiConnectionSettings.DataBitLength">
+      <summary>取得或設定這個連線上的資料位元長度。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>資料位元長度。</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiConnectionSettings.Mode">
+      <summary>取得或設定這個連線的 SpiMode。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>通訊模式。</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiConnectionSettings.SharingMode">
+      <summary>取得或設定 SPI 連線的共用模式。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>共享模式。</returns>
+    </member><member name="T:Windows.Devices.Spi.SpiController">
+      <summary>表示系統上的 SPI 控制器。</summary>
+    </member><member name="M:Windows.Devices.Spi.SpiController.GetControllersAsync(Windows.Devices.Spi.Provider.ISpiProvider)">
+      <summary>取得系統上所有的 SPI 控制器。</summary>
+      <returns>方法順利完成時，它會傳回值的清單，代表系統上可用的 SPI 控制器。</returns>
+      <param name="provider">系統上控制器的 SPI 提供者。</param>
+    </member><member name="M:Windows.Devices.Spi.SpiController.GetDefaultAsync">
+      <summary>取得系統上的預設 SPI 控制器。</summary>
+      <returns>系統上的預設 SPI 控制器，如果系統沒有 SPI 控制器則為 null。</returns>
+    </member><member name="M:Windows.Devices.Spi.SpiController.GetDevice(Windows.Devices.Spi.SpiConnectionSettings)">
+      <summary>取得包含指定設定的 SPI 裝置。</summary>
+      <returns>SPI 裝置。</returns>
+      <param name="settings">所需的連接設定。</param>
+    </member><member name="T:Windows.Devices.Spi.SpiDevice">
+      <summary>表示透過 SPI 匯流排連接的裝置。</summary>
+    </member><member name="P:Windows.Devices.Spi.SpiDevice.ConnectionSettings">
+      <summary>取得裝置的連接設定。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>連接設定。</returns>
+    </member><member name="P:Windows.Devices.Spi.SpiDevice.DeviceId">
+      <summary>取得與該裝置相關聯的唯一識別碼。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>識別碼。</returns>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.Close">
+      <summary>關閉與裝置的連線。</summary>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.FromIdAsync(System.String,Windows.Devices.Spi.SpiConnectionSettings)">
+      <summary>以提供的連接設定開啟裝置。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>要求的 SPI 裝置。</returns>
+      <param name="busId">匯流排的識別碼。</param>
+      <param name="settings">連接設定。</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.GetBusInfo(System.String)">
+      <summary>擷取特定匯流排的相關資訊。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <returns>要求的匯流排資訊。</returns>
+      <param name="busId">匯流排的識別碼。</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.GetDeviceSelector">
+      <summary>取得所有 SPI 匯流排 系統上所找到的.</summary>
+      <returns>包含系統上找到的所有匯流排的字串。</returns>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.GetDeviceSelector(System.String)">
+      <summary>取得系統上所找到符合輸入參數的所有 SPI 匯流排。</summary>
+      <returns>包含所有在名稱中出現該輸入之匯流排的字串。</returns>
+      <param name="friendlyName">輸入指定所需匯流排之識別名稱的參數。 這通常對應於圖解上的名稱。</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.Read(System.Byte[])">
+      <summary>從連接的裝置讀取。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <param name="buffer">包含從裝置讀取之資料的陣列。</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.TransferFullDuplex(System.Byte[],System.Byte[])">
+      <summary>使用全雙工通訊系統傳輸資料。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <param name="writeBuffer">包含要寫入裝置之資料的陣列。</param>
+      <param name="readBuffer">包含從裝置讀取之資料的陣列。</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.TransferSequential(System.Byte[],System.Byte[])">
+      <summary>循序傳輸資料至裝置。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <param name="writeBuffer">包含要寫入裝置之資料的陣列。</param>
+      <param name="readBuffer">包含從裝置讀取之資料的陣列。</param>
+    </member><member name="M:Windows.Devices.Spi.SpiDevice.Write(System.Byte[])">
+      <summary>寫入連接的裝置。</summary>
+      <capability type="lowLevelDevices">應用程式在 IoT 裝置上執行所需，以便存取低階匯流排硬體，例如 GPIO、I2C、SPI、ADC 和 PWM。</capability>
+      <param name="buffer">包含要寫入裝置之資料的陣列。</param>
+    </member><member name="T:Windows.Devices.Spi.SpiMode">
+      <summary>定義 SPI 通訊模式。</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiMode.Mode0">
+      <summary>CPOL = 0, CPHA = 0。</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiMode.Mode1">
+      <summary>CPOL = 0, CPHA = 1。</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiMode.Mode2">
+      <summary>CPOL = 1, CPHA = 0。</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiMode.Mode3">
+      <summary>CPOL = 1, CPHA = 1。</summary>
+    </member><member name="T:Windows.Devices.Spi.SpiSharingMode">
+      <summary>定義 SPI 匯流排的共用模式。</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiSharingMode.Exclusive">
+      <summary>SPI 匯流排區段不是共用的。</summary>
+    </member><member name="F:Windows.Devices.Spi.SpiSharingMode.Shared">
+      <summary>SPI 匯流排是共用的。</summary>
+    </member><member name="T:Windows.Devices.Spi.Provider.ISpiControllerProvider">
+      <summary>通用於所有 SPI 控制器的動作。</summary>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiControllerProvider.GetDeviceProvider(Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings)">
+      <summary>取得包含指定設定的 SPI 裝置。</summary>
+      <returns>SPI 裝置。</returns>
+      <param name="settings">所需的連接設定。</param>
+    </member><member name="T:Windows.Devices.Spi.Provider.ISpiDeviceProvider">
+      <summary>表示透過 SPI 匯流排連接的裝置通用的動作。</summary>
+    </member><member name="P:Windows.Devices.Spi.Provider.ISpiDeviceProvider.ConnectionSettings">
+      <summary>取得裝置的連接設定。</summary>
+      <returns>連接設定。</returns>
+    </member><member name="P:Windows.Devices.Spi.Provider.ISpiDeviceProvider.DeviceId">
+      <summary>取得與該裝置相關聯的唯一識別碼。</summary>
+      <returns>裝置識別碼。</returns>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiDeviceProvider.Read(System.Byte[])">
+      <summary>從連接的裝置讀取。</summary>
+      <param name="buffer">包含從裝置讀取之資料的陣列。</param>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiDeviceProvider.TransferFullDuplex(System.Byte[],System.Byte[])">
+      <summary>使用全雙工通訊系統傳輸資料。</summary>
+      <param name="writeBuffer">包含要寫入裝置之資料的陣列。</param>
+      <param name="readBuffer">包含從裝置讀取之資料的陣列。</param>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiDeviceProvider.TransferSequential(System.Byte[],System.Byte[])">
+      <summary>循序傳輸資料至裝置。</summary>
+      <param name="writeBuffer">包含要寫入裝置之資料的陣列。</param>
+      <param name="readBuffer">包含從裝置讀取之資料的陣列。</param>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiDeviceProvider.Write(System.Byte[])">
+      <summary>寫入連接的裝置。</summary>
+      <param name="buffer">包含要寫入裝置之資料的陣列。</param>
+    </member><member name="T:Windows.Devices.Spi.Provider.ISpiProvider">
+      <summary>通用於 SPI 控制器提供者的動作。</summary>
+    </member><member name="M:Windows.Devices.Spi.Provider.ISpiProvider.GetControllersAsync">
+      <summary>取得系統上該提供者的所有 SPI 控制器。</summary>
+      <returns>方法順利完成時，它會傳回值的清單，代表系統上可用的 SPI 控制器。</returns>
+    </member><member name="T:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings">
+      <summary>表示裝置連線的提供者設定。</summary>
+    </member><member name="M:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.#ctor(System.Int32)">
+      <summary>初始化 ProviderSpiConnectionSettings 的新執行個體。</summary>
+      <param name="chipSelectLine">要用來進行連線的晶片選擇線。</param>
+    </member><member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.ChipSelectLine">
+      <summary>取得或設定用來與 SPI 裝置連線的晶片選擇線。</summary>
+      <returns>晶片選擇線。</returns>
+    </member><member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.ClockFrequency">
+      <summary>取得或設定連線的時脈頻率。</summary>
+      <returns>時脈頻率值，以 Hz 為單位。</returns>
+    </member><member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.DataBitLength">
+      <summary>取得或設定這個連線上的資料位元長度。</summary>
+      <returns>資料位元長度。</returns>
+    </member><member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.Mode">
+      <summary>取得或設定這個連線的 ProviderSpiMode。</summary>
+      <returns>通訊模式。</returns>
+    </member><member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.SharingMode">
+      <summary>取得或設定 SPI 連線的共用模式。</summary>
+      <returns>共享模式。</returns>
+    </member><member name="T:Windows.Devices.Spi.Provider.ProviderSpiMode">
+      <summary>定義 SPI 通訊模式。</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiMode.Mode0">
+      <summary>CPOL = 0, CPHA = 0。</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiMode.Mode1">
+      <summary>CPOL = 0, CPHA = 1。</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiMode.Mode2">
+      <summary>CPOL = 1, CPHA = 0。</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiMode.Mode3">
+      <summary>CPOL = 1, CPHA = 1。</summary>
+    </member><member name="T:Windows.Devices.Spi.Provider.ProviderSpiSharingMode">
+      <summary>定義 SPI 匯流排的共用模式。</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiSharingMode.Exclusive">
+      <summary>SPI 匯流排區段不是共用的。</summary>
+    </member><member name="F:Windows.Devices.Spi.Provider.ProviderSpiSharingMode.Shared">
+      <summary>SPI 匯流排是共用的。</summary>
+    </member></members>
+</doc>

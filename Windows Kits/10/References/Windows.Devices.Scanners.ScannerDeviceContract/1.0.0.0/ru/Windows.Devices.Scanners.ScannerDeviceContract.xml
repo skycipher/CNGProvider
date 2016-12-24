@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Scanners.ScannerDeviceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Scanners.IImageScannerFormatConfiguration">
+      <summary>Настраивает формат файла, когда источник сканирования передает полученное изображение в приложение.</summary>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerFormatConfiguration.DefaultFormat">
+      <summary>Получает формат файла по умолчанию для источника сканирования в начале нового сеанса сканирования.</summary>
+      <returns>Тип файла.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerFormatConfiguration.Format">
+      <summary>Получает или задает текущий формат передачи файлов полученных изображений из устройства в клиентское приложение.</summary>
+      <returns>Тип файла.</returns>
+    </member><member name="M:Windows.Devices.Scanners.IImageScannerFormatConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>Определяет, поддерживает ли источник сканирования указанный формат файла.</summary>
+      <returns>Значение true, если указанный тип файла поддерживается; в противном случае — false.</returns>
+      <param name="value">Тип файла.</param>
+    </member><member name="T:Windows.Devices.Scanners.IImageScannerSourceConfiguration">
+      <summary>Запрашивает и настраивает параметры сканирования, общие для источников "планшет" и "устройство подачи".</summary>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.ActualResolution">
+      <summary>Получает фактическое вертикальное и горизонтальное разрешение сканирования для источника сканирования в точках на дюйм.</summary>
+      <returns>Разрешение по горизонтали и по вертикали в пикселях.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.AutoCroppingMode">
+      <summary>Получает или задает режим автоматической обрезки.</summary>
+      <returns>Режим автоматической обрезки для сканирования.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.Brightness">
+      <summary>Настраивает текущий уровень яркости для записи данных изображения из источника сканирования. В новом сеансе сканирования для этого свойства задается значение свойства DefaultBrightness.</summary>
+      <returns>Уровень яркости.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.BrightnessStep">
+      <summary>Получает размер шага, на который уровни яркости источника данных можно увеличить или уменьшить между минимальным и максимальным значениями.</summary>
+      <returns>Размер шага для увеличения или уменьшения. Стандартное значение: 1.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.ColorMode">
+      <summary>Получает или задает цветовой режим для источника сканирования. Когда начинается новый сеанс сканирования, это свойство такое же, как и DefaultColorMode.</summary>
+      <returns>Цветовой режим.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.Contrast">
+      <summary>Задает или получает текущий уровень контрастности для записи данных изображения из источника сканирования. В начале нового сеанса сканирования для этого свойства задается значение свойства DefaultContrast.</summary>
+      <returns>Уровень контрастности.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.ContrastStep">
+      <summary>Получает размер шага, на который уровни контрастности источника данных можно увеличить или уменьшить между минимальным и максимальным значениями.</summary>
+      <returns>Размер шага для увеличения или уменьшения. Стандартное значение: 1.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DefaultBrightness">
+      <summary>Получает уровень яркости по умолчанию для источника сканирования.</summary>
+      <returns>Уровень яркости по умолчанию для сканера.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DefaultColorMode">
+      <summary>Получает цветовой режим по умолчанию для этого источника сканирования.</summary>
+      <returns>Цветовой режим.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DefaultContrast">
+      <summary>Получает уровень контрастности по умолчанию для источника сканирования.</summary>
+      <returns>Уровень контрастности по умолчанию.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DesiredResolution">
+      <summary>Получает или задает запрашиваемые приложением значения разрешения сканирования по горизонтали и по вертикали для источника сканирования, в точках на дюйм.</summary>
+      <returns>Разрешение по горизонтали и по вертикали в пикселях.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxBrightness">
+      <summary>Получает максимальный уровень яркости, поддерживаемый источником сканирования.</summary>
+      <returns>Максимальный уровень яркости, обычно 1000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxContrast">
+      <summary>Получает максимальный уровень контрастности, поддерживаемый источником сканирования.</summary>
+      <returns>Максимальный уровень контрастности, обычно 1000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxResolution">
+      <summary>Получает максимальное вертикальное и горизонтальное разрешение сканирования источника сканирования в точках на дюйм.</summary>
+      <returns>Разрешение по горизонтали и по вертикали в пикселях.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxScanArea">
+      <summary>Получает максимальные размеры области сканирования в дюймах. Максимальная ширина сканирования — самая большая ширина документа, поддерживаемая устройством подачи сканера или планшетным сканером.</summary>
+      <returns>Ширина и высота области.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinBrightness">
+      <summary>Получает минимальный уровень яркости, поддерживаемый источником сканирования.</summary>
+      <returns>Минимальный уровень яркости, обычно 1000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinContrast">
+      <summary>Получает минимальный уровень контрастности, поддерживаемый источником сканирования.</summary>
+      <returns>Минимальный уровень контрастности, обычно 1000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinResolution">
+      <summary>Получает минимальное вертикальное и горизонтальное разрешение сканирования источника сканирования в точках на дюйм.</summary>
+      <returns>Разрешение по горизонтали и по вертикали в пикселях.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinScanArea">
+      <summary>Получает минимальную область сканирования в дюймах. Минимальная область сканирования — это наименьший размер документа, поддерживаемый планшетным сканером или устройством подачи сканера.</summary>
+      <returns>Ширина и высота области.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.OpticalResolution">
+      <summary>Получает оптическое вертикальное и горизонтальное разрешение сканирования источника сканирования в точках на дюйм.</summary>
+      <returns>Разрешение сканирования по горизонтали и по вертикали в пикселях.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.SelectedScanRegion">
+      <summary>Получает или задает координаты исходной точки (по горизонтали и по вертикали) и размеры (ширина и высота) выбранной области сканирования, в дюймах. Если свойству AutoCroppingMode не задано значение Disabled, это свойство игнорируется.</summary>
+      <returns>Положение и размер прямоугольника.</returns>
+    </member><member name="M:Windows.Devices.Scanners.IImageScannerSourceConfiguration.IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)">
+      <summary>Определяет, поддерживает ли источник сканирования указанный режим ImageScannerAutoCroppingMode.</summary>
+      <returns>Значение true, если устройство поддерживает режим value; в противном случае — значение false.</returns>
+      <param name="value">Режим автоматической обрезки сканируемого изображения.</param>
+    </member><member name="M:Windows.Devices.Scanners.IImageScannerSourceConfiguration.IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)">
+      <summary>Определяет, может ли источник сканирования сканировать и передавать изображения в указанном цветовом режиме.</summary>
+      <returns>Значение true, если сканер может просматривать изображения в режиме value; в противном случае — значение false.</returns>
+      <param name="value">Цветовой режим.</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScanner">
+      <summary>Представляет свойства изображений для сканирования.</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.AutoConfiguration">
+      <summary>Получает и задает параметры сканирования автоматически настроенного блока сканирования, такие как формат файла (включая сжатие), для предоставления отсканированных данных. Это свойство игнорируется, если сканер не поддерживает автонастройку.</summary>
+      <returns>Конфигурация сканирования. Значение NULL, если сканер не поддерживает автонастройку.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.DefaultScanSource">
+      <summary>Получает источник сканирования по умолчанию, выбранный для этого сканирующего устройства.</summary>
+      <returns>Тип источника сканирования.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.DeviceId">
+      <summary>Получает идентификатор самонастраивающегося устройства данного сканера.</summary>
+      <returns>Идентификатор устройства PnP.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.FeederConfiguration">
+      <summary>Получает и задает параметры сканирования для блока сканирования с устройством подачи, такие как размер страницы, ориентация и разрешение сканирования.</summary>
+      <returns>Конфигурация устройства подачи сканера. Значение NULL, если устройство подачи отсутствует.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.FlatbedConfiguration">
+      <summary>Получает и задает параметры сканирования планшетного блока сканирования, такие как разрешение сканирования и цветовой режим.</summary>
+      <returns>Конфигурация сканирования планшетного сканера. Значение NULL, если планшетный сканер отсутствует.</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.FromIdAsync(System.String)">
+      <summary>Создает экземпляр объекта ImageScanner на основе идентификатора информации устройства сканирования. Этот метод требуется для перечисления устройств брокера.</summary>
+      <returns>Объект ImageScanner.</returns>
+      <param name="deviceId">Идентификатор информации устройства. См. описание свойства DeviceInformation.Id.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.GetDeviceSelector">
+      <summary>Возвращает строку выделения класса, которую приложение может использовать для перечисления сканирующих устройств. Этот метод требуется для перечисления устройств с поддержкой брокера.</summary>
+      <returns>Выбор класса.</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.IsPreviewSupported(Windows.Devices.Scanners.ImageScannerScanSource)">
+      <summary>Определяет, поддерживает ли источник сканирования предварительный просмотр.</summary>
+      <returns>Возвращает значение true, если указанный источник сканирования поддерживает предварительный просмотр; в противном случае возвращает значение false.</returns>
+      <param name="scanSource">Источник сканирования</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.IsScanSourceSupported(Windows.Devices.Scanners.ImageScannerScanSource)">
+      <summary>Определяет, доступен ли указанный источник сканирования на сканере.</summary>
+      <returns>Значение true, если источник сканирования (планшет или устройство подачи) доступен; в противном случае — значение false.</returns>
+      <param name="value">Источник сканирования</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.ScanFilesToFolderAsync(Windows.Devices.Scanners.ImageScannerScanSource,Windows.Storage.StorageFolder)">
+      <summary>Запускает задание сканирования с указанным источником сканирования и записывает одно или несколько изображений в один файл с несколькими страницами, такой как TIFF, XPS или PDF; или несколько одностраничных файлов, таких как DIB, JPG, PNG и TIFF, в указанное расположение папки. Возвращает ход выполнения сканирования.</summary>
+      <returns>Список отсканированных файлов изображения из ImageScannerScanResult и ход выполнения задания сканирования WIA из UInt32, которое указывает количество файлов, переданных в целевую папку.</returns>
+      <param name="scanSource">Источник сканирования изображения.</param>
+      <param name="storageFolder">Расположение целевой папки сканированного файла.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.ScanPreviewToStreamAsync(Windows.Devices.Scanners.ImageScannerScanSource,Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>Сканирует одно изображение из определенного источника сканирования и применяет наименьшее разрешение сканирования с выбранным форматом файла изображения.</summary>
+      <returns>Ход выполнения сканирования и формат отсканированного файла.</returns>
+      <param name="scanSource">Источник сканирования изображения.</param>
+      <param name="targetStream">Отсканированный файл изображения.</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerAutoConfiguration">
+      <summary>Представляет автоматически настроенный источник сканирования сканера.</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerAutoConfiguration.DefaultFormat">
+      <summary>Формат файла по умолчанию для источника сканирования в начале нового сеанса сканирования.</summary>
+      <returns>Тип файла.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerAutoConfiguration.Format">
+      <summary>Получает или задает текущий формат передачи файлов полученных изображений из устройства в клиентское приложение.</summary>
+      <returns>Тип файла.</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerAutoConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>Определяет, поддерживает ли источник сканирования указанный формат файла.</summary>
+      <returns>Значение true, если указанный тип файла поддерживается; в противном случае — false.</returns>
+      <param name="value">Тип файла.</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerAutoCroppingMode">
+      <summary>Определяет режим автоматической обрезки сканирующего устройства.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerAutoCroppingMode.Disabled">
+      <summary>Автоматическое обнаружение отключено. В начале нового сеанса сканирования для свойства AutoCroppingMode задается это значение по умолчанию.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerAutoCroppingMode.MultipleRegion">
+      <summary>Сканирование нескольких областей сканирования в отдельные изображения.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerAutoCroppingMode.SingleRegion">
+      <summary>Сканирование одной области сканирования в отдельные изображения.</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerColorMode">
+      <summary>Задает цветовые режимы для источника сканирования.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.AutoColor">
+      <summary>Устройство автоматически определяет правильный цветовой режим на основе содержимого сканирования. В этом случае решение между цветным, оттенками серого и черно-белым изображением зависит от устройства, а не приложения.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.Color">
+      <summary>24-битный цветной RGB (3 канала по 8 бит на канал).</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.Grayscale">
+      <summary>Оттенки серого с глубиной 8 или 4 бита (1 канал с 8 или 4 битами на канал). Если устройство поддерживает 4- и 8-битную шкалу "оттенки серого", свойство DefaultColorMode будет использовать 8 бит.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.Monochrome">
+      <summary>1-битный двухтональный, также называемый монохромным или "черно-белым" (1 канал с 1 битом на канал).</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerFeederConfiguration">
+      <summary>Представляет источник сканирования сканера "устройство подачи".</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ActualResolution">
+      <summary>Получает фактическое вертикальное и горизонтальное разрешение сканирования для устройства подачи сканера в точках на дюйм.</summary>
+      <returns>Разрешение по горизонтали и по вертикали в пикселях.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.AutoCroppingMode">
+      <summary>Получает или задает режим автоматической обрезки.</summary>
+      <returns>Режим автоматической обрезки для сканирования.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.AutoDetectPageSize">
+      <summary>Получает или задает функцию автоматического определения размера страницы для устройства подачи сканера.</summary>
+      <returns>Значение true, если включена автоматическая функция обнаружения размера страницы; в противном случае — значение false.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Brightness">
+      <summary>Получает или задает текущий уровень яркости для записи данных изображения из устройства подачи сканера. В начале нового сеанса сканирования для этого свойства задается значение свойства DefaultBrightness.</summary>
+      <returns>Текущий уровень яркости.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.BrightnessStep">
+      <summary>Получает размер шага, на который уровни яркости источника данных можно увеличить или уменьшить между минимальным и максимальным значениями.</summary>
+      <returns>Размер шага для увеличения или уменьшения. Стандартное значение: 1.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.CanAutoDetectPageSize">
+      <summary>Возвращает значение true, если устройство может во время сканирования автоматически определять размер страниц документов, просканированных через устройство подачи; в противном случае возвращает значение false.</summary>
+      <returns>Значение true, если устройство может во время сканирования автоматически определять размер страниц документов, просканированных через устройство подачи; в противном случае возвращает значение false.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.CanScanAhead">
+      <summary>Получает значение, указывающее, может ли сканирующее устройство сканировать вперед подающего устройства.</summary>
+      <returns>Указывает, может ли устройство подачи сканера сканировать одновременно с печатью.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.CanScanDuplex">
+      <summary>Получает значение, указывающее, поддерживает ли устройство подачи сканера дуплексное сканирование (сканирование обеих сторон страницы документа, передней и задней). При сканировании в дуплексном режиме используются те же параметры сканирования (режим цвета и разрешение), для сканирования обеих сторон страницы.</summary>
+      <returns>Указывает, доступно ли двустороннее сканирование.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ColorMode">
+      <summary>Получает или задает цветовой режим для устройства подачи сканера.</summary>
+      <returns>Цветовой режим.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Contrast">
+      <summary>Задает или получает текущий уровень контрастности для записи данных изображения из устройства подачи сканера. В начале нового сеанса сканирования для этого свойства задается значение свойства DefaultContrast.</summary>
+      <returns>Уровень контрастности.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ContrastStep">
+      <summary>Получает размер шага, на который уровни контрастности источника данных можно увеличить или уменьшить между минимальным и максимальным значениями.</summary>
+      <returns>Размер шага для увеличения или уменьшения. Стандартное значение: 1.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultBrightness">
+      <summary>Получает уровень яркости по умолчанию для устройства подачи сканера.</summary>
+      <returns>Уровень яркости по умолчанию для сканера.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultColorMode">
+      <summary>Получает цветовой режим по умолчанию для устройства подачи сканера.</summary>
+      <returns>Цветовой режим.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultContrast">
+      <summary>Получает уровень контрастности по умолчанию для устройства подачи сканера.</summary>
+      <returns>Уровень контрастности по умолчанию.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultFormat">
+      <summary>Получает формат файла по умолчанию для устройства подачи сканера в начале нового сеанса сканирования.</summary>
+      <returns>Тип файла.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DesiredResolution">
+      <summary>Получает или задает запрашиваемые приложением значения разрешения сканирования по горизонтали и по вертикали для устройства подачи сканера, в точках на дюйм.</summary>
+      <returns>Разрешение по горизонтали и по вертикали в пикселях.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Duplex">
+      <summary>Указывает, может ли устройство подачи сканера сканировать обе стороны страницы документа.</summary>
+      <returns>Возвращает значение true, если устройство подачи может сканировать обе стороны страницы.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Format">
+      <summary>Получает или задает текущий формат передачи файлов полученных изображений из устройства подачи сканера в клиентское приложение.</summary>
+      <returns>Тип файла.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxBrightness">
+      <summary>Получает максимальный уровень яркости, поддерживаемый устройством подачи сканера.</summary>
+      <returns>Максимальный уровень яркости, обычно 1000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxContrast">
+      <summary>Получает максимальный уровень контрастности, который поддерживается устройством подачи сканера.</summary>
+      <returns>Максимальный уровень контрастности, обычно 1000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxNumberOfPages">
+      <summary>Получает или задает максимальное количество страниц (не изображений), которые приложение может отсканировать в одном задании сканирования, прежде чем сканер останавливается.</summary>
+      <returns>Количество страниц.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxResolution">
+      <summary>Получает максимальное вертикальное и горизонтальное разрешение сканирования устройства подачи сканера в точках на дюйм.</summary>
+      <returns>Разрешение по горизонтали и по вертикали в пикселях.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxScanArea">
+      <summary>Получает максимальные размеры области сканирования в дюймах. Максимальная ширина сканирования — самая большая ширина документа, поддерживаемая устройством подачи сканера.</summary>
+      <returns>Ширина и высота области.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinBrightness">
+      <summary>Получает минимальный уровень яркости, поддерживаемый устройством подачи сканера.</summary>
+      <returns>Минимальный уровень яркости, обычно 1000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinContrast">
+      <summary>Получает минимальный уровень контрастности, который поддерживается устройством подачи сканера.</summary>
+      <returns>Минимальный уровень контрастности, обычно 1000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinResolution">
+      <summary>Получает минимальное вертикальное и горизонтальное разрешение сканирования устройства подачи сканера в точках на дюйм.</summary>
+      <returns>Разрешение по горизонтали и по вертикали в пикселях.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinScanArea">
+      <summary>Получает минимальную область сканирования в дюймах. Минимальная область сканирования — это наименьший размер документа, поддерживаемый устройством подачи сканера.</summary>
+      <returns>Ширина и высота области.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.OpticalResolution">
+      <summary>Получает оптическое вертикальное и горизонтальное разрешение сканирования устройства подачи сканера в точках на дюйм.</summary>
+      <returns>Разрешение сканирования по горизонтали и по вертикали в пикселях.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.PageOrientation">
+      <summary>Получает или задает выбранную в данный момент ориентацию страницы, которая показывает, как помещать документы во входной лоток устройства подачи сканера.</summary>
+      <returns>Ориентация страницы.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.PageSize">
+      <summary>Получает или задает текущий выбранный размер страницы для сканирования из устройства подачи.</summary>
+      <returns>Размер страницы.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.PageSizeDimensions">
+      <summary>Получает размеры (ширина и высота) и ориентацию выбранного размера страницы, в единицах mil (1/1000 дюйма).</summary>
+      <returns>Размер страницы.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ScanAhead">
+      <summary>Указывает, сканировать ли одновременно с печатью.</summary>
+      <returns>Значение true, чтобы выполнить сканирование вперед.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.SelectedScanRegion">
+      <summary>Получает или задает координаты исходной точки (по горизонтали и по вертикали) и размеры (ширина и высота) выбранной области сканирования, в дюймах. Если свойству AutoCroppingMode не задано значение Disabled, это свойство игнорируется.</summary>
+      <returns>Область сканирования, в дюймах.</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)">
+      <summary>Возвращает значение, указывающее, поддерживает ли устройство подачи сканера указанный ImageScannerAutoCroppingMode.</summary>
+      <returns>Указывает, поддерживает ли устройство режим value.</returns>
+      <param name="value">Режим автоматической обрезки сканируемого изображения.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)">
+      <summary>Возвращает значение, указывающее, может ли устройство подачи сканера сканировать и передавать изображения в указанном цветовом режиме.</summary>
+      <returns>Указывает, может ли сканер сканировать изображения в режиме value.</returns>
+      <param name="value">Цветовой режим.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>Определяет, поддерживает ли устройство подачи сканера указанный формат файла.</summary>
+      <returns>Показывает, поддерживается ли указанный тип файлов.</returns>
+      <param name="value">Тип файла.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsPageSizeSupported(Windows.Graphics.Printing.PrintMediaSize,Windows.Graphics.Printing.PrintOrientation)">
+      <summary>Возвращает значение, указывающее, может ли устройство подачи сканировать документы с указанными размером и ориентацией страницы.</summary>
+      <returns>Указывает, что сканер может сканировать со значениями pageSize и pageOrientation.</returns>
+      <param name="pageSize">Размер страницы.</param>
+      <param name="pageOrientation">Ориентация страницы.</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration">
+      <summary>Представляет источник сканирования сканера "планшет".</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.ActualResolution">
+      <summary>Получает фактическое вертикальное и горизонтальное разрешение сканирования для планшетного сканера в точках на дюйм.</summary>
+      <returns>Разрешение по горизонтали и по вертикали в пикселях.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.AutoCroppingMode">
+      <summary>Получает или задает режим автоматической обрезки.</summary>
+      <returns>Режим автоматической обрезки для сканирования.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.Brightness">
+      <summary>Получает или задает текущий уровень яркости для записи данных изображения со стекла экспонирования сканера. В начале нового сеанса сканирования для этого свойства задается значение свойства DefaultBrightness.</summary>
+      <returns>Текущий уровень яркости.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.BrightnessStep">
+      <summary>Получает размер шага, на который уровни яркости источника данных можно увеличить или уменьшить между минимальным и максимальным значениями.</summary>
+      <returns>Размер шага для увеличения или уменьшения. Стандартное значение: 1.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.ColorMode">
+      <summary>Получает или задает цветовой режим для планшетного сканера.</summary>
+      <returns>Цветовой режим.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.Contrast">
+      <summary>Задает или получает текущий уровень контрастности для записи данных изображения из источника сканирования. В начале нового сеанса сканирования для этого свойства задается значение свойства DefaultContrast.</summary>
+      <returns>Уровень контрастности.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.ContrastStep">
+      <summary>Получает размер шага, на который уровни контрастности источника данных можно увеличить или уменьшить между минимальным и максимальным значениями.</summary>
+      <returns>Размер шага для увеличения или уменьшения. Стандартное значение: 1.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultBrightness">
+      <summary>Получает уровень яркости по умолчанию для стекла экспонирования сканера.</summary>
+      <returns>Уровень яркости по умолчанию для сканера.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultColorMode">
+      <summary>Получает цветовой режим по умолчанию для стекла экспонирования сканера.</summary>
+      <returns>Цветовой режим.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultContrast">
+      <summary>Получает уровень контрастности по умолчанию для стекла экспонирования сканера.</summary>
+      <returns>Уровень контрастности по умолчанию.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultFormat">
+      <summary>Получает формат файла по умолчанию для стекла экспонирования сканера в начале нового сеанса сканирования.</summary>
+      <returns>Тип файла.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DesiredResolution">
+      <summary>Получает или задает запрашиваемые приложением значения разрешения сканирования по горизонтали и по вертикали для стекла экспонирования сканера, в точках на дюйм.</summary>
+      <returns>Разрешение по горизонтали и по вертикали в пикселях.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.Format">
+      <summary>Получает или задает текущий формат передачи файлов полученных изображений со стекла экспонирования сканера в клиентское приложение.</summary>
+      <returns>Тип файла.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxBrightness">
+      <summary>Получает максимальный уровень яркости, который поддерживается планшетом сканера.</summary>
+      <returns>Максимальный уровень яркости, обычно 1000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxContrast">
+      <summary>Получает максимальный уровень контрастности, который поддерживается планшетом сканера.</summary>
+      <returns>Максимальный уровень контрастности, обычно 1000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxResolution">
+      <summary>Получает максимальное вертикальное и горизонтальное разрешение сканирования планшета сканера в точках на дюйм.</summary>
+      <returns>Разрешение по горизонтали и по вертикали в пикселях.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxScanArea">
+      <summary>Получает максимальные размеры области сканирования в дюймах. Максимальная ширина сканирования — самая большая ширина документа, поддерживаемая планшетным сканером.</summary>
+      <returns>Ширина и высота области.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinBrightness">
+      <summary>Получает минимальный уровень яркости, который поддерживается планшетом сканера.</summary>
+      <returns>Минимальный уровень яркости, обычно 1000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinContrast">
+      <summary>Получает минимальный уровень контрастности, который поддерживается планшетом сканера.</summary>
+      <returns>Минимальный уровень контрастности, обычно 1000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinResolution">
+      <summary>Получает минимальное вертикальное и горизонтальное разрешение сканирования планшета сканера в точках на дюйм.</summary>
+      <returns>Разрешение по горизонтали и по вертикали в пикселях.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinScanArea">
+      <summary>Получает минимальную область сканирования в дюймах. Минимальная область сканирования — это наименьший размер документа, поддерживаемый планшетным сканером.</summary>
+      <returns>Ширина и высота области.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.OpticalResolution">
+      <summary>Получает оптическое разрешение сканирования планшетного сканера в точках на дюйм.</summary>
+      <returns>Разрешение сканирования по горизонтали и по вертикали в пикселях.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.SelectedScanRegion">
+      <summary>Получает или задает координаты исходной точки (по горизонтали и по вертикали) и размеры (ширина и высота) выбранной области сканирования, в дюймах. Если свойству AutoCroppingMode не задано значение Disabled, это свойство игнорируется.</summary>
+      <returns>Положение и размер прямоугольника.</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)">
+      <summary>Возвращает значение, указывающее, поддерживает ли планшетный сканер указанный ImageScannerAutoCroppingMode.</summary>
+      <returns>Указывает, поддерживает ли устройство режим value.</returns>
+      <param name="value">Режим автоматической обрезки сканируемого изображения.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)">
+      <summary>Возвращает значение, указывающее, может ли планшет сканера сканировать и передавать изображения в указанном цветовом режиме.</summary>
+      <returns>Указывает, может ли сканер сканировать изображения в режиме value.</returns>
+      <param name="value">Цветовой режим.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>Определяет, поддерживает ли планшет сканера указанный формат файла.</summary>
+      <returns>Показывает, поддерживается ли указанный тип файлов.</returns>
+      <param name="value">Тип файла.</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerFormat">
+      <summary>Тип файлов, в которые выполняется сканирование.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.DeviceIndependentBitmap">
+      <summary>Формат аппаратно-независимого точечного рисунка (DIB) Windows. Это значение поддерживает любой цветовой режим, с одной страницей и без сжатия. Это единственный формат, который поддерживается всеми совместимыми сканерами WIA 2.0.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Jpeg">
+      <summary>Файлы форматов EXIF или JPEG Используйте эти файлы только в цветном режиме или режиме оттенков серого (8 бит на канал), одностраничные и сжатые (сжатие JPEG).</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.OpenXps">
+      <summary>Формат файлов документов Open XML Paper Specification (OpenXPS). Эти файлы могут содержать данные изображения в любом цветовом режиме, поддерживаемом данным API, со сжатием на усмотрение устройства, одно- или многостраничные.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Pdf">
+      <summary>Формат файлов документов Portable Document Format PDF/A (PDF/A — стандартизованная ISO версия формата PDF, предназначенная специально для цифрового сохранения электронных документов) Эти файлы могут содержать данные изображения в любом цветовом режиме, поддерживаемом данным API, со сжатием на усмотрение устройства, одно- или многостраничные.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Png">
+      <summary>Формат файлов изображений Portable Network Graphics (PNG) Это значение поддерживает любой цветовой режим, с одной страницей и сжатием (PNG — сжатие без потерь).</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Tiff">
+      <summary>Формат TIFF, совместимый со спецификацией TIFF 6.0, для одной и(или) нескольких страниц Эти файлы могут находиться в любом режиме цвета, поддерживаемом этим API, всегда не сжаты и расположены на одной (если нужно передать только одно изображение) или нескольких (если нужно передать несколько изображений и устройство поддерживает такой многостраничный файловый формат) страницах.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Xps">
+      <summary>Формат файлов документов Microsoft XML Paper Specification (XPS) Эти файлы могут содержать данные изображения в любом цветовом режиме, поддерживаемом данным API, со сжатием на усмотрение устройства, одно- или многостраничные.</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerPreviewResult">
+      <summary>Представляет результат предварительного просмотра задания сканирования.</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerPreviewResult.Format">
+      <summary>Получает формат данных для предварительного просмотра сканирования. После просмотра этого свойства восстанавливается значение, существовавшее до просмотра.</summary>
+      <returns>Формат сканирования.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerPreviewResult.Succeeded">
+      <summary>Получает значение, указывающее, был ли предварительный просмотр скана успешным.</summary>
+      <returns>Значение true, если предварительный просмотр результатов сканирования выполнен успешно; в противном случае — значение false.</returns>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerResolution">
+      <summary>Определяет разрешение сканирования.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerResolution.DpiX">
+      <summary>Размер по горизонтали.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerResolution.DpiY">
+      <summary>Вертикальный размер.</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerScanResult">
+      <summary>Представляет результат задания сканирования.</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerScanResult.ScannedFiles">
+      <summary>Получает список сканированных файлов с изображениями, полученный завершенным заданием сканирования.</summary>
+      <returns>Список файлов отсканированных изображений из завершенного задания сканирования. При отсутствии сканированного файла, свойство IVectorView&lt;T&gt;.Size будет равно 0.</returns>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerScanSource">
+      <summary>Типы источника сканирования для сканирующего устройства.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.AutoConfigured">
+      <summary>Источник сканирования настраивается автоматически.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.Default">
+      <summary>Источник по умолчанию.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.Feeder">
+      <summary>Источник сканирования с устройством подачи.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.Flatbed">
+      <summary>Источник сканирования планшетного типа.</summary>
+    </member></members>
+</doc>

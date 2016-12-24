@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.Core.AnimationMetrics.AnimationMetricsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.Core.AnimationMetrics.AnimationDescription">
+      <summary>Windows の不透明度、スケーリング、変換のアニメーション全体を構成するために、特定のターゲットに対して実行される個々のアニメーション効果のコレクションを公開します。</summary>
+    </member><member name="M:Windows.UI.Core.AnimationMetrics.AnimationDescription.#ctor(Windows.UI.Core.AnimationMetrics.AnimationEffect,Windows.UI.Core.AnimationMetrics.AnimationEffectTarget)">
+      <summary>特定のアニメーショおよびターゲットを持つ AnimationDescription オブジェクトを作成します。</summary>
+      <param name="effect">ターゲットに適用するアニメーション効果。</param>
+      <param name="target">アニメーション効果のターゲット。</param>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.AnimationDescription.Animations">
+      <summary>AnimationDescription に関連付けられているアニメーションのコレクションを取得します。</summary>
+      <returns>それぞれが、この AnimationDescription オブジェクトに対して指定したアニメーション効果を表す IPropertyAnimation インスタンスのコレクション。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.AnimationDescription.DelayLimit">
+      <summary>ターゲットのオブジェクト コレクションに適用されるアニメーションの最大累積遅延時間を取得します。</summary>
+      <returns>遅延制限時間 (100 ナノ秒単位)。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.AnimationDescription.StaggerDelay">
+      <summary>複数のオブジェクトを含むターゲットで、オブジェクトにアニメーション効果を適用してから次のオブジェクトに適用するまでの時間を取得します。 StaggerDelay は、アニメーション効果の相対的なタイミングを制御するために使用する 3 つの要素の 1 つです。他の 2 つは StaggerDelayFactor と DelayLimit です。</summary>
+      <returns>段階的遅延時間 (100 ナノ秒単位)。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.AnimationDescription.StaggerDelayFactor">
+      <summary>前回の遅延インスタンスをその量だけ増加または減少させる、段階的遅延の各発生に適用される乗数を取得します。</summary>
+      <returns>段階的遅延に適用する要因。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.AnimationDescription.ZOrder">
+      <summary>同じアニメーション効果を持つ他の AnimationDescription オブジェクトを基準にして AnimationDescription オブジェクトの Z オーダーの位置を取得します。</summary>
+      <returns>z オーダーの値。</returns>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.AnimationEffect">
+      <summary>アニメーションを指定します。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.AddToGrid">
+      <summary>オブジェクトがグリッド配列のコレクションに追加されます。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.AddToList">
+      <summary>オブジェクトがリストに追加されます。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.AddToSearchGrid">
+      <summary>オブジェクトがグリッド配列の検索結果に追加されます。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.AddToSearchList">
+      <summary>オブジェクトは検索結果の縦に配例されたリストに追加されます。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.Collapse">
+      <summary>コンテンツを非表示にするまでサイズを縮小するオブジェクトです。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.CrossFade">
+      <summary>一方の項目がフェード アウトすると、代わりにもう一方の項目がフェード インします。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DeleteFromGrid">
+      <summary>オブジェクトがグリッド配列のコレクションから削除されます。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DeleteFromList">
+      <summary>オブジェクトがリストから削除されます。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DeleteFromSearchGrid">
+      <summary>オブジェクトはグリッド配列の検索結果から削除されます。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DeleteFromSearchList">
+      <summary>オブジェクトは検索結果の縦に配例されたリストから削除されます。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DragBetweenEnter">
+      <summary>ドラッグ ソースは 2 つの項目の間を移動しました。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DragBetweenLeave">
+      <summary>ドラッグ ソースは 2 つの項目間に既に存在しません。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DragSourceEnd">
+      <summary>ユーザーは項目のドラッグを停止しました。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DragSourceStart">
+      <summary>ユーザーは項目のドラッグを開始しました。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.EnterPage">
+      <summary>コンテンツのページが表示された状態にあります。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.Expand">
+      <summary>追加コンテンツを表示するまでサイズを拡大するオブジェクトです。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.FadeIn">
+      <summary>コンテキスト制御はフェード インします。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.FadeOut">
+      <summary>コンテキスト制御はフェード アウトします。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.Hide">
+      <summary>UI はタップまたはクリックされたターゲットのあたりで折りたたまれます。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.HideEdgeUI">
+      <summary>画面の端に表示される UI は削除されます。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.HidePanel">
+      <summary>コンテンツのセクションが画面から削除されます。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.HidePopup">
+      <summary>ポップアップ コントロールが画面から削除されます。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.Peek">
+      <summary>タイルのコンテンツは、通常非表示のタイルの部品を表示するために上下に移動します。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.PointerDown">
+      <summary>ポインティング デバイス (マウスやタッチなど) が項目に関与しました。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.PointerUp">
+      <summary>ポインティング デバイス (マウスやタッチなど) は項目から解除されました。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.Reposition">
+      <summary>位置を変更するオブジェクトです。 これ以上、特定のアニメーションは適用されません。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.Reveal">
+      <summary>UI はタップまたはクリックされたターゲットのあたりで展開します。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.ShowEdgeUI">
+      <summary>UI は画面の端から移動して表示されます。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.ShowPanel">
+      <summary>コンテンツのセクションが画面に表示されます。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.ShowPopup">
+      <summary>ポップアップ コントロールが画面に表示されています。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.SwipeDeselect">
+      <summary>オブジェクトはスワイプ操作によって選択解除されました。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.SwipeReveal">
+      <summary>クロス スライドの操作で選択した項目を押し続けることでトリガーされます。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.SwipeSelect">
+      <summary>オブジェクトはスワイプ操作によって選択されました。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.TransitionContent">
+      <summary>大規模なコンテンツの置換が行われています。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.TransitionPage">
+      <summary>一方のページは、もう一方のページに置き換えられます。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.UpdateBadge">
+      <summary>タイルのバッジ オーバーレイを更新します。</summary>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget">
+      <summary>アニメーションへの参加要素を指定します。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Added">
+      <summary>追加中のオブジェクト。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Affected">
+      <summary>アニメーションによって影響を受けるオブジェクト。たとえば、別のオブジェクトが削除されるときに、邪魔にならないように移動するオブジェクト。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Background">
+      <summary>項目の背景オブジェクト。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Content">
+      <summary>項目のコンテンツ。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Deleted">
+      <summary>削除中のオブジェクト。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Deselected">
+      <summary>選択解除のクロススライド操作によって選択解除されたオブジェクト。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.DragSource">
+      <summary>ドラッグ中のオブジェクト。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Hidden">
+      <summary>現在非表示のオブジェクト。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Incoming">
+      <summary>古い内容を置き換えるための新しい内容。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Outgoing">
+      <summary>新しい内容で置き換えられている古い内容。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Outline">
+      <summary>領域を囲む外枠です。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Primary">
+      <summary>単一ターゲット アニメーションの唯一の参加要素。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Remaining">
+      <summary>他の項目が削除された後に、その背後に残されたオブジェクト。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Revealed">
+      <summary>展開されると表示されるオブジェクト。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.RowIn">
+      <summary>グリッドに追加される行。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.RowOut">
+      <summary>グリッドから削除される予定の行。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Selected">
+      <summary>選択のクロススライド操作によって選択されたオブジェクト。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Selection">
+      <summary>項目が選択されていることを示すオブジェクト (チェックマークなど)。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Shown">
+      <summary>現在表示されようとしているオブジェクトで、直前まで非表示だったもの。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Tapped">
+      <summary>タップまたはクリックされたオブジェクト。</summary>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.IPropertyAnimation">
+      <summary>すべてのアニメーション効果に共通するアニメーションのプロパティについて説明します。</summary>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.IPropertyAnimation.Control1">
+      <summary>このオブジェクトのこのプロパティを一定期間にわたってアニメーション化する方法を示す 3 次ベジエ曲線の 1 つ目の制御点の位置を取得します。</summary>
+      <returns>コントロール ポイントの場所。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.IPropertyAnimation.Control2">
+      <summary>このオブジェクトのこのプロパティを一定期間にわたってアニメーション化する方法を示す 3 次ベジエ曲線の 2 つ目の制御点の位置を取得します。</summary>
+      <returns>コントロール ポイントの場所。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.IPropertyAnimation.Delay">
+      <summary>アニメーションが開始を指示されてから実際に描画を始めるまでの時間を取得します。</summary>
+      <returns>アニメーションを開始する前の遅延時間。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.IPropertyAnimation.Duration">
+      <summary>アニメーションを実行する時間を取得します。 これには遅延時間が含まれません。</summary>
+      <returns>アニメーションの継続時間。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.IPropertyAnimation.Type">
+      <summary>このオブジェクトによって表されるアニメーションの種類を取得します。</summary>
+      <returns>アニメーションの種類値の 1 つ。</returns>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.OpacityAnimation">
+      <summary>不透明度を使った (フェード インまたはフェード アウト) アニメーションのパラメーターを取得するためのメソッドを提供します。</summary>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.Control1">
+      <summary>不透明度を一定期間にわたってアニメーション化する方法を示す 3 次ベジエ曲線の 1 つ目の制御点の位置を取得します。</summary>
+      <returns>コントロール ポイントの場所。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.Control2">
+      <summary>不透明度を一定期間にわたってアニメーション化する方法を示す 3 次ベジエ曲線の 2 つ目の制御点の位置を取得します。</summary>
+      <returns>コントロール ポイントの場所。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.Delay">
+      <summary>不透明度を使ったアニメーションが開始を指示されてから実際に描画を始めるまでの時間を取得します。</summary>
+      <returns>不透明度を使ったアニメーションを開始する前の遅延時間。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.Duration">
+      <summary>不透明度を使ったアニメーションを実行する時間を取得します。 これには遅延時間が含まれません。</summary>
+      <returns>アニメーションの継続時間。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.FinalOpacity">
+      <summary>オブジェクトの最終的な不透明度を取得します。</summary>
+      <returns>最終的な不透明度。 値 0.0 は完全に透過であることを、値 1.0 は完全に不透明であることを表します。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.InitialOpacity">
+      <summary>オブジェクトの初期の不透明度を取得します。</summary>
+      <returns>最初の不透明度 (存在する場合)。 値 0.0 は完全に透過であることを、値 1.0 は完全に不透明であることを表します。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.Type">
+      <summary>このオブジェクトによって表されるアニメーションの種類を取得します。</summary>
+      <returns>アニメーションの種類値の 1 つ。</returns>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.PropertyAnimation">
+      <summary>すべてのプロパティ アニメーションの種類に共通するアニメーション プロパティの値を取得するためのメソッドを提供します。</summary>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.PropertyAnimation.Control1">
+      <summary>このオブジェクトのこのプロパティを一定期間にわたってアニメーション化する方法を示す 3 次ベジエ曲線の 1 つ目の制御点の位置を取得します。</summary>
+      <returns>コントロール ポイントの場所。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.PropertyAnimation.Control2">
+      <summary>このオブジェクトのこのプロパティを一定期間にわたってアニメーション化する方法を示す 3 次ベジエ曲線の 2 つ目の制御点の位置を取得します。</summary>
+      <returns>コントロール ポイントの場所。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.PropertyAnimation.Delay">
+      <summary>アニメーションが開始を指示されてから実際に描画を始めるまでの時間を取得します。</summary>
+      <returns>アニメーションを開始する前の遅延時間。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.PropertyAnimation.Duration">
+      <summary>アニメーションを実行する時間を取得します。 これには遅延時間が含まれません。</summary>
+      <returns>アニメーションの継続時間。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.PropertyAnimation.Type">
+      <summary>このオブジェクトによって表されるアニメーションの種類を取得します。</summary>
+      <returns>アニメーションの種類値の 1 つ。</returns>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.PropertyAnimationType">
+      <summary>PropertyAnimation オブジェクトによって表されるアニメーションの種類を指定します。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.PropertyAnimationType.Opacity">
+      <summary>オブジェクトの透過性をアニメーションで表示します。 対応するオブジェクトは OpacityAnimation です。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.PropertyAnimationType.Scale">
+      <summary>オブジェクトのサイズを、拡大または縮小のアニメーションで表示します。 対応するオブジェクトは ScaleAnimation です。</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.PropertyAnimationType.Translation">
+      <summary>オブジェクトを移動します。 対応するオブジェクトは TranslationAnimation です。</summary>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.ScaleAnimation">
+      <summary>拡大と縮小のアニメーションに使うパラメーターを取得するためのメソッドを提供します。</summary>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.Control1">
+      <summary>スケールを一定期間にわたってアニメーション化する方法を示す 3 次ベジエ曲線の 1 つ目の制御点の位置を取得します。</summary>
+      <returns>コントロール ポイントの場所。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.Control2">
+      <summary>スケールを一定期間にわたってアニメーション化する方法を示す 3 次ベジエ曲線の 2 つ目の制御点の位置を取得します。</summary>
+      <returns>コントロール ポイントの場所。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.Delay">
+      <summary>拡大縮小アニメーションが開始を指示されてから実際に描画を始めるまでの時間を取得します。</summary>
+      <returns>拡大縮小アニメーションを開始する前の遅延時間。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.Duration">
+      <summary>拡大縮小アニメーションを実行する時間を取得します。 これには遅延時間が含まれません。</summary>
+      <returns>アニメーションの継続時間。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.FinalScaleX">
+      <summary>オブジェクトの最終的な水平方向のスケール ファクターを取得します。</summary>
+      <returns>値の乗算に使用する最終的な水平方向のスケール ファクター。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.FinalScaleY">
+      <summary>オブジェクトの最終的な垂直方向のスケール ファクターを取得します。</summary>
+      <returns>値の乗算に使用する最終的な垂直方向のスケール ファクター。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.InitialScaleX">
+      <summary>オブジェクトの初期の水平方向のスケール ファクターを取得します。</summary>
+      <returns>値の乗算に使用する最初の水平方向のスケール ファクター (存在する場合)。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.InitialScaleY">
+      <summary>オブジェクトの初期の垂直方向のスケール ファクターを取得します。</summary>
+      <returns>値の乗算に使用する最初の垂直方向のスケール ファクター (存在する場合)。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.NormalizedOrigin">
+      <summary>オブジェクトの正常なサイズを基準としてポイントで表現される拡大縮小アニメーションの中心点を取得します。</summary>
+      <returns>正規化された中心点。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.Type">
+      <summary>このオブジェクトによって表されるアニメーションの種類を取得します。</summary>
+      <returns>アニメーションの種類値の 1 つ。</returns>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.TranslationAnimation">
+      <summary>平行移動 (新しい位置への移動) アニメーションに使うパラメーターを取得するためのメソッドを提供します。</summary>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.TranslationAnimation.Control1">
+      <summary>変換を一定期間にわたってアニメーション化する方法を示す 3 次ベジエ曲線の 1 つ目の制御点の位置を取得します。</summary>
+      <returns>コントロール ポイントの場所。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.TranslationAnimation.Control2">
+      <summary>変換を一定期間にわたってアニメーション化する方法を示す 3 次ベジエ曲線の 2 つ目の制御点の位置を取得します。</summary>
+      <returns>コントロール ポイントの場所。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.TranslationAnimation.Delay">
+      <summary>平行移動アニメーションが開始を指示されてから実際に描画を始めるまでの時間を取得します。</summary>
+      <returns>平行移動アニメーションを開始する前の遅延時間。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.TranslationAnimation.Duration">
+      <summary>平行移動アニメーションを実行する時間を取得します。 これには遅延時間が含まれません。</summary>
+      <returns>アニメーションの継続時間。</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.TranslationAnimation.Type">
+      <summary>このオブジェクトによって表されるアニメーションの種類を取得します。</summary>
+      <returns>アニメーションの種類値の 1 つ。</returns>
+    </member></members>
+</doc>

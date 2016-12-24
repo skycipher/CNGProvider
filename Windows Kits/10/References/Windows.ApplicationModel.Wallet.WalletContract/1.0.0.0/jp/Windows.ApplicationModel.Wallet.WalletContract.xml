@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Wallet.WalletContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs">
+      <summary>ウォレット アクションの結果として起動されたアプリに情報を提供します。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs.ActionId">
+      <summary>動詞、トランザクションの ID など、アクションの ID を取得します。</summary>
+      <returns>動詞やトランザクションの ID など、アクションの ID。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs.ActionKind">
+      <summary>WalletItem に対して実行されたアクションを取得します。</summary>
+      <returns>WalletItem に対して実行されたアクション。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs.ItemId">
+      <summary>ユーザーがアクションを実行する WalletItem の ID を取得します。</summary>
+      <returns>ユーザーがアクションを実行する WalletItem の ID。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs">
+      <summary>ウォレット アクションの結果として起動されたアプリに情報を提供します。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.ActionId">
+      <summary>動詞、トランザクションの ID など、アクションの ID を取得します。</summary>
+      <returns>動詞やトランザクションの ID など、アクションの ID。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.ActionKind">
+      <summary>WalletItem に対して実行されたアクションを取得します。</summary>
+      <returns>WalletItem に対して実行されたアクションを取得します。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.ItemId">
+      <summary>ユーザーがアクションを実行する WalletItem の ID を取得します。</summary>
+      <returns>ユーザーがアクションを実行する WalletItem の ID。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.Kind">
+      <summary>WalletItem に対して実行されたアクションの種類を取得します。</summary>
+      <returns>WalletItem に対して実行されたアクションの種類。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.PreviousExecutionState">
+      <summary>アクティブ化する前のアプリケーションの実行状態を取得します。</summary>
+      <returns>アクティブ化する前のアプリの実行状態。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.SplashScreen">
+      <summary>スプラッシュ スクリーンからアクティブ化されたアプリケーションへの切り替えに関する情報を提供するスプラッシュ スクリーン オブジェクトを取得します。</summary>
+      <returns>スプラッシュ スクリーンからアクティブ化されたアプリへの切り替えに関する情報を提供するスプラッシュ スクリーン オブジェクト。</returns>
+    </member><member name="T:Windows.ApplicationModel.Wallet.WalletActionKind">
+      <summary>項目に対して実行され、アプリが起動する原因となったアクションを表します。</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.Message">
+      <summary>メッセージがタップされました。</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.MoreTransactions">
+      <summary>UI 項目 [see more transactions] (その他のトランザクションを表示) がタップされました。</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.OpenItem">
+      <summary>項目が開かれました。</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.Transaction">
+      <summary>トランザクションがタップされました。</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.Verb">
+      <summary>動詞がタップされました。</summary>
+    </member><member name="T:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs">
+      <summary>ウォレット アクションの結果として起動されたアプリに情報を提供します。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.ActionId">
+      <summary>動詞、トランザクションの ID など、アクションの ID を取得します。</summary>
+      <returns>動詞やトランザクションの ID など、アクションの ID。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.ActionKind">
+      <summary>WalletItem に対して実行されたアクションを取得します。</summary>
+      <returns>WalletItem に対して実行されたアクションを取得します。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.ActivatedOperation">
+      <summary>アプリケーションのアクティブ化操作を取得します。</summary>
+      <returns>アクティブな操作。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.ItemId">
+      <summary>ユーザーがアクションを実行する WalletItem の ID を取得します。</summary>
+      <returns>ユーザーがアクションを実行する WalletItem の ID。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.Kind">
+      <summary>アクティブ化の種類を取得します。</summary>
+      <returns>列挙値の 1 つ。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.PreviousExecutionState">
+      <summary>アクティブ化する前のアプリケーションの実行状態を取得します。</summary>
+      <returns>列挙値の 1 つ。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.SplashScreen">
+      <summary>スプラッシュ スクリーンからアクティブ化されたアプリケーションへの切り替えに関する情報を提供するスプラッシュ スクリーン オブジェクトを取得します。</summary>
+      <returns>スプラッシュ スクリーン情報を提供するオブジェクト。</returns>
+    </member></members>
+</doc>

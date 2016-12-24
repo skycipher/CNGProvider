@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.SystemManagementContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.System.ProcessLauncher">
+      <summary>启动具有关联参数的指定进程（如果有）。</summary>
+    </member><member name="M:Windows.System.ProcessLauncher.RunToCompletionAsync(System.String,System.String)">
+      <summary>启动新进程。</summary>
+      <returns>当此方法成功完成时，它将返回进程的结果。</returns>
+      <param name="fileName">要启动的进程的名称。</param>
+      <param name="args">用于运行进程的参数。</param>
+    </member><member name="M:Windows.System.ProcessLauncher.RunToCompletionAsync(System.String,System.String,Windows.System.ProcessLauncherOptions)">
+      <summary>启动新进程，包括指定的选项。</summary>
+      <returns>当此方法成功完成时，它将返回进程的结果。</returns>
+      <param name="fileName">要启动的进程的文件名。</param>
+      <param name="args">指定进程的参数。</param>
+      <param name="options">用于运行进程的关联选项。</param>
+    </member><member name="T:Windows.System.ProcessLauncherOptions">
+      <summary>指定用于启动指定进程的选项。</summary>
+    </member><member name="M:Windows.System.ProcessLauncherOptions.#ctor">
+      <summary>创建并初始化进程启动器选项对象的新实例。</summary>
+    </member><member name="P:Windows.System.ProcessLauncherOptions.StandardError">
+      <summary>指定标准错误定向到的位置。</summary>
+      <returns>要将标准错误定向到的流。</returns>
+    </member><member name="P:Windows.System.ProcessLauncherOptions.StandardInput">
+      <summary>指定标准输入的来源。</summary>
+      <returns>标准输入的输入流。</returns>
+    </member><member name="P:Windows.System.ProcessLauncherOptions.StandardOutput">
+      <summary>指定标准输出定向到的位置。</summary>
+      <returns>要将标准输出定向到的流。</returns>
+    </member><member name="P:Windows.System.ProcessLauncherOptions.WorkingDirectory">
+      <summary>获取或设置进程启动程序将在其中工作的目录。</summary>
+      <returns>工作目录。</returns>
+    </member><member name="T:Windows.System.ProcessLauncherResult">
+      <summary>表示已启动进程的返回。</summary>
+    </member><member name="P:Windows.System.ProcessLauncherResult.ExitCode">
+      <summary>表示从 ProcessLauncher 运行的进程的退出代码。</summary>
+      <returns>退出代码。</returns>
+    </member><member name="T:Windows.System.ShutdownKind">
+      <summary>描述您可对在固定用途模式下运行的设备执行的关机类型。</summary>
+    </member><member name="F:Windows.System.ShutdownKind.Restart">
+      <summary>关闭固定用途设备，然后重启该设备。</summary>
+    </member><member name="F:Windows.System.ShutdownKind.Shutdown">
+      <summary>在不重启设备的情况下关闭固定用途设备。</summary>
+    </member><member name="T:Windows.System.ShutdownManager">
+      <summary>管理在固定用途模式下运行的设备的关机。</summary>
+    </member><member name="M:Windows.System.ShutdownManager.BeginShutdown(Windows.System.ShutdownKind,Windows.Foundation.TimeSpan)">
+      <summary>关闭在固定用途模式下运行的设备，并有选择地在过了指定秒数之后重启设备。</summary>
+      <param name="shutdownKind">在重启或不重启设备的情况下执行的关机类型。</param>
+      <param name="timeout">在 shutdownKind 是 ShutdownKind.Restart 的情况下重启设备之前等待的时间（以秒为单位）。</param>
+    </member><member name="M:Windows.System.ShutdownManager.CancelShutdown">
+      <summary>取消关闭已处于进程中的固定用途设备。</summary>
+    </member><member name="T:Windows.System.SystemManagementContract">
+      <summary>表示 Windows.System.SystemManagementContract API 协定。</summary>
+    </member><member name="T:Windows.System.TimeZoneSettings">
+      <summary>包含要与时区交互的方法和属性。</summary>
+    </member><member name="P:Windows.System.TimeZoneSettings.CanChangeTimeZone">
+      <summary>获取时区是否可更改。</summary>
+      <returns>如果时区可更改，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.System.TimeZoneSettings.CurrentTimeZoneDisplayName">
+      <summary>获取当前时区的显示名称。</summary>
+      <returns>当前时区的显示名称。</returns>
+    </member><member name="P:Windows.System.TimeZoneSettings.SupportedTimeZoneDisplayNames">
+      <summary>获取所有受支持的时区的显示名称。</summary>
+      <returns>所有受支持的时区的显示名称。</returns>
+    </member><member name="M:Windows.System.TimeZoneSettings.ChangeTimeZoneByDisplayName(System.String)">
+      <summary>使用显示名称更改时区。</summary>
+      <param name="timeZoneDisplayName">要更改为的时区的显示名称。</param>
+    </member></members>
+</doc>

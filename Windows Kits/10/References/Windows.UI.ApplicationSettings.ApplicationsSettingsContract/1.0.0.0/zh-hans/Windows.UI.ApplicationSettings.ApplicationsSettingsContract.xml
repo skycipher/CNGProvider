@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.ApplicationSettings.ApplicationsSettingsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.ApplicationSettings.SettingsEdgeLocation">
+      <summary>指定显示“设置”个性分类的屏幕边缘。</summary>
+      <deprecated type="deprecate">SettingsEdgeLocation 已弃用并且可能并非适用于所有平台。 有关更多信息，请参见 MSDN。</deprecated>
+    </member><member name="F:Windows.UI.ApplicationSettings.SettingsEdgeLocation.Left">
+      <summary>屏幕左边缘会显示“设置魅力”。</summary>
+    </member><member name="F:Windows.UI.ApplicationSettings.SettingsEdgeLocation.Right">
+      <summary>屏幕右边缘会显示“设置魅力”。</summary>
+    </member><member name="T:Windows.UI.ApplicationSettings.SettingsPane">
+      <summary>启动应用程序控制“设置魅力”窗格的静态类。 在用户打开窗体或以编程方式打开窗体时，应用程序可以添加或移除命令，可以接收通知。</summary>
+      <deprecated type="deprecate">SettingsPane 在 Windows 10 之后的版本中可能被更改或不可用。 应将设置选项集成到应用体验中，而不是使用 SettingsPane。 有关更多信息，请参见应用设置的指南。</deprecated>
+    </member><member name="P:Windows.UI.ApplicationSettings.SettingsPane.Edge">
+      <summary>获取指示屏幕左边缘或右边缘是否出现“设置”魅力的值。</summary>
+      <deprecated type="deprecate">SettingsPane 在 Windows 10 之后的版本中可能被更改或不可用。 应将设置选项集成到应用体验中，而不是使用 SettingsPane。 有关更多信息，请参见应用设置的指南。</deprecated>
+      <returns>“设置魅力”的位置。</returns>
+    </member><member name="E:Windows.UI.ApplicationSettings.SettingsPane.CommandsRequested">
+      <summary>在用户打开设置窗格时发生。 侦听此事件使该应用程序初始化设置命令和暂停其自己的 UI，直到用户关闭窗格。</summary>
+      <deprecated type="deprecate">SettingsPane 在 Windows 10 之后的版本中可能被更改或不可用。 应将设置选项集成到应用体验中，而不是使用 SettingsPane。 有关更多信息，请参见应用设置的指南。</deprecated>
+    </member><member name="M:Windows.UI.ApplicationSettings.SettingsPane.GetForCurrentView">
+      <summary>获取与当前应用视图关联（即，与 CoreWindow 关联）的 SettingsPane 对象。</summary>
+      <deprecated type="deprecate">SettingsPane 在 Windows 10 之后的版本中可能被更改或不可用。 应将设置选项集成到应用体验中，而不是使用 SettingsPane。 有关更多信息，请参见应用设置的指南。</deprecated>
+      <returns>设置窗格。</returns>
+    </member><member name="M:Windows.UI.ApplicationSettings.SettingsPane.Show">
+      <summary>向用户显示“设置魅力”窗格。</summary>
+      <deprecated type="deprecate">SettingsPane 在 Windows 10 之后的版本中可能被更改或不可用。 应将设置选项集成到应用体验中，而不是使用 SettingsPane。 有关更多信息，请参见应用设置的指南。</deprecated>
+    </member><member name="T:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest">
+      <summary>包含仅在事件 CommandsRequested 期间可用的属性。</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequest 在 Windows 10 之后的版本中可能被更改或不可用。 应将设置选项集成到应用体验中，而不是使用 SettingsPane。 有关更多信息，请参见应用设置的指南。</deprecated>
+    </member><member name="P:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest.ApplicationCommands">
+      <summary>在 CommandsRequested 事件期间可用的矢量。 追加 SettingsCommand 对象，使这些对象可供 SettingsPane UI 使用。</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequest 在 Windows 10 之后的版本中可能被更改或不可用。 应将设置选项集成到应用体验中，而不是使用 SettingsPane。 有关更多信息，请参见应用设置的指南。</deprecated>
+      <returns>SettingsCommand 对象的虚拟矢量。</returns>
+    </member><member name="T:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs">
+      <summary>包含在 CommandsRequested 事件期间从事件对象可用的参数。</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequestedEventArgs 在 Windows 10 之后的版本中可能被更改或不可用。 应将设置选项集成到应用体验中，而不是使用 SettingsPane。 有关更多信息，请参见应用设置的指南。</deprecated>
+    </member><member name="P:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs.Request">
+      <summary>在 CommandsRequested 事件期间可用的 SettingsPaneCommandsRequest 的实例。</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequestedEventArgs 在 Windows 10 之后的版本中可能被更改或不可用。 应将设置选项集成到应用体验中，而不是使用 SettingsPane。 有关更多信息，请参见应用设置的指南。</deprecated>
+      <returns>命令请求对象。</returns>
+    </member></members>
+</doc>

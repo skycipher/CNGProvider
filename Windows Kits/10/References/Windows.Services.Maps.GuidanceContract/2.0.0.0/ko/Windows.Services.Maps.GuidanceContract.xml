@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Services.Maps.GuidanceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem">
+      <summary>오디오 가이드에 사용되는 측정 시스템을 지정합니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem.Meters">
+      <summary>미터법입니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem.MilesAndFeet">
+      <summary>미국의 도량형입니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem.MilesAndYards">
+      <summary>영국식 단위입니다.</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind">
+      <summary>AudioNotificationRequested 이벤트가 트리거될 때 요청되는 오디오 알림 형식을 지정합니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.Gps">
+      <summary>GPS 알림입니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.Maneuver">
+      <summary>전략 알림입니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.Route">
+      <summary>경로 알림입니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.SpeedLimit">
+      <summary>속도 제한 알림입니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.Traffic">
+      <summary>교통 알림입니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.TrafficCamera">
+      <summary>교통 카메라 알림입니다.</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs">
+      <summary>AudioNotificationRequested 이벤트에 대한 데이터를 제공합니다.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs.AudioFilePaths">
+      <summary>재생이 요청된 오디오 파일의 목록을 가져옵니다.</summary>
+      <returns>재생이 요청된 오디오 파일의 목록입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs.AudioNotification">
+      <summary>요청된 오디오 알림의 형식을 가져옵니다.</summary>
+      <returns>요청된 오디오 알림의 형식입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs.AudioText">
+      <summary>요청된 오디오 알림의 텍스트 기반 버전을 가져옵니다.</summary>
+      <returns>요청된 오디오 알림의 텍스트 기반 버전입니다.</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceAudioNotifications">
+      <summary>탐색하는 동안 사용되는 오디오 알림 형식을 지정합니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.Gps">
+      <summary>GPS 알림입니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.Maneuver">
+      <summary>전략 알림입니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.None">
+      <summary>오디오 알림이 선택되지 않았습니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.Route">
+      <summary>경로 알림입니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.SpeedLimit">
+      <summary>속도 제한 알림입니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.Traffic">
+      <summary>교통 알림입니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.TrafficCamera">
+      <summary>교통 카메라 알림입니다.</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceLaneInfo">
+      <summary>현재 위치 근처의 차선이며 경로와 관련이 있음을 나타냅니다.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceLaneInfo.IsOnRoute">
+      <summary>차선이 경로에 있는지 여부를 나타내는 값을 가져옵니다.</summary>
+      <returns>차선이 경로에 있으면 true, 그렇지 않으면 false입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceLaneInfo.LaneMarkers">
+      <summary>차선의 경로를 설명하는 값을 가져옵니다.</summary>
+      <returns>차선의 경로를 설명하는 GuidanceLaneMarkers 형식의 값입니다.</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceLaneMarkers">
+      <summary>차선의 경로를 지정합니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.HardLeft">
+      <summary>크게 좌회전 마커입니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.HardRight">
+      <summary>크게 우회전 마커입니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.Left">
+      <summary>좌회전 마커입니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.LightLeft">
+      <summary>작게 좌회전 마커입니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.LightRight">
+      <summary>작게 우회전 마커입니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.None">
+      <summary>차선 마커가 없습니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.Right">
+      <summary>우회전 마커입니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.Straight">
+      <summary>직진 마커입니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.Unknown">
+      <summary>차선 마커 정보를 사용할 수 없습니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.UTurnLeft">
+      <summary>좌회전 U턴 마커입니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.UTurnRight">
+      <summary>우회전 U턴 마커입니다.</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceManeuver">
+      <summary>안내 경로에 따른 전략을 나타냅니다.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.DepartureRoadName">
+      <summary>전략을 시작할 때 도로의 전체 이름을 가져옵니다.</summary>
+      <returns>전략을 시작할 때 도로의 전체 이름입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.DepartureShortRoadName">
+      <summary>전략을 시작할 때 도로의 약식 이름을 가져옵니다. 예를 들어, "I-90" 같은 고속도로 번호입니다.</summary>
+      <returns>전략을 시작할 때 도로의 약식 이름입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.DistanceFromPreviousManeuver">
+      <summary>이전 전략부터 이 전략까지의 거리(미터 단위)를 가져옵니다.</summary>
+      <returns>이전 전략부터 이 전략까지의 거리(미터 단위)입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.DistanceFromRouteStart">
+      <summary>경로 시작부터 이 전략까지의 거리(미터 단위)를 가져옵니다.</summary>
+      <returns>경로 시작부터 이 전략까지의 거리(미터 단위)입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.EndAngle">
+      <summary>전략의 끝에 방향(도)을 나타내는 값을 가져옵니다. 0 또는 360 = 북, 90 = 동, 180 = 남, 270 = 서입니다.</summary>
+      <returns>전략 끝점의 방향(도)입니다. 여기서 0 또는 360 = 북, 90 = 동, 180 = 남, 270 = 서입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.InstructionText">
+      <summary>전략과 연결된 지침 텍스트를 가져옵니다.</summary>
+      <returns>전략과 연결된 지침 텍스트입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.Kind">
+      <summary>전략의 형식을 가져옵니다.</summary>
+      <returns>전략의 형식입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.NextRoadName">
+      <summary>전략을 종료할 때 도로의 전체 이름을 가져옵니다.</summary>
+      <returns>전략을 종료할 때 도로의 전체 이름입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.NextShortRoadName">
+      <summary>전략을 종료할 때 도로의 약식 이름을 가져옵니다. 예를 들어, "I-90" 같은 고속도로 번호입니다.</summary>
+      <returns>전략을 종료할 때 도로의 약식 이름입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.RoadSignpost">
+      <summary>전략과 관련된 도로의 표지판을 나타내는 값을 가져옵니다.</summary>
+      <returns>전략과 관련된 도로의 표지판을 나타내는 값입니다. 데이터를 사용할 수 없으면 이 값은 null을 반환합니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.StartAngle">
+      <summary>전략 시작점의 방향(도)을 나타내는 값을 가져옵니다. 0 또는 360 = 북, 90 = 동, 180 = 남, 270 = 서입니다.</summary>
+      <returns>전략 시작점의 방향(도)입니다. 여기서 0 또는 360 = 북, 90 = 동, 180 = 남, 270 = 서입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.StartLocation">
+      <summary>전략이 시작되는 위치를 가져옵니다.</summary>
+      <returns>전략이 시작되는 위치입니다.</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceManeuverKind">
+      <summary>지침 전략의 형식을 지정합니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.End">
+      <summary>목적지에 도달했습니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayEnterLeft">
+      <summary>오른쪽 차선으로 고속도로에 진입합니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayEnterRight">
+      <summary>왼쪽 차선으로 고속도로에 진입합니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayKeepLeft">
+      <summary>고속도로에서 왼쪽을 유지합니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayKeepRight">
+      <summary>고속도로에서 오른쪽을 유지합니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayLeaveLeft">
+      <summary>왼쪽 차선에서 고속도로를 벗어납니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayLeaveRight">
+      <summary>오른쪽 차선에서 고속도로를 벗어납니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.GoStraight">
+      <summary>직진입니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.KeepMiddle">
+      <summary>가운데 차선을 유지합니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.LeaveTransitStation">
+      <summary>대중 교통 정류장을 벗어납니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.None">
+      <summary>전략이 적용되지 않습니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.PassTransitStation">
+      <summary>대중 교통 정류장을 통과합니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.Start">
+      <summary>시작 지점입니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TakeFerry">
+      <summary>페리를 입력합니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft1">
+      <summary>로터리 출구 1로 나갑니다(좌측 통행).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft10">
+      <summary>로터리 출구 10으로 나갑니다(좌측 통행).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft11">
+      <summary>로터리 출구 11로 나갑니다(좌측 통행).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft12">
+      <summary>로터리 출구 12로 나갑니다(좌측 통행).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft2">
+      <summary>로터리 출구 2로 나갑니다(좌측 통행).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft3">
+      <summary>로터리 출구 3으로 나갑니다(좌측 통행).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft4">
+      <summary>로터리 출구 4로 나갑니다(좌측 통행).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft5">
+      <summary>로터리 출구 5로 나갑니다(좌측 통행).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft6">
+      <summary>로터리 출구 6으로 나갑니다(좌측 통행).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft7">
+      <summary>로터리 출구 7으로 나갑니다(좌측 통행).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft8">
+      <summary>로터리 출구 8으로 나갑니다(좌측 통행).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft9">
+      <summary>로터리 출구 9로 나갑니다(좌측 통행).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight1">
+      <summary>로터리 출구 1로 나갑니다(우측 통행).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight10">
+      <summary>로터리 출구 10으로 나갑니다(우측 통행).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight11">
+      <summary>로터리 출구 11로 나갑니다(우측 통행).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight12">
+      <summary>로터리 출구 12로 나갑니다(우측 통행).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight2">
+      <summary>로터리 출구 2로 나갑니다(우측 통행).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight3">
+      <summary>로터리 출구 3으로 나갑니다(우측 통행).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight4">
+      <summary>로터리 출구 4로 나갑니다(우측 통행).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight5">
+      <summary>로터리 출구 5로 나갑니다(우측 통행).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight6">
+      <summary>로터리 출구 6으로 나갑니다(우측 통행).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight7">
+      <summary>로터리 출구 7로 나갑니다(우측 통행).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight8">
+      <summary>로터리 출구 8로 나갑니다(우측 통행).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight9">
+      <summary>로터리 출구 9로 나갑니다(우측 통행).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnHardLeft">
+      <summary>크게 좌회전합니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnHardRight">
+      <summary>크게 우회전합니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnKeepLeft">
+      <summary>왼쪽 차선을 유지합니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnKeepRight">
+      <summary>오른쪽 차선을 유지합니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnLeft">
+      <summary>좌회전합니다(약 90도).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnLightLeft">
+      <summary>살짝 좌회전합니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnLightRight">
+      <summary>살짝 우회전합니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnRight">
+      <summary>우회전합니다(약 90도).</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.UTurnLeft">
+      <summary>왼쪽으로 U턴합니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.UTurnRight">
+      <summary>오른쪽으로 U턴합니다.</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate">
+      <summary>사용자의 현재 위치에서 탐색 조건을 설명합니다.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.CurrentHeading">
+      <summary>현재 방향(도)을 나타내는 값을 가져옵니다. 0 또는 360 = 북, 90 = 동, 180 = 남, 270 = 서입니다.</summary>
+      <returns>현재 방향(도)입니다. 여기서 0 또는 360 = 북, 90 = 동, 180 = 남, 270 = 서입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.CurrentSpeed">
+      <summary>현재 속도(초당 미터 단위)를 나타내는 값을 가져옵니다.</summary>
+      <returns>현재 속도(초당 미터 단위)입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.IsOnStreet">
+      <summary>현재 위치가 도로인지 여부를 나타내는 값을 가져옵니다.</summary>
+      <returns>현재 위치가 도로이면 true, 그렇지 않으면 false입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.Location">
+      <summary>현재 지리적 위치를 가져옵니다.</summary>
+      <returns>현재 지리적 위치입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.Road">
+      <summary>현재 위치에서 도로를 설명하는 값을 가져옵니다.</summary>
+      <returns>현재 위치에서 도로를 설명하는 값입니다.</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceMode">
+      <summary>내비게이션 안내 형식을 지정합니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceMode.Navigation">
+      <summary>내비게이션 안내가 활성화됩니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceMode.None">
+      <summary>엔진이 활성화 되어 있지 않음을 나타냅니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceMode.Simulation">
+      <summary>내비게이션 안내를 시뮬레이션합니다.</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceMode.Tracking">
+      <summary>지정된 경로 없이 내비게이션 지원이 제공됩니다.</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceNavigator">
+      <summary>내비게이션 안내를 제공합니다.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceNavigator.AudioMeasurementSystem">
+      <summary>오디오 가이드에 사용되는 측정 시스템을 가져오거나 설정합니다.</summary>
+      <returns>오디오 가이드에 사용되는 측정 시스템입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceNavigator.AudioNotifications">
+      <summary>내비게이션 안내에서 제공하는 오디오 알림의 형식을 가져오거나 설정합니다.</summary>
+      <returns>내비게이션 안내에서 제공하는 오디오 알림의 형식입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceNavigator.IsGuidanceAudioMuted">
+      <summary>오디오 안내가 음소거되어 있는지 여부를 나타내는 값을 가져오거나 설정합니다.</summary>
+      <returns>오디오 안내는 값이 true인 경우 음소거되고 그렇지 않으면 오디오 가이드는 음소거되지 않습니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceNavigator.UseAppProvidedVoice">
+      <summary>장치에서 Cortana가 사용 중인지 여부를 나타내는 값을 가져옵니다.</summary>
+      <returns>값이 true이면 장치에서 Cortana가 사용 중이고, 그렇지 않으면 false입니다.</returns>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.AudioNotificationRequested">
+      <summary>오디오 알림은 예정된 회전이나 출구 이전 같이 내비게이션 안내에 적합할 때 발생합니다.</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.DestinationReached">
+      <summary>경로 목적지에 도달한 경우 발생합니다.</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.GuidanceUpdated">
+      <summary>내비게이션 안내가 업데이트되었을 때 발생합니다.</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.Rerouted">
+      <summary>내비게이션 안내 경로가 재설정되었을 때 발생합니다.</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.RerouteFailed">
+      <summary>내비게이션 안내 경로 재설정에 실패할 경우 발생합니다.</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.Rerouting">
+      <summary>내비게이션 안내 경로를 재설정할 때 발생합니다.</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.UserLocationLost">
+      <summary>사용자의 위치를 상실할 때 발생합니다.</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.UserLocationRestored">
+      <summary>사용자의 위치를 복원할 때 발생합니다.</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.GetCurrent">
+      <summary>현재 내비게이션 안내를 나타내는 GuidanceNavigator 개체를 가져옵니다.</summary>
+      <returns>현재 내비게이션 안내를 나타내는 GuidanceNavigator 개체입니다.</returns>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.Pause">
+      <summary>내비게이션 안내를 일시 중지합니다.</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.RepeatLastAudioNotification">
+      <summary>마지막 오디오 알림을 반복합니다.</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.Resume">
+      <summary>내비게이션 안내를 다시 시작합니다.</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.SetGuidanceVoice(System.Int32,System.String)">
+      <summary>오디오 알림에 사용되는 음성을 설정합니다.</summary>
+      <param name="voiceId">음성 식별자입니다.</param>
+      <param name="voiceFolder">지정된 음성의 폴더 경로입니다.</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.StartNavigating(Windows.Services.Maps.Guidance.GuidanceRoute)">
+      <summary>지정된 경로를 사용하여 내비게이션 안내를 시작합니다.</summary>
+      <param name="route">탐색할 경로입니다.</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.StartSimulating(Windows.Services.Maps.Guidance.GuidanceRoute,System.Int32)">
+      <summary>지정된 경로를 사용하여 내비게이션 안내의 시뮬레이션을 시작합니다.</summary>
+      <param name="route">탐색할 경로입니다.</param>
+      <param name="speedInMetersPerSecond">내비게이션 시뮬레이션의 속도(초당 미터 단위)입니다.</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.StartTracking">
+      <summary>지정된 경로 없이 내비게이션 안내를 시작합니다.</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.Stop">
+      <summary>내비게이션 안내를 중지합니다.</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.UpdateUserLocation(Windows.Devices.Geolocation.Geocoordinate)">
+      <summary>지정된 지리적 위치를 사용하여 내비게이션 안내를 업데이트 합니다.</summary>
+      <param name="userLocation">사용자의 현재 위치입니다.</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.UpdateUserLocation(Windows.Devices.Geolocation.Geocoordinate,Windows.Devices.Geolocation.BasicGeoposition)">
+      <summary>지정된 지리적 위치를 사용하여 내비게이션 안내를 업데이트 합니다.</summary>
+      <param name="userLocation">사용자의 현재 위치입니다.</param>
+      <param name="positionOverride">userLocation에 지정된 고도, 위도 및 경도 대신 사용할 고도, 위도 및 경도입니다.</param>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs">
+      <summary>Rerouted 이벤트에 대한 데이터를 제공합니다.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs.Route">
+      <summary>경로를 재설정하여 만든 새 경로를 가져옵니다.</summary>
+      <returns>새 경로입니다.</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceRoadSegment">
+      <summary>경로 세그먼트의 도로를 나타냅니다.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.Id">
+      <summary>도로 세그먼트의 식별자를 가져옵니다.</summary>
+      <returns>도로 세그먼트의 식별자입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.IsHighway">
+      <summary>도로 세그먼트가 고속도로임을 나타내는 값을 가져옵니다.</summary>
+      <returns>도로 세그먼트가 고속도로이면 true, 그렇지 않으면 false입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.IsTollRoad">
+      <summary>도로 세그먼트가 유료 도로임을 나타내는 값을 가져옵니다.</summary>
+      <returns>도로 세그먼트가 유료 도로이면 true, 그렇지 않으면 false입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.IsTunnel">
+      <summary>도로 세그먼트가 터널임을 나타내는 값을 가져옵니다.</summary>
+      <returns>도로 세그먼트가 터널이면 true, 그렇지 않으면 false입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.Path">
+      <summary>도로 세그먼트를 설명하는 순서가 지정된 일련의 지리적 지점을 가져옵니다.</summary>
+      <returns>도로 세그먼트를 설명하는 순서가 지정된 일련의 지리적 지점입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.RoadName">
+      <summary>도로의 전체 이름을 가져옵니다.</summary>
+      <returns>도로의 전체 이름입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.ShortRoadName">
+      <summary>도로의 약식 이름을 가져옵니다.</summary>
+      <returns>도로의 약식 이름입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.SpeedLimit">
+      <summary>도로 세그먼트의 속도 제한을 가져옵니다.</summary>
+      <returns>도로 세그먼트의 속도 제한입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.TravelTime">
+      <summary>도로 세그먼트의 이동 시간을 가져옵니다.</summary>
+      <returns>도로 세그먼트의 이동 시간입니다.</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceRoadSignpost">
+      <summary>도로의 표지판을 나타냅니다.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.BackgroundColor">
+      <summary>표지판의 배경색을 가져옵니다.</summary>
+      <returns>표지판의 배경색입니다. 데이터를 사용할 수 없으면 이 값은 Blue를 반환합니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.Exit">
+      <summary>표지판에 쓰인 텍스트를 가져옵니다.</summary>
+      <returns>표지판에 쓰인 텍스트입니다. 데이터를 사용할 수 없으면 이 값은 null을 반환합니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.ExitDirections">
+      <summary>표지판에 쓰인 방향을 가져옵니다. 예를 들어, 도시 이름 및 거리입니다.</summary>
+      <returns>표지판에 쓰인 방향입니다. 데이터를 사용할 수 없으면 이 값은 빈 목록을 반환합니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.ExitNumber">
+      <summary>표지판에 쓰인 출구 번호를 가져옵니다.</summary>
+      <returns>표지판에 쓰인 출구 번호입니다. 데이터를 사용할 수 없으면 이 값은 null을 반환합니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.ForegroundColor">
+      <summary>표지판의 텍스트 색을 가져옵니다.</summary>
+      <returns>표지판의 텍스트 색입니다. 데이터를 사용할 수 없으면 이 값은 White를 반환합니다.</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceRoute">
+      <summary>내비게이션 안내가 제공하는 경로를 나타냅니다.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.BoundingBox">
+      <summary>경로를 포함하는 지리적 영역을 가져옵니다.</summary>
+      <returns>경로를 포함하는 지리적 영역입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.Distance">
+      <summary>경로의 전체 거리(미터)를 가져옵니다.</summary>
+      <returns>경로의 전체 거리(미터)입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.Duration">
+      <summary>경로의 예상 이동 시간을 가져옵니다.</summary>
+      <returns>경로의 예상 이동 시간입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.Maneuvers">
+      <summary>경로를 탐색하는 데 필요한 전략 목록을 가져옵니다.</summary>
+      <returns>경로를 탐색하는 데 필요한 전략 목록입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.Path">
+      <summary>경로를 따라 순서가 지정된 일련의 지리적 지점을 가져옵니다.</summary>
+      <returns>경로를 따라 순서가 지정된 일련의 지리적 지점입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.RoadSegments">
+      <summary>처음부터 끝날 때까지 순서대로 경로를 구성하는 도로 세그먼트 목록을 가져옵니다.</summary>
+      <returns>처음부터 끝날 때까지 순서대로 경로를 구성하는 도로 세그먼트 목록입니다.</returns>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceRoute.CanCreateFromMapRoute(Windows.Services.Maps.MapRoute)">
+      <summary>지정된 MapRoute 개체를 GuidanceRoute 개체로 전환할 수 있는지 여부를 확인합니다.</summary>
+      <returns>GuidanceRoute 개체를 만들 수 있으면 true, 그렇지 않으면 false입니다.</returns>
+      <param name="mapRoute">탐색이 가능한 경로입니다.</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceRoute.ConvertToMapRoute">
+      <summary>현재 GuidanceRoute를 기반으로 하는 MapRoute 개체를 만듭니다.</summary>
+      <returns>현재 GuidanceRoute를 기반으로 하는 MapRoute 개체입니다.</returns>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceRoute.TryCreateFromMapRoute(Windows.Services.Maps.MapRoute)">
+      <summary>지정된 MapRoute를 기반으로 하는 GuidanceRoute 개체를 만듭니다.</summary>
+      <returns>지정된 MapRoute 개체를 기반으로 하는 GuidanceRoute 개체입니다. 그렇지 않고 mapRoute를 변환할 수 없는 경우 null입니다.</returns>
+      <param name="mapRoute">탐색이 가능한 경로입니다.</param>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector">
+      <summary>위치 데이터를 수집하여 교통 상황을 보고합니다.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.Enabled">
+      <summary>교통 보고를 위해 위치 데이터가 수집되는지 여부를 나타내는 값을 가져오거나 설정합니다.</summary>
+      <returns>교통 보고를 위해 위치 데이터를 수집하는 경우 true, 그렇지 않으면 false입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.SpeedTrigger">
+      <summary>데이터 수집이 시작되는 속도(초당 미터 단위)를 가져오거나 설정합니다.</summary>
+      <returns>데이터 수집이 시작되는 속도(초당 미터 단위)입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.UploadFrequency">
+      <summary>교통이 보고되는 주기(초 단위)를 가져오거나 설정합니다.</summary>
+      <returns>교통이 보고되는 주기(초 단위)입니다.</returns>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.ClearLocalData">
+      <summary>GuidanceTelemetryCollector에 의해 로컬로 저장되는 위치 데이터를 지웁니다.</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.GetCurrent">
+      <summary>현재 원격 수집기에 대한 GuidanceTelemetryCollector 개체를 만듭니다.</summary>
+      <returns>현재 원격 수집기입니다.</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs">
+      <summary>GuidanceUpdated 이벤트에 데이터를 제공합니다.</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.AfterNextManeuver">
+      <summary>NextManeuver 뒤의 전략을 가져옵니다.</summary>
+      <returns>NextManeuver 뒤의 전략입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.AfterNextManeuverDistance">
+      <summary>현재 위치와 AfterNextManeuver 사이의 경로 거리(미터 단위)를 가져옵니다.</summary>
+      <returns>현재 위치와 AfterNextManeuver 사이의 경로 거리(미터 단위)입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.CurrentLocation">
+      <summary>현재 위치에서 탐색 조건을 가져옵니다.</summary>
+      <returns>현재 위치에서 탐색 조건입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.DistanceToDestination">
+      <summary>경로의 남은 거리(미터)를 가져옵니다.</summary>
+      <returns>경로의 남은 거리(미터)입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.ElapsedDistance">
+      <summary>업데이트 전에 경로를 따라 이동한 거리(미터 단위)를 가져옵니다.</summary>
+      <returns>업데이트 전에 경로를 따라 이동한 거리(미터 단위)입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.ElapsedTime">
+      <summary>업데이트 전에 경로를 이동하며 경과된 시간을 가져옵니다.</summary>
+      <returns>업데이트 전에 경로를 이동하며 경과된 시간입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.IsNewManeuver">
+      <summary>업데이트에 새로운 전략이 포함되었는지 여부를 나타내는 값을 가져옵니다.</summary>
+      <returns>업데이트에 새 전략이 포함된 경우 true, 그렇지 않으면 false입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.LaneInfo">
+      <summary>왼쪽에서 오른쪽 순서로 현재 위치에 가까운 차선 목록을 가져옵니다.</summary>
+      <returns>왼쪽에서 오른쪽 순서로 현재 위치에 가까운 차선 목록입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.Mode">
+      <summary>내비게이션 안내 형식을 가져옵니다.</summary>
+      <returns>내비게이션 안내 형식입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.NextManeuver">
+      <summary>현재 전략 뒤의 전략을 가져옵니다.</summary>
+      <returns>현재 전략 뒤의 전략입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.NextManeuverDistance">
+      <summary>현재 위치와 NextManeuver 사이의 경로 거리(미터 단위)를 가져옵니다.</summary>
+      <returns>현재 위치와 NextManeuver 사이의 경로 거리(미터 단위)입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.RoadName">
+      <summary>현재 도로 세그먼트의 전체 이름을 가져옵니다.</summary>
+      <returns>현재 도로 세그먼트의 전체 이름입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.Route">
+      <summary>업데이트된 경로를 가져옵니다.</summary>
+      <returns>업데이트된 경로입니다.</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.TimeToDestination">
+      <summary>목적지에 도달하기 위해 예상되는 이동 시간을 가져옵니다.</summary>
+      <returns>목적지에 도달하기 위해 예상되는 이동 시간입니다.</returns>
+    </member></members>
+</doc>

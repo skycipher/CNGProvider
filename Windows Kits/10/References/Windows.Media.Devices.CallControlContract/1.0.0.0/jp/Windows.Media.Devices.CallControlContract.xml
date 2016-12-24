@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.Devices.CallControlContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Media.Devices.CallControl">
+      <summary>電話関連デバイスの呼び出しを処理するためのプロパティ、コマンド、およびイベントを表します。</summary>
+    </member><member name="P:Windows.Media.Devices.CallControl.HasRinger">
+      <summary>テレフォニー デバイスに着信音が組み込まれているかどうかを示します。</summary>
+      <returns>ブール値。この値は、テレフォニー デバイスが着信音を受信した場合は True、受信しなかった場合は False。</returns>
+    </member><member name="E:Windows.Media.Devices.CallControl.AnswerRequested">
+      <summary>デバイスが電話応答要求を受け取ったときに発生します。</summary>
+    </member><member name="E:Windows.Media.Devices.CallControl.AudioTransferRequested">
+      <summary>デバイスがオーディオ転送要求を受け取ったときに発生します。</summary>
+    </member><member name="E:Windows.Media.Devices.CallControl.DialRequested">
+      <summary>デバイスから電話番号が入力されたときに発生します。</summary>
+    </member><member name="E:Windows.Media.Devices.CallControl.HangUpRequested">
+      <summary>デバイスが電話切断要求を受け取ったときに発生します。</summary>
+    </member><member name="E:Windows.Media.Devices.CallControl.KeypadPressed">
+      <summary>デバイスのキーパッド ボタンが押されたときに発生します。</summary>
+    </member><member name="E:Windows.Media.Devices.CallControl.RedialRequested">
+      <summary>デバイスがリダイヤル要求を受け取ったときに発生します。</summary>
+    </member><member name="M:Windows.Media.Devices.CallControl.EndCall(System.UInt64)">
+      <summary>指定した呼び出しを終了します。</summary>
+      <param name="callToken">指定した呼び出しの一意の識別子。</param>
+    </member><member name="M:Windows.Media.Devices.CallControl.FromId(System.String)">
+      <summary>渡された DeviceInformation ID で指定されたオーディオ通信機器を表す CallControl クラスを返します。</summary>
+      <returns>指定されたオーディオ通信デバイスを表すクラス。</returns>
+      <param name="deviceId">指定したオーディオ通信デバイスの DeviceInformation ID。</param>
+    </member><member name="M:Windows.Media.Devices.CallControl.GetDefault">
+      <summary>既定のオーディオ通信デバイスを表す CallControl クラスを返します。</summary>
+      <returns>既定のオーディオ通信デバイスを表すクラス。</returns>
+    </member><member name="M:Windows.Media.Devices.CallControl.IndicateActiveCall(System.UInt64)">
+      <summary>指定された呼び出しが現在アクティブであることを示します。</summary>
+      <param name="callToken">指定した呼び出しの一意の識別子。</param>
+    </member><member name="M:Windows.Media.Devices.CallControl.IndicateNewIncomingCall(System.Boolean,System.String)">
+      <summary>着信呼び出しがあることをデバイスに通知します。</summary>
+      <returns>この呼び出しを一意に識別する呼び出しトークン。</returns>
+      <param name="enableRinger">デバイスで組み込みの着信音をアクティブにするかどうかを指定します。</param>
+      <param name="callerId">着信呼び出し側 ID を指定する数値文字列。 このパラメーターは null の場合があり、多くの VoIP 呼び出しでは null です。</param>
+    </member><member name="M:Windows.Media.Devices.CallControl.IndicateNewOutgoingCall">
+      <summary>発信電話を示すデバイス インジケーターを更新します。</summary>
+      <returns>この呼び出しを一意に識別する呼び出しトークン。</returns>
+    </member><member name="T:Windows.Media.Devices.CallControlEventHandler">
+      <summary>AnswerRequested と AudioTransferRequested イベントを処理します。</summary>
+      <param name="sender">イベントを発生させた CallControl オブジェクト。</param>
+    </member><member name="T:Windows.Media.Devices.DialRequestedEventArgs">
+      <summary>DialRequested イベントの情報を格納します。</summary>
+    </member><member name="P:Windows.Media.Devices.DialRequestedEventArgs.Contact">
+      <summary>ダイヤル先となった連絡先を返します。</summary>
+      <returns>連絡先。</returns>
+    </member><member name="M:Windows.Media.Devices.DialRequestedEventArgs.Handled">
+      <summary>DialRequested イベントが処理されたことを示します。</summary>
+    </member><member name="T:Windows.Media.Devices.DialRequestedEventHandler">
+      <summary>DialRequested イベントを処理します。</summary>
+      <param name="sender">イベントを発生させた CallControl オブジェクト。</param>
+      <param name="e">イベントの情報が格納されているクラス。</param>
+    </member><member name="T:Windows.Media.Devices.KeypadPressedEventArgs">
+      <summary>KeypadPressed イベントの情報を格納します。</summary>
+    </member><member name="P:Windows.Media.Devices.KeypadPressedEventArgs.TelephonyKey">
+      <summary>デバイス上で押されたキーパッド ボタンの値を返します。</summary>
+      <returns>キー。 TelephonyKey 列挙値の 1 つです。</returns>
+    </member><member name="T:Windows.Media.Devices.KeypadPressedEventHandler">
+      <summary>KeypadPressed イベントを処理します。</summary>
+      <param name="sender">イベントを発生させた CallControl オブジェクト。</param>
+      <param name="e">イベントの情報が格納されているクラス。</param>
+    </member><member name="T:Windows.Media.Devices.RedialRequestedEventArgs">
+      <summary>RedialRequested イベントの情報を格納します。</summary>
+    </member><member name="M:Windows.Media.Devices.RedialRequestedEventArgs.Handled">
+      <summary>RedialRequested イベントが処理されたことを示します。</summary>
+    </member><member name="T:Windows.Media.Devices.RedialRequestedEventHandler">
+      <summary>RedialRequested イベントを処理します。</summary>
+      <param name="sender">イベントを発生させた CallControl オブジェクト。</param>
+      <param name="e">イベントの情報が格納されているクラス。</param>
+    </member><member name="T:Windows.Media.Devices.TelephonyKey">
+      <summary>テレフォニー デバイスのキーパッドでどのボタンを押したかを示します。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.A">
+      <summary>キーパッド ボタン A。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.B">
+      <summary>キーパッド ボタン B。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.C">
+      <summary>キーパッド ボタン C。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D">
+      <summary>キーパッド ボタン D。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D0">
+      <summary>0 キー パッド ボタン。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D1">
+      <summary>1 キー パッド ボタン。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D2">
+      <summary>2 キー パッド ボタン。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D3">
+      <summary>3 キー パッド ボタン。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D4">
+      <summary>4 キー パッド ボタン。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D5">
+      <summary>5 キー パッド ボタン。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D6">
+      <summary>6 キー パッド ボタン。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D7">
+      <summary>7 キー パッド ボタン。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D8">
+      <summary>8 キー パッド ボタン。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D9">
+      <summary>9 キー パッド ボタン。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.Pound">
+      <summary># キー パッド ボタン。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.Star">
+      <summary>* キー パッド ボタン。</summary>
+    </member></members>
+</doc>

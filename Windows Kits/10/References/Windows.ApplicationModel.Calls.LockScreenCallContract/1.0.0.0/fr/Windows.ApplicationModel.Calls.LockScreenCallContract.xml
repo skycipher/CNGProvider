@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Calls.LockScreenCallContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral">
+      <summary>L'objet LockScreenCallEndCallDeferral signale que l'application n'a plus besoin de différer son retrait de l'écran de verrouillage.</summary>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral.Complete">
+      <summary>Exécute le différé de la suppression de l'application à partir de l'écran de verrouillage, qui provoque la suppression de l'application de l'écran de verrouillage si elle n'a pas déjà été supprimée par d'autres moyens.</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs">
+      <summary>Contrôle la suppression d'une application à partir du verrouillage de l'écran.</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs.Deadline">
+      <summary>Obtient la date limite à laquelle l'application doit terminer le différé.</summary>
+      <returns>La date limite à laquelle l'application doit terminer le différé.</returns>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs.GetDeferral">
+      <summary>Demande de différer le comportement par défaut consistant à supprimer l'application de l'écran de verrouillage.</summary>
+      <returns>Lorsque cette méthode s'exécute, elle retourne un objet LockScreenCallEndCallDeferral qui signale lorsque l'application ne doit plus différer sa suppression de l'écran de verrouillage.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.LockScreenCallUI">
+      <summary>Gère la communication vers et depuis l'écran de verrouillage.</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.LockScreenCallUI.CallTitle">
+      <summary>Obtient et définit une brève description de la nature de l'appel.</summary>
+      <returns>Brève description de la nature de l'appel, par exemple, « Appel vidéo avec Jane Doe ».</returns>
+    </member><member name="E:Windows.ApplicationModel.Calls.LockScreenCallUI.Closed">
+      <summary>Se produit lorsque l'interaction de l'écran de verrouillage est terminée.</summary>
+    </member><member name="E:Windows.ApplicationModel.Calls.LockScreenCallUI.EndRequested">
+      <summary>Se produit lorsque l'écran de verrouillage souhaite terminer l'appel.</summary>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallUI.Dismiss">
+      <summary>Supprime l'application de l'interface utilisateur de l'écran de verrouillage.</summary>
+    </member></members>
+</doc>

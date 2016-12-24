@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.Core.AnimationMetrics.AnimationMetricsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.Core.AnimationMetrics.AnimationDescription">
+      <summary>특정 대상에 대해 수행되는 개별 애니메이션 효과의 컬렉션을 노출하며 불투명, 배율 조정, 변환 애니메이션 등 전체 Windows 애니메이션으로 구성됩니다.</summary>
+    </member><member name="M:Windows.UI.Core.AnimationMetrics.AnimationDescription.#ctor(Windows.UI.Core.AnimationMetrics.AnimationEffect,Windows.UI.Core.AnimationMetrics.AnimationEffectTarget)">
+      <summary>특정 애니메이션 및 대상을 사용하여 AnimationDescription 개체를 만듭니다.</summary>
+      <param name="effect">대상에 적용할 애니메이션 효과입니다.</param>
+      <param name="target">애니메이션 효과의 대상입니다.</param>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.AnimationDescription.Animations">
+      <summary>AnimationDescription 개체와 연결된 애니메이션의 컬렉션을 가져옵니다.</summary>
+      <returns>각각 이 AnimationDescription 개체에 지정된 애니메이션 효과를 나타내는 IPropertyAnimation 인스턴스의 컬렉션입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.AnimationDescription.DelayLimit">
+      <summary>대상에서 개체의 컬렉션에 적용할 애니메이션의 최대 누적 지연 시간을 가져옵니다.</summary>
+      <returns>100나노초 단위로 표현된 지연 제한 시간입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.AnimationDescription.StaggerDelay">
+      <summary>응용 프로그램에서 여러 개체가 포함된 대상의 각 개체에 애니메이션 효과를 주는 시간 간격을 가져옵니다. StaggerDelayFactor 및 DelayLimit와 함께 사용되는 StaggerDelay는 애니메이션 효과의 상대적인 타이밍을 제어하는 데 사용된 세 가지 요소 중 하나입니다.</summary>
+      <returns>100나노초 단위로 표현된 스태거 지연 시간입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.AnimationDescription.StaggerDelayFactor">
+      <summary>해당 크기만큼 이전 지연 인스턴스를 증가 또는 감소시키는 스태거 지연의 각 발생에 적용되는 승수를 가져옵니다.</summary>
+      <returns>스태거 지연에 적용할 비율입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.AnimationDescription.ZOrder">
+      <summary>동일한 애니메이션 효과에서 다른 AnimationDescription 개체에 상대적인 AnimationDescription 개체의 z 순서 위치를 가져옵니다.</summary>
+      <returns>Z 순서 값입니다.</returns>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.AnimationEffect">
+      <summary>애니메이션을 지정합니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.AddToGrid">
+      <summary>모눈에 정렬된 컬렉션에 개체를 추가하였습니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.AddToList">
+      <summary>목록에 개체를 추가하였습니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.AddToSearchGrid">
+      <summary>모눈에 정렬된 검색 결과에 개체를 추가하였습니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.AddToSearchList">
+      <summary>세로로 정렬된 검색 결과에 개체를 추가하였습니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.Collapse">
+      <summary>내용을 숨기기 위해 개체 크기를 줄입니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.CrossFade">
+      <summary>한 항목이 해당 위치에서 다른 페이드로 페이드 아웃됩니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DeleteFromGrid">
+      <summary>모눈에 정렬된 컬렉션에서 개체를 제거하였습니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DeleteFromList">
+      <summary>목록에서 개체를 제거하였습니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DeleteFromSearchGrid">
+      <summary>모눈에 정렬된 검색 결과에서 개체를 제거하였습니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DeleteFromSearchList">
+      <summary>세로로 정렬된 검색 결과에서 개체를 제거하였습니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DragBetweenEnter">
+      <summary>끌기 소스가 두 항목 사이에서 이동했습니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DragBetweenLeave">
+      <summary>끌기 소스가 이제 두 항목 사이에 없습니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DragSourceEnd">
+      <summary>사용자가 항목 끌기를 중지했습니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.DragSourceStart">
+      <summary>사용자가 항목을 끌기 시작했습니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.EnterPage">
+      <summary>한 페이지의 콘텐츠가 표시 상태로 전환됩니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.Expand">
+      <summary>개체 크기를 확대하여 추가 콘텐츠를 표시합니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.FadeIn">
+      <summary>컨텍스트 컨트롤이 서서히 나타납니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.FadeOut">
+      <summary>컨텍스트 컨트롤이 서서히 사라집니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.Hide">
+      <summary>누르거나 클릭한 대상 주위로 UI가 축소됩니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.HideEdgeUI">
+      <summary>화면 가장자리에 표시된 UI가 제거됩니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.HidePanel">
+      <summary>화면에서 내용의 일부가 제거됩니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.HidePopup">
+      <summary>화면에서 팝업 컨트롤이 제거됩니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.Peek">
+      <summary>타일의 내용이 위나 아래로 이동하여 일반적으로 숨겨져 있는 타일 부분이 표시됩니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.PointerDown">
+      <summary>포인팅 장치(예: 마우스 또는 터치)가 항목에 연결되었습니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.PointerUp">
+      <summary>포인팅 장치(예: 마우스 또는 터치)가 항목에서 연결 해제되었습니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.Reposition">
+      <summary>개체 위치를 변경합니다. 더 이상 특정 애니메이션이 적용되지 않습니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.Reveal">
+      <summary>누르거나 클릭한 대상 주위로 UI가 확장됩니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.ShowEdgeUI">
+      <summary>화면 가장자리에서 UI를 가져옵니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.ShowPanel">
+      <summary>내용의 일부가 화면에 표시됩니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.ShowPopup">
+      <summary>화면에 팝업 컨트롤이 나타납니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.SwipeDeselect">
+      <summary>살짝 밀기 상호 작용으로 개체 선택이 취소되었습니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.SwipeReveal">
+      <summary>선택한 십자 슬라이드일 수 있는 항목에 대한 누르고 있기로 트리거됩니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.SwipeSelect">
+      <summary>살짝 밀기 상호 작용으로 개체가 선택되었습니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.TransitionContent">
+      <summary>대규모 콘텐츠 대체가 발생합니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.TransitionPage">
+      <summary>한 페이지가 다른 페이지로 바뀝니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffect.UpdateBadge">
+      <summary>타일의 배지 오버레이를 업데이트합니다.</summary>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget">
+      <summary>애니메이션의 참가자를 지정합니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Added">
+      <summary>추가될 개체입니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Affected">
+      <summary>개체와 개체 사이에 다른 개체를 놓으면 다른 위치로 이동하는 개체와 같이 애니메이션의 영향을 받는 개체입니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Background">
+      <summary>항목의 배경 개체입니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Content">
+      <summary>항목의 내용입니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Deleted">
+      <summary>삭제될 개체입니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Deselected">
+      <summary>십자 슬라이드 선택 취소 상호 작용을 통해 선택이 취소된 개체입니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.DragSource">
+      <summary>끌려는 개체입니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Hidden">
+      <summary>현재 숨겨진 개체입니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Incoming">
+      <summary>이전 콘텐츠를 바꿀 새 콘텐츠입니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Outgoing">
+      <summary>새 콘텐츠로 바꿀 이전 콘텐츠입니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Outline">
+      <summary>영역 주위의 윤곽선 테두리입니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Primary">
+      <summary>단일 대상 애니메이션의 유일한 참가자입니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Remaining">
+      <summary>다른 항목이 제거된 후 남아 있는 개체입니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Revealed">
+      <summary>확장 시 표시될 개체됩니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.RowIn">
+      <summary>모눈에 추가하고 있는 행입니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.RowOut">
+      <summary>모눈에서 곧 제거할 행입니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Selected">
+      <summary>십자 슬라이드 선택 상호 작용을 통해 선택되는 개체입니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Selection">
+      <summary>항목이 선택되었음을 나타내는 개체(예: 확인 표시)입니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Shown">
+      <summary>이전에는 표시되지 않았지만 표시될 개체입니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.AnimationEffectTarget.Tapped">
+      <summary>누르거나 클릭한 개체입니다.</summary>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.IPropertyAnimation">
+      <summary>모든 애니메이션 효과에 공통인 애니메이션 속성에 대해 설명합니다.</summary>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.IPropertyAnimation.Control1">
+      <summary>시간이 지나면서 이 개체의 이 속성을 애니메이션하는 방법을 설명하는 큐빅 Bézier 곡선에 대한 첫 번째 제어 지점의 위치를 가져옵니다.</summary>
+      <returns>제어점의 위치입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.IPropertyAnimation.Control2">
+      <summary>시간이 지나면서 이 개체의 이 속성을 애니메이션하는 방법을 설명하는 큐빅 Bézier 곡선에 대한 두 번째 제어 지점의 위치를 가져옵니다.</summary>
+      <returns>제어점의 위치입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.IPropertyAnimation.Delay">
+      <summary>애니메이션을 시작하도록 지시하고 애니메이션을 실제로 그리기 시작할 때 사이의 시간 간격을 가져옵니다.</summary>
+      <returns>애니메이션을 시작하기 전 대기 시간입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.IPropertyAnimation.Duration">
+      <summary>애니메이션을 수행해야 하는 시간을 가져옵니다. 여기에는 지연이 포함되지 않습니다.</summary>
+      <returns>애니메이션의 기간입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.IPropertyAnimation.Type">
+      <summary>이 개체로 표현되는 애니메이션 유형을 가져옵니다.</summary>
+      <returns>애니메이션 형식 값 중 하나입니다.</returns>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.OpacityAnimation">
+      <summary>불투명(페이드 인 또는 페이드 아웃) 애니메이션에 대한 매개 변수를 검색할 수 있는 메서드를 제공합니다.</summary>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.Control1">
+      <summary>시간이 지나면서 불투명도를 애니메이션하는 방법을 설명하는 큐빅 Bézier 곡선에 대한 첫 번째 제어 지점의 위치를 가져옵니다.</summary>
+      <returns>제어점의 위치입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.Control2">
+      <summary>시간이 지나면서 불투명도를 애니메이션하는 방법을 설명하는 큐빅 Bézier 곡선에 대한 두 번째 제어 지점의 위치를 가져옵니다.</summary>
+      <returns>제어점의 위치입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.Delay">
+      <summary>불투명 애니메이션을 시작하도록 지시하고 애니메이션을 실제로 그리기 시작할 때 사이의 시간 간격을 가져옵니다.</summary>
+      <returns>불투명 애니메이션을 시작하기 전 대기 시간입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.Duration">
+      <summary>불투명 애니메이션을 수행해야 하는 시간을 가져옵니다. 여기에는 지연이 포함되지 않습니다.</summary>
+      <returns>애니메이션의 기간입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.FinalOpacity">
+      <summary>개체의 최종 불투명도를 가져옵니다.</summary>
+      <returns>최종 불투명도입니다. 0.0 값은 완전 투명을 나타내며 1.0 값은 완전 불투명을 나타냅니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.InitialOpacity">
+      <summary>개체의 초기 불투명도를 가져옵니다.</summary>
+      <returns>초기 불투명도(있는 경우)입니다. 0.0 값은 완전 투명을 나타내며 1.0 값은 완전 불투명을 나타냅니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.OpacityAnimation.Type">
+      <summary>이 개체로 표현되는 애니메이션 유형을 가져옵니다.</summary>
+      <returns>애니메이션 형식 값 중 하나입니다.</returns>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.PropertyAnimation">
+      <summary>모든 속성 애니메이션 유형에 공통인 애니메이션 속성 값을 검색할 수 있는 메서드를 제공합니다.</summary>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.PropertyAnimation.Control1">
+      <summary>시간이 지나면서 이 개체의 이 속성을 애니메이션하는 방법을 설명하는 큐빅 Bézier 곡선에 대한 첫 번째 제어 지점의 위치를 가져옵니다.</summary>
+      <returns>제어점의 위치입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.PropertyAnimation.Control2">
+      <summary>시간이 지나면서 이 개체의 이 속성을 애니메이션하는 방법을 설명하는 큐빅 Bézier 곡선에 대한 두 번째 제어 지점의 위치를 가져옵니다.</summary>
+      <returns>제어점의 위치입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.PropertyAnimation.Delay">
+      <summary>애니메이션을 시작하도록 지시하고 애니메이션을 실제로 그리기 시작할 때 사이의 시간 간격을 가져옵니다.</summary>
+      <returns>애니메이션을 시작하기 전 대기 시간입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.PropertyAnimation.Duration">
+      <summary>애니메이션을 수행해야 하는 시간을 가져옵니다. 여기에는 지연이 포함되지 않습니다.</summary>
+      <returns>애니메이션의 기간입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.PropertyAnimation.Type">
+      <summary>이 개체로 표현되는 애니메이션 유형을 가져옵니다.</summary>
+      <returns>애니메이션 형식 값 중 하나입니다.</returns>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.PropertyAnimationType">
+      <summary>PropertyAnimation 개체로 표현되는 애니메이션 유형을 지정합니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.PropertyAnimationType.Opacity">
+      <summary>개체의 투명도에 애니메이션 효과를 적용합니다. 해당 개체는 OpacityAnimation입니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.PropertyAnimationType.Scale">
+      <summary>개체 크기, 확대 또는 축소에 애니메이션 효과를 적용합니다. 해당 개체는 ScaleAnimation입니다.</summary>
+    </member><member name="F:Windows.UI.Core.AnimationMetrics.PropertyAnimationType.Translation">
+      <summary>개체를 이동합니다. 해당 개체는 TranslationAnimation입니다.</summary>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.ScaleAnimation">
+      <summary>배율 조정(확대 또는 축소) 애니메이션에 대한 매개 변수를 검색할 수 있는 메서드를 제공합니다.</summary>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.Control1">
+      <summary>시간이 지나면서 배율을 애니메이션하는 방법을 설명하는 큐빅 Bézier 곡선에 대한 첫 번째 제어 지점의 위치를 가져옵니다.</summary>
+      <returns>제어점의 위치입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.Control2">
+      <summary>시간이 지나면서 배율을 애니메이션하는 방법을 설명하는 큐빅 Bézier 곡선에 대한 두 번째 제어 지점의 위치를 가져옵니다.</summary>
+      <returns>제어점의 위치입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.Delay">
+      <summary>배율 애니메이션을 시작하도록 지시하고 애니메이션을 실제로 그리기 시작할 때 사이의 시간 간격을 가져옵니다.</summary>
+      <returns>배율 조정 애니메이션을 시작하기 전 대기 시간입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.Duration">
+      <summary>배율 애니메이션을 수행해야 하는 시간을 가져옵니다. 여기에는 지연이 포함되지 않습니다.</summary>
+      <returns>애니메이션의 기간입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.FinalScaleX">
+      <summary>개체에 대한 최종 가로 배율 인수를 가져옵니다.</summary>
+      <returns>값을 곱할 최종 가로 배율입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.FinalScaleY">
+      <summary>개체에 대한 최종 세로 배율 인수를 가져옵니다.</summary>
+      <returns>값을 곱할 최종 세로 배율입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.InitialScaleX">
+      <summary>개체에 대한 초기 가로 배율 인수를 가져옵니다.</summary>
+      <returns>값을 곱할 초기 가로 배율(있는 경우)입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.InitialScaleY">
+      <summary>개체에 대한 초기 세로 배율 인수를 가져옵니다.</summary>
+      <returns>값을 곱할 초기 세로 배율(있는 경우)입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.NormalizedOrigin">
+      <summary>개체의 보통 크기에 상대적인 점으로 표현되는 배율 조정 애니메이션의 중심점을 가져옵니다.</summary>
+      <returns>정규화된 중점입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.ScaleAnimation.Type">
+      <summary>이 개체로 표현되는 애니메이션 유형을 가져옵니다.</summary>
+      <returns>애니메이션 형식 값 중 하나입니다.</returns>
+    </member><member name="T:Windows.UI.Core.AnimationMetrics.TranslationAnimation">
+      <summary>변환(새 위치로 이동) 애니메이션에 대한 매개 변수를 검색할 수 있는 메서드를 제공합니다.</summary>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.TranslationAnimation.Control1">
+      <summary>시간이 지나면서 변환을 애니메이션하는 방법을 설명하는 큐빅 Bézier 곡선에 대한 첫 번째 제어 지점의 위치를 가져옵니다.</summary>
+      <returns>제어점의 위치입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.TranslationAnimation.Control2">
+      <summary>시간이 지나면서 변환을 애니메이션하는 방법을 설명하는 큐빅 Bézier 곡선에 대한 두 번째 제어 지점의 위치를 가져옵니다.</summary>
+      <returns>제어점의 위치입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.TranslationAnimation.Delay">
+      <summary>전환 애니메이션을 시작하도록 지시하고 애니메이션을 실제로 그리기 시작할 때 사이의 시간 간격을 가져옵니다.</summary>
+      <returns>변환 애니메이션을 시작하기 전 지연 시간입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.TranslationAnimation.Duration">
+      <summary>전환 애니메이션을 수행해야 하는 시간을 가져옵니다. 여기에는 지연이 포함되지 않습니다.</summary>
+      <returns>애니메이션의 기간입니다.</returns>
+    </member><member name="P:Windows.UI.Core.AnimationMetrics.TranslationAnimation.Type">
+      <summary>이 개체로 표현되는 애니메이션 유형을 가져옵니다.</summary>
+      <returns>애니메이션 형식 값 중 하나입니다.</returns>
+    </member></members>
+</doc>

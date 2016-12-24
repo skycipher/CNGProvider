@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.ApplicationSettings.ApplicationsSettingsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.ApplicationSettings.SettingsEdgeLocation">
+      <summary>Spécifie le bord de l'écran où les symboles de paramètres apparaissent.</summary>
+      <deprecated type="deprecate">SettingsEdgeLocation est déconseillé et peut ne pas fonctionner sur toutes les plateformes. Pour plus d'informations, consultez MSDN.</deprecated>
+    </member><member name="F:Windows.UI.ApplicationSettings.SettingsEdgeLocation.Left">
+      <summary>Les symboles de paramètres apparaissent sur le bord gauche de l'écran.</summary>
+    </member><member name="F:Windows.UI.ApplicationSettings.SettingsEdgeLocation.Right">
+      <summary>Les symboles de paramètres apparaissent sur le bord droit de l'écran.</summary>
+    </member><member name="T:Windows.UI.ApplicationSettings.SettingsPane">
+      <summary>Une classe statique qui permet à l'application de contrôler le volet des symboles des paramètres. L'application peut ajouter ou supprimer des commandes, recevoir une notification lorsque l'utilisateur ouvre le volet, ou ouvrir le volet par programmation.</summary>
+      <deprecated type="deprecate">SettingsPane peut être modifié ou non disponible pour les versions ultérieures à Windows 10. Au lieu d'utiliser un SettingsPane, intégrez les options de paramètres dans l'expérience d'application. Pour plus d'informations, consultez les instructions pour les paramètres d'application.</deprecated>
+    </member><member name="P:Windows.UI.ApplicationSettings.SettingsPane.Edge">
+      <summary>Obtient une valeur indiquant si le symbole des paramètres apparaît sur le bord gauche ou droit de l'écran.</summary>
+      <deprecated type="deprecate">SettingsPane peut être modifié ou non disponible pour les versions ultérieures à Windows 10. Au lieu d'utiliser un SettingsPane, intégrez les options de paramètres dans l'expérience d'application. Pour plus d'informations, consultez les instructions pour les paramètres d'application.</deprecated>
+      <returns>Emplacement des symboles des paramètres.</returns>
+    </member><member name="E:Windows.UI.ApplicationSettings.SettingsPane.CommandsRequested">
+      <summary>Se produit lorsque l'utilisateur ouvre le volet des paramètres. L'écoute de cet événement permet à l'application d'initialiser les commandes de configuration et de suspendre son interface utilisateur jusqu'à ce que l'utilisateur ferme le volet.</summary>
+      <deprecated type="deprecate">SettingsPane peut être modifié ou non disponible pour les versions ultérieures à Windows 10. Au lieu d'utiliser un SettingsPane, intégrez les options de paramètres dans l'expérience d'application. Pour plus d'informations, consultez les instructions pour les paramètres d'application.</deprecated>
+    </member><member name="M:Windows.UI.ApplicationSettings.SettingsPane.GetForCurrentView">
+      <summary>Obtient un objet SettingsPane associé avec la vue d'application actuelle (c'est-à-dire avec CoreWindow).</summary>
+      <deprecated type="deprecate">SettingsPane peut être modifié ou non disponible pour les versions ultérieures à Windows 10. Au lieu d'utiliser un SettingsPane, intégrez les options de paramètres dans l'expérience d'application. Pour plus d'informations, consultez les instructions pour les paramètres d'application.</deprecated>
+      <returns>Volet des paramètres.</returns>
+    </member><member name="M:Windows.UI.ApplicationSettings.SettingsPane.Show">
+      <summary>Affiche le volet des symboles des paramètres à l'utilisateur.</summary>
+      <deprecated type="deprecate">SettingsPane peut être modifié ou non disponible pour les versions ultérieures à Windows 10. Au lieu d'utiliser un SettingsPane, intégrez les options de paramètres dans l'expérience d'application. Pour plus d'informations, consultez les instructions pour les paramètres d'application.</deprecated>
+    </member><member name="T:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest">
+      <summary>Contient des propriétés qui sont uniquement disponibles pendant l'événement CommandsRequested.</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequest peut être modifié ou non disponible pour les versions ultérieures à Windows 10. Au lieu d'utiliser un SettingsPane, intégrez les options de paramètres dans l'expérience d'application. Pour plus d'informations, consultez les instructions pour les paramètres d'application.</deprecated>
+    </member><member name="P:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest.ApplicationCommands">
+      <summary>Un vecteur qui est disponible pendant l'événement CommandsRequested. Ajoutez les objets SettingsCommand pour les rendre disponibles pour l'interface utilisateur SettingsPane.</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequest peut être modifié ou non disponible pour les versions ultérieures à Windows 10. Au lieu d'utiliser un SettingsPane, intégrez les options de paramètres dans l'expérience d'application. Pour plus d'informations, consultez les instructions pour les paramètres d'application.</deprecated>
+      <returns>Vecteur virtualisé des objets SettingsCommand.</returns>
+    </member><member name="T:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs">
+      <summary>Contient les arguments qui sont disponibles à partir de l'objet événement au cours de l'événement CommandsRequested.</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequestedEventArgs peut être modifié ou non disponible pour les versions ultérieures à Windows 10. Au lieu d'utiliser un SettingsPane, intégrez les options de paramètres dans l'expérience d'application. Pour plus d'informations, consultez les instructions pour les paramètres d'application.</deprecated>
+    </member><member name="P:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs.Request">
+      <summary>Une instance de SettingsPaneCommandsRequest qui est rendue disponible pendant l'événement CommandsRequested.</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequestedEventArgs peut être modifié ou non disponible pour les versions ultérieures à Windows 10. Au lieu d'utiliser un SettingsPane, intégrez les options de paramètres dans l'expérience d'application. Pour plus d'informations, consultez les instructions pour les paramètres d'application.</deprecated>
+      <returns>Objet de demande des commandes.</returns>
+    </member></members>
+</doc>

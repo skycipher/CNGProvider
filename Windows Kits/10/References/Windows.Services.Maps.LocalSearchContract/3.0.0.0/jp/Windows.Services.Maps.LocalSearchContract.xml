@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Services.Maps.LocalSearchContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Services.Maps.LocalSearch.LocalCategories">
+      <summary>FindLocalLocationsAsync メソッドを呼び出すときに検索結果を制限するのに使用できる検索カテゴリの名前を指定します。</summary>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.All">
+      <summary>すべての検索カテゴリを表す値を取得します。</summary>
+      <returns>検索結果が検索カテゴリにより制限されていないことを示す値。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.BankAndCreditUnions">
+      <summary>銀行と信用組合の検索カテゴリの名前を取得します。</summary>
+      <returns>銀行と信用組合の検索カテゴリの名前。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.EatDrink">
+      <summary>飲食店の検索カテゴリの名前を取得します。</summary>
+      <returns>飲食店の検索カテゴリの名前。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.Hospitals">
+      <summary>病院の検索カテゴリの名前を取得します。</summary>
+      <returns>病院の検索カテゴリの名前。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.HotelsAndMotels">
+      <summary>ホテルとモーテルの検索カテゴリの名前を取得します。</summary>
+      <returns>ホテルとモーテルの検索カテゴリの名前。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.Parking">
+      <summary>駐車場の検索カテゴリの名前を取得します。</summary>
+      <returns>駐車場の検索カテゴリの名前。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.SeeDo">
+      <summary>観光名所の検索カテゴリの名前を取得します。</summary>
+      <returns>観光名所の検索カテゴリの名前。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.Shop">
+      <summary>店舗の検索カテゴリの名前を取得します。</summary>
+      <returns>店舗の検索カテゴリの名前。</returns>
+    </member><member name="T:Windows.Services.Maps.LocalSearch.LocalLocation">
+      <summary>会社または場所を表します。</summary>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.Address">
+      <summary>会社または場所の住所を取得します。</summary>
+      <returns>会社または場所の住所。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.Category">
+      <summary>この場所のカテゴリを取得します。</summary>
+      <returns>この場所のカテゴリ。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.DataAttribution">
+      <summary>会社または場所の情報を指定したデータ ソース名を取得します。</summary>
+      <returns>会社または場所の情報を指定したデータ ソース名。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.Description">
+      <summary>会社または場所の説明を取得します。</summary>
+      <returns>会社または場所の説明。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.DisplayName">
+      <summary>会社または場所の名前を取得します。</summary>
+      <returns>会社または場所の名前。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.HoursOfOperation">
+      <summary>この場所の営業時間を取得します。</summary>
+      <returns>この場所の営業時間。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.Identifier">
+      <summary>会社または場所の検索結果識別子を取得します。</summary>
+      <returns>会社または場所の検索結果識別子。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.PhoneNumber">
+      <summary>会社または場所の電話番号を取得します。</summary>
+      <returns>会社または場所の電話番号。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.Point">
+      <summary>会社または場所の地域を取得します。</summary>
+      <returns>会社または場所の地域。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.RatingInfo">
+      <summary>この場所の評価情報を取得します。</summary>
+      <returns>この場所の評価情報。</returns>
+    </member><member name="T:Windows.Services.Maps.LocalSearch.LocalLocationFinder">
+      <summary>会社と場所を検索します。</summary>
+    </member><member name="M:Windows.Services.Maps.LocalSearch.LocalLocationFinder.FindLocalLocationsAsync(System.String,Windows.Devices.Geolocation.Geocircle,System.String,System.UInt32)">
+      <summary>指定された検索条件を満たす会社および場所に関する情報を取得します。</summary>
+      <returns>指定された検索条件を満たす型 LocalLocationFinderResult の関連する会社または場所。</returns>
+      <param name="searchTerm">検索のクエリ テキスト (検索対象)。</param>
+      <param name="searchArea">検索に含める地理的区分。</param>
+      <param name="localCategory">検索結果の制限に使用する検索カテゴリ。 1 つ以上の LocalCategories プロパティを使用して localCategory を指定することをお勧めします。 複数のカテゴリを指定するには、区切り記号としてセミコロン ";" を使用します。</param>
+      <param name="maxResults">検索で返す結果の最大数。</param>
+    </member><member name="T:Windows.Services.Maps.LocalSearch.LocalLocationFinderResult">
+      <summary>FindLocalLocationsAsync メソッドによって実行される検索の結果を表します。</summary>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocationFinderResult.LocalLocations">
+      <summary>指定された検索条件を満たす会社および場所を取得します (存在する場合)。</summary>
+      <returns>指定された検索条件を満たす型 LocalLocation の会社および場所 (存在する場合)。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocationFinderResult.Status">
+      <summary>FindLocalLocationsAsync メソッドによって実行される検索の状態を取得します。</summary>
+      <returns>FindLocalLocationsAsync メソッドによって実行される検索の状態。</returns>
+    </member><member name="T:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus">
+      <summary>FindLocalLocationsAsync メソッドによって実行される検索の状態を指定します。</summary>
+    </member><member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.InvalidCategory">
+      <summary>指定されたカテゴリの 1 つ以上が無効です。</summary>
+    </member><member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.InvalidCredentials">
+      <summary>検索を実行するのに必要な資格情報がアプリにありません。</summary>
+    </member><member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.InvalidSearchArea">
+      <summary>指定された地理的区分が無効です。</summary>
+    </member><member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.InvalidSearchTerm">
+      <summary>指定された検索テキストが無効です。</summary>
+    </member><member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.NetworkFailure">
+      <summary>ネットワーク エラーが発生した検索。</summary>
+    </member><member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.NotSupported">
+      <summary>検索はこのデバイスではサポートされていません。</summary>
+    </member><member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.Success">
+      <summary>検索が正常に完了しました。</summary>
+    </member><member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.UnknownError">
+      <summary>検索で不明なエラーが発生しました。</summary>
+    </member><member name="T:Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem">
+      <summary>場所の営業時間が含まれます。</summary>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem.Day">
+      <summary>プロパティが営業している日を取得します。</summary>
+      <returns>プロパティが営業している日。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem.Span">
+      <summary>プロパティの営業期間を取得します。</summary>
+      <returns>プロパティの営業期間。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem.Start">
+      <summary>場所の営業開始を取得します。</summary>
+      <returns>場所の営業開始。</returns>
+    </member><member name="T:Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo">
+      <summary>場所の評価情報が含まれます。</summary>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo.AggregateRating">
+      <summary>場所の総合評価を取得します。</summary>
+      <returns>場所の総合評価。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo.ProviderIdentifier">
+      <summary>評価のプロバイダー ID を取得します。</summary>
+      <returns>評価のプロバイダー ID。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo.RatingCount">
+      <summary>この場所の評価数を取得します。</summary>
+      <returns>この場所の評価数。</returns>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkClickEventArgs">
+      <summary>BusinessLandmarkClick イベントのデータを指定します。</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkClickEventArgs.#ctor">
+      <summary>MapControlBusinessLandmarkClickEventArgs クラスの新しいインスタンスを初期化します。</summary>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkClickEventArgs.LocalLocations">
+      <summary>ビジネス ランドマークに対応する会社を取得します。</summary>
+      <returns>ビジネス ランドマークに対応する型 LocalLocation の会社を取得します。</returns>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerEnteredEventArgs">
+      <summary>BusinessLandmarkPointerEntered イベントのデータを指定します。</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerEnteredEventArgs.#ctor">
+      <summary>新しい MapControlBusinessLandmarkPointerEnteredEventArgs オブジェクトを作成します。</summary>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerEnteredEventArgs.LocalLocations">
+      <summary>ビジネス ランドマークのローカルの場所を取得します。</summary>
+      <returns>ビジネス ランドマークのローカルの場所。</returns>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerExitedEventArgs">
+      <summary>BusinessLandmarkPointerExited イベントのデータを指定します。</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerExitedEventArgs.#ctor">
+      <summary>新しい MapControlBusinessLandmarkPointerExitedEventArgs オブジェクトを作成します。</summary>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerExitedEventArgs.LocalLocations">
+      <summary>ビジネス ランドマークのローカルの場所を取得します。</summary>
+      <returns>ビジネス ランドマークのローカルの場所。</returns>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkRightTappedEventArgs">
+      <summary>BusinessLandmarkRightTapped イベントのデータを指定します。</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkRightTappedEventArgs.#ctor">
+      <summary>MapControlBusinessLandmarkRightTappedEventArgs クラスの新しいインスタンスを初期化します。</summary>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkRightTappedEventArgs.LocalLocations">
+      <summary>ビジネス ランドマークに対応する会社を取得します。</summary>
+      <returns>ビジネス ランドマークに対応する型 LocalLocation の会社を取得します。</returns>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper">
+      <summary>ユーザーがビジネスの場所または交通フィーチャをクリックしたことを示すイベントを提供します。</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.#ctor(Windows.UI.Xaml.Controls.Maps.MapControl)">
+      <summary>指定された MapControl 用の MapControlDataHelper クラスのインスタンスを作成します。</summary>
+      <param name="map">MapControlDataHelper にビジネスおよび交通の場所を提供するマップ コントロール。</param>
+    </member><member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.BusinessLandmarkClick">
+      <summary>ユーザーがビジネスの場所をタップまたはマウスの左ボタンでクリックしたときに発生します。 MapControlBusinessLandmarkClickEventArgs のインスタンスはこのイベントのデータを提供します。</summary>
+    </member><member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.BusinessLandmarkPointerEntered">
+      <summary>ポインターがビジネス ランドマークに入ったことを示します。</summary>
+    </member><member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.BusinessLandmarkPointerExited">
+      <summary>ポインターがビジネス ランドマークから出たことを示します。</summary>
+    </member><member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.BusinessLandmarkRightTapped">
+      <summary>ユーザーがビジネスの場所を押したまま、またはマウスの右ボタンでクリックしたときに発生します。 MapControlBusinessLandmarkRightTappedEventArgs のインスタンスはこのイベントのデータを提供します。</summary>
+    </member><member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.TransitFeatureClick">
+      <summary>ユーザーが交通フィーチャーをタップまたはマウスの左ボタンでクリックしたときに発生します。 MapControlTransitFeatureClickEventArgs のインスタンスはこのイベントのデータを提供します。</summary>
+    </member><member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.TransitFeaturePointerEntered">
+      <summary>ポインターが交通フィーチャーに入ったことを示します。</summary>
+    </member><member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.TransitFeaturePointerExited">
+      <summary>ポインターが交通フィーチャーから出たことを示します。</summary>
+    </member><member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.TransitFeatureRightTapped">
+      <summary>ユーザーが交通フィーチャーを押したまま、またはマウスの右ボタンでクリックしたときに発生します。 MapControlTransitFeatureRightTappedEventArgs のインスタンスはこのイベントのデータを提供します。</summary>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs">
+      <summary>TransitFeatureClick イベントのデータを指定します。</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs.#ctor">
+      <summary>MapControlTransitFeatureClickEventArgs クラスの新しいインスタンスを初期化します。</summary>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs.DisplayName">
+      <summary>交通フィーチャーの名前を取得します。</summary>
+      <returns>交通フィーチャーの名前。</returns>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs.Location">
+      <summary>交通フィーチャーの地理的な場所を取得します。</summary>
+      <returns>交通フィーチャーの地理的な場所。</returns>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs.TransitProperties">
+      <summary>交通フィーチャーのプロパティ バッグを取得します。</summary>
+      <returns>交通フィーチャーのプロパティ バッグ。</returns>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs">
+      <summary>TransitFeaturePointerEntered イベントのデータを指定します。</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs.#ctor">
+      <summary>新しい MapControlTransitFeaturePointerEnteredEventArgs オブジェクトを作成します。</summary>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs.DisplayName">
+      <summary>表示名を取得します。</summary>
+      <returns>表示名。</returns>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs.Location">
+      <summary>場所を取得します。</summary>
+      <returns>場所。</returns>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs.TransitProperties">
+      <summary>交通プロパティを取得します。</summary>
+      <returns>交通プロパティ。</returns>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs">
+      <summary>TransitFeaturePointerExited イベントにデータを提供します。</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs.#ctor">
+      <summary>新しい MapControlTransitFeaturePointerExitedEventArgs オブジェクトを作成します。</summary>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs.DisplayName">
+      <summary>表示名を取得します。</summary>
+      <returns>表示名。</returns>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs.Location">
+      <summary>場所を取得します。</summary>
+      <returns>場所。</returns>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs.TransitProperties">
+      <summary>交通プロパティを取得します。</summary>
+      <returns>交通プロパティ。</returns>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs">
+      <summary>TransitFeatureRightTapped イベントのデータを指定します。</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs.#ctor">
+      <summary>MapControlTransitFeatureRightTappedEventArgs クラスの新しいインスタンスを初期化します。</summary>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs.DisplayName">
+      <summary>交通フィーチャーの名前を取得します。</summary>
+      <returns>交通フィーチャーの名前。</returns>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs.Location">
+      <summary>交通フィーチャーの地理的な場所を取得します。</summary>
+      <returns>交通フィーチャーの地理的な場所。</returns>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs.TransitProperties">
+      <summary>交通フィーチャーのプロパティ バッグを取得します。</summary>
+      <returns>交通フィーチャーのプロパティ バッグ。</returns>
+    </member></members>
+</doc>

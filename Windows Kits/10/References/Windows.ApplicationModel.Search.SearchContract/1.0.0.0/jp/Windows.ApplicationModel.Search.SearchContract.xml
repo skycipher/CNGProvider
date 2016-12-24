@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Search.SearchContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs">
+      <summary>searchPane オブジェクトに関連付けられている querychanged のイベントに関するデータを提供します。</summary>
+      <deprecated type="deprecate">ISearchPaneQueryChangedEventArgs は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs.Language">
+      <summary>ユーザーのテキスト入力デバイスに現在関連付けられている言語を示すインターネット技術標準化委員会 (IETF: Internet Engineering Task Force) の言語タグ (BCP 47 標準)。</summary>
+      <returns>インターネット技術標準化委員会 (IETF: Internet Engineering Task Force) BCP 47 標準言語タグ。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs.LinguisticDetails">
+      <summary>ユーザーが IME を使用して入力する、クエリ テキストに関する情報を提供するオブジェクトです。</summary>
+      <returns>クエリ テキストに関する情報を提供するオブジェクト。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs.QueryText">
+      <summary>querychanged イベントが発生したときの検索ボックスのテキスト。</summary>
+      <returns>現在のクエリ テキスト。</returns>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPane">
+      <summary>使用しないでください。 代わりに Windows.UI.Xaml.Controls.SearchBox (XAML) または WinJS.UI.SearchBox (HTML) コントロールを使用します。</summary>
+      <deprecated type="deprecate">SearchPane は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.Language">
+      <summary>ユーザーのテキスト入力デバイスに現在関連付けられている言語を示すインターネット技術標準化委員会 (IETF: Internet Engineering Task Force) の言語タグ (BCP 47 標準)。</summary>
+      <returns>インターネット技術標準化委員会 (IETF: Internet Engineering Task Force) BCP 47 標準言語タグ。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.PlaceholderText">
+      <summary>ユーザーが文字を何も入力しなかった場合の検索ボックスのプレースホルダー テキスト。</summary>
+      <returns>検索ボックスに表示されるプレース ホルダー テキスト。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.QueryText">
+      <summary>検索ペインの検索ボックス内の現在のテキスト。</summary>
+      <returns>現在のクエリ テキスト。 検索ペインを使用しなかった場合、これは空の文字列になります。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.SearchHistoryContext">
+      <summary>検索の文脈を識別し、そのアプリケーションでのユーザーの検索の履歴を保存するのに使用される文字列。</summary>
+      <returns>検索履歴コンテキスト文字列。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.SearchHistoryEnabled">
+      <summary>ユーザーがこのアプリケーションで実行した前回の検索内容を自動追跡して、候補の提供に使用するかどうかを示します。</summary>
+      <returns>ユーザーの検索履歴が自動的に追跡され、提案の提示に使用される場合は true。それ以外の場合は false。 既定値は true です。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.ShowOnKeyboardInput">
+      <summary>入力によってユーザーが検索ペインを開くことができるかどうかを取得または設定します。</summary>
+      <returns>ユーザーが入力して検索できる場合は True。 それ以外の場合は false です。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.Visible">
+      <summary>検索ペインが開いているかどうかを示します。</summary>
+      <returns>検索ペインが表示されている場合は true。それ以外の場合は false。</returns>
+    </member><member name="E:Windows.ApplicationModel.Search.SearchPane.QueryChanged">
+      <summary>ユーザーが検索ボックス内のテキストを変更したときに発生します。</summary>
+    </member><member name="E:Windows.ApplicationModel.Search.SearchPane.QuerySubmitted">
+      <summary>ユーザーが検索ボックス内のテキストを送信し、アプリが検索結果を表示する必要があるときに発生します。</summary>
+    </member><member name="E:Windows.ApplicationModel.Search.SearchPane.ResultSuggestionChosen">
+      <summary>アプリで提供され、検索ペインに表示された結果の候補の 1 つをユーザーが選択したときに発生します。</summary>
+    </member><member name="E:Windows.ApplicationModel.Search.SearchPane.SuggestionsRequested">
+      <summary>ユーザーのクエリ テキストが変更され、アプリが検索ペインに新しい候補を表示する必要があるときに発生します。</summary>
+    </member><member name="E:Windows.ApplicationModel.Search.SearchPane.VisibilityChanged">
+      <summary>ユーザーが検索ペインを開いたときまたは閉じたときに発生します。</summary>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPane.GetForCurrentView">
+      <summary>アプリケーション内の検索にユーザーが使用できる、検索ペインのインスタンスを取得します。</summary>
+      <deprecated type="deprecate">ISearchPaneStatics は、Windows 10 よりも後のリリースで変更されたり使用できなくなる可能性があります。</deprecated>
+      <returns>現在のアプリケーション内の検索のための、一貫し、タッチに適した検索ボックスおよび任意選択検索の推奨事項を提供する、検索ペインのインスタンスです。</returns>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPane.HideThisApplication">
+      <summary>現在のアプリケーションの UI を非表示にします。</summary>
+      <deprecated type="deprecate">ISearchPaneStaticsWithHideThisApplication は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPane.SetLocalContentSuggestionSettings(Windows.ApplicationModel.Search.LocalContentSuggestionSettings)">
+      <summary>ローカル ファイルに基づく候補が、自動的に検索ペインに表示されるかどうかを指定すると共に、これらの候補を Windows が検索してフィルター処理するための検索条件を定義します。</summary>
+      <deprecated type="deprecate">ISearchPane は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+      <param name="settings">ローカル コンテンツ提案の新しい設定。</param>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPane.Show">
+      <summary>検索ペインを表示します。</summary>
+      <deprecated type="deprecate">ISearchPane は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPane.Show(System.String)">
+      <summary>指定された初期クエリ文字列を含む検索ペインを表示します。</summary>
+      <deprecated type="deprecate">ISearchPane は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+      <param name="query">初期クエリ文字列。</param>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPane.TrySetQueryText(System.String)">
+      <summary>検索ペインの検索ボックス内にテキストを設定しようと試行します。</summary>
+      <deprecated type="deprecate">ISearchPane は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+      <returns>検索ボックスのテキストが正常に設定された場合は True。 それ以外の場合は false です。</returns>
+      <param name="query">検索ペインの検索ボックス内に表示されるクエリ テキスト。</param>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs">
+      <summary>searchPane オブジェクトに関連付けられている querychanged のイベントに関するデータを提供します。</summary>
+      <deprecated type="deprecate">SearchPaneQueryChangedEventArgs は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs.Language">
+      <summary>ユーザーのテキスト入力デバイスに現在関連付けられている言語を示すインターネット技術標準化委員会 (IETF: Internet Engineering Task Force) の言語タグ (BCP 47 標準)。</summary>
+      <returns>インターネット技術標準化委員会 (IETF: Internet Engineering Task Force) BCP 47 標準言語タグ。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs.LinguisticDetails">
+      <summary>ユーザーが IME を使用して入力する、クエリ テキストに関する言語的情報を提供するオブジェクトです。</summary>
+      <returns>クエリ テキストに関する言語情報を提供するオブジェクト。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs.QueryText">
+      <summary>querychanged イベントが発生したときの検索ボックスのテキスト。</summary>
+      <returns>querychanged イベントが発生したときの検索ボックスのテキスト。</returns>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs">
+      <summary>searchPane に関連付けられている querysubmitted のイベントに関するデータを提供します</summary>
+      <deprecated type="deprecate">SearchPaneQuerySubmittedEventArgs は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs.Language">
+      <summary>ユーザーのテキスト入力デバイスに現在関連付けられている言語を示すインターネット技術標準化委員会 (IETF: Internet Engineering Task Force) の言語タグ (BCP 47 標準)。</summary>
+      <returns>インターネット技術標準化委員会 (IETF: Internet Engineering Task Force) BCP 47 標準言語タグ。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs.LinguisticDetails">
+      <summary>ユーザーが IME を使用して入力する、クエリ テキストに関する言語的情報を提供するオブジェクトです。</summary>
+      <returns>クエリ テキストに関する言語情報を提供するオブジェクト。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs.QueryText">
+      <summary>検索ペインを介して送信されたテキスト。</summary>
+      <returns>送信されたクエリ テキスト。</returns>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs">
+      <summary>searchPane オブジェクトに関連付けられている resultsuggestionchosen のイベントに関するデータを提供します。</summary>
+      <deprecated type="deprecate">SearchPaneResultSuggestionChosenEventArgs は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs.Tag">
+      <summary>ユーザーが選択した提案結果のタグ。</summary>
+      <returns>選択された検索結果に対するアプリケーション定義のタグ。</returns>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest">
+      <summary>候補および候補の要求に関する情報を格納します。</summary>
+      <deprecated type="deprecate">SearchPaneSuggestionsRequest は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest.IsCanceled">
+      <summary>候補を表示する要求がキャンセルされるかどうか示します。</summary>
+      <returns>要求が取り消された場合は true。それ以外の場合は false。 既定値は false です。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest.SearchSuggestionCollection">
+      <summary>現在のクエリに対して検索ペインに表示される候補。 アプリケーションは searchSuggestionCollection オブジェクトにそれらを追加することで、表示する推奨事項について説明します。</summary>
+      <returns>表示する提案。 それらをこの searchSuggestionCollection オブジェクトに追加すると、アプリケーションは推奨情報を表示します。</returns>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest.GetDeferral">
+      <summary>アプリケーションが候補の要求に対して非同期に応答するようにするオブジェクトを取得します。</summary>
+      <deprecated type="deprecate">ISearchPaneSuggestionsRequest は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+      <returns>検索の推奨事項のための要求が満たされた場合に、アプリケーションにシグナルを送信させるオブジェクトです。</returns>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral">
+      <summary>suggestionsrequested イベントを処理している間に、searchSuggestionCollection オブジェクトの設定が完了したことを通知するアプリケーションを有効化します。</summary>
+      <deprecated type="deprecate">SearchPaneSuggestionsRequestDeferral は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral.Complete">
+      <summary>suggestionsrequested イベントを処理している間に、アプリケーションが searchSuggestionCollection オブジェクトの設定を完了したことを通知します。</summary>
+      <deprecated type="deprecate">ISearchPaneSuggestionsRequestDeferral は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs">
+      <summary>searchPane オブジェクトに関連付けられている suggestionsrequested のイベントに関するデータを提供します。</summary>
+      <deprecated type="deprecate">SearchPaneSuggestionsRequestedEventArgs は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs.Language">
+      <summary>ユーザーのテキスト入力デバイスに現在関連付けられている言語を示すインターネット技術標準化委員会 (IETF: Internet Engineering Task Force) の言語タグ (BCP 47 標準)。</summary>
+      <returns>インターネット技術標準化委員会 (IETF: Internet Engineering Task Force) BCP 47 標準言語タグ。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs.LinguisticDetails">
+      <summary>ユーザーが IME を使用して入力する、クエリ テキストに関する言語的情報を提供するオブジェクトです。</summary>
+      <returns>クエリ テキストに関する言語情報を提供するオブジェクト。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs.QueryText">
+      <summary>suggestionsrequested イベントが発生したとき、アプリケーションによって提案が提供される検索ボックス内のテキスト。</summary>
+      <returns>アプリケーションによって提案が提供されるクエリ テキスト。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs.Request">
+      <summary>要求に関する提案と情報を格納するオブジェクトです。</summary>
+      <returns>要求に関する提案と情報を格納するオブジェクト。</returns>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs">
+      <summary>searchPane オブジェクトに関連付けられている visibilitychanged のイベントに関するデータを提供します。</summary>
+      <deprecated type="deprecate">SearchPaneVisibilityChangedEventArgs は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs.Visible">
+      <summary>検索ペインが開いているかどうかを示します。</summary>
+      <returns>検索ペインが開いている場合は true。それ以外の場合は false。</returns>
+    </member></members>
+</doc>

@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Scanners.ScannerDeviceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Scanners.IImageScannerFormatConfiguration">
+      <summary>當掃描器輸入來源傳輸獲得的影像資料至應用程式時，設定檔案格式。</summary>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerFormatConfiguration.DefaultFormat">
+      <summary>在新的掃描工作階段開始時取得掃描來源的預設檔案格式。</summary>
+      <returns>檔案類型。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerFormatConfiguration.Format">
+      <summary>自裝置到用戶端應用程式取得或設定影像的目前檔案傳輸格式以供資料收集使用。</summary>
+      <returns>檔案類型。</returns>
+    </member><member name="M:Windows.Devices.Scanners.IImageScannerFormatConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>判斷輸入掃描器是否支援指定的檔案格式。</summary>
+      <returns>如果支援指定的檔案類型，則為 true；否則為 false。</returns>
+      <param name="value">檔案類型。</param>
+    </member><member name="T:Windows.Devices.Scanners.IImageScannerSourceConfiguration">
+      <summary>常見於平台與進紙器來源的查詢和設定掃描設定。</summary>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.ActualResolution">
+      <summary>取得掃描來源的實際水平和垂直掃描解析度，以 DPI 為單位。</summary>
+      <returns>水平和垂直解析度 (以像素為單位)。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.AutoCroppingMode">
+      <summary>取得或設定自動裁切模式。</summary>
+      <returns>掃描的自動裁剪方式。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.Brightness">
+      <summary>設定目前亮度，用以從掃描來源擷取影像資料。 在新的掃描工作階段中，這個屬性的值是 DefaultBrightness 屬性。</summary>
+      <returns>亮度等級。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.BrightnessStep">
+      <summary>取得間距大小，其資料來源的亮度等級可以在最小和最大值之間提高或降低。</summary>
+      <returns>增加或減少的步驟大小。 典型的值為 1。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.ColorMode">
+      <summary>取得或設定掃描來源的色彩模式。 新的掃描工作階段開始時，這個屬性和 DefaultColorMode 屬性相同。</summary>
+      <returns>色彩模式。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.Contrast">
+      <summary>設定或取得從掃描來源擷取影像資料所使用的目前對比等級。 在新的掃描工作階段開始的時候，這個屬性是設定為 DefaultContrast 屬性。</summary>
+      <returns>對比層級</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.ContrastStep">
+      <summary>取得間距大小，其資料來源的對比等級可以在最小和最大值之間提高或降低。</summary>
+      <returns>增加或減少的步驟大小。 典型的值為 1。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DefaultBrightness">
+      <summary>取得掃描來源所支援的預設亮度等級。</summary>
+      <returns>掃描器的預設亮度等級。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DefaultColorMode">
+      <summary>取得或設定掃描來源的預設色彩模式。</summary>
+      <returns>色彩模式。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DefaultContrast">
+      <summary>取得掃描來源所支援的預設對比等級。</summary>
+      <returns>預設對比層級。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DesiredResolution">
+      <summary>取得或設定水平和垂直解析度掃描 (以 DPI 為單位) 以供應用程式要求的掃描來源使用。</summary>
+      <returns>水平和垂直解析度 (以像素為單位)。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxBrightness">
+      <summary>取得掃描來源所支援的最大亮度等級。</summary>
+      <returns>最大亮度等級，通常是 1000。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxContrast">
+      <summary>取得掃描來源所支援的最大對比等級。</summary>
+      <returns>最大對比等級，通常是 1000。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxResolution">
+      <summary>取得掃描來源的最大水平和垂直掃描解析度 (以 DPI 為單位)。</summary>
+      <returns>水平和垂直解析度 (以像素為單位)。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxScanArea">
+      <summary>取得最大掃描區域維度，以英吋為單位。 最大掃描寬度是要讓進紙器和平台掃描文件的文件最長寬度。</summary>
+      <returns>區域的寬度和高度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinBrightness">
+      <summary>取得掃描來源所支援的最小亮度等級。</summary>
+      <returns>最小亮度等級，通常是 -1000。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinContrast">
+      <summary>取得掃描來源所支援的最小對比等級。</summary>
+      <returns>最小對比等級，通常是 -1000。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinResolution">
+      <summary>取得掃描來源的最小水平和垂直掃描解析度 (以 DPI 為單位)。</summary>
+      <returns>水平和垂直解析度 (以像素為單位)。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinScanArea">
+      <summary>取得最小掃描區域，以英吋為單位。 最小掃描的區域是為了讓平台或掃描器加以搜描之文件的最小大小。</summary>
+      <returns>區域的寬度和高度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.OpticalResolution">
+      <summary>取得掃描來源的光學水平和垂直掃描解析度 (以 DPI 為單位)。</summary>
+      <returns>水平和垂直解析度 (以像素為單位)。</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.SelectedScanRegion">
+      <summary>取得或設定選取掃描區域中的原點座標 (水平和垂直) 和維度 (寬度和高度)，以英吋為單位。 當 AutoCroppingMode 屬性未設定為 [已停用] 時，則會忽略這個屬性。</summary>
+      <returns>矩形的位置和大小。</returns>
+    </member><member name="M:Windows.Devices.Scanners.IImageScannerSourceConfiguration.IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)">
+      <summary>決定掃描來源是否支援指定的 ImageScannerAutoCroppingMode。</summary>
+      <returns>如果該裝置支援值模式，則為 true，否則為 false。</returns>
+      <param name="value">自動裁切模式要掃描的影像。</param>
+    </member><member name="M:Windows.Devices.Scanners.IImageScannerSourceConfiguration.IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)">
+      <summary>決定掃描來源是否可以用指定的色彩模式來掃描和傳輸影像。</summary>
+      <returns>如果掃描器可用值模式來掃描圖像，則為 true；否則為 false。</returns>
+      <param name="value">色彩模式。</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScanner">
+      <summary>表示要掃描之影像的屬性。</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.AutoConfiguration">
+      <summary>取得及設定自動設定掃描裝置的掃描設定，例如檔案格式，包括壓縮以傳送掃描資料。 如果掃描器不能自動設定，則會忽略這個屬性。</summary>
+      <returns>掃描組態。 如果掃描器不能自動設定，則為 null。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.DefaultScanSource">
+      <summary>取得或設定掃描裝置的預設掃描來源。</summary>
+      <returns>掃描資源的型別。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.DeviceId">
+      <summary>取得這個掃描器裝置的 PnP 裝置識別項。</summary>
+      <returns>PnP 裝置識別項。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.FeederConfiguration">
+      <summary>取得或設定送紙器掃描裝置的掃描設定，例如頁面大小、方向與掃描解析度。</summary>
+      <returns>掃描器的送紙器組態。 如果沒有任何送紙器則為 null。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.FlatbedConfiguration">
+      <summary>取得及設定平台掃描裝置的掃描設定，例如掃描解析度與色彩模式。</summary>
+      <returns>掃描器平台的掃描組態。 如果沒有任何平台則為 null。</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.FromIdAsync(System.String)">
+      <summary>根據掃描器裝置資訊識別碼，建立 ImageScanner 物件的執行個體。 這個方法對於中介裝置列舉是必要的。</summary>
+      <returns>ImageScanner 物件。</returns>
+      <param name="deviceId">裝置資訊識別碼。 請參閱 DeviceInformation.Id 屬性。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.GetDeviceSelector">
+      <summary>傳回應用程式可用於列舉掃描裝置的類別選取字串。 這個方法對於列舉中介裝置是必要的。</summary>
+      <returns>類別選取。</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.IsPreviewSupported(Windows.Devices.Scanners.ImageScannerScanSource)">
+      <summary>決定指定的掃描來源是否支援掃描預覽。</summary>
+      <returns>當指定的掃描來源支援預覽時，傳回 True，否則傳回 False。</returns>
+      <param name="scanSource">掃描來源。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.IsScanSourceSupported(Windows.Devices.Scanners.ImageScannerScanSource)">
+      <summary>決定指定的掃描來源是否可供掃描器使用。</summary>
+      <returns>如果有掃描來源，平台或送紙器皆可，則為 ture；否則為 false。</returns>
+      <param name="value">掃描來源。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.ScanFilesToFolderAsync(Windows.Devices.Scanners.ImageScannerScanSource,Windows.Storage.StorageFolder)">
+      <summary>以指定的掃描來源開始掃描工作，並將一個或多個影像寫入一個多頁檔案，例如 TIFF、XPS，以及 PDF ； 或者一個或多個單頁的檔案至指定的資料夾位置，例如 DIB、PNG、JPG 和 TIFF 。 傳回掃描的進度。</summary>
+      <returns>從 ImageScannerScanResult 和 UInt32，這表示目標資料夾中已傳輸多少個檔案上的 WIA 掃描工作的進度為基礎的掃描的影像檔案的清單。</returns>
+      <param name="scanSource">影像掃描來源。</param>
+      <param name="storageFolder">掃描檔案的目標資料夾位置。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.ScanPreviewToStreamAsync(Windows.Devices.Scanners.ImageScannerScanSource,Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>從指定的來源掃描一個影像，並套用最低掃描解析度和選取的影像檔案格式。</summary>
+      <returns>掃描和掃描檔案格式的進度。</returns>
+      <param name="scanSource">影像掃描來源。</param>
+      <param name="targetStream">掃描的影像檔。</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerAutoConfiguration">
+      <summary>表示掃描器之自動設定的掃描來源。</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerAutoConfiguration.DefaultFormat">
+      <summary>在新的掃描工作階段開始時之掃描來源的預設檔案格式。</summary>
+      <returns>檔案類型。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerAutoConfiguration.Format">
+      <summary>自裝置到用戶端應用程式取得或設定影像的目前檔案傳輸格式以供資料收集使用。</summary>
+      <returns>檔案類型。</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerAutoConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>判斷輸入掃描器是否支援指定的檔案格式。</summary>
+      <returns>如果支援指定的檔案類型，則為 true；否則為 false。</returns>
+      <param name="value">檔案類型。</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerAutoCroppingMode">
+      <summary>指定掃描裝置自動裁切模式。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerAutoCroppingMode.Disabled">
+      <summary>已停用自動偵測。 在新的掃描工作階段開始的時候，這個 AutoCroppingMode 屬性根據預設是設定為此值。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerAutoCroppingMode.MultipleRegion">
+      <summary>將多重的掃描區域掃描成單獨、個別的影像。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerAutoCroppingMode.SingleRegion">
+      <summary>將單一的掃描區域掃描成單獨、個別的影像。</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerColorMode">
+      <summary>指定掃描來源色彩模式。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.AutoColor">
+      <summary>裝置會根據掃描內容自動偵測正確的顏色模式。 例如在選擇彩色、灰階及黑白時，應該依賴裝置而不是應用程式。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.Color">
+      <summary>24 位元 RGB 色彩 (每個色頻 8 位元的 3 色頻)。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.Grayscale">
+      <summary>8 位元或 4 位元灰階 (每個色頻 8 或 4 位元的 1 色頻)。 如果裝置支援 4 和 8 位元灰階 DefaultColorMode 屬性將使用 8 位元。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.Monochrome">
+      <summary>1 位元雙色調，也稱為單色或「黑白」(每個色頻 1 位元的 1 色頻)。</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerFeederConfiguration">
+      <summary>表示掃描器的送紙器掃描來源。</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ActualResolution">
+      <summary>取得掃描器送紙器的實際水平和垂直掃描解析度，以 DPI 為單位。</summary>
+      <returns>水平和垂直解析度 (以像素為單位)。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.AutoCroppingMode">
+      <summary>取得或設定自動裁切模式。</summary>
+      <returns>掃描的自動裁剪方式。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.AutoDetectPageSize">
+      <summary>取得或設定掃描器的送紙器的頁面大小自動偵測功能。</summary>
+      <returns>如果頁面大小自動偵測功能已啟用則為 true，否則為 false。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Brightness">
+      <summary>自掃描器的送紙器中取得或設定目前亮度以供等級擷取影像資料使用。 在新的掃描工作階段開始的時候，這個屬性是設定為 DefaultBrightness 屬性。</summary>
+      <returns>目前的音量。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.BrightnessStep">
+      <summary>取得間距大小，其資料來源的亮度等級可以在最小和最大值之間提高或降低。</summary>
+      <returns>增加或減少的步驟大小。 典型的值為 1。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.CanAutoDetectPageSize">
+      <summary>如果裝置可在掃描時透過送紙器自動偵測掃描的文件頁面大小，則傳回 True；否則傳回 False。</summary>
+      <returns>如果裝置可在掃描時透過送紙器自動偵測掃描的文件頁面大小，則為 True，否則為 False。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.CanScanAhead">
+      <summary>表示掃描器裝置是否可以透過其送紙器預先掃描。</summary>
+      <returns>表示掃描器送紙器是否可以預先掃描。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.CanScanDuplex">
+      <summary>取得掃描器的送紙器是否能夠雙面掃描 (掃描文件頁面的正反兩面)。 在雙工模式下掃描時，兩個頁邊的掃描都適用於相同的掃描設定 (例如色彩模式和掃描解析度)。</summary>
+      <returns>表示是否可以使用雙面掃描。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ColorMode">
+      <summary>取得或設定掃描器送紙器的色彩模式選項。</summary>
+      <returns>色彩模式。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Contrast">
+      <summary>設定或取得從掃描器送紙器擷取影像資料所使用的目前對比等級。 在新的掃描工作階段開始的時候，這個屬性是設定為 DefaultContrast 屬性。</summary>
+      <returns>對比層級</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ContrastStep">
+      <summary>取得間距大小，其資料來源的對比等級可以在最小和最大值之間提高或降低。</summary>
+      <returns>增加或減少的步驟大小。 典型的值為 1。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultBrightness">
+      <summary>取得掃描器送紙器所支援的預設亮度等級。</summary>
+      <returns>掃描器的預設亮度等級。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultColorMode">
+      <summary>取得或設定掃描器送紙器的預設色彩模式。</summary>
+      <returns>色彩模式。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultContrast">
+      <summary>取得掃描器送紙器所支援的預設對比等級。</summary>
+      <returns>預設對比層級。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultFormat">
+      <summary>在新的掃描工作階段開始時取得掃描器送紙器的預設檔案格式。</summary>
+      <returns>檔案類型。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DesiredResolution">
+      <summary>取得或設定水平和垂直解析度掃描 (以 DPI 為單位) 以供應用程式要求的掃描器送紙器使用。</summary>
+      <returns>水平和垂直解析度 (以像素為單位)。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Duplex">
+      <summary>表示掃描器送紙器是否可以掃描文件頁面的正反面。</summary>
+      <returns>如果送紙器可掃描頁面的正反面，則傳回 True。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Format">
+      <summary>自掃描器的送紙器到用戶端的應用程式取得或設定影像的目前檔案傳輸格式以供資料收集使用。</summary>
+      <returns>檔案類型。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxBrightness">
+      <summary>取得掃描器送紙器所支援的最大亮度等級。</summary>
+      <returns>最大亮度等級，通常是 1000。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxContrast">
+      <summary>取得掃描器送紙器所支援的最大對比等級。</summary>
+      <returns>最大對比等級，通常是 1000。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxNumberOfPages">
+      <summary>在掃描器停止前，取得或設定應用程式可於一次掃描工作中掃描的最大頁面非影像數目。</summary>
+      <returns>頁數。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxResolution">
+      <summary>取得掃描器送紙器的最大水平和垂直掃描解析度 (以 DPI 為單位)。</summary>
+      <returns>水平和垂直解析度 (以像素為單位)。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxScanArea">
+      <summary>取得最大掃描區域維度，以英吋為單位。 最大掃描寬度是要讓進紙器和平台掃描文件的文件最長寬度。</summary>
+      <returns>區域的寬度和高度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinBrightness">
+      <summary>取得掃描器送紙器所支援的最小亮度等級。</summary>
+      <returns>最小亮度等級，通常是 -1000。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinContrast">
+      <summary>取得掃描器送紙器所支援的最小對比等級。</summary>
+      <returns>最小對比等級，通常是 -1000。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinResolution">
+      <summary>取得掃描器送紙器的最小水平和垂直掃描解析度 (以 DPI 為單位)。</summary>
+      <returns>水平和垂直解析度 (以像素為單位)。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinScanArea">
+      <summary>取得最小掃描區域，以英吋為單位。 最小掃描的區域是為了讓掃描器加以搜描之文件的最小大小。</summary>
+      <returns>區域的寬度和高度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.OpticalResolution">
+      <summary>取得掃描器送紙器的光學水平和垂直掃描解析度 (以 DPI 為單位)。</summary>
+      <returns>水平和垂直解析度 (以像素為單位)。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.PageOrientation">
+      <summary>取得或設定目前選取的頁面方向，表示如何將文件放入掃描器的送紙器進紙盤。</summary>
+      <returns>頁面的方向。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.PageSize">
+      <summary>從送紙器取得或設定目前選取的頁面大小以供掃描。</summary>
+      <returns>頁面大小。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.PageSizeDimensions">
+      <summary>取得選取的頁面大小的維度 (寬度和高度) 和方向。(以 mil 為單位 (1/1000 "))</summary>
+      <returns>頁面大小。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ScanAhead">
+      <summary>表示是否預先掃描。</summary>
+      <returns>true 表示預先掃描。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.SelectedScanRegion">
+      <summary>取得或設定選取掃描區域中的原點座標 (水平和垂直) 和維度 (寬度和高度)，以英吋為單位。 當 AutoCroppingMode 屬性不是 [已停用] 時，則會忽略這個屬性。</summary>
+      <returns>掃描區域 (單位為英吋)。</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)">
+      <summary>傳回掃描機的送紙器是否支援指定的 ImageScannerAutoCroppingMode。</summary>
+      <returns>表示裝置是否支援值模式。</returns>
+      <param name="value">自動裁切模式要掃描的影像。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)">
+      <summary>傳回掃描器的送紙器是否可以用指定的色彩模式來掃描和傳輸影像。</summary>
+      <returns>表示掃描器是否可以掃描值模式中的影像。</returns>
+      <param name="value">色彩模式。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>判斷掃描器的送紙器是否支援指定的檔案格式。</summary>
+      <returns>表示是否支援指定的檔案類型。</returns>
+      <param name="value">檔案類型。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsPageSizeSupported(Windows.Graphics.Printing.PrintMediaSize,Windows.Graphics.Printing.PrintOrientation)">
+      <summary>傳回送紙器是否可以掃描特定頁面大小與方向的文件。</summary>
+      <returns>表示掃描工具可以用於掃描的 pageSize 和 pageOrientation 值。</returns>
+      <param name="pageSize">頁面大小。</param>
+      <param name="pageOrientation">頁面方向。</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration">
+      <summary>表示掃描器的平台掃描來源。</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.ActualResolution">
+      <summary>取得平台掃描器的實際水平和垂直掃描解析度，以 DPI 為單位。</summary>
+      <returns>水平和垂直解析度 (以像素為單位)。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.AutoCroppingMode">
+      <summary>取得或設定自動裁切模式。</summary>
+      <returns>掃描的自動裁剪方式。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.Brightness">
+      <summary>自掃描器的平台中取得或設定目前亮度等級以供擷取影像資料使用。 在新的掃描工作階段開始的時候，這個屬性是設定為 DefaultBrightness 屬性。</summary>
+      <returns>目前的音量。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.BrightnessStep">
+      <summary>取得間距大小，其資料來源的亮度等級可以在最小和最大值之間提高或降低。</summary>
+      <returns>增加或減少的步驟大小。 典型的值為 1。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.ColorMode">
+      <summary>取得或設定平台掃描器的色彩模式選項。</summary>
+      <returns>色彩模式。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.Contrast">
+      <summary>設定或取得從掃描來源擷取影像資料所使用的目前對比等級。 在新的掃描工作階段開始的時候，這個屬性是設定為 DefaultContrast 屬性。</summary>
+      <returns>對比層級</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.ContrastStep">
+      <summary>取得間距大小，其資料來源的對比等級可以在最小和最大值之間提高或降低。</summary>
+      <returns>增加或減少的步驟大小。 典型的值為 1。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultBrightness">
+      <summary>取得掃描器平台所支援的預設亮度等級。</summary>
+      <returns>掃描器的預設亮度等級。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultColorMode">
+      <summary>取得或設定掃描器平台的預設色彩模式。</summary>
+      <returns>色彩模式。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultContrast">
+      <summary>取得掃描器平台所支援的預設對比等級。</summary>
+      <returns>預設對比層級。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultFormat">
+      <summary>在新的掃描工作階段開始時取得掃描器平台的預設檔案格式。</summary>
+      <returns>檔案類型。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DesiredResolution">
+      <summary>取得或設定水平和垂直解析度掃描 (以 DPI 為單位) 以供應用程式要求的掃描器平台使用。</summary>
+      <returns>水平和垂直解析度 (以像素為單位)。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.Format">
+      <summary>自掃描器的平台到用戶端的應用程式取得或設定影像的目前檔案傳輸格式以供資料收集使用。</summary>
+      <returns>檔案類型。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxBrightness">
+      <summary>取得掃描器平台所支援的最大亮度等級。</summary>
+      <returns>最大亮度等級，通常是 1000。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxContrast">
+      <summary>取得掃描器平台所支援的最大對比等級。</summary>
+      <returns>最大對比等級，通常是 1000。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxResolution">
+      <summary>取得掃描器平台的最大水平和垂直掃描解析度 (以 DPI 為單位)。</summary>
+      <returns>水平和垂直解析度 (以像素為單位)。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxScanArea">
+      <summary>取得最大掃描區域維度，以英吋為單位。 最大掃描寬度是要讓進紙器和平台掃描文件的文件最長寬度。</summary>
+      <returns>區域的寬度和高度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinBrightness">
+      <summary>取得掃描器平台所支援的最小亮度等級。</summary>
+      <returns>最小亮度等級，通常是 -1000。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinContrast">
+      <summary>取得掃描器平台所支援的最小對比等級。</summary>
+      <returns>最小對比等級，通常是 -1000。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinResolution">
+      <summary>取得掃描器平台的最小水平和垂直掃描解析度 (以 DPI 為單位)。</summary>
+      <returns>水平和垂直解析度 (以像素為單位)。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinScanArea">
+      <summary>取得最小掃描區域，以英吋為單位。 最小掃描的區域是為了讓平加以搜描之文件的最小大小。</summary>
+      <returns>區域的寬度和高度。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.OpticalResolution">
+      <summary>取得平台掃描器的光學掃描解析度 (以 DPI 為單位)。</summary>
+      <returns>水平和垂直解析度 (以像素為單位)。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.SelectedScanRegion">
+      <summary>取得或設定選取掃描區域中的原點座標 (水平和垂直) 和維度 (寬度和高度)，以英吋為單位。 當 AutoCroppingMode 屬性不是 [已停用] 時，則會忽略這個屬性。</summary>
+      <returns>矩形的位置和大小。</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)">
+      <summary>傳回掃描機的平台是否支援指定的 ImageScannerAutoCroppingMode。</summary>
+      <returns>表示裝置是否支援值模式。</returns>
+      <param name="value">自動裁切模式要掃描的影像。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)">
+      <summary>傳回掃描器的平台是否可以用指定的色彩模式來掃描和傳輸影像。</summary>
+      <returns>表示掃描器是否可以掃描值模式中的影像。</returns>
+      <param name="value">色彩模式。</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>判斷掃描器的平台是否支援指定的檔案格式。</summary>
+      <returns>表示是否支援指定的檔案類型。</returns>
+      <param name="value">檔案類型。</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerFormat">
+      <summary>檔案要掃描成的型別。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.DeviceIndependentBitmap">
+      <summary>Windows 裝置獨立點陣圖 (DIB)。這個值支援任何一種單一頁面且未經壓縮的色彩模式。 這是所有相容的 WIA 2.0 掃描器裝置都會支援的唯一格式。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Jpeg">
+      <summary>可交換的影像檔案格式/EXIF 或 JPEG 檔案交換格式/JFIF只以彩色或灰階模式 (每個色頻/範例 8 位元) 使用這些檔案，搭配單一頁面和壓縮 (失真 JPEG 壓縮)。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.OpenXps">
+      <summary>開啟 XML Paper Specification (OpenXPS) 文件檔案格式透過此 API。這些檔案可以包含任何色彩模式的影像資料，並在裝置的選擇中壓縮成單頁或多頁。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Pdf">
+      <summary>可攜式文件格式 PDF/A (PDF/A 是可攜式文件格式/PDF 針對數位保留之電子文件的 ISO 標準化版本) 文件檔案格式透過此 API，這些檔案可以包含任何色彩模式的影像資料，並在裝置的選擇中壓縮成單頁或多頁。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Png">
+      <summary>可攜式網路圖形 (PNG) 影像檔案格式這個值會支援任何壓縮成單頁的色彩模式 (loseless PNG 壓縮)。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Tiff">
+      <summary>未壓縮的標記影像檔案格式 (TIFF)相容於 TIFF 6.0 規格，單頁或多頁皆同。這些檔案可以是任何此API支援的色彩模式，永遠是未壓縮的，而且是單頁(如果只有一個影像傳輸)或多頁 (如果有多個影像必須傳輸而裝置又支援多頁的檔案格式)。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Xps">
+      <summary>Microsoft XML Paper Specification (XPS) 文件檔案格式透過此 API，這些檔案可以包含任何色彩模式的影像資料，並在裝置的選擇中壓縮成單頁或多頁。</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerPreviewResult">
+      <summary>表示預覽掃描工作的結果。</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerPreviewResult.Format">
+      <summary>取得掃描預覽的資料格式。 在預覽之後，這個屬性會還原為預覽前的值。</summary>
+      <returns>掃描格式。</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerPreviewResult.Succeeded">
+      <summary>表示掃描預覽是否成功。</summary>
+      <returns>如果掃描預覽已成功則為 True，否則為 False。</returns>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerResolution">
+      <summary>指定掃描解析度。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerResolution.DpiX">
+      <summary>水平大小。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerResolution.DpiY">
+      <summary>垂直大小。</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerScanResult">
+      <summary>代表掃描工作的結果。</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerScanResult.ScannedFiles">
+      <summary>取得已完成的掃描工作產生的掃描影像檔案清單。</summary>
+      <returns>從已完成的掃描工作掃描的影像檔案清單。 如果沒有掃描的檔案，IVectorView&lt;T&gt;.Size 屬性將會是 0。</returns>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerScanSource">
+      <summary>掃描裝置的掃描來源型別。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.AutoConfigured">
+      <summary>掃描來源是自動設定。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.Default">
+      <summary>預設來源。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.Feeder">
+      <summary>送紙器掃描來源。</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.Flatbed">
+      <summary>平台掃描來源。</summary>
+    </member></members>
+</doc>

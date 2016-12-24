@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Calls.Background.CallsBackgroundContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Background.PhoneTrigger">
+      <summary>表示触发后台任务的电话事件。</summary>
+    </member><member name="M:Windows.ApplicationModel.Background.PhoneTrigger.#ctor(Windows.ApplicationModel.Calls.Background.PhoneTriggerType,System.Boolean)">
+      <summary>初始化 PhoneTrigger 类的新实例。</summary>
+      <param name="type">指定电话事件的类型。</param>
+      <param name="oneShot">指示触发器是否为单触发通知。 如果您在发送单触发通知时未进行订阅，就无法获得任何内容。 如果您在激发单触发通知时未进行连接，则不会发生任何事情。</param>
+    </member><member name="P:Windows.ApplicationModel.Background.PhoneTrigger.OneShot">
+      <summary>获取指示触发器是否为单触发通知的布尔值。</summary>
+      <returns>指示触发器是否为单触发通知的布尔值。</returns>
+    </member><member name="P:Windows.ApplicationModel.Background.PhoneTrigger.TriggerType">
+      <summary>获取触发器指示的电话事件的类型。</summary>
+      <returns>触发器指示的电话事件的类型。</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason">
+      <summary>提供拒绝电话呼叫的原因。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason.InCallBlockingList">
+      <summary>呼叫被拒绝，因为它位于阻止列表中。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason.PrivateNumber">
+      <summary>呼叫被拒绝，因为它是私人号码，而私人号码是被阻止的。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason.UnknownNumber">
+      <summary>呼叫被拒绝，因为它是未知号码，而未知号码是被阻止的。</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails">
+      <summary>用于提供有关刚刚被阻止的呼叫的详细信息。</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails.CallBlockedReason">
+      <summary>获取阻止电话呼叫的原因。</summary>
+      <returns>阻止电话呼叫的原因。</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails.LineId">
+      <summary>获取刚刚被阻止的电话呼叫的 ID。</summary>
+      <returns>被阻止的电话呼叫的 ID。</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails.PhoneNumber">
+      <summary>获取被阻止的呼叫的电话号码。</summary>
+      <returns>被阻止的呼叫的电话号码。</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails">
+      <summary>用于提供电话呼叫的来源的详细信息。</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails.PhoneNumber">
+      <summary>获取电话呼叫的来源的电话号码。</summary>
+      <returns>电话呼叫来源的电话号码。</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails.RequestId">
+      <summary>获取此电话呼叫的唯一标识符。</summary>
+      <returns>此电话呼叫的唯一标识符。</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails">
+      <summary>用于提供有关电话线路属性更改的详细信息。</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails.ChangeType">
+      <summary>获取一个 PhoneLineChangeKind 值，该值指示添加、删除还是更改了电话线路。</summary>
+      <returns>一个 PhoneLineChangeKind 值，该值指示添加、删除还是更改了电话线路。</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails.LineId">
+      <summary>获取已添加、删除或更改的电话线路的 ID。</summary>
+      <returns>已添加、删除或更改的电话线路的 ID。</returns>
+    </member><member name="M:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails.HasLinePropertyChanged(Windows.ApplicationModel.Calls.Background.PhoneLineProperties)">
+      <summary>针对一组标志检查电话线路，以了解是否更改了电话线路的任何指定属性。</summary>
+      <returns>如果 lineProperty 参数指示的任何属性在电话线路上已更改，则返回 true。</returns>
+      <param name="lineProperty">一组标志，这些标志指示要查询更改的电话线路属性。</param>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind">
+      <summary>指示后台电话线路更改触发器的更改的类型。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind.Added">
+      <summary>添加了一个新电话线路。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind.PropertiesChanged">
+      <summary>电话线路已更新属性。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind.Removed">
+      <summary>删除了一个电话线路。</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneLineProperties">
+      <summary>指示为电话线路更改触发器一部分的一组属性标志。 一次可设置多个属性。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.BrandingOptions">
+      <summary>电话线路的品牌选项。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.CanDial">
+      <summary>在电话线路中为传出呼叫拨号的能力。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.CellularDetails">
+      <summary>电话线路的移动电话详细信息。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.DisplayColor">
+      <summary>电话线路的首选显示颜色。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.DisplayName">
+      <summary>用户为电话线路分配的友好名称。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.NetworkName">
+      <summary>正在由电话线路使用的当前网络的名称。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.NetworkState">
+      <summary>电话线路的当前网络状态。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.None">
+      <summary>没有属性。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.Transport">
+      <summary>电话线路的传输（移动电话或 voice over IP）。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.Voicemail">
+      <summary>与电话线路关联的语音邮件帐户。</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails">
+      <summary>用于提供有关电话线路上的新语音邮件的详细信息。</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails.LineId">
+      <summary>获取用来接收新语音邮件的电话线路的 ID。</summary>
+      <returns>新语音邮件的电话线路的 ID。</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails.OperatorMessage">
+      <summary>获取运营商在发送语音邮件更改 SMS 时设置的可选语音邮件更改消息。</summary>
+      <returns>运营商在发送语音邮件更改 SMS 时设置的可选语音邮件更改消息。 如果该消息存在，它将显示在语音邮件 toast 上（如果显示了此 toast）。</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails.VoicemailCount">
+      <summary>获取电话线路的语音邮件的新计数。</summary>
+      <returns>语音邮件的当前计数。</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneTriggerType">
+      <summary>指示电话触发器的事件的类型。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.AirplaneModeDisabledForEmergencyCall">
+      <summary>电话线路上的飞行模式已禁用，因此电话可发出紧急呼叫。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.CallBlocked">
+      <summary>呼叫被阻止。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.CallHistoryChanged">
+      <summary>呼叫历史记录已更改。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.CallOriginDataRequest">
+      <summary>对电话呼叫的来源发出了请求。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.LineChanged">
+      <summary>PhoneLineProperties 已更改。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.NewVoicemailMessage">
+      <summary>系统已收到新的语音邮件信息或语音邮件计数为 0。</summary>
+    </member></members>
+</doc>

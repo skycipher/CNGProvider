@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.Core.CoreWindowDialogsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.Core.CoreWindowDialog">
+      <summary>Definisce una finestra di dialogo figlio di una finestra dell'applicazione.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowDialog.#ctor">
+      <summary>Crea un'istanza predefinita della classe CoreWindowDialog.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowDialog.#ctor(System.String)">
+      <summary>Crea un'istanza della classe CoreWindowDialog con il titolo fornito.</summary>
+      <param name="title">Titolo della finestra di dialogo.</param>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.BackButtonCommand">
+      <summary>Ottiene o imposta il delegato chiamato quando viene selezionato il pulsante Indietro nella finestra di dialogo.</summary>
+      <returns>Il delegato chiamato quando viene selezionato il pulsante indietro nella finestra di dialogo.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.CancelCommandIndex">
+      <summary>Ottiene e imposta il valore di indice del comando per l'operazione di annullamento della finestra di dialogo.</summary>
+      <returns>Il valore di indice del comando per l'operazione di annullamento della finestra di dialogo.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.Commands">
+      <summary>Ottiene il set di comandi dell'interfaccia utente disponibili nella finestra di dialogo.</summary>
+      <returns>Set di comandi dell'interfaccia utente disponibili nella finestra di dialogo.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.DefaultCommandIndex">
+      <summary>Ottiene o imposta l'indice del comando predefinito della finestra di dialogo.</summary>
+      <returns>Il valore di indice del comando predefinito della finestra di dialogo (ad esempio OK).</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.IsInteractionDelayed">
+      <summary>Ottiene o imposta un valore che indica se i messaggi di evento di interazione dell'interfaccia utente sono leggermente ritardati. Questo ritardo impedisce a un utente di richiamare accidentalmente un'azione nella finestra di dialogo.</summary>
+      <returns>True se un ritardo frazionario viene presentato alle interazioni con la finestra di dialogo; false in caso contrario.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.MaxSize">
+      <summary>Ottiene la dimensione massima della finestra di dialogo.</summary>
+      <returns>Dimensione massima della finestra di dialogo espressa in pixel.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.MinSize">
+      <summary>Ottiene la dimensione minima della finestra di dialogo.</summary>
+      <returns>Dimensione minima della finestra di dialogo espressa in pixel.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.Title">
+      <summary>Ottiene o imposta il titolo della finestra di dialogo.</summary>
+      <returns>Titolo della finestra di dialogo.</returns>
+    </member><member name="E:Windows.UI.Core.CoreWindowDialog.Showing">
+      <summary>Viene generato quando viene visualizzata la finestra di dialogo.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowDialog.ShowAsync">
+      <summary>Visualizza la finestra di dialogo e attende in modo asincrono che l'utente intraprenda un'azione.</summary>
+      <returns>L'azione eseguita dall'utente nella finestra di dialogo, nonché informazioni sull'azione.</returns>
+    </member><member name="T:Windows.UI.Core.CoreWindowFlyout">
+      <summary>Definisce un flyout figlio di una finestra dell'applicazione.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowFlyout.#ctor(Windows.Foundation.Point)">
+      <summary>Crea un'istanza della classe CoreWindowFlyout nella posizione fornita.</summary>
+      <param name="position">Posizione del pixel sullo schermo dove deve avere origine il flyout. La posizione fornisce l'angolo superiore più a sinistra del flyout.</param>
+    </member><member name="M:Windows.UI.Core.CoreWindowFlyout.#ctor(Windows.Foundation.Point,System.String)">
+      <summary>Crea un'istanza della classe CoreWindowFlyout nella posizione specificata con il titolo fornito.</summary>
+      <param name="position">Posizione del pixel sullo schermo dove deve avere origine il flyout. La posizione fornisce l'angolo superiore più a sinistra del flyout.</param>
+      <param name="title">Titolo del flyout.</param>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.BackButtonCommand">
+      <summary>Ottiene o imposta il delegato chiamato quando viene selezionato il pulsante Indietro nel flyout.</summary>
+      <returns>Il delegato chiamato quando viene selezionato il pulsante indietro del flyout.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.Commands">
+      <summary>Ottiene il set di comandi dell'interfaccia utente disponibili nel flyout.</summary>
+      <returns>Set di comandi dell'interfaccia utente disponibili nel flyout.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.DefaultCommandIndex">
+      <summary>Ottiene o imposta l'indice del comando predefinito della finestra di flyout.</summary>
+      <returns>Il valore di indice del comando predefinito della finestra flyout (ad esempio OK).</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.IsInteractionDelayed">
+      <summary>Ottiene o imposta un valore che indica se i messaggi di evento di interazione dell'interfaccia utente sono leggermente ritardati. Questo ritardo impedisce a un utente di richiamare accidentalmente un'azione nella finestra di flyout.</summary>
+      <returns>True se un ritardo frazionario viene presentato alle interazioni con il flyout; false in caso contrario.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.MaxSize">
+      <summary>Ottiene la dimensione massima del flyout.</summary>
+      <returns>Dimensione massima del flyout espressa in pixel.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.MinSize">
+      <summary>Ottiene la dimensione minima del flyout.</summary>
+      <returns>Dimensione minima del flyout espressa in pixel.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.Title">
+      <summary>Ottiene o imposta il titolo del flyout.</summary>
+      <returns>Titolo del flyout.</returns>
+    </member><member name="E:Windows.UI.Core.CoreWindowFlyout.Showing">
+      <summary>Viene generato quando viene visualizzato il flyout.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowFlyout.ShowAsync">
+      <summary>Visualizza il flyout e attende in modo asincrono che l'utente intraprenda un'azione.</summary>
+      <returns>L'azione eseguita dall'utente nel flyout, nonché informazioni sull'azione.</returns>
+    </member><member name="T:Windows.UI.Core.CoreWindowPopupShowingEventArgs">
+      <summary>Definisce un metodo per impostare la dimensione desiderata di una finestra popup.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowPopupShowingEventArgs.SetDesiredSize(Windows.Foundation.Size)">
+      <summary>Imposta le dimensioni desiderate per il popup.</summary>
+      <param name="value">Dimensioni desiderate per il popup.</param>
+    </member></members>
+</doc>

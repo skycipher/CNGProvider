@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Printers.PrintersContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Printers.Print3DDevice">
+      <summary>Representa una impresora 3D.</summary>
+    </member><member name="P:Windows.Devices.Printers.Print3DDevice.PrintSchema">
+      <summary>Obtiene el objeto PrintSchema para obtener la información de la funcionalidad y el vale de impresión.</summary>
+      <returns>Objeto PrintSchema para obtener la información de la funcionalidad y el vale de impresión.</returns>
+    </member><member name="M:Windows.Devices.Printers.Print3DDevice.FromIdAsync(System.String)">
+      <summary>Crea un objeto Print3DDevice que representa una impresora 3D conectada al dispositivo.</summary>
+      <returns>Objeto Print3DDevice que corresponde a la impresora 3D especificada.</returns>
+      <param name="deviceId">Identificador del dispositivo de la impresora 3D.</param>
+    </member><member name="M:Windows.Devices.Printers.Print3DDevice.GetDeviceSelector">
+      <summary>Obtiene una cadena de sintaxis de consulta avanzada (AQS) que se puede usar para buscar todas las impresoras 3D que están conectadas al dispositivo.</summary>
+      <returns>Cadena de AQS que se puede usar para buscar todas las impresoras 3D conectadas al dispositivo.</returns>
+    </member><member name="T:Windows.Devices.Printers.PrintSchema">
+      <summary>Proporciona las API para tener acceso a la funcionalidad y vales de impresiones de una impresora 3D.</summary>
+    </member><member name="M:Windows.Devices.Printers.PrintSchema.GetCapabilitiesAsync(Windows.Storage.Streams.IRandomAccessStreamWithContentType)">
+      <summary>Obtiene la funcionalidad de la impresora 3D.</summary>
+      <returns>Documento XML de PrintCapabilities que contiene la funcionalidad de la impresora 3D.</returns>
+      <param name="constrainTicket">Vale de impresión.</param>
+    </member><member name="M:Windows.Devices.Printers.PrintSchema.GetDefaultPrintTicketAsync">
+      <summary>Obtiene el vale de impresión predeterminado de la impresora 3D.</summary>
+      <returns>Documento XML de PrintTicket que contiene el vale de impresión predeterminado de la impresora 3D.</returns>
+    </member><member name="M:Windows.Devices.Printers.PrintSchema.MergeAndValidateWithDefaultPrintTicketAsync(Windows.Storage.Streams.IRandomAccessStreamWithContentType)">
+      <summary>Crea una nueva solicitud de impresión; para ello, combina la selección del usuario con el vale de impresión predeterminado y valida que va a funcionar para el dispositivo.</summary>
+      <returns>Documento XML de PrintTicket que contiene el vale de impresión sugerido.</returns>
+      <param name="deltaTicket">El vale de impresión delta especifica las diferencias entre el vale de impresión predeterminado y las selecciones del usuario.</param>
+    </member></members>
+</doc>

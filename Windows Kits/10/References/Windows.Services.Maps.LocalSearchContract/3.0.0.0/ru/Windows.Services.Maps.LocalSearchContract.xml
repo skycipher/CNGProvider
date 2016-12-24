@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Services.Maps.LocalSearchContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Services.Maps.LocalSearch.LocalCategories">
+      <summary>Предоставляет имена категорий поиска, которые можно использовать, чтобы ограничить результаты поиска при вызове метода FindLocalLocationsAsync.</summary>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.All">
+      <summary>Возвращает значение, которое представляет все категории поиска.</summary>
+      <returns>Значение, которое указывает, что результаты поиска не ограничиваются категориями поиска.</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.BankAndCreditUnions">
+      <summary>Возвращает имя категории поиска для банков и кредитных союзов.</summary>
+      <returns>Имя категории поиска для банков и кредитных союзов.</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.EatDrink">
+      <summary>Возвращает имя категории поиска для заведений питания.</summary>
+      <returns>Имя категории поиска для заведений питания.</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.Hospitals">
+      <summary>Возвращает имя категории поиска для больниц.</summary>
+      <returns>Имя категории поиска для больниц.</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.HotelsAndMotels">
+      <summary>Возвращает имя категории поиска для гостиниц и мотелей.</summary>
+      <returns>Имя категории поиска для гостиниц и мотелей.</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.Parking">
+      <summary>Возвращает имя категории поиска для мест парковки.</summary>
+      <returns>Имя категории поиска для мест парковки.</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.SeeDo">
+      <summary>Возвращает имя категории поиска для достопримечательностей и развлечений.</summary>
+      <returns>Имя категории поиска для достопримечательностей и развлечений.</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.Shop">
+      <summary>Возвращает имя категории поиска для магазинов.</summary>
+      <returns>Имя категории поиска для магазинов.</returns>
+    </member><member name="T:Windows.Services.Maps.LocalSearch.LocalLocation">
+      <summary>Представляет компанию или место.</summary>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.Address">
+      <summary>Возвращает почтовый адрес компании или места.</summary>
+      <returns>Почтовый адрес компании или места.</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.Category">
+      <summary>Получает категорию этого расположения.</summary>
+      <returns>Категория этого расположения.</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.DataAttribution">
+      <summary>Возвращает имя источника данных, предоставившего сведения о компании или месте.</summary>
+      <returns>Имя источника данных, предоставившего сведения о компании или месте.</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.Description">
+      <summary>Возвращает описание компании или места.</summary>
+      <returns>Описание компании или места.</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.DisplayName">
+      <summary>Возвращает имя компании или места.</summary>
+      <returns>Имя компании или места.</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.HoursOfOperation">
+      <summary>Получает время работы этого расположения.</summary>
+      <returns>Время работы этого расположения.</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.Identifier">
+      <summary>Возвращает идентификатор компании или места в результатах поиска.</summary>
+      <returns>Идентификатор компании или места в результатах поиска.</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.PhoneNumber">
+      <summary>Возвращает номер телефона компании или места.</summary>
+      <returns>Номер телефона компании или места.</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.Point">
+      <summary>Возвращает географическое местоположение компании или места.</summary>
+      <returns>Географическое местоположение компании или места.</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.RatingInfo">
+      <summary>Получает данные оценки этого места.</summary>
+      <returns>Данные оценки этого места.</returns>
+    </member><member name="T:Windows.Services.Maps.LocalSearch.LocalLocationFinder">
+      <summary>Поиск компаний и мест.</summary>
+    </member><member name="M:Windows.Services.Maps.LocalSearch.LocalLocationFinder.FindLocalLocationsAsync(System.String,Windows.Devices.Geolocation.Geocircle,System.String,System.UInt32)">
+      <summary>Возвращает информацию о компаниях и местах, соответствующих заданным условиям поиска.</summary>
+      <returns>Соответствующие компании и места, удовлетворяющие заданным условиям поиска, класса LocalLocationFinderResult.</returns>
+      <param name="searchTerm">Текст запроса поиска; объект поиска.</param>
+      <param name="searchArea">Географическая область для включения в поиск.</param>
+      <param name="localCategory">Категории поиска используются для ограничения результатов поиска. Рекомендуется использовать одно или несколько свойств LocalCategories для определения localCategory. Для определения более чем одной категории используйте разделители в виде точки с запятой (;).</param>
+      <param name="maxResults">Максимальное количество результатов, возвращаемых в результате поиска.</param>
+    </member><member name="T:Windows.Services.Maps.LocalSearch.LocalLocationFinderResult">
+      <summary>Представляет результаты поиска, выполненного методом FindLocalLocationsAsync.</summary>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocationFinderResult.LocalLocations">
+      <summary>Возвращает компании и места, соответствующие заданным условиям поиска, если таковые имеются.</summary>
+      <returns>Компании и места, соответствующие заданным условиям поиска, если таковые имеются, класса LocalLocation.</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocationFinderResult.Status">
+      <summary>Возвращает состояние поиска, выполненного методом FindLocalLocationsAsync.</summary>
+      <returns>Состояние поиска, выполненного методом FindLocalLocationsAsync.</returns>
+    </member><member name="T:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus">
+      <summary>Задает состояние поиска, выполняемого методом FindLocalLocationsAsync.</summary>
+    </member><member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.InvalidCategory">
+      <summary>Одна или несколько из указанных категорий недопустимы.</summary>
+    </member><member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.InvalidCredentials">
+      <summary>У приложения нет учетных данных, необходимых для выполнения поиска.</summary>
+    </member><member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.InvalidSearchArea">
+      <summary>Указана недопустимая географическая область.</summary>
+    </member><member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.InvalidSearchTerm">
+      <summary>Указан недопустимый текст поиска.</summary>
+    </member><member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.NetworkFailure">
+      <summary>При поиске возник сбой сети.</summary>
+    </member><member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.NotSupported">
+      <summary>Поиск не поддерживается на этом устройстве.</summary>
+    </member><member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.Success">
+      <summary>Поиск завершен успешно.</summary>
+    </member><member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.UnknownError">
+      <summary>При поиске возникла неизвестная ошибка.</summary>
+    </member><member name="T:Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem">
+      <summary>Содержит время работы расположения.</summary>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem.Day">
+      <summary>Получает дни работы объекта.</summary>
+      <returns>Дни работы объекта.</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem.Span">
+      <summary>Возвращает продолжительность работы для объекта.</summary>
+      <returns>Продолжительность работы для объекта.</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem.Start">
+      <summary>Получает начало времени работы для расположения.</summary>
+      <returns>Начало времени работы для расположения.</returns>
+    </member><member name="T:Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo">
+      <summary>Содержит данные оценки этого места.</summary>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo.AggregateRating">
+      <summary>Возвращает статистическую оценку расположения.</summary>
+      <returns>Статистическая оценка расположения.</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo.ProviderIdentifier">
+      <summary>Возвращает идентификатор поставщика оценки.</summary>
+      <returns>Идентификатор поставщика оценки.</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo.RatingCount">
+      <summary>Получает количество оценок для этого расположения.</summary>
+      <returns>Количество оценок для этого расположения.</returns>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkClickEventArgs">
+      <summary>Предоставляет данные для события BusinessLandmarkClick.</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkClickEventArgs.#ctor">
+      <summary>Инициализирует новый экземпляр класса MapControlBusinessLandmarkClickEventArgs.</summary>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkClickEventArgs.LocalLocations">
+      <summary>Получает организации, соответствующие ориентиру.</summary>
+      <returns>Организации, соответствующие ориентиру, типа LocalLocation.</returns>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerEnteredEventArgs">
+      <summary>Предоставляет данные для события BusinessLandmarkPointerEntered.</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerEnteredEventArgs.#ctor">
+      <summary>Создает новый объект MapControlBusinessLandmarkPointerEnteredEventArgs.</summary>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerEnteredEventArgs.LocalLocations">
+      <summary>Получает локальные расположения для бизнес-ориентира.</summary>
+      <returns>Локальные расположения для бизнес-ориентира.</returns>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerExitedEventArgs">
+      <summary>Предоставляет данные для события BusinessLandmarkPointerExited.</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerExitedEventArgs.#ctor">
+      <summary>Создает новый объект MapControlBusinessLandmarkPointerExitedEventArgs.</summary>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerExitedEventArgs.LocalLocations">
+      <summary>Получает локальные расположения для бизнес-ориентира.</summary>
+      <returns>Локальные расположения для бизнес-ориентира.</returns>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkRightTappedEventArgs">
+      <summary>Предоставляет данные для события BusinessLandmarkRightTapped.</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkRightTappedEventArgs.#ctor">
+      <summary>Инициализирует новый экземпляр класса MapControlBusinessLandmarkRightTappedEventArgs.</summary>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkRightTappedEventArgs.LocalLocations">
+      <summary>Получает организации, соответствующие ориентиру.</summary>
+      <returns>Организации, соответствующие ориентиру, типа LocalLocation.</returns>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper">
+      <summary>Предоставляет события, которые указывают, что пользователь щелкнул расположение бизнеса или переходную функцию.</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.#ctor(Windows.UI.Xaml.Controls.Maps.MapControl)">
+      <summary>Создает экземпляр класса MapControlDataHelper для указанного MapControl.</summary>
+      <param name="map">Элемент управления картой, предоставляющий расположения бизнеса и транспорта объекту MapControlDataHelper.</param>
+    </member><member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.BusinessLandmarkClick">
+      <summary>Происходит, когда пользователь касается расположения бизнеса или щелкает его левой кнопки мыши. Экземпляр MapControlBusinessLandmarkClickEventArgs предоставляет данные для этого события.</summary>
+    </member><member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.BusinessLandmarkPointerEntered">
+      <summary>Указывает, что указатель наведен на бизнес-ориентир.</summary>
+    </member><member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.BusinessLandmarkPointerExited">
+      <summary>Указывает, что указатель уведен с бизнес-ориентира.</summary>
+    </member><member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.BusinessLandmarkRightTapped">
+      <summary>Происходит, когда пользователь нажимает и удерживает расположение бизнеса или щелкает его правой кнопки мыши. Экземпляр MapControlBusinessLandmarkRightTappedEventArgs, который предоставляет данные для этого события.</summary>
+    </member><member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.TransitFeatureClick">
+      <summary>Происходит, когда пользователь касается функции транспорта или щелкает его левой кнопки мыши. Экземпляр MapControlTransitFeatureClickEventArgs предоставляет данные для этого события.</summary>
+    </member><member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.TransitFeaturePointerEntered">
+      <summary>Указывает, что указатель наведен на функцию транспорта.</summary>
+    </member><member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.TransitFeaturePointerExited">
+      <summary>Указывает, что указатель уведен с функции транспорта.</summary>
+    </member><member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.TransitFeatureRightTapped">
+      <summary>Происходит, когда пользователь нажимает и удерживает функцию транспорта или щелкает ее правой кнопки мыши. Экземпляр MapControlTransitFeatureRightTappedEventArgs предоставляет данные для этого события.</summary>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs">
+      <summary>Предоставляет данные для события TransitFeatureClick.</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs.#ctor">
+      <summary>Инициализирует новый экземпляр класса MapControlTransitFeatureClickEventArgs.</summary>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs.DisplayName">
+      <summary>Получает имя функции транспорта.</summary>
+      <returns>Имя функции транспорта.</returns>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs.Location">
+      <summary>Получает географическое положение функции транспорта.</summary>
+      <returns>Географическое положение функции транспорта.</returns>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs.TransitProperties">
+      <summary>Получает контейнер свойств для функции транспорта.</summary>
+      <returns>Контейнер свойств для функции транспорта.</returns>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs">
+      <summary>Предоставляет данные для события TransitFeaturePointerEntered.</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs.#ctor">
+      <summary>Создает новый объект MapControlTransitFeaturePointerEnteredEventArgs.</summary>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs.DisplayName">
+      <summary>Получает отображаемое имя.</summary>
+      <returns>Отображаемое имя.</returns>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs.Location">
+      <summary>Получает расположение.</summary>
+      <returns>Расположение.</returns>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs.TransitProperties">
+      <summary>Получает свойства транспорта.</summary>
+      <returns>Свойства транспорта.</returns>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs">
+      <summary>Предоставляет данные для события TransitFeaturePointerExited.</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs.#ctor">
+      <summary>Создает новый объект MapControlTransitFeaturePointerExitedEventArgs.</summary>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs.DisplayName">
+      <summary>Получает отображаемое имя.</summary>
+      <returns>Отображаемое имя.</returns>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs.Location">
+      <summary>Получает расположение.</summary>
+      <returns>Расположение.</returns>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs.TransitProperties">
+      <summary>Получает свойства транспорта.</summary>
+      <returns>Свойства транспорта.</returns>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs">
+      <summary>Предоставляет данные для события TransitFeatureRightTapped.</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs.#ctor">
+      <summary>Инициализирует новый экземпляр класса MapControlTransitFeatureRightTappedEventArgs.</summary>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs.DisplayName">
+      <summary>Получает имя функции транспорта.</summary>
+      <returns>Имя функции транспорта.</returns>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs.Location">
+      <summary>Получает географическое положение функции транспорта.</summary>
+      <returns>Географическое положение функции транспорта.</returns>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs.TransitProperties">
+      <summary>Получает контейнер свойств для функции транспорта.</summary>
+      <returns>Контейнер свойств для функции транспорта.</returns>
+    </member></members>
+</doc>

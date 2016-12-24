@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Printers.PrintersContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Printers.Print3DDevice">
+      <summary>3D 프린터를 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.Printers.Print3DDevice.PrintSchema">
+      <summary>기능 및 인쇄 티켓 정보를 얻기 위한 PrintSchema 개체를 가져옵니다.</summary>
+      <returns>기능 및 인쇄 티켓 정보를 얻기 위한 PrintSchema 개체입니다.</returns>
+    </member><member name="M:Windows.Devices.Printers.Print3DDevice.FromIdAsync(System.String)">
+      <summary>장치에 연결된 3D 프린터를 나타내는 Print3DDevice 개체를 만듭니다.</summary>
+      <returns>지정된 3D 프린터에 해당하는 Print3DDevice 개체입니다.</returns>
+      <param name="deviceId">3D 프린터의 장치 ID입니다.</param>
+    </member><member name="M:Windows.Devices.Printers.Print3DDevice.GetDeviceSelector">
+      <summary>장치에 연결된 모든 3D 프린터를 찾는 데 사용할 수 있는 AQS(고급 검색 구문)를 가져옵니다.</summary>
+      <returns>장치에 연결된 모든 3D 프린터를 찾는 데 사용할 수 있는 AQS 문자열입니다.</returns>
+    </member><member name="T:Windows.Devices.Printers.PrintSchema">
+      <summary>3D 프린터의 기능과 인쇄 티켓에 액세스하기 위한 API를 제공합니다.</summary>
+    </member><member name="M:Windows.Devices.Printers.PrintSchema.GetCapabilitiesAsync(Windows.Storage.Streams.IRandomAccessStreamWithContentType)">
+      <summary>3D 프린터 기능을 가져옵니다.</summary>
+      <returns>3D 프린터 기능을 포함하는 XML PrintCapabilities 문서입니다.</returns>
+      <param name="constrainTicket">인쇄 티켓입니다.</param>
+    </member><member name="M:Windows.Devices.Printers.PrintSchema.GetDefaultPrintTicketAsync">
+      <summary>3D 프린터의 기본 인쇄 티켓을 가져옵니다.</summary>
+      <returns>3D 프린터의 기본 인쇄 티켓을 포함하는 XML PrintTicket 문서입니다.</returns>
+    </member><member name="M:Windows.Devices.Printers.PrintSchema.MergeAndValidateWithDefaultPrintTicketAsync(Windows.Storage.Streams.IRandomAccessStreamWithContentType)">
+      <summary>사용자의 선택 영역을 기본 인쇄 티켓과 병합하고 이 티켓이 장치에 작동할지에 대한 유효성을 검사하여 새 인쇄 티켓을 만듭니다.</summary>
+      <returns>제안된 인쇄 티켓을 포함하는 XML PrintTicket 문서입니다.</returns>
+      <param name="deltaTicket">델타 인쇄 티켓은 기본 인쇄 티켓과 사용자의 선택 영역 간의 차이를 지정합니다.</param>
+    </member></members>
+</doc>

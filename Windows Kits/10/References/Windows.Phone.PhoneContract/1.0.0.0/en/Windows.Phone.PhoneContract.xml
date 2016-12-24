@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Phone.PhoneContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.CameraApplicationManager">
+      <summary>Enables an app to launch a dialog that displays all of the lens apps installed on the device and allows the user to quickly switch between them.</summary>
+    </member><member name="M:Windows.ApplicationModel.CameraApplicationManager.ShowInstalledApplicationsUI">
+      <summary>Launches a dialog that displays all of the lens apps installed on the device and allows the user to quickly switch between them.</summary>
+    </member><member name="T:Windows.Media.Capture.ScreenCapture">
+      <summary>Enables an app to capture audio and video of the contents being displayed on the device.</summary>
+    </member><member name="P:Windows.Media.Capture.ScreenCapture.AudioSource">
+      <summary>Gets the audio source used for screen capture.</summary>
+      <returns>The audio source used for screen capture.</returns>
+    </member><member name="P:Windows.Media.Capture.ScreenCapture.IsAudioSuspended">
+      <summary>Gets whether the screen capture of audio is currently suspended.</summary>
+      <returns>Whether the screen capture audio is currently suspended.</returns>
+    </member><member name="P:Windows.Media.Capture.ScreenCapture.IsVideoSuspended">
+      <summary>Gets whether the screen capture of video is currently suspended.</summary>
+      <returns>Whether the screen capture of video is currently suspended.</returns>
+    </member><member name="P:Windows.Media.Capture.ScreenCapture.VideoSource">
+      <summary>Gets the video source used for screen capture.</summary>
+      <returns>The video source used for screen capture.</returns>
+    </member><member name="E:Windows.Media.Capture.ScreenCapture.SourceSuspensionChanged">
+      <summary>Raised when the suspension of screen captured audio or video changes.</summary>
+    </member><member name="M:Windows.Media.Capture.ScreenCapture.GetForCurrentView">
+      <summary>Gets the ScreenCapture object associated with the app's current view.</summary>
+      <returns>The ScreenCapture object associated with the app's current view.</returns>
+    </member><member name="T:Windows.Media.Capture.SourceSuspensionChangedEventArgs">
+      <summary>Provides information about a SourceSuspensionChanged event which is triggered when the capture of audio or video is suspended or resumed.</summary>
+    </member><member name="P:Windows.Media.Capture.SourceSuspensionChangedEventArgs.IsAudioSuspended">
+      <summary>Gets whether the screen capture of audio is currently suspended.</summary>
+      <returns>Whether the screen capture of audio is currently suspended.</returns>
+    </member><member name="P:Windows.Media.Capture.SourceSuspensionChangedEventArgs.IsVideoSuspended">
+      <summary>Gets whether the screen capture of audio is currently suspended.</summary>
+      <returns>Whether the screen capture of audio is currently suspended.</returns>
+    </member><member name="T:Windows.Media.Effects.SlowMotionEffectDefinition">
+      <summary>Represents a slow motion effect definition.</summary>
+    </member><member name="M:Windows.Media.Effects.SlowMotionEffectDefinition.#ctor">
+      <summary>Creates and initializes a new instance of the SlowMotionEffectDefinition object.</summary>
+    </member><member name="P:Windows.Media.Effects.SlowMotionEffectDefinition.ActivatableClassId">
+      <summary>Gets the activatable class ID of the slow motion effect definition.</summary>
+      <returns>The identifier of the runtime class in the operating system, such as "Windows.Media.Effects.SlowMotionEffectDefinition".</returns>
+    </member><member name="P:Windows.Media.Effects.SlowMotionEffectDefinition.Properties">
+      <summary>Gets the set of properties for configuring the SlowMotionEffectDefinition object.</summary>
+      <returns>The set of properties for configuring the SlowMotionEffectDefinition object.</returns>
+    </member><member name="P:Windows.Media.Effects.SlowMotionEffectDefinition.TimeStretchRate">
+      <summary>Gets or sets the current time stretch rate.</summary>
+      <returns>The current time stretch rate.</returns>
+    </member><member name="T:Windows.Media.SpeechRecognition.VoiceCommandManager">
+      <summary>A static class that enables installing command sets from a Voice Command Definition (VCD) file, and getting installed command sets.</summary>
+      <deprecated type="deprecate">VoiceCommandManager may be altered or unavailable for releases after Windows Phone 8.1. Instead, use Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager.</deprecated>
+    </member><member name="P:Windows.Media.SpeechRecognition.VoiceCommandManager.InstalledCommandSets">
+      <summary>A dictionary that contains all installed command sets that have a Name attribute set in the Voice Command Definition (VCD) file.</summary>
+      <returns>The dictionary of installed command sets that have a Name attribute set in the Voice Command Definition (VCD) file.</returns>
+    </member><member name="M:Windows.Media.SpeechRecognition.VoiceCommandManager.InstallCommandSetsFromStorageFileAsync(Windows.Storage.StorageFile)">
+      <summary>Installs the CommandSet elements in a Voice Command Definition (VCD) file.</summary>
+      <deprecated type="deprecate">Use Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager instead of Windows.Media.SpeechRecognition.VoiceComandManager. For more info, see MSDN.</deprecated>
+      <returns>An asynchronous action.</returns>
+      <param name="file">An object representing a Voice Command Definition (VCD) file.</param>
+    </member><member name="T:Windows.Media.SpeechRecognition.VoiceCommandSet">
+      <summary>Enables operations on a specific installed command set.</summary>
+      <deprecated type="deprecate">VoiceCommandSet may be altered or unavailable for releases after Windows Phone 8.1. Instead, use Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition.</deprecated>
+    </member><member name="P:Windows.Media.SpeechRecognition.VoiceCommandSet.Language">
+      <summary>Gets the language (xml:lang) value of the CommandSet element in the Voice Command Definition (VCD) file.</summary>
+      <returns>The language (xml:lang) of the command set.</returns>
+    </member><member name="P:Windows.Media.SpeechRecognition.VoiceCommandSet.Name">
+      <summary>Gets the Name attribute value of the CommandSet element in the Voice Command Definition (VCD) file.</summary>
+      <returns>The Name attribute value of the CommandSet element.</returns>
+    </member><member name="T:Windows.UI.ViewManagement.StatusBar">
+      <summary>Provides methods and properties for interacting with the status bar on a window (app view).</summary>
+    </member><member name="P:Windows.UI.ViewManagement.StatusBar.BackgroundColor">
+      <summary>Gets or sets the background color of the status bar. The alpha channel of the color is not used.</summary>
+      <returns>The background color of the status bar.</returns>
+    </member><member name="P:Windows.UI.ViewManagement.StatusBar.BackgroundOpacity">
+      <summary>Gets or sets the opacity of the background color of the status bar.</summary>
+      <returns>The opacity of the background color of the status bar.</returns>
+    </member><member name="P:Windows.UI.ViewManagement.StatusBar.ForegroundColor">
+      <summary>Gets or sets the foreground color of the status bar. The alpha channel of the color is not used.</summary>
+      <returns>The foreground color of the status bar.</returns>
+    </member><member name="P:Windows.UI.ViewManagement.StatusBar.OccludedRect">
+      <summary>Gets the region of the core window currently occluded by the status bar.</summary>
+      <returns>The region of the core window currently occluded by the status bar.</returns>
+    </member><member name="P:Windows.UI.ViewManagement.StatusBar.ProgressIndicator">
+      <summary>Gets the progress indicator for the status bar.</summary>
+      <returns>The progress indicator for the status bar.</returns>
+    </member><member name="E:Windows.UI.ViewManagement.StatusBar.Hiding">
+      <summary>This event is raised when the status bar is being hidden.</summary>
+    </member><member name="E:Windows.UI.ViewManagement.StatusBar.Showing">
+      <summary>This event is raised when the status bar is being shown.</summary>
+    </member><member name="M:Windows.UI.ViewManagement.StatusBar.GetForCurrentView">
+      <summary>Gets the status bar for the current window (app view).</summary>
+      <returns>The status bar for the current window (app view).</returns>
+    </member><member name="M:Windows.UI.ViewManagement.StatusBar.HideAsync">
+      <summary>Hides the status bar.</summary>
+      <returns>The asynchronous results of the operation. Use this to determine when the async call is complete.</returns>
+    </member><member name="M:Windows.UI.ViewManagement.StatusBar.ShowAsync">
+      <summary>Shows the status bar.</summary>
+      <returns>The asynchronous results of the operation. Use this to determine when the async call is complete.</returns>
+    </member><member name="T:Windows.UI.ViewManagement.StatusBarProgressIndicator">
+      <summary>Provides methods and properties for interacting with the progress indicator on the status bar on a window (app view).</summary>
+    </member><member name="P:Windows.UI.ViewManagement.StatusBarProgressIndicator.ProgressValue">
+      <summary>Gets or sets a value representing progress in the range 0 to 1.</summary>
+      <returns>A value representing progress in the range 0 to 1.</returns>
+    </member><member name="P:Windows.UI.ViewManagement.StatusBarProgressIndicator.Text">
+      <summary>Gets or sets the text label displayed on the progress indicator.</summary>
+      <returns>The text label displayed on the progress indicator.</returns>
+    </member><member name="M:Windows.UI.ViewManagement.StatusBarProgressIndicator.HideAsync">
+      <summary>Hides the progress indicator.</summary>
+      <returns>The asynchronous results of the operation. Use this to determine when the async call is complete.</returns>
+    </member><member name="M:Windows.UI.ViewManagement.StatusBarProgressIndicator.ShowAsync">
+      <summary>Shows the progress indicator.</summary>
+      <returns>The asynchronous results of the operation. Use this to determine when the async call is complete.</returns>
+    </member></members>
+</doc>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.Xaml.Hosting.HostingContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost">
+      <summary>응용 프로그램에서 리소스를 확인하는 서비스를 나타냅니다. 이 인터페이스는 디자인 도구 호스팅 시나리오에 사용되며 일반적인 용도로 사용되지 않습니다.</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost.ResolveFileResource(System.String)">
+      <summary>경로에 지정된 리소스를 확인하고 문자열 파일 이름을 반환합니다.</summary>
+      <returns>확인된 파일 이름입니다.</returns>
+      <param name="path">확인할 로컬 경로입니다.</param>
+    </member><member name="T:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost2">
+      <summary>IXamlUIPresenterHost를 확장하여 GetGenericXamlFilePath를 추가합니다.</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost2.GetGenericXamlFilePath">
+      <summary>디자인 타임에 대체 generic.xaml 파일을 발표자 호스트로 로드합니다.</summary>
+      <returns>대체 generic.xaml 파일의 위치에 대한 로컬 경로입니다.</returns>
+    </member><member name="T:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost3">
+      <summary>IXamlUIPresenterHost를 확장하여 ResolveDictionaryResource를 추가합니다.</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost3.ResolveDictionaryResource(Windows.UI.Xaml.ResourceDictionary,System.Object,System.Object)">
+      <summary>사전과 키로 지정된 리소스를 확인합니다.</summary>
+      <returns>리소스 개체입니다.</returns>
+      <param name="dictionary">리소스를 포함하는 사전입니다.</param>
+      <param name="dictionaryKey">리소스 키입니다.</param>
+      <param name="suggestedValue">제안된 값입니다.</param>
+    </member><member name="T:Windows.UI.Xaml.Hosting.XamlUIPresenter">
+      <summary>Microsoft Direct3D 화면에서 시각적 트리를 사용합니다. 이 형식은 디자인 도구 호스팅 시나리오에 사용되며 일반적인 용도로 사용되지 않습니다.</summary>
+    </member><member name="P:Windows.UI.Xaml.Hosting.XamlUIPresenter.CompleteTimelinesAutomatically">
+      <summary>호스트에서 항상 끝까지 실행되도록 할지 여부를 결정하는 값을 가져오거나 설정합니다.</summary>
+      <returns>항상 시간 막대를 끝까지 실행하도록 하려면 true입니다. 그렇지 않으면 false입니다.</returns>
+    </member><member name="P:Windows.UI.Xaml.Hosting.XamlUIPresenter.RootElement">
+      <summary>화면에 그릴 루트의 시각적 요소를 가져오거나 설정합니다.</summary>
+      <returns>그릴 요소입니다.</returns>
+    </member><member name="P:Windows.UI.Xaml.Hosting.XamlUIPresenter.ThemeKey">
+      <summary>ThemeResourcesXaml에서 사용할 테마 집합을 식별하는 문자열 키를 가져오거나 설정합니다.</summary>
+      <returns>문자열 키입니다.</returns>
+    </member><member name="P:Windows.UI.Xaml.Hosting.XamlUIPresenter.ThemeResourcesXaml">
+      <summary>리소스 사전을 지정하는 XAML을 가져오거나 설정합니다. 리소스 사전에는 호스트가 확인해야 하고 콘텐츠에 적용되어야 하는 테마가 들어 있습니다.</summary>
+      <returns>문자열 형식으로 지정된 XAML 리소스 사전입니다.</returns>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.GetFlyoutPlacement(Windows.Foundation.Rect,Windows.Foundation.Size,Windows.Foundation.Size,Windows.Foundation.Rect,Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode,System.Boolean,Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode@)">
+      <summary>배치 대상 및 해당 플라이아웃을 표시하는 컨트롤의 제안 크기를 사용하여 FlyoutBase 배치 논리를 호출합니다. 배치 논리 실행 결과인 범위를 반환합니다.</summary>
+      <returns>FlyoutBase 배치 논리에 따라 계산된 경계입니다.</returns>
+      <param name="placementTargetBounds">배치 대상 요소의 경계이며, FlyoutBase 발표자 논리로 전달됩니다.</param>
+      <param name="controlSize">플라이아웃을 표시해야 하는 컨트롤의 원하는 크기입니다.</param>
+      <param name="minControlSize">플라이아웃을 표시해야 하는 컨트롤의 최소 크기입니다.</param>
+      <param name="containerRect">배치 대상 및 플라이아웃을 유지해야 하는 영역의 경계입니다.</param>
+      <param name="targetPreferredPlacement">FlyoutBase 배치 논리에 사용할 원하는 배치 모드입니다.</param>
+      <param name="allowFallbacks">배치 모드에 fallback을 사용할 수 있는 경우 true입니다. false이면 폴백을 사용할 수 없습니다.</param>
+      <param name="chosenPlacement">호출된 FlyoutBase 배치 논리에서 사용하는 실제 배치 모드입니다.</param>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.GetFlyoutPlacementTargetInfo(Windows.UI.Xaml.FrameworkElement,Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode,Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode@,System.Boolean@)">
+      <summary>호스트에서 플라이아웃도 표시하려는 배치 대상의 계산된 경계를 반환합니다. 추가 out 매개 변수는 바운드가 계산된 방법에 대한 추가 정보를 제공합니다.</summary>
+      <returns>계산된 배치 대상 범위입니다.</returns>
+      <param name="placementTarget">Flyout을 배치할 기준이 되는 배치 대상 요소입니다.</param>
+      <param name="preferredPlacement">대상을 기준으로 한 호스트의 Flyout 기본 배치를 선언하는 열거형 값입니다.</param>
+      <param name="targetPreferredPlacement">Flyout의 기본 설정 배치를 선언하는 열거형 값입니다.</param>
+      <param name="allowFallbacks">Flyout 배치 논리에 fallback 배치가 허용되는 경우 true입니다. false이면 targetPreferredPlacement 값만 고려되어야 합니다.</param>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.NotifyWindowSizeChanged">
+      <summary>Window.Current의 SizeChanged 이벤트를 호출합니다. 호스트가 호스트 설정에서 사용자 코드로 크기 변경 내용을 전파하는 데 사용되므로 디자인 모드 상호 작용을 실시간 상호 작용과 차별화할 수 있습니다.</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.Present">
+      <summary>화면을 호스트에 대한 동기 호출로 제공합니다.</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.Render">
+      <summary>화면을 렌더링합니다. 타이머를 통한 비동기 호출을 위한 것입니다.</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.SetHost(Windows.UI.Xaml.Hosting.IXamlUIPresenterHost)">
+      <summary>응용 프로그램 리소스 해상도에 사용할 IXamlUIPresenterHost 서비스 구현을 지정합니다.</summary>
+      <param name="host">서비스 구현입니다.</param>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.SetSize(System.Int32,System.Int32)">
+      <summary>화면의 너비와 높이를 지정합니다.</summary>
+      <param name="width">너비(픽셀 단위)입니다.</param>
+      <param name="height">높이(픽셀 단위)입니다.</param>
+    </member></members>
+</doc>

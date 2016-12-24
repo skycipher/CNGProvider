@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.Xaml.Hosting.HostingContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost">
+      <summary>Representa un servicio que resuelve recursos de una aplicación. Esta interfaz se usa para los escenarios de hospedaje de herramientas y no está diseñada para uso general.</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost.ResolveFileResource(System.String)">
+      <summary>Resuelve un recurso especificado por una ruta de acceso y devuelve una cadena con el nombre de archivo.</summary>
+      <returns>Nombre del archivo resuelto.</returns>
+      <param name="path">La ruta de acceso local que se debe resolver.</param>
+    </member><member name="T:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost2">
+      <summary>Extiende IXamlUIPresenterHost para agregar GetGenericXamlFilePath.</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost2.GetGenericXamlFilePath">
+      <summary>Carga un archivo alternativo de generic.xaml en el host de presentador en tiempo de diseño.</summary>
+      <returns>Ruta de acceso local a la ubicación del archivo generic.xaml alternativo.</returns>
+    </member><member name="T:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost3">
+      <summary>Extiende IXamlUIPresenterHost para agregar ResolveDictionaryResource.</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost3.ResolveDictionaryResource(Windows.UI.Xaml.ResourceDictionary,System.Object,System.Object)">
+      <summary>Resuelve un recurso que especifica un diccionario y una clave.</summary>
+      <returns>Objeto de recursos.</returns>
+      <param name="dictionary">Diccionario que contiene el recurso.</param>
+      <param name="dictionaryKey">Clave del recurso.</param>
+      <param name="suggestedValue">Valor sugerido.</param>
+    </member><member name="T:Windows.UI.Xaml.Hosting.XamlUIPresenter">
+      <summary>Habilita la presentación de un árbol visual en una superficie Microsoft Direct3D. Este tipo se usa para los escenarios de hospedaje de herramientas y no está diseñada para uso general.</summary>
+    </member><member name="P:Windows.UI.Xaml.Hosting.XamlUIPresenter.CompleteTimelinesAutomatically">
+      <summary>Obtiene o establece un valor que determina si el host desea que las escalas de tiempo se ejecuten siempre al final.</summary>
+      <returns>True para ejecutar siempre las escalas de tiempo hasta el final. De lo contrario, false.</returns>
+    </member><member name="P:Windows.UI.Xaml.Hosting.XamlUIPresenter.RootElement">
+      <summary>Obtiene o establece el elemento visual raíz que se dibujará en la superficie.</summary>
+      <returns>El elemento que se va a dibujar.</returns>
+    </member><member name="P:Windows.UI.Xaml.Hosting.XamlUIPresenter.ThemeKey">
+      <summary>Obtiene o establece la clave de cadena que identifica el conjunto de temas de la propiedad ThemeResourcesXaml que debe usarse.</summary>
+      <returns>Una clave de cadena.</returns>
+    </member><member name="P:Windows.UI.Xaml.Hosting.XamlUIPresenter.ThemeResourcesXaml">
+      <summary>Obtiene o establece el XAML que especifica un diccionario de recursos. El diccionario de recursos contiene temas que el host debe resolver y que se deben aplicar al contenido.</summary>
+      <returns>Un diccionario de recursos XAML especificado en forma de cadena.</returns>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.GetFlyoutPlacement(Windows.Foundation.Rect,Windows.Foundation.Size,Windows.Foundation.Size,Windows.Foundation.Rect,Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode,System.Boolean,Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode@)">
+      <summary>Invoca la lógica de la posición de FlyoutBase, usando un tamaño sugerido de un control que muestre un destino de colocación y su control flotante. Devuelve los límites que son el resultado de ejecutar la lógica de colocación.</summary>
+      <returns>Los límites según se calcula mediante la lógica de colocación FlyoutBase.</returns>
+      <param name="placementTargetBounds">Los enlaces del elemento de destino de colocación que se pasan a la lógica de presentador FlyoutBase.</param>
+      <param name="controlSize">El tamaño deseado del control que debe mostrar el control flotante.</param>
+      <param name="minControlSize">Tamaño mínimo del control que debe mostrar el control flotante.</param>
+      <param name="containerRect">Los límites del área que deben contener el destino de colocación y el control flotante.</param>
+      <param name="targetPreferredPlacement">El modo de colocación deseado que se usará para la lógica de colocación FlyoutBase.</param>
+      <param name="allowFallbacks">True si las reservas se pueden usar para el modo de posición. False si no se pueden usar reservas.</param>
+      <param name="chosenPlacement">El modo de colocación real que usa la lógica de colocación de FlyoutBase invocada.</param>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.GetFlyoutPlacementTargetInfo(Windows.UI.Xaml.FrameworkElement,Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode,Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode@,System.Boolean@)">
+      <summary>Devuelve los límites calculados de un destino de colocación diseñado para mostrar también un control flotante en el host. Los parámetros adicionales de out proporcionan más información sobre cómo se calcularon los límites.</summary>
+      <returns>Los límites de destino de colocación calculados.</returns>
+      <param name="placementTarget">Posición del elemento de destino en relación con la que debe ubicarse Flyout.</param>
+      <param name="preferredPlacement">Un valor de la enumeración que declara la colocación preferida del host del Flyout en relación con el destino.</param>
+      <param name="targetPreferredPlacement">Un valor de la enumeración que declara la colocación preferida del Flyout.</param>
+      <param name="allowFallbacks">True si las posiciones de reserva se permiten para la lógica de posición Flyout. False si solo debe considerarse el valor de targetPreferredPlacement.</param>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.NotifyWindowSizeChanged">
+      <summary>Invoca el evento SizeChanged en Window.Current. Se usa en los hosts para propagar los cambios de tamaño de valores hospedados en el código de usuario, para poder distinguir una interacción en modo de diseño de una interacción en tiempo de ejecución.</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.Present">
+      <summary>Presenta la superficie como una llamada sincrónica para el host.</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.Render">
+      <summary>Presenta la superficie. Diseñado para las llamadas asincrónicas mediante un temporizador.</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.SetHost(Windows.UI.Xaml.Hosting.IXamlUIPresenterHost)">
+      <summary>Especifica la implementación de servicio IXamlUIPresenterHost que se va a usar para la resolución de recursos de la aplicación.</summary>
+      <param name="host">Una implementación del servicio.</param>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.SetSize(System.Int32,System.Int32)">
+      <summary>Especifica el ancho y el alto de la superficie.</summary>
+      <param name="width">El ancho en píxeles.</param>
+      <param name="height">Alto en píxeles.</param>
+    </member></members>
+</doc>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.Protection.ProtectionRenewalContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Media.Protection.ComponentRenewal">
+      <summary>Позволяет приложениям инициировать обновление компонентов, требующих обновления для воспроизведения защищенного медиасодержимого.</summary>
+    </member><member name="M:Windows.Media.Protection.ComponentRenewal.RenewSystemComponentsAsync(Windows.Media.Protection.RevocationAndRenewalInformation)">
+      <summary>Начинает обновление компонентов защиты критически важного содержимого после отправки запроса пользователю.</summary>
+      <returns>Объект, используемый для управления асинхронной операцией.</returns>
+      <param name="information">Сведения об отзыве и возобновлении.</param>
+    </member><member name="T:Windows.Media.Protection.RenewalStatus">
+      <summary>Определяет возможные значения, возвращаемые RenewSystemComponentsAsync.</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.AppComponentsMayNeedUpdating">
+      <summary>Указывает, что системных компонентов, требующих обновления, не обнаружено. Однако может быть нужно обновить компоненты приложения; в этом случае пользователю будет нужно получить обновленное приложение из магазина.</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.NoComponentsFound">
+      <summary>Указывает, что не найдено ни одного компонента, требующего обновления.</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.NotStarted">
+      <summary>Указывает, что обновление не начато.</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.UpdatesInProgress">
+      <summary>Указывает, что имеются обновления и пользователь дал согласие на продолжение обновлений</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.UserCancelled">
+      <summary>Указывает, что пользователь не дал согласия на продолжение обновлений.</summary>
+    </member></members>
+</doc>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Calls.Background.CallsBackgroundContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Background.PhoneTrigger">
+      <summary>Rappresenta un evento telefono che attiva l'esecuzione di un'attività in background.</summary>
+    </member><member name="M:Windows.ApplicationModel.Background.PhoneTrigger.#ctor(Windows.ApplicationModel.Calls.Background.PhoneTriggerType,System.Boolean)">
+      <summary>Inizializza una nuova istanza della classe PhoneTrigger.</summary>
+      <param name="type">Specifica il tipo di evento telefono.</param>
+      <param name="oneShot">Indica se il trigger è una notifica a scatto unico. Se non eri iscritto quando è stata inviata una notifica unico, non riceverai alcun notifica. Se non eri collegato quando hai attivato una notifica unico, non accadrà nulla.</param>
+    </member><member name="P:Windows.ApplicationModel.Background.PhoneTrigger.OneShot">
+      <summary>Ottiene un valore booleano che indica se il trigger è una notifica a scatto unico.</summary>
+      <returns>Valore booleano che indica se il trigger è una notifica a scatto unico.</returns>
+    </member><member name="P:Windows.ApplicationModel.Background.PhoneTrigger.TriggerType">
+      <summary>Ottiene il tipo di evento telefono indicato dal trigger.</summary>
+      <returns>Tipo di evento telefono indicato dal trigger.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason">
+      <summary>Fornisce il motivo per cui una telefonata è stata rifiutata.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason.InCallBlockingList">
+      <summary>La chiamata è stata rifiutata poiché era nell'elenco delle chiamate da bloccare.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason.PrivateNumber">
+      <summary>La chiamata è stata rifiutata perché era un numero privato e i numeri privati vengono bloccati.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason.UnknownNumber">
+      <summary>La chiamata è stata rifiutata perché era un numero sconosciuto e i numeri sconosciuti vengono bloccati.</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails">
+      <summary>Utilizzata per fornire i dettagli su una chiamata che è stata appena bloccata.</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails.CallBlockedReason">
+      <summary>Ottiene il motivo per cui una telefonata è stata bloccata.</summary>
+      <returns>Motivo del blocco della telefonata.</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails.LineId">
+      <summary>Ottiene l'ID della telefonata che è stata appena bloccata.</summary>
+      <returns>ID della telefonata bloccata.</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails.PhoneNumber">
+      <summary>Ottiene il numero di telefono della chiamata bloccata.</summary>
+      <returns>Numero di telefono della chiamata che è stata bloccata.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails">
+      <summary>Utilizzata per fornire dettagli di origine della telefonata.</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails.PhoneNumber">
+      <summary>Ottiene il numero di telefono dell'origine della telefonata.</summary>
+      <returns>Numero di telefono dell'origine della telefonata.</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails.RequestId">
+      <summary>Ottiene l'identificatore univoco per questa telefonata.</summary>
+      <returns>Identificatore univoco di questa telefonata.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails">
+      <summary>Utilizzata per fornire i dettagli su una modifica alle proprietà di una linea telefonica.</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails.ChangeType">
+      <summary>Ottiene un valore PhoneLineChangeKind che indica se la linea telefonica è stata aggiunta, rimossa o modificata.</summary>
+      <returns>Un valore PhoneLineChangeKind che indica se la linea telefonica è stata aggiunta, rimossa o modificata.</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails.LineId">
+      <summary>Ottiene l'ID della linea telefonica che è stata aggiunta, rimossa o modificata.</summary>
+      <returns>ID della linea telefonica che è stata aggiunta, rimossa o modificata.</returns>
+    </member><member name="M:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails.HasLinePropertyChanged(Windows.ApplicationModel.Calls.Background.PhoneLineProperties)">
+      <summary>Controlla una linea telefonica rispetto a un set di flag per vedere se una o più proprietà specificate della linea telefonica sono state modificate.</summary>
+      <returns>Restituisce true se una o più proprietà indicate dal parametro lineProperty sono state modificate sulla linea telefonica.</returns>
+      <param name="lineProperty">Set di flag che indicano le proprietà della linea telefonica su cui eseguire la query per le modifiche.</param>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind">
+      <summary>Indica il tipo di modifica per un trigger di modifica della linea telefonica in background.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind.Added">
+      <summary>È stata aggiunta una nuova linea telefonica.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind.PropertiesChanged">
+      <summary>Una linea telefonica ha proprietà aggiornate.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind.Removed">
+      <summary>È stata rimossa una linea telefonica.</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneLineProperties">
+      <summary>Indica un set di flag di proprietà che fa parte di un trigger di modifica della linea telefonica. Possono essere impostate contemporaneamente più proprietà.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.BrandingOptions">
+      <summary>Opzioni di branding per la linea telefonica.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.CanDial">
+      <summary>Possibilità di comporre chiamate in uscita sulla linea telefonica.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.CellularDetails">
+      <summary>Dettagli del cellulare per la linea telefonica.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.DisplayColor">
+      <summary>Colore di visualizzazione preferito per la linea telefonica.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.DisplayName">
+      <summary>Nome descrittivo assegnato dall'utente alla linea telefonica.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.NetworkName">
+      <summary>Nome della rete corrente utilizzata dalla linea telefonica.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.NetworkState">
+      <summary>Stato di rete corrente della linea telefonica.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.None">
+      <summary>Nessuna proprietà.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.Transport">
+      <summary>Trasporto (cellulare o VoIP) per la linea telefonica.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.Voicemail">
+      <summary>Account della segreteria telefonica associato alla linea telefonica.</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails">
+      <summary>Utilizzata per fornire informazioni dettagliate su un nuovo messaggio di segreteria telefonica su una linea telefonica.</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails.LineId">
+      <summary>Ottiene l'ID della linea telefonica per la quale è arrivato il nuovo messaggio di segreteria telefonica.</summary>
+      <returns>ID della linea telefonica per il nuovo messaggio di segreteria telefonica.</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails.OperatorMessage">
+      <summary>Ottiene il messaggio modificato dalla segreteria telefonica facoltativo impostato da un operatore quando viene inviato un SMS modificato della segreteria telefonica.</summary>
+      <returns>Messaggio modificato della segreteria telefonica facoltativo impostato da un operatore quando viene inviato un SMS modificato della segreteria telefonica. Se il messaggio esiste, viene visualizzato nell'eventuale avviso popup della segreteria telefonica.</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails.VoicemailCount">
+      <summary>Ottiene il nuovo conteggio di messaggi di segreteria telefonica per la linea telefonica.</summary>
+      <returns>Numero corrente di messaggi della segreteria telefonica.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneTriggerType">
+      <summary>Indica un tipo di evento per un trigger telefonico.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.AirplaneModeDisabledForEmergencyCall">
+      <summary>La modalità aerea su una linea telefonica è stata disabilitata in modo da consentire una chiamata di emergenza dal telefono.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.CallBlocked">
+      <summary>La chiamata è stata bloccata.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.CallHistoryChanged">
+      <summary>La cronologia di chiamata è stata modificata.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.CallOriginDataRequest">
+      <summary>È stata effettuata una richiesta per l'origine della telefonata.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.LineChanged">
+      <summary>Le proprietà PhoneLineProperties sono state modificate.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.NewVoicemailMessage">
+      <summary>Il sistema ha ricevuto un nuovo messaggio di segreteria telefonica o il l conteggio dei messaggi della segreteria telefonica è passato a 0.</summary>
+    </member></members>
+</doc>

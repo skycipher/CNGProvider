@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Security.ExchangeActiveSyncProvisioning.EasContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy">
+      <summary>現代電子郵件應用程式會評估並套用 EAS 安全性原則。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasClientSecurityPolicy 可能無法使用。</deprecated>
+    </member><member name="M:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.#ctor">
+      <summary>建立物件的執行個體，讓呼叫端應用程式設定從 Exchange Server 接收的原則，以進行評估或應用。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasClientSecurityPolicy 可能無法使用。</deprecated>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.DisallowConvenienceLogon">
+      <summary>取得或設定防止簡便登入的能力。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasClientSecurityPolicy 可能無法使用。</deprecated>
+      <returns>TRUE 會防止方便登入。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.MaxInactivityTimeLock">
+      <summary>取得或設定電腦在其鎖定前可以保持為非作用中的最大時間長度。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasClientSecurityPolicy 可能無法使用。</deprecated>
+      <returns>電腦鎖定之前允許處於非使用狀態的時間長度。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.MaxPasswordFailedAttempts">
+      <summary>取得或設定失敗的登入密碼嘗試次數上限。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasClientSecurityPolicy 可能無法使用。</deprecated>
+      <returns>範圍介於 4 和 16 之間。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.MinPasswordComplexCharacters">
+      <summary>取得或設定密碼所需的最小複雜密碼字元數目。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasClientSecurityPolicy 可能無法使用。</deprecated>
+      <returns>範圍介於 1 和 4 之間。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.MinPasswordLength">
+      <summary>取得或設定允許的密碼最小長度。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasClientSecurityPolicy 可能無法使用。</deprecated>
+      <returns>範圍介於 1 和 16 之間。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.PasswordExpiration">
+      <summary>取得或設定密碼有效的時間長度。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasClientSecurityPolicy 可能無法使用。</deprecated>
+      <returns>密碼到期而且必須重設之前的時間長度。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.PasswordHistory">
+      <summary>取得或設定先前使用的密碼資訊。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasClientSecurityPolicy 可能無法使用。</deprecated>
+      <returns>先前使用的密碼資訊。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.RequireEncryption">
+      <summary>取得或設定是否需要加密。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasClientSecurityPolicy 可能無法使用。</deprecated>
+      <returns>TRUE 表示需要加密。</returns>
+    </member><member name="M:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.ApplyAsync">
+      <summary>一旦使用者同意，即以非同步模式套用 EAS 原則。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasClientSecurityPolicy 可能無法使用。</deprecated>
+      <returns>在非同步模式中，將回呼結果的評估傳回給呼叫的應用程式。</returns>
+    </member><member name="M:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.CheckCompliance">
+      <summary>評估 EAS 原則。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasClientSecurityPolicy 可能無法使用。</deprecated>
+      <returns>傳回相容性檢查的結果（在同步模式中）。</returns>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults">
+      <summary>將 EAS 安全性原則的評估結果提供給郵件應用程式。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasComplianceResults 可能會經過修改或無法使用。</deprecated>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.Compliant">
+      <summary>傳回電腦是否符合 EAS 原則的結果。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasComplianceResults 可能會經過修改或無法使用。</deprecated>
+      <returns>電腦是否符合 EAS 原則的結果。 如果正在評估的所有原則都相容，Compliant 屬性會設定為 TRUE。 否則設定為 FALSE。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.DisallowConvenienceLogonResult">
+      <summary>傳回是否不允許方便登入的結果。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasComplianceResults 可能會經過修改或無法使用。</deprecated>
+      <returns>是否不允許方便登入的結果。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.EncryptionProviderType">
+      <summary>描述 Exchange ActiveSync 加密提供者的類型。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasComplianceResults 可能會經過修改或無法使用。</deprecated>
+      <returns>Exchange ActiveSync 加密提供者的類型。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.MaxInactivityTimeLockResult">
+      <summary>傳回電腦鎖定之前允許閒置之最長時間的結果。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasComplianceResults 可能會經過修改或無法使用。</deprecated>
+      <returns>鎖定電腦之前允許閒置之最長時間的結果。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.MaxPasswordFailedAttemptsResult">
+      <summary>傳回允許失敗的密碼嘗試之最大次數的結果。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasComplianceResults 可能會經過修改或無法使用。</deprecated>
+      <returns>允許失敗密碼嘗試之最大次數的結果。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.MinPasswordComplexCharactersResult">
+      <summary>傳回所需的複雜密碼字元最小數目的結果。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasComplianceResults 可能會經過修改或無法使用。</deprecated>
+      <returns>所需複雜密碼字元之最小數目的結果。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.MinPasswordLengthResult">
+      <summary>傳回所需之密碼最小長度的結果。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasComplianceResults 可能會經過修改或無法使用。</deprecated>
+      <returns>所需密碼之最小長度的結果。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.PasswordExpirationResult">
+      <summary>傳回密碼是否已過期的結果。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasComplianceResults 可能會經過修改或無法使用。</deprecated>
+      <returns>密碼是否已過期的結果。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.PasswordHistoryResult">
+      <summary>傳回密碼記錄的結果。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasComplianceResults 可能會經過修改或無法使用。</deprecated>
+      <returns>密碼歷程記錄的結果。</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.RequireEncryptionResult">
+      <summary>傳回是否需要加密的結果。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasComplianceResults 可能會經過修改或無法使用。</deprecated>
+      <returns>是否需要加密的結果。</returns>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult">
+      <summary>登入是否可能發生的結果。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasDisallowConvenienceLogonResult 可能無法使用。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult.CanBeCompliant">
+      <summary>您可以使用 ApplyAsync 方法，讓這台電腦符合標準。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 而且使用者是系統管理員。HRESULT: S_OK 但是使用者不受控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult.Compliant">
+      <summary>這台電腦符合原則的標準。HRESULT: S_OK 而且使用者已受控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult.NotEvaluated">
+      <summary>未設定評估的原則。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult.RequestedPolicyIsStricter">
+      <summary>要求的原則比電腦原則更嚴格。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 而且使用者不是系統管理員。</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType">
+      <summary>描述交換 ActiveSync 加密提供者的型別。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasEncryptionProviderType 可能無法使用。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType.NotEvaluated">
+      <summary>目前無法判斷加密提供者類型。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType.OtherEncryption">
+      <summary>加密提供者為非 Windows 提供者。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType.WindowsEncryption">
+      <summary>加密提供者為 Windows 提供者。</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult">
+      <summary>表示在鎖定電腦之前的最大時間結果。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasMaxInactivityTimeLockResult 可能無法使用。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.CanBeCompliant">
+      <summary>您可以使用 ApplyAsync 方法，讓這台電腦符合標準。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 而且使用者是系統管理員。HRESULT: S_OK 但是使用者不受控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.Compliant">
+      <summary>這台電腦符合原則的標準。HRESULT: S_OK 而且使用者已受控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.InvalidParameter">
+      <summary>此原則值不在有效的範圍內。HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.NotEvaluated">
+      <summary>未設定評估的原則。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.RequestedPolicyIsStricter">
+      <summary>要求的原則比電腦原則更嚴格。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 而且使用者不是系統管理員。</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult">
+      <summary>表示密碼嘗試結果的最大數目。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasMaxPasswordFailedAttemptsResult 可能無法使用。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.CanBeCompliant">
+      <summary>您可以使用 ApplyAsync 方法，讓這台電腦符合標準。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 而且使用者是系統管理員。HRESULT: S_OK 但是使用者不受控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.Compliant">
+      <summary>這台電腦符合原則的標準。HRESULT: S_OK 而且使用者已受控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.InvalidParameter">
+      <summary>此原則值不在有效的範圍內。HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.NotEvaluated">
+      <summary>未設定評估的原則。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.RequestedPolicyIsStricter">
+      <summary>要求的原則比電腦原則更嚴格。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 而且使用者不是系統管理員。</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult">
+      <summary>表示密碼的最小複雜度結果。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasMinPasswordComplexCharactersResult 可能無法使用。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.AdminsCannotChangePassword">
+      <summary>不允許一個或多個系統管理員變更其密碼。 HRESULT: EAS_E_ADMINS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.AdminsHaveBlankPassword">
+      <summary>無法評估 EAS 密碼原則，因為一個或多個系統管理員的密碼空白。 HRESULT: EAS_E_ADMINS_HAVE_BLANK_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.CanBeCompliant">
+      <summary>您可以使用 ApplyAsync 方法，讓這台電腦符合標準。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 而且使用者是系統管理員。HRESULT: S_OK 但是使用者不受控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.ChangeConnectedAdminsPassword">
+      <summary>至少一個系統管理員的已連線帳戶密碼必須變更才能符合 EAS 密碼原則的標準。HRESULT：EAS_E_CONNECTED_ADMINS_NEED_TO_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.ChangeConnectedUserPassword">
+      <summary>目前使用者的已連線帳戶密碼必須變更才能符合 EAS 密碼原則的標準。HRESULT: EAS_E_CURRENT_CONNECTED_USER_NEED_TO_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.Compliant">
+      <summary>這台電腦符合原則的標準。HRESULT: S_OK 而且使用者已受控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.ConnectedAdminsProviderPolicyIsWeak">
+      <summary>至少有一個系統管理員的已連線帳戶提供者無法強制 EAS 密碼原則。HRESULT: EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CONNECTED_ADMINS</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.ConnectedUserProviderPolicyIsWeak">
+      <summary>目前使用者的已連線帳戶提供者無法強制 EAS 密碼原則。HRESULT: EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CURRENT_CONNECTED_USER</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.CurrentUserHasBlankPassword">
+      <summary>無法評估使用者的 EAS 密碼原則，因為使用者的密碼空白。HRESULT: EAS_E_CURRENT_USER_HAS_BLANK_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.InvalidParameter">
+      <summary>此原則值不在有效的範圍內。HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.LocalControlledUsersCannotChangePassword">
+      <summary>有不允許變更其密碼的其他標準使用者存在。 HRESULT: EAS_E_LOCAL_CONTROLLED_USERS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.NotEvaluated">
+      <summary>未設定評估的原則。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.RequestedPolicyIsStricter">
+      <summary>要求的原則比電腦原則更嚴格。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 而且使用者不是系統管理員。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.RequestedPolicyNotEnforceable">
+      <summary>系統無法強制執行正在評估的 EAS 原則。HRESULT: EAS_E_REQUESTED_POLICY_NOT_ENFORCEABLE</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.UserCannotChangePassword">
+      <summary>不允許使用者變更密碼。 HRESULT: EAS_E_USER_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult">
+      <summary>表示密碼的最小長度結果。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasMinPasswordLengthResult 可能無法使用。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.AdminsCannotChangePassword">
+      <summary>不允許一個或多個系統管理員變更其密碼。 HRESULT: EAS_E_ADMINS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.AdminsHaveBlankPassword">
+      <summary>無法評估 EAS 密碼原則，因為一個或多個系統管理員的密碼空白。 HRESULT: EAS_E_ADMINS_HAVE_BLANK_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.CanBeCompliant">
+      <summary>您可以使用 ApplyAsync 方法，讓這台電腦符合標準。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 而且使用者不是系統管理員。HRESULT: S_OK 但是使用者不受控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.ChangeConnectedAdminsPassword">
+      <summary>至少一個系統管理員的已連線帳戶密碼必須變更才能符合 EAS 密碼原則的標準。HRESULT：EAS_E_CONNECTED_ADMINS_NEED_TO_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.ChangeConnectedUserPassword">
+      <summary>目前使用者的已連線帳戶密碼必須變更才能符合 EAS 密碼原則的標準。HRESULT: EAS_E_CURRENT_CONNECTED_USER_NEED_TO_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.Compliant">
+      <summary>這台電腦符合原則的標準。HRESULT: S_OK 而且使用者已受控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.ConnectedAdminsProviderPolicyIsWeak">
+      <summary>至少有一個系統管理員的已連線帳戶提供者無法強制 EAS 密碼原則。HRESULT: EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CONNECTED_ADMINS</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.ConnectedUserProviderPolicyIsWeak">
+      <summary>目前使用者的已連線帳戶提供者無法強制 EAS 密碼原則。HRESULT: EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CURRENT_CONNECTED_USER</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.CurrentUserHasBlankPassword">
+      <summary>無法評估使用者的 EAS 密碼原則，因為使用者的密碼空白。HRESULT: EAS_E_CURRENT_USER_HAS_BLANK_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.InvalidParameter">
+      <summary>此原則值不在有效的範圍內。HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.LocalControlledUsersCannotChangePassword">
+      <summary>有不允許變更其密碼的其他標準使用者存在。 HRESULT: EAS_E_LOCAL_CONTROLLED_USERS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.NotEvaluated">
+      <summary>未設定評估的原則。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.RequestedPolicyIsStricter">
+      <summary>要求的原則比電腦原則更嚴格。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 而且使用者不是系統管理員。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.RequestedPolicyNotEnforceable">
+      <summary>系統無法強制執行正在評估的 EAS 原則。HRESULT: EAS_E_REQUESTED_POLICY_NOT_ENFORCEABLE</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.UserCannotChangePassword">
+      <summary>不允許使用者變更密碼。 HRESULT: EAS_E_USER_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult">
+      <summary>密碼到期資訊查詢的結果。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasPasswordExpirationResult 可能無法使用。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.AdminsCannotChangePassword">
+      <summary>不允許一個或多個系統管理員變更其密碼。 HRESULT: EAS_E_ADMINS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.CanBeCompliant">
+      <summary>您可以使用 ApplyAsync 方法，讓電腦符合標準。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 而且使用者是系統管理員。HRESULT: S_OK 但是使用者不受控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.Compliant">
+      <summary>電腦符合原則的標準。HRESULT: S_OK 而且使用者已受控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.InvalidParameter">
+      <summary>此原則值不在有效的範圍內。HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.LocalControlledUsersCannotChangePassword">
+      <summary>有不允許變更其密碼的其他標準使用者存在。 HRESULT: EAS_E_LOCAL_CONTROLLED_USERS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.NotEvaluated">
+      <summary>未設定評估的原則。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.RequestedExpirationIncompatible">
+      <summary>無法滿足 EAS 密碼到期原則，因為密碼到期間隔小於系統的密碼間隔下限。HRESULT: EAS_E_REQUESTED_POLICY_PASSWORD_EXPIRATION_INCOMPATIBLE</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.RequestedPolicyIsStricter">
+      <summary>要求的原則比電腦原則更嚴格。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 而且使用者不是系統管理員。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.UserCannotChangePassword">
+      <summary>不允許使用者變更密碼。 HRESULT: EAS_E_USER_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult">
+      <summary>表示密碼歷程記錄。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasPasswordHistoryResult 可能無法使用。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.CanBeCompliant">
+      <summary>您可以使用 ApplyAsync 方法，讓電腦符合標準。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 而且使用者是系統管理員。HRESULT: S_OK 但是使用者不受控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.Compliant">
+      <summary>電腦符合原則的標準。HRESULT: S_OK 而且使用者已受控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.InvalidParameter">
+      <summary>此原則值不在有效的範圍內。HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.NotEvaluated">
+      <summary>未設定評估的原則。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.RequestedPolicyIsStricter">
+      <summary>要求的原則比電腦原則更嚴格。HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS 而且使用者不是系統管理員。</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult">
+      <summary>表示需要的加密類型。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，EasRequireEncryptionResult 可能無法使用。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.CanBeCompliant">
+      <summary>您可以使用 ApplyAsync 方法，讓這台電腦符合標準。HRESULT: S_OK 但是使用者不受控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.Compliant">
+      <summary>這台電腦已經受到裝置保護。HRESULT: S_OK 而且使用者已受控制。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeFixedDataNotSupported">
+      <summary>這個值已不再受支援。 從 Windows 8.1 開始，請使用 FixedDataNotSupported。</summary>
+      <deprecated type="deprecate">這個值已不再受支援。 從 Windows 8.1 開始，請使用 FixedDataNotSupported。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeHardwareNotCompliant">
+      <summary>這個值已不再受支援。 從 Windows 8.1 開始，請使用 HardwareNotCompliant。</summary>
+      <deprecated type="deprecate">這個值已不再受支援。 從 Windows 8.1 開始，請使用 HardwareNotCompliant。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeOsVolumeNotProtected">
+      <summary>這個值已不再受支援。 從 Windows 8.1 開始，請使用 OsVolumeNotProtected。</summary>
+      <deprecated type="deprecate">這個值已不再受支援。 從 Windows 8.1 開始，請使用 OsVolumeNotProtected。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeProtectionNotYetEnabled">
+      <summary>這個值已不再受支援。 從 Windows 8.1 開始，請使用 ProtectionNotYetEnabled。</summary>
+      <deprecated type="deprecate">這個值已不再受支援。 從 Windows 8.1 開始，請使用 ProtectionNotYetEnabled。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeProtectionSuspended">
+      <summary>這個值已不再受支援。 從 Windows 8.1 開始，請使用 ProtectionSuspended。</summary>
+      <deprecated type="deprecate">這個值已不再受支援。 從 Windows 8.1 開始，請使用 ProtectionSuspended。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeWinReNotConfigured">
+      <summary>這個值已不再受支援。 從 Windows 8.1 開始，請使用 LockNotConfigured。</summary>
+      <deprecated type="deprecate">這個值已不再受支援。 從 Windows 8.1 開始，請使用 LockNotConfigured。</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.FixedDataNotSupported">
+      <summary>這台電腦無法支援裝置加密，因為存在未加密的固定資料磁碟區。HRESULT: FVE_E_DE_FIXED_DATA_NOT_SUPPORTED</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.HardwareNotCompliant">
+      <summary>這台電腦不符合支援裝置加密的硬體需求。HRESULT: FVE_E_DE_HARDWARE_NOT_COMPLIANT</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.LockNotConfigured">
+      <summary>這台電腦無法支援裝置加密，因為 WinRE 的設定不正確。HRESULT: FVE_E_DE_WINRE_NOT_CONFIGURED</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.NoFeatureLicense">
+      <summary>這台電腦沒有功能授權。HRESULT: FVE_E_NO_FEATURE_LICENSE</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.NotEvaluated">
+      <summary>未設定評估的原則。</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.NotProvisionedOnAllVolumes">
+      <summary>這台電腦並非佈建為支援裝置加密。 在所有磁碟區上啟用 BitLocker，以符合裝置加密原則。 HRESULT: FVE_E_NOT_PROVISIONED_ON_ALL_VOLUMES</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.OsNotProtected">
+      <summary>作業系統磁碟機不受 BitLocker 磁碟機加密所保護。HRESULT: FVE_E_OS_NOT_PROTECTED</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.OsVolumeNotProtected">
+      <summary>這台電腦並非佈建裝置加密。 如果支援，則在所有容量的裝置加密以符合裝置加密原則。
+HRESULT: FVE_E_DE_OS_VOLUME_NOT_PROTECTED</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.ProtectionNotYetEnabled">
+      <summary>此磁碟區未啟用保護。 啟用保護需要已連線的帳戶。 如果您已經有連線的帳戶並且看到這個錯誤，請參閱事件記錄檔，了解詳細資訊。HRESULT: FVE_E_DE_PROTECTION_NOT_YET_ENABLED</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.ProtectionSuspended">
+      <summary>此磁碟區有啟用保護，但已經暫停。 這很可能是由於您電腦的更新所致。 重新開機，然後再試一次。HRESULT： FVE_E_DE_PROTECTION_SUSPENDED</summary>
+    </member></members>
+</doc>

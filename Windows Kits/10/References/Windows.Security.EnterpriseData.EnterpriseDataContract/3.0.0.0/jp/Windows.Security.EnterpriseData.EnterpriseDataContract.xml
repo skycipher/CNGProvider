@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Security.EnterpriseData.EnterpriseDataContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Security.EnterpriseData.BufferProtectUnprotectResult">
+      <summary>エンタープライズで保護されたバッファーを保護または保護解除した結果に関する情報を含みます。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.BufferProtectUnprotectResult.Buffer">
+      <summary>保護または保護解除されたエンタープライズで保護されたバッファーを取得します。</summary>
+      <returns>エンタープライズで保護されたバッファー。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.BufferProtectUnprotectResult.ProtectionInfo">
+      <summary>保護または保護解除されたエンタープライズで保護されたバッファーに関する DataProtectionInfo オブジェクトを取得します。</summary>
+      <returns>エンタープライズで保護されたバッファーに関する情報オブジェクト。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.DataProtectionInfo">
+      <summary>エンタープライズで保護されたバッファーまたはストリームに関する情報を含みます。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.DataProtectionInfo.Identity">
+      <summary>エンタープライズで保護されたバッファーまたはストリームのエンタープライズ ID。</summary>
+      <returns>エンタープライズ ID。 これは、管理されている電子メール アドレスまたはドメインです。 アプリケーションは、電子メール アドレスまたはドメインが管理されていることを確認するために IsIdentityManaged を使用する必要があります。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.DataProtectionInfo.Status">
+      <summary>エンタープライズで保護されたバッファーまたはストリームの保護の状態。</summary>
+      <returns>DataProtectionStatus 列挙体の値。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.DataProtectionManager">
+      <summary>エンタープライズ ID に対して保護されるバッファーおよびストリームを管理する操作へのアクセスを提供します。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+    </member><member name="M:Windows.Security.EnterpriseData.DataProtectionManager.GetProtectionInfoAsync(Windows.Storage.Streams.IBuffer)">
+      <summary>エンタープライズで保護されたバッファーの状態を取得します。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+      <returns>このメソッドへの呼び出しが正常に完了すると、バッファーの状態を含む DataProtectionInfo オブジェクトを返します。</returns>
+      <param name="protectedData">保護の状態を照会するバッファー。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.DataProtectionManager.GetStreamProtectionInfoAsync(Windows.Storage.Streams.IInputStream)">
+      <summary>エンタープライズで保護されたストリームの状態を取得します。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+      <returns>このメソッドへの呼び出しが正常に完了すると、保護解除されたストリームの状態を含む DataProtectionInfo オブジェクトを返します。</returns>
+      <param name="protectedStream">保護の状態を照会するストリーム。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.DataProtectionManager.ProtectAsync(Windows.Storage.Streams.IBuffer,System.String)">
+      <summary>エンタープライズ ID に対してバッファー内のデータを保護します。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+      <returns>このメソッドへの呼び出しが正常に完了すると、新たに保護されたバッファーの状態を含む BufferProtectUnprotectResult オブジェクトを返します。</returns>
+      <param name="data">保護するバッファー。</param>
+      <param name="identity">エンタープライズ ID。 これは、管理されている電子メール アドレスまたはドメインです。 アプリケーションは、電子メール アドレスまたはドメインが管理されていることを確認するために IsIdentityManaged を使用する必要があります。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.DataProtectionManager.ProtectStreamAsync(Windows.Storage.Streams.IInputStream,System.String,Windows.Storage.Streams.IOutputStream)">
+      <summary>エンタープライズ ID に対してデータのストリームを保護します。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+      <returns>このメソッドへの呼び出しが正常に完了すると、保護されたストリームの状態を含む DataProtectionInfo オブジェクトを返します。</returns>
+      <param name="unprotectedStream">保護解除された入力ストリーム。</param>
+      <param name="identity">エンタープライズ ID。 これは、管理されている電子メール アドレスまたはドメインです。 アプリケーションは、電子メール アドレスまたはドメインが管理されていることを確認するために IsIdentityManaged を使用する必要があります。</param>
+      <param name="protectedStream">保護された出力ストリーム。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.DataProtectionManager.UnprotectAsync(Windows.Storage.Streams.IBuffer)">
+      <summary>エンタープライズ ID に対する保護をバッファーから削除します。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+      <returns>このメソッドへの呼び出しが正常に完了すると、保護されていないバッファーの状態を含む BufferProtectUnprotectResult オブジェクトを返します。</returns>
+      <param name="data">保護解除するバッファー。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.DataProtectionManager.UnprotectStreamAsync(Windows.Storage.Streams.IInputStream,Windows.Storage.Streams.IOutputStream)">
+      <summary>エンタープライズ ID に対する保護をデータのストリームから削除します。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+      <returns>このメソッドへの呼び出しが正常に完了すると、保護されていないストリームの状態を含む DataProtectionInfo オブジェクトを返します。</returns>
+      <param name="protectedStream">保護された入力ストリーム。</param>
+      <param name="unprotectedStream">保護解除された出力ストリーム。</param>
+    </member><member name="T:Windows.Security.EnterpriseData.DataProtectionStatus">
+      <summary>バッファーまたはストリームのエンタープライズ ID 保護状態を記述します。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.DataProtectionStatus.AccessSuspended">
+      <summary>保護された項目にアクセスするキーは、デバイスがロックされている間削除されました。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.DataProtectionStatus.LicenseExpired">
+      <summary>項目の RMS ライセンスの期限が切れています。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.DataProtectionStatus.Protected">
+      <summary>項目は保護されています。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.DataProtectionStatus.ProtectedToOtherIdentity">
+      <summary>項目は、別のエンタープライズ ID に対して保護されています。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.DataProtectionStatus.Revoked">
+      <summary>項目の保護が取り消されました。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.DataProtectionStatus.Unprotected">
+      <summary>項目は、エンタープライズ ID に対して保護されていません。</summary>
+    </member><member name="T:Windows.Security.EnterpriseData.EnforcementLevel">
+      <summary>考えられるエンタープライズ データ保護 (EDP) 適用レベルを同時に説明する一連の列挙値。 EDP 適用レベルは、モバイル デバイス管理 (MDM) ポリシー構成の 1 つの側面です。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.EnforcementLevel.Block">
+      <summary>ポリシーは、ユーザーのブロックを求めます。 承認されていないアプリケーションにデータを貼り付けるなどの操作が試みられると、アプリケーションはその操作をブロックして監査する必要があります。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.EnforcementLevel.NoProtection">
+      <summary>ポリシーが保護なしを求めます。 データが保護されている場合、アプリケーションは EDP の動作を無効にして、データの保護を解除する必要があります。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.EnforcementLevel.Override">
+      <summary>ユーザーに警告メッセージのオーバーライドを許可するポリシー呼び出し。 承認されていないアプリケーションにデータを貼り付けるなどの操作が試みられると、アプリケーションはオーバーライド可能な警告メッセージを通じてユーザーにプロンプトを表示する必要があります。 ユーザーがオーバーライドした場合、アプリケーションはアクションを実行して、監査します。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.EnforcementLevel.Silent">
+      <summary>ポリシーが自動保護を求めます。 承認されていないアプリケーションにデータを貼り付けるなどの操作が試みられた場合、アプリケーションはプロンプトを表示すべきではありません。 代わりに、アプリケーションは自動的に操作を許可し、監査します。</summary>
+    </member><member name="T:Windows.Security.EnterpriseData.FileProtectionInfo">
+      <summary>エンタープライズで保護されたファイルに関する情報を含みます。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.FileProtectionInfo.Identity">
+      <summary>エンタープライズで保護されたファイルのエンタープライズ ID。</summary>
+      <returns>エンタープライズ ID。 これは、管理されている電子メール アドレスまたはドメインです。 アプリケーションは、電子メール アドレスまたはドメインが管理されていることを確認するために IsIdentityManaged を使用する必要があります。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.FileProtectionInfo.IsRoamable">
+      <summary>エンタープライズで保護されたファイルの保護を他のデバイスにローミングできるかどうかを指定します。</summary>
+      <returns>ファイルの保護を他のデバイスにローミングする場合は true。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.FileProtectionInfo.Status">
+      <summary>エンタープライズで保護されたファイルの保護の状態。</summary>
+      <returns>FileProtectionStatus 列挙体の値。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.FileProtectionManager">
+      <summary>エンタープライズ ID に対して保護されるファイルを管理する操作へのアクセスを提供します。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.CopyProtectionAsync(Windows.Storage.IStorageItem,Windows.Storage.IStorageItem)">
+      <summary>あるファイルから別のファイルへのファイル保護を複製します。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+      <returns>このメソッドの呼び出しが正常に完了すると、ファイル保護がコピーされた場合は true を返し、エラーが発生した場合は false を返します。</returns>
+      <param name="source">ファイル保護のコピー元のソース ファイル。</param>
+      <param name="target">ファイル保護のコピー先のターゲット ファイル。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.CreateProtectedAndOpenAsync(Windows.Storage.IStorageFolder,System.String,System.String,Windows.Storage.CreationCollisionOption)">
+      <summary>エンタープライズで保護されたファイルを作成します。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+      <returns>このメソッドへの呼び出しが正常に完了すると、新たに作成された保護ファイルを表す ProtectedFileCreateResult オブジェクトを返します。</returns>
+      <param name="parentFolder">エンタープライズで保護されたファイルを作成するフォルダー。</param>
+      <param name="desiredName">エンタープライズで保護された新しいファイルの任意の名前。</param>
+      <param name="identity">エンタープライズ ID。 これは、管理されている電子メール アドレスまたはドメインです。 アプリケーションは、電子メール アドレスまたはドメインが管理されていることを確認するために IsIdentityManaged を使用する必要があります。</param>
+      <param name="collisionOption">desiredName が既にある場合に行う処理を指定する CreationCollisionOption 値。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.GetProtectionInfoAsync(Windows.Storage.IStorageItem)">
+      <summary>エンタープライズで保護されたファイルの状態を取得します。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+      <returns>このメソッドへの呼び出しが正常に完了すると、ファイルの状態を含む FileProtectionInfo オブジェクトを返します。</returns>
+      <param name="source">保護の状態を照会するファイルまたはフォルダー。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.IsContainerAsync(Windows.Storage.IStorageFile)">
+      <summary>ストレージ ファイルが実際にその中にファイルが含まれているコンテナーであるかどうかを判別するには、このプロパティを使用します。</summary>
+      <returns>ストレージ コンテナー ファイルである場合は true、そうでない場合は false。</returns>
+      <param name="file">判別するファイルがコンテナーであるかどうか。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.LoadFileFromContainerAsync(Windows.Storage.IStorageFile)">
+      <summary>エンタープライズで保護されたファイルを作成し、コンテナー ファイルから読み込みます。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+      <returns>このメソッドへの呼び出しが正常に完了すると、新たに作成された保護ファイルを表す ProtectedContainerImportResult オブジェクトを返します。</returns>
+      <param name="containerFile">作成して読み込むエンタープライズで保護されたファイル。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.LoadFileFromContainerAsync(Windows.Storage.IStorageFile,Windows.Storage.IStorageItem)">
+      <summary>エンタープライズで保護されたファイルを指定されたストレージ項目 (フォルダーなど) で作成し、コンテナー ファイルから読み込みます。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+      <returns>このメソッドへの呼び出しが正常に完了すると、新たに作成された保護ファイルを表す ProtectedContainerImportResult オブジェクトを返します。</returns>
+      <param name="containerFile">作成して読み込むエンタープライズで保護されたファイル。</param>
+      <param name="target">エンタープライズで保護されたファイルを作成するストレージ項目。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.LoadFileFromContainerAsync(Windows.Storage.IStorageFile,Windows.Storage.IStorageItem,Windows.Storage.NameCollisionOption)">
+      <summary>エンタープライズで保護されたファイルを指定されたストレージ項目 (フォルダーなど) で作成し、コンテナー ファイルから読み込みます。</summary>
+      <returns>このメソッドへの呼び出しが正常に完了すると、新たに作成された保護ファイルを表す ProtectedContainerImportResult オブジェクトを返します。</returns>
+      <param name="containerFile">作成して読み込むエンタープライズで保護されたファイル。</param>
+      <param name="target">エンタープライズで保護されたファイルを作成するストレージ項目。</param>
+      <param name="collisionOption">作成されたファイルがコンテナーの場所にある既存の項目名と同じ場合に Windows がどのように応答するかを決定する列挙値。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.ProtectAsync(Windows.Storage.IStorageItem,System.String)">
+      <summary>エンタープライズ ID に対してファイル内のデータを保護します。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+      <returns>このメソッドへの呼び出しが正常に完了すると、新たに保護されたファイルの状態を含む FileProtectionInfo オブジェクトを返します。</returns>
+      <param name="target">保護するファイル。</param>
+      <param name="identity">エンタープライズ ID。 これは、管理されている電子メール アドレスまたはドメインです。 ID を使用してファイルを保護する前に電子メール アドレスまたはドメインが管理されていることを確認するには、ProtectionPolicyManager.IsIdentityManaged を使用します。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.SaveFileAsContainerAsync(Windows.Storage.IStorageFile)">
+      <summary>エンタープライズで保護されたファイルを、コンテナーに追加されたバージョンとして保存します。</summary>
+      <returns>このメソッドへの呼び出しが正常に完了すると、新たに作成されたコンテナー ファイルを表す ProtectedContainerExportResult オブジェクトを返します。</returns>
+      <param name="protectedFile">コピーする保護されたソース ファイル。</param>
+    </member><member name="T:Windows.Security.EnterpriseData.FileProtectionStatus">
+      <summary>ファイルまたはフォルダーのエンタープライズ保護の状態を記述します。</summary>
+      <deprecated type="deprecate">"Undetermined" は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。 代わりに Unknown を使用してください。</deprecated>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.AccessSuspended">
+      <summary>保護された項目にアクセスするキーは、デバイスがロックされている間削除されました。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.FileInUse">
+      <summary>項目が他のプロセスによって使用されています。 排他的に使用可能になった後にのみ、エンタープライズ保護を適用できます。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.LicenseExpired">
+      <summary>項目の RMS ライセンスの期限が切れています。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.NotProtectable">
+      <summary>項目が暗号化されているか、システム ファイルであるため、エンタープライズ保護を使用して保護できません。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.Protected">
+      <summary>項目が、エンタープライズ保護を使用して保護されています。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.ProtectedByOtherUser">
+      <summary>ProtectedByOtherUser は、Windows 10 よりも後のリリースで使用できなくなる可能性があります。 代わりに、ProtectedToOtherIdentity を使用してください。別のユーザーが、エンタープライズの保護を使って項目を保護しています。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.ProtectedToOtherEnterprise">
+      <summary>ProtectedToOtherEnterprise は、Windows 10 より後のリリースでは使用できなくなる可能性があります。 代わりに、ProtectedToOtherIdentity を使用してください。項目が、エンタープライズの保護を使って別のエンタープライズ ID 用に保護されています。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.ProtectedToOtherIdentity">
+      <summary>項目が、エンタープライズ保護を使用して、別のエンタープライズ ID 用に保護されています。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.Revoked">
+      <summary>項目が、エンタープライズ保護を使用して取り消されました。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.Undetermined">
+      <summary>"Undetermined" は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。 代わりに、Unknown を使用してください。項目は暗号化または復号化されているため、エンタープライズ保護の状態を特定できません。 後で再度確認します。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.Unknown">
+      <summary>項目は暗号化または復号化されているため、エンタープライズ保護の状態を特定できません。 後で再度確認します。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.Unprotected">
+      <summary>項目が、エンタープライズ保護を使用して保護されていません。</summary>
+    </member><member name="T:Windows.Security.EnterpriseData.FileRevocationManager">
+      <summary>選択的なワイプ操作へのアクセスを提供します。</summary>
+      <deprecated type="deprecate">FileRevocationManager は、Windows 10 より後のリリースでは使用できなくなる可能性があります。 代わりに、FileProtectionManager を使用してください。</deprecated>
+    </member><member name="M:Windows.Security.EnterpriseData.FileRevocationManager.CopyProtectionAsync(Windows.Storage.IStorageItem,Windows.Storage.IStorageItem)">
+      <summary>ファイルまたはフォルダーの選択的なワイプ保護の状態を、新しいファイルまたはフォルダーにコピーします。</summary>
+      <deprecated type="deprecate">FileRevocationManager は、Windows 10 より後のリリースでは使用できなくなる可能性があります。 代わりに、FileProtectionManager を使用してください。</deprecated>
+      <returns>コピー操作が正常に完了した場合は true。それ以外の場合は false。</returns>
+      <param name="sourceStorageItem">選択的なワイプ保護の状態をコピーするソース項目。</param>
+      <param name="targetStorageItem">選択的なワイプ保護の状態のコピー先となるターゲット項目。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileRevocationManager.GetStatusAsync(Windows.Storage.IStorageItem)">
+      <summary>ファイルまたはフォルダーの選択的なワイプ保護の状態を取得します。</summary>
+      <deprecated type="deprecate">FileRevocationManager は、Windows 10 より後のリリースでは使用できなくなる可能性があります。 代わりに、FileProtectionManager を使用してください。</deprecated>
+      <returns>storageItem の選択的なワイプ保護の状態を取得する非同期操作。</returns>
+      <param name="storageItem">選択的なワイプ保護の状態を取得するファイルまたはフォルダー。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileRevocationManager.ProtectAsync(Windows.Storage.IStorageItem,System.String)">
+      <summary>選択的なワイプのためにファイルまたはフォルダーを保護します。</summary>
+      <deprecated type="deprecate">FileRevocationManager は、Windows 10 より後のリリースでは使用できなくなる可能性があります。 代わりに、FileProtectionManager を使用してください。</deprecated>
+      <returns>storageItem の選択的なワイプ保護の状態を取得する非同期操作。</returns>
+      <param name="storageItem">選択的なワイプのために保護するファイルまたはフォルダー。</param>
+      <param name="enterpriseIdentity">ファイルまたはフォルダーが保護されているエンタープライズ ID。 enterpriseIdentity 値は、国際化ドメイン名 (IDN: Internationalized Domain Name) として書式設定する必要があり、空白を含めることはできません。 例: contoso.com</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileRevocationManager.Revoke(System.String)">
+      <summary>指定したエンタープライズ ID において、選択的なワイプのために保護されているすべてのファイルおよびフォルダーを取り消します。</summary>
+      <deprecated type="deprecate">FileRevocationManager は、Windows 10 より後のリリースでは使用できなくなる可能性があります。 代わりに、FileProtectionManager を使用してください。</deprecated>
+      <param name="enterpriseIdentity">このエンタープライズ ID において、選択的なワイプによって保護されているすべてのファイルおよびフォルダーを取り消します。 enterpriseIdentity 値は、国際化ドメイン名 (IDN: Internationalized Domain Name) として書式設定する必要があり、空白を含めることはできません。 例: contoso.com</param>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedAccessResumedEventArgs">
+      <summary>コンテンツの保護を再開したときにデータを提供します。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedAccessResumedEventArgs.Identities">
+      <summary>コンテンツの保護が再開されるエンタープライズ ID を含みます。</summary>
+      <returns>コンテンツの保護が再開されるエンタープライズ ID。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs">
+      <summary>コンテンツの保護を中断したときにデータを提供します。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs.Deadline">
+      <summary>コンテンツの保護を中断する DateTime。</summary>
+      <returns>コンテンツの保護を中断する DateTime。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs.Identities">
+      <summary>コンテンツの保護が中断されるエンタープライズ ID を含みます。</summary>
+      <returns>コンテンツの保護が中断されるエンタープライズ ID。</returns>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs.GetDeferral">
+      <summary>保護の中断を管理する Deferral オブジェクトを取得します。</summary>
+      <returns>Deferral オブジェクト。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedContainerExportResult">
+      <summary>コンテナー ファイルにエクスポートされるエンタープライズで保護されたファイルの結果を表します。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedContainerExportResult.File">
+      <summary>エンタープライズで保護されたファイルからエクスポートされたコンテナー ファイル。</summary>
+      <returns>エンタープライズで保護されたファイルからエクスポートされたコンテナー ファイル。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedContainerExportResult.Status">
+      <summary>エンタープライズで保護されたファイルがコンテナー ファイルにエクスポートされた後の保護の状態。</summary>
+      <returns>ProtectedImportExportStatus 列挙体の値。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedContainerImportResult">
+      <summary>コンテナー ファイルからインポートされたエンタープライズで保護されたファイルの結果を表します。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedContainerImportResult.File">
+      <summary>コンテナー ファイルから読み込まれたエンタープライズで保護されたファイル。</summary>
+      <returns>コンテナー ファイルから読み込まれたエンタープライズで保護されたファイル。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedContainerImportResult.Status">
+      <summary>エンタープライズで保護されたファイルがコンテナー ファイルからインポートされた後の保護の状態。</summary>
+      <returns>ProtectedImportExportStatus 列挙体の値。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedContentRevokedEventArgs">
+      <summary>コンテンツの保護が取り消されたときにデータを提供します。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedContentRevokedEventArgs.Identities">
+      <summary>コンテンツの保護が取り消されたエンタープライズ ID を含みます。</summary>
+      <returns>コンテンツの保護が取り消されたエンタープライズ ID。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedFileCreateResult">
+      <summary>新たに作成されたエンタープライズで保護されたファイルに関する情報を含みます。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedFileCreateResult.File">
+      <summary>新たに作成されたエンタープライズで保護されたファイル。</summary>
+      <returns>新たに作成されたエンタープライズで保護されたファイル。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedFileCreateResult.ProtectionInfo">
+      <summary>エンタープライズで保護されたファイルに関する情報。</summary>
+      <returns>エンタープライズで保護されたファイルに関する情報。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedFileCreateResult.Stream">
+      <summary>新たに作成されたエンタープライズで保護されたファイルへのストリーム ランダム アクセス。</summary>
+      <returns>新たに作成されたエンタープライズで保護されたファイルへのストリーム ランダム アクセス。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedImportExportStatus">
+      <summary>コンテナー ファイルとの間でインポートまたはエクスポートされた、エンタープライズで保護されたファイルの有効な状態値。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.AccessSuspended">
+      <summary>保護されたファイルにアクセスするキーは、デバイスがロックされている間削除されました。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.LicenseExpired">
+      <summary>ファイルの RMS ライセンスの期限が切れています。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.NotRoamable">
+      <summary>ファイルを別のデバイスにローミングすることはできません。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.Ok">
+      <summary>ファイルの保護は OK です。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.ProtectedToOtherIdentity">
+      <summary>別のエンタープライズ ID に対して保護されているため、ファイルにアクセスすることができません。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.Revoked">
+      <summary>ファイルの保護が取り消され、アクセスできなくなります。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.Undetermined">
+      <summary>ファイルの保護を判断することができません。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.Unprotected">
+      <summary>ファイルが保護されていません。</summary>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectionPolicyAuditAction">
+      <summary>監査アクションを指定する定数を定義します。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectionPolicyAuditAction.CopyToLocation">
+      <summary>データがその場所にコピーされることを示します。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectionPolicyAuditAction.Decrypt">
+      <summary>復号化操作を示します。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectionPolicyAuditAction.Other">
+      <summary>別の操作について説明します。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectionPolicyAuditAction.SendToRecipient">
+      <summary>データが受信者に送信されることを示します。</summary>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo">
+      <summary>監査に必要な情報を表します。</summary>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.#ctor(Windows.Security.EnterpriseData.ProtectionPolicyAuditAction,System.String)">
+      <summary>クラスの新しいインスタンスを初期化します。</summary>
+      <param name="action">監査アクション。</param>
+      <param name="dataDescription">監査するデータの説明。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.#ctor(Windows.Security.EnterpriseData.ProtectionPolicyAuditAction,System.String,System.String,System.String)">
+      <summary>クラスの新しいインスタンスを初期化します。</summary>
+      <param name="action">監査アクション。</param>
+      <param name="dataDescription">監査するデータの説明。</param>
+      <param name="sourceDescription">データのソースの説明。</param>
+      <param name="targetDescription">データのターゲットの説明。</param>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.Action">
+      <summary>監査アクション。</summary>
+      <returns>監査アクション。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.DataDescription">
+      <summary>監査するデータの説明。</summary>
+      <returns>監査するデータの説明。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.SourceDescription">
+      <summary>データのソースの説明。</summary>
+      <returns>データのソースの説明。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.TargetDescription">
+      <summary>データのターゲットの説明。</summary>
+      <returns>データのターゲットの説明。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectionPolicyManager">
+      <summary>保護されたコンテンツでエンタープライズ保護ポリシーを管理します。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyManager.Identity">
+      <summary>エンタープライズ ID を取得または設定します。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+      <returns>エンタープライズ ID。 これは、管理されている電子メール アドレスまたはドメインです。 アプリケーションは、電子メール アドレスまたはドメインが管理されていることを確認するために IsIdentityManaged を使用する必要があります。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyManager.IsProtectionEnabled">
+      <summary>エンタープライズ データ保護 (EDP) がデバイスで有効になっているかどうかを判別するには、このプロパティを使用します。</summary>
+      <returns>デバイスで EDP が有効であれば true。それ以外の場合は false。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyManager.ShowEnterpriseIndicator">
+      <summary>エンタープライズ ウィンドウであることを示すためにシェルがウィンドウを修飾する必要があるかどうかを示す値。</summary>
+      <returns>エンタープライズ ウィンドウであることを示すためにシェルがウィンドウを修飾する必要があるかどうかを示す場合は true。それ以外の場合は false。</returns>
+    </member><member name="E:Windows.Security.EnterpriseData.ProtectionPolicyManager.PolicyChanged">
+      <summary>ポリシー CSP によって管理される、エンタープライズ データ保護 (EDP) ポリシーの変更に応答して発生するイベント。</summary>
+    </member><member name="E:Windows.Security.EnterpriseData.ProtectionPolicyManager.ProtectedAccessResumed">
+      <summary>保護が再開されたという通知を受け取ることをアプリが登録するイベント。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+    </member><member name="E:Windows.Security.EnterpriseData.ProtectionPolicyManager.ProtectedAccessSuspending">
+      <summary>保護が中断されるという通知を受け取ることをアプリが登録するイベント。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+    </member><member name="E:Windows.Security.EnterpriseData.ProtectionPolicyManager.ProtectedContentRevoked">
+      <summary>保護が取り消されるという通知を受け取ることをアプリが登録するイベント。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.CheckAccess(System.String,System.String)">
+      <summary>エンタープライズで保護されたコンテンツへのアクセスが ID に使用可能な場合に要求します。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+      <returns>クエリの結果である ProtectionPolicyEvaluationResult 列挙体の値。</returns>
+      <param name="sourceIdentity">アプリのソース エンタープライズ ID。 これは、管理されている電子メール アドレスまたはドメインです。 アプリケーションは、電子メール アドレスまたはドメインが管理されているかどうかを確認するために IsIdentityManaged を使用する必要があります。</param>
+      <param name="targetIdentity">検査するエンタープライズ ID が保護されたコンテンツにアクセスできます。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.CheckAccessForApp(System.String,System.String)">
+      <summary>アプリケーションと特定のターゲット アプリケーション間のデータ転送に対して保護エンタープライズ ポリシー評価を実行します。</summary>
+      <returns>クエリの結果である ProtectionPolicyEvaluationResult 列挙体の値。</returns>
+      <param name="sourceIdentity">アプリのソース エンタープライズ ID。 これは、管理されている電子メール アドレスまたはドメインです。 アプリケーションは、電子メール アドレスまたはドメインが管理されているかどうかを確認するために IsIdentityManaged を使用する必要があります。</param>
+      <param name="appPackageFamilyName">検査するアプリケーション パッケージ ファミリ名は、保護されたコンテンツにアクセスできます。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.ClearProcessUIPolicy">
+      <summary>エンタープライズ ID の UI ポリシーの適用をクリアします。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.CreateCurrentThreadNetworkContext(System.String)">
+      <summary>企業の ID に対して保護された ThreadNetworkContext を作成します。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+      <returns>保護されたネットワーク コンテキスト。 アプリは、リソースへのアクセスが完了した後 ThreadNetworkContext.Close を呼び出す必要があります。</returns>
+      <param name="identity">エンタープライズ ID。 これは、管理されている電子メール アドレスまたはドメインです。 これは、GetPrimaryManagedIdentityForNetworkEndpoint から返される可能性があります。それ以外の場合、アプリケーションは IsIdentityManaged を使用して電子メール アドレスまたはドメインが管理されていることを確認する必要があります。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.GetEnforcementLevel(System.String)">
+      <summary>現在のエンタープライズ データ保護 (EDP) 適用レベルを判別するために、この方法を使用できます。 EDP 適用レベルは、モバイル デバイス管理 (MDM) ポリシー構成の 1 つの側面です。</summary>
+      <returns>EnforcementLevel 列挙型の値。</returns>
+      <param name="identity">エンタープライズ ID。 これは、管理されている電子メール アドレスまたはドメインです。 アプリケーションは、電子メール アドレスまたはドメインが管理されていることを確認するために IsIdentityManaged を使用する必要があります。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.GetForCurrentView">
+      <summary>現在のアプリケーション ウィンドウに関連付けられている ProtectionPolicyManager オブジェクトを返します。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+      <returns>現在のアプリケーション ウィンドウに関連付けられている ProtectionPolicyManager オブジェクト。</returns>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.GetPrimaryManagedIdentityForNetworkEndpointAsync(Windows.Networking.HostName)">
+      <summary>リソースがエンタープライズ ポリシーによって管理されているエンドポイントにある場合、ネットワーク リソースのエンタープライズ ID を返します。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+      <returns>エンタープライズ ID。</returns>
+      <param name="endpointHost">ネットワーク リソースのホスト名または IP アドレス。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.HasContentBeenRevokedSince(System.String,Windows.Foundation.DateTime)">
+      <summary>このメソッドを使用して、保護されたデータへのアクセスが指定された日時以降取り消されたか、またはまだアクセス可能かを確認します (管理されている、または管理されていた既知の ID の場合)。</summary>
+      <returns>アクセスが指定された日時以降取り消された場合は true、それ以外の場合は false。</returns>
+      <param name="identity">データを保護する企業の ID。 これは、管理されている電子メール アドレスまたはドメインです。 アプリケーションは、電子メール アドレスまたはドメインが管理されていることを確認するために IsIdentityManaged を使用する必要があります。</param>
+      <param name="since">検査に含めるポイントの開始日時。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.IsIdentityManaged(System.String)">
+      <summary>エンタープライズ エンティティがエンタープライズ ポリシーによって管理されているかどうかを確認します。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+      <returns>エンタープライズ ID が管理されている場合は true、管理されていない場合は false。</returns>
+      <param name="identity">エンタープライズ ID。 これは、電子メール アドレスまたはドメインです。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.IsProtectionUnderLockRequired(System.String)">
+      <summary>ProtectionUnderLockConfigRequired エンタープライズ データ保護 (EDP) ポリシーの値を判別するには、このプロパティを使用します。</summary>
+      <returns>ProtectionUnderLockConfigRequired ポリシーが ID に設定されている場合は true、それ以外の場合は false。</returns>
+      <param name="identity">検査するエンタープライズ ID に、ProtectionUnderLockConfigRequired ポリシーが設定されています。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.IsUserDecryptionAllowed(System.String)">
+      <summary>エンタープライズ データ保護 (EDP) により保護されたファイルの復号化が許可されているかを判別するには、このプロパティを使用します。</summary>
+      <returns>EDP で保護されたファイルの復号化が許可されている場合は true、それ以外の場合は false。</returns>
+      <param name="identity">検査するエンタープライズ ID が保護されたコンテンツにアクセスできます。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.LogAuditEvent(System.String,System.String,Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo)">
+      <summary>監査イベントを記録します。</summary>
+      <param name="sourceIdentity">コンテンツが保護されているエンタープライズ ID。 これは、管理されている電子メール アドレスまたはドメインです。 アプリケーションは、電子メール アドレスまたはドメインが管理されていることを確認するために IsIdentityManaged を使用する必要があります。</param>
+      <param name="targetIdentity">コンテンツの開示先のエンタープライズ ID。 これは、電子メール アドレスまたはドメインです。</param>
+      <param name="auditInfo">監査情報オブジェクト。ProtectionPolicyAuditInfo のインスタンス。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessAsync(System.String,System.String)">
+      <summary>エンタープライズで保護されたコンテンツへのアクセスを ID のために要求します。</summary>
+      <returns>要求の結果である ProtectionPolicyEvaluationResult 列挙体の値。</returns>
+      <param name="sourceIdentity">コンテンツが保護されているエンタープライズ ID。 これは、管理されている電子メール アドレスまたはドメインです。 アプリケーションは、電子メール アドレスまたはドメインが管理されていることを確認するために IsIdentityManaged を使用する必要があります。</param>
+      <param name="targetIdentity">コンテンツの開示先のエンタープライズ ID。 これは、電子メール アドレスまたはドメインです。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessAsync(System.String,System.String,Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo)">
+      <summary>エンタープライズで保護されたコンテンツへのアクセスを ID のために要求します。</summary>
+      <returns>要求の結果である ProtectionPolicyEvaluationResult 列挙体の値。</returns>
+      <param name="sourceIdentity">コンテンツが保護されているエンタープライズ ID。 これは、管理されている電子メール アドレスまたはドメインです。 アプリケーションは、電子メール アドレスまたはドメインが管理されていることを確認するために IsIdentityManaged を使用する必要があります。</param>
+      <param name="targetIdentity">コンテンツの開示先のエンタープライズ ID。 これは、電子メール アドレスまたはドメインです。</param>
+      <param name="auditInfo">監査情報オブジェクト。ProtectionPolicyAuditInfo のインスタンス。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessAsync(System.String,System.String,Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo,System.String)">
+      <summary>エンタープライズで保護されたコンテンツへのアクセスを ID のために要求します。</summary>
+      <returns>要求の結果である ProtectionPolicyEvaluationResult 列挙体の値。</returns>
+      <param name="sourceIdentity">コンテンツが保護されているエンタープライズ ID。 これは、管理されている電子メール アドレスまたはドメインです。 アプリケーションは、電子メール アドレスまたはドメインが管理されていることを確認するために IsIdentityManaged を使用する必要があります。</param>
+      <param name="targetIdentity">コンテンツの開示先のエンタープライズ ID。 これは、電子メール アドレスまたはドメインです。</param>
+      <param name="auditInfo">監査情報オブジェクト。ProtectionPolicyAuditInfo のインスタンス。</param>
+      <param name="messageFromApp">ユーザーが同意して決定できるように同意ダイアログに表示されるメッセージです。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessForAppAsync(System.String,System.String)">
+      <summary>エンタープライズで保護されたコンテンツへのアクセスを特定のターゲット アプリケーションのために要求します。</summary>
+      <returns>クエリの結果である ProtectionPolicyEvaluationResult 列挙体の値。</returns>
+      <param name="sourceIdentity">コンテンツが保護されているエンタープライズ ID。 これは、管理されている電子メール アドレスまたはドメインです。 アプリケーションは、電子メール アドレスまたはドメインが管理されていることを確認するために IsIdentityManaged を使用する必要があります。</param>
+      <param name="appPackageFamilyName">コンテンツの開示先のエンタープライズ ID。 これは、電子メール アドレスまたはドメインです。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessForAppAsync(System.String,System.String,Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo)">
+      <summary>エンタープライズで保護されたコンテンツへのアクセスを特定のターゲット アプリケーションのために要求します。</summary>
+      <returns>クエリの結果である ProtectionPolicyEvaluationResult 列挙体の値。</returns>
+      <param name="sourceIdentity">コンテンツが保護されているエンタープライズ ID。 これは、管理されている電子メール アドレスまたはドメインです。 アプリケーションは、電子メール アドレスまたはドメインが管理されていることを確認するために IsIdentityManaged を使用する必要があります。</param>
+      <param name="appPackageFamilyName">コンテンツの開示先のエンタープライズ ID。 これは、電子メール アドレスまたはドメインです。</param>
+      <param name="auditInfo">監査情報オブジェクト。ProtectionPolicyAuditInfo のインスタンス。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessForAppAsync(System.String,System.String,Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo,System.String)">
+      <summary>エンタープライズで保護されたコンテンツへのアクセスを特定のターゲット アプリケーションのために要求します。</summary>
+      <returns>クエリの結果である ProtectionPolicyEvaluationResult 列挙体の値。</returns>
+      <param name="sourceIdentity">コンテンツが保護されているエンタープライズ ID。 これは、管理されている電子メール アドレスまたはドメインです。 アプリケーションは、電子メール アドレスまたはドメインが管理されていることを確認するために IsIdentityManaged を使用する必要があります。</param>
+      <param name="appPackageFamilyName">コンテンツの開示先のエンタープライズ ID。 これは、電子メール アドレスまたはドメインです。</param>
+      <param name="auditInfo">監査情報オブジェクト。ProtectionPolicyAuditInfo のインスタンス。</param>
+      <param name="messageFromApp">ユーザーが同意して決定できるように同意ダイアログに表示されるメッセージです。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RevokeContent(System.String)">
+      <summary>指定されたエンタープライズ ID に対して保護されたすべてのコンテンツにアクセスするために必要なキーを取り消します。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+      <param name="identity">エンタープライズ ID。 これは、管理されている電子メール アドレスまたはドメインです。 アプリケーションは、電子メール アドレスまたはドメインが管理されていることを確認するために IsIdentityManaged を使用する必要があります。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.TryApplyProcessUIPolicy(System.String)">
+      <summary>エンタープライズ ID の UI ポリシーの適用を有効にします。</summary>
+      <capability type="enterpriseDataPolicy">アプリがデバイス用に企業固有のポリシーを定義して使うために必要です。</capability>
+      <returns>ID がエンタープライズ ポリシーによって管理されている場合は true、そうでない場合は false。</returns>
+      <param name="identity">エンタープライズ ID。 これは、管理されている電子メール アドレスまたはドメインです。 アプリケーションは、電子メール アドレスまたはドメインが管理されていることを確認するために IsIdentityManaged を使用する必要があります。</param>
+    </member><member name="T:Windows.Security.EnterpriseData.ThreadNetworkContext">
+      <summary>エンタープライズ ID の保護されたネットワーク コンテキスト。</summary>
+    </member><member name="M:Windows.Security.EnterpriseData.ThreadNetworkContext.Close">
+      <summary>保護されたネットワーク コンテキストを閉じます。</summary>
+    </member></members>
+</doc>

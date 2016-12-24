@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Networking.Connectivity.WwanContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Networking.Connectivity.WwanConnectionProfileDetails">
+      <summary>Utilizzata per accedere a informazioni specifiche di una connessione WWAN.</summary>
+    </member><member name="P:Windows.Networking.Connectivity.WwanConnectionProfileDetails.AccessPointName">
+      <summary>Indica il nome del punto di accesso utilizzato per stabilire la connessione WWAN.</summary>
+      <returns>Nome del punto di accesso.</returns>
+    </member><member name="P:Windows.Networking.Connectivity.WwanConnectionProfileDetails.HomeProviderId">
+      <summary>Indica l'ID del provider della rete domestica.</summary>
+      <returns>ID del provider della rete domestica.</returns>
+    </member><member name="M:Windows.Networking.Connectivity.WwanConnectionProfileDetails.GetCurrentDataClass">
+      <summary>Indica la classe di servizio dati offerto dalla rete attualmente in uso per la connessione WWAN.</summary>
+      <returns>Classe del servizio dati fornito attualmente.</returns>
+    </member><member name="M:Windows.Networking.Connectivity.WwanConnectionProfileDetails.GetNetworkRegistrationState">
+      <summary>Recupera lo stato di registrazione di rete corrente per la connessione WWAN.</summary>
+      <returns>Lo stato di registrazione di rete corrente.</returns>
+    </member><member name="T:Windows.Networking.Connectivity.WwanDataClass">
+      <summary>Definisce i valori utilizzati per indicare la classe di servizio dati fornita da una connessione di rete WWAN.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdo">
+      <summary>Questa rete fornisce il servizio dati CDMA Evolution-Data Optimized (in origine Data Only, 1xEDVO, noto anche come CDMA2000 1x EV-DO o 1x EVDO).</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdoRevA">
+      <summary>La rete fornisce un servizio dati 1xEVDO RevA.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdoRevB">
+      <summary>La rete fornisce un servizio dati 1xEVDO RevB.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdv">
+      <summary>La rete fornisce un servizio dati CDMA Evolution-Data/Voice (noto anche come CDMA 2000 1x EV-DV o 1x EVDV).</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xRtt">
+      <summary>La rete fornisce un servizio dati CDMA 1x Radio Transmission Technology (1xRTT).</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma3xRtt">
+      <summary>La rete fornisce un servizio dati CDMA 3x Radio Transmission Technology (3xRTT).</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.CdmaUmb">
+      <summary>La rete fornisce un servizio dati UMB.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Custom">
+      <summary>La rete fornisce un servizio dati non elencato in questa tabella.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Edge">
+      <summary>La rete fornisce EDGE (Enhanced Data for Global Evolution).</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Gprs">
+      <summary>La rete fornisce un servizio dati GPRS (General Packet Radio Service).</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Hsdpa">
+      <summary>La rete fornisce un servizio dati HSDPA (High-Speed Downlink Packet Access).</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Hsupa">
+      <summary>La rete fornisce il servizio dati HSUPA (High Speed Uplink Packet Access).</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.LteAdvanced">
+      <summary>La rete fornisce un servizio dati LTE Advanced.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.None">
+      <summary>La rete non fornisce un servizio dati.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Umts">
+      <summary>La rete fornisce un servizio dati UMTS (Universal Mobile Telecommunications System).</summary>
+    </member><member name="T:Windows.Networking.Connectivity.WwanNetworkRegistrationState">
+      <summary>Definisce gli stati di registrazione della rete per una connessione WWAN.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Denied">
+      <summary>La registrazione della connessione con tutte le reti disponibili è negata. Tuttavia, è possibile effettuare chiamate vocali di emergenza. Questo valore si applica unicamente alle connessioni voce e non alle connessioni dati.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Deregistered">
+      <summary>Connessione non registrata con una rete.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Home">
+      <summary>Connessione registrata con una rete domestica.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.None">
+      <summary>Impossibile trovare una rete per questa connessione.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Partner">
+      <summary>Connessione registrata con un partner di rete roaming.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Roaming">
+      <summary>Connessione registrata con una rete roaming.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Searching">
+      <summary>È in corso la ricerca di reti disponibili.</summary>
+    </member></members>
+</doc>

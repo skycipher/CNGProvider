@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Networking.Connectivity.WwanContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Networking.Connectivity.WwanConnectionProfileDetails">
+      <summary>WWAN 연결과 관련된 정보에 액세스하는 데 사용됩니다.</summary>
+    </member><member name="P:Windows.Networking.Connectivity.WwanConnectionProfileDetails.AccessPointName">
+      <summary>WWAN 연결을 수립하는 데 사용된 액세스 지점의 이름을 나타냅니다.</summary>
+      <returns>액세스 지점 이름입니다.</returns>
+    </member><member name="P:Windows.Networking.Connectivity.WwanConnectionProfileDetails.HomeProviderId">
+      <summary>홈 네트워크 공급자 ID를 나타냅니다.</summary>
+      <returns>홈 네트워크 공급자 ID입니다.</returns>
+    </member><member name="M:Windows.Networking.Connectivity.WwanConnectionProfileDetails.GetCurrentDataClass">
+      <summary>현재 WWAN 연결에 사용 중인 네트워크에서 제공하는 데이터 서비스의 클래스를 나타냅니다.</summary>
+      <returns>현재 제공되는 데이터 서비스의 클래스입니다.</returns>
+    </member><member name="M:Windows.Networking.Connectivity.WwanConnectionProfileDetails.GetNetworkRegistrationState">
+      <summary>WWAN 연결에 대한 현재 네트워크 등록 상태를 검색합니다.</summary>
+      <returns>현재 네트워크 등록 상태입니다.</returns>
+    </member><member name="T:Windows.Networking.Connectivity.WwanDataClass">
+      <summary>WWAN 네트워크 연결에서 제공하는 데이터 서비스의 종류를 나타내는 데 사용되는 값을 정의합니다.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdo">
+      <summary>이 네트워크는 CDMA Evolution-Data Optimized(원래 Data Only, 1xEDVO였으며 CDMA2000 1x EV-DO 또는 1x EVDO로도 알려져 있음) 데이터 서비스를 제공합니다.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdoRevA">
+      <summary>네트워크가 1xEVDO RevA 데이터 서비스를 제공합니다.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdoRevB">
+      <summary>네트워크가 1xEVDO RevB 데이터 서비스를 제공합니다.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdv">
+      <summary>이 네트워크는 CDMA Evolution-Data/Voice(CDMA 2000 1x EV-DV 또는 1x EVDV로도 알려져 있음) 데이터 서비스를 제공합니다.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xRtt">
+      <summary>네트워크가 CDMA 1xRTT(1x Radio Transmission Technology) 데이터 서비스를 제공합니다.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma3xRtt">
+      <summary>네트워크가 CDMA 3xRTT(3x Radio Transmission Technology) 데이터 서비스를 제공합니다.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.CdmaUmb">
+      <summary>네트워크가 UMB 데이터 서비스를 제공합니다.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Custom">
+      <summary>네트워크가 이 표에 나열되지 않은 데이터 서비스를 제공합니다.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Edge">
+      <summary>네트워크가 EDGE(Enhanced Data for Global Evolution)를 제공합니다.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Gprs">
+      <summary>네트워크가 GPRS(General Packet Radio Service) 데이터 서비스를 제공합니다.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Hsdpa">
+      <summary>네트워크가 HSDPA(높은 속도 다운링크 패킷 액세스) 데이터 서비스를 제공합니다.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Hsupa">
+      <summary>네트워크에서 HSUPA(높은 속도 업링크 패킷 액세스) 데이터 서비스 장치를 제공합니다.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.LteAdvanced">
+      <summary>네트워크가 LTE 고급 데이터 서비스를 제공합니다.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.None">
+      <summary>네트워크가 데이터 서비스를 제공하지 않습니다.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanDataClass.Umts">
+      <summary>네트워크가 UMTS(Universal Mobile Telecommunications System) 데이터 서비스를 제공합니다.</summary>
+    </member><member name="T:Windows.Networking.Connectivity.WwanNetworkRegistrationState">
+      <summary>WWAN 연결에 대한 네트워크 등록 상태를 정의합니다.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Denied">
+      <summary>사용 가능한 모든 네트워크와의 연결 등록이 거부됩니다. 그러나 긴급 음성 호출은 수행할 수 있습니다. 이 값은 음성 연결에만 적용되며 데이터 연결에 적용되지 않습니다.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Deregistered">
+      <summary>연결이 네트워크로 등록되어 있지 않습니다.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Home">
+      <summary>연결이 홈 네트워크로 등록되어 있습니다.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.None">
+      <summary>이 연결에 대한 네트워크가 없습니다.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Partner">
+      <summary>연결이 로밍 네트워크 파트너로 등록되어 있습니다.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Roaming">
+      <summary>연결이 로밍 네트워크로 등록되어 있습니다.</summary>
+    </member><member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Searching">
+      <summary>사용 가능한 네트워크를 검색합니다.</summary>
+    </member></members>
+</doc>

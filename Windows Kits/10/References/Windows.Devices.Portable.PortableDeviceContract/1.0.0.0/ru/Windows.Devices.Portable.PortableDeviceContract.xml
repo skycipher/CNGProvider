@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Portable.PortableDeviceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Portable.ServiceDevice">
+      <summary>Предоставляет методы для определения службы устройства для портативного устройства, поддерживающего WPD, для перечисления устройств.</summary>
+    </member><member name="M:Windows.Devices.Portable.ServiceDevice.GetDeviceSelector(Windows.Devices.Portable.ServiceDeviceType)">
+      <summary>Возвращает строку дополнительного синтаксиса запроса (AQS), которая используется для перечисления служб устройства указанного типа ServiceDeviceType. Эта строка передается методу FindAllAsync или CreateWatcher.</summary>
+      <returns>Строка расширенного синтаксиса запроса (AQS).</returns>
+      <param name="serviceType">Тип идентифицируемой службы.</param>
+    </member><member name="M:Windows.Devices.Portable.ServiceDevice.GetDeviceSelectorFromServiceId(System.Guid)">
+      <summary>Строка расширенного синтаксиса запросов (AQS) для идентификации служб устройств по GUID. Эта строка передается методу FindAllAsync или CreateWatcher.</summary>
+      <returns>Строка расширенного синтаксиса запроса (AQS).</returns>
+      <param name="serviceId">Идентификатор службы.</param>
+    </member><member name="T:Windows.Devices.Portable.ServiceDeviceType">
+      <summary>Указывает тип службы переносных устройств.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.CalendarService">
+      <summary>Служба, предоставляющая данные календаря.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.ContactsService">
+      <summary>Служба, которая отслеживает контакты.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.DeviceStatusService">
+      <summary>Служба состояния устройства.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.NotesService">
+      <summary>Служба ведения заметок.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.RingtonesService">
+      <summary>Служба, предоставляющая мелодии вызова для телефонов.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.SmsService">
+      <summary>Служба обмена сообщениями SMS.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.TasksService">
+      <summary>Служба для отслеживания задач.</summary>
+    </member><member name="T:Windows.Devices.Portable.StorageDevice">
+      <summary>Предоставляет методы для доступа к функциональным возможностям хранения переносных устройств, поддерживающих WPD. К съемным устройствам хранения данных относятся: запоминающие устройства (флэш-накопители) и камеры, работающие по протоколу USB. Музыкальные проигрыватели, телефоны и камеры, работающие по протоколу передачи мультимедиа (MTP). Камеры, работающие по протоколу передачи изображений (PTP).</summary>
+      <capability type="removableStorage">Требуется для чтения и записи на съемный носитель.</capability>
+    </member><member name="M:Windows.Devices.Portable.StorageDevice.FromId(System.String)">
+      <summary>Получает объект StorageFolder из идентификатора DeviceInformation для съемного устройства хранения.</summary>
+      <capability type="removableStorage">Требуется для чтения и записи на съемный носитель.</capability>
+      <returns>Объект папки хранения, который представляет съемное запоминающее устройство и предоставляет доступ к содержимому на устройстве.</returns>
+      <param name="DeviceId">Идентификатор DeviceInformation, определяющий съемное запоминающее устройство. Этот идентификатор можно получить из Windows.Devices.Enumeration или из свойства DeviceInformationId аргументов события устройства автозапуска. Дополнительные сведения см. в разделе Краткое руководство. Регистрация приложения для устройства с автозапуском. Чтобы FromId завершилось успешно, приложение должно объявлять возможность removableStorage, как показано в декларациях возможностей приложения и ассоциации типов файлов для файлов, доступ к которым необходимо обеспечить на устройстве, как показано в разделе "Обработка активации файлов". Дополнительные сведения см. в примере работы со съемным устройством.</param>
+    </member><member name="M:Windows.Devices.Portable.StorageDevice.GetDeviceSelector">
+      <summary>Строка расширенного синтаксиса запросов (AQS) для идентификации съемных запоминающих устройств. Эта строка передается методу FindAllAsync или CreateWatcher.</summary>
+      <capability type="removableStorage">Требуется для чтения и записи на съемный носитель.</capability>
+      <returns>Строка AQS для указания запоминающих устройств.</returns>
+    </member></members>
+</doc>

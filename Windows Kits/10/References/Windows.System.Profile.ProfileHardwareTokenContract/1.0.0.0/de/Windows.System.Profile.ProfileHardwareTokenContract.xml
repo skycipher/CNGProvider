@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.Profile.ProfileHardwareTokenContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.System.Profile.HardwareIdentification">
+      <summary>Ermöglicht den Abruf eines Hardwarebezeichners, der die aktuelle Hardware darstellt.</summary>
+    </member><member name="M:Windows.System.Profile.HardwareIdentification.GetPackageSpecificToken(Windows.Storage.Streams.IBuffer)">
+      <summary>Ruft einen Hardwarebezeichner auf (ASHWID), der die aktuelle Hardware darstellt.</summary>
+      <returns>Die Informationen der Hardware-ID.</returns>
+      <param name="nonce">Das kryptografische Nonce-Element ist optional. Nonce wird empfohlen, wenn ASHWID auf der Cloud gegen Wiederholungsangriffe überprüft werden muss. In den Beispielen, die eine Nonce benötigen, muss der Remoteserver eine Zufallsnonce generieren, sie an die Client-App übergeben und dann prüfen, ob die Signatur die erwartete Nonce enthält, nachdem ASHWID vom Clientsystem empfangen wurde.</param>
+    </member><member name="T:Windows.System.Profile.HardwareToken">
+      <summary>Stellt ein Token dar, das eine hardwarebasierte Identifizierung enthält, die ausreichend eindeutig ist.</summary>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Certificate">
+      <summary>Ruft das Zertifikat auf, das verwendet wird, um die ID zu signieren und zu helfen, die Echtheit der ID zu überprüfen.</summary>
+      <returns>Das Zertifikat, das verwendet wird, um die ID zu signieren.</returns>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Id">
+      <summary>Ruft den Hardwarebezeichner auf, der das Gerät identifiziert.</summary>
+      <returns>Die ID zum Identifizieren des Geräts. Dieser Bytepuffer enthält einen Satz von Bezeichnern, die die verschiedenen im Gerät ermittelten Hardwarekomponenten darstellen.</returns>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Signature">
+      <summary>Ruft die digitale Signatur der Hardware-ID auf, die dabei hilft, die Echtheit der zurückgegebenen ID zu überprüfen.</summary>
+      <returns>Die digitale Signatur der ID.</returns>
+    </member></members>
+</doc>

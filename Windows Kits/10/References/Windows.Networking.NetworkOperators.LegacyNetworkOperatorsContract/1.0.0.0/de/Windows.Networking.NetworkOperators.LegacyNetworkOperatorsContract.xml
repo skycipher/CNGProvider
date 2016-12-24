@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Networking.NetworkOperators.LegacyNetworkOperatorsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails">
+      <summary>Erstellt Details für eine Benachrichtigung des Netzbetreibers.</summary>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.EncodingType">
+      <summary>Ruft das Daten-Codierungs-Schema (DCS) der empfangenen Nachricht ab.</summary>
+      <returns>Das Daten-Codierungs-Schema (DCS) der empfangenen Nachricht.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.Message">
+      <summary>Ruft die Meldung für die Netzbetreiberbenachrichtigung ab.</summary>
+      <returns>Die Nachricht für die Netzbetreiberbenachrichtigung.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.NetworkAccountId">
+      <summary>Ruft einen eindeutigen Bezeichner für das mobile Breitbandkonto ab, das die Benachrichtigung empfangen hat.</summary>
+      <returns>Ein eindeutiger Bezeichner für ein mobiles Breitbandkonto.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.NotificationType">
+      <summary>Ruft den Typ der die Netzwerkbenachrichtigung ab.</summary>
+      <returns>Der Typ der Netzwerkbenachrichtigung.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.RuleId">
+      <summary>Ruft den Bezeichner der bereitgestellten Regel ab, die der Benachrichtigung entsprach und diese auslöste.</summary>
+      <returns>Der bereitgestellte Regelbezeichner.</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.SmsMessage">
+      <summary>Ruft eine SMS-Nachricht für das mobile Breitbandkonto ab, das die Benachrichtigung empfangen hat.</summary>
+      <returns>Wenn die Netzbetreiberbenachrichtigung von einer neuen Mobilfunknetzbetreiber-SMS ausgelöst wird, enthält sie das SMS-Nachrichtenobjekt für die Netzbetreiberbenachrichtigung. NULL, wenn keine SMS-Nachricht als Teil der Benachrichtigung empfangen wurde.</returns>
+    </member><member name="M:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.AuthorizeTethering(System.Boolean,System.String)">
+      <summary>Wird verwendet, um anzugeben, ob Tethering für ein Gerät zulässig ist. Wenn dies nicht der Fall ist, kann ein Grund angegeben werden.</summary>
+      <param name="allow">True, wenn Tethering erlaubt ist; andernfalls false.</param>
+      <param name="entitlementFailureReason">Der Grund, weshalb Tethering nicht zulässig ist.</param>
+    </member></members>
+</doc>

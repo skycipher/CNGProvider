@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Calls.LockScreenCallContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral">
+      <summary>Das LockScreenCallEndCallDeferral-Objekt signalisiert, dass die Anwendung das eigene Entfernen vom Sperrbildschirm nicht mehr verzögern muss.</summary>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral.Complete">
+      <summary>Beendet die Verzögerung des Entfernens der App vom Sperrbildschirm, sodass die App entfernt wird, wenn sie nicht bereits auf andere Weise entfernt wurde.</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs">
+      <summary>Steuert das Entfernen einer App vom Sperrbildschirm.</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs.Deadline">
+      <summary>Ruft die Frist ab, in der die App die Verzögerung abschließen muss.</summary>
+      <returns>Die Frist, bis zu der die App die Verzögerung abschließen muss.</returns>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs.GetDeferral">
+      <summary>Anforderungen, das Standardverhalten des Entfernens der App vom Sperrbildschirm zu verzögern.</summary>
+      <returns>Wenn diese Methode abgeschlossen wird, gibt sie ein LockScreenCallEndCallDeferral-Objekt zurück, das signalisiert, dass die Anwendung ihre Entfernung vom Sperrbildschirm nicht länger verzögern muss.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.LockScreenCallUI">
+      <summary>Behandelt die Kommunikation mit dem Sperrbildschirm.</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.LockScreenCallUI.CallTitle">
+      <summary>Ruft eine Kurzbeschreibung der Art des Aufrufs ab oder legt diese fest.</summary>
+      <returns>Eine kurze Beschreibung der Art des Aufrufs, beispielsweise "Videoanruf mit Jane Doe".</returns>
+    </member><member name="E:Windows.ApplicationModel.Calls.LockScreenCallUI.Closed">
+      <summary>Tritt ein, wenn die Interaktion mit dem gesperrten Bildschirm abgeschlossen ist.</summary>
+    </member><member name="E:Windows.ApplicationModel.Calls.LockScreenCallUI.EndRequested">
+      <summary>Tritt ein, wenn der gesperrte Bildschirm den Aufruf beenden möchte.</summary>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallUI.Dismiss">
+      <summary>Entfernt die App aus der Benutzeroberfläche des gesperrten Bildschirms.</summary>
+    </member></members>
+</doc>

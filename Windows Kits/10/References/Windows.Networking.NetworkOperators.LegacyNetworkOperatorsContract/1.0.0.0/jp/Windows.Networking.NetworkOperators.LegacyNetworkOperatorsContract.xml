@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Networking.NetworkOperators.LegacyNetworkOperatorsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails">
+      <summary>ネットワーク オペレーター通知の詳細を提供します。</summary>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.EncodingType">
+      <summary>受信メッセージのデータ コーディング スキーム (DCS) を取得します。</summary>
+      <returns>受信メッセージのデータ コーディング スキーム (DCS)。</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.Message">
+      <summary>ネットワーク オペレーター通知のメッセージを取得します。</summary>
+      <returns>ネットワーク オペレーター通知のメッセージ。</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.NetworkAccountId">
+      <summary>通知を受け取ったモバイル ブロードバンド アカウントの一意の識別子を取得します。</summary>
+      <returns>モバイル ブロードバンド アカウントの一意の識別子。</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.NotificationType">
+      <summary>ネットワーク通知の種類を取得します。</summary>
+      <returns>ネットワーク通知の種類。</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.RuleId">
+      <summary>通知と一致しその通知をトリガーした、プロビジョニングされた規則の識別子を取得します。</summary>
+      <returns>プロビジョニングされた規則識別子。</returns>
+    </member><member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.SmsMessage">
+      <summary>通知を受け取ったモバイル ブロードバンド アカウントの SMS メッセージを取得します。</summary>
+      <returns>ネットワーク オペレーター通知が新しいモバイル ネットワーク オペレーターの SMS によってトリガーされた場合、ネットワーク オペレーター通知の SMS メッセージ オブジェクトが含まれます。 SMS メッセージが通知の一部として受け取られなかったら NULL。</returns>
+    </member><member name="M:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.AuthorizeTethering(System.Boolean,System.String)">
+      <summary>デバイスに対してテザリングが許可されているかどうかを示すために使用されます。 そうでない場合は、理由を提供できます。</summary>
+      <param name="allow">テザリングが許可されている場合は true。それ以外の場合は false。</param>
+      <param name="entitlementFailureReason">テザリングが許可されていない理由。</param>
+    </member></members>
+</doc>

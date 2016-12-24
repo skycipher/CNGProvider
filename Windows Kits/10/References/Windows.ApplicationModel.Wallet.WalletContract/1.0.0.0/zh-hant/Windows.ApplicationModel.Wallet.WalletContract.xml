@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Wallet.WalletContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs">
+      <summary>提供資訊給因為電子錢包動作的結果而啟動的應用程式。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs.ActionId">
+      <summary>取得動作的識別碼，例如動詞、交易等的識別碼。</summary>
+      <returns>動作的識別碼，例如動詞、交易等的識別碼。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs.ActionKind">
+      <summary>取得在 WalletItem 上執行的動作。</summary>
+      <returns>在 WalletItem 上執行的動作。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs.ItemId">
+      <summary>取得使用者在其上執行動作之 WalletItem 的識別碼。</summary>
+      <returns>使用者在其上執行動作之 WalletItem 的識別碼。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs">
+      <summary>提供資訊給因為電子錢包動作的結果而啟動的應用程式。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.ActionId">
+      <summary>取得動作的識別碼，例如動詞、交易等的識別碼。</summary>
+      <returns>動作的識別碼，例如動詞、交易等的識別碼。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.ActionKind">
+      <summary>取得在 WalletItem 上執行的動作。</summary>
+      <returns>取得在 WalletItem 上執行的動作。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.ItemId">
+      <summary>取得使用者在其上執行動作之 WalletItem 的識別碼。</summary>
+      <returns>使用者在其上執行動作之 WalletItem 的識別碼。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.Kind">
+      <summary>取得在 WalletItem 上執行之動作的類型。</summary>
+      <returns>在 WalletItem 上執行之動作的類型。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.PreviousExecutionState">
+      <summary>取得應用程式在啟動之前的執行狀態。</summary>
+      <returns>應用程式在啟動之前的執行狀態。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.SplashScreen">
+      <summary>取得啟動顯示畫面物件，這個物件會提供從啟動顯示畫面轉換為已啟動應用程式的相關資訊。</summary>
+      <returns>啟動顯示畫面物件，這個物件會提供從啟動顯示畫面轉換為已啟動應用程式的相關資訊。</returns>
+    </member><member name="T:Windows.ApplicationModel.Wallet.WalletActionKind">
+      <summary>表示造成您的應用程式啟動、在項目上採取的動作。</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.Message">
+      <summary>已點選訊息。</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.MoreTransactions">
+      <summary>已點選 UI 項目 see more transactions。</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.OpenItem">
+      <summary>項目已開啟。</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.Transaction">
+      <summary>已點選交易。</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.Verb">
+      <summary>已點選動詞。</summary>
+    </member><member name="T:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs">
+      <summary>提供資訊給因為電子錢包動作的結果而啟動的應用程式。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.ActionId">
+      <summary>取得動作的識別碼，例如動詞、交易等的識別碼。</summary>
+      <returns>動作的識別碼，例如動詞、交易等的識別碼。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.ActionKind">
+      <summary>取得在 WalletItem 上執行的動作。</summary>
+      <returns>取得在 WalletItem 上執行的動作。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.ActivatedOperation">
+      <summary>取得應用程式啟用作業。</summary>
+      <returns>啟用的作業。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.ItemId">
+      <summary>取得使用者在其上執行動作之 WalletItem 的識別碼。</summary>
+      <returns>使用者在其上執行動作之 WalletItem 的識別碼。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.Kind">
+      <summary>取得啟用類型。</summary>
+      <returns>其中一個列舉值。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.PreviousExecutionState">
+      <summary>取得應用程式在啟動之前的執行狀態。</summary>
+      <returns>其中一個列舉值。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.SplashScreen">
+      <summary>取得啟動顯示畫面物件，這個物件會提供從啟動顯示畫面轉換為已啟動應用程式的相關資訊。</summary>
+      <returns>提供啟動顯示畫面資訊的物件。</returns>
+    </member></members>
+</doc>

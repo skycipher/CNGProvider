@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Networking.Sockets.ControlChannelTriggerContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Networking.Sockets.ControlChannelTrigger">
+      <summary>Enables real time notifications to be received in the background for objects that establish a TCP connection and wish to be notified of incoming traffic. This class is not supported on Windows Phone.</summary>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.#ctor(System.String,System.UInt32)">
+      <summary>Creates a new ControlChannelTrigger object with a control channel trigger ID and a value for the server keep-alive interval. The ControlChannelTrigger class is not supported on Windows Phone.</summary>
+      <param name="channelId">A string used to differentiate various control channel triggers on the local computer. The maximum length allowed for this string is 64 characters.</param>
+      <param name="serverKeepAliveIntervalInMinutes">The keep-alive interval, in minutes, registered with the system to indicate when the app and network connections used should wake up. The minimum value that can be set for this parameter is 15 minutes. The maximum value that can be set is 1439 minutes (approximately 24 hours).</param>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.#ctor(System.String,System.UInt32,Windows.Networking.Sockets.ControlChannelTriggerResourceType)">
+      <summary>Creates a new ControlChannelTrigger object with a control channel trigger ID, a value for the server keep-alive interval, and the resource type requested for the control channel trigger. The ControlChannelTrigger class is not supported on Windows Phone.</summary>
+      <param name="channelId">A string used to differentiate various control channel triggers on the local computer. The maximum length allowed for this string is 64 characters.</param>
+      <param name="serverKeepAliveIntervalInMinutes">The keep-alive interval, in minutes, registered with the system to indicate when the app and network connections used should wake up. The minimum value that can be set for this parameter is 15 minutes. The maximum value that can be set is 1439 minutes (approximately 24 hours).</param>
+      <param name="resourceRequestType">The resource type requested for the control channel trigger.</param>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.ControlChannelTriggerId">
+      <summary>Gets a string that can be used to differentiate various control channel triggers on the local computer. The ControlChannelTrigger class is not supported on Windows Phone.</summary>
+      <returns>A string that can be used to differentiate various control channel triggers.</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.CurrentKeepAliveIntervalInMinutes">
+      <summary>Gets the network keep-alive interval, in minutes, maintained by low-level network components in the TCP stack based on current network conditions. The ControlChannelTrigger class is not supported on Windows Phone.</summary>
+      <returns>The network keep-alive interval, in minutes, maintained by low-level network components in the TCP stack based on current network conditions.</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.IsWakeFromLowPowerSupported">
+      <summary>Gets a value indicating whether waking from low power states is supported.</summary>
+      <returns>If true, then waking from low power states is supported.</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.KeepAliveTrigger">
+      <summary>Gets an object that represents the keep-alive trigger associated with the ControlChannelTrigger object that an app should use to bind the activation class with the background broker infrastructure. The ControlChannelTrigger class is not supported on Windows Phone.</summary>
+      <returns>A string that represents the activation class ID for the keep-alive background task.</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.PushNotificationTrigger">
+      <summary>Gets an object that represents the push notification trigger associated with the ControlChannelTrigger object that an app should use to bind the activation class with the background broker infrastructure. The ControlChannelTrigger class is not supported on Windows Phone.</summary>
+      <returns>A string that represents the activation class ID for the push notification background task.</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.ServerKeepAliveIntervalInMinutes">
+      <summary>Get or set the server keep-alive interval, in minutes, registered with the system to indicate when the app and associated network connections used should wake up. The ControlChannelTrigger class is not supported on Windows Phone.</summary>
+      <returns>The server keep-alive interval, in minutes, registered with the system to indicate when the app and associated network connections used should wake up.</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.TransportObject">
+      <summary>Gets the transport object that the system is using for the transport connection associated with the ControlChannelTrigger object. The ControlChannelTrigger class is not supported on Windows Phone.</summary>
+      <returns>The transport object that the system is using for the transport connection</returns>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.Close">
+      <summary>Closes the ControlChannelTrigger object. This method is not supported on Windows Phone.</summary>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.DecreaseNetworkKeepAliveInterval">
+      <summary>Provides a way for an app to indicate that the network keep-alive interval maintained by the system with network intermediaries to wake up was too long and should be decreased. This method applies to class elements in the Windows.Networking.Sockets and related namespaces. The ControlChannelTrigger class is not supported on Windows Phone.</summary>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.FlushTransport">
+      <summary>Flushes any networking data used by the transport connection associated with the ControlChannelTrigger to the networking stack. The ControlChannelTrigger class is not supported on Windows Phone.</summary>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.UsingTransport(System.Object)">
+      <summary>Sets the transport connection to be used by a control channel trigger by class elements in the Windows.Networking.Sockets and related namespaces. The ControlChannelTrigger class is not supported on Windows Phone.</summary>
+      <param name="transport">The instance of the network class that represents the network transport.</param>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.WaitForPushEnabled">
+      <summary>Allows an app to notify the system that a connection has been established and the system should complete the internal configuration of the control channel trigger. The ControlChannelTrigger class is not supported on Windows Phone.</summary>
+      <returns>A value that indicates if the system was able to complete configuration of a ControlChannelTrigger object.</returns>
+    </member><member name="T:Windows.Networking.Sockets.ControlChannelTriggerResetReason">
+      <summary>The reason why a ControlChannelTrigger was reset. This enumeration is not supported on Windows Phone.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResetReason.ApplicationRestart">
+      <summary>he ControlChannelTrigger was reset as a result of an app restart. This value is supported on Windows 8.1, Windows Server 2012 R2, and later.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResetReason.FastUserSwitched">
+      <summary>The ControlChannelTrigger was reset as a result of fast user switching.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResetReason.LowPowerExit">
+      <summary>The ControlChannelTrigger was reset as a result of a low power exit (Connected Standby exit).</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResetReason.QuietHoursExit">
+      <summary>The ControlChannelTrigger was reset as a result of quiet hours being set on the device and quiet hours having ended. This value is supported on Windows 8.1, Windows Server 2012 R2, and later.</summary>
+    </member><member name="T:Windows.Networking.Sockets.ControlChannelTriggerResourceType">
+      <summary>The resource type used by a control channel trigger. This enumeration is not supported on Windows Phone.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResourceType.RequestHardwareSlot">
+      <summary>Request a hardware slot from the system.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResourceType.RequestSoftwareSlot">
+      <summary>Request a software slot from the system.</summary>
+    </member><member name="T:Windows.Networking.Sockets.ControlChannelTriggerStatus">
+      <summary>Specifies if the system was able to complete configuration of a ControlChannelTrigger object for use by class elements in the Windows.Networking.Sockets and related namespaces. This enumeration is not supported on Windows Phone.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.HardwareSlotAllocated">
+      <summary>A hardware slot was allocated by the system.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.HardwareSlotRequested">
+      <summary>The policy check succeeded and a hardware slot has been requested from the system.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.PolicyError">
+      <summary>A policy error occurred when the system tried to complete configuration of a ControlChannelTrigger. This error can occur when an app has requested more connections for hardware or software slots than are permitted by system policy.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.ServiceUnavailable">
+      <summary>The service provided by the ControlChannelTrigger is unavailable. This can happen if the network connection broker service is not yet ready but the app is trying to establish a ControlChannelTrigger channel. This status code is provided under the following conditions: When there is fast user switching and the new user is trying to establish the ControlChannelTrigger channel. When the system is entering a low power mode (Connected standby mode) and the app is trying to create a software slot. Software slots are available only when the system is active and not in low power mode. The mitigation in both these cases is to listen for System Event broker events and register the ControlChannelTrigger channel at that point.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.SoftwareSlotAllocated">
+      <summary>The policy check succeeded and a software slot was allocated by the system.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.SystemError">
+      <summary>A system error occurred when the system tried to complete configuration of a ControlChannelTrigger for a hardware slot.</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.TransportDisconnected">
+      <summary>The network transport associated with the ControlChannelTrigger was disconnected. The underlying TCP connection was already disconnected by a TCP reset received from the remote destination or a graceful disconnect by either the app or the remote destination. The most common occurrence is a TCP reset or a graceful disconnect sent by the remote destination.</summary>
+    </member><member name="T:Windows.Networking.Sockets.IControlChannelTriggerEventDetails">
+      <summary>An object instantiated by the background broker infrastructure that is used to differentiate control channel triggers. This interface is not supported on Windows Phone.</summary>
+    </member><member name="P:Windows.Networking.Sockets.IControlChannelTriggerEventDetails.ControlChannelTrigger">
+      <summary>Gets the ControlChannelTrigger object associated with an IControlChannelTriggerEventDetails object. The IControlChannelTriggerEventDetails interface is not supported on Windows Phone.</summary>
+      <returns>A ControlChannelTrigger object.</returns>
+    </member><member name="T:Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails">
+      <summary>An object instantiated by the background broker infrastructure for a ControlChannelReset event to indicate that a ControlChannelTrigger was reset. This interface is not supported on Windows Phone.</summary>
+    </member><member name="P:Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails.HardwareSlotReset">
+      <summary>A value that indicates if a hardware slot was affected by a ControlChannelTrigger reset event. The IControlChannelTriggerResetEventDetails interface is not supported on Windows Phone.</summary>
+      <returns>A value that indicates if a hardware slot was affected by a ControlChannelTrigger reset event.</returns>
+    </member><member name="P:Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails.ResetReason">
+      <summary>A value that indicates the reason why a ControlChannelTrigger was reset. The IControlChannelTriggerResetEventDetails interface is not supported on Windows Phone.</summary>
+      <returns>A value that indicates the reason why a ControlChannelTrigger was reset.</returns>
+    </member><member name="P:Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails.SoftwareSlotReset">
+      <summary>A value that indicates if a software slot was affected by a ControlChannelTrigger reset event. The IControlChannelTriggerResetEventDetails interface is not supported on Windows Phone.</summary>
+      <returns>A value that indicates if a software slot was affected by a ControlChannelTrigger reset event.</returns>
+    </member></members>
+</doc>

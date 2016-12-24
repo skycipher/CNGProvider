@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Security.ExchangeActiveSyncProvisioning.EasContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy">
+      <summary>Современные приложения почты оценивают и применяют политики безопасности EAS.</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy может быть изменен или недоступен для выпусков после предварительной версии Windows 10.</deprecated>
+    </member><member name="M:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.#ctor">
+      <summary>Создает экземпляр объекта, который позволяет вызывающему приложению устанавливать политики, полученные с сервера Exchange Server, для оценки или применения.</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy может быть изменен или недоступен для выпусков после предварительной версии Windows 10.</deprecated>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.DisallowConvenienceLogon">
+      <summary>Получает или задает возможность предотвращения "удобных" входов в систему.</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy может быть изменен или недоступен для выпусков после предварительной версии Windows 10.</deprecated>
+      <returns>Значение true запрещает "удобные" входы в систему.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.MaxInactivityTimeLock">
+      <summary>Получает или задает максимальную продолжительность времени, которое компьютер может оставаться неактивным, прежде чем он будет заблокирован.</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy может быть изменен или недоступен для выпусков после предварительной версии Windows 10.</deprecated>
+      <returns>Допустимая продолжительность бездействия до блокировки компьютера.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.MaxPasswordFailedAttempts">
+      <summary>Получает или задает максимальное количество неудачных попыток ввода пароля для входа в систему.</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy может быть изменен или недоступен для выпусков после предварительной версии Windows 10.</deprecated>
+      <returns>Диапазон — от 4 до 16.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.MinPasswordComplexCharacters">
+      <summary>Получает или задает минимальное необходимое число сложных символов в пароле.</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy может быть изменен или недоступен для выпусков после предварительной версии Windows 10.</deprecated>
+      <returns>Диапазон — от 1 до 4.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.MinPasswordLength">
+      <summary>Получает или задает минимальную допустимую длину пароля.</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy может быть изменен или недоступен для выпусков после предварительной версии Windows 10.</deprecated>
+      <returns>Диапазон — от 1 до 16.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.PasswordExpiration">
+      <summary>Получает или задает время действия пароля.</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy может быть изменен или недоступен для выпусков после предварительной версии Windows 10.</deprecated>
+      <returns>Продолжительность времени до момента, когда истекает срок действия пароля и необходимости заново задать его.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.PasswordHistory">
+      <summary>Получает и задает использованные ранее сведения о пароле.</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy может быть изменен или недоступен для выпусков после предварительной версии Windows 10.</deprecated>
+      <returns>Использованные ранее сведения о пароле.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.RequireEncryption">
+      <summary>Получает или задает значение, указывающее, требуется ли шифрование.</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy может быть изменен или недоступен для выпусков после предварительной версии Windows 10.</deprecated>
+      <returns>Значение true означает, что шифрование является обязательным.</returns>
+    </member><member name="M:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.ApplyAsync">
+      <summary>Применяет политики EAS в асинхронном режиме, как только пользователь соглашается.</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy может быть изменен или недоступен для выпусков после предварительной версии Windows 10.</deprecated>
+      <returns>Возвращает вызывающему приложению оценку результаты обратного вызова в асинхронном режиме.</returns>
+    </member><member name="M:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.CheckCompliance">
+      <summary>Оценивает политики EAS.</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy может быть изменен или недоступен для выпусков после предварительной версии Windows 10.</deprecated>
+      <returns>Возвращает результаты проверки соответствия требованиям в синхронном режиме.</returns>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults">
+      <summary>Предоставляет приложение почты с результатами оценки политик безопасности EAS.</summary>
+      <deprecated type="deprecate">Объект EasComplianceResults может быть изменен или недоступен для выпусков после Windows 10.</deprecated>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.Compliant">
+      <summary>Возвращает результат, указывающий, совместим ли компьютер с политиками EAS.</summary>
+      <deprecated type="deprecate">Объект EasComplianceResults может быть изменен или недоступен для выпусков после Windows 10.</deprecated>
+      <returns>Результат, указывающий, совместим ли компьютер с политиками EAS. Свойство Compliant имеет значение TRUE, если все оцениваемые политики соответствуют. В противном случае устанавливается значение FALSE.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.DisallowConvenienceLogonResult">
+      <summary>Возвращает результат, указывающий, запрещены ли "удобные" входы.</summary>
+      <deprecated type="deprecate">Объект EasComplianceResults может быть изменен или недоступен для выпусков после Windows 10.</deprecated>
+      <returns>Результат, указывающий, запрещены ли "удобные" входы.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.EncryptionProviderType">
+      <summary>Получает тип поставщика функций шифрования Exchange ActiveSync.</summary>
+      <deprecated type="deprecate">Объект EasComplianceResults может быть изменен или недоступен для выпусков после Windows 10.</deprecated>
+      <returns>Тип поставщика функций шифрования Exchange ActiveSync.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.MaxInactivityTimeLockResult">
+      <summary>Возвращает результат разрешенного максимального времени бездействия до блокировки компьютера.</summary>
+      <deprecated type="deprecate">Объект EasComplianceResults может быть изменен или недоступен для выпусков после Windows 10.</deprecated>
+      <returns>Результат разрешенного максимального времени бездействия до блокировки компьютера.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.MaxPasswordFailedAttemptsResult">
+      <summary>Возвращает результат максимального числа допустимых неудачных попыток ввода пароля.</summary>
+      <deprecated type="deprecate">Объект EasComplianceResults может быть изменен или недоступен для выпусков после Windows 10.</deprecated>
+      <returns>Результат максимального числа допустимых неудачных попыток ввода пароля.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.MinPasswordComplexCharactersResult">
+      <summary>Возвращает результат минимального необходимого числа символов в сложном пароле.</summary>
+      <deprecated type="deprecate">Объект EasComplianceResults может быть изменен или недоступен для выпусков после Windows 10.</deprecated>
+      <returns>Результат минимального необходимого числа символов в сложном пароле.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.MinPasswordLengthResult">
+      <summary>Возвращает результат минимальной требуемой длины пароля.</summary>
+      <deprecated type="deprecate">Объект EasComplianceResults может быть изменен или недоступен для выпусков после Windows 10.</deprecated>
+      <returns>Результат минимальной требуемой длины пароля.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.PasswordExpirationResult">
+      <summary>Возвращает результат, указывающий, истек ли срок действия пароля.</summary>
+      <deprecated type="deprecate">Объект EasComplianceResults может быть изменен или недоступен для выпусков после Windows 10.</deprecated>
+      <returns>Результат, указывающий, истек ли срок действия пароля.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.PasswordHistoryResult">
+      <summary>Возвращает результат журнала паролей.</summary>
+      <deprecated type="deprecate">Объект EasComplianceResults может быть изменен или недоступен для выпусков после Windows 10.</deprecated>
+      <returns>Результат журнала паролей.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.RequireEncryptionResult">
+      <summary>Возвращает результат, указывающий, требуется ли шифрование.</summary>
+      <deprecated type="deprecate">Объект EasComplianceResults может быть изменен или недоступен для выпусков после Windows 10.</deprecated>
+      <returns>Результат, указывающий, требуется ли шифрование.</returns>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult">
+      <summary>Результаты, показывающие, можно ли выполнить вход.</summary>
+      <deprecated type="deprecate">EasDisallowConvenienceLogonResult может быть изменен или недоступен для выпусков, следующих за Windows 10.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult.CanBeCompliant">
+      <summary>Этот компьютер можно привести в соответствие с помощью метода ApplyAsync. HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS и пользователь является администратором.HRESULT: S_OK, но пользователь не контролируется.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult.Compliant">
+      <summary>Этот компьютер соответствует политикеHRESULT: S_OK и пользователь контролируется.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult.NotEvaluated">
+      <summary>Политика не задана для оценки.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult.RequestedPolicyIsStricter">
+      <summary>Запрошенная политика строже политик этого компьютера.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS и пользователь не является администратором.</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType">
+      <summary>Описывает тип поставщика функций шифрования Exchange ActiveSync.</summary>
+      <deprecated type="deprecate">Объект EasEncryptionProviderType может быть недоступен для выпусков после Windows 10.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType.NotEvaluated">
+      <summary>Тип поставщика функций шифрования еще не определен.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType.OtherEncryption">
+      <summary>Поставщик функций шифрования отличен от поставщика Windows.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType.WindowsEncryption">
+      <summary>Поставщик функций шифрования является поставщиком Windows.</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult">
+      <summary>Представляет максимальную длину результата времени до блокировки компьютера.</summary>
+      <deprecated type="deprecate">Объект EasMaxInactivityTimeLockResult может быть недоступен для выпусков, следующих за Windows 10.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.CanBeCompliant">
+      <summary>Этот компьютер можно привести в соответствие с помощью метода ApplyAsync. HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS и пользователь является администратором.HRESULT: S_OK, но пользователь не контролируется.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.Compliant">
+      <summary>Этот компьютер соответствует политикеHRESULT: S_OK и пользователь контролируется.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.InvalidParameter">
+      <summary>Значение политики не находится в допустимом диапазоне.HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.NotEvaluated">
+      <summary>Политика не задана для оценки.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.RequestedPolicyIsStricter">
+      <summary>Запрошенная политика строже политик этого компьютера.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS и пользователь не является администратором.</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult">
+      <summary>Представляет максимальное число результатов попыток ввода пароля.</summary>
+      <deprecated type="deprecate">EasMaxPasswordFailedAttemptsResult может быть недоступен для выпусков, следующих за Windows 10.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.CanBeCompliant">
+      <summary>Этот компьютер можно привести в соответствие с помощью метода ApplyAsync. HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS и пользователь является администратором.HRESULT: S_OK, но пользователь не контролируется.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.Compliant">
+      <summary>Этот компьютер соответствует политикеHRESULT: S_OK и пользователь контролируется.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.InvalidParameter">
+      <summary>Значение политики не находится в допустимом диапазоне.HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.NotEvaluated">
+      <summary>Политика не задана для оценки.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.RequestedPolicyIsStricter">
+      <summary>Запрошенная политика строже политик этого компьютера.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS и пользователь не является администратором.</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult">
+      <summary>Представляет минимальный результат сложности для паролей.</summary>
+      <deprecated type="deprecate">Объект EasMinPasswordComplexCharactersResult может быть недоступен для выпусков, следующих за Windows 10.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.AdminsCannotChangePassword">
+      <summary>Одному или нескольким администраторам запрещено изменять свои пароли. HRESULT: EAS_E_ADMINS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.AdminsHaveBlankPassword">
+      <summary>Политики паролей EAS не могут быть оценены, поскольку у одного или нескольких администраторов пустые пароли. HRESULT: EAS_E_ADMINS_HAVE_BLANK_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.CanBeCompliant">
+      <summary>Этот компьютер можно привести в соответствие с помощью метода ApplyAsync. HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS и пользователь является администратором.HRESULT: S_OK, но пользователь не контролируется.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.ChangeConnectedAdminsPassword">
+      <summary>Имеется хотя бы один администратор, пароль подключенной учетной записи которого необходимо изменить в целях обеспечения соответствия политике паролей EAS.HRESULT: EAS_E_CONNECTED_ADMINS_NEED_TO_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.ChangeConnectedUserPassword">
+      <summary>Пароль подключенной учетной записи для текущего пользователя необходимо изменить, чтобы обеспечить соответствие политике паролей EAS.HRESULT: EAS_E_CURRENT_CONNECTED_USER_NEED_TO_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.Compliant">
+      <summary>Этот компьютер соответствует политикеHRESULT: S_OK и пользователь контролируется.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.ConnectedAdminsProviderPolicyIsWeak">
+      <summary>Политика паролей EAS не может быть применена поставщиком подключенной учетной записи по меньшей мере одного администратора.HRESULT: EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CONNECTED_ADMINS</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.ConnectedUserProviderPolicyIsWeak">
+      <summary>Политика паролей EAS не может быть применена поставщиком подключенной учетной записи текущего пользователя.HRESULT: EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CURRENT_CONNECTED_USER</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.CurrentUserHasBlankPassword">
+      <summary>Политики паролей EAS для пользователя, не могут быть оценены, так как пользователь имеет пустой пароль. HRESULT: EAS_E_CURRENT_USER_HAS_BLANK_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.InvalidParameter">
+      <summary>Значение политики не находится в допустимом диапазоне.HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.LocalControlledUsersCannotChangePassword">
+      <summary>Присутствуют другие обычные пользователи, которым не разрешено менять свои пароли. HRESULT: EAS_E_LOCAL_CONTROLLED_USERS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.NotEvaluated">
+      <summary>Политика не задана для оценки.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.RequestedPolicyIsStricter">
+      <summary>Запрошенная политика строже политик этого компьютера.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS и пользователь не является администратором.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.RequestedPolicyNotEnforceable">
+      <summary>Оцениваемая политика EAS не может быть принудительно применена системой.HRESULT: EAS_E_REQUESTED_POLICY_NOT_ENFORCEABLE</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.UserCannotChangePassword">
+      <summary>Пользователь не может изменить пароль. HRESULT: EAS_E_USER_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult">
+      <summary>Представляет результат минимальной длины для паролей.</summary>
+      <deprecated type="deprecate">Объект EasMinPasswordLengthResult может быть недоступен для выпусков после Windows 10.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.AdminsCannotChangePassword">
+      <summary>Одному или нескольким администраторам запрещено изменять свои пароли. HRESULT: EAS_E_ADMINS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.AdminsHaveBlankPassword">
+      <summary>Политики паролей EAS не могут быть оценены, поскольку у одного или нескольких администраторов пустые пароли. HRESULT: EAS_E_ADMINS_HAVE_BLANK_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.CanBeCompliant">
+      <summary>Этот компьютер можно привести в соответствие с помощью метода ApplyAsync. HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS и пользователь не является администратором.HRESULT: S_OK, но пользователь не контролируется.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.ChangeConnectedAdminsPassword">
+      <summary>Имеется хотя бы один администратор, пароль подключенной учетной записи которого необходимо изменить в целях обеспечения соответствия политике паролей EAS.HRESULT: EAS_E_CONNECTED_ADMINS_NEED_TO_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.ChangeConnectedUserPassword">
+      <summary>Пароль подключенной учетной записи для текущего пользователя необходимо изменить, чтобы обеспечить соответствие политике паролей EAS.HRESULT: EAS_E_CURRENT_CONNECTED_USER_NEED_TO_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.Compliant">
+      <summary>Этот компьютер соответствует политикеHRESULT: S_OK и пользователь контролируется.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.ConnectedAdminsProviderPolicyIsWeak">
+      <summary>Политика паролей EAS не может быть применена поставщиком подключенной учетной записи по меньшей мере одного администратора.HRESULT: EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CONNECTED_ADMINS</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.ConnectedUserProviderPolicyIsWeak">
+      <summary>Политика паролей EAS не может быть применена поставщиком подключенной учетной записи текущего пользователя.HRESULT: EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CURRENT_CONNECTED_USER</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.CurrentUserHasBlankPassword">
+      <summary>Политики паролей EAS для пользователя, не могут быть оценены, так как пользователь имеет пустой пароль. HRESULT: EAS_E_CURRENT_USER_HAS_BLANK_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.InvalidParameter">
+      <summary>Значение политики не находится в допустимом диапазоне.HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.LocalControlledUsersCannotChangePassword">
+      <summary>Присутствуют другие обычные пользователи, которым не разрешено менять свои пароли. HRESULT: EAS_E_LOCAL_CONTROLLED_USERS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.NotEvaluated">
+      <summary>Политика не задана для оценки.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.RequestedPolicyIsStricter">
+      <summary>Запрошенная политика строже политик этого компьютера.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS и пользователь не является администратором.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.RequestedPolicyNotEnforceable">
+      <summary>Оцениваемая политика EAS не может быть принудительно применена системой.HRESULT: EAS_E_REQUESTED_POLICY_NOT_ENFORCEABLE</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.UserCannotChangePassword">
+      <summary>Пользователь не может изменить пароль. HRESULT: EAS_E_USER_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult">
+      <summary>Результаты запроса с данными истечения срока действия паролей.</summary>
+      <deprecated type="deprecate">Объект EasPasswordExpirationResult может быть недоступен для выпусков, следующих за Windows 10.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.AdminsCannotChangePassword">
+      <summary>Одному или нескольким администраторам запрещено изменять свои пароли. HRESULT: EAS_E_ADMINS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.CanBeCompliant">
+      <summary>Компьютер можно привести в соответствие с помощью метода ApplyAsync. HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS и пользователь является администратором.HRESULT: S_OK, но пользователь не контролируется.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.Compliant">
+      <summary>Компьютер соответствует политикеHRESULT: S_OK и пользователь контролируется.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.InvalidParameter">
+      <summary>Значение политики не находится в допустимом диапазоне.HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.LocalControlledUsersCannotChangePassword">
+      <summary>Присутствуют другие обычные пользователи, которым не разрешено менять свои пароли. HRESULT: EAS_E_LOCAL_CONTROLLED_USERS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.NotEvaluated">
+      <summary>Политика не задана для оценки.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.RequestedExpirationIncompatible">
+      <summary>Соответствие политике истечения срока действия пароля EAS невозможно, так как интервал истечения срока действия пароля меньше, чем минимальный интервал для системы.HRESULT: EAS_E_REQUESTED_POLICY_PASSWORD_EXPIRATION_INCOMPATIBLE</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.RequestedPolicyIsStricter">
+      <summary>Запрошенная политика строже политик этого компьютера.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS и пользователь не является администратором.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.UserCannotChangePassword">
+      <summary>Пользователь не может изменить пароль. HRESULT: EAS_E_USER_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult">
+      <summary>Представляет историю паролей.</summary>
+      <deprecated type="deprecate">Объект EasPasswordHistoryResult может быть изменен или недоступен для выпусков после Windows 10.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.CanBeCompliant">
+      <summary>Компьютер можно привести в соответствие с помощью метода ApplyAsync. HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS и пользователь является администратором.HRESULT: S_OK, но пользователь не контролируется.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.Compliant">
+      <summary>Компьютер соответствует политикеHRESULT: S_OK и пользователь контролируется.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.InvalidParameter">
+      <summary>Значение политики не находится в допустимом диапазоне.HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.NotEvaluated">
+      <summary>Политика не задана для оценки.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.RequestedPolicyIsStricter">
+      <summary>Запрошенная политика строже политик этого компьютера.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS и пользователь не является администратором.</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult">
+      <summary>Представляет требуемый тип шифрования.</summary>
+      <deprecated type="deprecate">Объект EasRequireEncryptionResult может быть изменен или недоступен для выпусков после Windows 10.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.CanBeCompliant">
+      <summary>Этот компьютер можно привести в соответствие с помощью метода ApplyAsync.HRESULT: S_OK, но пользователь не контролируется.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.Compliant">
+      <summary>Этот компьютер уже DeviceProtected.HRESULT: S_OK и пользователь контролируется.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeFixedDataNotSupported">
+      <summary>Это значение больше не поддерживается. Начиная с Windows 8.1 используйте FixedDataNotSupported.</summary>
+      <deprecated type="deprecate">Это значение больше не поддерживается. Начиная с Windows 8.1 используйте FixedDataNotSupported.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeHardwareNotCompliant">
+      <summary>Это значение больше не поддерживается. Начиная с Windows 8.1 используйте HardwareNotCompliant.</summary>
+      <deprecated type="deprecate">Это значение больше не поддерживается. Начиная с Windows 8.1 используйте HardwareNotCompliant.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeOsVolumeNotProtected">
+      <summary>Это значение больше не поддерживается. Начиная с Windows 8.1 используйте OsVolumeNotProtected.</summary>
+      <deprecated type="deprecate">Это значение больше не поддерживается. Начиная с Windows 8.1 используйте OsVolumeNotProtected.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeProtectionNotYetEnabled">
+      <summary>Это значение больше не поддерживается. Начиная с Windows 8.1 используйте ProtectionNotYetEnabled.</summary>
+      <deprecated type="deprecate">Это значение больше не поддерживается. Начиная с Windows 8.1 используйте ProtectionNotYetEnabled.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeProtectionSuspended">
+      <summary>Это значение больше не поддерживается. Начиная с Windows 8.1 используйте ProtectionSuspended.</summary>
+      <deprecated type="deprecate">Это значение больше не поддерживается. Начиная с Windows 8.1 используйте ProtectionSuspended.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeWinReNotConfigured">
+      <summary>Это значение больше не поддерживается. Начиная с Windows 8.1 используйте LockNotConfigured.</summary>
+      <deprecated type="deprecate">Это значение больше не поддерживается. Начиная с Windows 8.1 используйте LockNotConfigured.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.FixedDataNotSupported">
+      <summary>Этот компьютер не может поддерживать шифрование устройства, потому что присутствуют незашифрованные фиксированные тома данных.HRESULT: FVE_E_DE_FIXED_DATA_NOT_SUPPORTED</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.HardwareNotCompliant">
+      <summary>Этот компьютер не отвечает аппаратным требованиям для поддержки шифрования устройства.HRESULT: FVE_E_DE_HARDWARE_NOT_COMPLIANT</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.LockNotConfigured">
+      <summary>Этот компьютер не может поддерживать шифрование устройства, потому что среда восстановления Windows не сконфигурирована надлежащим образом. HRESULT: FVE_E_DE_WINRE_NOT_CONFIGURED</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.NoFeatureLicense">
+      <summary>Этот компьютер не имеет лицензии на функцию.HRESULT: FVE_E_NO_FEATURE_LICENSE</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.NotEvaluated">
+      <summary>Политика не задана для оценки.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.NotProvisionedOnAllVolumes">
+      <summary>Этот компьютер не подготовлен для поддержки шифрования устройства. Включите BitLocker на всех томах для обеспечения соответствия политике шифрования устройства. HRESULT: FVE_E_NOT_PROVISIONED_ON_ALL_VOLUMES</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.OsNotProtected">
+      <summary>Диск операционной системы не защищен шифрованием диска BitLocker : FVE_E_OS_NOT_PROTECTED</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.OsVolumeNotProtected">
+      <summary>На этом компьютере шифрование устройств не настроено. Включить шифрование устройства на всех томах, чтобы обеспечить соответствие политике шифрования устройства, если она поддерживается.
+HRESULT: FVE_E_DE_OS_VOLUME_NOT_PROTECTED</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.ProtectionNotYetEnabled">
+      <summary>Защита не разрешена для этого тома. Для включения защиты требуется подключенная учетная запись. Если уже имеется подключенная учетная запись и отображается эта ошибка, дополнительные сведения см. в журнале событийHRESULT: FVE_E_DE_PROTECTION_NOT_YET_ENABLED</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.ProtectionSuspended">
+      <summary>Защита включена на этом томе, но приостановлена. Это скорее всего связано с обновлением компьютера. Выполните перезагрузку попробуйте еще раз.HRESULT: FVE_E_DE_PROTECTION_SUSPENDED</summary>
+    </member></members>
+</doc>

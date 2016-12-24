@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Preview.Notes.PreviewNotesContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs">
+      <summary>表示 NotePlacementChanged 事件的相關資訊。</summary>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs.ViewId">
+      <summary>引發 NotePlacementChanged 事件之附註的唯一識別碼。</summary>
+      <returns>附註識別碼。</returns>
+    </member><member name="T:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview">
+      <summary>這個類別擁有預覽附註應用程式功能的大多數功能 (請參閱＜備註＞)。</summary>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.IsScreenLocked">
+      <summary>取得值，該值指出裝置的螢幕目前是否已鎖定。</summary>
+      <returns>如果螢幕已鎖定，則為 true，未鎖定則為 false。</returns>
+    </member><member name="E:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.NotePlacementChanged">
+      <summary>表示附註的位置 (尺寸和位置) 已變更。</summary>
+    </member><member name="E:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.NoteVisibilityChanged">
+      <summary>表示附註的可見狀態已變更。</summary>
+    </member><member name="E:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.SystemLockStateChanged">
+      <summary>表示裝置螢幕的鎖定狀態已變更。</summary>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.GetNotePlacement(System.Int32)">
+      <summary>取得某一特定附註的檢視位置，要儲存於記憶體中，並於之後由應用程式還原。</summary>
+      <returns>保存附註位置資料的位元組陣列。</returns>
+      <param name="noteViewId">要擷取其位置之附註的唯一識別碼。</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.HideNote(System.Int32)">
+      <summary>從裝置螢幕移除附註檢視。</summary>
+      <param name="noteViewId">要隱藏之附註的唯一識別碼。</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.SetFocusToNextView">
+      <summary>切換焦點至下一個可見的附註檢視 (視窗)。 檢視為循環選取，依系統決定的順序。</summary>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.SetNotesThumbnailAsync(Windows.Storage.Streams.IBuffer)">
+      <summary>設定此應用程式的縮圖影像，當它出現在 Windows Ink 工作區、在 Alt+TAB 工作切換器中，或是在工作列中滑鼠游標停留時。</summary>
+      <returns>這個方法不會傳回值。</returns>
+      <param name="thumbnail">位元組陣列，描述縮圖影像和使用方式 (請參閱＜備註＞)。</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNote(System.Int32)">
+      <summary>在裝置螢幕上顯示附註。</summary>
+      <param name="noteViewId">要顯示之附註的唯一識別碼。</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNoteRelativeTo(System.Int32,System.Int32)">
+      <summary>顯示附註，並將它放在指定的「錨定」檢視旁。</summary>
+      <param name="noteViewId">要顯示之附註的唯一識別碼。</param>
+      <param name="anchorNoteViewId">「錨定」檢視的識別碼。</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNoteWithPlacement(System.Int32,Windows.Storage.Streams.IBuffer)">
+      <summary>顯示附註，並依指定設定其放置資料 (尺寸和位置)。</summary>
+      <param name="noteViewId">要顯示之附註的唯一識別碼。</param>
+      <param name="data">保存附註位置資料的位元組陣列。</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.TrySetNoteSize(System.Int32,Windows.Foundation.Size)">
+      <summary>將指定附註的大小調整為所需尺寸。 如果因螢幕大小/空間問題而不建議採用指定的大小，附註的大小將不會改變。</summary>
+      <returns>如果附註大小經過調整，則為 true，如果因螢幕限制而未調整大小，則為 false。</returns>
+      <param name="noteViewId">要調整大小之附註的唯一識別碼。</param>
+      <param name="size">附註所需的大小。</param>
+    </member><member name="T:Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs">
+      <summary>表示 NoteVisibilityChanged 事件的相關資訊。</summary>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs.IsVisible">
+      <summary>指出附註 (由 ViewId 屬性指定) 是否可在裝置螢幕上顯示。</summary>
+      <returns>如果可看見附註，則為 true，如果附註為隱藏狀態，則為 false。</returns>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs.ViewId">
+      <summary>引發 NoteVisibilityChanged 事件之附註的唯一識別碼。</summary>
+      <returns>附註識別碼。</returns>
+    </member></members>
+</doc>

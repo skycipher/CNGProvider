@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.Core.CoreWindowDialogsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.Core.CoreWindowDialog">
+      <summary>定義應用程式視窗的子系對話方塊。</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowDialog.#ctor">
+      <summary>建立 CoreWindowDialog 類別的預設執行個體。</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowDialog.#ctor(System.String)">
+      <summary>使用提供的標題，建立 CoreWindowDialog 類別的執行個體。</summary>
+      <param name="title">對話方塊的標題。</param>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.BackButtonCommand">
+      <summary>取得或設定在選取對話方塊上的上一頁按鈕時呼叫的委派。</summary>
+      <returns>選取對話方塊上的 [上一頁] 按鈕時所呼叫的委派。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.CancelCommandIndex">
+      <summary>取得及設定對話方塊取消作業的命令索引值。</summary>
+      <returns>對話方塊取消作業的命令索引值。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.Commands">
+      <summary>取得對話方塊所提供的使用者介面命令集 (UI)。</summary>
+      <returns>對話方塊所提供的 UI 命令集。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.DefaultCommandIndex">
+      <summary>取得或設定對話方塊視窗之預設命令的索引。</summary>
+      <returns>對話方塊視窗之預設命令的索引值 (例如 OK)。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.IsInteractionDelayed">
+      <summary>取得或設定值，指出任何 UI 互動事件訊息是否會稍微延遲。 這項延遲可防止使用者在對話視窗上意外地叫用動作。</summary>
+      <returns>如果任何與對話方塊的互動中導入了分數階延遲，則為 true，否則為 false。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.MaxSize">
+      <summary>取得對話方塊的最大大小。</summary>
+      <returns>對話方塊的最大大小，以像素為單位。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.MinSize">
+      <summary>取得對話方塊的最小大小。</summary>
+      <returns>對話方塊的最小大小，以像素為單位。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.Title">
+      <summary>取得或設定對話方塊的標題。</summary>
+      <returns>對話方塊的標題。</returns>
+    </member><member name="E:Windows.UI.Core.CoreWindowDialog.Showing">
+      <summary>在對話方塊顯示時引發。</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowDialog.ShowAsync">
+      <summary>顯示對話方塊，並以非同步方式等候使用者採取動作。</summary>
+      <returns>由對話方塊的使用者執行的動作以及有關此動作的資訊。</returns>
+    </member><member name="T:Windows.UI.Core.CoreWindowFlyout">
+      <summary>定義應用程式視窗的子系飛出視窗。</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowFlyout.#ctor(Windows.Foundation.Point)">
+      <summary>在提供的位置上建立 CoreWindowFlyout 類別的執行個體。</summary>
+      <param name="position">螢幕上產生飛出視窗的像素位置。 此位置提供飛出視窗的最左上角。</param>
+    </member><member name="M:Windows.UI.Core.CoreWindowFlyout.#ctor(Windows.Foundation.Point,System.String)">
+      <summary>在提供標題的指定位置上，建立 CoreWindowFlyout 類別的執行個體。</summary>
+      <param name="position">螢幕上產生飛出視窗的像素位置。 此位置提供飛出視窗的最左上角。</param>
+      <param name="title">彈出式視窗的標題。</param>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.BackButtonCommand">
+      <summary>取得或設定在選取飛出視窗上的上一頁按鈕時呼叫的委派。</summary>
+      <returns>選取飛出視窗上的 [上一頁] 按鈕時所呼叫的委派。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.Commands">
+      <summary>取得飛出視窗所提供的使用者介面命令集。</summary>
+      <returns>飛出視窗所提供的使用者介面命令集。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.DefaultCommandIndex">
+      <summary>取得或設定飛出視窗之預設命令的索引。</summary>
+      <returns>飛出視窗之預設命令的索引值 (例如 OK)。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.IsInteractionDelayed">
+      <summary>取得或設定值，指出任何 UI 互動事件訊息是否會稍微延遲。 這項延遲可防止使用者在彈出式視窗上意外地叫用動作。</summary>
+      <returns>如果任何與飛出視窗的互動中導入了分數階延遲，則為 true，否則為 false。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.MaxSize">
+      <summary>取得飛出視窗的最大大小。</summary>
+      <returns>彈出式視窗的最大大小，以像素為單位。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.MinSize">
+      <summary>取得飛出視窗的最小大小。</summary>
+      <returns>彈出式視窗的最小大小，以像素為單位。</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.Title">
+      <summary>取得或設定延伸顯示的標題。</summary>
+      <returns>彈出式視窗的標題。</returns>
+    </member><member name="E:Windows.UI.Core.CoreWindowFlyout.Showing">
+      <summary>在彈出式視窗顯示時引發。</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowFlyout.ShowAsync">
+      <summary>顯示飛出視窗，並以非同步方式等候使用者採取動作。</summary>
+      <returns>由飛出視窗的使用者執行的動作以及有關此動作的資訊。</returns>
+    </member><member name="T:Windows.UI.Core.CoreWindowPopupShowingEventArgs">
+      <summary>定義用於設定快顯視窗之所需大小的方法。</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowPopupShowingEventArgs.SetDesiredSize(Windows.Foundation.Size)">
+      <summary>設定快顯所需的大小。</summary>
+      <param name="value">預期的快顯視窗大小。</param>
+    </member></members>
+</doc>

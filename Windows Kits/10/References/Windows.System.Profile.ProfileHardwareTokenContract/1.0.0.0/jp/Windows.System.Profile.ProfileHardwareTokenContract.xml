@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.Profile.ProfileHardwareTokenContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.System.Profile.HardwareIdentification">
+      <summary>現在のハードウェアを表すハードウェア識別子を取得できるようにします。</summary>
+    </member><member name="M:Windows.System.Profile.HardwareIdentification.GetPackageSpecificToken(Windows.Storage.Streams.IBuffer)">
+      <summary>現在のハードウェアを表すハードウェア識別子 (ASHWID) を取得します。</summary>
+      <returns>ハードウェア ID 情報。</returns>
+      <param name="nonce">暗号化 nonce は省略可能です。 nonce は、ASHWID がリプレイ攻撃に対してクラウドで検証される必要がある場合に推奨されます。 nonce が望ましいシナリオでは、ASHWID をクライアント システムから受け取ると、リモート サーバーはランダムな nonce を生成してクライアント アプリケーションに渡してから、予期された nonce がシグネチャにあることを確認します。</param>
+    </member><member name="T:Windows.System.Profile.HardwareToken">
+      <summary>十分に一意なハードウェア ベースの ID を含むトークンを表します。</summary>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Certificate">
+      <summary>Id の署名に使用され、Id の信頼性の確認に役立つ証明書を取得します。</summary>
+      <returns>Id への署名に使用する証明書。</returns>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Id">
+      <summary>デバイスを識別するハードウェア識別子を取得します。</summary>
+      <returns>デバイスを識別する ID。 このバイト バッファーには、デバイスにあるさまざまなハードウェア コンポーネントを表す一連の識別子が含まれます。</returns>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Signature">
+      <summary>返された Id の信頼性の確認に役立つハードウェア Id のデジタル署名を取得します。</summary>
+      <returns>Id のデジタル署名。</returns>
+    </member></members>
+</doc>

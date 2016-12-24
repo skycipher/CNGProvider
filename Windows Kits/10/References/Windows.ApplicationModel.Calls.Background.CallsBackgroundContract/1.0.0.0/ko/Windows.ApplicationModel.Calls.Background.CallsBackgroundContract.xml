@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Calls.Background.CallsBackgroundContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Background.PhoneTrigger">
+      <summary>배경 작업을 트리거하는 휴대폰 이벤트를 나타냅니다.</summary>
+    </member><member name="M:Windows.ApplicationModel.Background.PhoneTrigger.#ctor(Windows.ApplicationModel.Calls.Background.PhoneTriggerType,System.Boolean)">
+      <summary>PhoneTrigger 클래스의 새 인스턴스를 초기화합니다.</summary>
+      <param name="type">휴대폰 이벤트의 형식을 지정합니다.</param>
+      <param name="oneShot">트리거가 일회성 알림인지 여부를 나타냅니다. 일회성 알림이 전송될 때 구독 상태가 아니면 아무것도 가져오지 않습니다. 일회성 알림이 발생될 때 연결 상태가 아니면 아무것도 발생하지 않습니다.</param>
+    </member><member name="P:Windows.ApplicationModel.Background.PhoneTrigger.OneShot">
+      <summary>트리거가 일회성 알림인지 여부를 나타내는 부울 값을 가져옵니다.</summary>
+      <returns>트리거가 일회성 알림인지 여부를 나타내는 부울 값입니다.</returns>
+    </member><member name="P:Windows.ApplicationModel.Background.PhoneTrigger.TriggerType">
+      <summary>트리거에 의해 표시되는 휴대폰 이벤트의 형식을 가져옵니다.</summary>
+      <returns>트리거에 의해 표시되는 휴대폰 이벤트의 형식입니다.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason">
+      <summary>전화 통화가 거부된 이유를 제공합니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason.InCallBlockingList">
+      <summary>차단 목록에 있기 때문에 통화가 거부되었습니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason.PrivateNumber">
+      <summary>비공개 번호이고 비공개 번호는 차단되므로 통화가 거부되었습니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason.UnknownNumber">
+      <summary>알 수 없는 번호이고 알 수 없는 번호는 차단되므로 통화가 거부되었습니다.</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails">
+      <summary>방금 차단된 통화에 대한 세부 정보를 제공하는 데 사용됩니다.</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails.CallBlockedReason">
+      <summary>전화 통화가 차단된 이유를 가져옵니다.</summary>
+      <returns>전화 통화를 차단하는 이유입니다.</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails.LineId">
+      <summary>방금 차단된 전화 통화의 ID를 가져옵니다.</summary>
+      <returns>차단된 전화 통화의 ID입니다.</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails.PhoneNumber">
+      <summary>차단된 통화의 전화 번호를 가져옵니다.</summary>
+      <returns>차단된 통화의 전화 번호입니다.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails">
+      <summary>전화 통화의 원본 정보를 제공하는 데 사용됩니다.</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails.PhoneNumber">
+      <summary>전화 통화의 원본에 대한 전화 번호를 가져옵니다.</summary>
+      <returns>전화 통화 원본의 전화 번호입니다.</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails.RequestId">
+      <summary>이 전화 통화의 고유 식별자를 가져옵니다.</summary>
+      <returns>이 전화 통화의 고유 식별자입니다.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails">
+      <summary>전화선의 속성 변경에 대한 세부 정보를 제공하는 데 사용됩니다.</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails.ChangeType">
+      <summary>전화선이 추가, 제거 또는 변경되었는지 여부를 나타내는 PhoneLineChangeKind 값을 가져옵니다.</summary>
+      <returns>전화선이 추가, 제거 또는 변경되었는지 여부를 나타내는 PhoneLineChangeKind 값입니다.</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails.LineId">
+      <summary>추가, 제거 또는 변경된 전화선의 ID를 가져옵니다.</summary>
+      <returns>추가, 제거 또는 변경된 전화선의 ID입니다.</returns>
+    </member><member name="M:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails.HasLinePropertyChanged(Windows.ApplicationModel.Calls.Background.PhoneLineProperties)">
+      <summary>전화선의 플래그 집합을 확인하여 지정된 전화선 속성이 변경되었는지 여부를 알아봅니다.</summary>
+      <returns>lineProperty 매개 변수에 표시된 속성이 전화선에서 변경된 경우 true를 반환합니다.</returns>
+      <param name="lineProperty">변경 여부를 쿼리할 전화선 속성을 나타내는 플래그 집합입니다.</param>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind">
+      <summary>배경 전화선 변경 트리거에 대한 변경 유형을 나타냅니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind.Added">
+      <summary>새 전화선이 추가되었습니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind.PropertiesChanged">
+      <summary>전화선에 업데이트된 속성이 있습니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind.Removed">
+      <summary>전화선이 제거되었습니다.</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneLineProperties">
+      <summary>전화선 변경 트리거의 일부인 속성 플래그 집합을 나타냅니다. 여러 속성을 한 번에 설정할 수 있습니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.BrandingOptions">
+      <summary>전화선에 대한 브랜딩 옵션입니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.CanDial">
+      <summary>전화선에서 발신 전화를 걸 수 있습니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.CellularDetails">
+      <summary>전화선에 대한 휴대폰 세부 정보입니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.DisplayColor">
+      <summary>전화선의 기본 표시 색입니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.DisplayName">
+      <summary>사용자가 전화선에 지정한 이름입니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.NetworkName">
+      <summary>전화선에 사용되고 있는 현재 네트워크의 이름입니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.NetworkState">
+      <summary>전화선의 현재 네트워크 상태입니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.None">
+      <summary>속성이 없습니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.Transport">
+      <summary>전화선의 전송 형식(휴대폰 또는 VoIP(Voice over IP))입니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.Voicemail">
+      <summary>전화선과 연결된 음성 메일 계정입니다.</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails">
+      <summary>전화선의 새 음성 메일 메시지에 대한 세부 정보를 제공하는 데 사용됩니다.</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails.LineId">
+      <summary>새 음성 메일이 도착한 전화선의 ID를 가져옵니다.</summary>
+      <returns>새 음성 메일에 대한 전화선의 ID입니다.</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails.OperatorMessage">
+      <summary>음성 메일 변경 SMS를 보낼 때 운영자가 설정한 선택적 음성 메일 변경 메시지를 가져옵니다.</summary>
+      <returns>음성 메일 변경 SMS를 보낼 때 운영자가 설정한 선택적 음성 메일 변경 메시지입니다. 메시지가 있고 알림이 표시되는 경우, 음성 메일 알림에 메시지가 표시됩니다.</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails.VoicemailCount">
+      <summary>전화선에 대한 새 음성 메일 메시지 수를 가져옵니다.</summary>
+      <returns>현재 음성 메일 메시지 수입니다.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneTriggerType">
+      <summary>전화 트리거에 대한 이벤트 형식을 나타냅니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.AirplaneModeDisabledForEmergencyCall">
+      <summary>휴대폰에서 긴급 전화를 걸 수 있도록 전화선의 비행기 모드를 사용하지 않도록 설정했습니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.CallBlocked">
+      <summary>호출을 차단했습니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.CallHistoryChanged">
+      <summary>통화 기록이 변경되었습니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.CallOriginDataRequest">
+      <summary>전화 통화의 원본을 요청했습니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.LineChanged">
+      <summary>PhoneLineProperties가 변경되었습니다.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.NewVoicemailMessage">
+      <summary>시스템이 새 음성 메일 메시지를 받았거나 음성 메일 수가 0이 되었습니다.</summary>
+    </member></members>
+</doc>

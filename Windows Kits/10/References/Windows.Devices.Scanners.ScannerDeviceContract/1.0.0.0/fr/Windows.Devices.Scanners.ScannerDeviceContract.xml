@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Scanners.ScannerDeviceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Scanners.IImageScannerFormatConfiguration">
+      <summary>Configure le format de fichier lorsqu'une source d'entrée du lecteur transfert les données d'image acquises vers l'application.</summary>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerFormatConfiguration.DefaultFormat">
+      <summary>Obtient le format de fichier par défaut de la source de numérisation au début d'une nouvelle session de numérisation.</summary>
+      <returns>Type de fichier.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerFormatConfiguration.Format">
+      <summary>Obtient ou définit le format de transfert de fichier actif pour l'acquisition de données d'image du périphérique vers l'application cliente.</summary>
+      <returns>Type de fichier.</returns>
+    </member><member name="M:Windows.Devices.Scanners.IImageScannerFormatConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>Détermine si le scanneur d'entrée prend en charge, ou non, le format de fichier spécifié.</summary>
+      <returns>True si le type de fichier spécifié est pris en charge ; sinon, False.</returns>
+      <param name="value">Type de fichier.</param>
+    </member><member name="T:Windows.Devices.Scanners.IImageScannerSourceConfiguration">
+      <summary>Interroge et configure les paramètres de numérisation communs aux sources plateau et chargeur.</summary>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.ActualResolution">
+      <summary>Obtient la résolution de l'analyse optique horizontale et verticale réelle de la source de numérisation en PPP.</summary>
+      <returns>Résolution horizontale et verticale, en pixels.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.AutoCroppingMode">
+      <summary>Obtient ou définit le mode de troncation automatique.</summary>
+      <returns>Le mode de troncation automatique pour la numérisation.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.Brightness">
+      <summary>Configure le niveau de luminosité actuel pour capturer les données d'image de la source de numérisation. Dans une nouvelle session d'analyse, la valeur de cette propriété est la propriété DefaultBrightness.</summary>
+      <returns>Niveau de luminosité.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.BrightnessStep">
+      <summary>Obtient la taille de l'étape à laquelle les niveaux de luminosité de la source de données peuvent être augmentés ou diminués entre les valeurs minimale et maximale.</summary>
+      <returns>Taille d'étape à incrémenter ou à décrémenter. Valeur classique de 1.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.ColorMode">
+      <summary>Obtient ou définit le mode de couleur pour la source de numérisation. Lorsqu'une nouvelle session de numérisation démarre, cette propriété est identique à la propriété DefaultColorMode.</summary>
+      <returns>Mode de couleur.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.Contrast">
+      <summary>Définit ou obtient le contraste de niveau actuel pour la capture des données d'image à partir de la source de numérisation. Au début d'une nouvelle session de numérisation, cette propriété est définie sur la propriété DefaultContrast.</summary>
+      <returns>Niveau de contraste.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.ContrastStep">
+      <summary>Obtient la taille de l'étape à laquelle les niveaux de contraste de la source de données peuvent augmenter ou diminuer entre les valeurs minimale et maximale.</summary>
+      <returns>Taille d'étape à incrémenter ou à décrémenter. Valeur classique de 1.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DefaultBrightness">
+      <summary>Obtient le niveau de luminosité par défaut de la source au niveau de la source de numérisation.</summary>
+      <returns>Le niveau de luminosité par défaut pour le scanneur.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DefaultColorMode">
+      <summary>Obtient le mode de couleur par défaut pour cette source de numérisation.</summary>
+      <returns>Mode de couleur.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DefaultContrast">
+      <summary>Obtient le niveau de contraste par défaut pour la source de numérisation.</summary>
+      <returns>Niveau de contraste par défaut.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DesiredResolution">
+      <summary>Obtient ou définit la résolution horizontale et verticale de numérisation pour la source de numérisation demandée par l'application, en PPP.</summary>
+      <returns>Résolution horizontale et verticale, en pixels.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxBrightness">
+      <summary>Obtient le niveau de luminosité maximal pris en charge par la source de numérisation.</summary>
+      <returns>Le niveau maximal de luminosité, en général 1000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxContrast">
+      <summary>Obtient le niveau de contraste maximal pris en charge par la source de numérisation.</summary>
+      <returns>Le niveau maximal de contraste, en général 1000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxResolution">
+      <summary>Obtient la résolution de numérisation horizontale et verticale maximale de la source de numérisation en PPP.</summary>
+      <returns>Résolution horizontale et verticale, en pixels.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxScanArea">
+      <summary>Obtient les dimensions de zone de numérisation maximales en pouces. La largeur maximale de numérisation et la plus grande largeur possible d'un document pour qu'il soit numérisé à partir du bac d'alimentation ou de la source de numérisation à plat.</summary>
+      <returns>Largeur et hauteur de la zone.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinBrightness">
+      <summary>Obtient le niveau de luminosité minimal pris en charge par la source de numérisation.</summary>
+      <returns>Le niveau minimal de luminosité, en général -1000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinContrast">
+      <summary>Obtient le niveau de contraste minimal pris en charge par la source de numérisation.</summary>
+      <returns>Le niveau minimal de contraste, en général -1000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinResolution">
+      <summary>Obtient la résolution de numérisation horizontale et verticale minimale de la source de numérisation en PPP.</summary>
+      <returns>Résolution horizontale et verticale, en pixels.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinScanArea">
+      <summary>Obtient la zone de numérisation minimale en pouces. La zone de numérisation minimale est la plus petite taille possible d'un document pour qu'il soit numérisé à partir du bac d'alimentation ou de la source de numérisation à plat.</summary>
+      <returns>Largeur et hauteur de la zone.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.OpticalResolution">
+      <summary>Obtient la résolution de l'analyse optique horizontale et verticale de la source de numérisation en PPP.</summary>
+      <returns>Résolution de numérisation horizontale et verticale, en pixels.</returns>
+    </member><member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.SelectedScanRegion">
+      <summary>Obtient ou définit les coordonnées d'origine (horizontales et verticales) et les dimensions (largeur et la hauteur) de la zone de numérisation sélectionnée, en pouces. Cette propriété est ignorée lorsque la propriété AutoCroppingMode n'est pas définie sur Disabled.</summary>
+      <returns>Emplacement et taille d'un rectangle.</returns>
+    </member><member name="M:Windows.Devices.Scanners.IImageScannerSourceConfiguration.IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)">
+      <summary>Détermine si la source de numérisation prend en charge le ImageScannerAutoCroppingMode spécifié.</summary>
+      <returns>true si le périphérique prend en charge le mode value ; sinon, false.</returns>
+      <param name="value">Le mode de troncation automatique de l'image à numériser.</param>
+    </member><member name="M:Windows.Devices.Scanners.IImageScannerSourceConfiguration.IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)">
+      <summary>Détermine si la source peut numériser et transférer des images au mode couleur spécifié.</summary>
+      <returns>True si le scanneur peut numériser des images en mode value ; sinon, false.</returns>
+      <param name="value">Mode de couleur.</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScanner">
+      <summary>Représente les propriétés des images à numériser.</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.AutoConfiguration">
+      <summary>Obtient et définit les paramètres de numérisation de l'unité de numérisation configurée de façon automatique, tels que le format de fichier, y compris la compression pour fournir les données numérisées. Cette propriété est ignorée si le scanneur ne prend pas en charge la configuration automatique.</summary>
+      <returns>Configuration de la numérisation. Null si le scanneur n'est pas capable de la configuration automatique.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.DefaultScanSource">
+      <summary>Obtient la source de numérisation par défaut choisie pour ce périphérique scanneur.</summary>
+      <returns>Type de source d'analyse.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.DeviceId">
+      <summary>Obtient l'identificateur de périphérique Plug-and-Play du périphérique scanneur.</summary>
+      <returns>Identificateur de périphérique PnP.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.FeederConfiguration">
+      <summary>Obtient ou définit les paramètres de numérisation de l'unité de numérisation du chargeur, comme la taille de la page, l'orientation et la résolution de numérisation.</summary>
+      <returns>Configuration du bac d'alimentation du scanneur. Null s'il n'existe aucun bac d'alimentation.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScanner.FlatbedConfiguration">
+      <summary>Obtient et définit les paramètres de numérisation de l'unité de numérisation à plat, tels que la résolution de la numérisation et le mode couleurs.</summary>
+      <returns>Configuration de la numérisation de l'unité de numérisation à plat du scanneur. Null s'il n'existe aucune unité de numérisation à plat.</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.FromIdAsync(System.String)">
+      <summary>Crée une instance d'un objet ImageScanner basé sur un ID d'informations de périphérique de lecteurs. Cette méthode est requise pour l'énumération des périphériques du service broker.</summary>
+      <returns>L'objet ImageScanner.</returns>
+      <param name="deviceId">ID d'informations de périphérique. Propriété See DeviceInformation.Id.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.GetDeviceSelector">
+      <summary>Retourne la chaîne de sélection de classe que les applications utilisent pour énumérer les périphériques scanneur. Cette méthode est requise pour l'énumération des périphériques du service broker.</summary>
+      <returns>Sélection de la classe.</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.IsPreviewSupported(Windows.Devices.Scanners.ImageScannerScanSource)">
+      <summary>Détermine si la source de numérisation spécifiée prend en charge l'aperçu de numérisation.</summary>
+      <returns>Retourne True si la source de numérisation spécifiée prend en charge l'aperçu ; sinon retourne False.</returns>
+      <param name="scanSource">Source de numérisation.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.IsScanSourceSupported(Windows.Devices.Scanners.ImageScannerScanSource)">
+      <summary>Détermine si la source spécifiée de numérisation est disponible sur le scanneur.</summary>
+      <returns>True si la source de numérisation, le scanneur à plat ou le bac d'alimentation est disponible ; sinon, false.</returns>
+      <param name="value">Source de numérisation.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.ScanFilesToFolderAsync(Windows.Devices.Scanners.ImageScannerScanSource,Windows.Storage.StorageFolder)">
+      <summary>Démarre un travail de numérisation avec la source spécifiée, et écrit une ou plusieurs images vers un fichier à plusieurs pages tel que TIFF, XPS et PDF ; ou vers un ou plusieurs fichiers à page unique tels que DIB, PNG, JPG et TIFF à l'emplacement du dossier spécifié. Retourne la progression de la numérisation.</summary>
+      <returns>La liste des fichiers images numérisés à partir de ImageScannerScanResult et la progression du travail de numérisation WIA à partir d'UInt32, qui indique le nombre de fichiers qui ont été transférés au dossier cible.</returns>
+      <param name="scanSource">Source d'analyse d'image.</param>
+      <param name="storageFolder">Emplacement du dossier cible du fichier numérisé.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScanner.ScanPreviewToStreamAsync(Windows.Devices.Scanners.ImageScannerScanSource,Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>Numérise une image à partir de la source indiquée et applique la résolution de numérisation la plus faible et le format d'image sélectionné.</summary>
+      <returns>La progression de la numérisation et du format du fichier numérisé.</returns>
+      <param name="scanSource">Source d'analyse d'image.</param>
+      <param name="targetStream">Fichier image numérisé.</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerAutoConfiguration">
+      <summary>Représente la source de numérisation configurée automatiquement du numériseur.</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerAutoConfiguration.DefaultFormat">
+      <summary>Le format de fichier par défaut de la source de numérisation au début d'une nouvelle session de numérisation.</summary>
+      <returns>Type de fichier.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerAutoConfiguration.Format">
+      <summary>Obtient ou définit le format de transfert de fichier actif pour l'acquisition de données d'image du périphérique vers l'application cliente.</summary>
+      <returns>Type de fichier.</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerAutoConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>Détermine si le lecteur d'entrée prend en charge le format de fichier spécifié.</summary>
+      <returns>True si le type de fichier spécifié est pris en charge ; sinon, False.</returns>
+      <param name="value">Type de fichier.</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerAutoCroppingMode">
+      <summary>Spécifie le mode de troncation automatique du périphérique de numérisation.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerAutoCroppingMode.Disabled">
+      <summary>La détection automatique est désactivée. Au début d'une nouvelle session de numérisation, la propriété AutoCroppingMode est définie sur cette valeur par défaut.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerAutoCroppingMode.MultipleRegion">
+      <summary>Numérisation de plusieurs régions en images distinctes et individuelles.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerAutoCroppingMode.SingleRegion">
+      <summary>Numérisation d'une seule zone en images distinctes et individuelles.</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerColorMode">
+      <summary>Spécifie les modes de couleurs pour la source de numérisation.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.AutoColor">
+      <summary>Le périphérique détecte automatiquement le bon mode de couleur selon le contenu de la numérisation. Dans ce cas, le choix entre la couleur, l'échelle de gris et le noir et blanc repose par exemple sur le périphérique, et non sur l'application.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.Color">
+      <summary>Couleur RVB 24 bits (3 canaux à 8 bits par canal).</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.Grayscale">
+      <summary>Nuances de gris de 8 bits ou 4 bits (1 canal à 8 ou 4 bits par canal). Si le périphérique prend en charge les nuances de gris 4 et 8 bits, la propriété DefaultColorMode utilise la version 8 bits.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerColorMode.Monochrome">
+      <summary>Bitonal 1 bit, également appelé monochrome ou « noir et blanc » (1 canal à 1 bit par canal).</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerFeederConfiguration">
+      <summary>Représente la source de numérisation correspondant au chargeur du numériseur.</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ActualResolution">
+      <summary>Obtient la résolution de l'analyse optique horizontale et verticale réelle du chargeur du scanneur en PPP.</summary>
+      <returns>Résolution horizontale et verticale, en pixels.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.AutoCroppingMode">
+      <summary>Obtient ou définit le mode de troncation automatique.</summary>
+      <returns>Le mode de troncation automatique pour la numérisation.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.AutoDetectPageSize">
+      <summary>Obtient ou définit la fonctionnalité de détection automatique de la taille de page pour le chargeur du scanneur.</summary>
+      <returns>True si la fonctionnalité de détection automatique de la taille de page est activée ; sinon, false.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Brightness">
+      <summary>Obtient ou définit le niveau de luminosité actuel pour la capture des données d'image depuis le chargeur du scanneur. Au début d'une nouvelle session de numérisation, cette propriété est définie sur la propriété DefaultBrightness.</summary>
+      <returns>Niveau de luminosité actuel.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.BrightnessStep">
+      <summary>Obtient la taille de l'étape à laquelle les niveaux de luminosité de la source de données peuvent être augmentés ou diminués entre les valeurs minimale et maximale.</summary>
+      <returns>Taille d'étape à incrémenter ou à décrémenter. Valeur classique de 1.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.CanAutoDetectPageSize">
+      <summary>Renvoie True si le périphérique peut détecter automatiquement au moment de la numérisation la taille des pages de document numérisées au moyen du chargeur ; sinon retourne False.</summary>
+      <returns>True si le périphérique peut détecter automatiquement au moment de la numérisation la taille des pages de document numérisées au moyen du chargeur ; sinon, false.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.CanScanAhead">
+      <summary>Obtient si le périphérique scanneur est capable de numériser en avance sur son chargeur.</summary>
+      <returns>Indique si le chargeur du scanneur peut numériser par avance.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.CanScanDuplex">
+      <summary>Obtient si le chargeur du scanneur est capable d'une analyse duplex (en analysant les deux côtés du document, le recto et le verso). En cas de numérisation en mode duplex, les mêmes paramètres de numérisation (tels que le mode de couleur et la résolution de numérisation) sont appliqués pour numériser les deux côtés.</summary>
+      <returns>Indique si la numérisation duplex est disponible.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ColorMode">
+      <summary>Obtient ou définit le mode de couleur du chargeur du scanner.</summary>
+      <returns>Mode de couleur.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Contrast">
+      <summary>Définit ou obtient le contraste de niveau actuel pour la capture des données d'image à partir bac d'alimentation du scanneur. Au début d'une nouvelle session de numérisation, cette propriété est définie sur la propriété DefaultContrast.</summary>
+      <returns>Niveau de contraste.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ContrastStep">
+      <summary>Obtient la taille de l'étape à laquelle les niveaux de contraste de la source de données peuvent augmenter ou diminuer entre les valeurs minimale et maximale.</summary>
+      <returns>Taille d'étape à incrémenter ou à décrémenter. Valeur classique de 1.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultBrightness">
+      <summary>Obtient le niveau de luminosité par défaut du chargeur du scanneur.</summary>
+      <returns>Le niveau de luminosité par défaut pour le scanneur.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultColorMode">
+      <summary>Obtient le mode de couleur par défaut du chargeur du scanneur.</summary>
+      <returns>Mode de couleur.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultContrast">
+      <summary>Obtient le niveau de contraste par défaut du chargeur du scanneur.</summary>
+      <returns>Niveau de contraste par défaut.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultFormat">
+      <summary>Obtient le format de fichier par défaut pour le chargeur du scanneur au début d'une nouvelle session de numérisation.</summary>
+      <returns>Type de fichier.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DesiredResolution">
+      <summary>Obtient ou définit la résolution horizontale et verticale de numérisation pour le chargeur du scanneur demandée par l'application, en PPP.</summary>
+      <returns>Résolution horizontale et verticale, en pixels.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Duplex">
+      <summary>Indique si le chargeur du scanneur peut analyser les deux côtés de la page du document.</summary>
+      <returns>Retourne True si le chargeur peut numériser les deux côtés du document.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Format">
+      <summary>Obtient ou définit le format de transfert de fichier actif pour l'acquisition de données d'image du chargeur du scanneur vers l'application cliente.</summary>
+      <returns>Type de fichier.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxBrightness">
+      <summary>Obtient le niveau de luminosité maximal pris en charge par le chargeur du scanner.</summary>
+      <returns>Le niveau maximal de luminosité, en général 1000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxContrast">
+      <summary>Obtient le niveau de contraste maximal pris en charge par le chargeur du scanner.</summary>
+      <returns>Le niveau maximal de contraste, en général 1000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxNumberOfPages">
+      <summary>Obtient ou définit le nombre maximal de pages et non d'images que l'application peut numériser en une seule opération de numérisation avant l'arrêt du scanneur.</summary>
+      <returns>Nombre de pages.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxResolution">
+      <summary>Obtient la résolution de numérisation horizontale et verticale maximale du chargeur du scanneur en PPP.</summary>
+      <returns>Résolution horizontale et verticale, en pixels.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxScanArea">
+      <summary>Obtient les dimensions de zone de numérisation maximales en pouces. La largeur maximale de numérisation est la plus grande largeur possible d'un document pour qu'il soit numérisé à partir du bac d'alimentation.</summary>
+      <returns>Largeur et hauteur de la zone.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinBrightness">
+      <summary>Obtient le niveau de luminosité minimal pris en charge par le chargeur du scanner.</summary>
+      <returns>Le niveau minimal de luminosité, en général -1000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinContrast">
+      <summary>Obtient le niveau de contraste minimal pris en charge par le chargeur du scanner.</summary>
+      <returns>Le niveau minimal de contraste, en général -1000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinResolution">
+      <summary>Obtient la résolution de numérisation horizontale et verticale minimale du chargeur du scanneur en PPP.</summary>
+      <returns>Résolution horizontale et verticale, en pixels.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinScanArea">
+      <summary>Obtient la zone de numérisation minimale en pouces. La zone de numérisation minimale est la plus petite taille possible d'un document pour qu'il soit numérisé à partir du bac d'alimentation.</summary>
+      <returns>Largeur et hauteur de la zone.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.OpticalResolution">
+      <summary>Obtient la résolution de l'analyse optique horizontale et verticale du chargeur du scanneur en PPP.</summary>
+      <returns>Résolution de numérisation horizontale et verticale, en pixels.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.PageOrientation">
+      <summary>Obtient ou définit l'orientation de page actuellement sélectionnée qui montre comment placer les documents dans le bac d'alimentation du chargeur du scanneur.</summary>
+      <returns>Orientation de la page.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.PageSize">
+      <summary>Obtient ou définit la taille de page actuellement sélectionnée pour numériser à partir du chargeur.</summary>
+      <returns>Taille de la page.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.PageSizeDimensions">
+      <summary>Obtient les dimensions (largeur et hauteur) et l'orientation de la taille de la page sélectionnée, au millième (1/1000).</summary>
+      <returns>Taille de la page.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ScanAhead">
+      <summary>Indique si la numérisation par avance est possible.</summary>
+      <returns>True pour numériser par avance.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.SelectedScanRegion">
+      <summary>Obtient ou définit les coordonnées d'origine (horizontales et verticales) et les dimensions (largeur et la hauteur) de la zone de numérisation sélectionnée, en pouces. Cette propriété est ignorée lorsque la propriété AutoCroppingMode n'est pas définie sur Disabled.</summary>
+      <returns>Zone de numérisation, en pouces.</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)">
+      <summary>Indique en retour si le chargeur du numériseur prend en charge l'énumération ImageScannerAutoCroppingMode spécifiée.</summary>
+      <returns>Indique si le périphérique prend en charge le mode value.</returns>
+      <param name="value">Le mode de troncation automatique de l'image à numériser.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)">
+      <summary>Indique en retour si le chargeur du numériseur peut numériser et transférer les images dans le mode de couleur spécifié.</summary>
+      <returns>Indique si le scanneur peut analyser les images en mode value.</returns>
+      <param name="value">Mode de couleur.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>Détermine si l'alimentation du scanneur prend en charge, ou non, le format de fichier spécifié.</summary>
+      <returns>Indique si le type de fichier spécifié est pris en charge.</returns>
+      <param name="value">Type de fichier.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsPageSizeSupported(Windows.Graphics.Printing.PrintMediaSize,Windows.Graphics.Printing.PrintOrientation)">
+      <summary>Indique en retour si le chargeur peut numériser les documents dans la taille et l'orientation spécifiées de la page.</summary>
+      <returns>Indique que le scanneur peut numériser avec pageSize et pageOrientation.</returns>
+      <param name="pageSize">Taille de la page.</param>
+      <param name="pageOrientation">L'orientation de page.</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration">
+      <summary>Représente la source de numérisation correspondant au plateau du numériseur.</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.ActualResolution">
+      <summary>Obtient la résolution de l'analyse optique horizontale et verticale réelle du scanneur à plat en PPP.</summary>
+      <returns>Résolution horizontale et verticale, en pixels.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.AutoCroppingMode">
+      <summary>Obtient ou définit le mode de troncation automatique.</summary>
+      <returns>Le mode de troncation automatique pour la numérisation.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.Brightness">
+      <summary>Obtient ou définit le niveau de luminosité actuel pour la capture des données d'image depuis l'unité de numérisation à plat du scanneur. Au début d'une nouvelle session de numérisation, cette propriété est définie sur la propriété DefaultBrightness.</summary>
+      <returns>Niveau de luminosité actuel.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.BrightnessStep">
+      <summary>Obtient la taille de l'étape à laquelle les niveaux de luminosité de la source de données peuvent être augmentés ou diminués entre les valeurs minimale et maximale.</summary>
+      <returns>Taille d'étape à incrémenter ou à décrémenter. Valeur classique de 1.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.ColorMode">
+      <summary>Obtient ou définit le mode de couleur de l'unité de numérisation à plat.</summary>
+      <returns>Mode de couleur.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.Contrast">
+      <summary>Définit ou obtient le contraste de niveau actuel pour la capture des données d'image à partir de la source de numérisation. Au début d'une nouvelle session de numérisation, cette propriété est définie sur la propriété DefaultContrast.</summary>
+      <returns>Niveau de contraste.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.ContrastStep">
+      <summary>Obtient la taille de l'étape à laquelle les niveaux de contraste de la source de données peuvent augmenter ou diminuer entre les valeurs minimale et maximale.</summary>
+      <returns>Taille d'étape à incrémenter ou à décrémenter. Valeur classique de 1.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultBrightness">
+      <summary>Obtient le niveau de luminosité par défaut de l'unité de numérisation à plat du scanneur.</summary>
+      <returns>Le niveau de luminosité par défaut pour le scanneur.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultColorMode">
+      <summary>Obtient le mode de couleur par défaut de l'unité de numérisation à plat du scanneur..</summary>
+      <returns>Mode de couleur.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultContrast">
+      <summary>Obtient le niveau de contraste par défaut de l'unité de numérisation à plat du scanneur.</summary>
+      <returns>Niveau de contraste par défaut.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultFormat">
+      <summary>Obtient le format de fichier par défaut pour l'unité de numérisation à plat du scanneur au début d'une nouvelle session de numérisation.</summary>
+      <returns>Type de fichier.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DesiredResolution">
+      <summary>Obtient ou définit la résolution horizontale et verticale de numérisation pour l'unité de numérisation à plat du scanneur demandée par l'application, en PPP.</summary>
+      <returns>Résolution horizontale et verticale, en pixels.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.Format">
+      <summary>Obtient ou définit le format de transfert de fichier actif pour l'acquisition de données d'image de l'unité de numérisation à plat du scanneur vers l'application cliente.</summary>
+      <returns>Type de fichier.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxBrightness">
+      <summary>Obtient le niveau de luminosité maximal pris en charge par l'unité de numérisation à plat du scanneur.</summary>
+      <returns>Le niveau maximal de luminosité, en général 1000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxContrast">
+      <summary>Obtient le niveau de contraste maximal pris en charge par l'unité de numérisation à plat du scanneur.</summary>
+      <returns>Le niveau maximal de contraste, en général 1000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxResolution">
+      <summary>Obtient la résolution de numérisation horizontale et verticale maximale de l'unité de numérisation à plat du scanneur en PPP.</summary>
+      <returns>Résolution horizontale et verticale, en pixels.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxScanArea">
+      <summary>Obtient les dimensions de zone de numérisation maximales en pouces. La largeur maximale de numérisation est la plus grande largeur possible d'un document pour qu'il soit numérisé à partir de la source de numérisation à plat.</summary>
+      <returns>Largeur et hauteur de la zone.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinBrightness">
+      <summary>Obtient le niveau de luminosité minimal pris en charge par l'unité de numérisation à plat du scanneur.</summary>
+      <returns>Le niveau minimal de luminosité, en général -1000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinContrast">
+      <summary>Obtient le niveau de contraste minimal pris en charge par l'unité de numérisation à plat du scanneur.</summary>
+      <returns>Le niveau minimal de contraste, en général -1000.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinResolution">
+      <summary>Obtient la résolution de numérisation horizontale et verticale minimale de l'unité de numérisation à plat du scanneur en PPP.</summary>
+      <returns>Résolution horizontale et verticale, en pixels.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinScanArea">
+      <summary>Obtient la zone de numérisation minimale en pouces. La zone de numérisation minimale est la plus petite taille possible d'un document pour qu'il soit numérisé à partir de la source de numérisation à plat.</summary>
+      <returns>Largeur et hauteur de la zone.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.OpticalResolution">
+      <summary>Obtient la résolution optique de numérisation du scanneur à plat en PPP.</summary>
+      <returns>Résolution de numérisation horizontale et verticale, en pixels.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.SelectedScanRegion">
+      <summary>Obtient ou définit les coordonnées d'origine (horizontales et verticales) et les dimensions (largeur et la hauteur) de la zone de numérisation sélectionnée, en pouces. Cette propriété est ignorée lorsque la propriété AutoCroppingMode n'est pas définie sur Disabled.</summary>
+      <returns>Emplacement et taille d'un rectangle.</returns>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)">
+      <summary>Indique en retour si le Flatbed du numériseur prend en charge l'énumération ImageScannerAutoCroppingMode spécifiée.</summary>
+      <returns>Indique si le périphérique prend en charge le mode value.</returns>
+      <param name="value">Le mode de troncation automatique de l'image à numériser.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)">
+      <summary>Indique en retour si le plateau du numériseur peut numériser et transférer les images dans le mode de couleur spécifié.</summary>
+      <returns>Indique si le scanneur peut analyser les images en mode value.</returns>
+      <param name="value">Mode de couleur.</param>
+    </member><member name="M:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>Détermine si l'alimentation à plat du scanneur prend en charge, ou non, le format de fichier spécifié.</summary>
+      <returns>Indique si le type de fichier spécifié est pris en charge.</returns>
+      <param name="value">Type de fichier.</param>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerFormat">
+      <summary>Type de fichiers à numériser.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.DeviceIndependentBitmap">
+      <summary>DIB (Windows Device Independent Bitmap). Cette valeur prend en charge tout mode de couleur, avec une page unique et non compressée. C'est le seul format pris en charge par tous les périphériques de numérisation compatibles WIA 2.0.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Jpeg">
+      <summary>Fichier EXIF ou JPEG Utiliser ces fichiers uniquement en modes nuances de gris ou couleurs (8 bits par canal/aperçu), avec une seule page compressée (compression JPEG par perte).</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.OpenXps">
+      <summary>Format de fichier de document OpenXPS (Open XML Paper Specification) Ces fichiers peuvent contenir les données d'image dans n'importe quel mode de couleur pris en charge par cette API, compressées au choix du périphérique, en une ou plusieurs pages.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Pdf">
+      <summary>Format de fichier de document PDF/A (PDF/A est une version ISO normalisée du format PDF spécialisé pour la conservation numérique des documents électroniques) Ces fichiers peuvent contenir les données d'image dans n'importe quel mode de couleur pris en charge par cette API, compressées au choix du périphérique, en une ou plusieurs pages.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Png">
+      <summary>Format de fichier image PNG (Portable Network Graphics) Cette valeur prend en charge n'importe quel mode de couleur, avec une seule page et compressé (compression PNG sans perte).</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Tiff">
+      <summary>Format TIFF (Uncompressed Tagged Image File Format) compatible avec la spécification TIFF 6.0, une seule page et/ou plusieurs pages Ces fichiers peuvent être dans n'importe quel mode de couleur pris en charge par cette API, toujours sans compression et une seule page (si une seule image doit être transférée) ou plusieurs pages (si plusieurs images doivent être transférées et le périphérique prend en charge ce format de fichier à plusieurs pages).</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerFormat.Xps">
+      <summary>Format de fichier de document XPS (Microsoft XML Paper Specification) Ces fichiers peuvent contenir les données d'image dans n'importe quel mode de couleur pris en charge par cette API, compressées au choix du périphérique, en une ou plusieurs pages.</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerPreviewResult">
+      <summary>Représente le résultat d'un travail d'analyse d'aperçu.</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerPreviewResult.Format">
+      <summary>Obtient le format des données pour l'aperçu de la numérisation. Après l'aperçu, cette propriété est restaurée vers la valeur avant l'aperçu.</summary>
+      <returns>Format de numérisation.</returns>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerPreviewResult.Succeeded">
+      <summary>Obtient si l'aperçu d'analyse a réussi.</summary>
+      <returns>true si l'aperçu d'analyse s'est effectuée correctement ; sinon, false.</returns>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerResolution">
+      <summary>Spécifie la résolution de numérisation.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerResolution.DpiX">
+      <summary>La taille horizontale.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerResolution.DpiY">
+      <summary>Taille verticale.</summary>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerScanResult">
+      <summary>Représente le résultat d'un travail d'analyse.</summary>
+    </member><member name="P:Windows.Devices.Scanners.ImageScannerScanResult.ScannedFiles">
+      <summary>Obtient la liste des fichiers image scannés qui ont été produits par la tâche de numérisation effectuée.</summary>
+      <returns>Liste de fichiers image numérisés à partir de la tâche de numérisation effectuée. S'il n'existe aucun fichier analysé, la propriété IVectorView&lt;T&gt;.Size aura la valeur 0.</returns>
+    </member><member name="T:Windows.Devices.Scanners.ImageScannerScanSource">
+      <summary>Types de source de numérisation pour le périphérique de numérisation.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.AutoConfigured">
+      <summary>La source de numérisation est automatiquement configurée.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.Default">
+      <summary>Source par défaut.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.Feeder">
+      <summary>Source de numérisation du bac d'alimentation.</summary>
+    </member><member name="F:Windows.Devices.Scanners.ImageScannerScanSource.Flatbed">
+      <summary>Source de numérisation à plat.</summary>
+    </member></members>
+</doc>

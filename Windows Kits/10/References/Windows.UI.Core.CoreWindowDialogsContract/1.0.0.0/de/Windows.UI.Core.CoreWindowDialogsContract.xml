@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.Core.CoreWindowDialogsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.Core.CoreWindowDialog">
+      <summary>Definiert einen untergeordneten Dialog eines App-Fensters.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowDialog.#ctor">
+      <summary>Erstellt eine Standardinstanz der CoreWindowDialog-Klasse.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowDialog.#ctor(System.String)">
+      <summary>Erstellt eine Instanz der CoreWindowDialog-Klasse mit dem angegebenen Titel.</summary>
+      <param name="title">Der Titel des Dialogfelds.</param>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.BackButtonCommand">
+      <summary>Ruft den Delegaten ab, der aufgerufen wird, wenn die Schaltfläche "Zurück" im Dialogfeld ausgewählt ist, oder legt diesen fest.</summary>
+      <returns>Der Delegat, der aufgerufen wird, wenn die Schaltfläche "Zurück" im Dialogfeld ausgewählt ist.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.CancelCommandIndex">
+      <summary>Ruft den Befehlindexwert für den Dialogabbruchvorgang ab und legt diesen fest.</summary>
+      <returns>Der Indexwert des Befehls für den Abbruchvorgang im Dialogfeld.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.Commands">
+      <summary>Ruft den Satz von Benutzeroberflächenbefehlen (UI) für das Dialogfeld ab.</summary>
+      <returns>Der Satz von Benutzeroberflächenbefehlen, die im Dialogfeld verfügbar sind.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.DefaultCommandIndex">
+      <summary>Ruft den Index des Dialogfenster-Standardbefehls ab, oder legt diesen fest.</summary>
+      <returns>Der Indexwert des Standardbefehls (z. B. OK) des Dialogfensters.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.IsInteractionDelayed">
+      <summary>Ruft einen Wert ab (oder legt ihn fest), der angibt, ob es bei einigen Ereignismeldungen zu Benutzeroberflächeninteraktionen zu leichten Verzögerungen kommt oder nicht. Diese Verzögerung verhindert, dass ein Benutzer versehentlich eine Aktion im Dialogfeld aufruft.</summary>
+      <returns>True, wenn eine minimale Verzögerung für beliebige Interaktionen mit dem Dialogfeld eingeführt wird, und False, wenn dies nicht der Fall ist.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.MaxSize">
+      <summary>Ruft die maximale Größe des Dialogfelds ab.</summary>
+      <returns>Die maximale Größe des Dialogfelds in Pixel.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.MinSize">
+      <summary>Ruft die Minimalgröße des Dialogfelds ab.</summary>
+      <returns>Die Mindestgröße des Dialogfelds in Pixel.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.Title">
+      <summary>Ruft den Titel des Dialogs ab oder legt ihn fest.</summary>
+      <returns>Der Titel des Dialogfelds.</returns>
+    </member><member name="E:Windows.UI.Core.CoreWindowDialog.Showing">
+      <summary>Wird ausgelöst, wenn das Dialogfeld angezeigt wird.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowDialog.ShowAsync">
+      <summary>Zeigt das Dialogfeld an und wartet asynchron auf eine Aktion des Benutzers.</summary>
+      <returns>Die vom Benutzer im Dialogfeld ausgeführte Aktion sowie Informationen zur Aktion.</returns>
+    </member><member name="T:Windows.UI.Core.CoreWindowFlyout">
+      <summary>Definiert eine untergeordnete Erweiterung eines App-Fensters.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowFlyout.#ctor(Windows.Foundation.Point)">
+      <summary>Erstellt eine Instanz der CoreWindowFlyout-Klasse an der angegebenen Position.</summary>
+      <param name="position">Die Pixelposition auf dem Bildschirm, von der der Flyout stammen soll. Die Position stellt die am weitesten oben links stehende Ecke des Flyout.</param>
+    </member><member name="M:Windows.UI.Core.CoreWindowFlyout.#ctor(Windows.Foundation.Point,System.String)">
+      <summary>Erstellt eine Instanz der CoreWindowFlyout-Klasse an der angegebenen Position mit dem angegebenen Namen.</summary>
+      <param name="position">Die Pixelposition auf dem Bildschirm, von der der Flyout stammen soll. Die Position stellt die am weitesten oben links stehende Ecke des Flyout.</param>
+      <param name="title">Der Titel des Flyout-Menüs.</param>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.BackButtonCommand">
+      <summary>Ruft den Delegaten ab, der aufgerufen wird, wenn die Schaltfläche "Zurück" im Flyout-Menü ausgewählt ist, oder legt diesen fest.</summary>
+      <returns>Der Delegat, der aufgerufen wird, wenn die Schaltfläche "Zurück" im Flyout-Menü ausgewählt ist.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.Commands">
+      <summary>Ruft den Satz von Benutzeroberflächenbefehlen (UI) für das Flyout ab.</summary>
+      <returns>Der Satz von Benutzeroberflächenbefehlen, die im Flyout verfügbar sind.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.DefaultCommandIndex">
+      <summary>Ruft den Index des Flyoutfenster-Standardbefehls ab, oder legt diesen fest.</summary>
+      <returns>Der Indexwert des Standardbefehls (z. B. OK) des Flyoutfensters.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.IsInteractionDelayed">
+      <summary>Ruft einen Wert ab (oder legt ihn fest), der angibt, ob es bei einigen Ereignismeldungen zu Benutzeroberflächeninteraktionen zu leichten Verzögerungen kommt oder nicht. Diese Verzögerung verhindert, dass ein Benutzer versehentlich eine Aktion im Flyoutfenster aufruft.</summary>
+      <returns>True, wenn eine minimale Verzögerung für beliebige Interaktionen mit dem Flyout eingeführt wird, und False, wenn dies nicht der Fall ist.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.MaxSize">
+      <summary>Ruft die maximale Größe des Flyouts ab.</summary>
+      <returns>Die maximale Größe des Flyout-Menüs in Pixel.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.MinSize">
+      <summary>Ruft die Minimalgröße des Flyouts ab.</summary>
+      <returns>Die Mindestgröße des Flyout-Menüs in Pixel.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.Title">
+      <summary>Ruft den Titel des Flyouts ab oder legt ihn fest.</summary>
+      <returns>Der Titel des Flyout-Menüs.</returns>
+    </member><member name="E:Windows.UI.Core.CoreWindowFlyout.Showing">
+      <summary>Wird ausgelöst, wenn das Flyout angezeigt wird.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowFlyout.ShowAsync">
+      <summary>Zeigt das Flyout an und wartet asynchron auf eine Aktion des Benutzers.</summary>
+      <returns>Die vom Benutzer im Flyout ausgeführte Aktion sowie Informationen zur Aktion.</returns>
+    </member><member name="T:Windows.UI.Core.CoreWindowPopupShowingEventArgs">
+      <summary>Definiert eine Methode zum Festlegen der gewünschten Größe eines Popupfensters.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowPopupShowingEventArgs.SetDesiredSize(Windows.Foundation.Size)">
+      <summary>Legt die gewünschte Größe des Popups fest.</summary>
+      <param name="value">Die gewünschte Größe des Popups.</param>
+    </member></members>
+</doc>

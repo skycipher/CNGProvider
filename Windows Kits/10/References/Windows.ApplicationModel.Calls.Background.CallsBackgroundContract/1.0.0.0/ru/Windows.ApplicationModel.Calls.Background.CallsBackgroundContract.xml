@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Calls.Background.CallsBackgroundContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Background.PhoneTrigger">
+      <summary>Представляет событие телефона, которое запускает фоновую задачу.</summary>
+    </member><member name="M:Windows.ApplicationModel.Background.PhoneTrigger.#ctor(Windows.ApplicationModel.Calls.Background.PhoneTriggerType,System.Boolean)">
+      <summary>Инициализирует новый экземпляр класса PhoneTrigger.</summary>
+      <param name="type">Указывает тип телефонного события.</param>
+      <param name="oneShot">Указывает, является ли триггер однократным уведомлением. Если к моменту отправки однократного уведомления не было подписки, уведомление не выводится. Если к моменту отправки однократного уведомления отсутствовало подключение, то ничего не произойдет.</param>
+    </member><member name="P:Windows.ApplicationModel.Background.PhoneTrigger.OneShot">
+      <summary>Возвращает логическое значение, указывающее, является ли триггер однократным уведомлением.</summary>
+      <returns>Логическое значение, указывающее, является ли триггер однократным уведомлением.</returns>
+    </member><member name="P:Windows.ApplicationModel.Background.PhoneTrigger.TriggerType">
+      <summary>Возвращает тип телефонного события, обозначенного триггером.</summary>
+      <returns>Тип телефонного события, указанного триггером.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason">
+      <summary>Предоставляет причину отклонения телефонного вызова.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason.InCallBlockingList">
+      <summary>Вызов отклонен, так как он находился в списке блокировки.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason.PrivateNumber">
+      <summary>Вызов отклонен, так как это частный номер, а частные номера блокируются.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason.UnknownNumber">
+      <summary>Вызов отклонен, так как использовался неизвестный номер, а неизвестные номера блокируются.</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails">
+      <summary>Используется для предоставления сведений о только что заблокированном вызове.</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails.CallBlockedReason">
+      <summary>Возвращает причину блокировки вызова.</summary>
+      <returns>Причина блокировки телефонного вызова.</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails.LineId">
+      <summary>Возвращает идентификатор телефонного вызова, который был только что заблокирован.</summary>
+      <returns>Идентификатор заблокированного телефонного вызова.</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails.PhoneNumber">
+      <summary>Возвращает телефонный номер заблокированного вызова.</summary>
+      <returns>Телефонный номер вызова, который был заблокирован.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails">
+      <summary>Используется для предоставления сведений об источнике телефонного вызова.</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails.PhoneNumber">
+      <summary>Возвращает телефонный номер источника вызова.</summary>
+      <returns>Телефонный номер источника телефонного вызова.</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails.RequestId">
+      <summary>Возвращает уникальный идентификатор этого вызова.</summary>
+      <returns>Уникальный идентификатор этого вызова.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails">
+      <summary>Используется для предоставления сведений об изменении свойств телефонной линии.</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails.ChangeType">
+      <summary>Возвращает значение PhoneLineChangeKind, указывающее, была ли телефонная линия добавлена, удалена или изменена.</summary>
+      <returns>Значение PhoneLineChangeKind, указывающее, была ли телефонная линия добавлена, удалена или изменена.</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails.LineId">
+      <summary>Возвращает идентификатор телефонной линии, которая была добавлена, удалена или изменена.</summary>
+      <returns>Идентификатор телефонной линии, которая была добавлена, удалена или изменена.</returns>
+    </member><member name="M:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails.HasLinePropertyChanged(Windows.ApplicationModel.Calls.Background.PhoneLineProperties)">
+      <summary>Проверяет телефонную линию, сравнивая ее параметры с набором флагов, чтобы обнаружить изменение любого из указанных свойств телефонной линии.</summary>
+      <returns>Возвращает значение true, если любые свойства, указанные в параметре lineProperty, изменились для телефонной линии.</returns>
+      <param name="lineProperty">Набор флагов, который указывает свойства линии для запроса при поиске изменений.</param>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind">
+      <summary>Указывает тип изменения для триггера смены фоновой телефонной линии.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind.Added">
+      <summary>Добавлена новая телефонная линия.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind.PropertiesChanged">
+      <summary>Телефонная линия обновила свойства.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind.Removed">
+      <summary>Телефонная линия удалена.</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneLineProperties">
+      <summary>Отображает набор флагов свойства, которые являются частью измененного триггера телефонной линии. Множество свойств могут быть заданы одновременно.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.BrandingOptions">
+      <summary>Параметры фирменного стиля для телефонной линии.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.CanDial">
+      <summary>Возможность набирать исходящие вызовы в телефонной линии.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.CellularDetails">
+      <summary>Сотовые сведения телефонной линии.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.DisplayColor">
+      <summary>Предпочтительный цвет для отображения телефонной линии.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.DisplayName">
+      <summary>Присвоенное пользователем понятное имя телефонной линии.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.NetworkName">
+      <summary>Имя существующей сети, которая используется телефонной линией.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.NetworkState">
+      <summary>Текущее состояние сети телефонной линии.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.None">
+      <summary>Свойство отсутствует.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.Transport">
+      <summary>Среда связи (сеть мобильного оператора или протокол VoIP) для телефонной линии.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.Voicemail">
+      <summary>Учетная запись голосовой почты, связанная с телефонной линией.</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails">
+      <summary>Используется для предоставления сведений о новом сообщении голосовой почты в телефонной линии.</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails.LineId">
+      <summary>Возвращает идентификатор телефонной линии, для которой поступило новое сообщение голосовой почты.</summary>
+      <returns>Идентификатор телефонной линии, для которой пришло новое сообщение голосовой почты.</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails.OperatorMessage">
+      <summary>Возвращает необязательное сообщение об изменении сообщения голосовой почты, установленного оператором при отправке SMS-сообщения об изменении голосовой почты.</summary>
+      <returns>Необязательное сообщение об изменении сообщения голосовой почты, установленного оператором при отправке SMS-сообщения об изменении голосовой почты. Если сообщение существует, оно отображается на всплывающем уведомлении голосовой почты, если такое уведомление выдается.</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails.VoicemailCount">
+      <summary>Возвращает новый счет сообщений голосовой почты для телефонной линии.</summary>
+      <returns>Текущее количество сообщений голосовой почты.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.Background.PhoneTriggerType">
+      <summary>Указывает тип события для телефонного триггера.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.AirplaneModeDisabledForEmergencyCall">
+      <summary>Режим "В самолете" был отключен, чтобы при помощи телефона можно было сделать экстренный вызов.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.CallBlocked">
+      <summary>Вызов заблокирован.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.CallHistoryChanged">
+      <summary>Журнал вызова был изменен.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.CallOriginDataRequest">
+      <summary>Был сделан запрос происхождения телефонного вызова.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.LineChanged">
+      <summary>Свойства PhoneLineProperties изменены.</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.NewVoicemailMessage">
+      <summary>Система получила новое сообщение голосовой почты или число голосовой почты уменьшилось до 0.</summary>
+    </member></members>
+</doc>

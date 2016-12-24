@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Security.EnterpriseData.EnterpriseDataContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Security.EnterpriseData.BufferProtectUnprotectResult">
+      <summary>包含保護或取消保護企業受保護緩衝區結果的相關資訊。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.BufferProtectUnprotectResult.Buffer">
+      <summary>取得已保護或取消保護的企業受保護緩衝區。</summary>
+      <returns>企業受保護緩衝區。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.BufferProtectUnprotectResult.ProtectionInfo">
+      <summary>取得 DataProtectionInfo 物件，有關已保護或取消保護的企業受保護緩衝區。</summary>
+      <returns>有關企業受保護緩衝區的資訊物件。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.DataProtectionInfo">
+      <summary>包含企業受保護緩衝區或資料流的相關資訊。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.DataProtectionInfo.Identity">
+      <summary>企業受保護緩衝區或資料流的企業識別。</summary>
+      <returns>企業識別。 這是 Managed 的電子郵件地址或網域。 您的應用程式應該使用 IsIdentityManaged，確認電子郵件地址或網域是受管理。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.DataProtectionInfo.Status">
+      <summary>企業受保護緩衝區或資料流的保護狀態。</summary>
+      <returns>DataProtectionStatus 列舉的值。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.DataProtectionManager">
+      <summary>對管理企業識別受保護緩衝區和資料流的作業提供存取。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+    </member><member name="M:Windows.Security.EnterpriseData.DataProtectionManager.GetProtectionInfoAsync(Windows.Storage.Streams.IBuffer)">
+      <summary>取得企業受保護之緩衝區的狀態。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+      <returns>當這個方法的呼叫順利完成時，它會傳回 DataProtectionInfo 物件，其中包含緩衝區的狀態。</returns>
+      <param name="protectedData">查詢保護狀態的緩衝區。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.DataProtectionManager.GetStreamProtectionInfoAsync(Windows.Storage.Streams.IInputStream)">
+      <summary>取得企業受保護資料流的狀態。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+      <returns>當這個方法的呼叫順利完成時，它會傳回 DataProtectionInfo 物件，其中包含資料流的狀態。</returns>
+      <param name="protectedStream">查詢保護狀態的資料流。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.DataProtectionManager.ProtectAsync(Windows.Storage.Streams.IBuffer,System.String)">
+      <summary>保護企業識別的緩衝區資料。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+      <returns>當這個方法的呼叫順利完成時，它會傳回 BufferProtectUnprotectResult 物件，其中包含新受保護緩衝區的狀態。</returns>
+      <param name="data">要保護的緩衝區。</param>
+      <param name="identity">企業識別。 這是 Managed 的電子郵件地址或網域。 您的應用程式應該使用 IsIdentityManaged，確認電子郵件地址或網域是受管理。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.DataProtectionManager.ProtectStreamAsync(Windows.Storage.Streams.IInputStream,System.String,Windows.Storage.Streams.IOutputStream)">
+      <summary>保護企業識別的資料流。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+      <returns>當這個方法的呼叫順利完成時，它會傳回 DataProtectionInfo 物件，其中包含受保護資料流的狀態。</returns>
+      <param name="unprotectedStream">輸入、未受保護的資料流。</param>
+      <param name="identity">企業識別。 這是 Managed 的電子郵件地址或網域。 您的應用程式應該使用 IsIdentityManaged，確認電子郵件地址或網域是受管理。</param>
+      <param name="protectedStream">輸出、受保護的資料流。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.DataProtectionManager.UnprotectAsync(Windows.Storage.Streams.IBuffer)">
+      <summary>移除企業識別的緩衝區保護。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+      <returns>當這個方法的呼叫順利完成時，它會傳回 BufferProtectUnprotectResult 物件，其中包含未受保護緩衝區的狀態。</returns>
+      <param name="data">要取消保護的緩衝區。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.DataProtectionManager.UnprotectStreamAsync(Windows.Storage.Streams.IInputStream,Windows.Storage.Streams.IOutputStream)">
+      <summary>移除企業識別的資料流保護。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+      <returns>當這個方法的呼叫順利完成時，它會傳回 DataProtectionInfo 物件，其中包含未受保護資料流的狀態。</returns>
+      <param name="protectedStream">輸入、受保護的資料流。</param>
+      <param name="unprotectedStream">輸出、未受保護的資料流。</param>
+    </member><member name="T:Windows.Security.EnterpriseData.DataProtectionStatus">
+      <summary>描述緩衝區或資料流的企業識別保護狀態。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.DataProtectionStatus.AccessSuspended">
+      <summary>裝置鎖定時，存取受保護項目的金鑰已捨棄。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.DataProtectionStatus.LicenseExpired">
+      <summary>項目的 RMS 授權已過期。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.DataProtectionStatus.Protected">
+      <summary>項目是受保護的。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.DataProtectionStatus.ProtectedToOtherIdentity">
+      <summary>對其他企業識別保護此項目。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.DataProtectionStatus.Revoked">
+      <summary>項目的保護已撤銷。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.DataProtectionStatus.Unprotected">
+      <summary>未對企業識別保護此項目。</summary>
+    </member><member name="T:Windows.Security.EnterpriseData.EnforcementLevel">
+      <summary>一組列舉值，共同描述可能的企業資料保護 (EDP) 強制執行層級。 EDP 強制執行層級是行動裝置管理 (MDM) 原則設定的一部分。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.EnforcementLevel.Block">
+      <summary>此原則會要求封鎖使用者。 您的應用程式應該封鎖這個動作，而且稽核它，以回應嘗試的動作，例如將資料貼入未經授權的應用程式中。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.EnforcementLevel.NoProtection">
+      <summary>原則會要求不受保護。 如果資料受保護，您的應用程式應該停用 EDP 行為，並解除資料保護。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.EnforcementLevel.Override">
+      <summary>原則會要求允許使用者覆寫警告訊息。 您的應用程式應該透過可覆寫的警告訊息提示使用者，以回應嘗試的動作，例如將資料貼入未經授權的應用程式中。 如果使用者覆寫，您的應用程式應執行這個動作並稽核它。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.EnforcementLevel.Silent">
+      <summary>原則會要求無訊息保護。 您的應用程式不應提示，以回應嘗試的動作，例如將資料貼入未經授權的應用程式中。 您的應用程式應該以無訊息方式允許這個動作，而且稽核它。</summary>
+    </member><member name="T:Windows.Security.EnterpriseData.FileProtectionInfo">
+      <summary>包含企業受保護檔案的相關資訊。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.FileProtectionInfo.Identity">
+      <summary>企業受保護檔案的企業識別。</summary>
+      <returns>企業識別。 這是 Managed 的電子郵件地址或網域。 您的應用程式應該使用 IsIdentityManaged，確認電子郵件地址或網域是受管理。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.FileProtectionInfo.IsRoamable">
+      <summary>指定企業受保護檔案的保護是否能夠漫遊到其他裝置。</summary>
+      <returns>如果文件保護可以漫遊到其他裝置則為 true。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.FileProtectionInfo.Status">
+      <summary>企業受保護檔案的保護狀態。</summary>
+      <returns>FileProtectionStatus 列舉的值。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.FileProtectionManager">
+      <summary>對管理企業識別受保護檔案的作業提供存取。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.CopyProtectionAsync(Windows.Storage.IStorageItem,Windows.Storage.IStorageItem)">
+      <summary>將檔案保護從一個檔案複寫至另一個檔案。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+      <returns>當這個方法的呼叫順利完成時，如果已複製檔案保護則傳回 true，如果有錯誤則為 false。</returns>
+      <param name="source">複製檔案保護的來源檔案。</param>
+      <param name="target">複製檔案保護的目標檔案。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.CreateProtectedAndOpenAsync(Windows.Storage.IStorageFolder,System.String,System.String,Windows.Storage.CreationCollisionOption)">
+      <summary>建立企業受保護檔案。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+      <returns>當這個方法的呼叫順利完成時，它會傳回 ProtectedFileCreateResult 物件，代表新建立的受保護檔案。</returns>
+      <param name="parentFolder">在其中建立企業受保護檔案的資料夾。</param>
+      <param name="desiredName">企業受保護檔案所需的名稱。</param>
+      <param name="identity">企業識別。 這是 Managed 的電子郵件地址或網域。 您的應用程式應該使用 IsIdentityManaged，確認電子郵件地址或網域是受管理。</param>
+      <param name="collisionOption">CreationCollisionOption 值，指定如果 desiredName 已存在應如何處理。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.GetProtectionInfoAsync(Windows.Storage.IStorageItem)">
+      <summary>取得企業受保護檔案的狀態。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+      <returns>當這個方法的呼叫順利完成時，它會傳回 FileProtectionInfo 物件，其中包含檔案的狀態。</returns>
+      <param name="source">查詢保護狀態的檔案或資料夾。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.IsContainerAsync(Windows.Storage.IStorageFile)">
+      <summary>使用這個屬性判斷儲存體檔案是否確實是容器，且當中包含檔案。</summary>
+      <returns>如果儲存體檔案是容器則為 true，否則為 false。</returns>
+      <param name="file">您要判斷的檔案是否為容器。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.LoadFileFromContainerAsync(Windows.Storage.IStorageFile)">
+      <summary>建立企業受保護檔案，並從容器檔案載入它。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+      <returns>當這個方法的呼叫順利完成時，它會傳回 ProtectedContainerImportResult 物件，代表新建立的受保護檔案。</returns>
+      <param name="containerFile">藥建立並載入的企業受保護檔案。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.LoadFileFromContainerAsync(Windows.Storage.IStorageFile,Windows.Storage.IStorageItem)">
+      <summary>在指定之儲存區項目 (例如資料夾) 中建立企業受保護檔案，並從容器檔案載入它。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+      <returns>當這個方法的呼叫順利完成時，它會傳回 ProtectedContainerImportResult 物件，代表新建立的受保護檔案。</returns>
+      <param name="containerFile">藥建立並載入的企業受保護檔案。</param>
+      <param name="target">在其中建立企業受保護檔案的儲存區項目。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.LoadFileFromContainerAsync(Windows.Storage.IStorageFile,Windows.Storage.IStorageItem,Windows.Storage.NameCollisionOption)">
+      <summary>在指定之儲存區項目 (例如資料夾) 中建立企業受保護檔案，並從容器檔案載入它。</summary>
+      <returns>當這個方法的呼叫順利完成時，它會傳回 ProtectedContainerImportResult 物件，代表新建立的受保護檔案。</returns>
+      <param name="containerFile">藥建立並載入的企業受保護檔案。</param>
+      <param name="target">在其中建立企業受保護檔案的儲存區項目。</param>
+      <param name="collisionOption">判斷如果建立的檔案與容器位置中現有的項目名稱相同時，Windows 應如何回應的列舉值。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.ProtectAsync(Windows.Storage.IStorageItem,System.String)">
+      <summary>保護企業識別的檔案資料。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+      <returns>當這個方法的呼叫順利完成時，它會傳回 FileProtectionInfo 物件，其中包含新受保護檔案的狀態。</returns>
+      <param name="target">要保護的檔案。</param>
+      <param name="identity">企業識別。 這是 Managed 的電子郵件地址或網域。 使用 ProtectionPolicyManager.IsIdentityManaged 確認電子郵件地址或網域受管理，再使用身分識別保護檔案。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileProtectionManager.SaveFileAsContainerAsync(Windows.Storage.IStorageFile)">
+      <summary>儲存企業受保護檔案當作容器化版本。</summary>
+      <returns>當這個方法的呼叫順利完成時，它會傳回 ProtectedContainerExportResult 物件，代表新建立的容器檔案。</returns>
+      <param name="protectedFile">複製的受保護來源檔。</param>
+    </member><member name="T:Windows.Security.EnterpriseData.FileProtectionStatus">
+      <summary>描述檔案或資料夾的企業保護狀態。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，Undetermined 可能無法使用。 請改用 Unknown。</deprecated>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.AccessSuspended">
+      <summary>裝置鎖定時，存取受保護項目的金鑰已捨棄。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.FileInUse">
+      <summary>有另一個處理序正在使用此項目。 您只能在它成為獨佔提供的狀態時，對它套用企業保護。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.LicenseExpired">
+      <summary>項目的 RMS 授權已過期。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.NotProtectable">
+      <summary>項目已加密或為系統檔案，因此無法使用企業保護進行保護。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.Protected">
+      <summary>使用企業保護來保護項目。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.ProtectedByOtherUser">
+      <summary>在 Windows 10 之後的版本中，ProtectedByOtherUser 可能無法使用。 請改用 ProtectedToOtherIdentity。另一位使用者已使用企業保護來保護此項目。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.ProtectedToOtherEnterprise">
+      <summary>在 Windows 10 之後的版本中，ProtectedToOtherEnterprise 可能無法使用。 請改用 ProtectedToOtherIdentity。已使用企業保護為另一個企業身分識別保護此項目。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.ProtectedToOtherIdentity">
+      <summary>使用企業保護，為另一個企業身分識別保護此項目。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.Revoked">
+      <summary>已使用企業保護撤銷此項目。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.Undetermined">
+      <summary>在 Windows 10 之後的版本中，Undetermined 可能無法使用。 請改用 Unknown。項目為加密或解密，且無法判斷企業保護狀態。 請稍後再檢查。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.Unknown">
+      <summary>項目為加密或解密，且無法判斷企業保護狀態。 請稍後再檢查。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.FileProtectionStatus.Unprotected">
+      <summary>未使用企業保護來保護項目。</summary>
+    </member><member name="T:Windows.Security.EnterpriseData.FileRevocationManager">
+      <summary>提供選擇性刪除作業的存取。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，FileRevocationManager 可能無法使用。 請改用 FileProtectionManager。</deprecated>
+    </member><member name="M:Windows.Security.EnterpriseData.FileRevocationManager.CopyProtectionAsync(Windows.Storage.IStorageItem,Windows.Storage.IStorageItem)">
+      <summary>複製檔案或資料夾的選擇性的刪除保護狀態成為新的檔案或資料夾。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，FileRevocationManager 可能無法使用。 請改用 FileProtectionManager。</deprecated>
+      <returns>如果複製作業成功則為 true，否則為 false。</returns>
+      <param name="sourceStorageItem">要從中複製選擇性刪除保護狀態的來源項目。</param>
+      <param name="targetStorageItem">要複製選擇性刪除保護狀態過去的目標項目。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileRevocationManager.GetStatusAsync(Windows.Storage.IStorageItem)">
+      <summary>取得檔案或資料夾的選擇性刪除保護狀態。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，FileRevocationManager 可能無法使用。 請改用 FileProtectionManager。</deprecated>
+      <returns>取得 storageItem 的選擇性刪除保護狀態的非同步作業。</returns>
+      <param name="storageItem">取得選擇性刪除保護狀態的檔案或資料夾。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileRevocationManager.ProtectAsync(Windows.Storage.IStorageItem,System.String)">
+      <summary>保護檔案或資料夾，以防止遭到選擇性刪除。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，FileRevocationManager 可能無法使用。 請改用 FileProtectionManager。</deprecated>
+      <returns>取得 storageItem 的選擇性刪除保護狀態的非同步作業。</returns>
+      <param name="storageItem">防止遭到選擇性刪除之受到保護的檔案或資料夾。</param>
+      <param name="enterpriseIdentity">保護其檔案或資料夾的企業 識別碼。 enterpriseIdentity 值必須格式化為國際化網域名稱 (Internationalized Domain Name，IDN)，且不能包含空格。 例如，contoso.com。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.FileRevocationManager.Revoke(System.String)">
+      <summary>撤銷指定的企業 識別碼 之所有檔案和資料夾的選擇性刪除保護。</summary>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，FileRevocationManager 可能無法使用。 請改用 FileProtectionManager。</deprecated>
+      <param name="enterpriseIdentity">撤銷此企業 識別碼 之所有檔案和資料夾的選擇性刪除保護。 enterpriseIdentity 值必須格式化為國際化網域名稱 (Internationalized Domain Name，IDN)，且不能包含空格。 例如，contoso.com。</param>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedAccessResumedEventArgs">
+      <summary>當內容保護繼續時，提供資料。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedAccessResumedEventArgs.Identities">
+      <summary>包含內容保護繼續的企業識別。</summary>
+      <returns>內容保護繼續的企業識別。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs">
+      <summary>當內容保護暫停時，提供資料。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs.Deadline">
+      <summary>DateTime，內容保護將暫停的時間。</summary>
+      <returns>DateTime，內容保護將暫停的時間。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs.Identities">
+      <summary>包含內容保護暫停的企業識別。</summary>
+      <returns>內容保護暫停的企業識別。</returns>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs.GetDeferral">
+      <summary>取得管理保護暫停的 Deferral 物件。</summary>
+      <returns>Deferral 物件。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedContainerExportResult">
+      <summary>表示已匯出到容器檔案的企業受保護檔案的結果。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedContainerExportResult.File">
+      <summary>已從企業受保護檔案匯出的容器檔案。</summary>
+      <returns>已從企業受保護檔案匯出的容器檔案。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedContainerExportResult.Status">
+      <summary>企業受保護檔案已匯出到容器檔案之後的保護狀態。</summary>
+      <returns>ProtectedImportExportStatus 列舉的值。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedContainerImportResult">
+      <summary>表示已從容器檔案匯入的企業受保護檔案的結果。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedContainerImportResult.File">
+      <summary>已從容器檔案載入的企業受保護檔案。</summary>
+      <returns>已從容器檔案載入的企業受保護檔案。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedContainerImportResult.Status">
+      <summary>企業受保護檔案已從容器檔案匯入之後的保護狀態。</summary>
+      <returns>ProtectedImportExportStatus 列舉的值。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedContentRevokedEventArgs">
+      <summary>當內容保護已撤銷時，提供資料。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedContentRevokedEventArgs.Identities">
+      <summary>包含內容保護已撤銷的企業識別。</summary>
+      <returns>內容保護已撤銷的企業識別。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedFileCreateResult">
+      <summary>包含新建立企業受保護檔案的相關資訊。</summary>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedFileCreateResult.File">
+      <summary>新建立企業受保護檔案。</summary>
+      <returns>新建立企業受保護檔案。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedFileCreateResult.ProtectionInfo">
+      <summary>企業受保護檔案的相關資訊。</summary>
+      <returns>企業受保護檔案的相關資訊。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectedFileCreateResult.Stream">
+      <summary>新建立企業受保護檔案的資料流隨機存取。</summary>
+      <returns>新建立企業受保護檔案的資料流隨機存取。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectedImportExportStatus">
+      <summary>已從容器檔案匯入或匯出的企業受保護檔案的可能狀態值。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.AccessSuspended">
+      <summary>裝置鎖定時，存取受保護檔案的金鑰已捨棄。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.LicenseExpired">
+      <summary>檔案的 RMS 授權已過期。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.NotRoamable">
+      <summary>檔案無法漫遊到另一個裝置。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.Ok">
+      <summary>檔案保護是好的。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.ProtectedToOtherIdentity">
+      <summary>因為這是其他企業識別受保護檔案，檔案無法存取。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.Revoked">
+      <summary>檔案保護已撤銷，因此，它無法存取。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.Undetermined">
+      <summary>無法判斷檔案保護。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectedImportExportStatus.Unprotected">
+      <summary>檔案未受保護。</summary>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectionPolicyAuditAction">
+      <summary>定義指定稽核動作的常數。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectionPolicyAuditAction.CopyToLocation">
+      <summary>指出資料正在複製到某個位置。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectionPolicyAuditAction.Decrypt">
+      <summary>指出解密動作。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectionPolicyAuditAction.Other">
+      <summary>指出另一個動作。</summary>
+    </member><member name="F:Windows.Security.EnterpriseData.ProtectionPolicyAuditAction.SendToRecipient">
+      <summary>指出資料正在傳送給收件者。</summary>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo">
+      <summary>表示稽核所需的資訊。</summary>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.#ctor(Windows.Security.EnterpriseData.ProtectionPolicyAuditAction,System.String)">
+      <summary>初始化類別的新執行個體。</summary>
+      <param name="action">稽核動作。</param>
+      <param name="dataDescription">要稽核之資料的描述。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.#ctor(Windows.Security.EnterpriseData.ProtectionPolicyAuditAction,System.String,System.String,System.String)">
+      <summary>初始化類別的新執行個體。</summary>
+      <param name="action">稽核動作。</param>
+      <param name="dataDescription">要稽核之資料的描述。</param>
+      <param name="sourceDescription">資料來源的描述。</param>
+      <param name="targetDescription">資料目標的描述。</param>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.Action">
+      <summary>稽核動作。</summary>
+      <returns>稽核動作。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.DataDescription">
+      <summary>要稽核之資料的描述。</summary>
+      <returns>要稽核之資料的描述。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.SourceDescription">
+      <summary>資料來源的描述。</summary>
+      <returns>資料來源的描述。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.TargetDescription">
+      <summary>資料目標的描述。</summary>
+      <returns>資料目標的描述。</returns>
+    </member><member name="T:Windows.Security.EnterpriseData.ProtectionPolicyManager">
+      <summary>管理受保護內容的企業保護原則。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyManager.Identity">
+      <summary>取得或設定企業識別。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+      <returns>企業識別。 這是 Managed 的電子郵件地址或網域。 您的應用程式應該使用 IsIdentityManaged，確認電子郵件地址或網域是受管理。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyManager.IsProtectionEnabled">
+      <summary>使用這個屬性判斷企業資料保護 (EDP) 是否在裝置上啟用。</summary>
+      <returns>如果 EDP 已在裝置上啟用則為 true，否則為 false。</returns>
+    </member><member name="P:Windows.Security.EnterpriseData.ProtectionPolicyManager.ShowEnterpriseIndicator">
+      <summary>值，表示殼層是否應該裝飾視窗，以顯示它是企業視窗。</summary>
+      <returns>True 表示殼層應該裝飾視窗，以顯示它是企業視窗，否則為 false。</returns>
+    </member><member name="E:Windows.Security.EnterpriseData.ProtectionPolicyManager.PolicyChanged">
+      <summary>引發事件，以回應原則 CSP 所管理的企業資料保護 (EDP) 原則的變更。</summary>
+    </member><member name="E:Windows.Security.EnterpriseData.ProtectionPolicyManager.ProtectedAccessResumed">
+      <summary>事件，應用程式登錄此事件以接收保護已繼續的通知。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+    </member><member name="E:Windows.Security.EnterpriseData.ProtectionPolicyManager.ProtectedAccessSuspending">
+      <summary>事件，應用程式登錄此事件以接收保護將暫停的通知。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+    </member><member name="E:Windows.Security.EnterpriseData.ProtectionPolicyManager.ProtectedContentRevoked">
+      <summary>事件，應用程式登錄此事件以接收保護將撤銷的通知。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.CheckAccess(System.String,System.String)">
+      <summary>要求對企業受保護內容的存取是否可供身分識別使用。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+      <returns>查詢結果的 ProtectionPolicyEvaluationResult 列舉值。</returns>
+      <param name="sourceIdentity">應用程式的來源企業識別。 這是 Managed 的電子郵件地址或網域。 您的應用程式應該使用 IsIdentityManaged，查看電子郵件地址或網域是否為受管理。</param>
+      <param name="targetIdentity">您要檢查的企業身分識別能夠存取受保護的內容。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.CheckAccessForApp(System.String,System.String)">
+      <summary>針對您的應用程式與特定目標應用程式之間的資料傳輸，執行企業保護原則評估。</summary>
+      <returns>查詢結果的 ProtectionPolicyEvaluationResult 列舉值。</returns>
+      <param name="sourceIdentity">應用程式的來源企業識別。 這是 Managed 的電子郵件地址或網域。 您的應用程式應該使用 IsIdentityManaged，查看電子郵件地址或網域是否為受管理。</param>
+      <param name="appPackageFamilyName">您要檢查的應用程式套件系列名稱能夠存取受保護的內容。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.ClearProcessUIPolicy">
+      <summary>清除企業識別的 UI 原則強制執行。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.CreateCurrentThreadNetworkContext(System.String)">
+      <summary>建立對企業身分識別保護的 ThreadNetworkContext。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+      <returns>受保護的網路內容。 在存取資源完成之後，應用程式必須呼叫 ThreadNetworkContext.Close。</returns>
+      <param name="identity">企業識別。 這是 Managed 的電子郵件地址或網域。 這可能會從 GetPrimaryManagedIdentityForNetworkEndpoint 傳回；否則您的應用程式應該使用 IsIdentityManaged 確認電子郵件地址或網域受管理。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.GetEnforcementLevel(System.String)">
+      <summary>您可以使用這個方法判斷目前的企業資料保護 (EDP) 強制執行層級。 EDP 強制執行層級是行動裝置管理 (MDM) 原則設定的一部分。</summary>
+      <returns>EnforcementLevel 列舉的值。</returns>
+      <param name="identity">企業識別。 這是 Managed 的電子郵件地址或網域。 您的應用程式應該使用 IsIdentityManaged，確認電子郵件地址或網域是受管理。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.GetForCurrentView">
+      <summary>傳回與目前應用程式視窗相關聯的 ProtectionPolicyManager 物件。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+      <returns>與目前應用程式視窗相關聯的 ProtectionPolicyManager 物件。</returns>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.GetPrimaryManagedIdentityForNetworkEndpointAsync(Windows.Networking.HostName)">
+      <summary>如果資源在企業原則管理的端點，傳回網路資源的企業身分識別。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+      <returns>企業識別。</returns>
+      <param name="endpointHost">網路資源的主機名稱或 IP 位址。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.HasContentBeenRevokedSince(System.String,Windows.Foundation.DateTime)">
+      <summary>使用這個方法檢查 (目前是受管理或曾經是受管理的已知身分識別) 是否自指定的日期和時間後，已撤銷受保護資料的存取權，或仍可存取。</summary>
+      <returns>如果自指定的日期和時間後已撤銷存取，則為 true，否則為 false。</returns>
+      <param name="identity">保護資料的企業身分識別。 這是 Managed 的電子郵件地址或網域。 您的應用程式應該使用 IsIdentityManaged，確認電子郵件地址或網域是受管理。</param>
+      <param name="since">日期和時間，自該時間點之後要納入檢查範圍。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.IsIdentityManaged(System.String)">
+      <summary>判斷企業實體是否由企業原則管理。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+      <returns>如果企業識別為受保護則為 true，否則為 false。</returns>
+      <param name="identity">企業識別。 這是電子郵件地址或網域。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.IsProtectionUnderLockRequired(System.String)">
+      <summary>使用這個屬性判斷 ProtectionUnderLockConfigRequired 企業資料保護 (EDP) 原則的值。</summary>
+      <returns>已為身分識別設定 ProtectionUnderLockConfigRequired 原則，則為 true，否則為 false。</returns>
+      <param name="identity">您要檢查的企業身分識別已設定 ProtectionUnderLockConfigRequired 原則。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.IsUserDecryptionAllowed(System.String)">
+      <summary>使用這個屬性判斷是否允許將企業資料保護 (EDP) 保護的檔案解密。</summary>
+      <returns>如果允許將 EDP 保護的檔案解密則為 true，否則為 false。</returns>
+      <param name="identity">您要檢查的企業身分識別能夠存取受保護的內容。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.LogAuditEvent(System.String,System.String,Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo)">
+      <summary>會記錄稽核事件。</summary>
+      <param name="sourceIdentity">內容受到保護的企業身分識別。 這是 Managed 的電子郵件地址或網域。 您的應用程式應該使用 IsIdentityManaged，確認電子郵件地址或網域是受管理。</param>
+      <param name="targetIdentity">對其揭露內容的企業身分識別。 這是電子郵件地址或網域。</param>
+      <param name="auditInfo">稽核資訊物件；ProtectionPolicyAuditInfo 的執行個體。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessAsync(System.String,System.String)">
+      <summary>針對身分識別要求對企業受保護內容的存取。</summary>
+      <returns>要求結果的 ProtectionPolicyEvaluationResult 列舉值。</returns>
+      <param name="sourceIdentity">內容受到保護的企業身分識別。 這是 Managed 的電子郵件地址或網域。 您的應用程式應該使用 IsIdentityManaged，確認電子郵件地址或網域是受管理。</param>
+      <param name="targetIdentity">對其揭露內容的企業身分識別。 這是電子郵件地址或網域。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessAsync(System.String,System.String,Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo)">
+      <summary>針對身分識別要求對企業受保護內容的存取。</summary>
+      <returns>要求結果的 ProtectionPolicyEvaluationResult 列舉值。</returns>
+      <param name="sourceIdentity">內容受到保護的企業身分識別。 這是 Managed 的電子郵件地址或網域。 您的應用程式應該使用 IsIdentityManaged，確認電子郵件地址或網域是受管理。</param>
+      <param name="targetIdentity">對其揭露內容的企業身分識別。 這是電子郵件地址或網域。</param>
+      <param name="auditInfo">稽核資訊物件；ProtectionPolicyAuditInfo 的執行個體。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessAsync(System.String,System.String,Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo,System.String)">
+      <summary>針對身分識別要求對企業受保護內容的存取。</summary>
+      <returns>要求結果的 ProtectionPolicyEvaluationResult 列舉值。</returns>
+      <param name="sourceIdentity">內容受到保護的企業身分識別。 這是 Managed 的電子郵件地址或網域。 您的應用程式應該使用 IsIdentityManaged，確認電子郵件地址或網域是受管理。</param>
+      <param name="targetIdentity">對其揭露內容的企業身分識別。 這是電子郵件地址或網域。</param>
+      <param name="auditInfo">稽核資訊物件；ProtectionPolicyAuditInfo 的執行個體。</param>
+      <param name="messageFromApp">在同意對話方塊中顯示的訊息，可讓使用者做出同意的決定。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessForAppAsync(System.String,System.String)">
+      <summary>針對特定目標應用程式要求對企業受保護內容的存取。</summary>
+      <returns>查詢結果的 ProtectionPolicyEvaluationResult 列舉值。</returns>
+      <param name="sourceIdentity">內容受到保護的企業身分識別。 這是 Managed 的電子郵件地址或網域。 您的應用程式應該使用 IsIdentityManaged，確認電子郵件地址或網域是受管理。</param>
+      <param name="appPackageFamilyName">對其揭露內容的企業身分識別。 這是電子郵件地址或網域。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessForAppAsync(System.String,System.String,Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo)">
+      <summary>針對特定目標應用程式要求對企業受保護內容的存取。</summary>
+      <returns>查詢結果的 ProtectionPolicyEvaluationResult 列舉值。</returns>
+      <param name="sourceIdentity">內容受到保護的企業身分識別。 這是 Managed 的電子郵件地址或網域。 您的應用程式應該使用 IsIdentityManaged，確認電子郵件地址或網域是受管理。</param>
+      <param name="appPackageFamilyName">對其揭露內容的企業身分識別。 這是電子郵件地址或網域。</param>
+      <param name="auditInfo">稽核資訊物件；ProtectionPolicyAuditInfo 的執行個體。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessForAppAsync(System.String,System.String,Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo,System.String)">
+      <summary>針對特定目標應用程式要求對企業受保護內容的存取。</summary>
+      <returns>查詢結果的 ProtectionPolicyEvaluationResult 列舉值。</returns>
+      <param name="sourceIdentity">內容受到保護的企業身分識別。 這是 Managed 的電子郵件地址或網域。 您的應用程式應該使用 IsIdentityManaged，確認電子郵件地址或網域是受管理。</param>
+      <param name="appPackageFamilyName">對其揭露內容的企業身分識別。 這是電子郵件地址或網域。</param>
+      <param name="auditInfo">稽核資訊物件；ProtectionPolicyAuditInfo 的執行個體。</param>
+      <param name="messageFromApp">在同意對話方塊中顯示的訊息，可讓使用者做出同意的決定。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.RevokeContent(System.String)">
+      <summary>將存取指定企業識別的所有受保護內容時所需的金鑰撤銷。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+      <param name="identity">企業識別。 這是 Managed 的電子郵件地址或網域。 您的應用程式應該使用 IsIdentityManaged，確認電子郵件地址或網域是受管理。</param>
+    </member><member name="M:Windows.Security.EnterpriseData.ProtectionPolicyManager.TryApplyProcessUIPolicy(System.String)">
+      <summary>啟用企業識別的 UI 原則強制執行。</summary>
+      <capability type="enterpriseDataPolicy">應用程式針對裝置定義和使用企業特定原則時所需。</capability>
+      <returns>如果身分識別正由企業原則管理，則為 true，否則為 false。</returns>
+      <param name="identity">企業識別。 這是 Managed 的電子郵件地址或網域。 您的應用程式應該使用 IsIdentityManaged，確認電子郵件地址或網域是受管理。</param>
+    </member><member name="T:Windows.Security.EnterpriseData.ThreadNetworkContext">
+      <summary>企業識別的受保護網路內容。</summary>
+    </member><member name="M:Windows.Security.EnterpriseData.ThreadNetworkContext.Close">
+      <summary>關閉受保護的網路內容。</summary>
+    </member></members>
+</doc>

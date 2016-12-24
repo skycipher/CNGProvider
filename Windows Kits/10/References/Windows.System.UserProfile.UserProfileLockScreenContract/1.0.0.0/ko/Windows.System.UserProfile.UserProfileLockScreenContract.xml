@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.UserProfile.UserProfileLockScreenContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.System.UserProfile.LockScreen">
+      <summary>잠금 화면 배경으로 사용되는 전체 화면 이미지를 관리하는 메서드와 속성을 제공합니다.</summary>
+    </member><member name="P:Windows.System.UserProfile.LockScreen.OriginalImageFile">
+      <summary>현재 잠긴 화면 이미지를 가져옵니다.</summary>
+      <returns>잠금 화면 이미지의 URI(Uniform Resource Identifier)입니다.</returns>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.GetImageStream">
+      <summary>데이터 스트림으로 현재 잠금 화면 이미지를 가져옵니다.</summary>
+      <returns>화면 잠금 이미지 데이터가 들어 있는 스트림입니다.</returns>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.RequestSetImageFeedAsync(Windows.Foundation.Uri)">
+      <summary>잠금 화면 슬라이드 쇼로 사용할 RSS 이미지 피드를 등록합니다. (Windows 8.1 전용)</summary>
+      <deprecated type="deprecate">RequestSetImageFeedAsync는 더 이상 사용되지 않으며 모든 플랫폼에서 작동하지 않을 수 있습니다. 자세한 내용은 MSDN을 참조하십시오.</deprecated>
+      <returns>SetImageFeedResult 값 중 하나입니다.</returns>
+      <param name="syndicationFeedUri">RSS 이미지 피드의 URI(Uniform Resource Identifier)입니다.</param>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.SetImageFileAsync(Windows.Storage.IStorageFile)">
+      <summary>StorageFile 개체에서 잠금 화면 이미지를 설정합니다.</summary>
+      <returns>잠금 화면용 이미지를 설정하는 데 사용되는 개체입니다.</returns>
+      <param name="value">잠금 화면용 새 이미지가 들어 있는 StorageFile 개체입니다.</param>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.SetImageStreamAsync(Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>데이터 스트림에서 잠금 화면 이미지를 설정합니다.</summary>
+      <returns>잠금 화면 이미지를 설정하는 데 사용되는 개체입니다.</returns>
+      <param name="value">이미지 데이터가 들어 있는 스트림입니다.</param>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.TryRemoveImageFeed">
+      <summary>잠금 화면 슬라이드쇼에서 사용하는 이미지 피드를 등록 취소하여 슬라이드를 중지합니다. (Windows 8.1 전용)</summary>
+      <deprecated type="deprecate">TryRemoveImageFeed는 더 이상 사용되지 않으며 모든 플랫폼에서 작동하지 않을 수 있습니다. 자세한 내용은 MSDN을 참조하십시오.</deprecated>
+      <returns>이미지 피드를 사용하지 않는 경우 true이고, 그렇지 않으면 false입니다.</returns>
+    </member></members>
+</doc>

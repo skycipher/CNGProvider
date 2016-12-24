@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Printers.Extensions.ExtensionsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Printers.Extensions.PrintExtensionContext">
+      <summary>プリンター拡張オブジェクトのコンテキストを提供します。</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintExtensionContext.FromDeviceId(System.String)">
+      <summary>DeviceInformation ID に基づいてプリンター拡張オブジェクトのコンテキストを取得します。</summary>
+      <returns>コンテキストへのポインター。</returns>
+      <param name="deviceId">印刷デバイスのデバイス情報 ID。</param>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails">
+      <summary>クライアントが印刷イベント データにアクセスまたは処理 (またはその両方) し、デバイス名情報を印刷することを可能にするプロパティを含みます。</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails.EventData">
+      <summary>印刷通知イベントのイベント データを取得または設定します。</summary>
+      <returns>印刷通知イベント データ。</returns>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails.PrinterName">
+      <summary>印刷通知に関連付けられた印刷デバイスの名前を取得します。</summary>
+      <returns>印刷デバイス名。</returns>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfiguration">
+      <summary>クライアントが印刷タスクの拡張文脈を検索し、印刷タスクにイベント ハンドラーを追加することを許可します。</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfiguration.PrinterExtensionContext">
+      <summary>印刷タスク拡張のコンテキストを取得します。</summary>
+      <returns>印刷タスク拡張のコンテキスト。</returns>
+    </member><member name="E:Windows.Devices.Printers.Extensions.PrintTaskConfiguration.SaveRequested">
+      <summary>印刷チケットの更新が必要であることをデバイス アプリケーションに通知するために、アプリケーションの印刷ウィンドウによって発生します。</summary>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest">
+      <summary>アプリケーションのための印刷ダイアログが SaveRequested イベントを発生させるときに呼び出されます。</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Deadline">
+      <summary>印刷タスクに期限情報を指定する日付時刻のオブジェクトを取得します。</summary>
+      <returns>印刷タスクの期限。</returns>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Cancel">
+      <summary>印刷タスク構成を保存するクライアント要求をキャンセルするため、デバイス アプリケーションによって呼び出されます。</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.GetDeferral">
+      <summary>印刷タスクの構成情報が保存可能になる前に任意の非同期タスクを完了する必要がある場合、デバイス アプリケーションによって呼び出されます。</summary>
+      <returns>印刷タスク構成保存要求の遅延を表すオブジェクト。</returns>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Save(System.Object)">
+      <summary>印刷タスク構成を保存するため、デバイス アプリケーションによって呼び出されます。</summary>
+      <param name="printerExtensionContext">印刷タスク拡張コンテキストを表すオブジェクト。</param>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral">
+      <summary>遅延ステータスを更新するため、デバイス アプリケーションによって呼び出されます。</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral.Complete">
+      <summary>遅延が完了するときに、デバイス アプリケーションによって呼び出されます。</summary>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs">
+      <summary>印刷タスク構成を保存する必要があることをデバイス アプリケーションに通知するために呼び出されます。</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs.Request">
+      <summary>印刷タスクの構成を更新するために必要な情報を取得します。</summary>
+      <returns>印刷タスク構成保存要求。</returns>
+    </member></members>
+</doc>

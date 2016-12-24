@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Wallet.WalletContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs">
+      <summary>Предоставляет сведения приложению, запущенному в результате выполнения действия "бумажник".</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs.ActionId">
+      <summary>Получает идентификатор действия, например идентификатор команды, транзакции и т. д.</summary>
+      <returns>Идентификатор действия, например идентификатор команды, транзакции и т. д.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs.ActionKind">
+      <summary>Получает действие, которое было выполнено для WalletItem.</summary>
+      <returns>Действие, которое было выполнено для WalletItem.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs.ItemId">
+      <summary>Получает идентификатор WalletItem, действие с которым выполнил пользователь.</summary>
+      <returns>Идентификатор WalletItem, действие с которым выполнил пользователь.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs">
+      <summary>Предоставляет сведения приложению, запущенному в результате выполнения действия "бумажник".</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.ActionId">
+      <summary>Получает идентификатор действия, например идентификатор команды, транзакции и т. д.</summary>
+      <returns>Идентификатор действия, например идентификатор команды, транзакции и т. д.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.ActionKind">
+      <summary>Получает действие, которое было выполнено для WalletItem.</summary>
+      <returns>Получает действие, которое было выполнено для WalletItem.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.ItemId">
+      <summary>Получает идентификатор WalletItem, действие с которым выполнил пользователь.</summary>
+      <returns>Идентификатор WalletItem, действие с которым выполнил пользователь.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.Kind">
+      <summary>Получает тип действия, которое было выполнено для WalletItem.</summary>
+      <returns>Тип действия, которое было выполнено для WalletItem.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.PreviousExecutionState">
+      <summary>Получает состояние выполнения приложения перед его активацией.</summary>
+      <returns>Состояние выполнения приложения перед его активацией.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.SplashScreen">
+      <summary>Получает объект экрана-заставки, предоставляющий сведения о переходе от экрана-заставки к активированному приложению.</summary>
+      <returns>Объект экрана-заставки, предоставляющий сведения о переходе от экрана-заставки к активированному приложению.</returns>
+    </member><member name="T:Windows.ApplicationModel.Wallet.WalletActionKind">
+      <summary>Представляет действие, предпринятое для элемента, вызвавшего запуск приложения.</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.Message">
+      <summary>Было касание сообщения.</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.MoreTransactions">
+      <summary>Было касание элемента пользовательского интерфейса см. дополнительные транзакции.</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.OpenItem">
+      <summary>Элемент был открыт.</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.Transaction">
+      <summary>Было касание транзакции.</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.Verb">
+      <summary>Было касание команды.</summary>
+    </member><member name="T:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs">
+      <summary>Предоставляет сведения приложению, запущенному в результате выполнения действия "бумажник".</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.ActionId">
+      <summary>Получает идентификатор действия, например идентификатор команды, транзакции и т. д.</summary>
+      <returns>Идентификатор действия, например идентификатор команды, транзакции и т. д.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.ActionKind">
+      <summary>Получает действие, которое было выполнено для WalletItem.</summary>
+      <returns>Получает действие, которое было выполнено для WalletItem.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.ActivatedOperation">
+      <summary>Получает операцию активации приложения.</summary>
+      <returns>Активированная операция.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.ItemId">
+      <summary>Получает идентификатор WalletItem, действие с которым выполнил пользователь.</summary>
+      <returns>Идентификатор WalletItem, действие с которым выполнил пользователь.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.Kind">
+      <summary>Получает тип активации.</summary>
+      <returns>Одно из значений перечисления.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.PreviousExecutionState">
+      <summary>Получает состояние выполнения приложения перед его активацией.</summary>
+      <returns>Одно из значений перечисления.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.SplashScreen">
+      <summary>Получает объект экрана-заставки, предоставляющий сведения о переходе от экрана-заставки к активированному приложению.</summary>
+      <returns>Объект, предоставляющий сведения об экране-заставке.</returns>
+    </member></members>
+</doc>

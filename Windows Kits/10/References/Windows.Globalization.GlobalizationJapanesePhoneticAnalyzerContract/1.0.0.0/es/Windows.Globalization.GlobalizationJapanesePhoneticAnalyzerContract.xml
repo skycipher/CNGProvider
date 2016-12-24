@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Globalization.GlobalizationJapanesePhoneticAnalyzerContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Globalization.JapanesePhoneme">
+      <summary>Representa una sola palabra en japonés (una lectura) que JapanesePhoneticAnalyzer ha extraído de una cadena en japonés.</summary>
+    </member><member name="P:Windows.Globalization.JapanesePhoneme.DisplayText">
+      <summary>Obtiene el texto para mostrar de esta palabra japonesa.</summary>
+      <returns>El texto que se va a mostrar de esta palabra en japonés. Es una subcadena de la cadena en japonés analizada originalmente por JapanesePhoneticAnalyzer.</returns>
+    </member><member name="P:Windows.Globalization.JapanesePhoneme.IsPhraseStart">
+      <summary>Obtiene un Boolean que indica si esta palabra japonesa es el inicio de una frase.</summary>
+      <returns>True si esta palabra japonesa es el inicio de una frase; de lo contrario, false.</returns>
+    </member><member name="P:Windows.Globalization.JapanesePhoneme.YomiText">
+      <summary>Obtiene la lectura (la pronunciación de DisplayText) para esta palabra japonesa.</summary>
+      <returns>La pronunciación de DisplayText, representada por una secuencia de caracteres Hiragana.</returns>
+    </member><member name="T:Windows.Globalization.JapanesePhoneticAnalyzer">
+      <summary>Lee una cadena en japonés que es una combinación de caracteres Kanji y de caracteres Hiragana, y devuelve una colección de lecturas correctas de la cadena con separaciones de palabras.</summary>
+    </member><member name="M:Windows.Globalization.JapanesePhoneticAnalyzer.GetWords(System.String)">
+      <summary>Lee una cadena en japonés que es una combinación de caracteres Kanji y de caracteres Hiragana, y devuelve una colección de lecturas correctas de la cadena con separaciones de palabras.</summary>
+      <returns>Colección de objetos JapanesePhoneme que representa lecturas adecuadas de la cadena con separaciones de palabras.</returns>
+      <param name="input">Una cadena japonesa que es una combinación de caracteres Kanji e Hiragana.</param>
+    </member><member name="M:Windows.Globalization.JapanesePhoneticAnalyzer.GetWords(System.String,System.Boolean)">
+      <summary>Lee una cadena en japonés que es una combinación de caracteres Kanji y de caracteres Hiragana, y devuelve una colección de lecturas correctas de la cadena con separaciones de palabras. Utiliza opcionalmente la estrategia Mono Ruby para separar palabras de varios caracteres Kanji en varias palabras con caracteres Kanji.</summary>
+      <returns>Colección de objetos JapanesePhoneme que representa lecturas adecuadas de la cadena con separaciones de palabras.</returns>
+      <param name="input">Una cadena japonesa que es una combinación de caracteres Kanji e Hiragana.</param>
+      <param name="monoRuby">Especifica el uso de la estrategia de separación de palabras Mono Ruby. True, si se usa la estrategia de separación de palabras Mono Ruby. Mono Ruby intenta separar de forma más agresiva las palabras de varios caracteres Kanji en varias palabras con caracteres Kanji. False si no se usa Mono Ruby.</param>
+    </member></members>
+</doc>

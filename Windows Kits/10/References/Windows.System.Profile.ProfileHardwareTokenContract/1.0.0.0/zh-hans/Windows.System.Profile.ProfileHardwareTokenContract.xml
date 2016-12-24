@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.Profile.ProfileHardwareTokenContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.System.Profile.HardwareIdentification">
+      <summary>提供获取表示当前硬件的硬件标识符的功能。</summary>
+    </member><member name="M:Windows.System.Profile.HardwareIdentification.GetPackageSpecificToken(Windows.Storage.Streams.IBuffer)">
+      <summary>获取表示当前硬件的硬件标识符 (ASHWID)。</summary>
+      <returns>硬件 Id 信息。</returns>
+      <param name="nonce">加密 nonce 是可选的。 当需要在云上验证 ASHWID 以防止重播攻击时，建议使用 nonce。 在需要 nonce 的情形中，远程服务器应生成一个随机 nonce，并将其传递给客户端应用程序，然后在从客户端系统接收 ASHWID 时立即验证签名具有预期的 nonce。</param>
+    </member><member name="T:Windows.System.Profile.HardwareToken">
+      <summary>表示包含了一个足够唯一的基于硬件的标识的标记。</summary>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Certificate">
+      <summary>获取用于签署 ID 以及用于帮助验证 ID 的真实性的证书。</summary>
+      <returns>用于签署 ID 的证书。</returns>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Id">
+      <summary>获取用于标识设备的硬件标识符。</summary>
+      <returns>标识设备的 ID。 此字节缓冲区包含一组表示设备中各种硬件组件的标识符。</returns>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Signature">
+      <summary>获取帮助验证所返回 ID 的真实性的硬件 ID 的数字签名。</summary>
+      <returns>ID 的数字签名。</returns>
+    </member></members>
+</doc>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.Playlists.PlaylistsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Media.Playlists.Playlist">
+      <summary>미디어 재생 목록에 대한 액세스를 제공합니다.</summary>
+    </member><member name="M:Windows.Media.Playlists.Playlist.#ctor">
+      <summary>Playlist 개체의 새 인스턴스를 만듭니다.</summary>
+    </member><member name="P:Windows.Media.Playlists.Playlist.Files">
+      <summary>재생 목록을 구성하는 미디어 파일 집합입니다.</summary>
+      <returns>재생 목록을 구성하는 미디어 파일 목록입니다.</returns>
+    </member><member name="M:Windows.Media.Playlists.Playlist.LoadAsync(Windows.Storage.IStorageFile)">
+      <summary>파일을 재생 목록에 비동기적으로 로드합니다.</summary>
+      <returns>재생 목록을 로드하는 비동기 작업을 나타냅니다. 이 IAsyncOperation 개체의 GetResults 메서드가 재생 목록을 반환합니다.</returns>
+      <param name="file">로드할 파일을 나타냅니다.</param>
+    </member><member name="M:Windows.Media.Playlists.Playlist.SaveAsAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption)">
+      <summary>재생 목록을 지정된 파일과 폴더에 비동기적으로 저장합니다.</summary>
+      <returns>재생 목록을 지정된 파일 및 폴더에 저장하는 비동기 작업을 나타냅니다.</returns>
+      <param name="saveLocation">재생 목록을 저장할 폴더입니다.</param>
+      <param name="desiredName">저장할 재생 목록의 이름입니다.</param>
+      <param name="option">재생 목록이 기존 파일에 저장된 경우 수행할 작업입니다. NameCollisionOption 열거형의 값 중 하나입니다.</param>
+    </member><member name="M:Windows.Media.Playlists.Playlist.SaveAsAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption,Windows.Media.Playlists.PlaylistFormat)">
+      <summary>재생 목록을 지정된 파일과 폴더에 지정된 형식으로 비동기적으로 저장합니다.</summary>
+      <returns>재생 목록을 지정된 파일 및 폴더에 저장하는 비동기 작업을 나타냅니다.</returns>
+      <param name="saveLocation">재생 목록을 저장할 폴더입니다.</param>
+      <param name="desiredName">저장할 재생 목록의 이름입니다.</param>
+      <param name="option">재생 목록이 기존 파일에 저장된 경우 수행할 작업입니다. NameCollisionOption 열거형의 값 중 하나입니다.</param>
+      <param name="playlistFormat">재생 목록 형식입니다. PlaylistFormat 열거형의 값 중 하나입니다.</param>
+    </member><member name="M:Windows.Media.Playlists.Playlist.SaveAsync">
+      <summary>재생 목록을 비동기적으로 저장합니다.</summary>
+      <returns>재생 목록을 저장하는 비동기 작업을 나타냅니다.</returns>
+    </member><member name="T:Windows.Media.Playlists.PlaylistFormat">
+      <summary>재생 목록 파일의 형식을 나타냅니다.</summary>
+    </member><member name="F:Windows.Media.Playlists.PlaylistFormat.M3u">
+      <summary>M3U 재생 목록입니다.</summary>
+    </member><member name="F:Windows.Media.Playlists.PlaylistFormat.WindowsMedia">
+      <summary>Windows Media 재생 목록입니다.</summary>
+    </member><member name="F:Windows.Media.Playlists.PlaylistFormat.Zune">
+      <summary>Zune 재생 목록입니다.</summary>
+    </member></members>
+</doc>

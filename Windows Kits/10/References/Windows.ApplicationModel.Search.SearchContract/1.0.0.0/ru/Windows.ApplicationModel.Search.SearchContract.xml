@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Search.SearchContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs">
+      <summary>Предоставляет данные для события querychanged, связанного с объектом searchPane.</summary>
+      <deprecated type="deprecate">ISearchPaneQueryChangedEventArgs может быть изменен или недоступен в выпусках после предварительной версии Windows 10.</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs.Language">
+      <summary>Тег языка IETF (стандарт BCP 47), который указывает язык, в настоящее время связанный с устройством ввода текста пользователя.</summary>
+      <returns>Тег языка IETF (стандарт BCP 47).</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs.LinguisticDetails">
+      <summary>Объект, предоставляющий сведения о тексте запроса, который пользователь вводит с помощью редактора метода ввода (IME).</summary>
+      <returns>Объект, предоставляющий сведения о тексте запроса.</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs.QueryText">
+      <summary>Текст в поле поиска при возникновении события querychanged.</summary>
+      <returns>Текущий текст запроса.</returns>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPane">
+      <summary>Устаревший. Взамен используйте элемент управления Windows.UI.Xaml.Controls.SearchBox (XAML) или WinJS.UI.SearchBox (HTML).</summary>
+      <deprecated type="deprecate">Объект SearchPane может быть изменен или недоступен для выпусков, следующих за Windows 10.</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.Language">
+      <summary>Тег языка IETF (стандарт BCP 47), который указывает язык, в настоящее время связанный с устройством ввода текста пользователя.</summary>
+      <returns>Тег языка IETF (стандарт BCP 47).</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.PlaceholderText">
+      <summary>Текст-заполнитель в поле поиска, если пользователь не ввел никакие символы.</summary>
+      <returns>Замещающий текст, отображаемый в поле поиска.</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.QueryText">
+      <summary>Текущий текст в поле поиска панели поиска.</summary>
+      <returns>Текущий текст запроса. Если панель поиска не использовалась, это пустая строка.</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.SearchHistoryContext">
+      <summary>Строка, которая идентифицирует контекст поиска и используется для хранения журнала поиска, выполненного пользователем в этом приложении.</summary>
+      <returns>Строка, представляющая контекст журнала поиска.</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.SearchHistoryEnabled">
+      <summary>Указывает, производится ли автоматическое отслеживание предыдущих поисков, выполненных пользователем с помощью этого приложения, и использование этих сведений для предоставления предложений.</summary>
+      <returns>Значение true, если журнал поиска пользователя автоматически отслеживается и используется для предоставления предложений; в противном случае — значение false. Значение по умолчанию — true.</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.ShowOnKeyboardInput">
+      <summary>Получает или задает значение, указывающее, может ли пользователь открыть панель поиска вводом.</summary>
+      <returns>Значение true, если пользователь может вводить текст для поиска. В противном случае — значение false.</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.Visible">
+      <summary>Указывает, открыта ли область поиска.</summary>
+      <returns>Значение true, если панель поиска отображается; в противном случае — значение false.</returns>
+    </member><member name="E:Windows.ApplicationModel.Search.SearchPane.QueryChanged">
+      <summary>Это событие возникает, когда пользователь изменяет текст в поле поиска.</summary>
+    </member><member name="E:Windows.ApplicationModel.Search.SearchPane.QuerySubmitted">
+      <summary>Это событие возникает, когда пользователь отправляет текст в поле поиска и приложению необходимо отобразить результаты поиска.</summary>
+    </member><member name="E:Windows.ApplicationModel.Search.SearchPane.ResultSuggestionChosen">
+      <summary>Это событие возникает, когда пользователь выбирает один из предложенных результатов, предоставленных приложением и отображаемых в области поиска.</summary>
+    </member><member name="E:Windows.ApplicationModel.Search.SearchPane.SuggestionsRequested">
+      <summary>Это событие возникает при изменении текста запроса пользователя, когда приложению необходимо предоставить новые предложения для отображения в области поиска.</summary>
+    </member><member name="E:Windows.ApplicationModel.Search.SearchPane.VisibilityChanged">
+      <summary>Это событие возникает, когда пользователь открывает или закрывает область поиска.</summary>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPane.GetForCurrentView">
+      <summary>Извлекает экземпляр области поиска, который пользователь может использовать для поиска внутри приложения.</summary>
+      <deprecated type="deprecate">ISearchPaneStatics может быть изменен или недоступен для выпусков, следующих за Windows 10.</deprecated>
+      <returns>Экземпляр области поиска, который обеспечивает согласованное, удобное для сенсорного управления поле поиска и необязательные предложения поиска для поиска внутри текущего приложения.</returns>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPane.HideThisApplication">
+      <summary>Скрывает интерфейс текущего приложения.</summary>
+      <deprecated type="deprecate">ISearchPaneStaticsWithHideThisApplication может быть изменен или недоступен для выпусков после предварительной версии Windows 10.</deprecated>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPane.SetLocalContentSuggestionSettings(Windows.ApplicationModel.Search.LocalContentSuggestionSettings)">
+      <summary>Указывает, отображаются ли предложения на основе локальных файлов автоматически в области поиска, и определяет критерии Windows для нахождения и фильтрации таких предложений.</summary>
+      <deprecated type="deprecate">Объект ISearchPane может быть изменен или недоступен для выпусков, следующих за Windows 10.</deprecated>
+      <param name="settings">Новые параметры для локальных предложений содержимого.</param>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPane.Show">
+      <summary>Отображает панель поиска.</summary>
+      <deprecated type="deprecate">Объект ISearchPane может быть изменен или недоступен для выпусков, следующих за Windows 10.</deprecated>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPane.Show(System.String)">
+      <summary>Отображает панель поиска с указанной исходной строкой запроса.</summary>
+      <deprecated type="deprecate">Объект ISearchPane может быть изменен или недоступен для выпусков, следующих за Windows 10.</deprecated>
+      <param name="query">Исходная строка запроса.</param>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPane.TrySetQueryText(System.String)">
+      <summary>Попытка задать текст в поле поиска в панели поиска.</summary>
+      <deprecated type="deprecate">Объект ISearchPane может быть изменен или недоступен для выпусков, следующих за Windows 10.</deprecated>
+      <returns>Значение true, если текст поля поиска был успешно задан. В противном случае — значение false.</returns>
+      <param name="query">Текст запроса для отображения в поле поиска в панели поиска.</param>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs">
+      <summary>Предоставляет данные для события querychanged, связанного с объектом searchPane.</summary>
+      <deprecated type="deprecate">SearchPaneQueryChangedEventArgs может быть изменен или недоступен в выпусках после предварительной версии Windows 10.</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs.Language">
+      <summary>Тег языка IETF (стандарт BCP 47), который указывает язык, в настоящее время связанный с устройством ввода текста пользователя.</summary>
+      <returns>Тег языка IETF (стандарт BCP 47).</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs.LinguisticDetails">
+      <summary>Объект, предоставляющий лингвистические сведения о тексте запроса, который пользователь вводит с помощью редактора метода ввода (IME).</summary>
+      <returns>Объект, предоставляющий лингвистические сведения о тексте запроса.</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs.QueryText">
+      <summary>Текст в поле поиска при возникновении события querychanged.</summary>
+      <returns>Текст в поле поиска при возникновении события querychanged.</returns>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs">
+      <summary>Предоставляет данные для события querysubmitted, связанного с объектом searchPane.</summary>
+      <deprecated type="deprecate">SearchPaneQuerySubmittedEventArgs может быть изменен или недоступен в выпусках после предварительной версии Windows 10.</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs.Language">
+      <summary>Тег языка IETF (стандарт BCP 47), который указывает язык, в настоящее время связанный с устройством ввода текста пользователя.</summary>
+      <returns>Тег языка IETF (стандарт BCP 47).</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs.LinguisticDetails">
+      <summary>Объект, предоставляющий лингвистические сведения о тексте запроса, который пользователь вводит с помощью редактора метода ввода (IME).</summary>
+      <returns>Объект, предоставляющий лингвистические сведения о тексте запроса.</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs.QueryText">
+      <summary>Текст, который был отправлен через область поиска.</summary>
+      <returns>Текст отправленного запроса.</returns>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs">
+      <summary>Предоставляет данные для события resultsuggestionchosen, связанного с объектом searchPane.</summary>
+      <deprecated type="deprecate">SearchPaneResultSuggestionChosenEventArgs может быть изменен или недоступен для выпусков после предварительной версии Windows 10.</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs.Tag">
+      <summary>Тег предлагаемого результата, выбранного пользователем.</summary>
+      <returns>Определенный приложением тег для выбранного результата поиска.</returns>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest">
+      <summary>Сохраняет предложения и сведения о запросе предложений.</summary>
+      <deprecated type="deprecate">SearchPaneSuggestionsRequest может быть изменен или недоступен в выпусках после предварительной версии Windows 10.</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest.IsCanceled">
+      <summary>Указывает, отменен ли запрос отображения предложений.</summary>
+      <returns>Значение true, если запрос был отменен; в противном случае — значение false. Значение по умолчанию — false.</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest.SearchSuggestionCollection">
+      <summary>Предложения для отображения в области поиска для текущего запроса. Приложения предоставляют предложения для отображения, добавляя их к данному объекту searchSuggestionCollection.</summary>
+      <returns>Предложения для отображения. Приложения предоставляют предложения, добавляя их в этот объект searchSuggestionCollection.</returns>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest.GetDeferral">
+      <summary>Извлекает объект, который позволяет приложению реагировать на запрос предложений асинхронно.</summary>
+      <deprecated type="deprecate">ISearchPaneSuggestionsRequest может быть изменен или недоступен в выпусках после предварительной версии Windows 10.</deprecated>
+      <returns>Объект, позволяющий приложению сообщить о выполнении запроса предложений поиска.</returns>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral">
+      <summary>Позволяет приложению сообщать о завершении заполнения объекта searchSuggestionCollection, пока обрабатывается событие suggestionsrequested.</summary>
+      <deprecated type="deprecate">SearchPaneSuggestionsRequestDeferral может быть изменен или недоступен в выпусках после предварительной версии Windows 10.</deprecated>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral.Complete">
+      <summary>Сигналы, которые позволяют приложению сообщать о завершении заполнения объекта searchSuggestionCollection, пока обрабатывается событие suggestionsrequested.</summary>
+      <deprecated type="deprecate">ISearchPaneSuggestionsRequestDeferral может быть изменен или недоступен в выпусках после предварительной версии Windows 10.</deprecated>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs">
+      <summary>Предоставляет данные для события suggestionsrequested, связанного с объектом searchPane.</summary>
+      <deprecated type="deprecate">SearchPaneSuggestionsRequestedEventArgs может быть изменен или недоступен для выпусков после предварительной версии Windows 10.</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs.Language">
+      <summary>Тег языка IETF (стандарт BCP 47), который указывает язык, в настоящее время связанный с устройством ввода текста пользователя.</summary>
+      <returns>Тег языка IETF (стандарт BCP 47).</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs.LinguisticDetails">
+      <summary>Объект, предоставляющий лингвистические сведения о тексте запроса, который пользователь вводит с помощью редактора метода ввода (IME).</summary>
+      <returns>Объект, предоставляющий лингвистические сведения о тексте запроса.</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs.QueryText">
+      <summary>Текст, для которого приложение должно обеспечить предложения и который находился в поле поиска при возникновении события suggestionsrequested.</summary>
+      <returns>Текст запроса, для которого приложение должно обеспечить предложения.</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs.Request">
+      <summary>Объект, хранящий предложения и сведения о запросе.</summary>
+      <returns>Объект, хранящий предложения и сведения о запросе.</returns>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs">
+      <summary>Предоставляет данные для события visibilitychanged, связанного с объектом searchPane.</summary>
+      <deprecated type="deprecate">SearchPaneVisibilityChangedEventArgs может быть изменен или недоступен для выпусков после предварительной версии Windows 10.</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs.Visible">
+      <summary>Указывает, открыта ли область поиска.</summary>
+      <returns>Значение true, если панель поиска открыта; в противном случае — значение false.</returns>
+    </member></members>
+</doc>

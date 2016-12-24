@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.UserProfile.UserProfileLockScreenContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.System.UserProfile.LockScreen">
+      <summary>提供屬性和方法來管理做為鎖定畫面背景使用的全螢幕影像。</summary>
+    </member><member name="P:Windows.System.UserProfile.LockScreen.OriginalImageFile">
+      <summary>取得目前的鎖定螢幕影像。</summary>
+      <returns>鎖定螢幕影像的統一資源識別元 (URI)。</returns>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.GetImageStream">
+      <summary>取得目前的鎖定螢幕影像當做資料流。</summary>
+      <returns>包含鎖定螢幕影像資料的資料流。</returns>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.RequestSetImageFeedAsync(Windows.Foundation.Uri)">
+      <summary>註冊 RSS 影像摘要，做為鎖定螢幕投影片。 (Windows 8.1 專用)</summary>
+      <deprecated type="deprecate">RequestSetImageFeedAsync 已被取代，因此可能無法在所有平台上運作。 如需詳細資訊，請參閱 MSDN。</deprecated>
+      <returns>其中一個 SetImageFeedResult 值。</returns>
+      <param name="syndicationFeedUri">RSS 影像摘要的統一資源識別元 (URI)。</param>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.SetImageFileAsync(Windows.Storage.IStorageFile)">
+      <summary>設定 StorageFile 物件中的鎖定螢幕影像。</summary>
+      <returns>用來設定鎖定螢幕之影像的物件。</returns>
+      <param name="value">包含鎖定螢幕之新影像的 StorageFile 物件。</param>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.SetImageStreamAsync(Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>設定資料流中的鎖定螢幕影像。</summary>
+      <returns>用來設定鎖定螢幕影像的物件。</returns>
+      <param name="value">包含影像資料的資料流。</param>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.TryRemoveImageFeed">
+      <summary>將鎖定螢幕投影片中使用的影像摘要移除註冊，停止投影片放映。 (Windows 8.1 專用)</summary>
+      <deprecated type="deprecate">TryRemoveImageFeed 已被取代，因此可能無法在所有平台上運作。 如需詳細資訊，請參閱 MSDN。</deprecated>
+      <returns>如果影像摘要已停用，則為 true，否則為 false。</returns>
+    </member></members>
+</doc>

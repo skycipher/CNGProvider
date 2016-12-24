@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Wallet.WalletContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs">
+      <summary>Fornisce informazioni su un'applicazione è stata avviata come risultato di un'azione sul wallet.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs.ActionId">
+      <summary>Ottiene l'ID dell'azione, ad esempio l'ID del verbo, della transazione e così via.</summary>
+      <returns>ID dell'azione, ad esempio l'ID del verbo, della transazione e così via.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs.ActionKind">
+      <summary>Ottiene l'azione che è stata eseguita sull'oggetto WalletItem.</summary>
+      <returns>Azione che è stata eseguita sull'oggetto WalletItem.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs.ItemId">
+      <summary>Ottiene l'ID dell'oggetto WalletItem su cui l'utente ha eseguito l'azione.</summary>
+      <returns>ID dell'oggetto WalletItem su cui l'utente ha eseguito l'azione.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs">
+      <summary>Fornisce informazioni su un'applicazione è stata avviata come risultato di un'azione sul wallet.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.ActionId">
+      <summary>Ottiene l'ID dell'azione, ad esempio l'ID del verbo, della transazione e così via.</summary>
+      <returns>ID dell'azione, ad esempio l'ID del verbo, della transazione e così via.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.ActionKind">
+      <summary>Ottiene l'azione che è stata eseguita sull'oggetto WalletItem.</summary>
+      <returns>Ottiene l'azione che è stata eseguita sull'oggetto WalletItem.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.ItemId">
+      <summary>Ottiene l'ID dell'oggetto WalletItem su cui l'utente ha eseguito l'azione.</summary>
+      <returns>ID dell'oggetto WalletItem su cui l'utente ha eseguito l'azione.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.Kind">
+      <summary>Ottiene il tipo di azione che è stata eseguita sull'oggetto WalletItem.</summary>
+      <returns>Tipo di azione che è stata eseguita sull'oggetto WalletItem.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.PreviousExecutionState">
+      <summary>Ottiene lo stato di esecuzione dell'applicazione prima dell'attivazione.</summary>
+      <returns>Stato di esecuzione dell'applicazione prima dell'attivazione.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.SplashScreen">
+      <summary>Ottiene l'oggetto schermata iniziale che fornisce informazioni sulla transizione dalla schermata iniziale all'applicazione attivata.</summary>
+      <returns>Oggetto schermata iniziale che fornisce informazioni sulla transizione dalla schermata iniziale all'applicazione attivata.</returns>
+    </member><member name="T:Windows.ApplicationModel.Wallet.WalletActionKind">
+      <summary>Rappresenta l'azione eseguita su un elemento che ha causato l'avvio dell'applicazione.</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.Message">
+      <summary>È stato toccato un messaggio.</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.MoreTransactions">
+      <summary>È stato toccato l'elemento dell'interfaccia utente per visualizzare ulteriori transazioni.</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.OpenItem">
+      <summary>L'elemento è stato aperto.</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.Transaction">
+      <summary>È stata toccata una transazione.</summary>
+    </member><member name="F:Windows.ApplicationModel.Wallet.WalletActionKind.Verb">
+      <summary>È stato toccato un verbo.</summary>
+    </member><member name="T:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs">
+      <summary>Fornisce informazioni su un'applicazione è stata avviata come risultato di un'azione sul wallet.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.ActionId">
+      <summary>Ottiene l'ID dell'azione, ad esempio l'ID del verbo, della transazione e così via.</summary>
+      <returns>ID dell'azione, ad esempio l'ID del verbo, della transazione e così via.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.ActionKind">
+      <summary>Ottiene l'azione che è stata eseguita sull'oggetto WalletItem.</summary>
+      <returns>Ottiene l'azione che è stata eseguita sull'oggetto WalletItem.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.ActivatedOperation">
+      <summary>Ottiene l'operazione attivazione dell'applicazione.</summary>
+      <returns>L'operazione attivata.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.ItemId">
+      <summary>Ottiene l'ID dell'oggetto WalletItem su cui l'utente ha eseguito l'azione.</summary>
+      <returns>ID dell'oggetto WalletItem su cui l'utente ha eseguito l'azione.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.Kind">
+      <summary>Ottiene il tipo di attivazione.</summary>
+      <returns>Uno dei valori dell'enumerazione.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.PreviousExecutionState">
+      <summary>Ottiene lo stato di esecuzione dell'applicazione prima dell'attivazione.</summary>
+      <returns>Uno dei valori dell'enumerazione.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.SplashScreen">
+      <summary>Ottiene l'oggetto schermata iniziale che fornisce informazioni sulla transizione dalla schermata iniziale all'applicazione attivata.</summary>
+      <returns>Oggetto che fornisce informazioni sulla schermata iniziale.</returns>
+    </member></members>
+</doc>

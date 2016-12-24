@@ -1,0 +1,665 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Sms.LegacySmsApiContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Sms.DeleteSmsMessageOperation">
+      <summary>启用开始、跟踪和关闭一个消息的异步消息删除操作。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">DeleteSmsMessageOperation 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessageOperation.Completed">
+      <summary>指定异步 SMS 消息删除操作是否已完成。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>异步操作中已完成事件的处理程序。</returns>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessageOperation.ErrorCode">
+      <summary>指定异步 SMS 消息删除操作的错误代码。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>异步操作的结果值。</returns>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessageOperation.Id">
+      <summary>指定异步 SMS 消息删除操作的 ID。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>唯一表示异步 SMS 消息删除操作的整数。</returns>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessageOperation.Status">
+      <summary>指定异步 SMS 消息删除操作的状态。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>表示异步 SMS 消息删除操作状态的枚举值。</returns>
+    </member><member name="M:Windows.Devices.Sms.DeleteSmsMessageOperation.Cancel">
+      <summary>取消异步 SMS 消息删除操作。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+    </member><member name="M:Windows.Devices.Sms.DeleteSmsMessageOperation.Close">
+      <summary>关闭异步 SMS 消息删除操作。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+    </member><member name="M:Windows.Devices.Sms.DeleteSmsMessageOperation.GetResults">
+      <summary>检索异步 SMS 消息删除操作的结果。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+    </member><member name="T:Windows.Devices.Sms.DeleteSmsMessagesOperation">
+      <summary>启用开始、跟踪和关闭多个消息的异步 SMS 消息删除操作。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">DeleteSmsMessagesOperation 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessagesOperation.Completed">
+      <summary>指定异步 SMS 消息删除操作是否已完成。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>SMS 异步消息删除操作的完成事件的处理程序。</returns>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessagesOperation.ErrorCode">
+      <summary>指定异步 SMS 消息删除操作的错误代码。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>异步 SMS 消息删除操作的结果值。</returns>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessagesOperation.Id">
+      <summary>指定异步 SMS 消息删除操作的 ID。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>唯一表示异步 SMS 消息删除操作的整数。</returns>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessagesOperation.Status">
+      <summary>指定异步 SMS 消息删除操作的状态。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>表示异步 SMS 消息删除操作状态的枚举值。</returns>
+    </member><member name="M:Windows.Devices.Sms.DeleteSmsMessagesOperation.Cancel">
+      <summary>取消异步 SMS 消息删除操作。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+    </member><member name="M:Windows.Devices.Sms.DeleteSmsMessagesOperation.Close">
+      <summary>关闭异步 SMS 消息删除操作。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+    </member><member name="M:Windows.Devices.Sms.DeleteSmsMessagesOperation.GetResults">
+      <summary>检索异步消息操作的结果。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+    </member><member name="T:Windows.Devices.Sms.GetSmsDeviceOperation">
+      <summary>异步检索 SmsDevice 对象。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">GetSmsDeviceOperation 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.GetSmsDeviceOperation.Completed">
+      <summary>指定异步 SmsDevice 对象检索操作是否已完成。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>异步操作中已完成事件的处理程序。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsDeviceOperation.ErrorCode">
+      <summary>指定异步 SmsDevice 对象检索操作的错误代码。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>异步操作的结果值。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsDeviceOperation.Id">
+      <summary>指定异步 SmsDevice 对象检索操作的 ID。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>唯一表示异步 SmsDevice 对象检索操作的整数。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsDeviceOperation.Status">
+      <summary>指定异步 SmsDevice 对象检索操作的状态。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>表示异步 SmsDevice 对象检索操作状态的枚举值。</returns>
+    </member><member name="M:Windows.Devices.Sms.GetSmsDeviceOperation.Cancel">
+      <summary>取消异步 SmsDevice 对象检索。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+    </member><member name="M:Windows.Devices.Sms.GetSmsDeviceOperation.Close">
+      <summary>关闭异步 SmsDevice 对象消息检索操作。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+    </member><member name="M:Windows.Devices.Sms.GetSmsDeviceOperation.GetResults">
+      <summary>获取异步 SmsDevice 对象检索操作的结果。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>对 SmsDevice 对象的引用。</returns>
+    </member><member name="T:Windows.Devices.Sms.GetSmsMessageOperation">
+      <summary>支持从 SMS 消息存储区检索消息。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">GetSmsMessageOperation 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessageOperation.Completed">
+      <summary>SMS 异步消息检索操作的完成事件的处理程序。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>SMS 异步消息检索操作的完成事件的处理程序。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessageOperation.ErrorCode">
+      <summary>指定异步 SMS 消息检索操作的错误代码。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>异步 SMS 消息检索操作的结果值。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessageOperation.Id">
+      <summary>指定异步 SMS 消息检索操作的 ID。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>唯一表示异步 SMS 消息检索操作的整数。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessageOperation.Status">
+      <summary>指定异步 SMS 消息检索操作的状态。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>表示异步 SMS 消息检索操作状态的枚举值。</returns>
+    </member><member name="M:Windows.Devices.Sms.GetSmsMessageOperation.Cancel">
+      <summary>取消异步 SMS 消息检索操作。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+    </member><member name="M:Windows.Devices.Sms.GetSmsMessageOperation.Close">
+      <summary>关闭异步 SMS 消息检索操作。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+    </member><member name="M:Windows.Devices.Sms.GetSmsMessageOperation.GetResults">
+      <summary>检索异步 SMS 消息检索操作的结果。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>访问检索到的消息的接口。</returns>
+    </member><member name="T:Windows.Devices.Sms.GetSmsMessagesOperation">
+      <summary>支持检索消息。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">GetSmsMessagesOperation 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessagesOperation.Completed">
+      <summary>指定异步消息检索操作是否已完成。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>指定异步消息操作是否已完成。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessagesOperation.ErrorCode">
+      <summary>指定异步消息操作的错误代码。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>异步操作的结果值。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessagesOperation.Id">
+      <summary>指示异步消息操作的 ID。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>唯一表示异步操作的整数。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessagesOperation.Progress">
+      <summary>指定异步消息操作的进度状态。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>异步操作的进度更新事件的处理程序。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessagesOperation.Status">
+      <summary>指定异步消息操作的状态。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>表示异步操作状态的枚举值。</returns>
+    </member><member name="M:Windows.Devices.Sms.GetSmsMessagesOperation.Cancel">
+      <summary>取消异步操作。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+    </member><member name="M:Windows.Devices.Sms.GetSmsMessagesOperation.Close">
+      <summary>结束异步操作。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+    </member><member name="M:Windows.Devices.Sms.GetSmsMessagesOperation.GetResults">
+      <summary>检索异步消息检索操作的结果。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>为检索到的 SMS 消息的引用。</returns>
+    </member><member name="T:Windows.Devices.Sms.ISmsBinaryMessage">
+      <summary>此接口提供对 SMS 消息原始二进制格式的访问。 消息以行业标准协议声明单位 (PDU) 格式存储（请参见 SMS 规范 GSM 03.40）。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsBinaryMessage 在 Windows 10 之后的版本中可能被更改或不可用。 请改用 SmsAppMessage。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.ISmsBinaryMessage.Format">
+      <summary>检索此消息的检测协议声明单元 (PDU) 格式。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>描述 SMS 数据格式的枚举值。</returns>
+    </member><member name="M:Windows.Devices.Sms.ISmsBinaryMessage.GetData">
+      <summary>以字节数组的形式返回二进制协议声明单元 (PDU) 格式中消息的原始缓冲区。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsBinaryMessage 在 Windows 10 之后的版本中可能被更改或不可用。 请改用 SmsAppMessage。</deprecated>
+      <returns>表示消息数据的字节数组。 如果没有消息数据，则返回的数组为空。</returns>
+    </member><member name="M:Windows.Devices.Sms.ISmsBinaryMessage.SetData(System.Byte[])">
+      <summary>指定 SMS 消息的原始二进制负载。 应根据协议声明单元 (PDU) 标准设置格式。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsBinaryMessage 在 Windows 10 之后的版本中可能被更改或不可用。 请改用 SmsAppMessage。</deprecated>
+      <param name="value">表示消息数据的字节数组，格式化基于协议声明单元 (PDU) 条件。</param>
+    </member><member name="T:Windows.Devices.Sms.ISmsDevice">
+      <summary>此接口控件为移动宽频 SMS 设备。 它是设备上 SMS 服务的主要入口点。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsDevice 在 Windows 10 之后的版本中可能被更改或不可用。 请改用 SmsDevice2。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.ISmsDevice.AccountPhoneNumber">
+      <summary>返回与 SMS 设备关联的电话号码。 电话号码可用于将传入消息与帐户和可能的外部存储机制（如帐户收件箱）关联。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>帐户电话号码的字符串表示形式。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsDevice.CellularClass">
+      <summary>返回 SMS 设备的移动类。 该类可用于确定哪些编码适合，或确定哪些设备限制有效。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>指示设备的移动类的枚举值。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsDevice.DeviceStatus">
+      <summary>返回 SMS 设备的状态，它指示该设备是否已准备就绪。 它还指示设备未就绪时存在的问题的类型。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>指示参与移动网络流量操作的 SMS 设备就绪状态的枚举值。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsDevice.MessageStore">
+      <summary>访问设备商的消息存储区。 直至客户端可以检索消息前，存储都包含这些消息。 例如，在某些设备上，存储可能对应于 SMS 消息的 SIM 存储。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>对 SmsMessageStore 对象的引用。</returns>
+    </member><member name="E:Windows.Devices.Sms.ISmsDevice.SmsDeviceStatusChanged">
+      <summary>在 SMS 设备的状态更改时，设置将调用的事件处理程序。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+    </member><member name="E:Windows.Devices.Sms.ISmsDevice.SmsMessageReceived">
+      <summary>在设备接收一个新的文本消息时，设置将调用的事件处理程序。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+    </member><member name="M:Windows.Devices.Sms.ISmsDevice.CalculateLength(Windows.Devices.Sms.SmsTextMessage)">
+      <summary>估计指定的文本消息的传输的信息长度。 估计值对希望提供提示（网络上发送消息数量）的客户端十分有用，以便传输完整消息的文本。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsDevice 在 Windows 10 之后的版本中可能被更改或不可用。 请改用 SmsDevice2。</deprecated>
+      <returns>对用长度信息所填充的 SmsEncodedLength 结构的引用。</returns>
+      <param name="message">对要度量的 SMS 文本消息的引用。</param>
+    </member><member name="M:Windows.Devices.Sms.ISmsDevice.SendMessageAsync(Windows.Devices.Sms.ISmsMessage)">
+      <summary>使用 SMS 设备异步发送消息。 因为发送操作可能不会瞬间发生，所以该方法为异步。 异步操作对象立即返回。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsDevice 在 Windows 10 之后的版本中可能被更改或不可用。 请改用 SmsDevice2。</deprecated>
+      <returns>对支持异步消息发送的 SendSmsMessageOperation 对象的引用。</returns>
+      <param name="message">对 SmsMessage 对象的引用。 消息可采用文本或二进制格式。</param>
+    </member><member name="T:Windows.Devices.Sms.ISmsMessage">
+      <summary>此接口由支持 SMS 消息的任何类型实现。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+    </member><member name="P:Windows.Devices.Sms.ISmsMessage.Id">
+      <summary>为获取或删除消息，检索可稍后在调用消息存储方法中指定的消息的 ID。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>消息的整数 ID。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsMessage.MessageClass">
+      <summary>返回邮件类，由运算符消息网络决定。 两个最常见的类是None（普通消息）或 Class0（特别是运算符消息，如必须立即向用户显示的漫游警告）。 最终用户消息的典型客户端忽略 Class0 消息。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>SmsMessageClass 枚举中的一个值。</returns>
+    </member><member name="T:Windows.Devices.Sms.ISmsTextMessage">
+      <summary>此接口操作已解码的 SMS 文本消息。 它提供对消息的纯文本主体以及关键标头属性（例如时间戳）的直接访问。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsTextMessage 在 Windows 10 之后的版本中可能被更改或不可用。 请改用 SmsTextMessage2。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.Body">
+      <summary>指定消息的纯文本正文。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>表示文本消息的正文的字符串。 如果有解码问题，则原始消息中的某些字符可由通配符（通常是问号：“?”）表示。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.Encoding">
+      <summary>在发送此消息时，指定已设置为使用的编码类型。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>SmsEncoding 枚举中的一个值。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.From">
+      <summary>指定消息发件人的电话号码。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>此消息发送方的电话号码的字符串表示形式。 它应采用其注册的设备和网络首选的格式。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.PartCount">
+      <summary>检索原始消息中的总部分数（如果该消息是多部分消息的某些部分）。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>无符号整数。 如果消息是独立的，则值为 1。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.PartNumber">
+      <summary>检索在此消息属于多部分消息一部分情况下的多部分消息的部分数。 可通过联接各部件，与 PartReferenceId 和 PartCount 属性一起将其用于重新构造原始消息。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>无符号整数。 它从 1 开始。 它不会超过 PartCount + 1。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.PartReferenceId">
+      <summary>指示消息是多部分消息的一部分时可使用的引用值。 如果此消息属于多部分消息，则 PartNumber 值可用于重新构造完整的原始消息，并且，该消息的每个部分具有相同的 PartReferenceId 值。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>发送网络确定的无符号整数；它不能通过此接口进行操作。 如果网络有其自己的多部分消息生存期策略，则参考号可能不会无限制地有效。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.Timestamp">
+      <summary>检索消息的时间戳。 它在本地为构造的消息实例或基于接收的消息的服务中心时间戳确定。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>DateTime 类型的值。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.To">
+      <summary>指定此消息的收件人电话号码。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>电话号码的字符串表示形式，格式为设备和设备注册所在网络支持的电话号码格式。</returns>
+    </member><member name="M:Windows.Devices.Sms.ISmsTextMessage.ToBinaryMessages(Windows.Devices.Sms.SmsDataFormat)">
+      <summary>以指定格式读取消息并将结果放在二进制消息的新实例中。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsTextMessage 在 Windows 10 之后的版本中可能被更改或不可用。 请改用 SmsTextMessage2。</deprecated>
+      <returns>保存此方法调用结果的新二进制消息。</returns>
+      <param name="format">SmsDataFormat 枚举中的一个值。</param>
+    </member><member name="T:Windows.Devices.Sms.SendSmsMessageOperation">
+      <summary>启用消息发送。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SendSmsMessageOperation 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.SendSmsMessageOperation.Completed">
+      <summary>异步操作中已完成事件的处理程序。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>异步操作中已完成事件的处理程序。</returns>
+    </member><member name="P:Windows.Devices.Sms.SendSmsMessageOperation.ErrorCode">
+      <summary>指定异步消息操作的错误代码。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>异步操作的结果值。</returns>
+    </member><member name="P:Windows.Devices.Sms.SendSmsMessageOperation.Id">
+      <summary>指示异步消息操作的 ID。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>唯一表示异步操作的整数。</returns>
+    </member><member name="P:Windows.Devices.Sms.SendSmsMessageOperation.Status">
+      <summary>指定异步消息操作的状态。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>表示异步操作状态的枚举值。</returns>
+    </member><member name="M:Windows.Devices.Sms.SendSmsMessageOperation.Cancel">
+      <summary>取消异步操作。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+    </member><member name="M:Windows.Devices.Sms.SendSmsMessageOperation.Close">
+      <summary>结束异步操作。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+    </member><member name="M:Windows.Devices.Sms.SendSmsMessageOperation.GetResults">
+      <summary>检索异步操作的结果。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+    </member><member name="T:Windows.Devices.Sms.SmsBinaryMessage">
+      <summary>表示原始 PDU 格式的 SMS 消息。 数据格式根据消息格式（由 Format 属性的值表示）是 GSM 还是 CDMA 而有差别。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsBinaryMessage 在 Windows 10 之后的版本中可能被更改或不可用。 请改用 SmsAppMessage。</deprecated>
+    </member><member name="M:Windows.Devices.Sms.SmsBinaryMessage.#ctor">
+      <summary>创建 SmsBinaryMessage 类的实例。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+    </member><member name="P:Windows.Devices.Sms.SmsBinaryMessage.Format">
+      <summary>检索此消息的检测协议声明单元 (PDU) 格式。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>描述 SMS 数据格式的枚举值。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsBinaryMessage.Id">
+      <summary>指示异步消息操作的 ID。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>唯一表示异步操作的整数。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsBinaryMessage.MessageClass">
+      <summary>返回邮件类，由运算符消息网络决定。 两个最常见的类是None（普通消息）或 Class0（特别是运算符消息，如必须立即向用户显示的漫游警告）。 最终用户消息的典型客户端忽略 Class0 消息。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>SmsMessageClass 枚举中的一个值。</returns>
+    </member><member name="M:Windows.Devices.Sms.SmsBinaryMessage.GetData">
+      <summary>以字节数组的形式返回二进制协议声明单元 (PDU) 格式中消息的原始缓冲区。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsBinaryMessage 在 Windows 10 之后的版本中可能被更改或不可用。 请改用 SmsAppMessage。</deprecated>
+      <returns>表示消息数据的字节数组。 如果没有消息数据，则返回的数组为空。</returns>
+    </member><member name="M:Windows.Devices.Sms.SmsBinaryMessage.SetData(System.Byte[])">
+      <summary>指定 SMS 消息的原始二进制负载。 应根据协议声明单元 (PDU) 标准设置格式。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsBinaryMessage 在 Windows 10 之后的版本中可能被更改或不可用。 请改用 SmsAppMessage。</deprecated>
+      <param name="value">表示消息数据的字节数组。 如果没有消息数据，则返回的数组为空。</param>
+    </member><member name="T:Windows.Devices.Sms.SmsDevice">
+      <summary>支持个移动宽频 SMS 设备的操作。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsDevice 在 Windows 10 之后的版本中可能被更改或不可用。 请改用 SmsDevice2。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.SmsDevice.AccountPhoneNumber">
+      <summary>返回与 SMS 设备关联的电话号码。 电话号码可用于将传入消息与帐户和可能的外部存储机制（如帐户收件箱）关联。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>帐户电话号码的字符串表示形式。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsDevice.CellularClass">
+      <summary>返回 SMS 设备的移动类。 该类可用于确定哪些编码适合，或确定哪些设备限制有效。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>指示设备的移动类的枚举值。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsDevice.DeviceStatus">
+      <summary>返回 SMS 设备的状态，它指示该设备是否已准备就绪。 它还指示设备未就绪时存在的问题的类型。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>指示参与移动网络流量操作的 SMS 设备就绪状态的枚举值。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsDevice.MessageStore">
+      <summary>访问设备商的消息存储区。 直至客户端可以检索消息前，存储都包含这些消息。 例如，在某些设备上，存储可能对应于 SMS 消息的 SIM 存储。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>对 SmsDeviceMessageStore 对象的引用。</returns>
+    </member><member name="E:Windows.Devices.Sms.SmsDevice.SmsDeviceStatusChanged">
+      <summary>在 SMS 设备的状态更改时，设置将调用的事件处理程序。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+    </member><member name="E:Windows.Devices.Sms.SmsDevice.SmsMessageReceived">
+      <summary>在设备接收一个新的文本消息时，设置将调用的事件处理程序。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+    </member><member name="M:Windows.Devices.Sms.SmsDevice.CalculateLength(Windows.Devices.Sms.SmsTextMessage)">
+      <summary>估计指定的文本消息的传输的信息长度。 估计值对希望提供提示（网络上发送消息数量）的客户端十分有用，以便传输完整消息的文本。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsDevice 在 Windows 10 之后的版本中可能被更改或不可用。 请改用 SmsDevice2。</deprecated>
+      <returns>对用长度信息所填充的 SmsEncodedLength 结构的引用。</returns>
+      <param name="message">对要度量的 SMS 文本消息的引用。</param>
+    </member><member name="M:Windows.Devices.Sms.SmsDevice.FromIdAsync(System.String)">
+      <summary>为收到 SMS 消息的设备创建 SmsDevice 的实例。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">ISmsDeviceStatics 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+      <returns>SMS 设备操作对象。</returns>
+      <param name="deviceId">收到 SMS 消息的 SMS 设备的 DeviceInformation ID 的字符串表示形式。</param>
+    </member><member name="M:Windows.Devices.Sms.SmsDevice.FromNetworkAccountIdAsync(System.String)">
+      <summary>为指定移动宽带网络帐户 ID 创建 SmsDevice 的实例。</summary>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">ISmsDeviceStatics2 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+      <returns>当此方法完成时，它返回指定的移动宽带网络帐户 ID 的 SmsDevice。</returns>
+      <param name="networkAccountId">用于选择供 SMS 设备使用的相应移动宽频设备的移动宽频网络帐户 ID</param>
+    </member><member name="M:Windows.Devices.Sms.SmsDevice.GetDefaultAsync">
+      <summary>创建与默认 SMS 设备关联的 SmsDevice 对象的实例。 由于设备可能很忙，所以操作将以异步方式执行。 异步操作对象立即返回。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">ISmsDeviceStatics 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+      <returns>对支持异步 SmsDevice 对象检索的 IAsyncOperation(SmsDevice) 对象的引用。</returns>
+    </member><member name="M:Windows.Devices.Sms.SmsDevice.GetDeviceSelector">
+      <summary>检索可用于枚举 SMS 设备的类选择字符串。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">ISmsDeviceStatics 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+      <returns>为标识 SMS 设备的高级查询语法 (AQS) 字符串的引用。</returns>
+    </member><member name="M:Windows.Devices.Sms.SmsDevice.SendMessageAsync(Windows.Devices.Sms.ISmsMessage)">
+      <summary>使用 SMS 设备异步发送消息。 因为发送操作可能不会瞬间发生，所以该方法为异步。 消息操作对象立即返回。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsDevice 在 Windows 10 之后的版本中可能被更改或不可用。 请改用 SmsDevice2。</deprecated>
+      <returns>消息操作对象。</returns>
+      <param name="message">对 ISmsMessage 对象的引用。 消息可采用文本或二进制格式。</param>
+    </member><member name="T:Windows.Devices.Sms.SmsDeviceMessageStore">
+      <summary>提供对 SMS 设备上存储的信息和有关信息存储的相关信息的访问。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsDeviceMessageStore 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.SmsDeviceMessageStore.MaxMessages">
+      <summary>指示可存储在设备存储区中的消息的最大数量。 客户端可以使用此值，确定如何在设备存储区中保留足够空间，以便从网络接收新消息。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>表示最大设备存储数的整数值。</returns>
+    </member><member name="M:Windows.Devices.Sms.SmsDeviceMessageStore.DeleteMessageAsync(System.UInt32)">
+      <summary>删除具有指定 ID 的消息。 由于设备可能很忙，所以操作将以异步方式执行。 异步操作对象立即返回。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsDeviceMessageStore 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+      <returns>用于开始和跟踪异步操作的新消息操作对象。</returns>
+      <param name="messageId">要删除的消息的整数 ID，该 ID 之前从 SmsTextMessage 对象读取，而该对象从设备消息存储区获得。</param>
+    </member><member name="M:Windows.Devices.Sms.SmsDeviceMessageStore.DeleteMessagesAsync(Windows.Devices.Sms.SmsMessageFilter)">
+      <summary>删除筛选器所应用到的消息。 筛选器可用于删除所有消息或仅可以删除读取、未读取、已发送或处于草稿状态的消息。 由于操作时间可能很短暂，所以操作将以异步方式执行。 异步操作对象立即返回。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsDeviceMessageStore 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+      <returns>用于开始和跟踪异步操作的新消息操作对象。</returns>
+      <param name="messageFilter">指定要删除的哪些消息的搜索筛选器。</param>
+    </member><member name="M:Windows.Devices.Sms.SmsDeviceMessageStore.GetMessageAsync(System.UInt32)">
+      <summary>检索具有指定 ID 的消息。 由于设备可能很忙，所以方法将以异步方式执行。 异步操作对象立即返回。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsDeviceMessageStore 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+      <returns>返回用于启动和跟踪异步操作的新消息操作对象。</returns>
+      <param name="messageId">要检索的消息的 ID。</param>
+    </member><member name="M:Windows.Devices.Sms.SmsDeviceMessageStore.GetMessagesAsync(Windows.Devices.Sms.SmsMessageFilter)">
+      <summary>检索符合筛选器中指定的条件的消息列表。 可按已读、未读、已发送或草稿状态对消息进行筛选。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsDeviceMessageStore 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+      <returns>返回用于启动和跟踪异步操作的新消息操作对象。</returns>
+      <param name="messageFilter">要检索的消息的 ID。</param>
+    </member><member name="T:Windows.Devices.Sms.SmsDeviceStatusChangedEventHandler">
+      <summary>SMS 设备状态更改时，将调用此处理程序。 如果他们想要在设备上的重大状态更改时得到通知，调用方应实现此动机。 例如，调用方可能想了解设备何时准备好发送和接收消息。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsDeviceStatusChangedEventHandler 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+      <param name="sender">对发送事件的设备对象的引用。</param>
+    </member><member name="T:Windows.Devices.Sms.SmsMessageFilter">
+      <summary>此枚举类型指定设备消息存储区中执行操作的消息。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsMessageFilter 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+    </member><member name="F:Windows.Devices.Sms.SmsMessageFilter.All">
+      <summary>设备消息存储区的所有消息。</summary>
+    </member><member name="F:Windows.Devices.Sms.SmsMessageFilter.Draft">
+      <summary>未发送并保存的所有消息。</summary>
+    </member><member name="F:Windows.Devices.Sms.SmsMessageFilter.Read">
+      <summary>所有已读消息。</summary>
+    </member><member name="F:Windows.Devices.Sms.SmsMessageFilter.Sent">
+      <summary>发送并保存的所有消息。</summary>
+    </member><member name="F:Windows.Devices.Sms.SmsMessageFilter.Unread">
+      <summary>所有未读消息。</summary>
+    </member><member name="T:Windows.Devices.Sms.SmsMessageReceivedEventArgs">
+      <summary>为 ISmsBinaryMessage 事件处理程序提供数据。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsMessageReceivedEventArgs 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.SmsMessageReceivedEventArgs.BinaryMessage">
+      <summary>检索承载消息的二进制表示形式的对象。 仅想要直接传递二进制消息或自己解释二进制消息内容客户端对此感兴趣。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>对 SmsBinaryMessage 对象的引用。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsMessageReceivedEventArgs.TextMessage">
+      <summary>检索承载消息的文本表示的对象。 如果消息未成功解码，则返回错误。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>一个新 SmsTextMessage 对象。</returns>
+    </member><member name="T:Windows.Devices.Sms.SmsMessageReceivedEventHandler">
+      <summary>当收到新的二进制消息时，将调用此事件处理程序。 他们想要从给定的 SMS 设备处理新的二进制消息时，调用方应实现此动机。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsMessageReceivedEventHandler 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+      <param name="sender">对发送消息的 SMS 设备对象的引用。</param>
+      <param name="e">保留消息的二进制和文本表示形式的对象。</param>
+    </member><member name="T:Windows.Devices.Sms.SmsReceivedEventDetails">
+      <summary>当您的应用程序挂起时，将 SMS 信息事件的详细信息显示到处理信息的后台工作项。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsReceivedEventDetails 在 Windows 10 之后的版本中可能被更改或不可用。 请改用 SmsMessageReceivedTriggerDetails。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.SmsReceivedEventDetails.BinaryMessage">
+      <summary>获取后台任务接收的 SMS 消息的二进制消息对象。</summary>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>后台任务接收的 SMS 消息的二进制消息对象。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsReceivedEventDetails.DeviceId">
+      <summary>返回收到 SMS 消息的网络接口的 DeviceInformation ID。 此 ID 可传递到 SmsDevice.FromIdAsync 以激活设备并检索额外的消息详细信息。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>包含 SMS 网络接口（设备）的 DeviceInformation ID 的字符串。 此值通常用于检索消息的发送方和正文等详细信息。 例如，您可以使用 ID 显示弹出项，告知用户来自特定人员的新消息已到达。 DeviceId 和 MessageIndex 的组合足以从 SMS 设备中检索新消息。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsReceivedEventDetails.MessageClass">
+      <summary>获取后台任务接收的 SMS 消息的消息类。</summary>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>后台任务接收的 SMS 消息的邮件类。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsReceivedEventDetails.MessageIndex">
+      <summary>返回引发了事件的新消息的索引。 您可以将此传递到 SmsDevice.GetMessageAsync 以检索新消息本身。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>新消息的整数索引。</returns>
+    </member><member name="T:Windows.Devices.Sms.SmsTextMessage">
+      <summary>管理解码 SMS 文本消息，提供对消息的纯文本主体以及关键标头属性（例如时间戳）的直接访问。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsTextMessage 在 Windows 10 之后的版本中可能被更改或不可用。 请改用 SmsTextMessage2。</deprecated>
+    </member><member name="M:Windows.Devices.Sms.SmsTextMessage.#ctor">
+      <summary>创建 SmsTextMessage 类的实例。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.Body">
+      <summary>指定消息的纯文本正文。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>表示文本消息的正文的字符串。 如果有解码问题，则原始消息中的某些字符可由通配符（通常是问号（“?”））表示。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.Encoding">
+      <summary>在发送此消息时，指定已设置为使用的编码类型。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>SmsEncoding 枚举中的一个值。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.From">
+      <summary>指定消息发件人的电话号码。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>此消息发送方的电话号码的字符串表示形式。 它应采用其注册的设备和网络首选的格式。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.Id">
+      <summary>指示 SMS 文本消息的 ID。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>消息的整数 ID。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.MessageClass">
+      <summary>指定消息的消息类。 此消息通常出自网络而不是移动设备。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>SmsMessageClass 枚举中的一个值。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.PartCount">
+      <summary>指示消息是多部分消息的一部分时，原始消息中的总部分数。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>无符号整数。 如果消息是独立的，则值为 1。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.PartNumber">
+      <summary>指示在此消息属于多部分消息的一部分的情况下，多部分消息的部分数。 可通过联接各部件，与 PartReferenceId 和 PartCount 属性一起将其用于重新构造原始消息。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>无符号整数。 它从 1 开始。 它不会超过 PartCount + 1。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.PartReferenceId">
+      <summary>指示消息是多部分消息的一部分时可使用的引用值。 如果此消息属于多部分消息，则 PartNumber 值可用于重新构造完整的原始消息，并且，该消息的每个部分具有相同的 PartReferenceId 值。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>发送网络确定的无符号整数；它不能通过此接口进行操作。 如果网络有其自己的多部分消息生存期策略，则参考号可能不会无限制地有效。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.Timestamp">
+      <summary>指示消息的时间戳。 它在本地为构造的消息实例或基于接收的消息的服务中心时间戳确定。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>DateTime 类型的值。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.To">
+      <summary>指示此消息的收件人电话号码。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <returns>电话号码的字符串表示形式，格式为设备和设备注册所在网络支持的电话号码格式。</returns>
+    </member><member name="M:Windows.Devices.Sms.SmsTextMessage.FromBinaryData(Windows.Devices.Sms.SmsDataFormat,System.Byte[])">
+      <summary>对二进制消息进行解码，并将结果放在文本消息的新实例中。 此方法表示作为字节缓冲区引用的二进制消息和缓冲区编码方式的选择。 因此，当消息没有直接源自设备或作为 SmsBinaryMessage 类的实例时，可以使用它。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">ISmsTextMessageStatics 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+      <returns>如果解码成功，则为新 SmsTextMessage 对象。</returns>
+      <param name="format">用于标识特定协议声明单元 (PDU) 缓冲区的格式的 SmsDataFormat 枚举值。</param>
+      <param name="value">包含要解码的二进制数据的字节数组。</param>
+    </member><member name="M:Windows.Devices.Sms.SmsTextMessage.FromBinaryMessage(Windows.Devices.Sms.SmsBinaryMessage)">
+      <summary>读取二进制消息并对其进行解码。 结果位于文本消息的新实例中。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">ISmsTextMessageStatics 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+      <returns>一个新 SmsTextMessage 对象。</returns>
+      <param name="binaryMessage">要解码的二进制消息的实例。</param>
+    </member><member name="M:Windows.Devices.Sms.SmsTextMessage.ToBinaryMessages(Windows.Devices.Sms.SmsDataFormat)">
+      <summary>以指定格式读取消息并将结果放在二进制消息的新实例中。</summary>
+      <capability type="sms">访问 SMS 服务时为必需。</capability>
+      <capability type="cellularMessaging">应用利用 SMS 和 RCS 时为必需。</capability>
+      <deprecated type="deprecate">SmsTextMessage 在 Windows 10 之后的版本中可能被更改或不可用。 请改用 SmsTextMessage2。</deprecated>
+      <returns>保存此方法调用结果的新二进制消息。</returns>
+      <param name="format">SmsDataFormat 枚举中的一个值。</param>
+    </member></members>
+</doc>

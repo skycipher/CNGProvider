@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Web.Http.Diagnostics.HttpDiagnosticsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider">
+      <summary>提供簡易診斷功能，用於追蹤和分析應用程式 (建置在 Microsoft 的 HTTP 堆疊) 的網路流量。</summary>
+    </member><member name="E:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.RequestResponseCompleted">
+      <summary>訂閱 RequestResponseCompleted 事件接收要求已送出的通知。</summary>
+    </member><member name="E:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.RequestSent">
+      <summary>訂閱 RequestSent 事件接收要求已傳送的通知。</summary>
+    </member><member name="E:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.ResponseReceived">
+      <summary>訂閱 ResponseReceived 事件接收回應已收到的通知。</summary>
+    </member><member name="M:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.CreateFromProcessDiagnosticInfo(Windows.System.Diagnostics.ProcessDiagnosticInfo)">
+      <summary>根據指定的 ProcessDiagnosticInfo 物件建立新的 HttpDiagnosticProvider。</summary>
+      <returns>新建立的 HttpDiagnosticProvider。</returns>
+      <param name="processDiagnosticInfo">ProcessDiagnosticInfo，可識別要監看的處理序。</param>
+    </member><member name="M:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.Start">
+      <summary>啟動 HttpDiagnosticProvider 監視附加處理序目標。</summary>
+    </member><member name="M:Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.Stop">
+      <summary>停止 HttpDiagnosticProvider 監視附加處理序目標。</summary>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs">
+      <summary>提供資料用於 RequestResponseCompleted 事件。</summary>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.ActivityId">
+      <summary>取得這個活動的本機唯一識別碼，以便與其他事件相互關聯。</summary>
+      <returns>這個活動的本機唯一識別碼。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.Initiator">
+      <summary>取得啟始此要求的作業類型。</summary>
+      <returns>啟動器類型。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.ProcessId">
+      <summary>取得處理序識別碼。</summary>
+      <returns>處理序識別碼。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.RequestedUri">
+      <summary>取得所要求回應的 URI。</summary>
+      <returns>所要求回應的 URI。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.SourceLocations">
+      <summary>取得來源位置呼叫堆疊。</summary>
+      <returns>來源位置呼叫堆疊。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.ThreadId">
+      <summary>取得執行緒識別碼。</summary>
+      <returns>執行緒識別碼。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.Timestamps">
+      <summary>取得連線事件的時間戳記。</summary>
+      <returns>連線事件的時間戳記。</returns>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps">
+      <summary>提供連線事件的所有時間戳記。</summary>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.CacheCheckedTimestamp">
+      <summary>取得上次檢查本機快取的時間。</summary>
+      <returns>檢查本機快取的時間。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.ConnectionCompletedTimestamp">
+      <summary>取得 TCP 連線階段結尾的時間戳記。</summary>
+      <returns>TCP 連線階段結尾的時間戳記。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.ConnectionInitiatedTimestamp">
+      <summary>取得 TCP 連線階段開始的時間戳記。</summary>
+      <returns>TCP 連線階段開始的時間戳記。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.NameResolvedTimestamp">
+      <summary>取得 DNS 名稱解析的時間。</summary>
+      <returns>DNS 名稱解析的時間。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.RequestCompletedTimestamp">
+      <summary>取得傳送最後一個位元組的時間戳記。</summary>
+      <returns>傳送最後一個位元組的時間戳記。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.RequestSentTimestamp">
+      <summary>取得傳送第一個位元組的時間戳記。</summary>
+      <returns>傳送第一個位元組的時間戳記。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.ResponseCompletedTimestamp">
+      <summary>取得收到最後一個位元組的時間戳記。</summary>
+      <returns>收到最後一個位元組的時間戳記。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.ResponseReceivedTimestamp">
+      <summary>取得收到第一個位元組的時間戳記。</summary>
+      <returns>收到第一個位元組的時間戳記。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.SslNegotiatedTimestamp">
+      <summary>取得 SSL 交握交涉的時間。</summary>
+      <returns>SSL 交握交涉的時間。</returns>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs">
+      <summary>提供 RequestSent 事件的資料。</summary>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.ActivityId">
+      <summary>取得這個活動的本機唯一識別碼，以便與其他事件相互關聯。</summary>
+      <returns>這個活動的本機唯一識別碼。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.Initiator">
+      <summary>取得啟始此要求的作業類型。</summary>
+      <returns>啟動器類型。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.Message">
+      <summary>取得 HttpRequestMessage，包括標頭。</summary>
+      <returns>HttpRequestMessage，包括標頭。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.ProcessId">
+      <summary>取得處理序識別碼。</summary>
+      <returns>處理序識別碼。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.SourceLocations">
+      <summary>取得來源位置呼叫堆疊。</summary>
+      <returns>來源位置呼叫堆疊。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.ThreadId">
+      <summary>取得執行緒識別碼。</summary>
+      <returns>執行緒識別碼。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.Timestamp">
+      <summary>取得傳送 HttpRequestMessage 時的時間戳記。</summary>
+      <returns>傳送 HttpRequestMessage 時的時間戳記。</returns>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs">
+      <summary>提供 ResponseReceived 事件的資料。</summary>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs.ActivityId">
+      <summary>取得這個活動的本機唯一識別碼，以便與其他事件相互關聯。</summary>
+      <returns>這個活動的本機唯一識別碼。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs.Message">
+      <summary>取得 HttpResponseMessage，包含標頭、狀態碼和資料。</summary>
+      <returns>HttpResponseMessage，包含標頭、狀態碼和資料。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs.Timestamp">
+      <summary>取得收到 HttpResponseMessage 時的時間戳記。</summary>
+      <returns>收到 HttpResponseMessage 時的時間戳記。</returns>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator">
+      <summary>提供下載要求啟動器類型。</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Beacon">
+      <summary>單向指標要求</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.CrossOriginPreFlight">
+      <summary>跨原始來源先執行的要求</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Fetch">
+      <summary>擷取要求</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.HtmlDownload">
+      <summary>HTML 下載</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Image">
+      <summary>影像資源</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Link">
+      <summary>連結</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Media">
+      <summary>媒體資源</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Other">
+      <summary>其他資源</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.ParsedElement">
+      <summary>剖析的項目</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Prefetch">
+      <summary>預先擷取要求</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Script">
+      <summary>指令碼資源</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.Style">
+      <summary>CSS 項目</summary>
+    </member><member name="F:Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator.XmlHttpRequest">
+      <summary>XML HTTP 要求</summary>
+    </member><member name="T:Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation">
+      <summary>包含 HTTP 活動的來源位置。</summary>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation.ColumnNumber">
+      <summary>取得欄號。</summary>
+      <returns>欄號。</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation.LineNumber">
+      <summary>取得行號。</summary>
+      <returns>行號</returns>
+    </member><member name="P:Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation.SourceUri">
+      <summary>取得來源 URI。</summary>
+      <returns>來源 URI。</returns>
+    </member></members>
+</doc>

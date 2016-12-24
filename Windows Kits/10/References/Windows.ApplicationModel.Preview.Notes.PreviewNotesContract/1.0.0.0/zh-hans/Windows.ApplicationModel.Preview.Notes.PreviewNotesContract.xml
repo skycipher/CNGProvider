@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Preview.Notes.PreviewNotesContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs">
+      <summary>表示有关 NotePlacementChanged 事件的信息。</summary>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs.ViewId">
+      <summary>已引发 NotePlacementChanged 事件的注释的唯一标识符。</summary>
+      <returns>注释 ID。</returns>
+    </member><member name="T:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview">
+      <summary>此类拥有 Preview Notes 应用程序功能的许多功能性（请参阅“备注”）。</summary>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.IsScreenLocked">
+      <summary>获取一个指示当前设备屏幕是否已锁定的值。</summary>
+      <returns>如果屏幕已锁定，则为 true；如果未锁定，则为 false。</returns>
+    </member><member name="E:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.NotePlacementChanged">
+      <summary>指示注释的位置（维度和位置）已更改。</summary>
+    </member><member name="E:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.NoteVisibilityChanged">
+      <summary>指示注释的可见性状态已更改。</summary>
+    </member><member name="E:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.SystemLockStateChanged">
+      <summary>指示设备的屏幕锁定状态已更改。</summary>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.GetNotePlacement(System.Int32)">
+      <summary>获取要存储在内存中并在之后由应用程序还原的指定注释的视图位置。</summary>
+      <returns>保留注释位置数据的字节的数组。</returns>
+      <param name="noteViewId">将检索其位置的注释的唯一标识符。</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.HideNote(System.Int32)">
+      <summary>从设备屏幕删除注释的视图。</summary>
+      <param name="noteViewId">要隐藏的注释的唯一标识符。</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.SetFocusToNextView">
+      <summary>将焦点切换至下一个可见注释视图（窗口）。 视图是按循环、系统决定的顺序选择的。</summary>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.SetNotesThumbnailAsync(Windows.Storage.Streams.IBuffer)">
+      <summary>设置此应用程序在 Windows Ink 工作区、Alt+Tab 任务切换程序中或悬停在任务栏上方时显示的缩略图。</summary>
+      <returns>此方法不返回值。</returns>
+      <param name="thumbnail">描述缩略图和用法的字节数组（请参阅“备注”）。</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNote(System.Int32)">
+      <summary>使注释在设备屏幕上可见。</summary>
+      <param name="noteViewId">要显示的注释的唯一标识符。</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNoteRelativeTo(System.Int32,System.Int32)">
+      <summary>使注释可见并将其放置在指定“定位”视图旁。</summary>
+      <param name="noteViewId">要显示的注释的唯一标识符。</param>
+      <param name="anchorNoteViewId">“定位”视图的 ID。</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNoteWithPlacement(System.Int32,Windows.Storage.Streams.IBuffer)">
+      <summary>使注释可见并按指定设置其位置数据（维度和位置）。</summary>
+      <param name="noteViewId">要显示的注释的唯一标识符。</param>
+      <param name="data">保留注释位置数据的字节的数组。</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.TrySetNoteSize(System.Int32,Windows.Foundation.Size)">
+      <summary>将指定注释的大小调整到所需维度。 如果因屏幕大小/空间问题不建议给定大小，则注释的大小不会更改。</summary>
+      <returns>如果调整了注释的大小，则为 true；如果因屏幕限制未调整其大小，则为 false。</returns>
+      <param name="noteViewId">要调整大小的注释的唯一标识符。</param>
+      <param name="size">注释的所需大小。</param>
+    </member><member name="T:Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs">
+      <summary>表示有关 NoteVisibilityChanged 事件的信息。</summary>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs.IsVisible">
+      <summary>指示注释（由 ViewId 属性指定）是否在设备屏幕上可见。</summary>
+      <returns>如果注释可见，则为 true；如果注释隐藏，则为 false。</returns>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs.ViewId">
+      <summary>已引发 NoteVisibilityChanged 事件的注释的唯一标识符。</summary>
+      <returns>注释 ID。</returns>
+    </member></members>
+</doc>

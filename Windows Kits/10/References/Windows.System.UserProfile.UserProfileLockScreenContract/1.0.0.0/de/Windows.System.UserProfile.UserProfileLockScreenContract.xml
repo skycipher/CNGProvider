@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.UserProfile.UserProfileLockScreenContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.System.UserProfile.LockScreen">
+      <summary>Stellt Eigenschaften und Methoden bereit, um das Ganzseitenbild zu verwalten, das als Sperrbildschirmhintergrund verwendet wird.</summary>
+    </member><member name="P:Windows.System.UserProfile.LockScreen.OriginalImageFile">
+      <summary>Ruft das aktuelle Sperrbildschirm-Image ab.</summary>
+      <returns>Der URI (Uniform Resource Identifier) des Sperrbildschirmimage.</returns>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.GetImageStream">
+      <summary>Ruft das aktuelle Sperrbildschirm-Image als Datenstream ab.</summary>
+      <returns>Der Stream, der die Bilddaten des Sperrbildschirms enthält.</returns>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.RequestSetImageFeedAsync(Windows.Foundation.Uri)">
+      <summary>Registriert einen RSS-Imagefeed, der als Bildschirmpräsentation für den gesperrten Bildschirm verwendet werden soll. (nur Windows 8.1)</summary>
+      <deprecated type="deprecate">RequestSetImageFeedAsync ist veraltet und funktioniert möglicherweise nicht auf allen Plattformen. Weitere Informationen finden Sie unter MSDN.</deprecated>
+      <returns>Einer der SetImageFeedResult-Werte.</returns>
+      <param name="syndicationFeedUri">Der URI (Uniform Resource Identifier) des RSS-Imagefeeds.</param>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.SetImageFileAsync(Windows.Storage.IStorageFile)">
+      <summary>Legt das Bild für den Sperrbildschirm aus einem StorageFile-Objekt fest.</summary>
+      <returns>Das Objekt, mit dem das Bild für den Sperrbildschirm festzulegen ist.</returns>
+      <param name="value">Das StorageFile-Objekt, das das neue Bild für den Sperrbildschirm enthält.</param>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.SetImageStreamAsync(Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>Legt das Bild für den Sperrbildschirm aus einem Stream fest.</summary>
+      <returns>Das Objekt, mit dem das Bild Sperrbildschirm festzulegen ist.</returns>
+      <param name="value">Der Stream, der die Bilddaten enthält.</param>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.TryRemoveImageFeed">
+      <summary>Hebt die Registrierung des Imagefeeds auf, der in der Sperrbildschirmpräsentation verwendet wird, und beendet die Präsentation. (nur Windows 8.1)</summary>
+      <deprecated type="deprecate">TryRemoveImageFeed ist veraltet und funktioniert möglicherweise nicht auf allen Plattformen. Weitere Informationen finden Sie unter MSDN.</deprecated>
+      <returns>True, wenn der Imagefeed deaktiviert wurde; andernfalls False.</returns>
+    </member></members>
+</doc>

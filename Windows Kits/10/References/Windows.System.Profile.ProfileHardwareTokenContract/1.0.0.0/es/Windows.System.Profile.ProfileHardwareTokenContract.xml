@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.Profile.ProfileHardwareTokenContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.System.Profile.HardwareIdentification">
+      <summary>Proporciona la capacidad de obtener un identificador de hardware que representa el hardware actual.</summary>
+    </member><member name="M:Windows.System.Profile.HardwareIdentification.GetPackageSpecificToken(Windows.Storage.Streams.IBuffer)">
+      <summary>Obtiene un identificador de hardware (ASHWID) que representa el hardware actual.</summary>
+      <returns>La información de identificador de hardware.</returns>
+      <param name="nonce">Los valores nonce criptográficos son opcionales. Se recomienda nonce cuando ASHWID debe comprobarse en la nube contra los ataques de reproducción. En los escenarios donde se desea un valor de seguridad (nonce), el servidor remoto debe generarlo de forma aleatoria y pasarlo a la aplicación cliente; a continuación, deberá comprobar si la signatura tiene el valor de seguridad esperado una vez se reciba el valor ASHWID desde el sistema cliente.</param>
+    </member><member name="T:Windows.System.Profile.HardwareToken">
+      <summary>Representa un token que contiene una identificación basada en hardware suficientemente única.</summary>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Certificate">
+      <summary>Obtiene el certificado que se usa para firmar el identificador y se usa para ayudar a comprobar la autenticidad de dicho identificador.</summary>
+      <returns>El certificado usado para firmar el identificador.</returns>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Id">
+      <summary>Obtiene el identificador de hardware que identifica el dispositivo.</summary>
+      <returns>El id. que identifica el dispositivo. Este búfer de bytes contiene un conjunto de identificadores que representan los diferentes componentes de hardware encontrados en el dispositivo.</returns>
+    </member><member name="P:Windows.System.Profile.HardwareToken.Signature">
+      <summary>Obtiene la firma digital del identificador de hardware que ayuda a comprobar la autenticidad del identificador devuelto.</summary>
+      <returns>Firma digital del identificador.</returns>
+    </member></members>
+</doc>

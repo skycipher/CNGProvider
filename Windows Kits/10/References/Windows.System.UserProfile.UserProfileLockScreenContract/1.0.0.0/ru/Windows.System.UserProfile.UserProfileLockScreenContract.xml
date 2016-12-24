@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.UserProfile.UserProfileLockScreenContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.System.UserProfile.LockScreen">
+      <summary>Предоставляет свойства и методы для управления полноэкранным изображением, которое используется в качестве фона экрана блокировки.</summary>
+    </member><member name="P:Windows.System.UserProfile.LockScreen.OriginalImageFile">
+      <summary>Получает текущее изображение экрана блокировки.</summary>
+      <returns>Универсальный код ресурса (URI) изображения экрана блокировки.</returns>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.GetImageStream">
+      <summary>Получает текущее изображение экрана блокировки в виде потока данных.</summary>
+      <returns>Поток, содержащий данные изображения экрана блокировки.</returns>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.RequestSetImageFeedAsync(Windows.Foundation.Uri)">
+      <summary>Регистрирует веб-канал изображений для использования в качестве слайд-шоу на экране блокировки. (только Windows 8.1)</summary>
+      <deprecated type="deprecate">Объект RequestSetImageFeedAsync устарел и может не работать на всех платформах. Подробнее см. в MSDN.</deprecated>
+      <returns>Одно из значений SetImageFeedResult.</returns>
+      <param name="syndicationFeedUri">Универсальный код ресурса (URI) веб-канала изображений.</param>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.SetImageFileAsync(Windows.Storage.IStorageFile)">
+      <summary>Задает текущее изображение экрана блокировки из объекта StorageFile.</summary>
+      <returns>Объект, используемый для задания изображения для экрана блокировки.</returns>
+      <param name="value">Объект StorageFile, содержащий новое изображение для экрана блокировки.</param>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.SetImageStreamAsync(Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>Задает текущее изображение экрана блокировки из потока данных.</summary>
+      <returns>Объект, используемый для задания изображения для экрана блокировки.</returns>
+      <param name="value">Поток, содержащий данные изображения.</param>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.TryRemoveImageFeed">
+      <summary>Отменяет регистрацию канала изображения, используемого в слайд-шоу экрана блокировки, останавливая слайд-шоу. (только Windows 8.1)</summary>
+      <deprecated type="deprecate">TryRemoveImageFeed устарел и может не работать на всех платформах. Подробнее см. в MSDN.</deprecated>
+      <returns>Значение true, если веб-канал изображения отключен; в противном случае — значение false.</returns>
+    </member></members>
+</doc>

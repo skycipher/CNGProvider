@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Globalization.GlobalizationJapanesePhoneticAnalyzerContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Globalization.JapanesePhoneme">
+      <summary>Представляет одно ключевое слово на японском (чтение), которое было извлечено JapanesePhoneticAnalyzer из японской строки.</summary>
+    </member><member name="P:Windows.Globalization.JapanesePhoneme.DisplayText">
+      <summary>Получает текст для отображения для данного японского слова.</summary>
+      <returns>Отображаемый текст этого японского слова. Это вложенная строка японской строки, изначально проанализированной JapanesePhoneticAnalyzer.</returns>
+    </member><member name="P:Windows.Globalization.JapanesePhoneme.IsPhraseStart">
+      <summary>Получает значение типа Boolean, которое указывает, является ли данное японское слово началом фразы.</summary>
+      <returns>Значение true, если японское слово является началом фразы, в противном случае — значение false.</returns>
+    </member><member name="P:Windows.Globalization.JapanesePhoneme.YomiText">
+      <summary>Получает чтение (произношение DisplayText) для данного японского слова.</summary>
+      <returns>Чтение (произношение DisplayText, представленное последовательностью символов Хирагана).</returns>
+    </member><member name="T:Windows.Globalization.JapanesePhoneticAnalyzer">
+      <summary>Считывает японскую строку, представляющую собой сочетание символов Кандзи и Хирагана, и возвращает коллекцию считанных данных из строки с переносом по словам.</summary>
+    </member><member name="M:Windows.Globalization.JapanesePhoneticAnalyzer.GetWords(System.String)">
+      <summary>Считывает японскую строку, представляющую собой сочетание символов Кандзи и Хирагана, и возвращает коллекцию считанных данных из строки с переносом по словам.</summary>
+      <returns>Коллекция объектов JapanesePhoneme, представляющих правильные чтения из строки с переносами слов.</returns>
+      <param name="input">Японская строка, являющаяся сочетанием символов Кандзи и символов Хирагана.</param>
+    </member><member name="M:Windows.Globalization.JapanesePhoneticAnalyzer.GetWords(System.String,System.Boolean)">
+      <summary>Считывает японскую строку, представляющую собой сочетание символов Кандзи и Хирагана, и возвращает коллекцию считанных данных из строки с переносом по словам. При необходимости использует стратегию Mono Ruby для разделения слов, состоящих из нескольких символов Кандзи, на несколько слов Кандзи.</summary>
+      <returns>Коллекция объектов JapanesePhoneme, представляющих правильные чтения из строки с переносами слов.</returns>
+      <param name="input">Японская строка, являющаяся сочетанием символов Кандзи и символов Хирагана.</param>
+      <param name="monoRuby">Задает использование стратегии переносов Mono Ruby. Если значение true, используется стратегия разбиения слов Mono Ruby. Mono Ruby пытается более агрессивно разбить сложные слова Кандзи на несколько слов Кандзи. Если значение false, Mono Ruby не используется.</param>
+    </member></members>
+</doc>

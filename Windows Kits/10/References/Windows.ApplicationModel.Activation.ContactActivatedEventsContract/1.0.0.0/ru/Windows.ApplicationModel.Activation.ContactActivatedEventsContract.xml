@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Activation.ContactActivatedEventsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs">
+      <summary>Предоставляет данные, когда приложение активируется для вызова контакта.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.Contact">
+      <summary>Получает контакт для вызова.</summary>
+      <returns>Контакта для вызова.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.Kind">
+      <summary>Получает тип активации.</summary>
+      <returns>Значение перечисления ActivationKind.Contact.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.PreviousExecutionState">
+      <summary>Получает состояние выполнения приложения перед его активацией.</summary>
+      <returns>Значение типа ApplicationExecutionState.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.ServiceId">
+      <summary>Получает идентификатор службы, используемой для вызова.</summary>
+      <returns>Идентификатор службы, используемой для вызова.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.ServiceUserId">
+      <summary>Получает идентификатор пользователя службы, используемой для вызова.</summary>
+      <returns>Идентификатор пользователя службы, используемой для вызова.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.SplashScreen">
+      <summary>Получает объект экрана-заставки, предоставляющий сведения о переходе от экрана-заставки к активированному приложению.</summary>
+      <returns>Объект, предоставляющий сведения об экране-заставке.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.Verb">
+      <summary>Получает выполняемое действие.</summary>
+      <returns>Выполняемое действие.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs">
+      <summary>Предоставляет данные, когда приложение активируется для отображения контакта на карте.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Address">
+      <summary>Получает адрес контакта для операции картирования.</summary>
+      <returns>Адрес контакта для операции картирования.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Contact">
+      <summary>Получает контакт для операции сопоставления.</summary>
+      <returns>Контакт для операции сопоставления.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Kind">
+      <summary>Получает тип активации.</summary>
+      <returns>Значение перечисления ActivationKind.Contact.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.PreviousExecutionState">
+      <summary>Получает состояние выполнения приложения перед его активацией.</summary>
+      <returns>Значение типа ApplicationExecutionState.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.SplashScreen">
+      <summary>Получает объект экрана-заставки, предоставляющий сведения о переходе от экрана-заставки к активированному приложению.</summary>
+      <returns>Объект, предоставляющий сведения об экране-заставке.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Verb">
+      <summary>Получает выполняемое действие.</summary>
+      <returns>Выполняемое действие.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs">
+      <summary>Предоставляет данные, когда приложение активируется для отправки сообщения контакту.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.Contact">
+      <summary>Получает контакт для сообщения.</summary>
+      <returns>Контакт для сообщения.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.Kind">
+      <summary>Получает тип активации.</summary>
+      <returns>Значение перечисления ActivationKind.Contact.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.PreviousExecutionState">
+      <summary>Получает состояние выполнения приложения перед его активацией.</summary>
+      <returns>Значение типа ApplicationExecutionState.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.ServiceId">
+      <summary>Получает идентификатор службы, используемой для сообщения.</summary>
+      <returns>Идентификатор службы, используемой для сообщения.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.ServiceUserId">
+      <summary>Получает идентификатор пользователя службы, используемой для сообщения.</summary>
+      <returns>Идентификатор пользователя службы, используемой для сообщения.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.SplashScreen">
+      <summary>Получает объект экрана-заставки, предоставляющий сведения о переходе от экрана-заставки к активированному приложению.</summary>
+      <returns>Объект, предоставляющий сведения об экране-заставке.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.Verb">
+      <summary>Получает выполняемое действие.</summary>
+      <returns>Выполняемое действие.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs">
+      <summary>Предоставляет данные в случаях, когда приложение активируется в связи с тем, что оно использует средство выбора контактов.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.ContactPickerUI">
+      <summary>Получает пользовательский интерфейс киноформата Letterbox средства выбора контактов, отображаемый, когда пользователь хочет выбрать контакты, предоставляемые приложением.</summary>
+      <returns>Получает пользовательский интерфейс киноформата Letterbox средства выбора контактов, отображаемый, когда пользователь хочет выбрать контакты, предоставляемые приложением.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.Kind">
+      <summary>Получает тип активации.</summary>
+      <returns>Одно из значений перечисления.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.PreviousExecutionState">
+      <summary>Получает состояние выполнения приложения перед его активацией.</summary>
+      <returns>Одно из значений перечисления.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.SplashScreen">
+      <summary>Получает объект экрана-заставки, предоставляющий сведения о переходе от экрана-заставки к активированному приложению.</summary>
+      <returns>Объект, предоставляющий сведения об экране-заставке.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs">
+      <summary>Предоставляет данные, когда приложение активируется для публикации контакта.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.Contact">
+      <summary>Получает контакт для записи блога.</summary>
+      <returns>Контакт для публикации.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.Kind">
+      <summary>Получает тип активации.</summary>
+      <returns>Значение перечисления ActivationKind.Contact.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.PreviousExecutionState">
+      <summary>Получает состояние выполнения приложения перед его активацией.</summary>
+      <returns>Значение типа ApplicationExecutionState.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.ServiceId">
+      <summary>Получает идентификатор службы, используемой для отправки.</summary>
+      <returns>Идентификатор службы, используемой для отправки.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.ServiceUserId">
+      <summary>Получает идентификатор пользователя службы, используемой для почты.</summary>
+      <returns>Идентификатор пользователя службы, используемой для почты.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.SplashScreen">
+      <summary>Получает объект экрана-заставки, предоставляющий сведения о переходе от экрана-заставки к активированному приложению.</summary>
+      <returns>Объект, предоставляющий сведения об экране-заставке.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.Verb">
+      <summary>Получает выполняемое действие.</summary>
+      <returns>Выполняемое действие.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs">
+      <summary>Предоставляет данные, когда приложение активируется для видеовызова контакта.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.Contact">
+      <summary>Получает контакт для видеовызова.</summary>
+      <returns>Контакт для видеовызова.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.Kind">
+      <summary>Получает тип активации.</summary>
+      <returns>Значение перечисления ActivationKind.Contact.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.PreviousExecutionState">
+      <summary>Получает состояние выполнения приложения перед его активацией.</summary>
+      <returns>Значение типа ApplicationExecutionState.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.ServiceId">
+      <summary>Получает идентификатор службы, используемой для видеовызова.</summary>
+      <returns>Идентификатор службы, используемой для видеовызова.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.ServiceUserId">
+      <summary>Получает идентификатор пользователя службы, используемой для видеовызова.</summary>
+      <returns>Идентификатор пользователя службы, используемой для видеовызова.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.SplashScreen">
+      <summary>Получает объект экрана-заставки, предоставляющий сведения о переходе от экрана-заставки к активированному приложению.</summary>
+      <returns>Объект, предоставляющий сведения об экране-заставке.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.Verb">
+      <summary>Получает выполняемое действие.</summary>
+      <returns>Выполняемое действие.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactActivatedEventArgs">
+      <summary>Предоставляет сведения об активированном событии, когда пользователь управляет контактом.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactActivatedEventArgs.Verb">
+      <summary>Получает действие, связанное с активированным контактом.</summary>
+      <returns>Действие, связанное с активированным контактом.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs">
+      <summary>Предоставляет данные, когда приложение активируется для вызова контакта.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs.Contact">
+      <summary>Получает контакт для вызова.</summary>
+      <returns>Контакта для вызова.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs.ServiceId">
+      <summary>Получает идентификатор службы, используемой для вызова.</summary>
+      <returns>Идентификатор службы, используемой для вызова.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs.ServiceUserId">
+      <summary>Получает идентификатор пользователя службы, используемой для вызова.</summary>
+      <returns>Идентификатор пользователя службы, используемой для вызова.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs">
+      <summary>Предоставляет данные, когда приложение активируется для отображения контакта на карте.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs.Address">
+      <summary>Получает адрес контакта для операции картирования.</summary>
+      <returns>Представляет адрес контакта для операции картирования.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs.Contact">
+      <summary>Получает контакт для операции сопоставления.</summary>
+      <returns>Контакт для операции сопоставления.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs">
+      <summary>Предоставляет данные, когда приложение активируется для отправки сообщения контакту.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs.Contact">
+      <summary>Получает контакт для сообщения.</summary>
+      <returns>Контакт для сообщения.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs.ServiceId">
+      <summary>Получает идентификатор службы, используемой для сообщения.</summary>
+      <returns>Идентификатор службы, используемой для сообщения.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs.ServiceUserId">
+      <summary>Получает идентификатор пользователя службы, используемой для сообщения.</summary>
+      <returns>Идентификатор пользователя службы, используемой для сообщения.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs">
+      <summary>Предоставляет данные в случаях, когда приложение активируется в связи с тем, что оно использует средство выбора контактов.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs.ContactPickerUI">
+      <summary>Пользовательский интерфейс киноформата Letterbox средства выбора контактов, отображаемый, когда пользователь хочет выбрать файлы или папки, предоставляемые приложением.</summary>
+      <returns>Пользовательский интерфейс киноформата Letterbox средства выбора контактов, отображаемый, когда пользователь хочет выбрать файлы или папки, предоставляемые приложением.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs">
+      <summary>Предоставляет данные, когда приложение активируется для публикации контакта.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs.Contact">
+      <summary>Получает контакт для записи блога.</summary>
+      <returns>Контакт для публикации.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs.ServiceId">
+      <summary>Получает идентификатор службы, используемой для отправки.</summary>
+      <returns>Идентификатор службы, используемой для отправки.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs.ServiceUserId">
+      <summary>Получает идентификатор пользователя службы, используемой для почты.</summary>
+      <returns>Идентификатор пользователя службы, используемой для почты.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactsProviderActivatedEventArgs">
+      <summary>Предоставляет сведения об активированном событии, которое возникает, когда пользователь управляет контактом, предоставленным приложением.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactsProviderActivatedEventArgs.Verb">
+      <summary>Получает действие, связанное с поставщиком активированных контактов.</summary>
+      <returns>Действие, связанное с поставщиком активированных контактов.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs">
+      <summary>Предоставляет данные, когда приложение активируется для видеовызова контакта.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs.Contact">
+      <summary>Получает контакт для видеовызова.</summary>
+      <returns>Контакт для видеовызова.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs.ServiceId">
+      <summary>Получает идентификатор службы, используемой для видеовызова.</summary>
+      <returns>Идентификатор службы, используемой для видеовызова.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs.ServiceUserId">
+      <summary>Получает идентификатор пользователя службы, используемой для видеовызова.</summary>
+      <returns>Идентификатор пользователя службы, используемой для видеовызова.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs">
+      <summary>Предоставляет данные, когда приложение активируется для вызова контакта.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.ActivatedOperation">
+      <summary>Получает операцию активации приложения.</summary>
+      <returns>Операция активации.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.Contact">
+      <summary>Получает контакт для вызова.</summary>
+      <returns>Контакта для вызова.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.Kind">
+      <summary>Получает тип активации.</summary>
+      <returns>Значение перечисления ActivationKind.Contact.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.PreviousExecutionState">
+      <summary>Получает состояние выполнения приложения перед его активацией.</summary>
+      <returns>Значение типа ApplicationExecutionState.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.ServiceId">
+      <summary>Получает идентификатор службы, используемой для вызова.</summary>
+      <returns>Идентификатор службы, используемой для вызова.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.ServiceUserId">
+      <summary>Получает идентификатор пользователя службы, используемой для вызова.</summary>
+      <returns>Идентификатор пользователя службы, используемой для вызова.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.SplashScreen">
+      <summary>Получает объект экрана-заставки, предоставляющий сведения о переходе от экрана-заставки к активированному приложению.</summary>
+      <returns>Объект, предоставляющий сведения об экране-заставке.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.Verb">
+      <summary>Получает выполняемое действие.</summary>
+      <returns>Выполняемое действие.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs">
+      <summary>Предоставляет данные, когда приложение активируется для отображения контакта на карте.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.ActivatedOperation">
+      <summary>Получает операцию активации приложения.</summary>
+      <returns>Операция активации.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Address">
+      <summary>Получает адрес контакта для операции картирования.</summary>
+      <returns>Адрес контакта для операции картирования.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Contact">
+      <summary>Получает контакт для операции сопоставления.</summary>
+      <returns>Контакт для операции сопоставления.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Kind">
+      <summary>Получает тип активации.</summary>
+      <returns>Значение перечисления ActivationKind.Contact.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.PreviousExecutionState">
+      <summary>Получает состояние выполнения приложения перед его активацией.</summary>
+      <returns>Значение типа ApplicationExecutionState.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.SplashScreen">
+      <summary>Получает объект экрана-заставки, предоставляющий сведения о переходе от экрана-заставки к активированному приложению.</summary>
+      <returns>Объект, предоставляющий сведения об экране-заставке.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Verb">
+      <summary>Получает выполняемое действие.</summary>
+      <returns>Выполняемое действие.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs">
+      <summary>Предоставляет данные, когда приложение активируется для отправки контакту сообщения.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.ActivatedOperation">
+      <summary>Получает операцию активации приложения.</summary>
+      <returns>Операция активации.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.Contact">
+      <summary>Получает контакт для сообщения.</summary>
+      <returns>Контакт для сообщения.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.Kind">
+      <summary>Получает тип активации.</summary>
+      <returns>Значение перечисления ActivationKind.Contact.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.PreviousExecutionState">
+      <summary>Получает состояние выполнения приложения перед его активацией.</summary>
+      <returns>Значение типа ApplicationExecutionState.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.ServiceId">
+      <summary>Получает идентификатор службы, используемой для сообщения.</summary>
+      <returns>Идентификатор службы, используемой для сообщения.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.ServiceUserId">
+      <summary>Получает идентификатор пользователя службы, используемой для сообщения.</summary>
+      <returns>Идентификатор пользователя службы, используемой для сообщения.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.SplashScreen">
+      <summary>Получает объект экрана-заставки, предоставляющий сведения о переходе от экрана-заставки к активированному приложению.</summary>
+      <returns>Объект, предоставляющий сведения об экране-заставке.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.Verb">
+      <summary>Получает выполняемое действие.</summary>
+      <returns>Выполняемое действие.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs">
+      <summary>Предоставляет данные в случаях, когда приложение активируется в связи с тем, что оно использует средство выбора контактов.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.ActivatedOperation">
+      <summary>Получает операцию активации приложения.</summary>
+      <returns>Операция активации.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.ContactPickerUI">
+      <summary>Получает пользовательский интерфейс киноформата Letterbox средства выбора контактов, отображаемый, когда пользователь хочет выбрать контакты, предоставляемые приложением.</summary>
+      <returns>Получает пользовательский интерфейс киноформата Letterbox средства выбора контактов, отображаемый, когда пользователь хочет выбрать контакты, предоставляемые приложением.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.Kind">
+      <summary>Получает тип активации.</summary>
+      <returns>Одно из значений перечисления.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.PreviousExecutionState">
+      <summary>Получает состояние выполнения приложения перед его активацией.</summary>
+      <returns>Одно из значений перечисления.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.SplashScreen">
+      <summary>Получает объект экрана-заставки, предоставляющий сведения о переходе от экрана-заставки к активированному приложению.</summary>
+      <returns>Объект, предоставляющий сведения об экране-заставке.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs">
+      <summary>Предоставляет данные, когда приложение активируется для публикации контакта.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.ActivatedOperation">
+      <summary>Получает операцию активации приложения.</summary>
+      <returns>Операция активации.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.Contact">
+      <summary>Получает контакт для записи блога.</summary>
+      <returns>Контакт для публикации.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.Kind">
+      <summary>Получает тип активации.</summary>
+      <returns>Значение перечисления ActivationKind.Contact.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.PreviousExecutionState">
+      <summary>Получает состояние выполнения приложения перед его активацией.</summary>
+      <returns>Значение типа ApplicationExecutionState.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.ServiceId">
+      <summary>Получает идентификатор службы, используемой для отправки.</summary>
+      <returns>Идентификатор службы, используемой для отправки.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.ServiceUserId">
+      <summary>Получает идентификатор пользователя службы, используемой для почты.</summary>
+      <returns>Идентификатор пользователя службы, используемой для почты.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.SplashScreen">
+      <summary>Получает объект экрана-заставки, предоставляющий сведения о переходе от экрана-заставки к активированному приложению.</summary>
+      <returns>Объект, предоставляющий сведения об экране-заставке.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.Verb">
+      <summary>Получает выполняемое действие.</summary>
+      <returns>Выполняемое действие.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs">
+      <summary>Предоставляет данные, когда приложение активируется для видеовызова контакта.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.ActivatedOperation">
+      <summary>Получает операцию активации приложения.</summary>
+      <returns>Операция активации.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.Contact">
+      <summary>Получает контакт для видеовызова.</summary>
+      <returns>Контакт для видеовызова.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.Kind">
+      <summary>Получает тип активации.</summary>
+      <returns>Значение перечисления ActivationKind.Contact.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.PreviousExecutionState">
+      <summary>Получает состояние выполнения приложения перед его активацией.</summary>
+      <returns>Значение типа ApplicationExecutionState.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.ServiceId">
+      <summary>Получает идентификатор службы, используемой для видеовызова.</summary>
+      <returns>Идентификатор службы, используемой для видеовызова.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.ServiceUserId">
+      <summary>Получает идентификатор пользователя службы, используемой для видеовызова.</summary>
+      <returns>Идентификатор пользователя службы, используемой для видеовызова.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.SplashScreen">
+      <summary>Получает объект экрана-заставки, предоставляющий сведения о переходе от экрана-заставки к активированному приложению.</summary>
+      <returns>Объект, предоставляющий сведения об экране-заставке.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.Verb">
+      <summary>Получает выполняемое действие.</summary>
+      <returns>Выполняемое действие.</returns>
+    </member></members>
+</doc>

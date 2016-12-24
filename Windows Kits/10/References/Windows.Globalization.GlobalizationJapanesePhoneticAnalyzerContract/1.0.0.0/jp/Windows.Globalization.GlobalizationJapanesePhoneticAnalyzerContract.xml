@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Globalization.GlobalizationJapanesePhoneticAnalyzerContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Globalization.JapanesePhoneme">
+      <summary>JapanesePhoneticAnalyzer によって日本語の文字列から抽出された、単一の日本語の単語 (1 つの reading) を表します。</summary>
+    </member><member name="P:Windows.Globalization.JapanesePhoneme.DisplayText">
+      <summary>この日本語の単語を表示するテキストを取得します。</summary>
+      <returns>この日本語の単語の表示テキスト。 これは JapanesePhoneticAnalyzer によって解析された日本語文字列の部分文字列です。</returns>
+    </member><member name="P:Windows.Globalization.JapanesePhoneme.IsPhraseStart">
+      <summary>この日本語の単語が語句の始まりであるかどうかを示すブール値を取得します。</summary>
+      <returns>日本語の単語が語句の始まりの場合は true。それ以外の場合は false。</returns>
+    </member><member name="P:Windows.Globalization.JapanesePhoneme.YomiText">
+      <summary>この日本語の単語の reading (DisplayText の発音) を取得します。</summary>
+      <returns>読み取り (ひらがなの配列で表される DisplayText の発音)。</returns>
+    </member><member name="T:Windows.Globalization.JapanesePhoneticAnalyzer">
+      <summary>漢字とひらがなの組み合わせである日本語の文字列を読み取り、単語を分割して適切に読み込まれた文字列のコレクションを返します。</summary>
+    </member><member name="M:Windows.Globalization.JapanesePhoneticAnalyzer.GetWords(System.String)">
+      <summary>漢字とひらがなの組み合わせである日本語の文字列を読み取り、単語を分割して適切に読み込まれた文字列のコレクションを返します。</summary>
+      <returns>単語を分割して適切に読み込まれた文字列を表す JapanesePhoneme オブジェクトのコレクション。</returns>
+      <param name="input">漢字とひらがなの組み合わせである日本語の文字列。</param>
+    </member><member name="M:Windows.Globalization.JapanesePhoneticAnalyzer.GetWords(System.String,System.Boolean)">
+      <summary>漢字とひらがなの組み合わせである日本語の文字列を読み取り、単語を分割して適切に読み込まれた文字列のコレクションを返します。 オプションとして、Mono Ruby の方法を使用して、複数の漢字を使った単語を、漢字を使った複数の単語に分割します。</summary>
+      <returns>単語を分割して適切に読み込まれた文字列を表す JapanesePhoneme オブジェクトのコレクション。</returns>
+      <param name="input">漢字とひらがなの組み合わせである日本語の文字列。</param>
+      <param name="monoRuby">単語分割方法 Mono Ruby の使用を指定します。 true の場合、単語分割方法 Mono Ruby が使用されます。 Mono Ruby は、可能な限り、複数の漢字を使った単語を、漢字を使った複数の単語に分割しようとします。false の場合、Mono Ruby は使用されません。</param>
+    </member></members>
+</doc>

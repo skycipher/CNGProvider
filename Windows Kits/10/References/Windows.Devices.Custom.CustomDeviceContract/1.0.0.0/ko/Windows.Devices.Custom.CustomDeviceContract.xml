@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Custom.CustomDeviceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Custom.CustomDevice">
+      <summary>사용자 지정 장치를 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.Custom.CustomDevice.InputStream">
+      <summary>입력 스트림입니다.</summary>
+      <returns>입력 스트림입니다.</returns>
+    </member><member name="P:Windows.Devices.Custom.CustomDevice.OutputStream">
+      <summary>출력 스트림입니다.</summary>
+      <returns>출력 스트림입니다.</returns>
+    </member><member name="M:Windows.Devices.Custom.CustomDevice.FromIdAsync(System.String,Windows.Devices.Custom.DeviceAccessMode,Windows.Devices.Custom.DeviceSharingMode)">
+      <summary>지정된 DeviceInformation.Id에 대한 CustomDevice 개체를 비동기적으로 만듭니다.</summary>
+      <capability type="optical">CD, DVD 및 블루레이 등 광학 디스크 드라이브의 기능에 액세스하는 응용 프로그램에 필요합니다.</capability>
+      <returns>사용자 지정 장치를 반환합니다.</returns>
+      <param name="deviceId">장치의 DeviceInformation.Id입니다.</param>
+      <param name="desiredAccess">원하는 액세스입니다.</param>
+      <param name="sharingMode">공유 모드입니다.</param>
+    </member><member name="M:Windows.Devices.Custom.CustomDevice.GetDeviceSelector(System.Guid)">
+      <summary>장치 선택기를 가져옵니다.</summary>
+      <returns>장치 선택기입니다.</returns>
+      <param name="classGuid">장치 선택기를 만들려는 장치 인터페이스의 장치 인터페이스 클래스 GUID입니다.</param>
+    </member><member name="M:Windows.Devices.Custom.CustomDevice.SendIOControlAsync(Windows.Devices.Custom.IIOControlCode,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)">
+      <summary>IO 컨트롤 코드를 보냅니다.</summary>
+      <returns>비동기 작업의 결과입니다.</returns>
+      <param name="ioControlCode">IO 컨트롤 코드입니다.</param>
+      <param name="inputBuffer">입력 버퍼입니다.</param>
+      <param name="outputBuffer">출력 버퍼입니다.</param>
+    </member><member name="M:Windows.Devices.Custom.CustomDevice.TrySendIOControlAsync(Windows.Devices.Custom.IIOControlCode,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)">
+      <summary>IO 컨트롤 코드를 보냅니다. 반환 값은 작업의 성공 여부를 나타냅니다.</summary>
+      <returns>작업이 성공했으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="ioControlCode">IO 컨트롤 코드입니다.</param>
+      <param name="inputBuffer">입력 버퍼입니다.</param>
+      <param name="outputBuffer">출력 버퍼입니다.</param>
+    </member><member name="T:Windows.Devices.Custom.DeviceAccessMode">
+      <summary>장치 액세스 모드입니다.</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceAccessMode.Read">
+      <summary>읽기 권한입니다.</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceAccessMode.ReadWrite">
+      <summary>읽기/쓰기 액세스입니다.</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceAccessMode.Write">
+      <summary>쓰기 권한입니다.</summary>
+    </member><member name="T:Windows.Devices.Custom.DeviceSharingMode">
+      <summary>장치 공유 모드입니다.</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceSharingMode.Exclusive">
+      <summary>장치가 단독으로 사용됩니다.</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceSharingMode.Shared">
+      <summary>장치가 공유됩니다.</summary>
+    </member><member name="T:Windows.Devices.Custom.IIOControlCode">
+      <summary>IO 컨트롤 코드를 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.AccessMode">
+      <summary>액세스 모드입니다.</summary>
+      <returns>액세스 모드입니다.</returns>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.BufferingMethod">
+      <summary>버퍼링 방법입니다.</summary>
+      <returns>버퍼링 방법입니다.</returns>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.ControlCode">
+      <summary>컨트롤 코드입니다.</summary>
+      <returns>컨트롤 코드입니다.</returns>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.DeviceType">
+      <summary>장치 유형입니다.</summary>
+      <returns>장치 유형입니다.</returns>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.Function">
+      <summary>함수입니다.</summary>
+      <returns>함수입니다.</returns>
+    </member><member name="T:Windows.Devices.Custom.IOControlAccessMode">
+      <summary>액세스 모드를 식별합니다.</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlAccessMode.Any">
+      <summary>모든 모드입니다.</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlAccessMode.Read">
+      <summary>읽기 모드입니다.</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlAccessMode.ReadWrite">
+      <summary>읽기/쓰기 모드입니다.</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlAccessMode.Write">
+      <summary>쓰기 모드입니다.</summary>
+    </member><member name="T:Windows.Devices.Custom.IOControlBufferingMethod">
+      <summary>버퍼링 메서드를 식별합니다.</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlBufferingMethod.Buffered">
+      <summary>Buffered</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlBufferingMethod.DirectInput">
+      <summary>직접 입력입니다.</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlBufferingMethod.DirectOutput">
+      <summary>직접 출력입니다.</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlBufferingMethod.Neither">
+      <summary>둘 다 아닙니다.</summary>
+    </member><member name="T:Windows.Devices.Custom.IOControlCode">
+      <summary>컨트롤 코드를 나타냅니다.</summary>
+    </member><member name="M:Windows.Devices.Custom.IOControlCode.#ctor(System.UInt16,System.UInt16,Windows.Devices.Custom.IOControlAccessMode,Windows.Devices.Custom.IOControlBufferingMethod)">
+      <summary>컨트롤 코드입니다.</summary>
+      <param name="deviceType">장치 유형입니다.</param>
+      <param name="function">장치 기능입니다.</param>
+      <param name="accessMode">액세스 모드입니다.</param>
+      <param name="bufferingMethod">버퍼링 방법입니다.</param>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.AccessMode">
+      <summary>액세스 모드입니다.</summary>
+      <returns>액세스 모드입니다.</returns>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.BufferingMethod">
+      <summary>버퍼링 방법입니다.</summary>
+      <returns>버퍼링 방법입니다.</returns>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.ControlCode">
+      <summary>컨트롤 코드입니다.</summary>
+      <returns>컨트롤 코드입니다.</returns>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.DeviceType">
+      <summary>장치 유형입니다.</summary>
+      <returns>장치 유형입니다.</returns>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.Function">
+      <summary>함수입니다.</summary>
+      <returns>함수입니다.</returns>
+    </member><member name="T:Windows.Devices.Custom.KnownDeviceTypes">
+      <summary>알려진 장치 유형을 나타냅니다.</summary>
+    </member><member name="P:Windows.Devices.Custom.KnownDeviceTypes.Unknown">
+      <summary>장치 공급업체에서 정의합니다.</summary>
+      <returns>장치 공급업체에서 정의합니다.</returns>
+    </member></members>
+</doc>

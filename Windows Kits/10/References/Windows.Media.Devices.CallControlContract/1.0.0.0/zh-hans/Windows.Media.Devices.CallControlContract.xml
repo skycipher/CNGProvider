@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.Devices.CallControlContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Media.Devices.CallControl">
+      <summary>表示用于在电话服务相关的设备上处理调用的属性、命令和事件。</summary>
+    </member><member name="P:Windows.Media.Devices.CallControl.HasRinger">
+      <summary>指示电话设备是否具有内置铃声。</summary>
+      <returns>一个 Boolean 值，如果电话设备有铃声，该值为 True；如果没有，该值为 False。</returns>
+    </member><member name="E:Windows.Media.Devices.CallControl.AnswerRequested">
+      <summary>在设备接收回答电话的请求时发生。</summary>
+    </member><member name="E:Windows.Media.Devices.CallControl.AudioTransferRequested">
+      <summary>在设备接收对音频转换的请求时发生。</summary>
+    </member><member name="E:Windows.Media.Devices.CallControl.DialRequested">
+      <summary>在通过设备拨号时发生。</summary>
+    </member><member name="E:Windows.Media.Devices.CallControl.HangUpRequested">
+      <summary>在设备接收挂电话的请求时发生。</summary>
+    </member><member name="E:Windows.Media.Devices.CallControl.KeypadPressed">
+      <summary>在按下设备上的一个键盘按钮时发生。</summary>
+    </member><member name="E:Windows.Media.Devices.CallControl.RedialRequested">
+      <summary>在设备接收重拨请求时发生。</summary>
+    </member><member name="M:Windows.Media.Devices.CallControl.EndCall(System.UInt64)">
+      <summary>结束指定的调用。</summary>
+      <param name="callToken">特定调用的唯一标识符。</param>
+    </member><member name="M:Windows.Media.Devices.CallControl.FromId(System.String)">
+      <summary>返回表示由 DeviceInformation ID 指定的音频通信设备的 CallControl 类。</summary>
+      <returns>表示指定音频通讯设备的类。</returns>
+      <param name="deviceId">指定的音频通信设备的 DeviceInformation ID。</param>
+    </member><member name="M:Windows.Media.Devices.CallControl.GetDefault">
+      <summary>返回表示默认音频通信设备的 CallControl 类。</summary>
+      <returns>表示默认音频通讯设备的类。</returns>
+    </member><member name="M:Windows.Media.Devices.CallControl.IndicateActiveCall(System.UInt64)">
+      <summary>指示指定的调用现在处于活动状态。</summary>
+      <param name="callToken">特定调用的唯一标识符。</param>
+    </member><member name="M:Windows.Media.Devices.CallControl.IndicateNewIncomingCall(System.Boolean,System.String)">
+      <summary>通知设备有传入的调用。</summary>
+      <returns>唯一标识此调用的调用标记。</returns>
+      <param name="enableRinger">指定设备是否应激活其内置铃声。</param>
+      <param name="callerId">指定传入调用方 ID 的数字字符串 此参数可以为 null 且通常用于多种 VoIP 调用。</param>
+    </member><member name="M:Windows.Media.Devices.CallControl.IndicateNewOutgoingCall">
+      <summary>更新设备指示器以指示传出调用。</summary>
+      <returns>唯一标识此调用的调用标记。</returns>
+    </member><member name="T:Windows.Media.Devices.CallControlEventHandler">
+      <summary>处理 AnswerRequested 和 AudioTransferRequested 事件。</summary>
+      <param name="sender">引发了事件的 CallControl 对象。</param>
+    </member><member name="T:Windows.Media.Devices.DialRequestedEventArgs">
+      <summary>包含 DialRequested 事件的信息。</summary>
+    </member><member name="P:Windows.Media.Devices.DialRequestedEventArgs.Contact">
+      <summary>返回所拨打的联系人。</summary>
+      <returns>联系人。</returns>
+    </member><member name="M:Windows.Media.Devices.DialRequestedEventArgs.Handled">
+      <summary>指示 DialRequested 事件已处理。</summary>
+    </member><member name="T:Windows.Media.Devices.DialRequestedEventHandler">
+      <summary>处理 DialRequested 事件。</summary>
+      <param name="sender">引发了事件的 CallControl 对象。</param>
+      <param name="e">包含事件信息的类。</param>
+    </member><member name="T:Windows.Media.Devices.KeypadPressedEventArgs">
+      <summary>包含 KeypadPressed 事件的信息。</summary>
+    </member><member name="P:Windows.Media.Devices.KeypadPressedEventArgs.TelephonyKey">
+      <summary>返回在设备上所按的键盘按钮的值。</summary>
+      <returns>键。 TelephonyKey 枚举的值之一。</returns>
+    </member><member name="T:Windows.Media.Devices.KeypadPressedEventHandler">
+      <summary>处理 KeypadPressed 事件。</summary>
+      <param name="sender">引发了事件的 CallControl 对象。</param>
+      <param name="e">包含事件信息的类。</param>
+    </member><member name="T:Windows.Media.Devices.RedialRequestedEventArgs">
+      <summary>包含 RedialRequested 事件的信息。</summary>
+    </member><member name="M:Windows.Media.Devices.RedialRequestedEventArgs.Handled">
+      <summary>指示 RedialRequested 事件已处理。</summary>
+    </member><member name="T:Windows.Media.Devices.RedialRequestedEventHandler">
+      <summary>处理 RedialRequested 事件。</summary>
+      <param name="sender">引发了事件的 CallControl 对象。</param>
+      <param name="e">包含事件信息的类。</param>
+    </member><member name="T:Windows.Media.Devices.TelephonyKey">
+      <summary>指示在电话设备上按下的键盘按钮。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.A">
+      <summary>键盘按钮 A。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.B">
+      <summary>键盘按钮 B。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.C">
+      <summary>键盘按钮 C。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D">
+      <summary>键盘按钮 D。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D0">
+      <summary>0 键盘按钮。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D1">
+      <summary>1 键盘按钮。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D2">
+      <summary>2 键盘按钮。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D3">
+      <summary>3 键盘按钮。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D4">
+      <summary>4 键盘按钮。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D5">
+      <summary>5 键盘按钮。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D6">
+      <summary>6 键盘按钮。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D7">
+      <summary>7 键盘按钮。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D8">
+      <summary>8 键盘按钮。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D9">
+      <summary>9 键盘按钮。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.Pound">
+      <summary># 键盘按钮。</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.Star">
+      <summary>* 键盘按钮。</summary>
+    </member></members>
+</doc>

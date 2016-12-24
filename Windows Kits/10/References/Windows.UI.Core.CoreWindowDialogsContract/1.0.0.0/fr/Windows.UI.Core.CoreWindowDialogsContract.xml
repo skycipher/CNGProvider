@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.Core.CoreWindowDialogsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.Core.CoreWindowDialog">
+      <summary>Définit une boîte de dialogue enfant d'une fenêtre d'application.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowDialog.#ctor">
+      <summary>Crée une instance par défaut de la classe CoreWindowDialog.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowDialog.#ctor(System.String)">
+      <summary>Crée une instance de la classe CoreWindowDialog avec le titre fourni.</summary>
+      <param name="title">Titre de la boîte de dialogue.</param>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.BackButtonCommand">
+      <summary>Obtient ou définit le délégué appelé lorsque le bouton Précédent de la boîte de dialogue est sélectionné.</summary>
+      <returns>Délégué appelé lorsque le bouton Précédent de la boîte de dialogue est sélectionné.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.CancelCommandIndex">
+      <summary>Obtient et définit la valeur d'index de commande pour l'opération d'annulation de boîte de dialogue.</summary>
+      <returns>Valeur d'index de commande pour l'opération d'annulation de boîte de dialogue.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.Commands">
+      <summary>Obtient l'ensemble des commandes d'interface utilisateur disponibles dans la boîte de dialogue.</summary>
+      <returns>Ensemble de commandes d'interface utilisateur disponibles dans la boîte de dialogue.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.DefaultCommandIndex">
+      <summary>Obtient ou définit l'index de la commande par défaut de la fenêtre de la boîte de dialogue.</summary>
+      <returns>Valeur d'index de la commande par défaut de la fenêtre de la boîte de dialogue (OK, par exemple).</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.IsInteractionDelayed">
+      <summary>Obtient ou définit une valeur qui indique si tout message d'événement d'interaction de l'interface utilisateur est légèrement différé ou pas. Ce délai empêche un utilisateur d'appeler une action par erreur dans la fenêtre de la boîte de dialogue.</summary>
+      <returns>true si un délai fractionnaire est introduit dans les interactions avec la boîte de dialogue ; false si ce n'est pas le cas.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.MaxSize">
+      <summary>Obtient la taille maximale de la boîte de dialogue.</summary>
+      <returns>Taille maximale de la boîte de dialogue, en pixels.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.MinSize">
+      <summary>Obtient la taille minimale de la boîte de dialogue.</summary>
+      <returns>Taille minimale de la boîte de dialogue, en pixels.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.Title">
+      <summary>Obtient ou définit le titre de la boîte de dialogue.</summary>
+      <returns>Titre de la boîte de dialogue.</returns>
+    </member><member name="E:Windows.UI.Core.CoreWindowDialog.Showing">
+      <summary>Est déclenché lorsque la boîte de dialogue s'affiche.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowDialog.ShowAsync">
+      <summary>Affiche la boîte de dialogue et attend de façon asynchrone une action de l'utilisateur.</summary>
+      <returns>Action exécutée par l'utilisateur dans la boîte de dialogue, ainsi que les informations sur l'action.</returns>
+    </member><member name="T:Windows.UI.Core.CoreWindowFlyout">
+      <summary>Définit un menu volant enfant d'une fenêtre d'application.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowFlyout.#ctor(Windows.Foundation.Point)">
+      <summary>Crée une instance de la classe CoreWindowFlyout à la position fournie.</summary>
+      <param name="position">Position des pixels à l'écran où le menu volant doit commencer. La position fournit le coin supérieur gauche du menu volant.</param>
+    </member><member name="M:Windows.UI.Core.CoreWindowFlyout.#ctor(Windows.Foundation.Point,System.String)">
+      <summary>Crée une instance de la classe CoreWindowFlyout à la position spécifiée avec le titre fourni.</summary>
+      <param name="position">Position des pixels à l'écran où le menu volant doit commencer. La position fournit le coin supérieur gauche du menu volant.</param>
+      <param name="title">Titre du menu volant.</param>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.BackButtonCommand">
+      <summary>Obtient ou définit le délégué appelé lorsque le bouton Précédent du menu volant est sélectionné.</summary>
+      <returns>Délégué appelé lorsque le bouton Précédent du menu volant est sélectionné.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.Commands">
+      <summary>Obtient l'ensemble des commandes d'interface utilisateur disponibles dans le menu volant.</summary>
+      <returns>Ensemble des commandes d'interface utilisateur disponibles dans le menu volant.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.DefaultCommandIndex">
+      <summary>Obtient ou définit l'index de la commande par défaut de la fenêtre du menu volant.</summary>
+      <returns>Valeur d'index de la commande par défaut de la fenêtre du menu volant (OK, par exemple).</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.IsInteractionDelayed">
+      <summary>Obtient ou définit une valeur qui indique si tout message d'événement d'interaction de l'interface utilisateur est légèrement différé ou pas. Ce délai empêche un utilisateur d'appeler une action par erreur dans la fenêtre du menu volant.</summary>
+      <returns>true si un délai fractionnaire est introduit dans les interactions avec le flyout ; false si ce n'est pas le cas.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.MaxSize">
+      <summary>Obtient la taille maximale du menu volant.</summary>
+      <returns>Taille maximale du menu volant, en pixels.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.MinSize">
+      <summary>Obtient la taille minimale du menu volant.</summary>
+      <returns>Taille minimale du menu volant, en pixels.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.Title">
+      <summary>Obtient ou définit le titre du menu volant.</summary>
+      <returns>Titre du menu volant.</returns>
+    </member><member name="E:Windows.UI.Core.CoreWindowFlyout.Showing">
+      <summary>Est déclenché lorsque le menu volant s'affiche.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowFlyout.ShowAsync">
+      <summary>Affiche le menu volant et attend de façon asynchrone une action de l'utilisateur.</summary>
+      <returns>Action exécutée par l'utilisateur dans le menu volant, ainsi que les informations sur l'action.</returns>
+    </member><member name="T:Windows.UI.Core.CoreWindowPopupShowingEventArgs">
+      <summary>Définit une méthode pour définir la taille voulue d'une fenêtre contextuelle.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowPopupShowingEventArgs.SetDesiredSize(Windows.Foundation.Size)">
+      <summary>Définit la taille souhaitée de la fenêtre contextuelle.</summary>
+      <param name="value">Taille souhaitée de la fenêtre contextuelle.</param>
+    </member></members>
+</doc>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+This file defines the validation rules which is used to validate the appx manifest.
+
+Rule   - Each has a unique, case-insensitive name. It defines operation which applies 
+         to all the rule details it contains. It may have a message which will be 
+         shown in the report when failure is detected.
+
+Detail - One rule must contain at least one detail block. Each detail block must have
+         defined expected result. The detail block may have a message which will be 
+         shown in the report when failure is detected.
+         
+Constant - Defined in the Constant table, each has a unique, case-insensitive name and 
+         a string value.
+         
+Group -  Each group contains one or more rules and sub-groups. Each group must specify 
+         the logic value which is either 'AND' or 'OR'. The result of a group test is
+         the result after applying the logic operation to the results of the contained 
+         rules and sub-groups.
+
+NOTE:  - If a package may contain multiple apps, we might need to define rule scope to specify
+one rule should be applied to each app in the package.
+       - There are two context data availabe. They are useful to display extra information in 
+the message when error occurs. 
+APP_NAME    -  The application name. 
+RULE_DATA   -  Its usage depends on the operation, e.g., SearchMultiItems sets the search item 
+               to it when search operation fails.
+PACKAGE_NAME - The package name.
+-->
+<RULES xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ManifestValidationRules.xsd">
+  <RULE NAME="CheckForResourceIdExistence" OPERATION="CHECK_FOR_EXISTENCE">
+    <DETAIL EXPECTED_RESULT="NOT_PRESENT">
+      <XPATH_QUERY PATH="ns:Identity/@ResourceId"/>
+      <MESSAGE_IF_FAIL ID="AppXManifestValidation_ResourceId"/>
+    </DETAIL>
+  </RULE>
+    <RULE NAME="CheckFileAssociations" OPERATION="SEARCH_MULTIITEMS">
+    <DETAIL EXPECTED_RESULT="ALL_NOT_FOUND">
+      <SEARCH_MULTIITEMS>
+        <XPATH_QUERY PATH="ns:Applications/ns:Application/ns:Extensions/ns:Extension[@Category='windows.fileTypeAssociation']/ns:FileTypeAssociation/ns:SupportedFileTypes/ns:FileType/@ContentType"/>
+      </SEARCH_MULTIITEMS>
+      <SEARCH_FROM>
+        <STRING VALUE="application/octet-stream"/>
+        <STRING VALUE="application/force-download"/>
+        <STRING VALUE="application/x-msdownload"/>
+        <STRING VALUE="application/unknown"/>
+      </SEARCH_FROM>
+      <MESSAGE_IF_FAIL ID="AppXManifestValidation_FileAssociations" PARAM="$(CONTEXT.APP_NAME)|$(CONTEXT.RULE_DATA)"/>
+    </DETAIL>
+  </RULE>
+  <RULE NAME="CheckFileExtensionCount" OPERATION="COMPARISON">
+    <DETAIL EXPECTED_RESULT="SMALLER_OR_EQUAL">
+      <COMPARE_SOURCE>
+        <COUNT>
+          <XPATH_QUERY PATH="ns:Applications/ns:Application/ns:Extensions/ns:Extension[@Category='windows.fileTypeAssociation']/ns:FileTypeAssociation/ns:SupportedFileTypes/ns:FileType"/>
+        </COUNT>
+      </COMPARE_SOURCE>
+      <COMPARE_TARGET>
+        <STRING VALUE="$(CONSTANT.MAX_FILE_EXTENSION_NUMBER)"/>
+      </COMPARE_TARGET>
+      <COMPARE_TYPE VALUE="NUMBER"/>
+      <MESSAGE_IF_FAIL ID="AppXManifestValidation_FileExtensionCount" PARAM="$(CONSTANT.MAX_FILE_EXTENSION_NUMBER)"/>
+    </DETAIL>
+  </RULE>
+  <RULE NAME="CheckProtocolCount" OPERATION="COMPARISON">
+    <DETAIL EXPECTED_RESULT="SMALLER_OR_EQUAL">
+      <COMPARE_SOURCE>
+        <COUNT>
+          <XPATH_QUERY PATH="ns:Applications/ns:Application/ns:Extensions/ns:Extension[@Category='windows.protocol']/ns:Protocol"/>
+        </COUNT>
+      </COMPARE_SOURCE>
+      <COMPARE_TARGET>
+        <STRING VALUE="$(CONSTANT.MAX_PROTOCOL_NUMBER)"/>
+      </COMPARE_TARGET>
+      <COMPARE_TYPE VALUE="NUMBER"/>
+      <MESSAGE_IF_FAIL ID="AppXManifestValidation_ProtocolCount" PARAM="$(CONSTANT.MAX_PROTOCOL_NUMBER)"/>
+    </DETAIL>
+  </RULE>
+  <RULE NAME="CheckForVCLibs120PreviewExistence" OPERATION="SEARCH">
+    <DETAIL EXPECTED_RESULT="NOT_FOUND">
+      <SEARCH_ITEM>
+        <STRING VALUE="Microsoft.VCLibs.120.00.Preview"/>
+      </SEARCH_ITEM>
+      <SEARCH_FROM>
+        <XPATH_QUERY PATH="ns:Dependencies/ns:PackageDependency/@Name"/>
+      </SEARCH_FROM>
+      <MESSAGE_IF_FAIL ID="AppXManifestValidation_FrameworkDependency" PARAM="$(CONTEXT.PACKAGE_NAME)|Microsoft.VCLibs.120.00.Preview"/>
+    </DETAIL>
+  </RULE>
+  <RULE NAME="CheckForWinJS20PreviewExistence" OPERATION="SEARCH">
+    <DETAIL EXPECTED_RESULT="NOT_FOUND">
+      <SEARCH_ITEM>
+        <STRING VALUE="Microsoft.WinJS.2.0.Preview"/>
+      </SEARCH_ITEM>
+      <SEARCH_FROM>
+        <XPATH_QUERY PATH="ns:Dependencies/ns:PackageDependency/@Name"/>
+      </SEARCH_FROM>
+      <MESSAGE_IF_FAIL ID="AppXManifestValidation_FrameworkDependency" PARAM="$(CONTEXT.PACKAGE_NAME)|Microsoft.WinJS.2.0.Preview"/>
+    </DETAIL>
+  </RULE>
+    <RULE NAME="CheckWindowsProtocol" OPERATION="SEARCH">
+    <DETAIL EXPECTED_RESULT="NOT_FOUND">
+      <SEARCH_ITEM>
+        <XPATH_QUERY PATH="ns:Applications/ns:Application/ns:Extensions/ns:Extension[@Category='windows.protocol']/ns:Protocol/@Name"/>
+      </SEARCH_ITEM>
+      <SEARCH_FROM>
+        <STRING VALUE="ms-settings"/>
+      </SEARCH_FROM>
+    </DETAIL>
+    <MESSAGE_IF_FAIL ID="AppXManifestValidation_BadWindowsProtocol"/>
+  </RULE>
+  <!-- Framework Package Dependency Test - Enforce appx package take right dependencies by referring to the matrix below.
+  Framework                         | UAP Supported   
+  Microsoft.Advertising.Xaml        | Yes (no check needed)
+  Microsoft.Media.PlayReadyClient   | No           
+  Microsoft.Media.PlayReadyClient.2 | No
+  Microsoft.NET.Native.Framework.1.0| Yes (no check needed)
+  Microsoft.NET.Native.Runtime.1.0  | Yes (no check needed)
+  Microsoft.NET.Native.Framework.1.1| Yes (no check needed)
+  Microsoft.NET.Native.Runtime.1.1  | Yes (no check needed)
+  Microsoft.VCLibs.110.00           | No
+  Microsoft.VCLibs.120.00           | No
+  Microsoft.VCLibs.120.00.Universal | Yes (no check needed)
+  Microsoft.VCLibs.140.00           | Yes (no check needed)
+  Microsoft.WinJS.1.0               | No           
+  Microsoft.WinJS.2.0               | No   
+  -->
+  <RULE NAME="CheckForWinJS10Existence" OPERATION="SEARCH">
+    <DETAIL EXPECTED_RESULT="NOT_FOUND">
+      <SEARCH_ITEM>
+        <STRING VALUE="Microsoft.WinJS.1.0"/>
+      </SEARCH_ITEM>
+      <SEARCH_FROM>
+        <XPATH_QUERY PATH="ns:Dependencies/ns:PackageDependency/@Name"/>
+      </SEARCH_FROM>
+    </DETAIL>
+    <MESSAGE_IF_FAIL ID="AppXManifestValidation_FrameworkDependency" PARAM="$(CONTEXT.PACKAGE_NAME)|Microsoft.WinJS.1.0"/>
+  </RULE>
+  <RULE NAME="CheckForPlayReadyExistence" OPERATION="SEARCH">
+    <DETAIL EXPECTED_RESULT="NOT_FOUND">
+      <SEARCH_ITEM>
+        <STRING VALUE="Microsoft.Media.PlayReadyClient"/>
+      </SEARCH_ITEM>
+      <SEARCH_FROM>
+        <XPATH_QUERY PATH="ns:Dependencies/ns:PackageDependency/@Name"/>
+      </SEARCH_FROM>
+    </DETAIL>
+    <MESSAGE_IF_FAIL ID="AppXManifestValidation_FrameworkDependency" PARAM="$(CONTEXT.PACKAGE_NAME)|Microsoft.Media.PlayReadyClient"/>
+  </RULE>
+  <RULE NAME="CheckForPlayReady2Existence" OPERATION="SEARCH">
+    <DETAIL EXPECTED_RESULT="NOT_FOUND">
+      <SEARCH_ITEM>
+        <STRING VALUE="Microsoft.Media.PlayReadyClient.2"/>
+      </SEARCH_ITEM>
+      <SEARCH_FROM>
+        <XPATH_QUERY PATH="ns:Dependencies/ns:PackageDependency/@Name"/>
+      </SEARCH_FROM>
+    </DETAIL>
+    <MESSAGE_IF_FAIL ID="AppXManifestValidation_FrameworkDependency" PARAM="$(CONTEXT.PACKAGE_NAME)|Microsoft.Media.PlayReadyClient.2"/>
+  </RULE>
+  <RULE NAME="CheckForVCLibs120Existence" OPERATION="SEARCH">
+    <DETAIL EXPECTED_RESULT="NOT_FOUND">
+      <SEARCH_ITEM>
+        <STRING VALUE="Microsoft.VCLibs.120.00"/>
+      </SEARCH_ITEM>
+      <SEARCH_FROM>
+        <XPATH_QUERY PATH="ns:Dependencies/ns:PackageDependency/@Name"/>
+      </SEARCH_FROM>
+    </DETAIL>
+    <MESSAGE_IF_FAIL ID="AppXManifestValidation_FrameworkDependency" PARAM="$(CONTEXT.PACKAGE_NAME)|Microsoft.VCLibs.120.00"/>
+  </RULE>
+  <RULE NAME="CheckForVCLibs110Existence" OPERATION="SEARCH">
+    <DETAIL EXPECTED_RESULT="NOT_FOUND">
+      <SEARCH_ITEM>
+        <STRING VALUE="Microsoft.VCLibs.110.00"/>
+      </SEARCH_ITEM>
+      <SEARCH_FROM>
+        <XPATH_QUERY PATH="ns:Dependencies/ns:PackageDependency/@Name"/>
+      </SEARCH_FROM>
+    </DETAIL>
+    <MESSAGE_IF_FAIL ID="AppXManifestValidation_FrameworkDependency" PARAM="$(CONTEXT.PACKAGE_NAME)|Microsoft.VCLibs.110.00"/>
+  </RULE>
+  <RULE NAME="CheckForWinJS20Existence" OPERATION="SEARCH">
+    <DETAIL EXPECTED_RESULT="NOT_FOUND">
+      <SEARCH_ITEM>
+        <STRING VALUE="Microsoft.WinJS.2.0"/>
+      </SEARCH_ITEM>
+      <SEARCH_FROM>
+        <XPATH_QUERY PATH="ns:Dependencies/ns:PackageDependency/@Name"/>
+      </SEARCH_FROM>
+    </DETAIL>
+    <MESSAGE_IF_FAIL ID="AppXManifestValidation_FrameworkDependency" PARAM="$(CONTEXT.PACKAGE_NAME)|Microsoft.WinJS.2.0"/>
+  </RULE>
+  <!-- End of Framework Package Dependency Test -->
+  <GROUP NAME="CheckForFramework" LOGIC="OR">
+    <RULE NAME="CheckForFrameworkExistence" OPERATION="CHECK_FOR_EXISTENCE">
+      <DETAIL EXPECTED_RESULT="NOT_PRESENT">
+        <XPATH_QUERY PATH="ns:Properties/ns:Framework"/>
+      </DETAIL>
+    </RULE>
+    <RULE NAME="CheckForFrameworkFalse" OPERATION="COMPARISON">
+      <DETAIL EXPECTED_RESULT="EQUAL">
+        <COMPARE_SOURCE>
+          <XPATH_QUERY PATH="ns:Properties/ns:Framework"/>
+        </COMPARE_SOURCE>
+        <COMPARE_TARGET>
+          <STRING VALUE="false"/>
+        </COMPARE_TARGET>
+        <COMPARE_TYPE VALUE="STRING"/>
+      </DETAIL>
+    </RULE>
+    <MESSAGE_IF_FAIL ID="AppXManifestValidation_Framework" PARAM="&lt;Framework&gt;true&lt;/Framework&gt;"/>
+  </GROUP>
+  <GROUP NAME="CheckForActivatableClassAttribute" LOGIC="OR">
+    <RULE NAME="CheckForActivatableClassAttributeExistence" OPERATION="CHECK_FOR_EXISTENCE">
+      <DETAIL EXPECTED_RESULT="NOT_PRESENT">
+        <XPATH_QUERY PATH="ns:Extensions/ns:Extension/ns:InProcessServer/ns:ActivatableClass/ns:ActivatableClassAttribute/@Name"/>
+      </DETAIL>
+    </RULE>
+    <RULE NAME="CheckForDesktopApplicationPath" OPERATION="COMPARISON">
+      <DETAIL EXPECTED_RESULT="NOT_EQUAL">
+        <COMPARE_SOURCE>
+          <XPATH_QUERY PATH="ns:Extensions/ns:Extension/ns:InProcessServer/ns:ActivatableClass/ns:ActivatableClassAttribute/@Name"/>
+        </COMPARE_SOURCE>
+        <COMPARE_TARGET>
+          <STRING VALUE="DesktopApplicationPath"/>
+        </COMPARE_TARGET>
+        <COMPARE_TYPE VALUE="STRING"/>
+      </DETAIL>
+    </RULE>
+    <MESSAGE_IF_FAIL ID="AppXManifestValidation_InvalidActivatableClassAttribute"/>
+  </GROUP>
+  <!-- Hosted app and WebView WinRT access restricted capabilities test. Enforce that any of the restricted capabilities below are not declared,
+  if app has an ApplicationContentUriRule include with "all" or "allowForWebOnly" WindowsRuntimeAccess:
+  -enterpriseAuthentication
+  -sharedUserCertificates
+  -musicLibrary
+  -picturesLibrary
+  -videosLibrary
+  -removableStorage
+  -documentLibrary
+  -internetClientServer
+  -privateNetworkClientServer
+  -->
+  <GROUP NAME="CheckHostedAppWinRTAccessRestrictedCapabilitesMutuallyDontExist" LOGIC="OR">
+    <RULE NAME="CheckRestrictedCapabilitesDisabled" OPERATION="CHECK_FOR_EXISTENCE">
+      <DETAIL EXPECTED_RESULT="NOT_PRESENT">
+        <XPATH_QUERY PATH="ns:Capabilities/ns5:Capability[
+                           @Name='enterpriseAuthentication' or 
+                           @Name='sharedUserCertificates' or
+                           @Name='musicLibrary' or
+                           @Name='picturesLibrary' or
+                           @Name='videosLibrary' or
+                           @Name='removableStorage' or
+                           @Name='documentLibrary'] |
+                           ns:Capabilities/ns:Capability[                        
+                           @Name='internetClientServer' or
+                           @Name='privateNetworkClientServer']"/>
+      </DETAIL>
+    </RULE>
+    <RULE NAME="CheckHostedAppWinRTDisabled" OPERATION="CHECK_FOR_EXISTENCE">
+      <DETAIL EXPECTED_RESULT="NOT_PRESENT">
+        <XPATH_QUERY PATH="ns:Applications/ns:Application/ns5:ApplicationContentUriRules/ns5:Rule[
+                     @WindowsRuntimeAccess='all' or
+                     @WindowsRuntimeAccess='allowForWebOnly'] "/>
+      </DETAIL>
+    </RULE>
+    <MESSAGE_IF_FAIL ID="AppXManifestValidation_InvalidHostedWinRTAccessConfiguration" />
+  </GROUP>
+  <CONSTANT_TABLE>
+    <CONSTANT NAME="MIN_COLOR_CONTRAST" VALUE="1.5"/>
+    <CONSTANT NAME="MAX_APPLICATION_NUMBER" VALUE="1"/>
+    <CONSTANT NAME="MAX_FILE_EXTENSION_NUMBER" VALUE="500"/>
+    <CONSTANT NAME="MAX_PROTOCOL_NUMBER" VALUE="100"/>
+    <CONSTANT NAME="MAX_APPX_SIZE_IN_BYTES" VALUE="26843545600"/>
+    <CONSTANT NAME="MAX_BUNDLE_SIZE_IN_BYTES" VALUE="26843545600"/>
+  </CONSTANT_TABLE>
+</RULES>

@@ -1,0 +1,665 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Sms.LegacySmsApiContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Sms.DeleteSmsMessageOperation">
+      <summary>1 つのメッセージに対する非同期のメッセージ削除操作の開始、追跡、および終了を有効にします。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">DeleteSmsMessageOperation は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessageOperation.Completed">
+      <summary>非同期 SMS メッセージ削除操作が完了したかどうかを指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>非同期アクションの完了イベントのためのハンドラー。</returns>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessageOperation.ErrorCode">
+      <summary>非同期 SMS メッセージ削除操作のエラー コードを指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>非同期参加操作の結果値。</returns>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessageOperation.Id">
+      <summary>非同期 SMS メッセージ削除操作の ID を指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>一意に非同期 SMS メッセージの削除操作を表す整数です。</returns>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessageOperation.Status">
+      <summary>非同期 SMS メッセージ削除操作のステータスを指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>非同期 SMS メッセージ削除操作の状態を表す列挙値です。</returns>
+    </member><member name="M:Windows.Devices.Sms.DeleteSmsMessageOperation.Cancel">
+      <summary>非同期 SMS メッセージ削除操作をキャンセルします。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+    </member><member name="M:Windows.Devices.Sms.DeleteSmsMessageOperation.Close">
+      <summary>非同期 SMS メッセージ削除操作を終了します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+    </member><member name="M:Windows.Devices.Sms.DeleteSmsMessageOperation.GetResults">
+      <summary>非同期 SMS メッセージ削除操作の結果を取得します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+    </member><member name="T:Windows.Devices.Sms.DeleteSmsMessagesOperation">
+      <summary>複数のメッセージに対する非同期の SMS メッセージ削除操作の開始、追跡、および終了を有効にします。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">DeleteSmsMessagesOperation は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessagesOperation.Completed">
+      <summary>非同期 SMS メッセージ削除操作が完了したかどうかを指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>非同期の SMS メッセージ削除操作の完了イベントに対応するハンドラー。</returns>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessagesOperation.ErrorCode">
+      <summary>非同期 SMS メッセージ削除操作のエラー コードを指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>非同期 SMS メッセージ削除操作の結果値。</returns>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessagesOperation.Id">
+      <summary>非同期 SMS メッセージ削除操作の ID を指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>一意に非同期 SMS メッセージの削除操作を表す整数です。</returns>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessagesOperation.Status">
+      <summary>非同期 SMS メッセージ削除操作のステータスを指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>非同期 SMS メッセージ削除操作の状態を表す列挙値です。</returns>
+    </member><member name="M:Windows.Devices.Sms.DeleteSmsMessagesOperation.Cancel">
+      <summary>複数の非同期 SMS メッセージ削除操作をキャンセルします。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+    </member><member name="M:Windows.Devices.Sms.DeleteSmsMessagesOperation.Close">
+      <summary>複数の非同期 SMS メッセージ削除操作を終了します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+    </member><member name="M:Windows.Devices.Sms.DeleteSmsMessagesOperation.GetResults">
+      <summary>非同期メッセージ操作の結果を取得します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+    </member><member name="T:Windows.Devices.Sms.GetSmsDeviceOperation">
+      <summary>SmsDevice オブジェクトを非同期に取得します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">GetSmsDeviceOperation は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.GetSmsDeviceOperation.Completed">
+      <summary>非同期 SmsDevice オブジェクト取得操作が完了したかどうかを指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>非同期アクションの完了イベントのためのハンドラー。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsDeviceOperation.ErrorCode">
+      <summary>非同期 SmsDevice オブジェクト取得操作のエラー コードを指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>非同期参加操作の結果値。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsDeviceOperation.Id">
+      <summary>非同期 SmsDevice オブジェクト取得操作の ID を指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>一意に非同期 SmsDevice オブジェクトの取得操作を表す整数です。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsDeviceOperation.Status">
+      <summary>非同期 SmsDevice オブジェクト取得操作のステータスを指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>非同期 SmsDevice オブジェクト取得操作の状態を表す列挙値です。</returns>
+    </member><member name="M:Windows.Devices.Sms.GetSmsDeviceOperation.Cancel">
+      <summary>非同期 SmsDevice オブジェクト取得をキャンセルします。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+    </member><member name="M:Windows.Devices.Sms.GetSmsDeviceOperation.Close">
+      <summary>非同期 SmsDevice オブジェクト取得操作を終了します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+    </member><member name="M:Windows.Devices.Sms.GetSmsDeviceOperation.GetResults">
+      <summary>非同期 SmsDevice オブジェクトの取得操作の結果を取得します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>SmsDevice オブジェクトへの参照。</returns>
+    </member><member name="T:Windows.Devices.Sms.GetSmsMessageOperation">
+      <summary>SMS メッセージ ストアからのメッセージの取得をサポートします。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">GetSmsMessageOperation は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessageOperation.Completed">
+      <summary>非同期の SMS メッセージ取得操作の完了イベントに対応するハンドラー。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>非同期の SMS メッセージ取得操作の完了イベントに対応するハンドラー。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessageOperation.ErrorCode">
+      <summary>非同期 SMS メッセージ取得操作のエラー コードを指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>非同期 SMS メッセージ取得操作の結果。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessageOperation.Id">
+      <summary>非同期 SMS メッセージ取得操作の ID を指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>一意に非同期 SMS メッセージの取得操作を表す整数です。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessageOperation.Status">
+      <summary>非同期 SMS メッセージ取得操作のステータスを指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>非同期 SMS メッセージ取得操作の状態を表す列挙値です。</returns>
+    </member><member name="M:Windows.Devices.Sms.GetSmsMessageOperation.Cancel">
+      <summary>非同期 SMS メッセージ取得操作をキャンセルします。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+    </member><member name="M:Windows.Devices.Sms.GetSmsMessageOperation.Close">
+      <summary>非同期 SMS メッセージ取得操作を終了します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+    </member><member name="M:Windows.Devices.Sms.GetSmsMessageOperation.GetResults">
+      <summary>非同期 SMS メッセージ取得操作の結果を取得します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>取得されたメッセージにアクセスするインターフェイスです。</returns>
+    </member><member name="T:Windows.Devices.Sms.GetSmsMessagesOperation">
+      <summary>メッセージの取得をサポートします。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">GetSmsMessagesOperation は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessagesOperation.Completed">
+      <summary>非同期メッセージ取得操作が完了したかどうかを指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>非同期メッセージ操作が完了したかどうかを指定します。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessagesOperation.ErrorCode">
+      <summary>非同期メッセージ操作のエラー コードを指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>非同期参加操作の結果値。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessagesOperation.Id">
+      <summary>非同期メッセージ操作の ID を示します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>一意に非同期操作を表す整数です。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessagesOperation.Progress">
+      <summary>非同期メッセージ操作の進行状況を示します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>非同期操作の進行状況の更新イベントに対応するハンドラー。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessagesOperation.Status">
+      <summary>非同期メッセージ操作のステータスを指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>非同期操作の状態を表す列挙値です。</returns>
+    </member><member name="M:Windows.Devices.Sms.GetSmsMessagesOperation.Cancel">
+      <summary>非同期操作を取り消します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+    </member><member name="M:Windows.Devices.Sms.GetSmsMessagesOperation.Close">
+      <summary>非同期操作を終了します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+    </member><member name="M:Windows.Devices.Sms.GetSmsMessagesOperation.GetResults">
+      <summary>非同期メッセージ取得操作の結果を取得します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>取得した SMS メッセージへの参照。</returns>
+    </member><member name="T:Windows.Devices.Sms.ISmsBinaryMessage">
+      <summary>このインターフェイスは SMS メッセージの生のバイナリ形式へのアクセスを提供します。 メッセージは、業界標準プロトコル記述単位 (PDU) で格納されます (SMS 仕様 GSM 03.40 を参照してください)。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">SmsBinaryMessage は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。 代わりに、SmsAppMessage を使用してください。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.ISmsBinaryMessage.Format">
+      <summary>このメッセージに関して検出されたプロトコル記述単位 (PDU) の形式を取得します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>SMS のデータ形式を記述する列挙値です。</returns>
+    </member><member name="M:Windows.Devices.Sms.ISmsBinaryMessage.GetData">
+      <summary>バイナリ プロトコル記述単位 (PDU) 内にあるメッセージの生のバッファーをバイト配列として返します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">SmsBinaryMessage は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。 代わりに、SmsAppMessage を使用してください。</deprecated>
+      <returns>メッセージ データを表すバイト配列。 メッセージ データが存在しない場合、返される配列は空になります。</returns>
+    </member><member name="M:Windows.Devices.Sms.ISmsBinaryMessage.SetData(System.Byte[])">
+      <summary>SMS メッセージの生のバイナリ ペイロードを指定します。 プロトコル記述単位 (PDU) の標準に従って書式設定する必要があります。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">SmsBinaryMessage は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。 代わりに、SmsAppMessage を使用してください。</deprecated>
+      <param name="value">プロトコル記述単位 (PDU) の標準に従って書式設定されたメッセージ データを表すバイト配列。</param>
+    </member><member name="T:Windows.Devices.Sms.ISmsDevice">
+      <summary>このインターフェイスは、移動式広帯域 SMS デバイスを制御します。 デバイスの SMS サービスへの主なエントリ ポイントです。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">SmsDevice は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。 代わりに、SmsDevice2 を使用してください。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.ISmsDevice.AccountPhoneNumber">
+      <summary>SMS デバイスに関連付けられた電話番号を返します。 電話番号は、アカウントやアカウント受信トレイなどの外部ストレージ メカニズムに受信メッセージを関連付けるために使用することができます。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>アカウントの電話番号の文字列形式。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsDevice.CellularClass">
+      <summary>SMS デバイスの携帯電話クラスを返します。 このクラスを使用して、どのエンコードが適切であるか、またはどのデバイスの制限が有効であるかを決定できます。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>デバイスの携帯電話クラスを示す列挙値です。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsDevice.DeviceStatus">
+      <summary>SMS デバイスの準備ができているかどうかを示す、SMS デバイスのステータスを返します。 デバイスの準備ができていない場合にどのような問題が存在するかについても示します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>携帯電話ネットワーク トラフィック操作で実行するために SMS のデバイスの準備を示す列挙値です。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsDevice.MessageStore">
+      <summary>デバイス搭載のメッセージ ストアにアクセスします。 ストアは、クライアントが取得するまでメッセージを保持します。 デバイスによっては、たとえば、このストアが SMS メッセージ用の SIM ストレージに対応することもあります。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>SmsMessageStore オブジェクトへの参照。</returns>
+    </member><member name="E:Windows.Devices.Sms.ISmsDevice.SmsDeviceStatusChanged">
+      <summary>SMS デバイスの状態が変更されたときに呼び出されるイベント ハンドラーを設定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+    </member><member name="E:Windows.Devices.Sms.ISmsDevice.SmsMessageReceived">
+      <summary>デバイスが新しいテキスト メッセージを受け取ると呼び出されるイベント ハンドラーを設定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+    </member><member name="M:Windows.Devices.Sms.ISmsDevice.CalculateLength(Windows.Devices.Sms.SmsTextMessage)">
+      <summary>指定したテキスト メッセージの、送信されるメッセージの長さを見積もります。 見積もりは、メッセージのテキスト全体を伝達するのにネットワークで何個のメッセージが送信されるかを、クライアントが示すために役立つ場合があります。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">SmsDevice は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。 代わりに、SmsDevice2 を使用してください。</deprecated>
+      <returns>長さ情報が設定された SmsEncodedLength 構造体への参照。</returns>
+      <param name="message">測定する SMS テキスト メッセージへの参照。</param>
+    </member><member name="M:Windows.Devices.Sms.ISmsDevice.SendMessageAsync(Windows.Devices.Sms.ISmsMessage)">
+      <summary>SMS デバイスを使用し、メッセージを非同期的に送信します。 送信操作は同時に発生しない可能性があるので、このメソッドは非同期です。 非同期操作オブジェクトがすぐに返されます。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">SmsDevice は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。 代わりに、SmsDevice2 を使用してください。</deprecated>
+      <returns>非同期のメッセージ送信をサポートする SendSmsMessageOperation オブジェクトへの参照。</returns>
+      <param name="message">SmsMessage オブジェクトへの参照。 メッセージはテキストまたはバイナリ形式にすることができます。</param>
+    </member><member name="T:Windows.Devices.Sms.ISmsMessage">
+      <summary>このインターフェイスは、サポートされる SMS メッセージのすべての種類によって実装されます。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+    </member><member name="P:Windows.Devices.Sms.ISmsMessage.Id">
+      <summary>呼び出し側のメッセージ保存メソッドが後でメッセージを取得または削除する目的で使用することができる、メッセージの ID を取得します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>メッセージのための整数の ID です。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsMessage.MessageClass">
+      <summary>オペレーターのメッセージ ネットワークの決定に従ってメッセージ クラスを返します。 最も一般的な 2 つのクラスは、None (標準メッセージ) と Class0 (ユーザーに直ちに表示する必要のあるローミング警告などの特別オペレーター メッセージ) です。 エンド ユーザー メッセージの一般的なクライアントは Class0 メッセージを無視します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>SmsMessageClass 列挙体からの値。</returns>
+    </member><member name="T:Windows.Devices.Sms.ISmsTextMessage">
+      <summary>このインターフェイスは、デコードされた SMS テキスト メッセージを処理します。 プレーンテキスト形式のメッセージの本文、およびタイム スタンプなどのキー ヘッダー プロパティへの直接アクセスを提供します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">SmsTextMessage は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。 代わりに、SmsTextMessage2 を使用してください。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.Body">
+      <summary>メッセージのプレーンテキストの本文を指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>テキスト メッセージの本文表す文字列。 デコーディングの問題が発生した場合、元のメッセージのいくつかの文字をワイルドカード文字 (一般に疑問符 ('?')) によって表すことができます。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.Encoding">
+      <summary>このメッセージを送信するときに使用するように設定されているエンコードの種類を指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>SmsEncoding 列挙体からの値。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.From">
+      <summary>メッセージの送信者の電話番号を指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>このメッセージの送信者の電話番号の文字列形式。 登録先のデバイスおよびネットワークで優先される形式になっている必要があります。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.PartCount">
+      <summary>メッセージがマルチパート メッセージの一部分である場合、元のメッセージのパート合計数を取得します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>符号なし整数。 メッセージがスタンドアロンの場合、値は 1 になります。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.PartNumber">
+      <summary>メッセージがマルチパート メッセージの一部分である場合、そのメッセージのパート番号を取得します。 パーツを結合して元のメッセージを再構築する際、PartReferenceId プロパティおよび PartCount のプロパティと組み合わせて使用できます。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>符号なし整数。 1 から始まります。 PartCount + 1 を超過することはありません。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.PartReferenceId">
+      <summary>メッセージがマルチパート メッセージの一部である場合に使用できる参照値を示します。 このメッセージがマルチパート メッセージに属する場合は、PartNumber 値を使用して元のメッセージ全体を再構築できます。そのメッセージの各部分には PartReferenceId と同じ値が含まれます。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>送信ネットワークによって定められる符号がない整数。このインターフェイスから処理することはできません。 ネットワークにマルチパート メッセージの有効期間に対する独自のポリシーがある場合は、この参照番号が無期限に有効にならない可能性があります。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.Timestamp">
+      <summary>メッセージのタイムスタンプを取得します。 構築されたメッセージのインスタンスに対して、または受信メッセージのサービス センターのタイムスタンプに基づいて、ローカルで決定されます。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>DateTime 型の値。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.To">
+      <summary>このメッセージの受信者の電話番号を指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>デバイスが登録されているデバイスおよびネットワークによって支持されている電話番号の形式でフォーマットされる、電話番号の文字列形式。</returns>
+    </member><member name="M:Windows.Devices.Sms.ISmsTextMessage.ToBinaryMessages(Windows.Devices.Sms.SmsDataFormat)">
+      <summary>指定の形式でメッセージを読み取り、バイナリ メッセージの新しいインスタンスに結果を格納します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">SmsTextMessage は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。 代わりに、SmsTextMessage2 を使用してください。</deprecated>
+      <returns>このメソッド呼び出しの結果を保持する新しいバイナリ メッセージ。</returns>
+      <param name="format">SmsDataFormat 列挙体からの値。</param>
+    </member><member name="T:Windows.Devices.Sms.SendSmsMessageOperation">
+      <summary>メッセージの送信を有効にします。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">SendSmsMessageOperation は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.SendSmsMessageOperation.Completed">
+      <summary>非同期アクションの完了イベントのためのハンドラー。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>非同期アクションの完了イベントのためのハンドラー。</returns>
+    </member><member name="P:Windows.Devices.Sms.SendSmsMessageOperation.ErrorCode">
+      <summary>非同期メッセージ操作のエラー コードを指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>非同期参加操作の結果値。</returns>
+    </member><member name="P:Windows.Devices.Sms.SendSmsMessageOperation.Id">
+      <summary>非同期メッセージ操作の ID を示します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>一意に非同期操作を表す整数です。</returns>
+    </member><member name="P:Windows.Devices.Sms.SendSmsMessageOperation.Status">
+      <summary>非同期メッセージ操作のステータスを指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>非同期操作の状態を表す列挙値です。</returns>
+    </member><member name="M:Windows.Devices.Sms.SendSmsMessageOperation.Cancel">
+      <summary>非同期操作を取り消します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+    </member><member name="M:Windows.Devices.Sms.SendSmsMessageOperation.Close">
+      <summary>非同期操作を終了します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+    </member><member name="M:Windows.Devices.Sms.SendSmsMessageOperation.GetResults">
+      <summary>非同期操作の結果を取得します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+    </member><member name="T:Windows.Devices.Sms.SmsBinaryMessage">
+      <summary>未加工 PDU 形式の SMS メッセージを表します。 データ形式は、(Format プロパティの値によって示される) メッセージ形式が GSM か CDMA かによって異なります。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">SmsBinaryMessage は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。 代わりに、SmsAppMessage を使用してください。</deprecated>
+    </member><member name="M:Windows.Devices.Sms.SmsBinaryMessage.#ctor">
+      <summary>SmsBinaryMessage クラスのインスタンスを作成します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+    </member><member name="P:Windows.Devices.Sms.SmsBinaryMessage.Format">
+      <summary>このメッセージに関して検出されたプロトコル記述単位 (PDU) の形式を取得します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>SMS のデータ形式を記述する列挙値です。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsBinaryMessage.Id">
+      <summary>非同期メッセージ操作の ID を示します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>一意に非同期操作を表す整数です。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsBinaryMessage.MessageClass">
+      <summary>オペレーターのメッセージ ネットワークの決定に従ってメッセージ クラスを返します。 最も一般的な 2 つのクラスは、None (標準メッセージ) と Class0 (ユーザーに直ちに表示する必要のあるローミング警告などの特別オペレーター メッセージ) です。 エンド ユーザー メッセージの一般的なクライアントは Class0 メッセージを無視します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>SmsMessageClass 列挙体からの値。</returns>
+    </member><member name="M:Windows.Devices.Sms.SmsBinaryMessage.GetData">
+      <summary>バイナリ プロトコル記述単位 (PDU) 内にあるメッセージの生のバッファーをバイト配列として返します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">SmsBinaryMessage は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。 代わりに、SmsAppMessage を使用してください。</deprecated>
+      <returns>メッセージ データを表すバイト配列。 メッセージ データが存在しない場合、返される配列は空になります。</returns>
+    </member><member name="M:Windows.Devices.Sms.SmsBinaryMessage.SetData(System.Byte[])">
+      <summary>SMS メッセージの生のバイナリ ペイロードを指定します。 プロトコル記述単位 (PDU) の標準に従って書式設定する必要があります。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">SmsBinaryMessage は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。 代わりに、SmsAppMessage を使用してください。</deprecated>
+      <param name="value">メッセージ データを表すバイト配列。 メッセージ データが存在しない場合、返される配列は空になります。</param>
+    </member><member name="T:Windows.Devices.Sms.SmsDevice">
+      <summary>モバイル ブロードバンド SMS デバイスの操作をサポートします。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">SmsDevice は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。 代わりに、SmsDevice2 を使用してください。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.SmsDevice.AccountPhoneNumber">
+      <summary>SMS デバイスに関連付けられた電話番号を返します。 電話番号は、アカウントやアカウント受信トレイなどの外部ストレージ メカニズムに受信メッセージを関連付けるために使用することができます。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>アカウントの電話番号の文字列形式。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsDevice.CellularClass">
+      <summary>SMS デバイスの携帯電話クラスを返します。 このクラスを使用して、どのエンコードが適切であるか、またはどのデバイスの制限が有効であるかを決定できます。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>デバイスの携帯電話クラスを示す列挙値です。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsDevice.DeviceStatus">
+      <summary>SMS デバイスの準備ができているかどうかを示す、SMS デバイスのステータスを返します。 デバイスの準備ができていない場合にどのような問題が存在するかについても示します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>携帯電話ネットワーク トラフィック操作で実行するために SMS のデバイスの準備を示す列挙値です。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsDevice.MessageStore">
+      <summary>デバイス搭載のメッセージ ストアにアクセスします。 ストアは、クライアントが取得するまでメッセージを保持します。 デバイスによっては、たとえば、このストアが SMS メッセージ用の SIM ストレージに対応することもあります。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>SmsDeviceMessageStore オブジェクトへの参照。</returns>
+    </member><member name="E:Windows.Devices.Sms.SmsDevice.SmsDeviceStatusChanged">
+      <summary>SMS デバイスの状態が変更されたときに呼び出されるイベント ハンドラーを設定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+    </member><member name="E:Windows.Devices.Sms.SmsDevice.SmsMessageReceived">
+      <summary>デバイスが新しいテキスト メッセージを受け取ると呼び出されるイベント ハンドラーを設定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+    </member><member name="M:Windows.Devices.Sms.SmsDevice.CalculateLength(Windows.Devices.Sms.SmsTextMessage)">
+      <summary>指定したテキスト メッセージの、送信されるメッセージの長さを見積もります。 見積もりは、メッセージのテキスト全体を伝達するのにネットワークで何個のメッセージが送信されるかを、クライアントが示すために役立つ場合があります。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">SmsDevice は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。 代わりに、SmsDevice2 を使用してください。</deprecated>
+      <returns>長さ情報が設定された SmsEncodedLength 構造体への参照。</returns>
+      <param name="message">測定する SMS テキスト メッセージへの参照。</param>
+    </member><member name="M:Windows.Devices.Sms.SmsDevice.FromIdAsync(System.String)">
+      <summary>SMS メッセージを受信したデバイス用の SmsDevice のインスタンスを作成します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">ISmsDeviceStatics は、Windows 10 よりも後のリリースで変更されたり使用できなくなる可能性があります。</deprecated>
+      <returns>SMS デバイス操作オブジェクト。</returns>
+      <param name="deviceId">SMS メッセージを受け取った SMS デバイスの DeviceInformation ID の文字列形式。</param>
+    </member><member name="M:Windows.Devices.Sms.SmsDevice.FromNetworkAccountIdAsync(System.String)">
+      <summary>指定されたモバイル ブロードバンド ネットワーク アカウント ID 用の SmsDevice のインスタンスを作成します。</summary>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">ISmsDeviceStatics2 は、Windows 10 よりも後のリリースで変更されたり使用できなくなる可能性があります。</deprecated>
+      <returns>このメソッドが完了すると、指定されたモバイル ブロードバンド ネットワークのアカウント ID の SmsDevice を返します。</returns>
+      <param name="networkAccountId">SMS デバイスで使用する、対応するモバイル ブロードバンド デバイスを選択するために使用するモバイル ブロードバンド ネットワーク アカウント ID</param>
+    </member><member name="M:Windows.Devices.Sms.SmsDevice.GetDefaultAsync">
+      <summary>既定の SMS デバイスに関連付けられている SmsDevice オブジェクトのインスタンスを作成します。 デバイスが使用中である可能性があるため、操作は非同期的に実行されます。 非同期操作オブジェクトがすぐに返されます。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">ISmsDeviceStatics は、Windows 10 よりも後のリリースで変更されたり使用できなくなる可能性があります。</deprecated>
+      <returns>非同期の IAsyncOperation(SmsDevice) オブジェクトの取得をサポートする SmsDevice オブジェクトへの参照。</returns>
+    </member><member name="M:Windows.Devices.Sms.SmsDevice.GetDeviceSelector">
+      <summary>SMS デバイスの列挙に使用できるクラス選択文字列を取得します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">ISmsDeviceStatics は、Windows 10 よりも後のリリースで変更されたり使用できなくなる可能性があります。</deprecated>
+      <returns>SMS デバイスを識別する高度クエリ構文 (AQS) 文字列への参照。</returns>
+    </member><member name="M:Windows.Devices.Sms.SmsDevice.SendMessageAsync(Windows.Devices.Sms.ISmsMessage)">
+      <summary>SMS デバイスを使用し、メッセージを非同期的に送信します。 送信操作は同時に発生しない可能性があるので、このメソッドは非同期です。 メッセージ操作オブジェクトが直ちに返されます。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">SmsDevice は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。 代わりに、SmsDevice2 を使用してください。</deprecated>
+      <returns>メッセージ操作オブジェクト。</returns>
+      <param name="message">ISmsMessage オブジェクトへの参照。 メッセージはテキストまたはバイナリ形式にすることができます。</param>
+    </member><member name="T:Windows.Devices.Sms.SmsDeviceMessageStore">
+      <summary>SMS デバイスに格納されたメッセージ、およびメッセージ ストアについての情報にアクセスできるようにします。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">SmsDeviceMessageStore は、Windows 10 よりも後のリリースで変更されたり使用できなくなる可能性があります。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.SmsDeviceMessageStore.MaxMessages">
+      <summary>デバイス ストアに格納できるメッセージの最大数を示します。 クライアントは、この値を使用して、ネットワークから新しいメッセージを受け取るためにデバイス ストアに十分な領域を維持する方法を決定できます。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>デバイス格納のためのメッセージの最大数を表す整数値です。</returns>
+    </member><member name="M:Windows.Devices.Sms.SmsDeviceMessageStore.DeleteMessageAsync(System.UInt32)">
+      <summary>指定された ID を使用してメッセージを削除します。 デバイスが使用中である可能性があるため、操作は非同期的に実行されます。 非同期操作オブジェクトがすぐに返されます。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">SmsDeviceMessageStore は、Windows 10 よりも後のリリースで変更されたり使用できなくなる可能性があります。</deprecated>
+      <returns>非同期操作を開始し、追跡するのに使用される新しいメッセージ操作オブジェクト。</returns>
+      <param name="messageId">削除するメッセージの整数 ID。これは、デバイスのメッセージ ストアから取得された SmsTextMessage オブジェクトから以前に読み込まれたものです。</param>
+    </member><member name="M:Windows.Devices.Sms.SmsDeviceMessageStore.DeleteMessagesAsync(Windows.Devices.Sms.SmsMessageFilter)">
+      <summary>フィルターを適用するメッセージを削除します。 フィルターを使って、すべてのメッセージを削除、または既読、未読、送信済み、またはドラフトの状態のメッセージのみを削除できます。 操作が瞬間的ではない可能性があるため、非同期的に実行されます。 非同期操作オブジェクトがすぐに返されます。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">SmsDeviceMessageStore は、Windows 10 よりも後のリリースで変更されたり使用できなくなる可能性があります。</deprecated>
+      <returns>非同期操作を開始し、追跡するのに使用される新しいメッセージ操作オブジェクト。</returns>
+      <param name="messageFilter">どのメッセージを削除するかを指定する検索フィルター。</param>
+    </member><member name="M:Windows.Devices.Sms.SmsDeviceMessageStore.GetMessageAsync(System.UInt32)">
+      <summary>指定した ID を持つメッセージを取得します。 デバイスが使用中である可能性があるため、メソッドは非同期的に実行されます。 非同期操作オブジェクトがすぐに返されます。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">SmsDeviceMessageStore は、Windows 10 よりも後のリリースで変更されたり使用できなくなる可能性があります。</deprecated>
+      <returns>非同期操作を開始および追跡するために使用されている新しいメッセージ操作オブジェクトを返します。</returns>
+      <param name="messageId">取得するメッセージの ID。</param>
+    </member><member name="M:Windows.Devices.Sms.SmsDeviceMessageStore.GetMessagesAsync(Windows.Devices.Sms.SmsMessageFilter)">
+      <summary>フィルター内で指定した条件に一致するメッセージのリストを取得します。 メッセージは、既読、未読、送信済み、またはドラフトの状態としてフィルター処理できます。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">SmsDeviceMessageStore は、Windows 10 よりも後のリリースで変更されたり使用できなくなる可能性があります。</deprecated>
+      <returns>非同期操作を開始および追跡するために使用されている新しいメッセージ操作オブジェクトを返します。</returns>
+      <param name="messageFilter">取得するメッセージの ID。</param>
+    </member><member name="T:Windows.Devices.Sms.SmsDeviceStatusChangedEventHandler">
+      <summary>SMS デバイスの状態が変更されたときに呼び出されるイベント ハンドラー。 デバイスに重要な状態の変更が発生し、通知を受けたい場合に呼び出し元はこれを実行します。 たとえば、呼び出し元は、デバイスがメッセージを送受信できるようになるタイミングを知る必要がある場合があります。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">SmsDeviceStatusChangedEventHandler は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+      <param name="sender">イベントを送信したデバイス オブジェクトへの参照。</param>
+    </member><member name="T:Windows.Devices.Sms.SmsMessageFilter">
+      <summary>この列挙型は、デバイスのメッセージ ストアのどのメッセージで操作が行われるかを指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">SmsMessageFilter は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+    </member><member name="F:Windows.Devices.Sms.SmsMessageFilter.All">
+      <summary>デバイスのメッセージ記憶装置のすべてのメッセージです。</summary>
+    </member><member name="F:Windows.Devices.Sms.SmsMessageFilter.Draft">
+      <summary>すべての未送信および保存済みメッセージです。</summary>
+    </member><member name="F:Windows.Devices.Sms.SmsMessageFilter.Read">
+      <summary>読み取ったすべての受信メッセージ。</summary>
+    </member><member name="F:Windows.Devices.Sms.SmsMessageFilter.Sent">
+      <summary>すべての送信および保存済みメッセージです。</summary>
+    </member><member name="F:Windows.Devices.Sms.SmsMessageFilter.Unread">
+      <summary>未読のすべての受信メッセージ。</summary>
+    </member><member name="T:Windows.Devices.Sms.SmsMessageReceivedEventArgs">
+      <summary>ISmsBinaryMessage イベント ハンドラーにデータを提供します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">Windows 10 より後のリリースでは、SmsMessageReceivedEventArgs は変更または廃止される可能性があります。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.SmsMessageReceivedEventArgs.BinaryMessage">
+      <summary>メッセージのバイナリ表現を保持するオブジェクトを取得します。 これは、バイナリ メッセージを直接受け渡すクライアント、またはバイナリ メッセージ コンテンツを独自に解釈するクライアントにのみ関係します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>SmsBinaryMessage オブジェクトへの参照。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsMessageReceivedEventArgs.TextMessage">
+      <summary>メッセージのテキスト表現を保持するオブジェクトを取得します。 メッセージが正常にデコードされなかった場合、エラーが返されます。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>SmsTextMessage オブジェクト。</returns>
+    </member><member name="T:Windows.Devices.Sms.SmsMessageReceivedEventHandler">
+      <summary>このイベント ハンドラーは、新しいバイナリ メッセージを受信したときに呼び出されます。 指定した SMS デバイスからの新しいバイナリ メッセージを扱いたい場合、呼び出し元はこれを実行します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">Windows 10 より後のリリースでは、SmsMessageReceivedEventHandler は変更または廃止される可能性があります。</deprecated>
+      <param name="sender">メッセージを送信した SMS デバイス オブジェクトへの参照。</param>
+      <param name="e">メッセージのバイナリおよびテキスト表現を保持するオブジェクトです。</param>
+    </member><member name="T:Windows.Devices.Sms.SmsReceivedEventDetails">
+      <summary>アプリケーションが中断されている間、メッセージを処理するバックグラウンドの作業項目に SMS メッセージ イベントの詳細を提示します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">SmsReceivedEventDetails は、Windows 10 よりも後のリリースで変更されたり使用できなくなる可能性があります。 代わりに、SmsMessageReceivedTriggerDetails を使用します。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.SmsReceivedEventDetails.BinaryMessage">
+      <summary>バックグラウンド タスクが受信する SMS メッセージのバイナリ メッセージ オブジェクトを取得します。</summary>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>バックグラウンド タスクが受信する SMS メッセージのバイナリ メッセージ オブジェクト。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsReceivedEventDetails.DeviceId">
+      <summary>SMS メッセージを受け取ったネットワーク インターフェイスの DeviceInformation ID を返します。 この ID は、デバイスをアクティブ化し、追加のメッセージ詳細を取得するために、SmsDevice.FromIdAsync に受け渡されます。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>SMS ネットワーク インターフェイス (デバイス) の DeviceInformation ID を格納している文字列。 この値は、通常、送信者やメッセージ本文などの詳細を取得するために使用されます。 たとえば、特定の個人から新しいメッセージが届いたことを知らせるポップアップを表示するために、この ID を使用する場合があります。 DeviceId と MessageIndex の組み合わせは、SMS デバイスから新しいメッセージを取得するのに十分です。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsReceivedEventDetails.MessageClass">
+      <summary>バックグラウンド タスクが受信する SMS メッセージのメッセージ クラスを取得します。</summary>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>バックグラウンド タスクが受信する SMS メッセージのメッセージ クラス。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsReceivedEventDetails.MessageIndex">
+      <summary>イベントを生成した新しいメッセージのインデックスを返します。 新しいメッセージ自体を取得するため、これを SmsDevice.GetMessageAsync に受け渡すことができます。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>新しいメッセージの整数のインデックスです。</returns>
+    </member><member name="T:Windows.Devices.Sms.SmsTextMessage">
+      <summary>デコードされた SMS テキスト メッセージを管理して、プレーンテキスト形式のメッセージの本文、およびタイム スタンプなどのキー ヘッダー プロパティへの直接アクセスを提供します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">SmsTextMessage は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。 代わりに、SmsTextMessage2 を使用してください。</deprecated>
+    </member><member name="M:Windows.Devices.Sms.SmsTextMessage.#ctor">
+      <summary>SmsTextMessage クラスのインスタンスを作成します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.Body">
+      <summary>メッセージのプレーンテキストの本文を指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>テキスト メッセージの本文表す文字列。 デコーディングの問題が発生した場合、元のメッセージのいくつかの文字をワイルドカード文字 (一般に疑問符 ('?')) によって表すことができます。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.Encoding">
+      <summary>このメッセージを送信するときに使用するように設定されているエンコードの種類を指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>SmsEncoding 列挙体からの値。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.From">
+      <summary>メッセージの送信者の電話番号を指定します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>このメッセージの送信者の電話番号の文字列形式。 登録先のデバイスおよびネットワークで優先される形式になっている必要があります。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.Id">
+      <summary>SMS テキスト メッセージの ID を示します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>メッセージのための整数の ID です。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.MessageClass">
+      <summary>メッセージのメッセージ クラスを指定します。 このメッセージ クラスは通常、モバイル デバイスではなく、ネットワークに由来します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>SmsMessageClass 列挙体からの値。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.PartCount">
+      <summary>メッセージがマルチパート メッセージの一部分である場合、元のメッセージのパート合計数を示します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>符号なし整数。 メッセージがスタンドアロンの場合、値は 1 になります。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.PartNumber">
+      <summary>メッセージがマルチパート メッセージの一部分である場合、そのメッセージのパート番号を示します。 パーツを結合して元のメッセージを再構築する際、PartReferenceId プロパティおよび PartCount のプロパティと組み合わせて使用できます。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>符号なし整数。 1 から始まります。 PartCount + 1 を超過することはありません。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.PartReferenceId">
+      <summary>メッセージがマルチパート メッセージの一部である場合に使用できる参照値を示します。 このメッセージがマルチパート メッセージに属する場合は、PartNumber 値を使用して元のメッセージ全体を再構築できます。そのメッセージの各部分には PartReferenceId と同じ値が含まれます。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>送信ネットワークによって定められる符号がない整数。このインターフェイスから処理することはできません。 ネットワークにマルチパート メッセージの有効期間に対する独自のポリシーがある場合は、この参照番号が無期限に有効にならない可能性があります。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.Timestamp">
+      <summary>メッセージのタイムスタンプを示します。 構築されたメッセージのインスタンスに対して、または受信メッセージのサービス センターのタイムスタンプに基づいて、ローカルで決定されます。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>DateTime 型の値。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.To">
+      <summary>このメッセージの受信者の電話番号を示します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <returns>デバイスが登録されているデバイスおよびネットワークによって支持されている電話番号の形式でフォーマットされる、電話番号の文字列形式。</returns>
+    </member><member name="M:Windows.Devices.Sms.SmsTextMessage.FromBinaryData(Windows.Devices.Sms.SmsDataFormat,System.Byte[])">
+      <summary>バイナリ メッセージをデコードし、テキスト メッセージの新しいインスタンスに結果を置きます。 このメソッドは、バイトのバッファーおよびバッファーのエンコード方法の選択への参照となるバイナリ メッセージを表します。 したがって、メッセージが、デバイスから直接発生していいとき、または SmsBinaryMessage のクラスのインスタンスとして発生していないとき、これを使用できます。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">ISmsTextMessageStatics は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+      <returns>デコードが正常に行われた場合の新しい SmsTextMessage オブジェクト。</returns>
+      <param name="format">特定のプロトコル記述単位 (PDU) バッファーのフォーマットを指定する SmsDataFormat の列挙値です。</param>
+      <param name="value">デコード対象のバイナリ データが格納されたバイト配列です。</param>
+    </member><member name="M:Windows.Devices.Sms.SmsTextMessage.FromBinaryMessage(Windows.Devices.Sms.SmsBinaryMessage)">
+      <summary>バイナリ メッセージを読み取ってデコードします。 結果はテキスト メッセージの新しいインスタンスに配置されます。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">ISmsTextMessageStatics は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。</deprecated>
+      <returns>SmsTextMessage オブジェクト。</returns>
+      <param name="binaryMessage">デコードするバイナリ メッセージのインスタンスです。</param>
+    </member><member name="M:Windows.Devices.Sms.SmsTextMessage.ToBinaryMessages(Windows.Devices.Sms.SmsDataFormat)">
+      <summary>指定の形式でメッセージを読み取り、バイナリ メッセージの新しいインスタンスに結果を格納します。</summary>
+      <capability type="sms">SMS サービスにアクセスするために必要です。</capability>
+      <capability type="cellularMessaging">アプリケーションが SMS と RCS を利用するために必要です。</capability>
+      <deprecated type="deprecate">SmsTextMessage は、Windows 10 より後のリリースでは、変更されるか使用できなくなる可能性があります。 代わりに、SmsTextMessage2 を使用してください。</deprecated>
+      <returns>このメソッド呼び出しの結果を保持する新しいバイナリ メッセージ。</returns>
+      <param name="format">SmsDataFormat 列挙体からの値。</param>
+    </member></members>
+</doc>

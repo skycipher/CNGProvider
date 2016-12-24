@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Printers.PrintersContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Printers.Print3DDevice">
+      <summary>Stellt einen 3D-Drucker dar.</summary>
+    </member><member name="P:Windows.Devices.Printers.Print3DDevice.PrintSchema">
+      <summary>Ruft das PrintSchema-Objekt zum Abrufen von Funktionen und Druckticketinformationen ab.</summary>
+      <returns>Das PrintSchema-Objekt zum Abrufen von Funktionen und Druckticketinformationen.</returns>
+    </member><member name="M:Windows.Devices.Printers.Print3DDevice.FromIdAsync(System.String)">
+      <summary>Erstellt ein Print3DDevice-Objekt, das einen 3D-Drucker darstellt, der mit dem Gerät verbunden ist.</summary>
+      <returns>Ein Print3DDevice-Objekt, das dem angegebenen 3D-Drucker entspricht.</returns>
+      <param name="deviceId">Die Geräte-ID des 3D-Druckers.</param>
+    </member><member name="M:Windows.Devices.Printers.Print3DDevice.GetDeviceSelector">
+      <summary>Ruft eine Zeichenfolge mit erweiterter Abfragesyntax (AQS) ab, die verwendet werden kann, um alle 3D-Drucker zu suchen, die mit dem das Gerät verbunden ist.</summary>
+      <returns>Eine AQS-Zeichenfolge, die verwendet werden kann, um alle mit dem Gerät verbundenen 3D-Drucker zu suchen.</returns>
+    </member><member name="T:Windows.Devices.Printers.PrintSchema">
+      <summary>Stellt APIs bereit, um auf die Funktionen eines 3D-Druckers zuzugreifen und Tickets zu drucken.</summary>
+    </member><member name="M:Windows.Devices.Printers.PrintSchema.GetCapabilitiesAsync(Windows.Storage.Streams.IRandomAccessStreamWithContentType)">
+      <summary>Ruft die 3D-Druckerfunktionen ab.</summary>
+      <returns>Ein XML-Dokument mit Druckereigenschaften, das 3D-Druckereigenschaften enthält.</returns>
+      <param name="constrainTicket">Das Druckticket.</param>
+    </member><member name="M:Windows.Devices.Printers.PrintSchema.GetDefaultPrintTicketAsync">
+      <summary>Ruft das Standarddruckticket des 3D-Druckers ab.</summary>
+      <returns>Ein XML-PrintTicket-Dokument, das das Standarddruckticket des 3D-Druckers enthält.</returns>
+    </member><member name="M:Windows.Devices.Printers.PrintSchema.MergeAndValidateWithDefaultPrintTicketAsync(Windows.Storage.Streams.IRandomAccessStreamWithContentType)">
+      <summary>Erstellt ein neues Druckticket, indem die Auswahl des Benutzers mit dem Standarddrucksticket zusammengeführt und die Funktion für das Gerät überprüft wird.</summary>
+      <returns>Ein XML-PrintTicket-Dokument, das das vorgeschlagene Druckticket enthält.</returns>
+      <param name="deltaTicket">Das Deltadrucksticket gibt die Unterschiede zwischen dem Standarddrucksticket und der Auswahl des Benutzers an.</param>
+    </member></members>
+</doc>

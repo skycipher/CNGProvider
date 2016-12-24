@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.Protection.ProtectionRenewalContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Media.Protection.ComponentRenewal">
+      <summary>응용 프로그램에서 업데이트해야만 보호된 미디어 콘텐츠를 재생할 수 있는 구성 요소의 갱신을 시작할 수 있습니다.</summary>
+    </member><member name="M:Windows.Media.Protection.ComponentRenewal.RenewSystemComponentsAsync(Windows.Media.Protection.RevocationAndRenewalInformation)">
+      <summary>사용자에게 묻는 메시지를 표시한 후 중요한 콘텐츠 보호 구성 요소 업데이트를 시작합니다.</summary>
+      <returns>비동기 작업을 제어하는 데 사용되는 개체입니다.</returns>
+      <param name="information">해지 및 갱신 정보입니다.</param>
+    </member><member name="T:Windows.Media.Protection.RenewalStatus">
+      <summary>RenewSystemComponentsAsync에서 반환된 사용 가능한 값을 정의합니다.</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.AppComponentsMayNeedUpdating">
+      <summary>업데이트해야 하는 시스템 구성 요소가 발견되지 않았음을 지정합니다. 하지만 응용 프로그램 구성 요소를 업데이트해야 할 수도 있으며, 이 경우 사용자는 저장소에서 업데이트된 응용 프로그램을 가져와야 할 수도 있습니다.</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.NoComponentsFound">
+      <summary>업데이트해야 하는 구성 요소가 발견되지 않았음을 지정합니다.</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.NotStarted">
+      <summary>갱신이 시작되지 않았음을 지정합니다.</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.UpdatesInProgress">
+      <summary>업데이트가 있으며 사용자가 업데이트를 진행하는 것을 허용했음을 지정합니다.</summary>
+    </member><member name="F:Windows.Media.Protection.RenewalStatus.UserCancelled">
+      <summary>사용자가 업데이트를 계속하도록 허용하기를 거부했음을 지정합니다.</summary>
+    </member></members>
+</doc>

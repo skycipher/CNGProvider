@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Services.Maps.GuidanceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem">
+      <summary>指定用于音频引导的测量系统。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem.Meters">
+      <summary>公制。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem.MilesAndFeet">
+      <summary>美国例行系统。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem.MilesAndYards">
+      <summary>英制。</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind">
+      <summary>指定触发 AudioNotificationRequested 事件时请求的音频通知的类型。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.Gps">
+      <summary>GPS 通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.Maneuver">
+      <summary>机动通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.Route">
+      <summary>路线通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.SpeedLimit">
+      <summary>速度限制通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.Traffic">
+      <summary>交通通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.TrafficCamera">
+      <summary>交通摄像头通知。</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs">
+      <summary>为 AudioNotificationRequested 事件提供数据。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs.AudioFilePaths">
+      <summary>获取已请求播放的音频文件的列表。</summary>
+      <returns>已请求播放的音频文件的列表。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs.AudioNotification">
+      <summary>获取已请求的音频通知的类型。</summary>
+      <returns>已请求的音频通知的类型。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs.AudioText">
+      <summary>获取已请求的音频通知的基于文本的版本。</summary>
+      <returns>已请求的音频通知的基于文本的版本。</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceAudioNotifications">
+      <summary>指定导航时使用的音频通知的类型。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.Gps">
+      <summary>GPS 通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.Maneuver">
+      <summary>机动通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.None">
+      <summary>未选择音频通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.Route">
+      <summary>路线通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.SpeedLimit">
+      <summary>速度限制通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.Traffic">
+      <summary>交通通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.TrafficCamera">
+      <summary>交通摄像头通知。</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceLaneInfo">
+      <summary>表示当前位置附近的车道及其与路线的关系。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceLaneInfo.IsOnRoute">
+      <summary>获取一个值，该值指示车道是否在路线上。</summary>
+      <returns>如果车道在路线上，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceLaneInfo.LaneMarkers">
+      <summary>获取一个值，该值描述车道的路线。</summary>
+      <returns>一个类型为 GuidanceLaneMarkers 的值，该值描述车道的路线。</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceLaneMarkers">
+      <summary>指定车道的路线。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.HardLeft">
+      <summary>向左急转标志。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.HardRight">
+      <summary>向右急转标志。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.Left">
+      <summary>左转标志。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.LightLeft">
+      <summary>交通灯左转标志。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.LightRight">
+      <summary>交通灯右转标志。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.None">
+      <summary>车道标志不存在。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.Right">
+      <summary>右转标志。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.Straight">
+      <summary>直行标志。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.Unknown">
+      <summary>没有可用的车道标志信息。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.UTurnLeft">
+      <summary>左转与调头标志。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.UTurnRight">
+      <summary>右转与调头标志。</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceManeuver">
+      <summary>表示沿引导路线的机动。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.DepartureRoadName">
+      <summary>获取机动起点的道路的全名。</summary>
+      <returns>机动起点的道路的全名。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.DepartureShortRoadName">
+      <summary>获取机动起点的道路的短名称。 例如，高速公路数字（如“I-90”）。</summary>
+      <returns>机动起点的道路的短名称。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.DistanceFromPreviousManeuver">
+      <summary>获取上一个机动与此机动之间的距离（以米为单位）。</summary>
+      <returns>上一个机动与此机动之间的距离（以米为单位）。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.DistanceFromRouteStart">
+      <summary>获取路线起点与此机动之间的距离（以米为单位）。</summary>
+      <returns>路线起点与此机动之间的距离（以米为单位）。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.EndAngle">
+      <summary>获取指示策略末尾的标题的值（以度数表示），其中 0 或 360 = 北，90 = 东，180 = 南，270 = 西。</summary>
+      <returns>策略末尾的标题（以度数表示），其中 0 或 360 = 北，90 = 东，180 = 南，270 = 西。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.InstructionText">
+      <summary>获取或设置与策略有关的指令文本。</summary>
+      <returns>与策略关联的指令文本。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.Kind">
+      <summary>获取策略的类型。</summary>
+      <returns>策略的类型。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.NextRoadName">
+      <summary>获取机动终点的道路的全名。</summary>
+      <returns>机动终点的道路的全名。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.NextShortRoadName">
+      <summary>获取机动终点的道路的短名称。 例如，高速公路数字（如“I-90”）。</summary>
+      <returns>机动终点的道路的短名称。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.RoadSignpost">
+      <summary>获取一个值，该值表示与机动关联的道路的标志。</summary>
+      <returns>一个值，该值表示与机动关联的道路的标志。 如果没有可用的数据，则此值返回 null。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.StartAngle">
+      <summary>获取指示策略开始的标题的值（以度数表示），其中 0 或 360 = 北，90 = 东，180 = 南，270 = 西。</summary>
+      <returns>机动起点的前进方向（以度数表示），其中 0 或 360 = 北，90 = 东，180 = 南，270 = 西。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.StartLocation">
+      <summary>获取策略的起始位置。</summary>
+      <returns>策略的起始位置。</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceManeuverKind">
+      <summary>指定引导机动的类型。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.End">
+      <summary>已到达目的地。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayEnterLeft">
+      <summary>进入高速公路的右车道。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayEnterRight">
+      <summary>进入高速公路的左车道。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayKeepLeft">
+      <summary>在高速公路上保持左行驶。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayKeepRight">
+      <summary>在高速公路上保持右行驶。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayLeaveLeft">
+      <summary>从左车道离开高速公路。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayLeaveRight">
+      <summary>从右车道离开高速公路。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.GoStraight">
+      <summary>直接转到。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.KeepMiddle">
+      <summary>在中间车道行驶。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.LeaveTransitStation">
+      <summary>离开公交站点。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.None">
+      <summary>没有适用的机动。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.PassTransitStation">
+      <summary>经过公交站点。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.Start">
+      <summary>起点。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TakeFerry">
+      <summary>进入渡口。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft1">
+      <summary>走环岛出口 1（左侧行车的交通）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft10">
+      <summary>走环岛出口 10（左侧行车的交通）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft11">
+      <summary>走环岛出口 11（左侧行车的交通）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft12">
+      <summary>走环岛出口 12（左侧行车的交通）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft2">
+      <summary>走环岛出口 2（左侧行车的交通）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft3">
+      <summary>走环岛出口 3（左侧行车的交通）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft4">
+      <summary>走环岛出口 4（左侧行车的交通）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft5">
+      <summary>走环岛出口 5（左侧行车的交通）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft6">
+      <summary>走环岛出口 6（左侧行车的交通）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft7">
+      <summary>走环岛出口 7（左侧行车的交通）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft8">
+      <summary>走环岛出口 8（左侧行车的交通）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft9">
+      <summary>走环岛出口 9（左侧行车的交通）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight1">
+      <summary>走环岛出口 1（右侧行车的交通）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight10">
+      <summary>走环岛出口 10（右侧行车的交通）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight11">
+      <summary>走环岛出口 11（右侧行车的交通）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight12">
+      <summary>走环岛出口 12（右侧行车的交通）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight2">
+      <summary>走环岛出口 2（右侧行车的交通）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight3">
+      <summary>走环岛出口 3（右侧行车的交通）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight4">
+      <summary>走环岛出口 4（右侧行车的交通）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight5">
+      <summary>走环岛出口 5（右侧行车的交通）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight6">
+      <summary>走环岛出口 6（右侧行车的交通）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight7">
+      <summary>走环岛出口 7（右侧行车的交通）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight8">
+      <summary>走环岛出口 8（右侧行车的交通）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight9">
+      <summary>走环岛出口 9（右侧行车的交通）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnHardLeft">
+      <summary>左急转。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnHardRight">
+      <summary>右急转。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnKeepLeft">
+      <summary>在左车道行驶。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnKeepRight">
+      <summary>在右车道行驶。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnLeft">
+      <summary>左转（约 90 度）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnLightLeft">
+      <summary>轻轻地向左转。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnLightRight">
+      <summary>轻轻地向右转。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnRight">
+      <summary>右转（约 90 度）。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.UTurnLeft">
+      <summary>左侧调头。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.UTurnRight">
+      <summary>右侧调头。</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate">
+      <summary>描述用户的当前位置的导航条件。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.CurrentHeading">
+      <summary>获取一个值，该值指示当前的前进方向（以度数表示），其中 0 或 360 = 北，90 = 东，180 = 南，270 = 西。</summary>
+      <returns>当前的前进方向（以度数表示），其中 0 或 360 = 北，90 = 东，180 = 南，270 = 西。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.CurrentSpeed">
+      <summary>获取一个值，该值指示当前速度（以米/秒为单位）。</summary>
+      <returns>当前速度（以米/秒为单位）。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.IsOnStreet">
+      <summary>获取一个值，该值指示当前位置是否在街道上。</summary>
+      <returns>如果当前位置在街道上，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.Location">
+      <summary>获取当前地理位置。</summary>
+      <returns>当前地理位置。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.Road">
+      <summary>获取一个值，该值描述当前位置的道路。</summary>
+      <returns>一个值，该值描述当前位置的道路。</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceMode">
+      <summary>指定导航引导的类型。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceMode.Navigation">
+      <summary>导航引导是活动的。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceMode.None">
+      <summary>指示引擎未起动。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceMode.Simulation">
+      <summary>模拟导航引导。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceMode.Tracking">
+      <summary>提供导航帮助，但未指定路线。</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceNavigator">
+      <summary>提供导航引导。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceNavigator.AudioMeasurementSystem">
+      <summary>获取或设置用于音频引导的测量系统。</summary>
+      <returns>用于音频引导的测量系统。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceNavigator.AudioNotifications">
+      <summary>获取或设置由导航引导提供的音频通知的类型。</summary>
+      <returns>由导航引导提供的音频通知的类型。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceNavigator.IsGuidanceAudioMuted">
+      <summary>获取或设置一个值，该值指示音频引导是否已静音。</summary>
+      <returns>如果值为 true，则音频引导已静音；否则，音频引导未静音。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceNavigator.UseAppProvidedVoice">
+      <summary>获取一个值，该值指示设备上是否使用 Cortana。</summary>
+      <returns>如果值为 true，则设备上正在使用 Cortana；否则为 false。</returns>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.AudioNotificationRequested">
+      <summary>音频通知适用于导航引导（在到达下一个转弯处或出口之前）时发生。</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.DestinationReached">
+      <summary>在到达路线目的地后发生。</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.GuidanceUpdated">
+      <summary>在更新导航引导后发生。</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.Rerouted">
+      <summary>在重新为导航引导建立路线后发生。</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.RerouteFailed">
+      <summary>在重新为导航引导建立路线失败时发生。</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.Rerouting">
+      <summary>在正在重新为导航引导建立路线时发生。</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.UserLocationLost">
+      <summary>在用户位置丢失后发生。</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.UserLocationRestored">
+      <summary>在用户位置还原后发生。</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.GetCurrent">
+      <summary>获取 GuidanceNavigator 对象，此对象表示当前导航引导。</summary>
+      <returns>表示当前导航引导的 GuidanceNavigator 对象。</returns>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.Pause">
+      <summary>暂停导航引导。</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.RepeatLastAudioNotification">
+      <summary>重复上一个音频通知。</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.Resume">
+      <summary>恢复导航引导。</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.SetGuidanceVoice(System.Int32,System.String)">
+      <summary>设置用于音频通知的语音。</summary>
+      <param name="voiceId">语音标识符。</param>
+      <param name="voiceFolder">指定语音的文件夹路径。</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.StartNavigating(Windows.Services.Maps.Guidance.GuidanceRoute)">
+      <summary>使用指定路线开始导航引导。</summary>
+      <param name="route">要导航的路线。</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.StartSimulating(Windows.Services.Maps.Guidance.GuidanceRoute,System.Int32)">
+      <summary>使用指定路线开始导航引导模拟。</summary>
+      <param name="route">要导航的路线。</param>
+      <param name="speedInMetersPerSecond">导航模拟的速度（以米/秒为单位）。</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.StartTracking">
+      <summary>开始导航引导（不带指定路线）。</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.Stop">
+      <summary>停止导航引导。</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.UpdateUserLocation(Windows.Devices.Geolocation.Geocoordinate)">
+      <summary>使用指定的地理位置更新导航引导。</summary>
+      <param name="userLocation">用户的当前位置。</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.UpdateUserLocation(Windows.Devices.Geolocation.Geocoordinate,Windows.Devices.Geolocation.BasicGeoposition)">
+      <summary>使用指定的地理位置更新导航引导。</summary>
+      <param name="userLocation">用户的当前位置。</param>
+      <param name="positionOverride">要使用的高度、纬度和经度，而不是 userLocation 中指定的内容。</param>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs">
+      <summary>为 Rerouted 事件提供数据。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs.Route">
+      <summary>获取通过重新建立路线创建的新路线。</summary>
+      <returns>新路线。</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceRoadSegment">
+      <summary>表示路线的某个部分的道路。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.Id">
+      <summary>获取路段的标识符。</summary>
+      <returns>路段的标识符。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.IsHighway">
+      <summary>获取一个值，该值指示路段为高速公路。</summary>
+      <returns>如果路段为高速公路，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.IsTollRoad">
+      <summary>获取一个值，该值指示路段为收费公路。</summary>
+      <returns>如果路段为收费公路，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.IsTunnel">
+      <summary>获取一个值，该值指示路段为隧道。</summary>
+      <returns>如果路段为隧道，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.Path">
+      <summary>获取描述路段的一系列有序地理点。</summary>
+      <returns>描述路段的一系列有序地理点。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.RoadName">
+      <summary>获取道路的全名。</summary>
+      <returns>道路的全名。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.ShortRoadName">
+      <summary>获取道路的短名称。</summary>
+      <returns>道路的短名称。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.SpeedLimit">
+      <summary>获取路段的速度限制。</summary>
+      <returns>路段的速度限制。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.TravelTime">
+      <summary>获取路段的行程时间。</summary>
+      <returns>路段的行程时间。</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceRoadSignpost">
+      <summary>表示道路上的标志。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.BackgroundColor">
+      <summary>获取或设置标志的背景色。</summary>
+      <returns>标志的背景色。 如果没有可用的数据，则此值返回 Blue。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.Exit">
+      <summary>获取标志上的文本。</summary>
+      <returns>标志上的文本。 如果没有可用的数据，则此值返回 null。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.ExitDirections">
+      <summary>获取标志上的方向。 例如，城市名称和距离。</summary>
+      <returns>标志上的方向。 如果没有可用的数据，则此值返回空列表。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.ExitNumber">
+      <summary>获取标志上的出口编号。</summary>
+      <returns>标志上的出口编号。 如果没有可用的数据，则此值返回 null。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.ForegroundColor">
+      <summary>获取标志的文本颜色。</summary>
+      <returns>标志的文本颜色。 如果没有可用的数据，则此值返回 White。</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceRoute">
+      <summary>表示提供了导航引导的路线。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.BoundingBox">
+      <summary>获取包含路线的地理区域。</summary>
+      <returns>包含路线的地理区域。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.Distance">
+      <summary>获取路线的总距离（以米为单位）。</summary>
+      <returns>路线的总距离（以米为单位）。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.Duration">
+      <summary>获取路线的估计行程时间。</summary>
+      <returns>路线的估计行程时间。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.Maneuvers">
+      <summary>获取路线导航所需的机动的列表。</summary>
+      <returns>路线导航所需的机动的列表。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.Path">
+      <summary>获取路线上的一系列有序地理点。</summary>
+      <returns>路线上的一系列有序地理点。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.RoadSegments">
+      <summary>获取构成路线的路段的列表（从起点到终点排序）。</summary>
+      <returns>构成路线的路段的列表（从起点到终点排序）。</returns>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceRoute.CanCreateFromMapRoute(Windows.Services.Maps.MapRoute)">
+      <summary>检查是否可将指定的 MapRoute 对象转换为 GuidanceRoute 对象。</summary>
+      <returns>如果可创建 GuidanceRoute 对象，则为 true；否则为 false。</returns>
+      <param name="mapRoute">要导航的潜在路线。</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceRoute.ConvertToMapRoute">
+      <summary>创建基于当前 GuidanceRoute 的 MapRoute 对象。</summary>
+      <returns>基于当前 GuidanceRoute 对象的 MapRoute 对象。</returns>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceRoute.TryCreateFromMapRoute(Windows.Services.Maps.MapRoute)">
+      <summary>创建基于指定的 MapRoute 的 GuidanceRoute 对象。</summary>
+      <returns>基于指定的 MapRoute 对象的 GuidanceRoute 对象；否则，如果无法转换 mapRoute，则为 null。</returns>
+      <param name="mapRoute">要导航的潜在路线。</param>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector">
+      <summary>收集位置数据来报告交通条件。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.Enabled">
+      <summary>获取或设置一个值，该值指示是否收集位置数据来报告交通情况。</summary>
+      <returns>如果收集位置数据来报告交通情况，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.SpeedTrigger">
+      <summary>获取或设置开始收集数据时的速度（以米/秒为单位）。</summary>
+      <returns>开始收集数据时的速度（以米/秒为单位）。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.UploadFrequency">
+      <summary>获取或设置报告交通的频率（以秒为单位）。</summary>
+      <returns>报告交通的频率（以秒为单位）。</returns>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.ClearLocalData">
+      <summary>清除已由 GuidanceTelemetryCollector 本地存储的数据。</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.GetCurrent">
+      <summary>为当前遥测收集器创建 GuidanceTelemetryCollector 对象。</summary>
+      <returns>当前遥测收集器。</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs">
+      <summary>为 GuidanceUpdated 事件提供数据。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.AfterNextManeuver">
+      <summary>获取紧跟 NextManeuver 的机动。</summary>
+      <returns>紧跟 NextManeuver 的机动。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.AfterNextManeuverDistance">
+      <summary>获取当前位置和 AfterNextManeuver 之间的路线距离（以米为单位）。</summary>
+      <returns>当前位置和 AfterNextManeuver 之间的路线距离（以米为单位）。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.CurrentLocation">
+      <summary>获取当前位置的导航条件。</summary>
+      <returns>当前位置的导航条件。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.DistanceToDestination">
+      <summary>获取路线上的剩余距离（以米为单位）。</summary>
+      <returns>路线上的剩余距离（以米为单位）。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.ElapsedDistance">
+      <summary>获取更新之前的路线上的行驶距离（以米为单位）。</summary>
+      <returns>更新之前的路线上的行驶距离（以米为单位）。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.ElapsedTime">
+      <summary>获取更新之前的路线上的已经过时间。</summary>
+      <returns>更新之前的路线上的已经过时间。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.IsNewManeuver">
+      <summary>获取一个值，该值指示更新是否包含新的机动。</summary>
+      <returns>如果更新包含新的机动，则为 true；否则为 false。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.LaneInfo">
+      <summary>获取当前位置附近的车道列表（从左至右排序）。</summary>
+      <returns>当前位置附近的车道列表（从左至右排序）。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.Mode">
+      <summary>获取导航引导的类型。</summary>
+      <returns>导航引导的类型。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.NextManeuver">
+      <summary>获取紧跟当前机动的机动。</summary>
+      <returns>紧跟当前机动的机动。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.NextManeuverDistance">
+      <summary>获取当前位置和 NextManeuver 之间的路线距离（以米为单位）。</summary>
+      <returns>当前位置和 NextManeuver 之间的路线距离（以米为单位）。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.RoadName">
+      <summary>获取当前路段的全名。</summary>
+      <returns>当前路段的全名。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.Route">
+      <summary>获取更新后的路线。</summary>
+      <returns>更新后的路线。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.TimeToDestination">
+      <summary>获取到达目的地的估计行程时间。</summary>
+      <returns>到达目的地的估计行程时间。</returns>
+    </member></members>
+</doc>

@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Graphics.Printing3D.Printing3DContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Graphics.Printing3D.Print3DManager">
+      <summary>3D 印刷エクスペリエンスを作成します。</summary>
+    </member><member name="E:Windows.Graphics.Printing3D.Print3DManager.TaskRequested">
+      <summary>新しい 3D 印刷ジョブが作成された場合に発生します。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Print3DManager.GetForCurrentView">
+      <summary>3D プリント マネージャーを取得します。</summary>
+      <returns>3D プリント マネージャー。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Print3DManager.ShowPrintUIAsync">
+      <summary>3D 印刷ユーザー インターフェイスをプログラムで開始します。</summary>
+      <returns>操作が正常に完了した場合は true。それ以外の場合は false。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTask">
+      <summary>3D 印刷ジョブを表します。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Print3DTask.Source">
+      <summary>印刷する 3D 印刷パッケージを取得します。</summary>
+      <returns>印刷する 3D 印刷パッケージ。</returns>
+    </member><member name="E:Windows.Graphics.Printing3D.Print3DTask.Completed">
+      <summary>印刷要求が 3D プリンターに送信され、3D 印刷ジョブが作成されたときに発生します。</summary>
+    </member><member name="E:Windows.Graphics.Printing3D.Print3DTask.SourceChanged">
+      <summary>ワークフローが 3D 印刷パッケージを変更すると発生します。</summary>
+    </member><member name="E:Windows.Graphics.Printing3D.Print3DTask.Submitting">
+      <summary>3D 印刷パッケージが 3D プリンターに送信されると発生します。</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs">
+      <summary>3D 印刷要求の Completed イベントのデータを提供します。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs.Completion">
+      <summary>3D 印刷要求の状態を取得します。</summary>
+      <returns>3D 印刷要求の完了状態。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs.ExtendedStatus">
+      <summary>3D 印刷要求中に発生したエラーの種類を取得します。</summary>
+      <returns>3D 印刷要求中に発生したエラーの種類。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskCompletion">
+      <summary>3D 印刷要求の完了状態を指定します。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskCompletion.Abandoned">
+      <summary>要求は破棄されました。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskCompletion.Canceled">
+      <summary>要求は取り消されました。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskCompletion.Failed">
+      <summary>要求は失敗しました。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskCompletion.Slicing">
+      <summary>ドライバーは、プリンターの 3D モデルのレイヤーごとのスライスを準備します。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskCompletion.Submitted">
+      <summary>要求は正常に送信されました。</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskDetail">
+      <summary>3D 印刷要求中に発生したエラーの種類を指定します。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.InvalidMaterialSelection">
+      <summary>無効な印刷の素材が選択されています。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.InvalidModel">
+      <summary>3D モデルが無効です。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.InvalidPrintTicket">
+      <summary>印刷チケットが無効です。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.ModelExceedsPrintBed">
+      <summary>3D モデルが印刷台を超過しています。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.ModelNotManifold">
+      <summary>3D モデルに多様エッジが含まれていません。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.Unknown">
+      <summary>追加情報はありません。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Print3DTaskDetail.UploadFailed">
+      <summary>3D 印刷パッケージのアップロードが失敗しました。</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskRequest">
+      <summary>3D 印刷ジョブ要求を表します。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Print3DTaskRequest.CreateTask(System.String,System.String,Windows.Graphics.Printing3D.Print3DTaskSourceRequestedHandler)">
+      <summary>3D 印刷ジョブを作成します。</summary>
+      <returns>3D 印刷ジョブ。</returns>
+      <param name="title">印刷ジョブの名前。</param>
+      <param name="printerId">3D プリンターの識別子。</param>
+      <param name="handler">印刷ジョブ要求のソースのコールバック。</param>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs">
+      <summary>TaskRequested イベントのデータを提供します。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs.Request">
+      <summary>Print3DManager に関連付けられている 3D 印刷ジョブ要求を取得します。</summary>
+      <returns>3D 印刷ジョブ要求。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskSourceChangedEventArgs">
+      <summary>SourceChanged イベントのデータを提供します。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Print3DTaskSourceChangedEventArgs.Source">
+      <summary>更新された 3D 印刷パッケージをワークフローから取得します。</summary>
+      <returns>更新された 3D 印刷パッケージ。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskSourceRequestedArgs">
+      <summary>Print3DTaskSourceRequestedHandler デリゲートに関するデータを提供します。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Print3DTaskSourceRequestedArgs.SetSource(Windows.Graphics.Printing3D.Printing3D3MFPackage)">
+      <summary>印刷ジョブで使用する 3D 製造形式 (3MF) パッケージを指定します。</summary>
+      <param name="source">印刷ジョブで使用する 3D 製造形式 (3MF) パッケージ。</param>
+    </member><member name="T:Windows.Graphics.Printing3D.Print3DTaskSourceRequestedHandler">
+      <summary>3D 印刷パッケージの要求を処理するメソッドを表します。</summary>
+      <param name="args">3D 印刷ジョブで使用する 3D 印刷パッケージを提供します。</param>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3D3MFPackage">
+      <summary>3D 製造形式 (3MF) パッケージを表します。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3D3MFPackage.#ctor">
+      <summary>Printing3D3MFPackage オブジェクトを作成します。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3D3MFPackage.ModelPart">
+      <summary>3D 製造形式 (3MF) パッケージ内の 3D モデルの XML ストリームを取得または設定します。</summary>
+      <returns>3MF パッケージ内の 3D モデルへの XML ストリーム。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3D3MFPackage.PrintTicket">
+      <summary>3D 製造形式 (3MF) パッケージ内の印刷チケットのストリームを取得または設定します。</summary>
+      <returns>3MF パッケージ内の印刷チケットへのストリーム。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3D3MFPackage.Textures">
+      <summary>3D 3D Manufacturing Format (3MF) パッケージのテクスチャを取得または設定します。</summary>
+      <returns>Printing3DTextureResource 型の 3MF パッケージのテクスチャ。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3D3MFPackage.Thumbnail">
+      <summary>3D Manufacturing Format (3MF) パッケージの内容を表すサムネイル イメージを取得または設定します。</summary>
+      <returns>3MF パッケージの内容を表すサムネイル イメージ。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3D3MFPackage.LoadAsync(Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>3D 製造形式 (3MF) ファイル ストリームから Printing3D3MFPackage オブジェクトを作成します。</summary>
+      <returns>指定した 3MF パッケージ ストリームから作成された Printing3D3MFPackage。</returns>
+      <param name="value">3MF ファイル ストリーム。</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3D3MFPackage.LoadModelFromPackageAsync(Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>3D 製造形式 (3MF) ファイル ストリームから Printing3DModel オブジェクトを作成します。</summary>
+      <returns>指定した 3MF オブジェクト ストリームから作成された Printing3DModel オブジェクト。</returns>
+      <param name="value">3MF ファイル ストリーム。</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3D3MFPackage.SaveAsync">
+      <summary>3D 製造形式 (3MF) ファイル ストリームに Printing3D3MFPackage オブジェクトを保存します。</summary>
+      <returns>パッケージが保存される 3MF ファイルへのストリーム。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3D3MFPackage.SaveModelToPackageAsync(Windows.Graphics.Printing3D.Printing3DModel)">
+      <summary>指定した 3D モデルを 3D 製造形式 (3MF) パッケージに保存します。</summary>
+      <returns>演算の結果。</returns>
+      <param name="value">3MF パッケージに保存される 3D モデル。</param>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DBaseMaterial">
+      <summary>3D モデルの特定のオブジェクトを構築するために使用する基材を表します。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DBaseMaterial.#ctor">
+      <summary>Printing3DBaseMaterial クラスのインスタンスを作成します。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DBaseMaterial.Abs">
+      <summary>基材で使用するアクリロニトリル ブタジエン スチレン (ABS) ホット可塑性の名前を取得します。</summary>
+      <returns>基材で使用する ABS ホット可塑性の名前。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DBaseMaterial.Color">
+      <summary>基材の色を取得または設定します。</summary>
+      <returns>基材の色。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DBaseMaterial.Name">
+      <summary>基材の名前を取得または設定します。</summary>
+      <returns>基材の名前。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DBaseMaterial.Pla">
+      <summary>基材で使用するポリ乳酸 (PLA) ホット可塑性の名前を取得します。</summary>
+      <returns>基材で使用する PLA ホット可塑性。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup">
+      <summary>3D モデルで使用する基材のグループを表します。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup.#ctor(System.UInt32)">
+      <summary>Printing3DBaseMaterialGroup クラスのインスタンスを作成します。</summary>
+      <param name="MaterialGroupId">3D モデルで使用する基材のグループの識別子 (0 より大きい値)。</param>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup.Bases">
+      <summary>3D モデルで使用する基材のグループを取得します。</summary>
+      <returns>Printing3DBaseMaterial 型の、3D モデルで使用する基材のグループ。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup.MaterialGroupId">
+      <summary>基材グループの識別子 (ID) を取得します。</summary>
+      <returns>基材グループの ID。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DBufferDescription">
+      <summary>バッファー内のデータを解析する方法を指定します。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferDescription.Format">
+      <summary>バッファーに使用する形式を指定します。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferDescription.Stride">
+      <summary>次のデータの単位を見つけるためにポインターをどの程度進めるかを指定します。</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DBufferFormat">
+      <summary>バッファーに使用する形式を指定します。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.Printing3DDouble">
+      <summary>double 型のバッファー。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.Printing3DUInt">
+      <summary>unit 型のバッファー。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.R32G32B32A32Float">
+      <summary>アルファなど、1 チャネルあたり 32 ビットをサポートする、4 コンポーネント、128 ビット浮動小数点形式。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.R32G32B32A32UInt">
+      <summary>アルファなど、1 チャネルあたり 32 ビットをサポートする、4 コンポーネント、128 ビット符号なし整数形式。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.R32G32B32Float">
+      <summary>1 色チャネルあたり 32 ビットをサポートする、3 コンポーネント、128 ビット浮動小数点形式。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.R32G32B32UInt">
+      <summary>1 色チャネルあたり 32 ビットをサポートする、3 コンポーネント、128 ビット符号なし整数形式。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DBufferFormat.Unknown">
+      <summary>形式が不明です。</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DColorMaterial">
+      <summary>3D モデルで使用する色の素材を表します。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DColorMaterial.#ctor">
+      <summary>Printing3DColorMaterial クラスのインスタンスを作成します。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DColorMaterial.Color">
+      <summary>素材の色を取得または設定します。</summary>
+      <returns>素材の色。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DColorMaterial.Value">
+      <summary>素材の色の値を取得または設定します。</summary>
+      <returns>素材の色の値。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DColorMaterialGroup">
+      <summary>3D モデルで使用する色の素材のグループを表します。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DColorMaterialGroup.#ctor(System.UInt32)">
+      <summary>Printing3DColorMaterialGroup クラスのインスタンスを作成します。</summary>
+      <param name="MaterialGroupId">3D モデルで使用する色の素材のグループの識別子 (0 より大きい値)。</param>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DColorMaterialGroup.Colors">
+      <summary>3D モデルで使用する色の素材のグループを取得します。</summary>
+      <returns>Printing3DColorMaterial 型の、3D モデルで使用する色の素材のグループ。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DColorMaterialGroup.MaterialGroupId">
+      <summary>色の素材グループの識別子 (ID) を取得します。</summary>
+      <returns>色の素材グループの ID。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DComponent">
+      <summary>3D Manufacturing Format (3MF) コンポーネントを表します。 他のコンポーネントのコンテナーとして機能します。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DComponent.#ctor">
+      <summary>Printing3DComponent クラスのインスタンスを作成します。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponent.Components">
+      <summary>コンポーネント内に含まれている他のコンポーネントを取得します。</summary>
+      <returns>コンポーネント内に含まれている他のコンポーネント。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponent.Mesh">
+      <summary>コンポーネントの 3D メッシュを取得または設定します。</summary>
+      <returns>コンポーネントの 3D メッシュ。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponent.Name">
+      <summary>3D Manufacturing Format (3MF) コンポーネントの名前を取得または設定します。</summary>
+      <returns>3MF コンポーネントの名前。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponent.PartNumber">
+      <summary>3D Manufacturing Format (3MF) コンポーネントの部品番号を取得または設定します。</summary>
+      <returns>3MF コンポーネントの部品番号。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponent.Thumbnail">
+      <summary>3D Manufacturing Format (3MF) コンポーネントのサムネイル イメージを取得または設定します。</summary>
+      <returns>3MF コンポーネントのサムネイル イメージ。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponent.Type">
+      <summary>3D Manufacturing Format (3MF) コンポーネントの種類を取得または設定します。</summary>
+      <returns>3MF コンポーネントの種類。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DComponentWithMatrix">
+      <summary>行列変換を含むオブジェクト定義に適用する 3D Manufacturing Format (3MF) コンポーネントを表します。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DComponentWithMatrix.#ctor">
+      <summary>Printing3DComponentWithMatrix クラスのインスタンスを作成します。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponentWithMatrix.Component">
+      <summary>行列変換を含むオブジェクト定義に適用する 3D Manufacturing Format (3MF) プリミティブ コンポーネントを取得または設定します。</summary>
+      <returns>行列変換を含むオブジェクト定義に適用する 3MF プリミティブ コンポーネントを表します。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DComponentWithMatrix.Matrix">
+      <summary>3D Manufacturing Format (3MF) プリミティブ コンポーネントに適用する行列変換を取得または設定します。</summary>
+      <returns>3D Manufacturing Format (3MF) プリミティブ コンポーネントに適用する行列変換。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DCompositeMaterial">
+      <summary>基材の組み合わせによって定義される複合素材を表します。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DCompositeMaterial.#ctor">
+      <summary>Printing3DCompositeMaterial クラスのインスタンスを作成します。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DCompositeMaterial.Values">
+      <summary>複合素材で使用される基材の組み合わせを取得します。 組み合わせはそれぞれ、各基材 (0 ～ 1 の値) の組み合わせ全体に対する比率をリストすることで定義されます。</summary>
+      <returns>複合素材 (0 ～ 1 の値) で使用される基材の比率。 比率値は、MaterialIndices の基材と同じ順序で指定されます。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup">
+      <summary>複合素材のグループを表します。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup.#ctor(System.UInt32)">
+      <summary>Printing3DCompositeMaterialGroup クラスのインスタンスを作成します。</summary>
+      <param name="MaterialGroupId">複合素材のグループの識別子 (ID) (0 より大きな値)。</param>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup.BaseMaterialGroup">
+      <summary>複合素材の生成に使用される Printing3DBaseMaterial メンバーを持つ既存の Printing3DBaseMaterialGroup を取得します。</summary>
+      <returns>複合素材の生成元の Printing3DBaseMaterialGroup。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup.Composites">
+      <summary>個々の複合素地を定義する組み合わせのリストを取得します。 組み合わせはそれぞれ、各基材 (0 ～ 1 の値) の組み合わせ全体に対する比率をリストすることで定義されます。比率値は、MaterialIndices の基材と同じ順序で指定されます。</summary>
+      <returns>個々の複合素地を定義する組み合わせのリスト。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup.MaterialGroupId">
+      <summary>複合素材グループで使用される素材を定義する基材グループの識別子 (ID) を取得します。</summary>
+      <returns>複合素材グループで使用される素材を定義する基材グループの ID。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup.MaterialIndices">
+      <summary>グループでの複合素材の作成に使用される基材の順序付きリストを取得します。 基材の順序は、Composites により定義された値の組み合わせで維持されます。</summary>
+      <returns>MaterialGroupId により指定された基材グループからの基材のインデックス値。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DFaceReductionOptions">
+      <summary>Printing3DModel クラスの TryReduceFacesAsync メソッドに追加情報を提供します。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DFaceReductionOptions.#ctor">
+      <summary>Printing3DFaceReductionOptions クラスのインスタンスを作成します。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DFaceReductionOptions.MaxEdgeLength">
+      <summary>指定されたエッジを共有する三角形を、TryReduceFacesAsync メソッドによってマージできるエッジの最大長を設定します。 ゼロに設定した場合、組み込みの既定値が使用されます。</summary>
+      <returns>指定されたエッジを共有する三角形をマージできるエッジの最大長。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DFaceReductionOptions.MaxReductionArea">
+      <summary>TryReduceFacesAsync メソッドによってマージできない指定された三角形をの上にある三角形の領域を指定します。 ゼロに設定した場合、組み込みの既定値が使用されます。</summary>
+      <returns>三角形をマージできる最大領域。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DFaceReductionOptions.TargetTriangleCount">
+      <summary>メッシュ上の必要な三角形の数を設定します。 TryReduceFacesAsync メソッドは、三角形の数がこの数以下の場合に面のマージを停止します。 ゼロに設定された場合、三角形の数が半分に減少するまでアルゴリズムが実行されません。</summary>
+      <returns>メッシュ上の必要な三角形の数。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DMaterial">
+      <summary>3D モデルのすべての素材のリソースを表します。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMaterial.#ctor">
+      <summary>Printing3DMaterial クラスのインスタンスを作成します。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMaterial.BaseGroups">
+      <summary>3D モデルで使用するすべての基材のグループを取得します。</summary>
+      <returns>Printing3DBaseMaterialGroup 型の 3D モデルで使用するすべての基材のグループ。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMaterial.ColorGroups">
+      <summary>3D モデルで使用するすべての色の素材のグループを取得します。</summary>
+      <returns>Printing3DColorMaterialGroup 型の 3D モデルで使用するすべての色の素材のグループ。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMaterial.CompositeGroups">
+      <summary>3D モデルで使用するすべての複合素材のグループを取得します。</summary>
+      <returns>Printing3DCompositeMaterialGroup 型の 3D モデルで使用するすべての複合素材のグループ。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMaterial.MultiplePropertyGroups">
+      <summary>3D モデルで使用するすべての複数プロパティ グループを取得します。</summary>
+      <returns>Printing3DMultiplePropertyMaterialGroup 型の 3D モデルで使用するすべての複数プロパティ グループ。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMaterial.Texture2CoordGroups">
+      <summary>3D モデルで使用する 2D テクスチャ素材のグループを取得します。</summary>
+      <returns>Printing3DTexture2CoordMaterialGroup 型の 3D モデルで使用するすべての 2D テクスチャ素材グループ。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DMesh">
+      <summary>3D モデルのメッシュを表します。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.#ctor">
+      <summary>Printing3DMesh クラスのインスタンスを作成します。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.BufferDescriptionSet">
+      <summary>一連のメッシュ バッファー記述を取得します。</summary>
+      <returns>一連のメッシュ バッファー記述。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.BufferSet">
+      <summary>一連のメッシュ バッファーを取得します。</summary>
+      <returns>一連のメッシュ バッファー。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.IndexCount">
+      <summary>三角形のインデックスの数を取得または設定します。</summary>
+      <returns>三角形のインデックスの数。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.TriangleIndicesDescription">
+      <summary>三角形のインデックスのバッファー記述を取得または設定します。</summary>
+      <returns>三角形のインデックスのバッファー記述。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.TriangleMaterialIndicesDescription">
+      <summary>三角形の素材のインデックスのバッファー記述を取得または設定します。</summary>
+      <returns>三角形の素材のインデックスのバッファー記述。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.VertexCount">
+      <summary>三角形の頂点の数を取得または設定します。</summary>
+      <returns>三角形の頂点の数。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.VertexNormalsDescription">
+      <summary>頂点の法線のバッファー記述を取得または設定します。</summary>
+      <returns>頂点の法線のバッファー記述。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMesh.VertexPositionsDescription">
+      <summary>頂点の位置のバッファー記述を取得または設定します。</summary>
+      <returns>頂点の位置のバッファー記述。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.CreateTriangleIndices(System.UInt32)">
+      <summary>三角形のインデックスのバッファーを作成します。</summary>
+      <param name="value">バッファーの容量。IBuffer が保持できる最大バイト数です。</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.CreateTriangleMaterialIndices(System.UInt32)">
+      <summary>三角形の素材のインデックスのバッファーを作成します。</summary>
+      <param name="value">バッファーの容量。IBuffer が保持できる最大バイト数です。</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.CreateVertexNormals(System.UInt32)">
+      <summary>頂点の法線のバッファーを作成します。</summary>
+      <param name="value">バッファーの容量。IBuffer が保持できる最大バイト数です。</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.CreateVertexPositions(System.UInt32)">
+      <summary>頂点の位置のバッファーを作成します。</summary>
+      <param name="value">バッファーの容量。IBuffer が保持できる最大バイト数です。</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.GetTriangleIndices">
+      <summary>三角形のインデックスのバッファーを取得します。</summary>
+      <returns>三角形のインデックスのバッファー。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.GetTriangleMaterialIndices">
+      <summary>三角形の素材のインデックスのバッファーを取得します。</summary>
+      <returns>三角形の素材のインデックスのバッファー。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.GetVertexNormals">
+      <summary>頂点の法線のバッファーを取得します。</summary>
+      <returns>頂点の法線のバッファー。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.GetVertexPositions">
+      <summary>頂点の位置のバッファーを取得します。</summary>
+      <returns>頂点の位置のバッファー。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMesh.VerifyAsync(Windows.Graphics.Printing3D.Printing3DMeshVerificationMode)">
+      <summary>メッシュに多様エッジ、法線三角形があることを確認します。</summary>
+      <returns>型 Printing3DMeshVerificationResult の検証の結果。</returns>
+      <param name="value">メッシュの検証方法を指定します。</param>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DMeshVerificationMode">
+      <summary>メッシュの検証方法を指定します。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DMeshVerificationMode.FindAllErrors">
+      <summary>検証が完了するまで、結果を返すのを待機します。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DMeshVerificationMode.FindFirstError">
+      <summary>最初のエラーを見つけたときに結果を返します。</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DMeshVerificationResult">
+      <summary>VerifyAsync メソッドにデータを提供します。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMeshVerificationResult.IsValid">
+      <summary>メッシュが有効であるかどうかを示す値を取得します。</summary>
+      <returns>メッシュが有効の場合は True。それ以外の場合は False。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMeshVerificationResult.NonmanifoldTriangles">
+      <summary>非多様エッジの三角形を取得します (該当する場合)。</summary>
+      <returns>非多様エッジの三角形。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMeshVerificationResult.ReversedNormalTriangles">
+      <summary>法線反転三角形を取得します (該当する場合) 。</summary>
+      <returns>法線反転三角形。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DModel">
+      <summary>3D Manufacturing Format (3MF) パッケージの 3D モデルを表します。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.#ctor">
+      <summary>Printing3DModel クラスのインスタンスを作成します。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Build">
+      <summary>ルート 3D Manufacturing Format (3MF) コンポーネントを取得または設定します。 これは 3D プリンターのビルド プレートを表し、何を印刷するかを定義します。</summary>
+      <returns>ルート 3MF コンポーネント。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Components">
+      <summary>3D モデルで使用するすべての 3D Manufacturing Format (3MF) コンポーネントを取得します。</summary>
+      <returns>Printing3DComponent 型の 3D モデルで使用するすべての 3MF コンポーネント。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Material">
+      <summary>3D モデルのルートの素材コンテナーを取得または設定します。</summary>
+      <returns>3D モデルのルートの素材コンテナー。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Meshes">
+      <summary>3D モデルで使用するすべてのメッシュを取得します。</summary>
+      <returns>Printing3DMesh 型の 3D モデルで使用するすべてのメッシュ。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Metadata">
+      <summary>3D Manufacturing Format (3MF) パッケージのメタデータを取得します。</summary>
+      <returns>3MF パッケージのメタデータ。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.RequiredExtensions">
+      <summary>3D Manufacturing Format (3MF) パッケージで必要な拡張機能のリストを取得します。</summary>
+      <returns>3MF パッケージで必要な拡張機能。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Textures">
+      <summary>3D モデルで使用するすべてのテクスチャを取得します。</summary>
+      <returns>Printing3DModelTexture 型の 3D モデルで使用するすべてのテクスチャ。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Unit">
+      <summary>3D モデルで使用する測定単位を取得または設定します。</summary>
+      <returns>3D モデルで使用する測定単位。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModel.Version">
+      <summary>3D Manufacturing Format (3MF) パッケージのバージョンを取得または設定します。</summary>
+      <returns>3MF パッケージのバージョン。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.Clone">
+      <summary>現在の 3D モデルのコピーを取得します。</summary>
+      <returns>現在の 3D モデルのコピー。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.RepairAsync">
+      <summary>3D モデルを修復します。</summary>
+      <returns>操作の結果。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.RepairWithProgressAsync">
+      <summary>操作の進行状況を報告できる 3D モデルを修復します。</summary>
+      <returns>非同期操作が成功したかどうかを示すブール値と、0 ～ 1 の 10 進数として進行状況を報告する Double 値。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.TryPartialRepairAsync">
+      <summary>完了するか、例外がスローされるまで、3D モデル修復アルゴリズムを実行します。</summary>
+      <returns>非同期操作が成功した場合は true。そうでない場合は false。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.TryPartialRepairAsync(Windows.Foundation.TimeSpan)">
+      <summary>3D モデル修復アルゴリズムを開始しますが、時間制限に達した場合は終了します。</summary>
+      <returns>非同期操作が成功した場合は true。そうでない場合は false。</returns>
+      <param name="maxWaitTime">アルゴリズムを実行できる時間の長さを定義します (秒単位)。 値が 0 の場合、別の終了条件が満たされるまでアルゴリズムが実行されます。</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.TryReduceFacesAsync">
+      <summary>隣接する頂点のマージによって Printing3DModel 内のすべてのメッシュの三角形の面の数を減らすアルゴリズムを実行します。 三角形の総数が半分になると停止します。</summary>
+      <returns>非同期操作が成功したかどうかを示すブール値と、0 ～ 1 の 10 進数として進行状況を報告する Double 値。</returns>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.TryReduceFacesAsync(Windows.Graphics.Printing3D.Printing3DFaceReductionOptions)">
+      <summary>隣接する頂点のマージによって Printing3DModel 内のすべてのメッシュの三角形の面の数を減らすアルゴリズムを実行します。 指定したオプションに従って停止します。</summary>
+      <returns>非同期操作が成功したかどうかを示すブール値と、0 ～ 1 の 10 進数として進行状況を報告する Double 値。</returns>
+      <param name="printing3DFaceReductionOptions">操作の終了をトリガーする条件を定義します。</param>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModel.TryReduceFacesAsync(Windows.Graphics.Printing3D.Printing3DFaceReductionOptions,Windows.Foundation.TimeSpan)">
+      <summary>隣接する頂点のマージによって Printing3DModel 内のすべてのメッシュの三角形の面の数を減らすアルゴリズムを実行します。 指定されたオプションに従って、または maxWait 時間に達したときに停止します。</summary>
+      <returns>非同期操作が成功したかどうかを示すブール値と、0 ～ 1 の 10 進数として進行状況を報告する Double 値。</returns>
+      <param name="printing3DFaceReductionOptions">操作の終了をトリガーする条件を定義します。</param>
+      <param name="maxWait">アルゴリズムを実行できる時間の長さを定義します (秒単位)。 値が 0 の場合、別の終了条件が満たされるまでアルゴリズムが実行されます。</param>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DModelTexture">
+      <summary>3D モデルで使用するテクスチャを表します。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DModelTexture.#ctor">
+      <summary>Printing3DModelTexture クラスのインスタンスを作成します。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModelTexture.TextureResource">
+      <summary>テクスチャが使用するテクスチャ リソースを取得または設定します。</summary>
+      <returns>テクスチャが使用するテクスチャ リソース。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModelTexture.TileStyleU">
+      <summary>要求される区分全体を満たすようにタイルが U 軸に発生する方法を示す値を取得または設定します。</summary>
+      <returns>要求される区分全体を満たすようにタイルが U 軸に発生する方法を示す値。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DModelTexture.TileStyleV">
+      <summary>要求される区分全体を満たすようにタイルが V 軸に発生する方法を示す値を取得または設定します。</summary>
+      <returns>要求される区分全体を満たすようにタイルが V 軸に発生する方法を示す値。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DModelUnit">
+      <summary>3D モデルで使用する測定単位を指定します。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DModelUnit.Centimeter">
+      <summary>3D モデルの単位はセンチメートルで指定します。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DModelUnit.Foot">
+      <summary>3D モデルの単位はフィートで指定します。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DModelUnit.Inch">
+      <summary>3D モデルの単位はインチで指定します。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DModelUnit.Meter">
+      <summary>3D モデルの単位はメートルで指定します。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DModelUnit.Micron">
+      <summary>3D モデルの単位はミクロンで指定します。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DModelUnit.Millimeter">
+      <summary>3D モデルはミリメートル単位で指定します。</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial">
+      <summary>(MaterialGroupIndices) で指定された素材グループからプロパティと素材の組み合わせを表します 。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial.#ctor">
+      <summary>Printing3DMultiplePropertyMaterial クラスのインスタンスを作成します。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial.MaterialIndices">
+      <summary>複数プロパティ素材で結合されるプロパティや素材のインデックスを取得します。 各組み合わせは、セカンダリ素材グループの項目のインデックスを持つ 1 つの素材グループから項目のインデックスをリストすることで定義されます。 インデックス値は、MaterialGroupIndices でリストされた素材グループと同じ順序で指定されます。</summary>
+      <returns>複数プロパティで結合されるプロパティや素材のインデックス。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup">
+      <summary>複数プロパティ素材グループを表します。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup.#ctor(System.UInt32)">
+      <summary>Printing3DMultiplePropertyMaterialGroup クラスの新しいインスタンスを作成します。</summary>
+      <param name="MaterialGroupId">複数プロパティ素材のグループの識別子 (ID) (0 より大きな値)。</param>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup.MaterialGroupId">
+      <summary>複数プロパティ素材グループの識別子 (ID) を取得します。</summary>
+      <returns>複数プロパティ素材グループ ID。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup.MaterialGroupIndices">
+      <summary>複数プロパティ グループでプロパティと素材の組み合わせを定義するのに使用される素材グループ (MaterialGroupId 値) の順序付きリストを取得します。 素材グループの順序は、MultipleProperties により定義された組み合わせで維持されます。</summary>
+      <returns>グループ内のプロパティや素材のインデックス。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup.MultipleProperties">
+      <summary>プロパティと素材の組み合わせのリストを取得します。 各組み合わせは、セカンダリ素材グループの項目のインデックスを持つ 1 つの素材グループから項目のインデックスをリストすることで定義されます。 インデックス値は、MaterialGroupIndices でリストされた素材グループと同じ順序で指定されます。</summary>
+      <returns>プロパティと素材の組み合わせのリスト。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DObjectType">
+      <summary>3D モデルでオブジェクトの機能を指定します。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DObjectType.Model">
+      <summary>3D モデルのコア コンポーネントとして機能します。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DObjectType.Others">
+      <summary>他の容量として機能します。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DObjectType.Support">
+      <summary>サポート オブジェクトとして機能します。</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial">
+      <summary>3D モデルで使用する 2D テクスチャ素材を表します。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial.#ctor">
+      <summary>Printing3DTexture2CoordMaterial クラスのインスタンスを作成します。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial.Texture">
+      <summary>2D テクスチャ素材が使用するテクスチャを取得または設定します。</summary>
+      <returns>2D テクスチャ素材が使用するテクスチャ。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial.U">
+      <summary>テクスチャの左上の原点から水平方向に右へ、テクスチャ内の U 座標を取得または設定します。</summary>
+      <returns>テクスチャ内の U 座標。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial.V">
+      <summary>テクスチャの左上の原点から縦方向に下へ、テクスチャ内の V 座標を取得または設定します。</summary>
+      <returns>テクスチャ内の V 座標。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup">
+      <summary>3D モデルで使用する 2D テクスチャ素材のグループを表します。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup.#ctor(System.UInt32)">
+      <summary>Printing3DTexture2CoordMaterialGroup クラスのインスタンスを作成します。</summary>
+      <param name="MaterialGroupId">3D モデルで使用する 2D テクスチャ素材のグループの識別子 (0 より大きい値)。</param>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup.MaterialGroupId">
+      <summary>2D テクスチャ素材グループの識別子 (ID) を取得します。</summary>
+      <returns>2D テクスチャ素材グループの ID。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup.Texture">
+      <summary>素材グループのテクスチャを取得または設定します。</summary>
+      <returns>素材グループのテクスチャ。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup.Texture2Coords">
+      <summary>3D モデルで使用する 2D テクスチャ素材のグループを取得します。</summary>
+      <returns>Printing3DTexture2CoordMaterial 型の 3D モデルで使用する 2D テクスチャ素材のグループ。</returns>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior">
+      <summary>テクスチャの要求される区分全体を満たすようにタイルが U および V 軸に発生する方法を指定します。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior.Clamp">
+      <summary>[0.0, 1.0] 範囲にテクスチャ座標をクランプします。 つまり、テクスチャを一度適用してから、エッジ ピクセルの色を付けます。 たとえば、アプリケーションが四角形のプリミティブを作成し、テクスチャ座標 (0.0,0.0)、(0.0,3.0)、(3.0,3.0)、(3.0,0.0) をプリミティブの頂点に割り当てるとします。 テクスチャ エッジのクランプ動作を設定すると、テクスチャが一度適用されます。 列の上端および行の末尾のピクセルの色が、次に示すように、各プリミティブのそれぞれ上端および右側に延長されます。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior.Mirror">
+      <summary>タイルは、すべての整数の境界でテクスチャを反映します。 たとえば、テクスチャ座標 (0.0,0.0)、(0.0,3.0)、(3.0,3.0)、および (3.0,0.0) の場合。 Wrap テクスチャのエッジの動作を設定すると、u および v 方向の両方でテクスチャが 3 回適用されます。 次に示すように、適用される他のすべての行および列は前の行または列のミラー イメージです。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior.None">
+      <summary>タイルは発生しません。</summary>
+    </member><member name="F:Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior.Wrap">
+      <summary>タイルは、すべての整数接合点でテクスチャ リソースを繰り返します。 たとえば、テクスチャ座標 (0.0,0.0)、(0.0,3.0)、(3.0,3.0)、および (3.0,0.0) の場合、Wrap テクスチャのエッジの動作を設定すると、次に示すように、u および v 方向の両方でテクスチャが 3 回適用されます。</summary>
+    </member><member name="T:Windows.Graphics.Printing3D.Printing3DTextureResource">
+      <summary>2D テクスチャ素材で使用するテクスチャ リソースを指定します。</summary>
+    </member><member name="M:Windows.Graphics.Printing3D.Printing3DTextureResource.#ctor">
+      <summary>Printing3DTextureResource クラスのインスタンスを作成します。</summary>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTextureResource.Name">
+      <summary>テクスチャ リソースの名前を取得または設定します。</summary>
+      <returns>テクスチャ リソースの名前。</returns>
+    </member><member name="P:Windows.Graphics.Printing3D.Printing3DTextureResource.TextureData">
+      <summary>テクスチャ リソースのイメージ ストリームを取得または設定します。</summary>
+      <returns>テクスチャ リソースのイメージ ストリーム。</returns>
+    </member></members>
+</doc>

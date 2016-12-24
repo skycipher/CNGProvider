@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Printers.Extensions.ExtensionsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Printers.Extensions.PrintExtensionContext">
+      <summary>Fournit le contexte de l'objet extension d'imprimante.</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintExtensionContext.FromDeviceId(System.String)">
+      <summary>Obtient le contexte de l'objet extension d'imprimante en fonction de l'ID de DeviceInformation.</summary>
+      <returns>Pointeur vers le contexte.</returns>
+      <param name="deviceId">ID d'information de périphérique pour le périphérique d'impression.</param>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails">
+      <summary>Contient des propriétés qui permettent à un client d'accéder à des données d'événement d'impression et des informations de nom de périphérique d'impression et/ou de les manipuler.</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails.EventData">
+      <summary>Obtient ou définit les données d'événement pour un événement de notification d'impression.</summary>
+      <returns>Données d'événement de notification d'impression.</returns>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails.PrinterName">
+      <summary>Obtient le nom du périphérique d'impression associé à la notification d'impression.</summary>
+      <returns>Nom du périphérique d'impression.</returns>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfiguration">
+      <summary>Permet à un client de récupérer le contexte d'extension de la tâche d'impression, et d'ajouter également un gestionnaire d'événements à la tâche d'impression.</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfiguration.PrinterExtensionContext">
+      <summary>Obtient le contexte pour l'extension de tâche d'impression.</summary>
+      <returns>Contexte pour l'extension de tâche d'impression.</returns>
+    </member><member name="E:Windows.Devices.Printers.Extensions.PrintTaskConfiguration.SaveRequested">
+      <summary>Déclenché par la fenêtre d'impression pour que votre application indique à l'application de périphérique que le ticket d'impression doit être mis à jour.</summary>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest">
+      <summary>Appelé lorsque la boîte de dialogue d'impression de votre application de style Metro déclenche un événement SaveRequested.</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Deadline">
+      <summary>Obtient l'objet DateTime qui fournit des informations sur la date d'échéance de la tâche d'impression.</summary>
+      <returns>Date limite de la tâche d'impression.</returns>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Cancel">
+      <summary>Appelé par l'application de périphérique pour annuler la requête client afin d'enregistrer la configuration de la tâche d'impression.</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.GetDeferral">
+      <summary>Appelé par l'application de périphérique pour effectuer certaines tâches asynchrones avant d'enregistrer les informations de configuration de la tâche d'impression.</summary>
+      <returns>Objet qui représente le différé pour la demande de sauvegarde de configuration de tâche d'impression.</returns>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Save(System.Object)">
+      <summary>Appelé par l'application de périphérique pour enregistrer la configuration de la tâche d'impression.</summary>
+      <param name="printerExtensionContext">Objet qui représente le contexte d'extension de tâche d'impression.</param>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral">
+      <summary>Appelé par l'application de périphérique pour fournir une mise à jour de l'état du différé.</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral.Complete">
+      <summary>Appelé par l'application de périphérique lorsque le différé est terminé.</summary>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs">
+      <summary>Appelé pour signaler à l'application de périphérique que la configuration de la tâche d'impression doit être enregistrée.</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs.Request">
+      <summary>Obtient les informations nécessaires pour mettre à jour la configuration de tâche d'impression.</summary>
+      <returns>Demande de sauvegarde de configuration de tâche d'impression.</returns>
+    </member></members>
+</doc>

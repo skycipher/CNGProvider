@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Calls.CallsVoipContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Calls.CallAnswerEventArgs">
+      <summary>支援 VoipPhoneCall 類別的 AnswerRequested 事件。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+    </member><member name="P:Windows.ApplicationModel.Calls.CallAnswerEventArgs.AcceptedMedia">
+      <summary>取得使用者接聽時選取的媒體類型。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+      <returns>使用者接聽時選取的媒體類型。</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.CallRejectEventArgs">
+      <summary>支援 VoipPhoneCall 類別的 RejectRequested 事件。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+    </member><member name="P:Windows.ApplicationModel.Calls.CallRejectEventArgs.RejectReason">
+      <summary>取得來電遭拒的原因。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+      <returns>來電遭拒的原因。</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.CallStateChangeEventArgs">
+      <summary>支援 VoipPhoneCall 類別的 EndRequested、HoldRequested 和 ResumeRequested 事件。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+    </member><member name="P:Windows.ApplicationModel.Calls.CallStateChangeEventArgs.State">
+      <summary>取得 VoIP 呼叫的目前狀態。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+      <returns>VOIP 呼叫的目前狀態。</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.MuteChangeEventArgs">
+      <summary>支援 NotifyMuted 和 NotifyUnmuted 事件。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+    </member><member name="P:Windows.ApplicationModel.Calls.MuteChangeEventArgs.Muted">
+      <summary>取得通話目前是否為靜音。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+      <returns>通話目前是否為靜音。</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.VoipCallCoordinator">
+      <summary>可讓應用程式管理 VoIP 呼叫。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+    </member><member name="E:Windows.ApplicationModel.Calls.VoipCallCoordinator.MuteStateChanged">
+      <summary>當通話的靜音狀態變更時引發。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.CancelUpgrade(System.Guid)">
+      <summary>取消升級至 VoIP 呼叫。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+      <param name="callUpgradeGuid">VoIP 呼叫的 GUID。</param>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.GetDefault">
+      <summary>擷取 VoipCallCoordinator 類別的預設執行個體。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+      <returns>預設通話協調器。</returns>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.NotifyMuted">
+      <summary>通知系統使用者使用 VoIP 應用程式的 UI 讓通話變成靜音。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.NotifyUnmuted">
+      <summary>通知系統使用者使用 VoIP 應用程式的 UI 取消通話的靜音設定。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestIncomingUpgradeToVideoCall(System.String,System.String,System.String,Windows.Foundation.Uri,System.String,Windows.Foundation.Uri,System.String,Windows.Foundation.Uri,Windows.Foundation.TimeSpan)">
+      <summary>對系統要求撥入的視訊通話，該通話將取代現有的通話。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+      <returns>表示新來電的物件。</returns>
+      <param name="context">傳遞至相關前景應用程式做為深層連結的字串。 這可能是連絡人名稱，或是其他可更快填入應用程式 UI 的資料。 最大長度為 128 個字元。 這個參數必須為非 null，而且必須是指應用程式的資訊清單檔案中所定義的工作。</param>
+      <param name="contactName">要在來電 UI 上顯示的呼叫端連絡人名稱。 最大長度為 128 個字元。</param>
+      <param name="contactNumber">要在來電 UI 上顯示的來電者電話號碼。 最大長度為 128 個字元。</param>
+      <param name="contactImage">與來電 UI 上要顯示的來電者相關聯的影像檔 URI。 檔案類型必須是 PNG 或 JPG。 最大檔案大小是 1 MB。</param>
+      <param name="serviceName">VoIP 服務或應用程式的名稱。 最大長度為 128 個字元。</param>
+      <param name="brandingImage">影像檔 URI，這個檔案是要在來電 UI 上顯示的 VoIP 服務或應用程式的標誌或圖示。 檔案類型必須是 PNG 或 JPG。 最大檔案大小是 128 KB。</param>
+      <param name="callDetails">一個字串，表示此呼叫是代表誰執行的。 最大長度為 128 個字元。</param>
+      <param name="ringtone">包含此通話之鈴聲的音訊檔 URI。 檔案類型必須是 WMA 或 MP3。 最大檔案大小是 1 MB。</param>
+      <param name="ringTimeout">在拒絕通話之前，系統應等候使用者接聽或忽略通話的時間 (以秒為單位)。 允許的範圍為 5 到 120 秒。 預設值為 30 秒。</param>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestNewIncomingCall(System.String,System.String,System.String,Windows.Foundation.Uri,System.String,Windows.Foundation.Uri,System.String,Windows.Foundation.Uri,Windows.ApplicationModel.Calls.VoipPhoneCallMedia,Windows.Foundation.TimeSpan)">
+      <summary>對系統要求新的撥入通話。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+      <returns>表示新來電的物件。</returns>
+      <param name="context">傳遞至相關前景應用程式做為深層連結的字串。 最大長度為 128 個字元。 此參數必須為非 null。</param>
+      <param name="contactName">要在來電 UI 上顯示的呼叫端連絡人名稱。 最大長度為 128 個字元。</param>
+      <param name="contactNumber">要在來電 UI 上顯示的來電者電話號碼。 最大長度為 128 個字元。</param>
+      <param name="contactImage">與來電 UI 上要顯示的來電者相關聯的影像檔 URI。 檔案類型必須是 PNG 或 JPG。 最大檔案大小是 1MB。</param>
+      <param name="serviceName">VoIP 服務或應用程式的名稱。 最大長度為 128 個字元。</param>
+      <param name="brandingImage">影像檔 URI，這個檔案是要在來電 UI 上顯示的 VoIP 服務或應用程式的標誌或圖示。 檔案類型必須是 PNG 或 JPG。 最大檔案大小是 128KB。</param>
+      <param name="callDetails">一個字串，表示此呼叫是代表誰執行的。 最大長度為 128 個字元。</param>
+      <param name="ringtone">包含此通話之鈴聲的音訊檔 URI。 檔案類型必須是 WMA 或 MP3。 最大檔案大小是 1MB。</param>
+      <param name="media">新來電的媒體類型。</param>
+      <param name="ringTimeout">在拒絕通話之前，系統應等候使用者接聽或忽略通話的時間 (以秒為單位)。 允許的範圍為 5 到 120 秒。 預設值為 30 秒。</param>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestNewOutgoingCall(System.String,System.String,System.String,Windows.ApplicationModel.Calls.VoipPhoneCallMedia)">
+      <summary>對系統要求新的撥出通話。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+      <returns>表示新來電的物件。</returns>
+      <param name="context">傳遞至相關前景應用程式做為深層連結的字串。 最大長度為 128 個字元。 此參數必須為非 null。</param>
+      <param name="contactName">要在電話的最小通話 UI 中顯示的來電者名稱或識別碼。 最大長度為 128 個字元。</param>
+      <param name="serviceName">要在電話的最小通話 UI 中顯示的 VoIP 服務名稱。 最大長度為 128 個字元。</param>
+      <param name="media">表示新撥出通話的物件。</param>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestOutgoingUpgradeToVideoCall(System.Guid,System.String,System.String,System.String)">
+      <summary>提出系統要求建立撥出視訊通話，該通話將取代現有的行動電話通話。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+      <returns>表示新撥出通話的物件。</returns>
+      <param name="callUpgradeGuid">通話的 GUID。</param>
+      <param name="context">傳遞至相關前景應用程式做為深層連結的字串。 這可能是連絡人名稱，或是其他可更快填入應用程式 UI 的資料。 最大長度為 128 個字元。 這個參數必須為非 null，而且必須是指應用程式的資訊清單檔案中所定義的工作。</param>
+      <param name="contactName">要在電話的最小通話 UI 中顯示的來電者名稱或識別碼。 最大長度為 128 個字元。</param>
+      <param name="serviceName">要在電話的最小通話 UI 中顯示的 VoIP 服務名稱。 最大長度為 128 個字元。</param>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.ReserveCallResourcesAsync(System.String)">
+      <summary>保留 VoIP 呼叫所需的資源。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+      <returns>保留動作的結果。</returns>
+      <param name="taskEntryPoint">執行背景工作的應用程式定義類別名稱。 如需詳細資訊，請參閱 TaskEntryPoint。</param>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.TerminateCellularCall(System.Guid)">
+      <summary>結束行動電話通話，以升級至 VoIP 呼叫。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+      <param name="callUpgradeGuid">VoIP 呼叫的 GUID。</param>
+    </member><member name="T:Windows.ApplicationModel.Calls.VoipPhoneCall">
+      <summary>表示 VoIP 電話。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+    </member><member name="P:Windows.ApplicationModel.Calls.VoipPhoneCall.CallMedia">
+      <summary>取得通話使用的媒體類型。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+      <returns>通話使用的媒體類型。</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.VoipPhoneCall.ContactName">
+      <summary>取得或設定與 VoIP 呼叫相關聯的連絡人名稱。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+      <returns>與 VoIP 呼叫相關聯的連絡人名稱。</returns>
+    </member><member name="P:Windows.ApplicationModel.Calls.VoipPhoneCall.StartTime">
+      <summary>取得或設定與 VoIP 呼叫相關的開始時間。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+      <returns>與通話相關聯的開始時間。</returns>
+    </member><member name="E:Windows.ApplicationModel.Calls.VoipPhoneCall.AnswerRequested">
+      <summary>使用者接聽來電時引發。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+    </member><member name="E:Windows.ApplicationModel.Calls.VoipPhoneCall.EndRequested">
+      <summary>引發以警告 VoIP 應用程式應該結束通話。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+    </member><member name="E:Windows.ApplicationModel.Calls.VoipPhoneCall.HoldRequested">
+      <summary>引發以警告 VoIP 應用程式應該保留通話。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+    </member><member name="E:Windows.ApplicationModel.Calls.VoipPhoneCall.RejectRequested">
+      <summary>呼叫已拒絕時引發。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+    </member><member name="E:Windows.ApplicationModel.Calls.VoipPhoneCall.ResumeRequested">
+      <summary>引發以表示之前保留的 VoIP 呼叫應設為作用中。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallActive">
+      <summary>通知系統 VoIP 呼叫作用中。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallEnded">
+      <summary>通知系統通話已結束。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallHeld">
+      <summary>通知系統通話目前保留。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+    </member><member name="M:Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallReady">
+      <summary>將行動電話通話升級為視訊時，通知系統應用程式已完成視訊通話的音訊和視訊資料流設定，讓系統能夠結束現有的行動電話通話。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+    </member><member name="T:Windows.ApplicationModel.Calls.VoipPhoneCallMedia">
+      <summary>指定 VoIP 呼叫使用的媒體類型。</summary>
+      <capability type="voipCall">應用程式存取在 Windows.ApplicationModel.Calls 命名空間中呼叫 API 的 VOIP 時所需。</capability>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallMedia.Audio">
+      <summary>通話使用音訊。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallMedia.None">
+      <summary>通話未使用媒體。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallMedia.Video">
+      <summary>通話使用視訊。</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason">
+      <summary>指定來電遭拒的原因。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason.EmergencyCallExists">
+      <summary>緊急電話正在進行中。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason.InvalidCallState">
+      <summary>通話的狀態無效。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason.OtherIncomingCall">
+      <summary>已接受另一通來電。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason.TimedOut">
+      <summary>來電逾時。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason.UserIgnored">
+      <summary>使用者已按下按鈕忽略通話。</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.VoipPhoneCallResourceReservationStatus">
+      <summary>指出嘗試保留 VoIP 資源的結果。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallResourceReservationStatus.ResourcesNotAvailable">
+      <summary>資源未保留，因為無法使用。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallResourceReservationStatus.Success">
+      <summary>資源已保留。</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.VoipPhoneCallState">
+      <summary>指定 VoIP 呼叫的狀態。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallState.Active">
+      <summary>通話為作用中。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallState.Ended">
+      <summary>呼叫已經結束。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallState.Held">
+      <summary>通話保留中。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallState.Incoming">
+      <summary>通話正在傳入，但尚未作用。</summary>
+    </member><member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallState.Outgoing">
+      <summary>正在撥出通話，但尚未作用。</summary>
+    </member></members>
+</doc>

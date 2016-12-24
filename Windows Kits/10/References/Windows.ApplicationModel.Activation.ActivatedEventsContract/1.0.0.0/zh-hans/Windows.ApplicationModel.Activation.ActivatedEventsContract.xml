@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Activation.ActivatedEventsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Activation.ILockScreenCallActivatedEventArgs">
+      <summary>提供有关何时需要与锁定屏幕进行通信的事件信息。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ILockScreenCallActivatedEventArgs.CallUI">
+      <summary>获取用于处理往来于锁定屏幕的通信的 UI。</summary>
+      <returns>用于处理往来于锁定屏幕的通信的 UI。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IPrintTaskSettingsActivatedEventArgs">
+      <summary>响应打印任务设置激活时引发的事件而提供信息。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IPrintTaskSettingsActivatedEventArgs.Configuration">
+      <summary>获取打印任务的配置信息。</summary>
+      <returns>打印任务配置信息。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs">
+      <summary>提供有关何时需要与锁定屏幕进行通信的事件信息。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.Arguments">
+      <summary>获取传递给应用程序以启动应用程序的参数。</summary>
+      <returns>参数列表。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.CallUI">
+      <summary>获取用于处理往来于锁定屏幕的通信的 UI。</summary>
+      <returns>用于处理往来于锁定屏幕的通信的 UI。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.CurrentlyShownApplicationViewId">
+      <summary>获取当前显示的应用程序视图的标识符。</summary>
+      <returns>当前显示的应用程序视图的标识符。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.Kind">
+      <summary>获取激活类型。</summary>
+      <returns>ActivationKind.LockScreenCall 枚举值。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.PreviousExecutionState">
+      <summary>在应用程序激活前获取该应用程序的执行状态。</summary>
+      <returns>枚举值之一。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.SplashScreen">
+      <summary>获取一个初始屏幕对象，该对象提供有关从初始屏幕转换到激活的应用程序的信息。</summary>
+      <returns>提供初始屏幕信息的对象。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.TileId">
+      <summary>获取已启动应用程序的源的标识符。</summary>
+      <returns>图块的标识符。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs">
+      <summary>响应打印任务设置激活时引发的事件而提供信息。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.Configuration">
+      <summary>获取打印任务的配置信息。</summary>
+      <returns>打印任务配置信息。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.Kind">
+      <summary>获取打印任务设置的激活类型。</summary>
+      <returns>打印任务的激活类型。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.PreviousExecutionState">
+      <summary>在激活设置前获取应用程序的执行状态。</summary>
+      <returns>应用程序的执行状态。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.SplashScreen">
+      <summary>获取提供有关从初始屏幕转换到激活的应用程序的信息的初始屏幕对象。</summary>
+      <returns>提供初始屏幕信息的对象。</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs">
+      <summary>提供有关何时需要与锁定屏幕进行通信的事件信息。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.ActivatedOperation">
+      <summary>获取应用程序激活的操作。</summary>
+      <returns>激活操作。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.Arguments">
+      <summary>获取在其启动激活期间传递给应用程序的参数。</summary>
+      <returns>参数列表。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.CallUI">
+      <summary>获取用于处理往来于锁定屏幕的通信的 UI。</summary>
+      <returns>用于处理往来于锁定屏幕的通信的 UI。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.CurrentlyShownApplicationViewId">
+      <summary>获取当前显示的应用程序视图的标识符。</summary>
+      <returns>当前显示的应用程序视图的标识符。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.Kind">
+      <summary>获取激活类型。</summary>
+      <returns>ActivationKind.lockScreenCall 枚举值。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.PreviousExecutionState">
+      <summary>在应用程序激活前获取该应用程序的执行状态。</summary>
+      <returns>枚举值之一。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.SplashScreen">
+      <summary>获取一个初始屏幕对象，该对象提供有关从初始屏幕转换到激活的应用程序的信息。</summary>
+      <returns>提供初始屏幕信息的对象。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.TileId">
+      <summary>获取已启动应用程序的源的标识符。</summary>
+      <returns>图块的标识符。</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs">
+      <summary>表示有关激活 3D 打印工作流的参数。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.ActivatedOperation">
+      <summary>获取激活的操作。</summary>
+      <returns>已激活的操作。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.Kind">
+      <summary>获取激活类型。</summary>
+      <returns>激活类型。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.PreviousExecutionState">
+      <summary>获取以前的执行状态。</summary>
+      <returns>以前的状态。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.SplashScreen">
+      <summary>获取提供有关从初始屏幕转换到激活的应用程序的信息的初始屏幕对象。</summary>
+      <returns>初始屏幕。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.Workflow">
+      <summary>获取打印工作流。</summary>
+      <returns>打印工作流。</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs">
+      <summary>响应打印任务设置激活时引发的事件而提供。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.ActivatedOperation">
+      <summary>获取应用程序激活的操作。</summary>
+      <returns>激活操作。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.Configuration">
+      <summary>获取打印任务的配置信息。</summary>
+      <returns>打印任务配置信息。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.Kind">
+      <summary>获取激活类型。</summary>
+      <returns>枚举值之一。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.PreviousExecutionState">
+      <summary>在激活设置前获取应用程序的执行状态。</summary>
+      <returns>枚举值之一。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.SplashScreen">
+      <summary>获取提供有关从初始屏幕转换到激活的应用程序的信息的初始屏幕对象。</summary>
+      <returns>提供初始屏幕信息的对象。</returns>
+    </member></members>
+</doc>

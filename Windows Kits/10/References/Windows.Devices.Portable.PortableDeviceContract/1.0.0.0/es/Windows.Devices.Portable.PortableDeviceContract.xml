@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Portable.PortableDeviceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Portable.ServiceDevice">
+      <summary>Proporciona métodos para identificar un servicio de dispositivo para un dispositivo portátil que sea compatible con WPD (Windows Portable Device) para enumeración de dispositivos.</summary>
+    </member><member name="M:Windows.Devices.Portable.ServiceDevice.GetDeviceSelector(Windows.Devices.Portable.ServiceDeviceType)">
+      <summary>Devuelve una cadena de sintaxis de consulta avanzada (AQS) que se usa para enumerar servicios de dispositivo del ServiceDeviceType especificado. Esta cadena se pasa al método FindAllAsync o CreateWatcher.</summary>
+      <returns>La cadena AQS.</returns>
+      <param name="serviceType">Tipo de servicio que se va a identificar.</param>
+    </member><member name="M:Windows.Devices.Portable.ServiceDevice.GetDeviceSelectorFromServiceId(System.Guid)">
+      <summary>Una cadena de Sintaxis de consulta avanzada (AQS) para identificar un servicio de dispositivo por sus GUID. Esta cadena se pasa al método FindAllAsync o CreateWatcher.</summary>
+      <returns>La cadena AQS.</returns>
+      <param name="serviceId">El identificador de servicio.</param>
+    </member><member name="T:Windows.Devices.Portable.ServiceDeviceType">
+      <summary>Indica el tipo de un servicio de dispositivo portátil.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.CalendarService">
+      <summary>Un servicio que proporciona información del calendario.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.ContactsService">
+      <summary>Un servicio que realiza un seguimiento de los contactos.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.DeviceStatusService">
+      <summary>Un servicio de estado del dispositivo.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.NotesService">
+      <summary>Un servicio de toma de notas.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.RingtonesService">
+      <summary>Un servicio que proporciona tonos de llamada para teléfonos.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.SmsService">
+      <summary>Un servicio de mensajes cortos (SMS).</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.TasksService">
+      <summary>Un servicio para el seguimiento de tareas.</summary>
+    </member><member name="T:Windows.Devices.Portable.StorageDevice">
+      <summary>Proporciona métodos para tener acceso a la funcionalidad de almacenamiento de un dispositivo portátil que sea compatible con WPD. Entre los dispositivos de almacenamiento extraíbles se incluyen:Unidades USB de almacenamiento masivo y cámaras Reproductores de música, teléfonos y cámaras de protocolo de transferencia de objetos multimedia (MTP) Cámaras de protocolo de transferencia de imágenes (PTP)</summary>
+      <capability type="removableStorage">Necesario para leer y escribir en dispositivos de almacenamiento extraíbles.</capability>
+    </member><member name="M:Windows.Devices.Portable.StorageDevice.FromId(System.String)">
+      <summary>Obtiene un objeto StorageFolder a partir de un identificador DeviceInformation para un dispositivo de almacenamiento extraíble.</summary>
+      <capability type="removableStorage">Necesario para leer y escribir en dispositivos de almacenamiento extraíbles.</capability>
+      <returns>El objeto de carpeta de almacenamiento que representa el dispositivo de almacenamiento extraíble y proporciona acceso al contenido del dispositivo.</returns>
+      <param name="DeviceId">El identificador de DeviceInformation que identifica el dispositivo de almacenamiento extraíble. Este identificador se puede recuperar de Windows.Devices.Enumeration o de la propiedad DeviceInformationId de los argumentos de evento del dispositivo de reproducción automática. Para obtener más información, vea Inicio rápido: registrar una aplicación para un dispositivo de reproducción automática. Para que el método FromId se realice correctamente, la aplicación debe declarar la capacidad removableStorage como se muestra en Declaraciones de la capacidad de la aplicación y las asociaciones de tipos de archivo para los archivos a los que desee obtener acceso en el dispositivo, tal y como se muestra en Cómo administrar la activación de archivos. Para obtener más información, vea el Ejemplo de almacenamiento extraíble.</param>
+    </member><member name="M:Windows.Devices.Portable.StorageDevice.GetDeviceSelector">
+      <summary>Cadena de sintaxis de consulta avanzada (AQS), para identificar los dispositivos de almacenamiento extraíbles. Esta cadena se pasa al método FindAllAsync o CreateWatcher.</summary>
+      <capability type="removableStorage">Necesario para leer y escribir en dispositivos de almacenamiento extraíbles.</capability>
+      <returns>Cadena de sintaxis de consulta avanzada para identificar los dispositivos de almacenamiento.</returns>
+    </member></members>
+</doc>

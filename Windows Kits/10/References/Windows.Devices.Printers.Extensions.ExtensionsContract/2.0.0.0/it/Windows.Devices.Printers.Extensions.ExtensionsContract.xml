@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Printers.Extensions.ExtensionsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Printers.Extensions.PrintExtensionContext">
+      <summary>Fornisce il contesto per l'oggetto estensione della stampante.</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintExtensionContext.FromDeviceId(System.String)">
+      <summary>Ottiene il contesto per l'oggetto di estensione della stampante basato sull'ID DeviceInformation.</summary>
+      <returns>Puntatore al contesto.</returns>
+      <param name="deviceId">L'ID informazioni del dispositivo per la stampante.</param>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails">
+      <summary>Contiene proprietà che consentono a un client di accedere e/o modificare le informazioni sui dati degli eventi di stampa e sul nome della stampante.</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails.EventData">
+      <summary>Ottiene o imposta i dati degli eventi per un evento di notifica di stampa.</summary>
+      <returns>Dati dell'evento di notifica di stampa.</returns>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails.PrinterName">
+      <summary>Ottiene il nome della stampante associato alla notifica di stampa.</summary>
+      <returns>Nome della stampante.</returns>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfiguration">
+      <summary>Consente a un client di recuperare il contesto dell'estensione dell'attività di stampa e anche di aggiungere un gestore eventi all'attività di stampa.</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfiguration.PrinterExtensionContext">
+      <summary>Ottiene il contesto per l'estensione dell'attività di stampa.</summary>
+      <returns>Il contesto per l'estensione dell'attività di stampa.</returns>
+    </member><member name="E:Windows.Devices.Printers.Extensions.PrintTaskConfiguration.SaveRequested">
+      <summary>Generato dalla finestra di stampa per l'app per notificare all'app per dispositivo che il ticket di stampa deve essere aggiornato.</summary>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest">
+      <summary>Chiamato quando la finestra di dialogo di stampa per l'applicazione in stile Metro genera un evento SaveRequested.</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Deadline">
+      <summary>Ottiene l'oggetto di data/ora che fornisce informazioni relative alla scadenza dell'attività di stampa.</summary>
+      <returns>La scadenza per l'attività di stampa.</returns>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Cancel">
+      <summary>Chiamato dall'applicazione per dispositivo per annullare la richiesta del client di salvare la configurazione dell'attività di stampa.</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.GetDeferral">
+      <summary>Chiamato dall'app per dispositivo quando è necessario completare alcune attività asincrone prima di poter salvare le informazioni di configurazione dell'attività di stampa.</summary>
+      <returns>Oggetto che rappresenta il rinvio per la richiesta di salvataggio della configurazione dell'attività di stampa.</returns>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Save(System.Object)">
+      <summary>Chiamato dall'app per dispositivo per salvare la configurazione dell'attività di stampa.</summary>
+      <param name="printerExtensionContext">Oggetto che rappresenta il contesto dell'estensione dell'attività di stampa.</param>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral">
+      <summary>Chiamato dall'app per dispositivo per fornire un aggiornamento dello stato del rinvio.</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral.Complete">
+      <summary>Chiamato dall'app per dispositivo quando il rinvio è completato.</summary>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs">
+      <summary>Chiamato per notificare all'app per dispositivo che la configurazione dell'attività di stampa deve essere salvata.</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs.Request">
+      <summary>Ottiene le informazioni necessarie per l'aggiornamento della configurazione dell'attività di stampa.</summary>
+      <returns>Richiesta di salvataggio della configurazione dell'attività di stampa.</returns>
+    </member></members>
+</doc>

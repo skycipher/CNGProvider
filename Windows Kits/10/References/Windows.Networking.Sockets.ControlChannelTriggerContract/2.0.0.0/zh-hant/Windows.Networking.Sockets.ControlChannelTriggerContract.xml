@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Networking.Sockets.ControlChannelTriggerContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Networking.Sockets.ControlChannelTrigger">
+      <summary>可在建立 TCP 連線且希望收到的連入流量通知的物件背景接收即時通知。 Windows Phone 不支援這個類別。</summary>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.#ctor(System.String,System.UInt32)">
+      <summary>使用控制通道觸發程序識別碼和伺服器保持使用中間隔的值，建立新的 ControlChannelTrigger 物件。 Windows Phone 不支援 ControlChannelTrigger 類別。</summary>
+      <param name="channelId">用來區分本機電腦上各種控制通道觸發程序的字串。 這個字串允許的長度上限是 64 個字元。</param>
+      <param name="serverKeepAliveIntervalInMinutes">已向系統註冊的保持連接間隔 (以分鐘為單位)，指出應用程式及網路連線應該喚醒的時間。 這個參數可以設定的最小值為 15 分鐘。 可設定的最大值為 1439 分鐘 (約 24 小時)。</param>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.#ctor(System.String,System.UInt32,Windows.Networking.Sockets.ControlChannelTriggerResourceType)">
+      <summary>使用控制通道觸發程序識別碼、伺服器保持使用中間隔的值，以及針對控制通道觸發程序所要求的資源類型，建立新的 ControlChannelTrigger 物件。 Windows Phone 不支援 ControlChannelTrigger 類別。</summary>
+      <param name="channelId">用來區分本機電腦上各種控制通道觸發程序的字串。 這個字串允許的長度上限是 64 個字元。</param>
+      <param name="serverKeepAliveIntervalInMinutes">已向系統註冊的保持連接間隔 (以分鐘為單位)，指出應用程式及網路連線應該喚醒的時間。 這個參數可以設定的最小值為 15 分鐘。 可設定的最大值為 1439 分鐘 (約 24 小時)。</param>
+      <param name="resourceRequestType">針對控制通道觸發程序所要求的資源類型。</param>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.ControlChannelTriggerId">
+      <summary>取得字串，可用來區分本機電腦上的各種控制通道觸發程序。 Windows Phone 不支援 ControlChannelTrigger 類別。</summary>
+      <returns>可用來區分各種控制通道觸發程序的字串。</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.CurrentKeepAliveIntervalInMinutes">
+      <summary>取得網路保持連線間隔 (以分鐘為單位)，由根據目前網路狀況的 TCP 堆疊中的低層級網路元件進行維護。 Windows Phone 不支援 ControlChannelTrigger 類別。</summary>
+      <returns>網路保持連接間隔 (以分鐘為單位)，由根據目前網路狀況的 TCP 堆疊中的低層級網路元件進行維護。</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.IsWakeFromLowPowerSupported">
+      <summary>取得值，表示是否支援從低電力狀態喚醒。</summary>
+      <returns>如果為 true，則支援從低電力狀態喚醒。</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.KeepAliveTrigger">
+      <summary>取得物件，表示與 ControlChannelTrigger 物件相關聯的保持連線觸發程序，應用程式應該使用它來繫結啟用類別與背景中介程式基礎結構。 Windows Phone 不支援 ControlChannelTrigger 類別。</summary>
+      <returns>表示保持運作背景工作之啟用類別識別碼的字串。</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.PushNotificationTrigger">
+      <summary>取得物件，表示與 ControlChannelTrigger 物件相關聯的推播通知觸發程序，應用程式應該使用它來繫結啟用類別與背景中介程式基礎結構。 Windows Phone 不支援 ControlChannelTrigger 類別。</summary>
+      <returns>表示推播通知背景工作之啟用類別識別碼的字串。</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.ServerKeepAliveIntervalInMinutes">
+      <summary>取得或設定已向系統註冊的伺服器保持連線間隔 (以分鐘為單位)，指出應用程式以及使用之相關聯網路連接應該喚醒的時間。 Windows Phone 不支援 ControlChannelTrigger 類別。</summary>
+      <returns>已向系統註冊的伺服器保持連接間隔 (以分鐘為單位)，指出應用程式以及使用之相關聯網路連接應該喚醒的時間。</returns>
+    </member><member name="P:Windows.Networking.Sockets.ControlChannelTrigger.TransportObject">
+      <summary>取得傳輸物件，系統將它用於與 ControlChannelTrigger 物件相關聯的傳輸連接。 Windows Phone 不支援 ControlChannelTrigger 類別。</summary>
+      <returns>系統用於傳輸連接的傳輸物件</returns>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.Close">
+      <summary>關閉 ControlChannelTrigger 物件。 Windows Phone 不支援這個方法。</summary>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.DecreaseNetworkKeepAliveInterval">
+      <summary>提供方法讓應用程式指出由系統以網路中繼裝置維護的 keep-alive 時間間隔太長，無法從睡眠狀態恢復，應該要縮短。 這個方法適用於 Windows.Networking.Sockets 及相關命名空間中的類別項目。 Windows Phone 不支援 ControlChannelTrigger 類別。</summary>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.FlushTransport">
+      <summary>將與 ControlChannelTrigger 相關聯的傳輸連線所使用的任何網路資料排清至網路堆疊。 Windows Phone 不支援 ControlChannelTrigger 類別。</summary>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.UsingTransport(System.Object)">
+      <summary>設定要由控制通道觸發程序依據 Windows.Networking.Sockets 及相關命名空間中的類別項目使用的傳輸連接。 Windows Phone 不支援 ControlChannelTrigger 類別。</summary>
+      <param name="transport">代表網路傳輸之網路類別的執行個體。</param>
+    </member><member name="M:Windows.Networking.Sockets.ControlChannelTrigger.WaitForPushEnabled">
+      <summary>可讓應用程式通知系統：連線已經建立，系統應完成控制通道觸發程序的內部設定。 Windows Phone 不支援 ControlChannelTrigger 類別。</summary>
+      <returns>表示系統之前是否能夠完成 ControlChannelTrigger 物件組態設定的值。</returns>
+    </member><member name="T:Windows.Networking.Sockets.ControlChannelTriggerResetReason">
+      <summary>ControlChannelTrigger 重設的原因。 Windows Phone 不支援這個列舉。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResetReason.ApplicationRestart">
+      <summary>由於應用程式重新啟動，因此重設 ControlChannelTrigger。 Windows 8.1 、Windows Server 2012 R2 及之後版本都支援此值。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResetReason.FastUserSwitched">
+      <summary>ControlChannelTrigger 已經因為快速切換使用者而重設。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResetReason.LowPowerExit">
+      <summary>ControlChannelTrigger 已經因為低電力結束 (連接待命結束) 而重設。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResetReason.QuietHoursExit">
+      <summary>已重設 ControlChannelTrigger，因為之前在裝置上設定的無訊息時間已結束。 Windows 8.1 、Windows Server 2012 R2 及之後版本都支援此值。</summary>
+    </member><member name="T:Windows.Networking.Sockets.ControlChannelTriggerResourceType">
+      <summary>控制通道觸發程序所使用的資源類型。 Windows Phone 不支援這個列舉。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResourceType.RequestHardwareSlot">
+      <summary>向系統要求硬體介面槽。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerResourceType.RequestSoftwareSlot">
+      <summary>向系統要求軟體介面槽。</summary>
+    </member><member name="T:Windows.Networking.Sockets.ControlChannelTriggerStatus">
+      <summary>指定系統是否能夠完成 ControlChannelTrigger 物件的組態，以供 Windows.Networking.Sockets 及相關的命名空間中的類別項目所使用。 Windows Phone 不支援這個列舉。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.HardwareSlotAllocated">
+      <summary>系統已配置硬體介面槽。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.HardwareSlotRequested">
+      <summary>原則檢查成功，而且已經從系統要求硬體介面槽。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.PolicyError">
+      <summary>當系統嘗試完成 ControlChannelTrigger 的組態設定時，發生原則錯誤。 當應用程式針對硬體或軟體介面槽要求的連接數目超過系統原則所允許的數目時，就可能會發生此錯誤。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.ServiceUnavailable">
+      <summary>ControlChannelTrigger 所提供的服務無法使用。 如果網路連線代理人服務尚未準備好，但應用程式嘗試建立 ControlChannelTrigger 通道，就可能會發生這種狀況。 這個狀態碼在下列情況下提供：當有快速使用者切換，而且新的使用者嘗試建立 ControlChannelTrigger 通道時。 當系統正在進入低度電源模式 (連線待命模式) 而且應用程式正嘗試建立軟體介面槽時。 只有當系統在使用中，而不是在低度電源模式時，才可以使用軟體介面槽。 在這些情況下的降低策略是接聽系統事件代理人事件，並且在該點登錄 ControlChannelTrigger 通道。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.SoftwareSlotAllocated">
+      <summary>原則檢查成功，而且系統已配置軟體介面槽。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.SystemError">
+      <summary>當系統嘗試完成硬體介面槽的 ControlChannelTrigger 組態設定時，發生系統錯誤。</summary>
+    </member><member name="F:Windows.Networking.Sockets.ControlChannelTriggerStatus.TransportDisconnected">
+      <summary>與 ControlChannelTrigger 相關聯的網路傳輸已中斷連線。 基礎 TCP 連線已經中斷，可能原因是遠端目的地收到 TCP 重設，或者應用程式或遠端目的地傳送非失誤性中斷連線。 最常發生的情況是 TCP 重設或遠端目的地所傳送的非失誤性中斷連線。</summary>
+    </member><member name="T:Windows.Networking.Sockets.IControlChannelTriggerEventDetails">
+      <summary>用於區分控制通道觸發程序之背景代理人基礎結構所具現化的物件。 Windows Phone 不支援這個介面。</summary>
+    </member><member name="P:Windows.Networking.Sockets.IControlChannelTriggerEventDetails.ControlChannelTrigger">
+      <summary>取得與 IControlChannelTriggerEventDetails 物件相關聯的 ControlChannelTrigger 物件。 Windows Phone 不支援 IControlChannelTriggerEventDetails 介面。</summary>
+      <returns>ControlChannelTrigger 物件。</returns>
+    </member><member name="T:Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails">
+      <summary>由 ControlChannelReset 事件之背景中介程式基礎結構所具現化的物件，表示 ControlChannelTrigger 已重設。 Windows Phone 不支援這個介面。</summary>
+    </member><member name="P:Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails.HardwareSlotReset">
+      <summary>值，指出硬體介面槽是否已受到 ControlChannelTrigger 重設事件影響。 Windows Phone 不支援 IControlChannelTriggerResetEventDetails 介面。</summary>
+      <returns>值，指出硬體介面槽是否已受到 ControlChannelTrigger 重設事件影響。</returns>
+    </member><member name="P:Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails.ResetReason">
+      <summary>表示 ControlChannelTrigger 重設原因的值。 Windows Phone 不支援 IControlChannelTriggerResetEventDetails 介面。</summary>
+      <returns>表示 ControlChannelTrigger 重設原因的值。</returns>
+    </member><member name="P:Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails.SoftwareSlotReset">
+      <summary>值，指出軟體介面槽是否已受到 ControlChannelTrigger 重設事件影響。 Windows Phone 不支援 IControlChannelTriggerResetEventDetails 介面。</summary>
+      <returns>值，指出軟體介面槽是否已受到 ControlChannelTrigger 重設事件影響。</returns>
+    </member></members>
+</doc>

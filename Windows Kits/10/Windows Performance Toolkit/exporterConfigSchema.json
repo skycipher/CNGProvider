@@ -1,0 +1,76 @@
+{
+    "type":"object",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties":{
+        "TraceNames": {
+            "type":"array",
+            "items":
+                {
+                    "type":"object",
+                    "properties":{
+                        "Key": {
+                            "type":"string"
+                        },
+                        "Value": {
+                            "type":"string"
+                        }
+                    },
+                    "required": ["Key", "Value"]
+                }
+        },
+        "Profiles": {
+            "type":"array",
+            "items":[
+                {
+                    "type":"object",
+                    "properties":{
+                        "Name": {
+                            "type":"string"
+                        },
+                        "Traces": {
+                            "type":"array",
+                            "items":[
+                                {
+                                    "type":"object",
+                                    "properties":{
+                                        "Name": {
+                                            "type":"string"
+                                        },
+                                        "Slot": {
+                                            "type":"number"
+                                        },
+                                        "TimeRange": {
+                                            "type":"object",
+                                            "properties":{
+                                                "Start": {
+                                                    "type":"string"
+                                                },
+                                                "End": {
+                                                    "type":"string"
+                                                }
+                                            },
+                                            "required": ["Start", "End"]
+                                        },
+                                        "Region": {
+                                            "type":"object",
+                                            "properties":{
+                                                "Name": {
+                                                    "type":"string"
+                                                }
+                                            },
+                                            "required": ["Name"]
+                                        }
+                                    },
+                                    "required": ["Name"]
+                                }
+                            ]
+                        }
+                    },
+                    "required": ["Name", "Traces"]
+                }
+            ]
+        }
+    },
+    "required": ["Profiles"]
+}
+

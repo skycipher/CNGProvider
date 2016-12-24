@@ -1,0 +1,665 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Sms.LegacySmsApiContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Sms.DeleteSmsMessageOperation">
+      <summary>Habilita el inicio, seguimiento y fin de una operación de eliminación asincrónica del mensaje para un único mensaje.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que la clase DeleteSmsMessageOperation se haya modificado o que no esté disponible para versiones posteriores a Windows 10.</deprecated>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessageOperation.Completed">
+      <summary>Especifica si la operación asincrónica de eliminación de mensajes SMS ha finalizado o no.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Controlador para el evento completado de una acción asincrónica.</returns>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessageOperation.ErrorCode">
+      <summary>Especifica el código de error de la operación asincrónica de eliminación de mensajes SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Valor de resultado de la operación asincrónica.</returns>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessageOperation.Id">
+      <summary>Especifica el identificador de la operación asincrónica de eliminación de mensajes SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un entero que representa de forma exclusiva la operación asincrónica de eliminación de mensajes SMS.</returns>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessageOperation.Status">
+      <summary>Especifica el estado de la operación asincrónica de eliminación de mensajes SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Valor enumerado que representa el estado de la operación asincrónica de eliminación de mensajes SMS.</returns>
+    </member><member name="M:Windows.Devices.Sms.DeleteSmsMessageOperation.Cancel">
+      <summary>Cancela la operación asincrónica de eliminación de mensajes SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+    </member><member name="M:Windows.Devices.Sms.DeleteSmsMessageOperation.Close">
+      <summary>Cierra la operación asincrónica de eliminación de mensajes SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+    </member><member name="M:Windows.Devices.Sms.DeleteSmsMessageOperation.GetResults">
+      <summary>Recupera el resultado de la operación asincrónica de eliminación de mensajes SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+    </member><member name="T:Windows.Devices.Sms.DeleteSmsMessagesOperation">
+      <summary>Habilita el inicio, seguimiento y fin de operaciones de eliminación asincrónica de mensajes SMS para varios mensajes.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que la clase DeleteSmsMessagesOperation se haya modificado o que no esté disponible para versiones posteriores a Windows 10.</deprecated>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessagesOperation.Completed">
+      <summary>Especifica si las operaciones asincrónicas de eliminación de mensajes SMS han finalizado o no.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un controlador para el evento completado de una operación asincrónica de eliminación de mensajes SMS.</returns>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessagesOperation.ErrorCode">
+      <summary>Especifica el código de error de las operaciones asincrónica de eliminación de mensajes SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>El valor de resultado de las operaciones asincrónicas de eliminación de mensajes SMS.</returns>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessagesOperation.Id">
+      <summary>Especifica el identificador de las operaciones asincrónicas de eliminación de mensajes SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un entero que representa de forma exclusiva las operaciones asincrónicas de eliminación de mensajes SMS.</returns>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessagesOperation.Status">
+      <summary>Especifica el estado de las operaciones asincrónicas de eliminación de mensajes SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Valor enumerado que representa el estado de las operaciones asincrónicas de eliminación de mensajes SMS.</returns>
+    </member><member name="M:Windows.Devices.Sms.DeleteSmsMessagesOperation.Cancel">
+      <summary>Cancela las operaciones asincrónicas de eliminación de mensajes SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+    </member><member name="M:Windows.Devices.Sms.DeleteSmsMessagesOperation.Close">
+      <summary>Cierra las operaciones asincrónicas de eliminación de mensajes SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+    </member><member name="M:Windows.Devices.Sms.DeleteSmsMessagesOperation.GetResults">
+      <summary>Recupera el resultado de las operaciones asincrónicas de mensajes.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+    </member><member name="T:Windows.Devices.Sms.GetSmsDeviceOperation">
+      <summary>Recupera un objeto SmsDevice de forma asincrónica.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que GetSmsDeviceOperation se haya modificado o que no esté disponible para la publicación a partir de Windows 10.</deprecated>
+    </member><member name="P:Windows.Devices.Sms.GetSmsDeviceOperation.Completed">
+      <summary>Especifica si la operación asincrónica de recuperación de objetos SmsDevice ha finalizado o no.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Controlador para el evento completado de una acción asincrónica.</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsDeviceOperation.ErrorCode">
+      <summary>Especifica el código de error de la operación asincrónica de recuperación del objeto SmsDevice</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Valor de resultado de la operación asincrónica.</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsDeviceOperation.Id">
+      <summary>Especifica el identificador de la operación asincrónica de recuperación de objetos SmsDevice.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un entero que representa de forma exclusiva la operación asincrónica de recuperación de objetos SmsDevice.</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsDeviceOperation.Status">
+      <summary>Especifica el estado de la operación asincrónica de recuperación de objetos SmsDevice.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Valor enumerado que representa el estado de una operación asincrónica de recuperación de objetos SmsDevice.</returns>
+    </member><member name="M:Windows.Devices.Sms.GetSmsDeviceOperation.Cancel">
+      <summary>Cancela la recuperación asincrónica de objetos SmsDevice.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+    </member><member name="M:Windows.Devices.Sms.GetSmsDeviceOperation.Close">
+      <summary>Cierra la operación asincrónica de recuperación de objetos SmsDevice.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+    </member><member name="M:Windows.Devices.Sms.GetSmsDeviceOperation.GetResults">
+      <summary>Obtiene los resultados de la operación asincrónica de recuperación de objetos SmsDevice.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Referencia a un objeto de SmsDevice.</returns>
+    </member><member name="T:Windows.Devices.Sms.GetSmsMessageOperation">
+      <summary>Admite la recuperación de un mensaje del almacén de mensajes SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que la clase GetSmsMessageOperation se haya modificado o que no esté disponible para versiones posteriores a Windows 10.</deprecated>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessageOperation.Completed">
+      <summary>Un controlador para el evento completado de una operación asincrónica de recuperación de mensajes SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un controlador para el evento completado de una operación asincrónica de recuperación de mensajes SMS.</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessageOperation.ErrorCode">
+      <summary>Especifica el código de error de la operación asincrónica de recuperación de mensajes SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>El valor de resultado de la operación asincrónica de recuperación del mensaje SMS.</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessageOperation.Id">
+      <summary>Especifica el identificador de la operación asincrónica de recuperación de mensajes SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un entero que representa de forma exclusiva la operación asincrónica de recuperación de mensajes SMS.</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessageOperation.Status">
+      <summary>Especifica el estado de la operación asincrónica de recuperación de mensajes SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Valor enumerado que representa el estado de una operación asincrónica de recuperación de mensajes SMS.</returns>
+    </member><member name="M:Windows.Devices.Sms.GetSmsMessageOperation.Cancel">
+      <summary>Cancela la operación asincrónica de recuperación de mensajes SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+    </member><member name="M:Windows.Devices.Sms.GetSmsMessageOperation.Close">
+      <summary>Cierra la operación asincrónica de recuperación de mensajes SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+    </member><member name="M:Windows.Devices.Sms.GetSmsMessageOperation.GetResults">
+      <summary>Recupera el resultado de la operación asincrónica de recuperación de mensajes SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Interfaz que tiene acceso al mensaje recuperado.</returns>
+    </member><member name="T:Windows.Devices.Sms.GetSmsMessagesOperation">
+      <summary>Admite la recuperación de mensajes.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que la clase GetSmsMessagesOperation se haya modificado o que no esté disponible para versiones posteriores a Windows 10.</deprecated>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessagesOperation.Completed">
+      <summary>Especifica si la operación asincrónica de recuperación de mensajes ha finalizado o no.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Especifica si la operación asincrónica de mensajes ha finalizado o no.</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessagesOperation.ErrorCode">
+      <summary>Especifica el código de error de la operación asincrónica de mensajes.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Valor de resultado de la operación asincrónica.</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessagesOperation.Id">
+      <summary>Indica el identificador de la operación asincrónica del mensaje.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un entero que representa de forma exclusiva la operación asincrónica.</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessagesOperation.Progress">
+      <summary>Especifica el estado de progreso de la operación asincrónica de mensajes.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un controlador del progreso actualiza eventos de una operación asincrónica.</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessagesOperation.Status">
+      <summary>Especifica el estado de las operaciones asincrónicas de mensajes.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Valor enumerado que representa el estado de una operación asincrónica.</returns>
+    </member><member name="M:Windows.Devices.Sms.GetSmsMessagesOperation.Cancel">
+      <summary>Cancela las operaciones asincrónicas.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+    </member><member name="M:Windows.Devices.Sms.GetSmsMessagesOperation.Close">
+      <summary>Cierra las operaciones asincrónicas.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+    </member><member name="M:Windows.Devices.Sms.GetSmsMessagesOperation.GetResults">
+      <summary>Recupera el resultado de la operación asincrónica de recuperación de mensajes.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Una referencia a los mensajes SMS recuperados.</returns>
+    </member><member name="T:Windows.Devices.Sms.ISmsBinaryMessage">
+      <summary>Esta interfaz proporciona acceso al formato binario sin procesar de un mensaje SMS. El mensaje se almacena en el formato de la unidad de descripción del protocolo (PDU) estándar del sector (vea la especificación GSM 03.40 para SMS).</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que la propiedad SmsBinaryMessage se haya modificado o que no esté disponible para versiones posteriores a Windows 10. En su lugar, use SmsAppMessage.</deprecated>
+    </member><member name="P:Windows.Devices.Sms.ISmsBinaryMessage.Format">
+      <summary>Recupera el formato detectado de la unidad de la descripción de protocolo (PDU) de este mensaje.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Valor enumerado que describe el formato de los datos SMS.</returns>
+    </member><member name="M:Windows.Devices.Sms.ISmsBinaryMessage.GetData">
+      <summary>Devuelve el búfer sin formato del mensaje en formato de unidad de descripción de protocolo (PDU) binario como una matriz de bytes.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que la propiedad SmsBinaryMessage se haya modificado o que no esté disponible para versiones posteriores a Windows 10. En su lugar, use SmsAppMessage.</deprecated>
+      <returns>Una matriz de bytes que representa datos de mensaje. Si no existen datos de mensajes, la matriz devuelta está vacía.</returns>
+    </member><member name="M:Windows.Devices.Sms.ISmsBinaryMessage.SetData(System.Byte[])">
+      <summary>Especifica la carga binaria sin formato del mensaje SMS. Se le debe dar formato según el estándar de la unidad de descripción de protocolo (PDU).</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que la propiedad SmsBinaryMessage se haya modificado o que no esté disponible para versiones posteriores a Windows 10. En su lugar, use SmsAppMessage.</deprecated>
+      <param name="value">Una matriz de bytes que representa los datos de mensaje, con formato en función del estándar de unidad de descripción de protocolo (PDU).</param>
+    </member><member name="T:Windows.Devices.Sms.ISmsDevice">
+      <summary>Esta interfaz controla un dispositivo SMS de banda ancha móvil. Es el punto de entrada principal a los servicios SMS del dispositivo.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que SmsDevice se haya modificado o que no esté disponible para versiones posteriores a Windows 10. En su lugar, use SmsDevice2.</deprecated>
+    </member><member name="P:Windows.Devices.Sms.ISmsDevice.AccountPhoneNumber">
+      <summary>Devuelve el número de teléfono asociado al dispositivo SMS. El número de teléfono se puede usar para asociar los mensajes entrantes con la cuenta y, posiblemente, con un mecanismo de almacenamiento externo como una bandeja de entrada de la cuenta.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Una representación de cadena del número de teléfono de la cuenta.</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsDevice.CellularClass">
+      <summary>Devuelve la tecnología móvil del dispositivo SMS. La clase se puede usar para determinar qué codificaciones son adecuadas o las limitaciones de los dispositivos que están en vigor.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Valor enumerado que indica la clase celular del dispositivo.</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsDevice.DeviceStatus">
+      <summary>Devuelve el estado del dispositivo SMS, que indica si el dispositivo está listo o no. También indica el tipo de problema que existe si el dispositivo no está listo.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Valor enumerado que indica la disponibilidad de un dispositivo SMS para participar en operaciones de tráfico de red celular.</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsDevice.MessageStore">
+      <summary>Tiene acceso al almacén de mensajes del dispositivo. El almacén contiene mensajes que los clientes pueden recuperar. En algunos dispositivos, por ejemplo, el almacén puede corresponder al almacenamiento de la SIM para los mensajes SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Una referencia a un objeto SmsMessageStore.</returns>
+    </member><member name="E:Windows.Devices.Sms.ISmsDevice.SmsDeviceStatusChanged">
+      <summary>Establece un controlador de eventos al que se llamará cuando cambie el estado del dispositivo SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+    </member><member name="E:Windows.Devices.Sms.ISmsDevice.SmsMessageReceived">
+      <summary>Establece un controlador de eventos al que se llamará cuando el dispositivo reciba un nuevo mensaje de texto.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+    </member><member name="M:Windows.Devices.Sms.ISmsDevice.CalculateLength(Windows.Devices.Sms.SmsTextMessage)">
+      <summary>Calcula la longitud de mensaje transmitido del mensaje de texto especificado. La estimación puede resultar útil a los clientes que desean proporcionar una indicación del número de mensajes que se enviarán por la red para transportar el texto del mensaje completo.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que SmsDevice se haya modificado o que no esté disponible para versiones posteriores a Windows 10. En su lugar, use SmsDevice2.</deprecated>
+      <returns>Una referencia a una estructura SmsEncodedLength que se rellena con la información de longitud.</returns>
+      <param name="message">Una referencia al mensaje de texto SMS que se va a medir.</param>
+    </member><member name="M:Windows.Devices.Sms.ISmsDevice.SendMessageAsync(Windows.Devices.Sms.ISmsMessage)">
+      <summary>Envía de forma asincrónica un mensaje con el dispositivo SMS. El método es asincrónico porque la operación de envío podría no realizarse instantáneamente. El objeto de la operación asincrónica se devuelve inmediatamente.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que SmsDevice se haya modificado o que no esté disponible para versiones posteriores a Windows 10. En su lugar, use SmsDevice2.</deprecated>
+      <returns>Una referencia a un objeto SendSmsMessageOperation que admite el envío de mensajes de forma asincrónica.</returns>
+      <param name="message">Una referencia a un objeto de SmsMessage. El mensaje puede estar en texto o en formato binario.</param>
+    </member><member name="T:Windows.Devices.Sms.ISmsMessage">
+      <summary>Esta interfaz la implementan todos los tipos de mensajes SMS admitidos.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+    </member><member name="P:Windows.Devices.Sms.ISmsMessage.Id">
+      <summary>Recupera un identificador para el mensaje, que más adelante se puede especificar en los métodos de almacenamiento del mensaje que hace la llamada para obtener o eliminar el mensaje.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un identificador de entero para el mensaje.</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsMessage.MessageClass">
+      <summary>Devuelve la clase de mensaje, según lo determinado por la red de mensajes del operador. Las dos clases más comunes son None (mensaje normal) o Class0 (mensaje de operador especial, como una advertencia de movilidad que se debe mostrar inmediatamente al usuario). Un cliente típico de mensajes del usuario final omite los mensajes Class0.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un valor de la enumeración SmsMessageClass.</returns>
+    </member><member name="T:Windows.Devices.Sms.ISmsTextMessage">
+      <summary>Esta interfaz manipula un mensaje de texto SMS descodificado. Proporciona acceso directo al cuerpo de texto sin formato del mensaje, así como a las principales propiedades del encabezado, como la marca de tiempo.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que la propiedad SmsTextMessage se haya modificado o que no esté disponible para versiones posteriores a Windows 10. En su lugar, use SmsTextMessage2.</deprecated>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.Body">
+      <summary>Especifica el cuerpo de texto sin formato del mensaje.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Una cadena que representa el cuerpo del mensaje de texto. Si se producen problemas durante la descodificación, algunos caracteres del mensaje original se pueden representar con un carácter comodín, normalmente un signo de interrogación: '?'.</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.Encoding">
+      <summary>Especifica el tipo de codificación que se ha configurado para usarlo al enviar este mensaje.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un valor de la enumeración SmsEncoding.</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.From">
+      <summary>Especifica el número de teléfono del remitente del mensaje.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Una representación de cadena del número de teléfono del remitente de este mensaje. Debe estar en el formato preferido por el dispositivo y la red en que está registrado.</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.PartCount">
+      <summary>Recupera el número total de partes del mensaje original si el mensaje forma parte de un mensaje de varias partes.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un entero sin signo. si el mensaje es independiente, el valor es 1.</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.PartNumber">
+      <summary>Recupera el número de parte de un mensaje de varias partes si este mensaje forma parte de un mensaje de varias partes. Se puede utilizar para volver a crear el mensaje original uniendo las partes, junto con las propiedades PartReferenceId y PartCount.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un entero sin signo. Está basado en uno. No superará PartCount + 1.</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.PartReferenceId">
+      <summary>Indica un valor de referencia que se puede utilizar si el mensaje forma parte de un mensaje de varias partes. Si este mensaje pertenece a un mensaje de varias partes, el valor de PartNumber se puede usar para reconstruir el mensaje original completo, y cada parte de ese mensaje tendrá el mismo valor para PartReferenceId.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un entero sin signo determinado por la red de envío; no se puede manipular mediante esta interfaz. Si la red tiene su propia directiva respecto a la duración de un mensaje de varias partes, este número de referencia podría no sea válido indefinidamente.</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.Timestamp">
+      <summary>Recupera la marca de tiempo del mensaje. Se determina localmente para una instancia de mensaje construido o a partir de la marca de tiempo del centro de servicio de un mensaje recibido.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un valor de tipo DateTime.</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.To">
+      <summary>Especifica el número de teléfono del receptor de este mensaje.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Una representación de cadena del número de teléfono, con el formato de número de teléfono preferido del dispositivo y la red en la que este último está registrado.</returns>
+    </member><member name="M:Windows.Devices.Sms.ISmsTextMessage.ToBinaryMessages(Windows.Devices.Sms.SmsDataFormat)">
+      <summary>Lee un mensaje en el formato especificado y coloca los resultados en una nueva instancia de un mensaje binario.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que la propiedad SmsTextMessage se haya modificado o que no esté disponible para versiones posteriores a Windows 10. En su lugar, use SmsTextMessage2.</deprecated>
+      <returns>El nuevo mensaje binario que contiene el resultado de esta llamada al método.</returns>
+      <param name="format">Un valor de la enumeración SmsDataFormat.</param>
+    </member><member name="T:Windows.Devices.Sms.SendSmsMessageOperation">
+      <summary>Habilita el envío de un mensaje.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que la clase SendSmsMessageOperation se haya modificado o que no esté disponible para versiones posteriores a Windows 10.</deprecated>
+    </member><member name="P:Windows.Devices.Sms.SendSmsMessageOperation.Completed">
+      <summary>Controlador para el evento completado de una acción asincrónica.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Controlador para el evento completado de una acción asincrónica.</returns>
+    </member><member name="P:Windows.Devices.Sms.SendSmsMessageOperation.ErrorCode">
+      <summary>Especifica el código de error de la operación asincrónica de mensajes.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Valor de resultado de la operación asincrónica.</returns>
+    </member><member name="P:Windows.Devices.Sms.SendSmsMessageOperation.Id">
+      <summary>Indica el identificador de la operación asincrónica del mensaje.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un entero que representa de forma exclusiva la operación asincrónica.</returns>
+    </member><member name="P:Windows.Devices.Sms.SendSmsMessageOperation.Status">
+      <summary>Especifica el estado de la operación asincrónica de mensaje.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Valor enumerado que representa el estado de una operación asincrónica.</returns>
+    </member><member name="M:Windows.Devices.Sms.SendSmsMessageOperation.Cancel">
+      <summary>Cancela la operación asincrónica.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+    </member><member name="M:Windows.Devices.Sms.SendSmsMessageOperation.Close">
+      <summary>Cierra la operación asincrónica.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+    </member><member name="M:Windows.Devices.Sms.SendSmsMessageOperation.GetResults">
+      <summary>Recupera el resultado de la operación asincrónica.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+    </member><member name="T:Windows.Devices.Sms.SmsBinaryMessage">
+      <summary>Representa un mensaje SMS en formato PDU sin procesar. El formato de datos varía en función de si el formato del mensaje (indicado mediante el valor de la propiedad Format) es GSM o CDMA.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que la propiedad SmsBinaryMessage se haya modificado o que no esté disponible para versiones posteriores a Windows 10. En su lugar, use SmsAppMessage.</deprecated>
+    </member><member name="M:Windows.Devices.Sms.SmsBinaryMessage.#ctor">
+      <summary>Crea una instancia de la clase SmsBinaryMessage.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+    </member><member name="P:Windows.Devices.Sms.SmsBinaryMessage.Format">
+      <summary>Recupera el formato detectado de la unidad de la descripción de protocolo (PDU) de este mensaje.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Valor enumerado que describe el formato de los datos SMS.</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsBinaryMessage.Id">
+      <summary>Indica el identificador de la operación asincrónica del mensaje.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un entero que representa de forma exclusiva la operación asincrónica.</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsBinaryMessage.MessageClass">
+      <summary>Devuelve la clase de mensaje, según lo determinado por la red de mensajes del operador. Las dos clases más comunes son None (mensaje normal) o Class0 (mensaje de operador especial, como una advertencia de movilidad que se debe mostrar inmediatamente al usuario). Un cliente típico de mensajes del usuario final omite los mensajes Class0.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un valor de la enumeración SmsMessageClass.</returns>
+    </member><member name="M:Windows.Devices.Sms.SmsBinaryMessage.GetData">
+      <summary>Devuelve el búfer sin formato del mensaje en formato de unidad de descripción de protocolo (PDU) binario como una matriz de bytes.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que la propiedad SmsBinaryMessage se haya modificado o que no esté disponible para versiones posteriores a Windows 10. En su lugar, use SmsAppMessage.</deprecated>
+      <returns>Una matriz de bytes que representa datos de mensaje. Si no existen datos de mensajes, la matriz devuelta está vacía.</returns>
+    </member><member name="M:Windows.Devices.Sms.SmsBinaryMessage.SetData(System.Byte[])">
+      <summary>Especifica la carga binaria sin formato del mensaje SMS. Se le debe dar formato según el estándar de la unidad de descripción de protocolo (PDU).</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que la propiedad SmsBinaryMessage se haya modificado o que no esté disponible para versiones posteriores a Windows 10. En su lugar, use SmsAppMessage.</deprecated>
+      <param name="value">Una matriz de bytes que representa datos de mensaje. Si no existen datos de mensajes, la matriz devuelta está vacía.</param>
+    </member><member name="T:Windows.Devices.Sms.SmsDevice">
+      <summary>Admite las operaciones de un dispositivo SMS de banda ancha móvil.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que SmsDevice se haya modificado o que no esté disponible para versiones posteriores a Windows 10. En su lugar, use SmsDevice2.</deprecated>
+    </member><member name="P:Windows.Devices.Sms.SmsDevice.AccountPhoneNumber">
+      <summary>Devuelve el número de teléfono asociado al dispositivo SMS. El número de teléfono se puede usar para asociar los mensajes entrantes con la cuenta y, posiblemente, con un mecanismo de almacenamiento externo como una bandeja de entrada de la cuenta.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Una representación de cadena del número de teléfono de la cuenta.</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsDevice.CellularClass">
+      <summary>Devuelve la tecnología móvil del dispositivo SMS. La clase se puede usar para determinar qué codificaciones son adecuadas o las limitaciones de los dispositivos que están en vigor.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Valor enumerado que indica la clase celular del dispositivo.</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsDevice.DeviceStatus">
+      <summary>Devuelve el estado del dispositivo SMS, que indica si el dispositivo está listo o no. También indica el tipo de problema que existe si el dispositivo no está listo.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Valor enumerado que indica la disponibilidad de un dispositivo SMS para participar en operaciones de tráfico de red celular.</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsDevice.MessageStore">
+      <summary>Tiene acceso al almacén de mensajes del dispositivo. El almacén contiene mensajes que los clientes pueden recuperar. En algunos dispositivos, por ejemplo, el almacén puede corresponder al almacenamiento de la SIM para los mensajes SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Una referencia a un objeto SmsDeviceMessageStore.</returns>
+    </member><member name="E:Windows.Devices.Sms.SmsDevice.SmsDeviceStatusChanged">
+      <summary>Establece un controlador de eventos al que se llamará cuando cambie el estado del dispositivo SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+    </member><member name="E:Windows.Devices.Sms.SmsDevice.SmsMessageReceived">
+      <summary>Establece un controlador de eventos al que se llamará cuando el dispositivo reciba un nuevo mensaje de texto.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+    </member><member name="M:Windows.Devices.Sms.SmsDevice.CalculateLength(Windows.Devices.Sms.SmsTextMessage)">
+      <summary>Calcula la longitud de mensaje transmitido del mensaje de texto especificado. La estimación puede resultar útil a los clientes que desean proporcionar una indicación del número de mensajes que se enviarán por la red para transportar el texto del mensaje completo.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que SmsDevice se haya modificado o que no esté disponible para versiones posteriores a Windows 10. En su lugar, use SmsDevice2.</deprecated>
+      <returns>Una referencia a una estructura SmsEncodedLength que se rellena con la información de longitud.</returns>
+      <param name="message">Una referencia al mensaje de texto SMS que se va a medir.</param>
+    </member><member name="M:Windows.Devices.Sms.SmsDevice.FromIdAsync(System.String)">
+      <summary>Crea una instancia del objeto SmsDevice para el dispositivo que recibió el mensaje SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que la propiedad ISmsDeviceStatics se haya modificado o que no esté disponible para versiones posteriores a Windows 10.</deprecated>
+      <returns>El objeto de operación del dispositivo SMS.</returns>
+      <param name="deviceId">Una representación de cadena del identificador de DeviceInformation del dispositivo SMS que recibió el mensaje correspondiente.</param>
+    </member><member name="M:Windows.Devices.Sms.SmsDevice.FromNetworkAccountIdAsync(System.String)">
+      <summary>Crea una instancia de SmsDevice para el identificador especificado de cuenta de red de banda ancha móvil.</summary>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que la propiedad ISmsDeviceStatics2 se haya modificado o que no esté disponible para versiones posteriores a Windows 10.</deprecated>
+      <returns>Cuando este método se completa, devuelve SmsDevice para el identificador de cuenta de red de banda ancha móvil especificado.</returns>
+      <param name="networkAccountId">Identificador de cuenta de la red de banda ancha móvil que se debe utilizar para seleccionar el dispositivo de banda ancha móvil correspondiente que se debe usar para el dispositivo SMS</param>
+    </member><member name="M:Windows.Devices.Sms.SmsDevice.GetDefaultAsync">
+      <summary>Crea una instancia de un objeto SmsDevice asociado al dispositivo SMS predeterminado. Dado que el dispositivo puede estar ocupado, la operación se ejecuta de forma asincrónica. El objeto de la operación asincrónica vuelve inmediatamente.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que la propiedad ISmsDeviceStatics se haya modificado o que no esté disponible para versiones posteriores a Windows 10.</deprecated>
+      <returns>Una referencia a un objeto IAsyncOperation(SmsDevice) que admite la recuperación asincrónica del objeto SmsDevice.</returns>
+    </member><member name="M:Windows.Devices.Sms.SmsDevice.GetDeviceSelector">
+      <summary>Recupera la cadena de selección de clases que se puede utilizar para enumerar los dispositivos SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que la propiedad ISmsDeviceStatics se haya modificado o que no esté disponible para versiones posteriores a Windows 10.</deprecated>
+      <returns>Una referencia a una cadena de sintaxis de consulta avanzada (AQS) que identifica un dispositivo SMS.</returns>
+    </member><member name="M:Windows.Devices.Sms.SmsDevice.SendMessageAsync(Windows.Devices.Sms.ISmsMessage)">
+      <summary>Envía de forma asincrónica un mensaje con el dispositivo SMS. El método es asincrónico porque la operación de envío podría no realizarse instantáneamente. El objeto de la operación de mensaje se devuelve inmediatamente.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que SmsDevice se haya modificado o que no esté disponible para versiones posteriores a Windows 10. En su lugar, use SmsDevice2.</deprecated>
+      <returns>Objeto de la operación de mensaje.</returns>
+      <param name="message">Una referencia a un objeto de ISmsMessage. El mensaje puede estar en texto o en formato binario.</param>
+    </member><member name="T:Windows.Devices.Sms.SmsDeviceMessageStore">
+      <summary>Proporciona acceso a los mensajes almacenados en un dispositivo SMS e información sobre el almacén de mensajes.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que SmsDeviceMessageStore se haya modificado o que no esté disponible para la publicación a partir de Windows 10.</deprecated>
+    </member><member name="P:Windows.Devices.Sms.SmsDeviceMessageStore.MaxMessages">
+      <summary>Indica el número máximo de mensajes que pueden almacenarse en el almacén del dispositivo. El cliente puede utilizar este valor para determinar cómo mantener espacio suficiente en el almacén del dispositivo para recibir mensajes de la red.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Valor entero que representa el número máximo de mensajes que se pueden almacenar en el dispositivo.</returns>
+    </member><member name="M:Windows.Devices.Sms.SmsDeviceMessageStore.DeleteMessageAsync(System.UInt32)">
+      <summary>Elimina el mensaje con el id. especificado. Dado que el dispositivo puede estar ocupado, la operación se ejecuta de forma asincrónica. El objeto de la operación asincrónica vuelve inmediatamente.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que SmsDeviceMessageStore se haya modificado o que no esté disponible para la publicación a partir de Windows 10.</deprecated>
+      <returns>Un nuevo objeto de operación de mensajes que se usa para iniciar la operación asincrónica y realizar un seguimiento de esta.</returns>
+      <param name="messageId">Identificador entero del mensaje que se debe eliminar, que se leyó previamente de un objeto SmsTextMessage obtenido del almacén de mensajes del dispositivo.</param>
+    </member><member name="M:Windows.Devices.Sms.SmsDeviceMessageStore.DeleteMessagesAsync(Windows.Devices.Sms.SmsMessageFilter)">
+      <summary>Elimina los mensajes a los que se aplica el filtro. El filtro se puede utilizar para eliminar todos los mensajes, o solo los mensajes leídos, no leídos, enviados o en estado de borrador. Dado que la operación puede no ser instantánea, se ejecuta de forma asincrónica. El objeto de la operación asincrónica vuelve inmediatamente.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que SmsDeviceMessageStore se haya modificado o que no esté disponible para la publicación a partir de Windows 10.</deprecated>
+      <returns>Un nuevo objeto de operación de mensajes que se usa para iniciar la operación asincrónica y realizar un seguimiento de esta.</returns>
+      <param name="messageFilter">Un filtro de búsqueda que especifica los mensajes que se van a eliminar.</param>
+    </member><member name="M:Windows.Devices.Sms.SmsDeviceMessageStore.GetMessageAsync(System.UInt32)">
+      <summary>Recupera el mensaje con el identificador especificado. El dispositivo puede estar ocupado, por lo que el método se ejecuta de forma asincrónica. El objeto de la operación asincrónica vuelve inmediatamente.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que SmsDeviceMessageStore se haya modificado o que no esté disponible para la publicación a partir de Windows 10.</deprecated>
+      <returns>Devuelve un nuevo objeto de operación de mensajes que se usa para iniciar la operación asincrónica y realizar un seguimiento de esta.</returns>
+      <param name="messageId">Identificador del mensaje que se va a recuperar.</param>
+    </member><member name="M:Windows.Devices.Sms.SmsDeviceMessageStore.GetMessagesAsync(Windows.Devices.Sms.SmsMessageFilter)">
+      <summary>Recupera una lista de mensajes que cumplen las condiciones especificadas en un filtro. Los mensajes se pueden filtrar como leídos, no leídos, enviados o en estado de borrador.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que SmsDeviceMessageStore se haya modificado o que no esté disponible para la publicación a partir de Windows 10.</deprecated>
+      <returns>Devuelve un nuevo objeto de operación de mensajes que se usa para iniciar la operación asincrónica y realizar un seguimiento de esta.</returns>
+      <param name="messageFilter">Identificador del mensaje que se va a recuperar.</param>
+    </member><member name="T:Windows.Devices.Sms.SmsDeviceStatusChangedEventHandler">
+      <summary>Se llama a este controlador cuando cambia el estado en el dispositivo SMS. Los llamadores deben implementarlo si desean que se les notifique cada vez que se produzca un cambio de estado significativo en el dispositivo. Por ejemplo, el llamador podría querer saber cuándo está listo el dispositivo para enviar y recibir mensajes.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Puede que SmsDeviceStatusChangedEventHandler se haya modificado o no esté disponible para versiones posteriores a Windows 10.</deprecated>
+      <param name="sender">Una referencia al objeto del dispositivo que envió el evento.</param>
+    </member><member name="T:Windows.Devices.Sms.SmsMessageFilter">
+      <summary>Este tipo enumerado especifica los mensajes del almacén de mensajes del dispositivo en los que se realiza una operación.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que la propiedad SmsMessageFilter se haya modificado o que no esté disponible para versiones posteriores a Windows 10.</deprecated>
+    </member><member name="F:Windows.Devices.Sms.SmsMessageFilter.All">
+      <summary>Todos los mensajes en el almacén de mensajes del dispositivo.</summary>
+    </member><member name="F:Windows.Devices.Sms.SmsMessageFilter.Draft">
+      <summary>Todos los mensajes sin enviar y guardados.</summary>
+    </member><member name="F:Windows.Devices.Sms.SmsMessageFilter.Read">
+      <summary>Todos los mensajes recibidos leídos.</summary>
+    </member><member name="F:Windows.Devices.Sms.SmsMessageFilter.Sent">
+      <summary>Todos los mensajes enviados y guardados.</summary>
+    </member><member name="F:Windows.Devices.Sms.SmsMessageFilter.Unread">
+      <summary>Todos los mensajes recibidos no leídos.</summary>
+    </member><member name="T:Windows.Devices.Sms.SmsMessageReceivedEventArgs">
+      <summary>Proporciona datos para los controladores de eventos de ISmsBinaryMessage.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que la clase SmsMessageReceivedEventArgs se haya modificado o que no esté disponible para versiones posteriores a Windows 10.</deprecated>
+    </member><member name="P:Windows.Devices.Sms.SmsMessageReceivedEventArgs.BinaryMessage">
+      <summary>Recupera un objeto que contiene la representación binaria del mensaje. Esto es de interés únicamente para los clientes que desean pasar mensajes binarios directamente o hacer su propia interpretación del contenido del mensaje binario.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Una referencia a un objeto SmsBinaryMessage.</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsMessageReceivedEventArgs.TextMessage">
+      <summary>Recupera un objeto que contiene la representación de texto del mensaje. Si el mensaje no se descodifica correctamente, se devuelve un error.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un nuevo objeto SmsTextMessage.</returns>
+    </member><member name="T:Windows.Devices.Sms.SmsMessageReceivedEventHandler">
+      <summary>Se llama a este controlador de eventos cuando se recibe un nuevo mensaje binario. Los llamadores deben implementarlo si desean controlar los mensajes nuevos binarios desde un dispositivo SMS determinado.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que la clase SmsMessageReceivedEventHandler se haya modificado o que no esté disponible para versiones posteriores a Windows 10.</deprecated>
+      <param name="sender">Una referencia al objeto del dispositivo SMS que envió el mensaje.</param>
+      <param name="e">Un objeto que contiene las representaciones binarias y de texto del mensaje.</param>
+    </member><member name="T:Windows.Devices.Sms.SmsReceivedEventDetails">
+      <summary>Presenta los detalles de los eventos de mensaje SMS al elemento de trabajo en segundo plano que controla los mensajes mientras la aplicación está suspendida.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que la clase SmsReceivedEventDetails se haya modificado o que no esté disponible para versiones posteriores a Windows 10. En su lugar, use SmsMessageReceivedTriggerDetails.</deprecated>
+    </member><member name="P:Windows.Devices.Sms.SmsReceivedEventDetails.BinaryMessage">
+      <summary>Obtiene el objeto de mensaje binario para el mensaje SMS recibido por la tarea en segundo plano.</summary>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>El objeto de mensaje binario para el mensaje SMS que ha recibido la tarea en segundo plano.</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsReceivedEventDetails.DeviceId">
+      <summary>Devuelve el identificador de DeviceInformation de la interfaz de red que recibió el mensaje SMS. Este identificador se puede pasar a SmsDevice.FromIdAsync para activar el dispositivo y recuperar los detalles adicionales del mensaje.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Una cadena que contiene el identificador de DeviceInformation de la interfaz de red SMS (dispositivo). Este valor se utiliza normalmente para recuperar detalles como el remitente y el cuerpo del mensaje. Por ejemplo, se puede utilizar el identificador para mostrar un elemento emergente que indique al usuario que ha llegado un nuevo mensaje de una persona determinada. La combinación de DeviceId y de MessageIndex es suficiente para recuperar el nuevo mensaje desde el dispositivo SMS.</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsReceivedEventDetails.MessageClass">
+      <summary>Obtiene la clase de mensaje para el mensaje SMS recibido por la tarea en segundo plano.</summary>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Clase de mensaje del mensaje SMS recibido por la tarea en segundo plano.</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsReceivedEventDetails.MessageIndex">
+      <summary>Devuelve el índice del nuevo mensaje que generó el evento. Puede pasar esto a SmsDevice.GetMessageAsync para recuperar el propio mensaje nuevo.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un índice de entero del nuevo mensaje.</returns>
+    </member><member name="T:Windows.Devices.Sms.SmsTextMessage">
+      <summary>Administra un mensaje de texto SMS descodificado y proporciona acceso directo al cuerpo del texto sin formato del mensaje, así a las propiedades principales del encabezado, como la marca de tiempo.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que la propiedad SmsTextMessage se haya modificado o que no esté disponible para versiones posteriores a Windows 10. En su lugar, use SmsTextMessage2.</deprecated>
+    </member><member name="M:Windows.Devices.Sms.SmsTextMessage.#ctor">
+      <summary>Crea una instancia de la clase SmsTextMessage.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.Body">
+      <summary>Especifica el cuerpo de texto sin formato del mensaje.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Una cadena que representa el cuerpo del mensaje de texto. Si se producen problemas durante la descodificación, algunos caracteres del mensaje original se pueden representar con un carácter comodín, normalmente un signo de interrogación ('?').</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.Encoding">
+      <summary>Especifica el tipo de codificación que se ha configurado para usarlo al enviar este mensaje.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un valor de la enumeración SmsEncoding.</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.From">
+      <summary>Especifica el número de teléfono del remitente del mensaje.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Una representación de cadena del número de teléfono del remitente de este mensaje. Debe estar en el formato preferido por el dispositivo y la red en que está registrado.</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.Id">
+      <summary>Indica el identificador del mensaje de texto SMS.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un identificador de entero para el mensaje.</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.MessageClass">
+      <summary>Especifica la clase de mensaje de un mensaje. Esta clase de mensaje normalmente se origina en la red, no en el dispositivo móvil.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un valor de la enumeración SmsMessageClass.</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.PartCount">
+      <summary>Indica el número total de partes del mensaje original si el mensaje forma parte de un mensaje de varias partes.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un entero sin signo. si el mensaje es independiente, el valor es 1.</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.PartNumber">
+      <summary>Indica el número de parte de un mensaje de varias partes si este mensaje forma parte de un mensaje de varias partes. Se puede utilizar para volver a crear el mensaje original uniendo las partes, junto con las propiedades PartReferenceId y PartCount.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un entero sin signo. Está basado en uno. No superará PartCount + 1.</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.PartReferenceId">
+      <summary>Indica un valor de referencia que se puede utilizar si el mensaje forma parte de un mensaje de varias partes. Si este mensaje pertenece a un mensaje de varias partes, el valor de PartNumber se puede usar para reconstruir el mensaje original completo, y cada parte de ese mensaje tendrá el mismo valor para PartReferenceId.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un entero sin signo determinado por la red de envío; no se puede manipular mediante esta interfaz. Si la red tiene su propia directiva respecto a la duración de un mensaje de varias partes, este número de referencia podría no sea válido indefinidamente.</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.Timestamp">
+      <summary>Indica la marca de tiempo del mensaje. Se determina localmente para una instancia de mensaje construido o a partir de la marca de tiempo del centro de servicio de un mensaje recibido.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Un valor de tipo DateTime.</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.To">
+      <summary>Indica el número de teléfono del receptor de este mensaje.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <returns>Una representación de cadena del número de teléfono, con el formato de número de teléfono preferido del dispositivo y la red en la que este último está registrado.</returns>
+    </member><member name="M:Windows.Devices.Sms.SmsTextMessage.FromBinaryData(Windows.Devices.Sms.SmsDataFormat,System.Byte[])">
+      <summary>Descodifica un mensaje binario y coloca los resultados en una nueva instancia de un mensaje de texto. Este método representa el mensaje binario como una referencia a un búfer de bytes y una selección de cómo se codifica el búfer. Por lo tanto, se puede usar si el mensaje no se originó directamente en el dispositivo o como una instancia de una clase SmsBinaryMessage.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que la clase ISmsTextMessageStatics se haya modificado o que no esté disponible para versiones posteriores a Windows 10.</deprecated>
+      <returns>Un nuevo objeto SmsTextMessage si la descodificación se realizó correctamente.</returns>
+      <param name="format">Valor enumerado de SmsDataFormat que identifica el formato de un búfer de unidad de descripción de protocolo (PDU) particular.</param>
+      <param name="value">Matriz de bytes que contiene los datos binarios que se van a descodificar.</param>
+    </member><member name="M:Windows.Devices.Sms.SmsTextMessage.FromBinaryMessage(Windows.Devices.Sms.SmsBinaryMessage)">
+      <summary>Lee un mensaje binario y lo descodifica. Los resultados se colocan en una nueva instancia de un mensaje de texto.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que la clase ISmsTextMessageStatics se haya modificado o que no esté disponible para versiones posteriores a Windows 10.</deprecated>
+      <returns>Un nuevo objeto SmsTextMessage.</returns>
+      <param name="binaryMessage">Una instancia de un mensaje binario que se va a descodificar.</param>
+    </member><member name="M:Windows.Devices.Sms.SmsTextMessage.ToBinaryMessages(Windows.Devices.Sms.SmsDataFormat)">
+      <summary>Lee un mensaje en el formato especificado y coloca los resultados en una nueva instancia de un mensaje binario.</summary>
+      <capability type="sms">Necesario para tener acceso al servicio de SMS.</capability>
+      <capability type="cellularMessaging">Necesario para que las aplicaciones usen SMS y RCS.</capability>
+      <deprecated type="deprecate">Es posible que la propiedad SmsTextMessage se haya modificado o que no esté disponible para versiones posteriores a Windows 10. En su lugar, use SmsTextMessage2.</deprecated>
+      <returns>El nuevo mensaje binario que contiene el resultado de esta llamada al método.</returns>
+      <param name="format">Un valor de la enumeración SmsDataFormat.</param>
+    </member></members>
+</doc>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Preview.Notes.PreviewNotesContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs">
+      <summary>Representa información sobre el evento NotePlacementChanged.</summary>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs.ViewId">
+      <summary>Identificador único de la nota para la que se generó el evento NotePlacementChanged.</summary>
+      <returns>Identificador de la nota.</returns>
+    </member><member name="T:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview">
+      <summary>Esta clase posee gran parte de la funcionalidad de las características de la aplicación Preview Notes (vea los Comentarios).</summary>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.IsScreenLocked">
+      <summary>Obtiene un valor que indica si la pantalla del dispositivo está bloqueada actualmente.</summary>
+      <returns>True si la pantalla está bloqueada; si está desbloqueada, false.</returns>
+    </member><member name="E:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.NotePlacementChanged">
+      <summary>Indica que la posición de una nota (dimensiones y ubicación) ha cambiado.</summary>
+    </member><member name="E:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.NoteVisibilityChanged">
+      <summary>Indica que el estado de visibilidad de una nota ha cambiado.</summary>
+    </member><member name="E:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.SystemLockStateChanged">
+      <summary>Indica que el estado de bloqueo de la pantalla de un dispositivo ha cambiado.</summary>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.GetNotePlacement(System.Int32)">
+      <summary>Obtiene la posición de una nota determinada, que se va a almacenar en memoria y la restablecerá la aplicación en un momento posterior.</summary>
+      <returns>Una matriz de bytes guarda datos de la posición de la nota.</returns>
+      <param name="noteViewId">Identificador único de la nota cuya posición se debe recuperar.</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.HideNote(System.Int32)">
+      <summary>Quita la vista de una nota de la pantalla del dispositivo.</summary>
+      <param name="noteViewId">Identificador único de la nota que se va a ocultar.</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.SetFocusToNextView">
+      <summary>Cambia el foco a la siguiente vista de nota visible (ventana). Las vistas se seleccionan en un orden cíclico, determinado por el sistema.</summary>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.SetNotesThumbnailAsync(Windows.Storage.Streams.IBuffer)">
+      <summary>Establece la imagen en miniatura para esta aplicación según aparece en el Área de trabajo de Windows Ink, en el conmutador de tareas Alt+TAB o al mantener el mouse sobre la barra de tareas.</summary>
+      <returns>Este método no devuelve ningún valor.</returns>
+      <param name="thumbnail">Una matriz de bytes que describe la imagen en miniatura y su uso (vea Comentarios).</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNote(System.Int32)">
+      <summary>Hace visible una nota en la pantalla del dispositivo.</summary>
+      <param name="noteViewId">Identificador único de la nota que se va a mostrar.</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNoteRelativeTo(System.Int32,System.Int32)">
+      <summary>Hace una nota visible y la coloca junto a una determinada vista de “anclaje”.</summary>
+      <param name="noteViewId">Identificador único de la nota que se va a mostrar.</param>
+      <param name="anchorNoteViewId">Identificador de la vista de “anclaje”.</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNoteWithPlacement(System.Int32,Windows.Storage.Streams.IBuffer)">
+      <summary>Hace una nota visible y establece sus datos de posición (dimensiones y ubicación) especificados.</summary>
+      <param name="noteViewId">Identificador único de la nota que se va a mostrar.</param>
+      <param name="data">Una matriz de bytes guarda datos de la posición de la nota.</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.TrySetNoteSize(System.Int32,Windows.Foundation.Size)">
+      <summary>Cambia el tamaño de la nota especificada a las dimensiones deseadas. Si el tamaño especificado no es el recomendado debido a problemas de tamaño de pantalla y espacio de la pantalla, el tamaño de la nota no se cambiará.</summary>
+      <returns>True si la nota cambia de tamaño, false si no se cambia de tamaño debido a las restricciones de la pantalla.</returns>
+      <param name="noteViewId">Identificador único de la nota que se va a cambiar de tamaño.</param>
+      <param name="size">Tamaño deseado de la nota.</param>
+    </member><member name="T:Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs">
+      <summary>Representa información sobre el evento NoteVisibilityChanged.</summary>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs.IsVisible">
+      <summary>Indica si la nota (especificada por la propiedad ViewId) está visible en la pantalla del dispositivo.</summary>
+      <returns>True si la nota está visible; false si se oculta la nota.</returns>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs.ViewId">
+      <summary>Identificador único de la nota para la que se generó el evento NoteVisibilityChanged.</summary>
+      <returns>Identificador de la nota.</returns>
+    </member></members>
+</doc>

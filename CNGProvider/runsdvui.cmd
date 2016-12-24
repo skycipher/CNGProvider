@@ -1,0 +1,2 @@
+cd /d "G:\!!SkyCipher\Clients\WhitewoodEncryption\Projects\netRandom\Code\CNGProvider\CNGProvider" &msbuild "CNGProvider.vcxproj" /t:sdvViewer /p:configuration="Debug" /p:platform=x64
+exit %errorlevel% 

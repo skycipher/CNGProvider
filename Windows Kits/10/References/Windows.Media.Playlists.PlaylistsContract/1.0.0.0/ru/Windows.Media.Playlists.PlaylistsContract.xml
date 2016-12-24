@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.Playlists.PlaylistsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Media.Playlists.Playlist">
+      <summary>Предоставляет доступ к списку воспроизведения мультимедиа.</summary>
+    </member><member name="M:Windows.Media.Playlists.Playlist.#ctor">
+      <summary>Создает новый экземпляр объекта Playlist.</summary>
+    </member><member name="P:Windows.Media.Playlists.Playlist.Files">
+      <summary>Набор файлов мультимедиа, которые составляют список воспроизведения.</summary>
+      <returns>Список файлов мультимедиа, которые составляют список воспроизведения.</returns>
+    </member><member name="M:Windows.Media.Playlists.Playlist.LoadAsync(Windows.Storage.IStorageFile)">
+      <summary>Асинхронно загружает файлы в список воспроизведения.</summary>
+      <returns>Представляет асинхронную операцию по загрузке списка воспроизведения. Метод GetResults данного объекта IAsyncOperation возвращает список воспроизведения.</returns>
+      <param name="file">Представляет файлы для загрузки.</param>
+    </member><member name="M:Windows.Media.Playlists.Playlist.SaveAsAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption)">
+      <summary>Асинхронно сохраняет список воспроизведения в указанные файл и папку.</summary>
+      <returns>Представляет асинхронную операцию по сохранению списка воспроизведения в указанные файл и папку.</returns>
+      <param name="saveLocation">Папка, в которую требуется сохранить список воспроизведения.</param>
+      <param name="desiredName">Имя сохраняемого списка воспроизведения.</param>
+      <param name="option">Действие, выполняемое, если список воспроизведения сохраняется в существующий файл. Одно из значений перечисления NameCollisionOption.</param>
+    </member><member name="M:Windows.Media.Playlists.Playlist.SaveAsAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption,Windows.Media.Playlists.PlaylistFormat)">
+      <summary>Асинхронно сохраняет список воспроизведения в заданном формате в указанные файл и папку.</summary>
+      <returns>Представляет асинхронную операцию по сохранению списка воспроизведения в указанные файл и папку.</returns>
+      <param name="saveLocation">Папка, в которую требуется сохранить список воспроизведения.</param>
+      <param name="desiredName">Имя сохраняемого списка воспроизведения.</param>
+      <param name="option">Действие, выполняемое, если список воспроизведения сохраняется в существующий файл. Одно из значений перечисления NameCollisionOption.</param>
+      <param name="playlistFormat">Формат списка воспроизведения. Одно из значений перечисления PlaylistFormat.</param>
+    </member><member name="M:Windows.Media.Playlists.Playlist.SaveAsync">
+      <summary>Асинхронно сохраняет список воспроизведения.</summary>
+      <returns>Представляет асинхронное действие по сохранению списка воспроизведения.</returns>
+    </member><member name="T:Windows.Media.Playlists.PlaylistFormat">
+      <summary>Указывает формат файла списка воспроизведения.</summary>
+    </member><member name="F:Windows.Media.Playlists.PlaylistFormat.M3u">
+      <summary>Список воспроизведения M3U.</summary>
+    </member><member name="F:Windows.Media.Playlists.PlaylistFormat.WindowsMedia">
+      <summary>Список воспроизведения Windows Media.</summary>
+    </member><member name="F:Windows.Media.Playlists.PlaylistFormat.Zune">
+      <summary>Список воспроизведения Zune.</summary>
+    </member></members>
+</doc>

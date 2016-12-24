@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Globalization.GlobalizationJapanesePhoneticAnalyzerContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Globalization.JapanesePhoneme">
+      <summary>Stellt ein einzelnes japanisches Wort (einen abgelesenen Wert) dar, das aus einer japanischen Zeichenfolge durch JapanesePhoneticAnalyzer extrahiert wurde.</summary>
+    </member><member name="P:Windows.Globalization.JapanesePhoneme.DisplayText">
+      <summary>Ruft den Text ab, der für dieses japanische Wort anzuzeigen ist.</summary>
+      <returns>Der Anzeigetext von diesem japanischen Wort. Es handelt sich um eine Teilzeichenfolge der japanischen Zeichenfolge, die ursprünglich durch JapanesePhoneticAnalyzer analysiert wurde.</returns>
+    </member><member name="P:Windows.Globalization.JapanesePhoneme.IsPhraseStart">
+      <summary>Ruft einen booleschen Wert ab. Dieser gibt an, ob dieses japanische Wort Anfang einer Phrase ist.</summary>
+      <returns>True, wenn dieses japanische Wort der Anfang einer Phrase ist; andernfalls False.</returns>
+    </member><member name="P:Windows.Globalization.JapanesePhoneme.YomiText">
+      <summary>Ruft die Lesung (die Aussprache des DisplayText) für dieses japanische Wort ab.</summary>
+      <returns>Die Lesung (die Aussprache des DisplayText, dargestellt durch eine Reihe von Hiragana-Zeichen).</returns>
+    </member><member name="T:Windows.Globalization.JapanesePhoneticAnalyzer">
+      <summary>Liest eine japanische Zeichenfolge, die eine Kombination von Kanji-Zeichen und Hiragana-Zeichen ist, und gibt eine Auflistung mit ordnungsgemäß abgelesenen Werten der Zeichenfolge mit Wortumbrüchen zurück.</summary>
+    </member><member name="M:Windows.Globalization.JapanesePhoneticAnalyzer.GetWords(System.String)">
+      <summary>Liest eine japanische Zeichenfolge, die eine Kombination von Kanji-Zeichen und Hiragana-Zeichen ist, und gibt eine Auflistung mit ordnungsgemäß abgelesenen Werten der Zeichenfolge mit Wortumbrüchen zurück.</summary>
+      <returns>Eine Auflistung von JapanesePhoneme-Objekten, die das richtige Lesen der Zeichenfolge mit Wortumbrüchen darstellen.</returns>
+      <param name="input">Eine japanische Zeichenfolge, die eine Kombination von Kanji-Zeichen und Hiragana-Zeichen ist.</param>
+    </member><member name="M:Windows.Globalization.JapanesePhoneticAnalyzer.GetWords(System.String,System.Boolean)">
+      <summary>Liest eine japanische Zeichenfolge, die eine Kombination von Kanji-Zeichen und Hiragana-Zeichen ist, und gibt eine Auflistung mit ordnungsgemäß abgelesenen Werten der Zeichenfolge mit Wortumbrüchen zurück. Verwendet optional die Mono Ruby-Strategie, wenn Multi-Kanji-Wörter in mehrere Kanji-Wörter aufgeteilt werden sollen.</summary>
+      <returns>Eine Auflistung von JapanesePhoneme-Objekten, die das richtige Lesen der Zeichenfolge mit Wortumbrüchen darstellen.</returns>
+      <param name="input">Eine japanische Zeichenfolge, die eine Kombination von Kanji-Zeichen und Hiragana-Zeichen ist.</param>
+      <param name="monoRuby">Gibt dem Verwendung der Worttrennungsstrategie Mono Ruby an. Wenn True, wird die Worttrennungsstrategie Mono Ruby verwendet. Mono Ruby versucht aggressiver, Kanji-Komposita in mehrere Kanji-Wörter zu unterteilen. Bei False wird Mono Ruby nicht verwendet.</param>
+    </member></members>
+</doc>

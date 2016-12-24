@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Custom.CustomDeviceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Custom.CustomDevice">
+      <summary>カスタム デバイスを表します。</summary>
+    </member><member name="P:Windows.Devices.Custom.CustomDevice.InputStream">
+      <summary>入力ストリーム。</summary>
+      <returns>入力ストリーム。</returns>
+    </member><member name="P:Windows.Devices.Custom.CustomDevice.OutputStream">
+      <summary>出力ストリーム。</summary>
+      <returns>出力ストリーム。</returns>
+    </member><member name="M:Windows.Devices.Custom.CustomDevice.FromIdAsync(System.String,Windows.Devices.Custom.DeviceAccessMode,Windows.Devices.Custom.DeviceSharingMode)">
+      <summary>指定された DeviceInformation.Id に対応する CustomDevice オブジェクトを非同期的に作成します。</summary>
+      <capability type="optical">アプリが CD、DVD、ブルーレイなどの光ディスク ドライブの機能にアクセスするために必要です。</capability>
+      <returns>カスタム デバイスを返します。</returns>
+      <param name="deviceId">デバイスの DeviceInformation.Id。</param>
+      <param name="desiredAccess">目的のアクセス。</param>
+      <param name="sharingMode">共有モード。</param>
+    </member><member name="M:Windows.Devices.Custom.CustomDevice.GetDeviceSelector(System.Guid)">
+      <summary>デバイス セレクターを取得します。</summary>
+      <returns>デバイス セレクター。</returns>
+      <param name="classGuid">デバイス セレクターを作成するデバイス インターフェイスのデバイス インターフェイス クラス GUID。</param>
+    </member><member name="M:Windows.Devices.Custom.CustomDevice.SendIOControlAsync(Windows.Devices.Custom.IIOControlCode,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)">
+      <summary>IO コントロール コードを送信します。</summary>
+      <returns>非同期操作の結果。</returns>
+      <param name="ioControlCode">IO コントロール コード。</param>
+      <param name="inputBuffer">入力バッファー。</param>
+      <param name="outputBuffer">出力バッファー。</param>
+    </member><member name="M:Windows.Devices.Custom.CustomDevice.TrySendIOControlAsync(Windows.Devices.Custom.IIOControlCode,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)">
+      <summary>IO コントロール コードを送信します。 戻り値は、演算が成功したかどうかを示します。</summary>
+      <returns>操作が正常に完了した場合は true。それ以外の場合は false。</returns>
+      <param name="ioControlCode">IO コントロール コード。</param>
+      <param name="inputBuffer">入力バッファー。</param>
+      <param name="outputBuffer">出力バッファー。</param>
+    </member><member name="T:Windows.Devices.Custom.DeviceAccessMode">
+      <summary>デバイス アクセス モード。</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceAccessMode.Read">
+      <summary>読み取りアクセス。</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceAccessMode.ReadWrite">
+      <summary>読み取り/書き込みアクセス。</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceAccessMode.Write">
+      <summary>書き込みアクセス。</summary>
+    </member><member name="T:Windows.Devices.Custom.DeviceSharingMode">
+      <summary>デバイス共有モード。</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceSharingMode.Exclusive">
+      <summary>デバイスが排他的です。</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceSharingMode.Shared">
+      <summary>デバイスは共有されています。</summary>
+    </member><member name="T:Windows.Devices.Custom.IIOControlCode">
+      <summary>IO コントロール コードを表します。</summary>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.AccessMode">
+      <summary>アクセス モード。</summary>
+      <returns>アクセス モード。</returns>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.BufferingMethod">
+      <summary>バッファリング方式。</summary>
+      <returns>バッファリング方式。</returns>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.ControlCode">
+      <summary>コントロール コード。</summary>
+      <returns>コントロール コード。</returns>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.DeviceType">
+      <summary>デバイスの種類。</summary>
+      <returns>デバイスの種類。</returns>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.Function">
+      <summary>関数。</summary>
+      <returns>関数。</returns>
+    </member><member name="T:Windows.Devices.Custom.IOControlAccessMode">
+      <summary>アクセス モードを識別します。</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlAccessMode.Any">
+      <summary>任意のモード。</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlAccessMode.Read">
+      <summary>読み取り専用モード。</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlAccessMode.ReadWrite">
+      <summary>読み取り/書き込みモード。</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlAccessMode.Write">
+      <summary>書き込みモード。</summary>
+    </member><member name="T:Windows.Devices.Custom.IOControlBufferingMethod">
+      <summary>バッファリング方式を指定します。</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlBufferingMethod.Buffered">
+      <summary>バッファー済み。</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlBufferingMethod.DirectInput">
+      <summary>直接入力。</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlBufferingMethod.DirectOutput">
+      <summary>直接出力。</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlBufferingMethod.Neither">
+      <summary>どちらでもない。</summary>
+    </member><member name="T:Windows.Devices.Custom.IOControlCode">
+      <summary>コントロール コードを表します。</summary>
+    </member><member name="M:Windows.Devices.Custom.IOControlCode.#ctor(System.UInt16,System.UInt16,Windows.Devices.Custom.IOControlAccessMode,Windows.Devices.Custom.IOControlBufferingMethod)">
+      <summary>コントロール コード。</summary>
+      <param name="deviceType">デバイスの種類。</param>
+      <param name="function">デバイスの機能。</param>
+      <param name="accessMode">アクセス モード。</param>
+      <param name="bufferingMethod">バッファリング方式。</param>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.AccessMode">
+      <summary>アクセス モード。</summary>
+      <returns>アクセス モード。</returns>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.BufferingMethod">
+      <summary>バッファリング方式。</summary>
+      <returns>バッファリング方式。</returns>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.ControlCode">
+      <summary>コントロール コード。</summary>
+      <returns>コントロール コード。</returns>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.DeviceType">
+      <summary>デバイスの種類。</summary>
+      <returns>デバイスの種類。</returns>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.Function">
+      <summary>関数。</summary>
+      <returns>関数。</returns>
+    </member><member name="T:Windows.Devices.Custom.KnownDeviceTypes">
+      <summary>既知のデバイスの種類を表します。</summary>
+    </member><member name="P:Windows.Devices.Custom.KnownDeviceTypes.Unknown">
+      <summary>デバイス ベンダーによって定義されます。</summary>
+      <returns>デバイス ベンダーによって定義されます。</returns>
+    </member></members>
+</doc>

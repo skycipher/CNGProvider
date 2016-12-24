@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Printers.Extensions.ExtensionsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Printers.Extensions.PrintExtensionContext">
+      <summary>提供印表機擴充物件的內容。</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintExtensionContext.FromDeviceId(System.String)">
+      <summary>根據 DeviceInformation 識別碼，取得列印延伸模組物件的內容。</summary>
+      <returns>內容的指標。</returns>
+      <param name="deviceId">列印裝置的裝置資訊識別碼。</param>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails">
+      <summary>包含屬性，可讓用戶端存取及 (或) 處理列印事件資料及列印裝置名稱資訊。</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails.EventData">
+      <summary>取得或設定列印通知事件的事件資料。</summary>
+      <returns>列印通知事件資料。</returns>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails.PrinterName">
+      <summary>取得與列印通知相關的列印裝置名稱。</summary>
+      <returns>列印裝置名稱。</returns>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfiguration">
+      <summary>可讓用戶端擷取列印工作延伸內容，也可以將事件處理常式加入至列印工作。</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfiguration.PrinterExtensionContext">
+      <summary>取得列印工作延伸模組的內容。</summary>
+      <returns>列印工作延伸模組的內容。</returns>
+    </member><member name="E:Windows.Devices.Printers.Extensions.PrintTaskConfiguration.SaveRequested">
+      <summary>由應用程式的列印視窗所引發，以通知裝置應用程式指出列印票證必須更新。</summary>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest">
+      <summary>當應用程式的 [列印] 對話方塊引發 SaveRequested 事件時呼叫。</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Deadline">
+      <summary>取得提供列印工作期限資訊的日期時間物件。</summary>
+      <returns>列印工作的期限。</returns>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Cancel">
+      <summary>由裝置應用程式呼叫，以取消儲存列印工作組態的用戶端要求。</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.GetDeferral">
+      <summary>當裝置應用程式必須先完成一些非同步工作，才能列印工作組態資訊時，由此應用程式呼叫。</summary>
+      <returns>表示列印工作組態儲存要求延遲的物件。</returns>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Save(System.Object)">
+      <summary>由裝置應用程式呼叫，以儲存列印工作組態。</summary>
+      <param name="printerExtensionContext">表示列印工作延伸內容的物件。</param>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral">
+      <summary>由裝置應用程式呼叫，以提供延遲狀態的更新。</summary>
+    </member><member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral.Complete">
+      <summary>當延遲完成時，由裝置應用程式呼叫。</summary>
+    </member><member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs">
+      <summary>呼叫以通知裝置應用程式必須儲存列印工作組態。</summary>
+    </member><member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs.Request">
+      <summary>取得更新列印工作組態所需的資訊。</summary>
+      <returns>列印工作組態儲存要求。</returns>
+    </member></members>
+</doc>

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Activation.ActivatedEventsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Activation.ILockScreenCallActivatedEventArgs">
+      <summary>Stellt Ereignisinformationen bereit, wenn Kommunikation vom und zum gesperrten Bildschirm erforderlich ist.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ILockScreenCallActivatedEventArgs.CallUI">
+      <summary>Ruft die Benutzeroberfläche für die Kommunikation mit dem Sperrbildschirm ab.</summary>
+      <returns>Die Benutzeroberfläche, die Kommunikation zu und von dem Sperrbildschirm abwickelt.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IPrintTaskSettingsActivatedEventArgs">
+      <summary>Erstellt Informationen als Antwort auf das Ereignis, das ausgelöst wird, wenn Druckaufgabeneinstellungen aktiviert werden.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IPrintTaskSettingsActivatedEventArgs.Configuration">
+      <summary>Ruft die Konfigurationsinformationen für die Druckaufgabe ab.</summary>
+      <returns>Die Konfigurationsinformationen für die Druckaufgabe.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs">
+      <summary>Stellt Ereignisinformationen bereit, wenn Kommunikation vom und zum gesperrten Bildschirm erforderlich ist.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.Arguments">
+      <summary>Ruft die Argumente ab, die an die App übergeben werden, um diese zu starten.</summary>
+      <returns>Die Liste der Argumente.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.CallUI">
+      <summary>Ruft die Benutzeroberfläche für die Kommunikation mit dem Sperrbildschirm ab.</summary>
+      <returns>Die Benutzeroberfläche, die Kommunikation zu und von dem Sperrbildschirm abwickelt.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.CurrentlyShownApplicationViewId">
+      <summary>Ruft den Bezeichner für die aktuell angezeigte App-Ansicht ab.</summary>
+      <returns>Der Bezeichner für die aktuell angezeigte App-Ansicht.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.Kind">
+      <summary>Ruft den Aktivierungstyp ab.</summary>
+      <returns>Der ActivationKind.LockScreenCall-Enumerationswert.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.PreviousExecutionState">
+      <summary>Ruft den Ausführungsstatus der App vor ihrer Aktivierung ab.</summary>
+      <returns>Einer der Enumerationswerte.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.SplashScreen">
+      <summary>Ruft das Begrüßungsbildschirm-Objekt ab, das Informationen zum Übergang vom Begrüßungsbildschirm zur aktivierten App bereitstellt.</summary>
+      <returns>Das Objekt, das Informationen für den Begrüßungsbildschirm bereitstellt.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.TileId">
+      <summary>Ruft den Bezeichner der Quelle ab, die die App gestartet hat.</summary>
+      <returns>Der Bezeichner der Kachel.</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs">
+      <summary>Erstellt Informationen als Antwort auf das Ereignis, das ausgelöst wird, wenn Druckaufgabeneinstellungen aktiviert werden.</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.Configuration">
+      <summary>Ruft die Konfigurationsinformationen für die Druckaufgabe ab.</summary>
+      <returns>Die Konfigurationsinformationen für die Druckaufgabe.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.Kind">
+      <summary>Ruft den Aktivierungstyp für die Druckaufgabeneinstellungen ab.</summary>
+      <returns>Der Typ der Aktivierung für die Druckaufgabe.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.PreviousExecutionState">
+      <summary>Ruft den Ausführungsstatus der App ab, bevor die Einstellungen aktiviert waren.</summary>
+      <returns>Der Ausführungsstatus der App.</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.SplashScreen">
+      <summary>Ruft das Begrüßungsbildschirm-Objekt ab, das Informationen über den Übergang vom Begrüßungsbildschirm zur aktivierten App bereitstellt.</summary>
+      <returns>Das Objekt, das Informationen für den Begrüßungsbildschirm bereitstellt.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs">
+      <summary>Stellt Ereignisinformationen bereit, wenn Kommunikation vom und zum gesperrten Bildschirm erforderlich ist.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.ActivatedOperation">
+      <summary>Ruft den durch die App aktivierten Vorgang ab.</summary>
+      <returns>Der Aktivierungsvorgang.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.Arguments">
+      <summary>Ruft die Argumente ab, die an die App während der Aktivierung des Starts übergeben werden.</summary>
+      <returns>Die Liste der Argumente.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.CallUI">
+      <summary>Ruft die Benutzeroberfläche für die Kommunikation mit dem Sperrbildschirm ab.</summary>
+      <returns>Die Benutzeroberfläche, die Kommunikation zu und von dem Sperrbildschirm abwickelt.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.CurrentlyShownApplicationViewId">
+      <summary>Ruft den Bezeichner für die aktuell angezeigte App-Ansicht ab.</summary>
+      <returns>Der Bezeichner für die aktuell angezeigte App-Ansicht.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.Kind">
+      <summary>Ruft den Aktivierungstyp ab.</summary>
+      <returns>Der ActivationKind.lockScreenCall-Enumerationswert.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.PreviousExecutionState">
+      <summary>Ruft den Ausführungsstatus der App vor ihrer Aktivierung ab.</summary>
+      <returns>Einer der Enumerationswerte.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.SplashScreen">
+      <summary>Ruft das Begrüßungsbildschirm-Objekt ab, das Informationen zum Übergang vom Begrüßungsbildschirm zur aktivierten App bereitstellt.</summary>
+      <returns>Das Objekt, das Informationen für den Begrüßungsbildschirm bereitstellt.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.TileId">
+      <summary>Ruft den Bezeichner der Quelle ab, die die App gestartet hat.</summary>
+      <returns>Der Bezeichner der Kachel.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs">
+      <summary>Stellt die Argumente dar, die mit dem Aktivieren eines 3D-Druckworkflows verknüpft sind.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.ActivatedOperation">
+      <summary>Ruft den aktivierten Vorgang ab.</summary>
+      <returns>Der aktivierte Vorgang.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.Kind">
+      <summary>Ruft die Art dieser Aktivierung ab.</summary>
+      <returns>Die Art der Aktivierung.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.PreviousExecutionState">
+      <summary>Ruft den vorherigen Ausführungsstatus ab.</summary>
+      <returns>Der vorherige Zustand.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.SplashScreen">
+      <summary>Ruft das Begrüßungsbildschirm-Objekt ab, das Informationen über den Übergang vom Begrüßungsbildschirm zur aktivierten App bereitstellt.</summary>
+      <returns>Der Begrüßungsbildschirm.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.Workflow">
+      <summary>Ruft die Druckworkflow ab.</summary>
+      <returns>Der Druckworkflow.</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs">
+      <summary>Zur Verfügung gestellt als Antwort auf das Ereignis, das ausgelöst wird, wenn Druckaufgabeneinstellungen aktiviert werden.</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.ActivatedOperation">
+      <summary>Ruft den durch die App aktivierten Vorgang ab.</summary>
+      <returns>Der Aktivierungsvorgang.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.Configuration">
+      <summary>Ruft die Konfigurationsinformationen für die Druckaufgabe ab.</summary>
+      <returns>Die Konfigurationsinformationen für die Druckaufgabe.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.Kind">
+      <summary>Ruft den Aktivierungstyp ab.</summary>
+      <returns>Einer der Enumerationswerte.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.PreviousExecutionState">
+      <summary>Ruft den Ausführungsstatus der App ab, bevor die Einstellungen aktiviert waren.</summary>
+      <returns>Einer der Enumerationswerte.</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.SplashScreen">
+      <summary>Ruft das Begrüßungsbildschirm-Objekt ab, das Informationen über den Übergang vom Begrüßungsbildschirm zur aktivierten App bereitstellt.</summary>
+      <returns>Das Objekt, das Informationen für den Begrüßungsbildschirm bereitstellt.</returns>
+    </member></members>
+</doc>

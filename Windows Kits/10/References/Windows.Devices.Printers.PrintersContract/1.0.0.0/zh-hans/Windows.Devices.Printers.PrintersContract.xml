@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Printers.PrintersContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Printers.Print3DDevice">
+      <summary>表示 3D 打印机。</summary>
+    </member><member name="P:Windows.Devices.Printers.Print3DDevice.PrintSchema">
+      <summary>获取用于获取功能和打印票证信息的 PrintSchema 对象。</summary>
+      <returns>用于获取功能和打印票证信息的 PrintSchema 对象。</returns>
+    </member><member name="M:Windows.Devices.Printers.Print3DDevice.FromIdAsync(System.String)">
+      <summary>创建一个 Print3DDevice 对象，该对象表示连接到设备的 3D 打印机。</summary>
+      <returns>一个与指定 3D 打印机对应的 Print3DDevice 对象。</returns>
+      <param name="deviceId">3D 打印机的设备 ID。</param>
+    </member><member name="M:Windows.Devices.Printers.Print3DDevice.GetDeviceSelector">
+      <summary>获取可用于查找连接到设备的所有 3D 打印机的高级查询语法 (AQS) 字符串。</summary>
+      <returns>可用于查找连接到设备的所有 3D 打印机的 AQS 字符串。</returns>
+    </member><member name="T:Windows.Devices.Printers.PrintSchema">
+      <summary>为 API 提供访问 3D 打印机的功能和打印票证的权限。</summary>
+    </member><member name="M:Windows.Devices.Printers.PrintSchema.GetCapabilitiesAsync(Windows.Storage.Streams.IRandomAccessStreamWithContentType)">
+      <summary>获取 3D 打印机功能。</summary>
+      <returns>包含 3D 打印机功能的 XML PrintCapabilities 文档。</returns>
+      <param name="constrainTicket">打印票证。</param>
+    </member><member name="M:Windows.Devices.Printers.PrintSchema.GetDefaultPrintTicketAsync">
+      <summary>获取 3D 打印机的默认打印票证。</summary>
+      <returns>包含 3D 打印机的默认打印票证的 XML PrintTicket 文档。</returns>
+    </member><member name="M:Windows.Devices.Printers.PrintSchema.MergeAndValidateWithDefaultPrintTicketAsync(Windows.Storage.Streams.IRandomAccessStreamWithContentType)">
+      <summary>将用户选择的打印票证与默认打印票证合并，然后验证合并的票证对设备是否有效，以创建新的打印票证。</summary>
+      <returns>包含建议的打印票证的 XML PrintTicket 文档。</returns>
+      <param name="deltaTicket">增量打印票证指定默认打印票证与用户选择的打印票证之间的差异。</param>
+    </member></members>
+</doc>

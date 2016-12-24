@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Portable.PortableDeviceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Portable.ServiceDevice">
+      <summary>Stellt Methoden zum Identifizieren eines Gerätedienstes für ein portables Gerät bereit, das WPD (Windows Portable Devices) zur Geräteauflistung verwendet.</summary>
+    </member><member name="M:Windows.Devices.Portable.ServiceDevice.GetDeviceSelector(Windows.Devices.Portable.ServiceDeviceType)">
+      <summary>Gibt eine AQS-Zeichenfolge (Advanced Query Syntax) zurück, die verwendet wird, um Gerätedienste des angegebenen ServiceDeviceType aufzulisten. Diese Zeichenfolge wird an die FindAllAsync- oder die CreateWatcher-Methode übergeben.</summary>
+      <returns>Die AQS-Zeichenfolge.</returns>
+      <param name="serviceType">Der Typ des zu identifizierenden Diensts.</param>
+    </member><member name="M:Windows.Devices.Portable.ServiceDevice.GetDeviceSelectorFromServiceId(System.Guid)">
+      <summary>Eine erweiterte Abfragesyntax-Zeichenfolge zum Identifizieren eines Gerätediensts anhand der GUIDs. Diese Zeichenfolge wird an die FindAllAsync- oder die CreateWatcher-Methode übergeben.</summary>
+      <returns>Die AQS-Zeichenfolge.</returns>
+      <param name="serviceId">Der Dienstbezeichner.</param>
+    </member><member name="T:Windows.Devices.Portable.ServiceDeviceType">
+      <summary>Gibt den Typ eines Dienstes des portablen Einheit an.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.CalendarService">
+      <summary>Ein Dienst, der Kalenderinformationen bereitstellt.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.ContactsService">
+      <summary>Ein Dienst, der Kontakte nachverfolgt.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.DeviceStatusService">
+      <summary>Ein Gerätestatusdienst.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.NotesService">
+      <summary>Ein Notizen erstellender Dienst.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.RingtonesService">
+      <summary>Ein Dienst, der Klingeltöne für ein Telefon bereitstellt.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.SmsService">
+      <summary>Ein SMS-Dienst.</summary>
+    </member><member name="F:Windows.Devices.Portable.ServiceDeviceType.TasksService">
+      <summary>Ein Dienst für die Nachverfolgungsaufgaben.</summary>
+    </member><member name="T:Windows.Devices.Portable.StorageDevice">
+      <summary>Stellt Methoden bereit für den Zugriff auf die Speicherfunktionen eines portablen Geräts, das WPD (Windows Portable Device) unterstützt. Zu den Wechselspeichergeräten gehören: USB-Flashlaufwerke und camerasMedia Transfer Protocol -Musikabspielgeräte (Media Transfer Protocol), Telefone und camerasPicture Transfer Protocol-Kameras (Picture Transfer Protocol)</summary>
+      <capability type="removableStorage">Erforderlich, um vom Wechselspeicher zu lesen und darauf zu schreiben.</capability>
+    </member><member name="M:Windows.Devices.Portable.StorageDevice.FromId(System.String)">
+      <summary>Ruft ein StorageFolder-Objekt aus einer DeviceInformation-ID für ein Wechselmediengerät ab.</summary>
+      <capability type="removableStorage">Erforderlich, um vom Wechselspeicher zu lesen und darauf zu schreiben.</capability>
+      <returns>Das Speicherordnerobjekt, das das Wechselmedium darstellt und Zugriff auf den Inhalt des Geräts bietet.</returns>
+      <param name="DeviceId">Die DeviceInformation-ID, die den Wechseldatenträger identifiziert. Diese ID kann aus Windows.Devices.Enumeration oder von der DeviceInformationId-Eigenschaft der AutoPlay-Geräteereignisargumente abgerufen werden. Weitere Informationen finden Sie unter Schnellstart: Registrieren von Apps für Geräte zur automatischen Wiedergabe. Damit FromId nicht fehlschlägt, muss die App sowohl die removableStorage-Funktion deklarieren (wie in den App-Funktionsdeklarationen gezeigt) als auch Dateitypzuordnungen für die Dateien, auf die auf dem Gerät zugegriffen werden soll (wie in Behandeln von Dateiaktivierungen gezeigt). Weitere Informationen finden Sie im Beispiel zu Wechselmedien.</param>
+    </member><member name="M:Windows.Devices.Portable.StorageDevice.GetDeviceSelector">
+      <summary>Eine erweiterte Abfragesyntax-Zeichenfolge zum Identifizieren von Speichergeräten. Diese Zeichenfolge wird an die FindAllAsync- oder die CreateWatcher-Methode übergeben.</summary>
+      <capability type="removableStorage">Erforderlich, um vom Wechselspeicher zu lesen und darauf zu schreiben.</capability>
+      <returns>Eine erweiterte Abfragesyntax-Zeichenfolge zum Identifizieren von Speichergeräten.</returns>
+    </member></members>
+</doc>

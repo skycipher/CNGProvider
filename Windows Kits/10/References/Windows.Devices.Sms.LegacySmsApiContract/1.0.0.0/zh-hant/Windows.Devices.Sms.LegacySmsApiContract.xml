@@ -1,0 +1,665 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Sms.LegacySmsApiContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Sms.DeleteSmsMessageOperation">
+      <summary>啟用單一訊息的啟動、追蹤及結束非同步訊息刪除作業。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，DeleteSmsMessageOperation 可能會經過修改或無法使用。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessageOperation.Completed">
+      <summary>指定非同步 SMS 訊息刪除作業是否已完成。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>非同步動作之已完成事件的處理常式。</returns>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessageOperation.ErrorCode">
+      <summary>指定非同步 SMS 訊息刪除作業的錯誤碼。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>非同步作業的結果值。</returns>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessageOperation.Id">
+      <summary>指定非同步 SMS 訊息刪除作業的識別碼。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>唯一表示非同步 SMS 訊息刪除作業的整數。</returns>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessageOperation.Status">
+      <summary>指定非同步 SMS 訊息刪除作業的狀態。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>表示非同步 SMS 訊息刪除作業狀態的列舉值。</returns>
+    </member><member name="M:Windows.Devices.Sms.DeleteSmsMessageOperation.Cancel">
+      <summary>取消非同步的 SMS 訊息刪除作業。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+    </member><member name="M:Windows.Devices.Sms.DeleteSmsMessageOperation.Close">
+      <summary>關閉非同步的 SMS 訊息刪除作業。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+    </member><member name="M:Windows.Devices.Sms.DeleteSmsMessageOperation.GetResults">
+      <summary>擷取非同步 SMS 訊息刪除作業的結果。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+    </member><member name="T:Windows.Devices.Sms.DeleteSmsMessagesOperation">
+      <summary>啟用多個訊息的啟動、追蹤及結束非同步 SMS 訊息刪除作業。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，DeleteSmsMessagesOperation 可能會經過修改或無法使用。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessagesOperation.Completed">
+      <summary>指定非同步 SMS 訊息刪除作業是否已完成。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>非同步 SMS 訊息刪除作業的已完成事件處理常式。</returns>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessagesOperation.ErrorCode">
+      <summary>指定非同步 SMS 訊息刪除作業的錯誤碼。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>非同步 SMS 訊息刪除作業的結果值。</returns>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessagesOperation.Id">
+      <summary>指定非同步 SMS 訊息刪除作業的識別碼。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>唯一表示非同步 SMS 訊息刪除作業的整數。</returns>
+    </member><member name="P:Windows.Devices.Sms.DeleteSmsMessagesOperation.Status">
+      <summary>指定非同步 SMS 訊息刪除作業的狀態。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>表示非同步 SMS 訊息刪除作業狀態的列舉值。</returns>
+    </member><member name="M:Windows.Devices.Sms.DeleteSmsMessagesOperation.Cancel">
+      <summary>取消非同步的 SMS 訊息刪除作業。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+    </member><member name="M:Windows.Devices.Sms.DeleteSmsMessagesOperation.Close">
+      <summary>關閉非同步的 SMS 訊息刪除作業。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+    </member><member name="M:Windows.Devices.Sms.DeleteSmsMessagesOperation.GetResults">
+      <summary>擷取非同步訊息作業的結果。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+    </member><member name="T:Windows.Devices.Sms.GetSmsDeviceOperation">
+      <summary>非同步擷取 SmsDevice 物件。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，GetSmsDeviceOperation 可能會經過修改或無法使用。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.GetSmsDeviceOperation.Completed">
+      <summary>指定非同步 SmsDevice 物件擷取作業是否已完成。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>非同步動作之已完成事件的處理常式。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsDeviceOperation.ErrorCode">
+      <summary>指定非同步 SmsDevice 物件擷取作業的錯誤碼。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>非同步作業的結果值。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsDeviceOperation.Id">
+      <summary>指定非同步 SmsDevice 物件擷取作業的識別碼。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>唯一表示非同步 SmsDevice 物件擷取作業的整數。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsDeviceOperation.Status">
+      <summary>指定非同步 SmsDevice 物件擷取作業的狀態。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>表示非同步 SmsDevice 物件擷取作業狀態的列舉值。</returns>
+    </member><member name="M:Windows.Devices.Sms.GetSmsDeviceOperation.Cancel">
+      <summary>取消非同步 SmsDevice 物件擷取。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+    </member><member name="M:Windows.Devices.Sms.GetSmsDeviceOperation.Close">
+      <summary>關閉非同步的 SmsDevice 物件擷取作業。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+    </member><member name="M:Windows.Devices.Sms.GetSmsDeviceOperation.GetResults">
+      <summary>指定非同步 SmsDevice 物件擷取作業的結果。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>SmsDevice 物件的參考。</returns>
+    </member><member name="T:Windows.Devices.Sms.GetSmsMessageOperation">
+      <summary>支援從 SMS 訊息存放區擷取訊息。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，GetSmsMessageOperation 可能會經過修改或無法使用。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessageOperation.Completed">
+      <summary>非同步 SMS 訊息擷取作業的已完成事件處理常式。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>非同步 SMS 訊息擷取作業的已完成事件處理常式。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessageOperation.ErrorCode">
+      <summary>指定非同步 SMS 訊息擷取作業的錯誤碼。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>非同步 SMS 訊息擷取作業的結果值。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessageOperation.Id">
+      <summary>指定非同步 SMS 訊息擷取作業的識別碼。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>唯一表示非同步 SMS 訊息擷取作業的整數。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessageOperation.Status">
+      <summary>指定非同步 SMS 訊息擷取作業的狀態。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>表示非同步 SMS 訊息擷取作業狀態的列舉值。</returns>
+    </member><member name="M:Windows.Devices.Sms.GetSmsMessageOperation.Cancel">
+      <summary>取消非同步的 SMS 訊息擷取作業。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+    </member><member name="M:Windows.Devices.Sms.GetSmsMessageOperation.Close">
+      <summary>關閉非同步的 SMS 訊息擷取作業。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+    </member><member name="M:Windows.Devices.Sms.GetSmsMessageOperation.GetResults">
+      <summary>擷取非同步 SMS 訊息擷取作業的結果。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>存取所擷取之訊息的介面。</returns>
+    </member><member name="T:Windows.Devices.Sms.GetSmsMessagesOperation">
+      <summary>支援擷取訊息。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，GetSmsMessagesOperation 可能會經過修改或無法使用。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessagesOperation.Completed">
+      <summary>指定非同步訊息擷取作業是否已完成。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>指定非同步訊息作業是否已完成。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessagesOperation.ErrorCode">
+      <summary>指定非同步訊息作業的錯誤碼。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>非同步作業的結果值。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessagesOperation.Id">
+      <summary> 表示非同步訊息作業的識別碼。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>唯一表示非同步作業的整數。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessagesOperation.Progress">
+      <summary>指定非同步訊息作業的進度狀態。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>非同步作業的進度更新事件處理常式。</returns>
+    </member><member name="P:Windows.Devices.Sms.GetSmsMessagesOperation.Status">
+      <summary>指定非同步訊息作業的狀態。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>表示非同步作業狀態的列舉值。</returns>
+    </member><member name="M:Windows.Devices.Sms.GetSmsMessagesOperation.Cancel">
+      <summary>取消非同步作業。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+    </member><member name="M:Windows.Devices.Sms.GetSmsMessagesOperation.Close">
+      <summary>關閉非同步作業。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+    </member><member name="M:Windows.Devices.Sms.GetSmsMessagesOperation.GetResults">
+      <summary>擷取非同步訊息擷取作業的結果。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>已擷取之 SMS 訊息的參考。</returns>
+    </member><member name="T:Windows.Devices.Sms.ISmsBinaryMessage">
+      <summary>這個介面可讓您存取 SMS 訊息的原始二進位格式。 訊息會以業界標準通訊協定描述單位 (PDU) 格式儲存 (請參閱 SMS 規格 GSM 03.40)。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsBinaryMessage 可能會經過修改或無法使用。 請改用 SmsAppMessage。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.ISmsBinaryMessage.Format">
+      <summary>擷取此訊息的已偵測到的通訊協定描述單位 (PDU) 格式。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>描述 SMS 資料格式的列舉值。</returns>
+    </member><member name="M:Windows.Devices.Sms.ISmsBinaryMessage.GetData">
+      <summary>以二進位通訊協定描述單位 (PDU) 格式傳回訊息未經處理的緩衝區，做為位元組陣列。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsBinaryMessage 可能會經過修改或無法使用。 請改用 SmsAppMessage。</deprecated>
+      <returns>表示訊息資料的位元組陣列。 如果沒有任何訊息資料，則傳回的陣列是空的。</returns>
+    </member><member name="M:Windows.Devices.Sms.ISmsBinaryMessage.SetData(System.Byte[])">
+      <summary>指定 SMS 訊息的原始二進位裝載。 它應該依據通訊協定描述單位 (PDU) 標準來進行格式化。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsBinaryMessage 可能會經過修改或無法使用。 請改用 SmsAppMessage。</deprecated>
+      <param name="value">表示訊息資料的位元組陣列，依據通訊協定描述單位 (PDU) 標準格式化。</param>
+    </member><member name="T:Windows.Devices.Sms.ISmsDevice">
+      <summary>這個介面會控制行動寬頻 SMS 裝置。 它是裝置上的 SMS 服務的主要進入點。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsDevice 可能會經過修改或無法使用。 請改用 SmsDevice2。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.ISmsDevice.AccountPhoneNumber">
+      <summary>傳回與 SMS 裝置相關聯的電話號碼。 電話號碼可用來將傳入訊息與帳戶產生關聯，也有可能與外部儲存機制產生關聯 (例如帳戶收件匣)。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>帳戶電話號碼的字串表示。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsDevice.CellularClass">
+      <summary>傳回 SMS 裝置的行動電話類別。 這個類別可用來判斷哪些編碼方式適合，或是哪些裝置限制已生效。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>表示裝置之行動電話類別的列舉值。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsDevice.DeviceStatus">
+      <summary>傳回 SMS 裝置的狀態，指出裝置是否已經就緒。 如果裝置未備妥，它也會指出存在什麼類型的問題。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>表示 SMS 裝置參與行動電話網路傳輸作業之整備狀態的列舉值。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsDevice.MessageStore">
+      <summary>存取裝置上的訊息儲存區。 存放區會保留訊息，直到用戶端可以擷取訊息為止。 比方說，在某些裝置上，此儲存區可能會對應到 SMS 訊息的 SIM 儲存區。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>SmsMessageStore 物件的參考。</returns>
+    </member><member name="E:Windows.Devices.Sms.ISmsDevice.SmsDeviceStatusChanged">
+      <summary>設定 SMS 裝置的狀態變更時所要呼叫的事件處理常式。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+    </member><member name="E:Windows.Devices.Sms.ISmsDevice.SmsMessageReceived">
+      <summary>設定裝置接收到新的文字訊息時所要呼叫的事件處理常式。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+    </member><member name="M:Windows.Devices.Sms.ISmsDevice.CalculateLength(Windows.Devices.Sms.SmsTextMessage)">
+      <summary>估計指定之文字訊息的已傳輸訊息長度。 此估計值對於想要指示網路上將傳送多少訊息來夾帶完整訊息文字的用戶端將很有幫助。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsDevice 可能會經過修改或無法使用。 請改用 SmsDevice2。</deprecated>
+      <returns>已填入長度資訊之 SmsEncodedLength 結構的參考。</returns>
+      <param name="message">要測量之 SMS 文字訊息的參考。</param>
+    </member><member name="M:Windows.Devices.Sms.ISmsDevice.SendMessageAsync(Windows.Devices.Sms.ISmsMessage)">
+      <summary>使用 SMS 裝置，以非同步方式傳送訊息。 此方法為非同步，因為傳送作業可能不會瞬間發生。 立即傳回非同步作業物件。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsDevice 可能會經過修改或無法使用。 請改用 SmsDevice2。</deprecated>
+      <returns>支援非同步訊息傳送之 SendSmsMessageOperation 物件的參考。</returns>
+      <param name="message">SmsMessage 物件的參考。 訊息可以是文字或二進位格式。</param>
+    </member><member name="T:Windows.Devices.Sms.ISmsMessage">
+      <summary>這個介面是由所有支援的 SMS 訊息類型實作。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+    </member><member name="P:Windows.Devices.Sms.ISmsMessage.Id">
+      <summary>擷取訊息識別碼，稍後可以在呼叫的訊息存放區方法中指定此識別碼，以便取得或刪除該訊息。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>訊息的整數識別碼。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsMessage.MessageClass">
+      <summary>根據操作員的訊息網路的判定，傳回訊息類別。 兩個最常見的類別是 None (一般訊息) 或 Class0 (特殊操作員訊息，例如必須立即顯示給使用者的漫遊警告)。 使用者訊息的一般用戶端會忽略 Class0 訊息。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>SmsMessageClass 列舉中的值。</returns>
+    </member><member name="T:Windows.Devices.Sms.ISmsTextMessage">
+      <summary>這個介面會管理已解碼的 SMS 文字訊息。 它可讓您直接存取純文字訊息內文，以及主要的標頭屬性（例如時間戳記）。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsTextMessage 可能會經過修改或無法使用。 請改用 SmsTextMessage2。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.Body">
+      <summary>指定訊息的純文字本文。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>表示文字訊息本文的字串。 如果發生解碼問題，則可以透過萬用字元 (通常是問號 '?') 表示原始訊息中的某些字元。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.Encoding">
+      <summary>指定已設定為傳送此訊息時要使用的編碼類型。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>SmsEncoding 列舉中的值。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.From">
+      <summary>指定訊息寄件者的電話號碼。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>這個訊息寄件者之電話號碼的字串表示。 它應該是此裝置與其所註冊之網路所慣用的格式。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.PartCount">
+      <summary>當此訊息是多則訊息組成的多部分訊息時，擷取原始訊息中的訊息總數。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>不帶正負號的整數。 如果訊息是獨立的，則值為 1。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.PartNumber">
+      <summary>當此訊息是多則訊息組成的多部分訊息時，擷取組成訊息編號。 結合 PartReferenceId 和 PartCount 屬性，經由將組件聯結在一起，就可以用它來重建原始訊息。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>不帶正負號的整數。 它是以一起始。 它不會超過 PartCount + 1。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.PartReferenceId">
+      <summary>表示當訊息是屬於多則訊息組成的多部分訊息時可以使用的參考值。 如果這個訊息屬性於多部分訊息，則可以使用 PartNumber 值重新建構完整的原始訊息，而且該訊息的每個部分都會有相同的 PartReferenceId 值。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>取決於傳送網路的帶正負號整數。這個整數無法透過這個介面來操作。 如果網路對於多部分訊息的存留期有其本身的原則，這個參考號碼就可能不是無限期有效。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.Timestamp">
+      <summary>擷取訊息的時間戳記。 它是針對建構的訊息執行個體在本機上決定的，或從所接收訊息的服務中心時間戳記決定。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>DateTime 型別的值。</returns>
+    </member><member name="P:Windows.Devices.Sms.ISmsTextMessage.To">
+      <summary>指定此訊息的收件者電話號碼。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>電話號碼的字串表示，其格式化方式採用裝置及其註冊所在網路慣用的電話號碼格式。</returns>
+    </member><member name="M:Windows.Devices.Sms.ISmsTextMessage.ToBinaryMessages(Windows.Devices.Sms.SmsDataFormat)">
+      <summary>讀取指定格式的訊息，並將結果放在二進位訊息的新執行個體中。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsTextMessage 可能會經過修改或無法使用。 請改用 SmsTextMessage2。</deprecated>
+      <returns>保存這個方法呼叫結果的新二進位訊息。</returns>
+      <param name="format">SmsDataFormat 列舉中的值。</param>
+    </member><member name="T:Windows.Devices.Sms.SendSmsMessageOperation">
+      <summary>啟用訊息傳送。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SendSmsMessageOperation 可能會經過修改或無法使用。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.SendSmsMessageOperation.Completed">
+      <summary>非同步動作之已完成事件的處理常式。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>非同步動作之已完成事件的處理常式。</returns>
+    </member><member name="P:Windows.Devices.Sms.SendSmsMessageOperation.ErrorCode">
+      <summary>指定非同步訊息作業的錯誤碼。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>非同步作業的結果值。</returns>
+    </member><member name="P:Windows.Devices.Sms.SendSmsMessageOperation.Id">
+      <summary> 表示非同步訊息作業的識別碼。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>唯一表示非同步作業的整數。</returns>
+    </member><member name="P:Windows.Devices.Sms.SendSmsMessageOperation.Status">
+      <summary>指定非同步訊息作業的狀態。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>表示非同步作業狀態的列舉值。</returns>
+    </member><member name="M:Windows.Devices.Sms.SendSmsMessageOperation.Cancel">
+      <summary>取消非同步作業。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+    </member><member name="M:Windows.Devices.Sms.SendSmsMessageOperation.Close">
+      <summary>關閉非同步作業。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+    </member><member name="M:Windows.Devices.Sms.SendSmsMessageOperation.GetResults">
+      <summary>擷取非同步作業的結果。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+    </member><member name="T:Windows.Devices.Sms.SmsBinaryMessage">
+      <summary>代表原始 PDU 格式的 SMS 訊息。 資料格式會因為訊息格式 (由 Format 屬性的值指示) 是 GSM 或 CDMA 而不同。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsBinaryMessage 可能會經過修改或無法使用。 請改用 SmsAppMessage。</deprecated>
+    </member><member name="M:Windows.Devices.Sms.SmsBinaryMessage.#ctor">
+      <summary>建立 SmsBinaryMessage 類別的執行個體。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+    </member><member name="P:Windows.Devices.Sms.SmsBinaryMessage.Format">
+      <summary>擷取此訊息的已偵測到的通訊協定描述單位 (PDU) 格式。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>描述 SMS 資料格式的列舉值。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsBinaryMessage.Id">
+      <summary> 表示非同步訊息作業的識別碼。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>唯一表示非同步作業的整數。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsBinaryMessage.MessageClass">
+      <summary>根據操作員的訊息網路的判定，傳回訊息類別。 兩個最常見的類別是 None (一般訊息) 或 Class0 (特殊操作員訊息，例如必須立即顯示給使用者的漫遊警告)。 使用者訊息的一般用戶端會忽略 Class0 訊息。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>SmsMessageClass 列舉中的值。</returns>
+    </member><member name="M:Windows.Devices.Sms.SmsBinaryMessage.GetData">
+      <summary>以二進位通訊協定描述單位 (PDU) 格式傳回訊息未經處理的緩衝區，做為位元組陣列。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsBinaryMessage 可能會經過修改或無法使用。 請改用 SmsAppMessage。</deprecated>
+      <returns>表示訊息資料的位元組陣列。 如果沒有任何訊息資料，則傳回的陣列是空的。</returns>
+    </member><member name="M:Windows.Devices.Sms.SmsBinaryMessage.SetData(System.Byte[])">
+      <summary>指定 SMS 訊息的原始二進位裝載。 它應該依據通訊協定描述單位 (PDU) 標準來進行格式化。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsBinaryMessage 可能會經過修改或無法使用。 請改用 SmsAppMessage。</deprecated>
+      <param name="value">表示訊息資料的位元組陣列。 如果沒有任何訊息資料，則傳回的陣列是空的。</param>
+    </member><member name="T:Windows.Devices.Sms.SmsDevice">
+      <summary>支援行動寬頻 SMS 裝置的作業。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsDevice 可能會經過修改或無法使用。 請改用 SmsDevice2。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.SmsDevice.AccountPhoneNumber">
+      <summary>傳回與 SMS 裝置相關聯的電話號碼。 電話號碼可用來將傳入訊息與帳戶產生關聯，也有可能與外部儲存機制產生關聯 (例如帳戶收件匣)。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>帳戶電話號碼的字串表示。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsDevice.CellularClass">
+      <summary>傳回 SMS 裝置的行動電話類別。 這個類別可用來判斷哪些編碼方式適合，或是哪些裝置限制已生效。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>表示裝置之行動電話類別的列舉值。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsDevice.DeviceStatus">
+      <summary>傳回 SMS 裝置的狀態，指出裝置是否已經就緒。 如果裝置未備妥，它也會指出存在什麼類型的問題。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>表示 SMS 裝置參與行動電話網路傳輸作業之整備狀態的列舉值。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsDevice.MessageStore">
+      <summary>存取裝置上的訊息儲存區。 存放區會保留訊息，直到用戶端可以擷取訊息為止。 比方說，在某些裝置上，此儲存區可能會對應到 SMS 訊息的 SIM 儲存區。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>SmsDeviceMessageStore 物件的參考。</returns>
+    </member><member name="E:Windows.Devices.Sms.SmsDevice.SmsDeviceStatusChanged">
+      <summary>設定 SMS 裝置的狀態變更時所要呼叫的事件處理常式。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+    </member><member name="E:Windows.Devices.Sms.SmsDevice.SmsMessageReceived">
+      <summary>設定裝置接收到新的文字訊息時所要呼叫的事件處理常式。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+    </member><member name="M:Windows.Devices.Sms.SmsDevice.CalculateLength(Windows.Devices.Sms.SmsTextMessage)">
+      <summary>估計指定之文字訊息的已傳輸訊息長度。 此估計值對於想要指示網路上將傳送多少訊息來夾帶完整訊息文字的用戶端將很有幫助。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsDevice 可能會經過修改或無法使用。 請改用 SmsDevice2。</deprecated>
+      <returns>已填入長度資訊之 SmsEncodedLength 結構的參考。</returns>
+      <param name="message">要測量之 SMS 文字訊息的參考。</param>
+    </member><member name="M:Windows.Devices.Sms.SmsDevice.FromIdAsync(System.String)">
+      <summary>針對收到 SMS 訊息的裝置建立 SmsDevice 的執行個體。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，ISmsDeviceStatics 可能會經過修改或無法使用。</deprecated>
+      <returns>SMS 裝置作業物件。</returns>
+      <param name="deviceId">接收到 SMS 訊息之 SMS 裝置 DeviceInformation 識別碼的字串表示。</param>
+    </member><member name="M:Windows.Devices.Sms.SmsDevice.FromNetworkAccountIdAsync(System.String)">
+      <summary>針對指定的行動寬頻網路帳戶識別碼，建立 SmsDevice 的執行個體。</summary>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，ISmsDeviceStatics2 可能會經過修改或無法使用。</deprecated>
+      <returns>當此方法完成時，它會為指定的行動寬頻網路帳戶識別碼傳回 SmsDevice。</returns>
+      <param name="networkAccountId">用來選取用於此 SMS 裝置之對應行動寬頻裝置的行動寬頻網路帳戶識別碼。</param>
+    </member><member name="M:Windows.Devices.Sms.SmsDevice.GetDefaultAsync">
+      <summary>建立與預設 SMS 裝置關聯之 SmsDevice 物件的執行個體。 由於裝置可能忙碌中，以非同步方式執行作業。 非同步作業物件會立即傳回。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，ISmsDeviceStatics 可能會經過修改或無法使用。</deprecated>
+      <returns>IAsyncOperation(SmsDevice) 物件的參考，這個物件支援非同步 SmsDevice 物件擷取。</returns>
+    </member><member name="M:Windows.Devices.Sms.SmsDevice.GetDeviceSelector">
+      <summary>擷取可用於列舉 SMS 裝置的類別選取字串。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，ISmsDeviceStatics 可能會經過修改或無法使用。</deprecated>
+      <returns>用來識別 SMS 裝置之進階查詢語法 (AQS) 字串的參考。</returns>
+    </member><member name="M:Windows.Devices.Sms.SmsDevice.SendMessageAsync(Windows.Devices.Sms.ISmsMessage)">
+      <summary>使用 SMS 裝置，以非同步方式傳送訊息。 此方法為非同步，因為傳送作業可能不會瞬間發生。 立即傳回訊息作業物件。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsDevice 可能會經過修改或無法使用。 請改用 SmsDevice2。</deprecated>
+      <returns>訊息作業物件。</returns>
+      <param name="message">ISmsMessage 物件的參考。 訊息可以是文字或二進位格式。</param>
+    </member><member name="T:Windows.Devices.Sms.SmsDeviceMessageStore">
+      <summary>提供存取權，以存取儲存在 SMS 裝置的訊息和訊息存放區的相關資訊。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsDeviceMessageStore 可能會經過修改或無法使用。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.SmsDeviceMessageStore.MaxMessages">
+      <summary>指出可以儲存在裝置存放區中的訊息最大數目。 用戶端可以使用這個值來決定如何在裝置存放區中維持足夠的空間，以便接收來自網路的新訊息。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>表示裝置存放區之訊息最大數目的整數值。</returns>
+    </member><member name="M:Windows.Devices.Sms.SmsDeviceMessageStore.DeleteMessageAsync(System.UInt32)">
+      <summary>刪除具有指定識別碼的訊息。 由於裝置可能忙碌中，以非同步方式執行作業。 非同步作業物件會立即傳回。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsDeviceMessageStore 可能會經過修改或無法使用。</deprecated>
+      <returns>用來啟動和追蹤非同步作業的新訊息作業物件。</returns>
+      <param name="messageId">要刪除之訊息的整數識別碼，先前已讀取自從裝置訊息存放區取得的 SmsTextMessage 物件。</param>
+    </member><member name="M:Windows.Devices.Sms.SmsDeviceMessageStore.DeleteMessagesAsync(Windows.Devices.Sms.SmsMessageFilter)">
+      <summary>刪除套用篩選條件的訊息。 此篩選可用來刪除所有訊息，或是只刪除已讀取、未讀取、已傳送或草稿狀態的訊息。 由於作業可能不是瞬間，它是以非同步方式執行。 非同步作業物件會立即傳回。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsDeviceMessageStore 可能會經過修改或無法使用。</deprecated>
+      <returns>用來啟動和追蹤非同步作業的新訊息作業物件。</returns>
+      <param name="messageFilter">指定要刪除之訊息的搜尋篩選。</param>
+    </member><member name="M:Windows.Devices.Sms.SmsDeviceMessageStore.GetMessageAsync(System.UInt32)">
+      <summary>擷取具有指定識別碼的訊息。 由於裝置可能忙碌中，所以此方法會以非同步方式執行。 非同步作業物件會立即傳回。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsDeviceMessageStore 可能會經過修改或無法使用。</deprecated>
+      <returns>傳回用來啟動和追蹤非同步作業的新訊息作業物件。</returns>
+      <param name="messageId">要擷取之訊息的識別碼。</param>
+    </member><member name="M:Windows.Devices.Sms.SmsDeviceMessageStore.GetMessagesAsync(Windows.Devices.Sms.SmsMessageFilter)">
+      <summary>擷取符合篩選器所指定條件的訊息清單。 訊息可以篩選為已讀取、未讀取、已傳送或草稿狀態。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsDeviceMessageStore 可能會經過修改或無法使用。</deprecated>
+      <returns>傳回用來啟動和追蹤非同步作業的新訊息作業物件。</returns>
+      <param name="messageFilter">要擷取之訊息的識別碼。</param>
+    </member><member name="T:Windows.Devices.Sms.SmsDeviceStatusChangedEventHandler">
+      <summary>當 SMS 裝置的狀態變更時，系統就會呼叫這個處理常式。 如果呼叫端想要在裝置上發生重大狀態變更時收到通知，應該實作它。 例如，呼叫端可能會想知道裝置何時準備就緒可以傳送和接收訊息。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsDeviceStatusChangedEventHandler 可能會經過修改或無法使用。</deprecated>
+      <param name="sender">傳送事件之裝置的參考。</param>
+    </member><member name="T:Windows.Devices.Sms.SmsMessageFilter">
+      <summary>這個列舉型別會指定要針對裝置訊息存放區中的哪些訊息執行作業。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsMessageFilter 可能會經過修改或無法使用。</deprecated>
+    </member><member name="F:Windows.Devices.Sms.SmsMessageFilter.All">
+      <summary>裝置訊息儲存區中的所有訊息。</summary>
+    </member><member name="F:Windows.Devices.Sms.SmsMessageFilter.Draft">
+      <summary>所有未傳送而已儲存的訊息。</summary>
+    </member><member name="F:Windows.Devices.Sms.SmsMessageFilter.Read">
+      <summary>所有已讀取的收到訊息。</summary>
+    </member><member name="F:Windows.Devices.Sms.SmsMessageFilter.Sent">
+      <summary>所有已傳送和儲存的訊息。</summary>
+    </member><member name="F:Windows.Devices.Sms.SmsMessageFilter.Unread">
+      <summary>所有未讀取的收到訊息。</summary>
+    </member><member name="T:Windows.Devices.Sms.SmsMessageReceivedEventArgs">
+      <summary>提供 ISmsBinaryMessage 事件處理常式的資料。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsMessageReceivedEventArgs 可能會經過修改或無法使用。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.SmsMessageReceivedEventArgs.BinaryMessage">
+      <summary>擷取含有訊息的二進位表示法的物件。 只有想要直接傳遞二進位訊息或是想要自行解譯二進位訊息內容的用戶端才需要此項目。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>SmsBinaryMessage 物件的參考。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsMessageReceivedEventArgs.TextMessage">
+      <summary>擷取含有訊息的文字表示法的物件。 如果訊息沒有成功解碼，則傳回錯誤。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>新的 SmsTextMessage 物件。</returns>
+    </member><member name="T:Windows.Devices.Sms.SmsMessageReceivedEventHandler">
+      <summary>收到新的二進位訊息時，系統就會呼叫這個事件處理常式。 如果呼叫端想要處理來自指定 SMS 裝置的新二進位訊息，應該實作它。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsMessageReceivedEventHandler 可能會經過修改或無法使用。</deprecated>
+      <param name="sender">傳送訊息之 SMS 裝置物件的參考。</param>
+      <param name="e">保留訊息之二進位及文字表示的物件。</param>
+    </member><member name="T:Windows.Devices.Sms.SmsReceivedEventDetails">
+      <summary>將 SMS 訊息事件的詳細資料呈現給背景工作項目，此項目會在您的應用程式暫停時處理訊息。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsReceivedEventDetails 可能會經過修改或無法使用。 請改用 SmsMessageReceivedTriggerDetails。</deprecated>
+    </member><member name="P:Windows.Devices.Sms.SmsReceivedEventDetails.BinaryMessage">
+      <summary>取得背景工作所收到之 SMS 訊息的二進位訊息物件。</summary>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>背景工作所收到之 SMS 訊息的二進位訊息物件。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsReceivedEventDetails.DeviceId">
+      <summary>傳回接收 SMS 訊息的網路介面的 DeviceInformation 識別碼。 這個識別碼可以傳遞至 SmsDevice.FromIdAsync 以啟動裝置，並擷取其他訊息詳細資料。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>包含 SMS 網路介面 (裝置) 之 DeviceInformation 識別碼的字串。 這個值通常是用來擷取詳細資料，例如訊息的寄件者及本文。 例如，您可以使用識別碼顯示快顯，告知使用者來自特定人員的新訊息已抵達。 DeviceId 和 MessageIndex 的組合已足夠從 SMS 裝置擷取新的訊息。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsReceivedEventDetails.MessageClass">
+      <summary>取得背景工作所收到之 SMS 訊息的訊息類別。</summary>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>背景工作所收到之 SMS 訊息的訊息類別。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsReceivedEventDetails.MessageIndex">
+      <summary>傳回引發事件之新訊息的索引。 您可以將此項目傳遞給 SmsDevice.GetMessageAsync 以擷取新的訊息本身。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>新訊息的整數索引。</returns>
+    </member><member name="T:Windows.Devices.Sms.SmsTextMessage">
+      <summary>會管理解碼的 SMS 文字訊息，可讓您直接存取純文字訊息內文，以及主要的標頭屬性（例如時間戳記）。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsTextMessage 可能會經過修改或無法使用。 請改用 SmsTextMessage2。</deprecated>
+    </member><member name="M:Windows.Devices.Sms.SmsTextMessage.#ctor">
+      <summary>建立 SmsTextMessage 類別的執行個體。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.Body">
+      <summary>指定訊息的純文字本文。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>表示文字訊息本文的字串。 如果發生解碼問題，則可以透過萬用字元 (通常是問號 '?') 表示原始訊息中的某些字元。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.Encoding">
+      <summary>指定已設定為傳送此訊息時要使用的編碼類型。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>SmsEncoding 列舉中的值。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.From">
+      <summary>指定訊息寄件者的電話號碼。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>這個訊息寄件者之電話號碼的字串表示。 它應該是此裝置與其所註冊之網路所慣用的格式。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.Id">
+      <summary>表示 SMS 文字訊息的識別碼。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>訊息的整數識別碼。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.MessageClass">
+      <summary>指定訊息的訊息類別。 這個訊息類別通常來自網路，而非行動裝置。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>SmsMessageClass 列舉中的值。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.PartCount">
+      <summary>當此訊息是多則訊息組成的多部分訊息時，表示原始訊息中的訊息總數。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>不帶正負號的整數。 如果訊息是獨立的，則值為 1。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.PartNumber">
+      <summary>當此訊息是多則訊息組成的多部分訊息時，表示組成訊息編號。 結合 PartReferenceId 和 PartCount 屬性，經由將組件聯結在一起，就可以用它來重建原始訊息。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>不帶正負號的整數。 它是以一起始。 它不會超過 PartCount + 1。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.PartReferenceId">
+      <summary>表示當訊息是屬於多則訊息組成的多部分訊息時可以使用的參考值。 如果這個訊息屬性於多部分訊息，則可以使用 PartNumber 值重新建構完整的原始訊息，而且該訊息的每個部分都會有相同的 PartReferenceId 值。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>取決於傳送網路的帶正負號整數。這個整數無法透過這個介面來操作。 如果網路對於多部分訊息的存留期有其本身的原則，這個參考號碼就可能不是無限期有效。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.Timestamp">
+      <summary>表示訊息的時間戳記。 它是針對建構的訊息執行個體在本機上決定的，或從所接收訊息的服務中心時間戳記決定。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>DateTime 型別的值。</returns>
+    </member><member name="P:Windows.Devices.Sms.SmsTextMessage.To">
+      <summary>表示此訊息的收件者電話號碼。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <returns>電話號碼的字串表示，其格式化方式採用裝置及其註冊所在網路慣用的電話號碼格式。</returns>
+    </member><member name="M:Windows.Devices.Sms.SmsTextMessage.FromBinaryData(Windows.Devices.Sms.SmsDataFormat,System.Byte[])">
+      <summary>將二進位訊息解碼，並將結果放在文字訊息的新執行個體。 這個方法會將二進位訊息表示成位元組緩衝區的參考，以及緩衝區編碼方式的選取項目。 因此，您可以在訊息並非直接來自裝置時使用它，或將它當做 SmsBinaryMessage 類別的執行個體使用。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，ISmsTextMessageStatics 可能會經過修改或無法使用。</deprecated>
+      <returns>如果解碼成功，則為新的 SmsTextMessage 物件。</returns>
+      <param name="format">識別特定通訊協定描述單位 (PDU) 緩衝區格式的 SmsDataFormat 列舉值。</param>
+      <param name="value">包含要解碼之二進位資料的位元組陣列。</param>
+    </member><member name="M:Windows.Devices.Sms.SmsTextMessage.FromBinaryMessage(Windows.Devices.Sms.SmsBinaryMessage)">
+      <summary>讀取二進位訊息並將其解碼。 結果會放在文字訊息的新執行個體中。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，ISmsTextMessageStatics 可能會經過修改或無法使用。</deprecated>
+      <returns>新的 SmsTextMessage 物件。</returns>
+      <param name="binaryMessage">要解碼的二進位訊息執行個體。</param>
+    </member><member name="M:Windows.Devices.Sms.SmsTextMessage.ToBinaryMessages(Windows.Devices.Sms.SmsDataFormat)">
+      <summary>讀取指定格式的訊息，並將結果放在二進位訊息的新執行個體中。</summary>
+      <capability type="sms">存取 SMS 服務時所需。</capability>
+      <capability type="cellularMessaging">應用程式利用 SMS 和 RCS 時所需。</capability>
+      <deprecated type="deprecate">在 Windows 10 之後的版本中，SmsTextMessage 可能會經過修改或無法使用。 請改用 SmsTextMessage2。</deprecated>
+      <returns>保存這個方法呼叫結果的新二進位訊息。</returns>
+      <param name="format">SmsDataFormat 列舉中的值。</param>
+    </member></members>
+</doc>

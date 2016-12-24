@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Calls.LockScreenCallContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral">
+      <summary>El objeto LockScreenCallEndCallDeferral emite señales cuando la aplicación ya no necesita aplazar su propia eliminación de la pantalla de bloqueo.</summary>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral.Complete">
+      <summary>Completa el aplazamiento de eliminación de la aplicación de la pantalla de bloqueo, lo que hace que la aplicación se quite de la pantalla de bloqueo si no se ha quitado ya por otros medios.</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs">
+      <summary>Controla la eliminación de una aplicación de la pantalla de bloqueo.</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs.Deadline">
+      <summary>Obtiene la fecha límite en la que la aplicación debe completar el aplazamiento.</summary>
+      <returns>La fecha límite en la que la aplicación debe completar el aplazamiento.</returns>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs.GetDeferral">
+      <summary>Solicita aplazar el comportamiento predeterminado de la eliminación de la aplicación de la pantalla de bloqueo.</summary>
+      <returns>Cuando este método se completa, devuelve un objeto LockScreenCallEndCallDeferral que indica el momento en que la aplicación ya no necesita aplazar su eliminación de la pantalla de bloqueo.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.LockScreenCallUI">
+      <summary>Controla la comunicación con la pantalla de bloqueo.</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.LockScreenCallUI.CallTitle">
+      <summary>Obtiene y establece una breve descripción de la naturaleza de la llamada.</summary>
+      <returns>Una breve descripción de la naturaleza de la llamada, por ejemplo, “videollamada con Jane Doe”.</returns>
+    </member><member name="E:Windows.ApplicationModel.Calls.LockScreenCallUI.Closed">
+      <summary>Se produce cuando se completa la interacción de la pantalla de bloqueo.</summary>
+    </member><member name="E:Windows.ApplicationModel.Calls.LockScreenCallUI.EndRequested">
+      <summary>Se produce cuando la pantalla de bloqueo desea finalizar la llamada.</summary>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallUI.Dismiss">
+      <summary>Quita la aplicación de la interfaz de usuario de la pantalla de bloqueo.</summary>
+    </member></members>
+</doc>

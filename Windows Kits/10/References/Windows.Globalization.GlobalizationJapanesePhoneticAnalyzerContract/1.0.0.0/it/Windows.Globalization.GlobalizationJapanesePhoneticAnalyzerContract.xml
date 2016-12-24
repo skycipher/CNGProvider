@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Globalization.GlobalizationJapanesePhoneticAnalyzerContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Globalization.JapanesePhoneme">
+      <summary>Rappresenta una singola parola in giapponese (lettura) che è stata estratta da una stringa in giapponese da JapanesePhoneticAnalyzer.</summary>
+    </member><member name="P:Windows.Globalization.JapanesePhoneme.DisplayText">
+      <summary>Ottiene il testo da visualizzare per questa parola giapponese.</summary>
+      <returns>Testo visualizzato di questa parola giapponese. È una sottostringa della stringa in giapponese originariamente analizzata da JapanesePhoneticAnalyzer.</returns>
+    </member><member name="P:Windows.Globalization.JapanesePhoneme.IsPhraseStart">
+      <summary>Ottiene un valore booleano che indica se la parola giapponese è l'inizio di una frase.</summary>
+      <returns>True se questa parola giapponese è l'inizio di una frase; in caso contrario, false.</returns>
+    </member><member name="P:Windows.Globalization.JapanesePhoneme.YomiText">
+      <summary>Ottiene la lettura (la pronuncia di DisplayText) per questa parola giapponese.</summary>
+      <returns>La lettura (la pronuncia di DisplayText, rappresentata da una sequenza di caratteri Hiragana).</returns>
+    </member><member name="T:Windows.Globalization.JapanesePhoneticAnalyzer">
+      <summary>Legge una stringa in giapponese che è una combinazione di caratteri Kanji e Hiragana e restituisce una raccolta di letture appropriate dalla stringa con interruzioni di parola.</summary>
+    </member><member name="M:Windows.Globalization.JapanesePhoneticAnalyzer.GetWords(System.String)">
+      <summary>Legge una stringa in giapponese che è una combinazione di caratteri Kanji e Hiragana e restituisce una raccolta di letture appropriate dalla stringa con interruzioni di parola.</summary>
+      <returns>Una raccolta di oggetti JapanesePhoneme che rappresentano le letture appropriate dalla stringa con interruzioni di parola.</returns>
+      <param name="input">Una stringa in giapponese che è una combinazione di caratteri Kanji e di caratteri Hiragana.</param>
+    </member><member name="M:Windows.Globalization.JapanesePhoneticAnalyzer.GetWords(System.String,System.Boolean)">
+      <summary>Legge una stringa in giapponese che è una combinazione di caratteri Kanji e Hiragana e restituisce una raccolta di letture appropriate dalla stringa con interruzioni di parola. Facoltativamente utilizza la strategia Mono Ruby della suddivisione di parole multi-Kanji in più parole Kanji.</summary>
+      <returns>Una raccolta di oggetti JapanesePhoneme che rappresentano le letture appropriate dalla stringa con interruzioni di parola.</returns>
+      <param name="input">Una stringa in giapponese che è una combinazione di caratteri Kanji e di caratteri Hiragana.</param>
+      <param name="monoRuby">Specifica l'utilizzo della strategia di suddivisione delle parole Mono Ruby. Se true, viene utilizzata la strategia di suddivisione delle parole Mono Ruby. Mono Ruby tenta in modo più aggressivo di dividere le parole multi-Kanji in più parole Kanji. Se false, Mono Ruby non viene utilizzato.</param>
+    </member></members>
+</doc>

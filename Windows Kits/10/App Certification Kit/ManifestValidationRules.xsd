@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="ST_Operation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CHECK_FOR_EXISTENCE" />
+      <xs:enumeration value="COMPARISON" />
+      <xs:enumeration value="SEARCH" />
+      <xs:enumeration value="SEARCH_MULTIITEMS" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST_Logic">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AND" />
+      <xs:enumeration value="OR" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST_ExpectedResult">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PRESENT" />
+      <xs:enumeration value="NOT_PRESENT" />
+      <xs:enumeration value="EQUAL" />
+      <xs:enumeration value="NOT_EQUAL" />
+      <xs:enumeration value="SMALLER" />
+      <xs:enumeration value="SMALLER_OR_EQUAL" />
+      <xs:enumeration value="LARGER" />
+      <xs:enumeration value="LARGER_OR_EQUAL" />
+      <xs:enumeration value="FOUND" />
+      <xs:enumeration value="NOT_FOUND" />
+      <xs:enumeration value="ALL_FOUND" />
+      <xs:enumeration value="ALL_NOT_FOUND" />
+      <xs:enumeration value="ONE_OR_MORE_FOUND" />
+      <xs:enumeration value="ONE_OR_MORE_NOT_FOUND" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST_CompareType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="STRING" />
+      <xs:enumeration value="NUMBER" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RULES">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="RULE" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="GROUP" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="CONSTANT_TABLE" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RULE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="DETAIL" minOccurs="1" maxOccurs="unbounded" />
+        <xs:element ref="MESSAGE_IF_FAIL" minOccurs="0" maxOccurs="1" />
+      </xs:sequence>
+      <xs:attribute name="NAME" type="xs:string" use="required" />
+      <xs:attribute name="OPERATION" type="ST_Operation" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GROUP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="RULE" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="GROUP" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="MESSAGE_IF_FAIL" minOccurs="0" maxOccurs="1" />
+      </xs:sequence>
+      <xs:attribute name="NAME" type="xs:string" use="required" />
+      <xs:attribute name="LOGIC" type="ST_Logic" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DETAIL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="XPATH_QUERY" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="COMPARE_SOURCE" minOccurs="0" maxOccurs="1" />
+        <xs:element ref="COMPARE_TARGET" minOccurs="0" maxOccurs="1" />
+        <xs:element ref="COMPARE_TYPE" minOccurs="0" maxOccurs="1" />
+        <xs:element ref="SEARCH_ITEM" minOccurs="0" maxOccurs="1" />
+        <xs:element ref="SEARCH_MULTIITEMS" minOccurs="0" maxOccurs="1" />
+        <xs:element ref="SEARCH_FROM" minOccurs="0" maxOccurs="1" />
+        <xs:element ref="MESSAGE_IF_FAIL" minOccurs="0" maxOccurs="1" />
+      </xs:sequence>
+      <xs:attribute name="EXPECTED_RESULT" type="ST_ExpectedResult" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XPATH_QUERY">
+    <xs:complexType>
+      <xs:attribute name="PATH" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="COMPARE_SOURCE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="XPATH_QUERY" minOccurs="0" maxOccurs="1" />
+        <xs:element ref="COUNT" minOccurs="0" maxOccurs="1" />
+        <xs:element ref="STRING" minOccurs="0" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="COMPARE_TARGET">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="XPATH_QUERY" minOccurs="0" maxOccurs="1" />
+        <xs:element ref="COUNT" minOccurs="0" maxOccurs="1" />
+        <xs:element ref="STRING" minOccurs="0" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="COMPARE_TYPE">
+    <xs:complexType>
+      <xs:attribute name="VALUE" type="ST_CompareType" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SEARCH_ITEM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="XPATH_QUERY" minOccurs="0" maxOccurs="1" />
+        <xs:element ref="STRING" minOccurs="0" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SEARCH_MULTIITEMS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="XPATH_QUERY" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="STRING" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SEARCH_FROM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="XPATH_QUERY" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="STRING" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="COUNT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="XPATH_QUERY" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="STRING">
+    <xs:complexType>
+      <xs:attribute name="VALUE" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MESSAGE_IF_FAIL">
+    <xs:complexType>
+      <xs:attribute name="ID" type="xs:string" use="required" />
+      <xs:attribute name="PARAM" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CONSTANT_TABLE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="CONSTANT" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CONSTANT">
+    <xs:complexType>
+      <xs:attribute name="NAME" type="xs:string" use="required" />
+      <xs:attribute name="VALUE" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

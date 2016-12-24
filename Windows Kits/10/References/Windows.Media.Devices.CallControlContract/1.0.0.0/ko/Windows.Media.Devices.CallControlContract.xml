@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.Devices.CallControlContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Media.Devices.CallControl">
+      <summary>전화 관련 장치에서 통화를 처리하기 위한 속성, 명령 및 이벤트를 나타냅니다.</summary>
+    </member><member name="P:Windows.Media.Devices.CallControl.HasRinger">
+      <summary>전화 통신 장치에 기본 제공 신호음 장치가 있는지 여부를 나타냅니다.</summary>
+      <returns>전화 통신 장치에 벨소리가 있을 경우 True이고 그렇지 않으면 False인 부울 값입니다.</returns>
+    </member><member name="E:Windows.Media.Devices.CallControl.AnswerRequested">
+      <summary>장치가 통화에 대한 응답 요청을 받으면 발생합니다.</summary>
+    </member><member name="E:Windows.Media.Devices.CallControl.AudioTransferRequested">
+      <summary>장치가 오디오 전송 요청을 받으면 발생합니다.</summary>
+    </member><member name="E:Windows.Media.Devices.CallControl.DialRequested">
+      <summary>장치에서 번호로 전화를 걸면 발생합니다.</summary>
+    </member><member name="E:Windows.Media.Devices.CallControl.HangUpRequested">
+      <summary>장치가 통화에 대한 끊기 요청을 받으면 발생합니다.</summary>
+    </member><member name="E:Windows.Media.Devices.CallControl.KeypadPressed">
+      <summary>장치에서 키패드 단추를 누르면 발생합니다.</summary>
+    </member><member name="E:Windows.Media.Devices.CallControl.RedialRequested">
+      <summary>장치가 다시 걸기 요청을 받으면 발생합니다.</summary>
+    </member><member name="M:Windows.Media.Devices.CallControl.EndCall(System.UInt64)">
+      <summary>지정된 호출을 종료합니다.</summary>
+      <param name="callToken">지정된 호출의 고유 식별자입니다.</param>
+    </member><member name="M:Windows.Media.Devices.CallControl.FromId(System.String)">
+      <summary>전달되는 DeviceInformation ID에 지정된 오디오 통신 장치를 나타내는 CallControl 클래스를 반환합니다.</summary>
+      <returns>지정된 오디오 통신 장치를 나타내는 클래스입니다.</returns>
+      <param name="deviceId">지정한 오디오 통신 장치의 DeviceInformation ID입니다.</param>
+    </member><member name="M:Windows.Media.Devices.CallControl.GetDefault">
+      <summary>기본 오디오 통신 장치를 나타내는 CallControl 클래스를 반환합니다.</summary>
+      <returns>기본 오디오 통신 장치를 나타내는 클래스입니다.</returns>
+    </member><member name="M:Windows.Media.Devices.CallControl.IndicateActiveCall(System.UInt64)">
+      <summary>지정된 호출이 현재 활성화되었음을 나타냅니다.</summary>
+      <param name="callToken">지정된 호출의 고유 식별자입니다.</param>
+    </member><member name="M:Windows.Media.Devices.CallControl.IndicateNewIncomingCall(System.Boolean,System.String)">
+      <summary>들어오는 호출이 있음을 장치에 알립니다.</summary>
+      <returns>이 호출을 고유하게 식별하는 호출 토큰입니다.</returns>
+      <param name="enableRinger">장치에서 기본 제공 벨소리를 활성화해야 하는지 여부를 지정합니다.</param>
+      <param name="callerId">들어오는 호출자 ID를 지정하는 숫자 문자열입니다. 이 매개 변수는 null일 수 있으며 여러 VoIP 호출을 위한 경우가 많습니다.</param>
+    </member><member name="M:Windows.Media.Devices.CallControl.IndicateNewOutgoingCall">
+      <summary>나가는 호출을 나타내기 위한 장치 표시기를 업데이트합니다.</summary>
+      <returns>이 호출을 고유하게 식별하는 호출 토큰입니다.</returns>
+    </member><member name="T:Windows.Media.Devices.CallControlEventHandler">
+      <summary>AnswerRequested 및 AudioTransferRequested 이벤트를 처리합니다.</summary>
+      <param name="sender">이벤트를 발생시킨 CallControl 개체입니다.</param>
+    </member><member name="T:Windows.Media.Devices.DialRequestedEventArgs">
+      <summary>DialRequested 이벤트에 대한 정보를 포함합니다.</summary>
+    </member><member name="P:Windows.Media.Devices.DialRequestedEventArgs.Contact">
+      <summary>전화를 건 연락처를 반환합니다.</summary>
+      <returns>연락처입니다.</returns>
+    </member><member name="M:Windows.Media.Devices.DialRequestedEventArgs.Handled">
+      <summary>DialRequested 이벤트가 처리되었음을 나타냅니다.</summary>
+    </member><member name="T:Windows.Media.Devices.DialRequestedEventHandler">
+      <summary>DialRequested 이벤트를 처리합니다.</summary>
+      <param name="sender">이벤트를 발생시킨 CallControl 개체입니다.</param>
+      <param name="e">이벤트에 대한 정보를 포함하는 클래스입니다.</param>
+    </member><member name="T:Windows.Media.Devices.KeypadPressedEventArgs">
+      <summary>KeypadPressed 이벤트에 대한 정보를 포함합니다.</summary>
+    </member><member name="P:Windows.Media.Devices.KeypadPressedEventArgs.TelephonyKey">
+      <summary>장치에서 눌러진 키패드 단추의 값을 반환합니다.</summary>
+      <returns>키입니다. TelephonyKey 열거형의 값 중 하나입니다.</returns>
+    </member><member name="T:Windows.Media.Devices.KeypadPressedEventHandler">
+      <summary>KeypadPressed 이벤트를 처리합니다.</summary>
+      <param name="sender">이벤트를 발생시킨 CallControl 개체입니다.</param>
+      <param name="e">이벤트에 대한 정보를 포함하는 클래스입니다.</param>
+    </member><member name="T:Windows.Media.Devices.RedialRequestedEventArgs">
+      <summary>RedialRequested 이벤트에 대한 정보를 포함합니다.</summary>
+    </member><member name="M:Windows.Media.Devices.RedialRequestedEventArgs.Handled">
+      <summary>RedialRequested 이벤트가 처리되었음을 나타냅니다.</summary>
+    </member><member name="T:Windows.Media.Devices.RedialRequestedEventHandler">
+      <summary>RedialRequested 이벤트를 처리합니다.</summary>
+      <param name="sender">이벤트를 발생시킨 CallControl 개체입니다.</param>
+      <param name="e">이벤트에 대한 정보를 포함하는 클래스입니다.</param>
+    </member><member name="T:Windows.Media.Devices.TelephonyKey">
+      <summary>전화 통신 장치에서 눌려진 키패드 단추를 나타냅니다.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.A">
+      <summary>키패드 단추 A입니다.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.B">
+      <summary>키패드 단추 B입니다.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.C">
+      <summary>키패드 단추 C입니다.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D">
+      <summary>키패드 단추 D입니다.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D0">
+      <summary>0 키패드 단추입니다.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D1">
+      <summary>1 키패드 단추입니다.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D2">
+      <summary>2 키패드 단추입니다.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D3">
+      <summary>3 키패드 단추입니다.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D4">
+      <summary>4 키패드 단추입니다.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D5">
+      <summary>5 키패드 단추입니다.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D6">
+      <summary>6 키패드 단추입니다.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D7">
+      <summary>7 키패드 단추입니다.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D8">
+      <summary>8 키패드 단추입니다.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.D9">
+      <summary>9 키패드 단추입니다.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.Pound">
+      <summary># 키패드 단추입니다.</summary>
+    </member><member name="F:Windows.Media.Devices.TelephonyKey.Star">
+      <summary>* 키패드 단추입니다.</summary>
+    </member></members>
+</doc>

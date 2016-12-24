@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Activation.ContactActivatedEventsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs">
+      <summary>當啟動應用程式撥打電話給連絡人時，可提供資料。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.Contact">
+      <summary>取得通話的聯絡人。</summary>
+      <returns>呼叫的連絡人。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.Kind">
+      <summary>取得啟用類型。</summary>
+      <returns>ActivationKind.Contact 列舉值。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.PreviousExecutionState">
+      <summary>取得應用程式在啟動之前的執行狀態。</summary>
+      <returns>ApplicationExecutionState 型別值。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.ServiceId">
+      <summary>取得用於呼叫的服務識別項。</summary>
+      <returns>用於呼叫的服務識別項。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.ServiceUserId">
+      <summary>取得用於通話的服務使用者識別項。</summary>
+      <returns>用於通話的服務使用者識別項。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.SplashScreen">
+      <summary>取得啟動顯示畫面物件，這個物件會提供從啟動顯示畫面轉換為已啟動應用程式的相關資訊。</summary>
+      <returns>提供啟動顯示畫面資訊的物件。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.Verb">
+      <summary>取得要執行的動作。</summary>
+      <returns>要執行的動作。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs">
+      <summary>當啟動應用程式在地圖上表示連絡人位置時，可提供資料。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Address">
+      <summary>取得對應作業的連絡人位址。</summary>
+      <returns>對應作業的連絡人位址。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Contact">
+      <summary>取得對應作業的聯絡人。</summary>
+      <returns>對應作業的連絡人。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Kind">
+      <summary>取得啟用類型。</summary>
+      <returns>ActivationKind.Contact 列舉值。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.PreviousExecutionState">
+      <summary>取得應用程式在啟動之前的執行狀態。</summary>
+      <returns>ApplicationExecutionState 型別值。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.SplashScreen">
+      <summary>取得啟動顯示畫面物件，這個物件會提供從啟動顯示畫面轉換為已啟動應用程式的相關資訊。</summary>
+      <returns>提供啟動顯示畫面資訊的物件。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Verb">
+      <summary>取得要執行的動作。</summary>
+      <returns>要執行的動作。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs">
+      <summary>當啟動應用程式傳送一則訊息至一位聯絡人時，會提供資料。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.Contact">
+      <summary>取得訊息的連絡人。</summary>
+      <returns>訊息的連絡人。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.Kind">
+      <summary>取得啟用類型。</summary>
+      <returns>ActivationKind.Contact 列舉值。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.PreviousExecutionState">
+      <summary>取得應用程式在啟動之前的執行狀態。</summary>
+      <returns>ApplicationExecutionState 型別值。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.ServiceId">
+      <summary>取得用於訊息的服務識別項。</summary>
+      <returns>用於訊息的服務識別項。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.ServiceUserId">
+      <summary>取得用於訊息的服務使用者識別項。</summary>
+      <returns>用於訊息的服務使用者識別項。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.SplashScreen">
+      <summary>取得啟動顯示畫面物件，這個物件會提供從啟動顯示畫面轉換為已啟動應用程式的相關資訊。</summary>
+      <returns>提供啟動顯示畫面資訊的物件。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.Verb">
+      <summary>取得要執行的動作。</summary>
+      <returns>要執行的動作。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs">
+      <summary>在應用程式因它使用連絡人選擇器而啟動時提供資料。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.ContactPickerUI">
+      <summary>取得連絡人選擇器的字母方塊 UI，這個選擇器是在使用者想要挑選應用程式所提供的連絡人時顯示。</summary>
+      <returns>取得連絡人選擇器的字母方塊 UI，這個選擇器是在使用者想要挑選應用程式所提供的連絡人時顯示。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.Kind">
+      <summary>取得啟用類型。</summary>
+      <returns>其中一個列舉值。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.PreviousExecutionState">
+      <summary>取得應用程式在啟動之前的執行狀態。</summary>
+      <returns>其中一個列舉值。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.SplashScreen">
+      <summary>取得啟動顯示畫面物件，這個物件會提供從啟動顯示畫面轉換為已啟動應用程式的相關資訊。</summary>
+      <returns>提供啟動顯示畫面資訊的物件。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs">
+      <summary>當啟動應用程式公佈連絡資訊時，可提供資料。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.Contact">
+      <summary>取得張貼訊息的聯絡人。</summary>
+      <returns>佈告的連絡人。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.Kind">
+      <summary>取得啟用類型。</summary>
+      <returns>ActivationKind.Contact 列舉值。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.PreviousExecutionState">
+      <summary>取得應用程式在啟動之前的執行狀態。</summary>
+      <returns>ApplicationExecutionState 型別值。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.ServiceId">
+      <summary>取得用於文章的服務識別項。</summary>
+      <returns>用於文章的服務識別項。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.ServiceUserId">
+      <summary>取得用於文章的服務使用者識別項。</summary>
+      <returns>用於發佈的服務使用者識別項。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.SplashScreen">
+      <summary>取得啟動顯示畫面物件，這個物件會提供從啟動顯示畫面轉換為已啟動應用程式的相關資訊。</summary>
+      <returns>提供啟動顯示畫面資訊的物件。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.Verb">
+      <summary>取得要執行的動作。</summary>
+      <returns>要執行的動作。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs">
+      <summary>當啟動應用程式撥打視訊電話給連絡人時，可提供資料。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.Contact">
+      <summary>取得視訊通話的聯絡人。</summary>
+      <returns>視訊通話的連絡人。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.Kind">
+      <summary>取得啟用類型。</summary>
+      <returns>ActivationKind.Contact 列舉值。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.PreviousExecutionState">
+      <summary>取得應用程式在啟動之前的執行狀態。</summary>
+      <returns>ApplicationExecutionState 型別值。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.ServiceId">
+      <summary>取得用於視訊通話的服務識別項。</summary>
+      <returns>用於視訊通話的服務識別項。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.ServiceUserId">
+      <summary>取得用於視訊通話的服務使用者識別項。</summary>
+      <returns>用於視訊通話的服務使用者識別項。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.SplashScreen">
+      <summary>取得啟動顯示畫面物件，這個物件會提供從啟動顯示畫面轉換為已啟動應用程式的相關資訊。</summary>
+      <returns>提供啟動顯示畫面資訊的物件。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.Verb">
+      <summary>取得要執行的動作。</summary>
+      <returns>要執行的動作。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactActivatedEventArgs">
+      <summary>提供已啟動事件的相關資訊，該事件會在使用者管理連絡人時引發。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactActivatedEventArgs.Verb">
+      <summary>取得與啟動聯絡人相關聯的動作。</summary>
+      <returns>與啟動聯絡人相關聯的動作。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs">
+      <summary>當啟動應用程式撥打電話給連絡人時，可提供資料。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs.Contact">
+      <summary>取得通話的聯絡人。</summary>
+      <returns>呼叫的連絡人。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs.ServiceId">
+      <summary>取得用於呼叫的服務識別項。</summary>
+      <returns>用於呼叫的服務識別項。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs.ServiceUserId">
+      <summary>取得用於通話的服務使用者識別項。</summary>
+      <returns>用於通話的服務使用者識別項。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs">
+      <summary>當啟動應用程式在地圖上表示連絡人位置時，可提供資料。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs.Address">
+      <summary>取得對應作業的連絡人位址。</summary>
+      <returns>表示對應作業的連絡人位址。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs.Contact">
+      <summary>取得對應作業的聯絡人。</summary>
+      <returns>對應作業的連絡人。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs">
+      <summary>當啟動應用程式傳送一則訊息至一位聯絡人時，會提供資料。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs.Contact">
+      <summary>取得訊息的連絡人。</summary>
+      <returns>訊息的連絡人。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs.ServiceId">
+      <summary>取得用於訊息的服務識別項。</summary>
+      <returns>用於訊息的服務識別項。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs.ServiceUserId">
+      <summary>取得用於訊息的服務使用者識別項。</summary>
+      <returns>用於訊息的服務使用者識別項。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs">
+      <summary>在應用程式因它使用連絡人選擇器而啟動時提供資料。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs.ContactPickerUI">
+      <summary>連絡人選擇器的字母方塊 UI，這個選擇器是在使用者想要挑選應用程式所提供的檔案或資料夾時顯示。</summary>
+      <returns>連絡人選擇器的字母方塊 UI，這個選擇器是在使用者想要挑選應用程式所提供的檔案或資料夾時顯示。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs">
+      <summary>當啟動應用程式公佈連絡資訊時，可提供資料。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs.Contact">
+      <summary>取得張貼訊息的聯絡人。</summary>
+      <returns>佈告的連絡人。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs.ServiceId">
+      <summary>取得用於文章的服務識別項。</summary>
+      <returns>用於文章的服務識別項。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs.ServiceUserId">
+      <summary>取得用於文章的服務使用者識別項。</summary>
+      <returns>用於發佈的服務使用者識別項。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactsProviderActivatedEventArgs">
+      <summary>提供已啟動事件的相關資訊，該事件會在使用者管理應用程式所提供的連絡人時引發。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactsProviderActivatedEventArgs.Verb">
+      <summary>取得與啟動聯絡人提供者相關聯的動作。</summary>
+      <returns>與啟動聯絡人提供者相關聯的動作。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs">
+      <summary>當啟動應用程式撥打視訊電話給連絡人時，可提供資料。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs.Contact">
+      <summary>取得視訊通話的聯絡人。</summary>
+      <returns>視訊通話的連絡人。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs.ServiceId">
+      <summary>取得用於視訊通話的服務識別項。</summary>
+      <returns>用於視訊通話的服務識別項。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs.ServiceUserId">
+      <summary>取得用於視訊通話的服務使用者識別項。</summary>
+      <returns>用於視訊通話的服務使用者識別項。</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs">
+      <summary>當啟動應用程式撥打電話給連絡人時，可提供資料。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.ActivatedOperation">
+      <summary>取得應用程式啟動作業。</summary>
+      <returns>啟用作業。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.Contact">
+      <summary>取得通話的聯絡人。</summary>
+      <returns>呼叫的連絡人。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.Kind">
+      <summary>取得啟用類型。</summary>
+      <returns>ActivationKind.Contact 列舉值。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.PreviousExecutionState">
+      <summary>取得應用程式在啟動之前的執行狀態。</summary>
+      <returns>ApplicationExecutionState 型別值。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.ServiceId">
+      <summary>取得用於呼叫的服務識別項。</summary>
+      <returns>用於呼叫的服務識別項。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.ServiceUserId">
+      <summary>取得用於通話的服務使用者識別項。</summary>
+      <returns>用於通話的服務使用者識別項。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.SplashScreen">
+      <summary>取得啟動顯示畫面物件，這個物件會提供從啟動顯示畫面轉換為已啟動應用程式的相關資訊。</summary>
+      <returns>提供啟動顯示畫面資訊的物件。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.Verb">
+      <summary>取得要執行的動作。</summary>
+      <returns>要執行的動作。</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs">
+      <summary>當啟動應用程式在地圖上表示連絡人位置時，可提供資料。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.ActivatedOperation">
+      <summary>取得應用程式啟動作業。</summary>
+      <returns>啟用作業。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Address">
+      <summary>取得對應作業的連絡人位址。</summary>
+      <returns>對應作業的連絡人位址。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Contact">
+      <summary>取得對應作業的聯絡人。</summary>
+      <returns>對應作業的連絡人。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Kind">
+      <summary>取得啟用類型。</summary>
+      <returns>ActivationKind.Contact 列舉值。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.PreviousExecutionState">
+      <summary>取得應用程式在啟動之前的執行狀態。</summary>
+      <returns>ApplicationExecutionState 型別值。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.SplashScreen">
+      <summary>取得啟動顯示畫面物件，這個物件會提供從啟動顯示畫面轉換為已啟動應用程式的相關資訊。</summary>
+      <returns>提供啟動顯示畫面資訊的物件。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Verb">
+      <summary>取得要執行的動作。</summary>
+      <returns>要執行的動作。</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs">
+      <summary>當啟動應用程式傳送訊息給連絡人時，可提供資料。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.ActivatedOperation">
+      <summary>取得應用程式啟動作業。</summary>
+      <returns>啟用作業。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.Contact">
+      <summary>取得訊息的連絡人。</summary>
+      <returns>訊息的連絡人。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.Kind">
+      <summary>取得啟用類型。</summary>
+      <returns>ActivationKind.Contact 列舉值。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.PreviousExecutionState">
+      <summary>取得應用程式在啟動之前的執行狀態。</summary>
+      <returns>ApplicationExecutionState 型別值。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.ServiceId">
+      <summary>取得用於訊息的服務識別項。</summary>
+      <returns>用於訊息的服務識別項。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.ServiceUserId">
+      <summary>取得用於訊息的服務使用者識別項。</summary>
+      <returns>用於訊息的服務使用者識別項。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.SplashScreen">
+      <summary>取得啟動顯示畫面物件，這個物件會提供從啟動顯示畫面轉換為已啟動應用程式的相關資訊。</summary>
+      <returns>提供啟動顯示畫面資訊的物件。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.Verb">
+      <summary>取得要執行的動作。</summary>
+      <returns>要執行的動作。</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs">
+      <summary>在應用程式因它使用連絡人選擇器而啟動時提供資料。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.ActivatedOperation">
+      <summary>取得應用程式啟動作業。</summary>
+      <returns>啟用作業。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.ContactPickerUI">
+      <summary>取得連絡人選擇器的字母方塊 UI，這個選擇器是在使用者想要挑選應用程式所提供的連絡人時顯示。</summary>
+      <returns>取得連絡人選擇器的字母方塊 UI，這個選擇器是在使用者想要挑選應用程式所提供的連絡人時顯示。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.Kind">
+      <summary>取得啟用類型。</summary>
+      <returns>其中一個列舉值。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.PreviousExecutionState">
+      <summary>取得應用程式在啟動之前的執行狀態。</summary>
+      <returns>其中一個列舉值。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.SplashScreen">
+      <summary>取得啟動顯示畫面物件，這個物件會提供從啟動顯示畫面轉換為已啟動應用程式的相關資訊。</summary>
+      <returns>提供啟動顯示畫面資訊的物件。</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs">
+      <summary>當啟動應用程式公佈連絡資訊時，可提供資料。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.ActivatedOperation">
+      <summary>取得應用程式啟動作業。</summary>
+      <returns>啟用作業。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.Contact">
+      <summary>取得張貼訊息的聯絡人。</summary>
+      <returns>佈告的連絡人。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.Kind">
+      <summary>取得啟用類型。</summary>
+      <returns>ActivationKind.Contact 列舉值。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.PreviousExecutionState">
+      <summary>取得應用程式在啟動之前的執行狀態。</summary>
+      <returns>ApplicationExecutionState 型別值。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.ServiceId">
+      <summary>取得用於文章的服務識別項。</summary>
+      <returns>用於文章的服務識別項。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.ServiceUserId">
+      <summary>取得用於文章的服務使用者識別項。</summary>
+      <returns>用於發佈的服務使用者識別項。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.SplashScreen">
+      <summary>取得啟動顯示畫面物件，這個物件會提供從啟動顯示畫面轉換為已啟動應用程式的相關資訊。</summary>
+      <returns>提供啟動顯示畫面資訊的物件。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.Verb">
+      <summary>取得要執行的動作。</summary>
+      <returns>要執行的動作。</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs">
+      <summary>當啟動應用程式撥打視訊電話給連絡人時，可提供資料。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.ActivatedOperation">
+      <summary>取得應用程式啟動作業。</summary>
+      <returns>啟用作業。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.Contact">
+      <summary>取得視訊通話的聯絡人。</summary>
+      <returns>視訊通話的連絡人。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.Kind">
+      <summary>取得啟用類型。</summary>
+      <returns>ActivationKind.Contact 列舉值。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.PreviousExecutionState">
+      <summary>取得應用程式在啟動之前的執行狀態。</summary>
+      <returns>ApplicationExecutionState 型別值。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.ServiceId">
+      <summary>取得用於視訊通話的服務識別項。</summary>
+      <returns>用於視訊通話的服務識別項。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.ServiceUserId">
+      <summary>取得用於視訊通話的服務使用者識別項。</summary>
+      <returns>用於視訊通話的服務使用者識別項。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.SplashScreen">
+      <summary>取得啟動顯示畫面物件，這個物件會提供從啟動顯示畫面轉換為已啟動應用程式的相關資訊。</summary>
+      <returns>提供啟動顯示畫面資訊的物件。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.Verb">
+      <summary>取得要執行的動作。</summary>
+      <returns>要執行的動作。</returns>
+    </member></members>
+</doc>

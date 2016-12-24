@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Preview.Notes.PreviewNotesContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs">
+      <summary>NotePlacementChanged 이벤트에 대한 정보를 나타냅니다.</summary>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs.ViewId">
+      <summary>NotePlacementChanged 이벤트가 발생한 노트의 고유 식별자입니다.</summary>
+      <returns>노트 ID입니다.</returns>
+    </member><member name="T:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview">
+      <summary>이 클래스는 노트 미리 보기 응용 프로그램 기능의 대부분을 소유하고 있습니다(설명 참조).</summary>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.IsScreenLocked">
+      <summary>장치 화면이 현재 잠겨 있는지 여부를 나타내는 값을 가져옵니다.</summary>
+      <returns>화면이 잠겨 있으면 true이고 잠겨 있지 않으면 false입니다.</returns>
+    </member><member name="E:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.NotePlacementChanged">
+      <summary>노트의 배치(크기 및 위치)가 변경되었음을 나타냅니다.</summary>
+    </member><member name="E:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.NoteVisibilityChanged">
+      <summary>노트의 표시 상태가 변경되었음을 나타냅니다.</summary>
+    </member><member name="E:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.SystemLockStateChanged">
+      <summary>장치의 화면 잠금 상태가 변경되었음을 나타냅니다.</summary>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.GetNotePlacement(System.Int32)">
+      <summary>메모리에 저장하고 나중에 응용 프로그램에서 복원할 해당 노트의 보기 배치를 가져옵니다.</summary>
+      <returns>노트 배치 데이터가 포함된 바이트 배열입니다.</returns>
+      <param name="noteViewId">배치를 검색할 수 있는 노트의 고유 식별자입니다.</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.HideNote(System.Int32)">
+      <summary>장치 화면에서 노트의 보기를 제거합니다.</summary>
+      <param name="noteViewId">숨길 노트의 고유 식별자입니다.</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.SetFocusToNextView">
+      <summary>다음 표시 가능 노트 보기(창)로 포커스를 전환합니다. 보기는 시스템에서 결정한 순서로 순환 선택됩니다.</summary>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.SetNotesThumbnailAsync(Windows.Storage.Streams.IBuffer)">
+      <summary>Windows Ink 작업 영역, Alt+TAB 작업 전환 기능 또는 작업 표시줄을 마우스로 가리킬 때 나타나는 이 응용 프로그램에 대한 미리 보기 이미지를 설정합니다.</summary>
+      <returns>이 메서드는 값을 반환하지 않습니다.</returns>
+      <param name="thumbnail">미리 보기 이미지와 사용법을 설명하는 바이트 배열입니다(설명 참조).</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNote(System.Int32)">
+      <summary>장치 화면에 노트가 표시되도록 합니다.</summary>
+      <param name="noteViewId">표시할 노트의 고유 식별자입니다.</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNoteRelativeTo(System.Int32,System.Int32)">
+      <summary>노트를 표시하고 지정된 "앵커" 보기 옆에 배치합니다.</summary>
+      <param name="noteViewId">표시할 노트의 고유 식별자입니다.</param>
+      <param name="anchorNoteViewId">"앵커" 보기의 ID입니다.</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNoteWithPlacement(System.Int32,Windows.Storage.Streams.IBuffer)">
+      <summary>노트를 표시하고 지정된 대로 배치 데이터(크기와 위치)를 설정합니다.</summary>
+      <param name="noteViewId">표시할 노트의 고유 식별자입니다.</param>
+      <param name="data">노트 배치 데이터가 포함된 바이트 배열입니다.</param>
+    </member><member name="M:Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.TrySetNoteSize(System.Int32,Windows.Foundation.Size)">
+      <summary>지정한 노트를 원하는 크기로 조정합니다. 화면 크기/공간 문제로 인해 해당 크기가 권장되지 않는 경우 노트 크기는 변경되지 않습니다.</summary>
+      <returns>노트 크기가 변경된 경우 true, 화면 제한 때문에 크기가 변경되지 않은 경우 false입니다.</returns>
+      <param name="noteViewId">크기를 조정할 노트의 고유 식별자입니다.</param>
+      <param name="size">원하는 노트 크기입니다.</param>
+    </member><member name="T:Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs">
+      <summary>NoteVisibilityChanged 이벤트에 대한 정보를 나타냅니다.</summary>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs.IsVisible">
+      <summary>노트(ViewId 속성에 의해 지정)를 장치 화면에 표시할지 여부를 나타냅니다.</summary>
+      <returns>노트가 표시되면 true이고, 노트가 숨겨지면 false입니다.</returns>
+    </member><member name="P:Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs.ViewId">
+      <summary>NoteVisibilityChanged 이벤트가 발생한 노트의 고유 식별자입니다.</summary>
+      <returns>노트 ID입니다.</returns>
+    </member></members>
+</doc>

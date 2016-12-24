@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.Xaml.Hosting.HostingContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost">
+      <summary>Represents a service that resolves resources from an application. This interface is used for design tool hosting scenarios and is not intended for general use.</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost.ResolveFileResource(System.String)">
+      <summary>Resolves a resource that is specified by a path and returns a string filename.</summary>
+      <returns>The resolved file name.</returns>
+      <param name="path">The local path to resolve.</param>
+    </member><member name="T:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost2">
+      <summary>Extends IXamlUIPresenterHost to add GetGenericXamlFilePath.</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost2.GetGenericXamlFilePath">
+      <summary>Loads an alternative generic.xaml file into the presenter host at design time.</summary>
+      <returns>A local path to the location of the alternative generic.xaml file.</returns>
+    </member><member name="T:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost3">
+      <summary>Extends IXamlUIPresenterHost to add ResolveDictionaryResource.</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.IXamlUIPresenterHost3.ResolveDictionaryResource(Windows.UI.Xaml.ResourceDictionary,System.Object,System.Object)">
+      <summary>Resolves a resource that is specified by a dictionary and key.</summary>
+      <returns>The resource object.</returns>
+      <param name="dictionary">The dictionary that contains the resource.</param>
+      <param name="dictionaryKey">The resource key.</param>
+      <param name="suggestedValue">The suggested value.</param>
+    </member><member name="T:Windows.UI.Xaml.Hosting.XamlUIPresenter">
+      <summary>Enables presenting a visual tree on a Microsoft Direct3D surface. This type is used for design tool hosting scenarios and is not intended for general use.</summary>
+    </member><member name="P:Windows.UI.Xaml.Hosting.XamlUIPresenter.CompleteTimelinesAutomatically">
+      <summary>Gets or sets a value that determines whether the host wants timelines to always run to end.</summary>
+      <returns>true to always run timelines to end. Otherwise false.</returns>
+    </member><member name="P:Windows.UI.Xaml.Hosting.XamlUIPresenter.RootElement">
+      <summary>Gets or sets the root visual element to draw to the surface.</summary>
+      <returns>The element to draw.</returns>
+    </member><member name="P:Windows.UI.Xaml.Hosting.XamlUIPresenter.ThemeKey">
+      <summary>Gets or sets the string key that identifies the theme set to use from ThemeResourcesXaml.</summary>
+      <returns>A string key.</returns>
+    </member><member name="P:Windows.UI.Xaml.Hosting.XamlUIPresenter.ThemeResourcesXaml">
+      <summary>Gets or sets the XAML that specifies a resource dictionary. The resource dictionary contains themes that the host should resolve and that should be applied to the content.</summary>
+      <returns>A XAML resource dictionary specified in string form.</returns>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.GetFlyoutPlacement(Windows.Foundation.Rect,Windows.Foundation.Size,Windows.Foundation.Size,Windows.Foundation.Rect,Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode,System.Boolean,Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode@)">
+      <summary>Invokes the FlyoutBase placement logic, using a suggested size of a control that will show a placement target and its flyout. Returns the bounds that are the result of running the placement logic.</summary>
+      <returns>The bounds as calculated by FlyoutBase placement logic.</returns>
+      <param name="placementTargetBounds">The bounds of the placement target element, which are passed to FlyoutBase presenter logic.</param>
+      <param name="controlSize">The desired size of the control that should display the flyout.</param>
+      <param name="minControlSize">The minimum size of the control that should display the flyout.</param>
+      <param name="containerRect">The bounds of the area that should hold the placement target and flyout.</param>
+      <param name="targetPreferredPlacement">The desired placement mode to use for FlyoutBase placement logic.</param>
+      <param name="allowFallbacks">true if fallbacks can be used for the placement mode. false if fallbacks cannot be used.</param>
+      <param name="chosenPlacement">The actual placement mode used by the invoked FlyoutBase placement logic.</param>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.GetFlyoutPlacementTargetInfo(Windows.UI.Xaml.FrameworkElement,Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode,Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode@,System.Boolean@)">
+      <summary>Returns calculated bounds of a placement target that is intended to also display a flyout in the host. Additional out parameters provide more info on how the bounds were calculated.</summary>
+      <returns>The calculated placement target bounds.</returns>
+      <param name="placementTarget">The placement target element that the Flyout should be positioned in relation to.</param>
+      <param name="preferredPlacement">A value of the enumeration that declares the host's preferred placement of the Flyout relative to the target.</param>
+      <param name="targetPreferredPlacement">A value of the enumeration that declares preferred placement of the Flyout.</param>
+      <param name="allowFallbacks">true if fallback placements are permitted for the Flyout placement logic. false if only the targetPreferredPlacement value should be considered.</param>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.NotifyWindowSizeChanged">
+      <summary>Invokes the SizeChanged event on Window.Current. Used by hosts to propagate size changes from host settings to user code, so that a design mode interaction can be differentiated from a run time interaction.</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.Present">
+      <summary>Presents the surface, as a synchronous call for the host.</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.Render">
+      <summary>Renders the surface. Intended for asynchronous calls via a timer.</summary>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.SetHost(Windows.UI.Xaml.Hosting.IXamlUIPresenterHost)">
+      <summary>Specifies the IXamlUIPresenterHost service implementation to use for application resource resolution.</summary>
+      <param name="host">A service implementation.</param>
+    </member><member name="M:Windows.UI.Xaml.Hosting.XamlUIPresenter.SetSize(System.Int32,System.Int32)">
+      <summary>Specifies the width and height of the surface.</summary>
+      <param name="width">A width in pixels.</param>
+      <param name="height">A height in pixels.</param>
+    </member></members>
+</doc>

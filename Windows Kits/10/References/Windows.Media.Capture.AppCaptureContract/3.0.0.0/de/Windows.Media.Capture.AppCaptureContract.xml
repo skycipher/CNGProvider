@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.Capture.AppCaptureContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Media.Capture.AppCaptureAlternateShortcutKeys">
+      <summary>Definiert alternative Tastenkombinationen für App-Erfassung.</summary>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.SaveHistoricalVideoKey">
+      <summary>Ruft die gespeicherten historischen Videotastenkombination ab oder legt diese fest.</summary>
+      <returns>Die gespeicherte historische Videotastenkombination.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.SaveHistoricalVideoKeyModifiers">
+      <summary>Ruft die gespeicherten historischen Videotastenkombinationsmodifizierer ab oder legt diese fest.</summary>
+      <returns>Die gespeicherte historische Videotastenkombinationsmodifizierer.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.TakeScreenshotKey">
+      <summary>Ruft die Tastenkombination für die Aufnahme von Screenshots ab oder legt diese fest.</summary>
+      <returns>Die Tastenkombination für die Aufnahme von Screenshots.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.TakeScreenshotKeyModifiers">
+      <summary>Ruft die Tastenkombinationsmodifizierer für die Aufnahme von Screenshots ab oder legt diese fest.</summary>
+      <returns>Die Tastenkombinationsmodifizierer für die Aufnahme von Screenshots.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleBroadcastKey">
+      <summary>Ruft die Umschalt-Sendungstastenkombination ab oder legt sie fest.</summary>
+      <returns>Die Umschalt-Sendungstastenkombination.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleBroadcastKeyModifiers">
+      <summary>Ruft die Umschalt-Sendungstastenkombination-Modifizierer ab oder legt sie fest.</summary>
+      <returns>Die Umschalt-Sendungstastenmodifizierer.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleCameraCaptureKey">
+      <summary>Ruft die Kameraerfassungsumschalttaste ab oder legt sie fest.</summary>
+      <returns>Die Kameraerfassungsumschalttaste.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleCameraCaptureKeyModifiers">
+      <summary>Ruft die Kameraerfassungsumschalttastenmodifizierer ab oder legt sie fest.</summary>
+      <returns>Die Kameraerfassungsumschalttastenmodifizierer.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleGameBarKey">
+      <summary>Ruft die Tastenkombination zum Umschalten auf.</summary>
+      <returns>Die Umschlalt-Spielleistentastenkombination.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleGameBarKeyModifiers">
+      <summary>Ruft die Tastenkombinationsmodifizierer zum Umschalten auf.</summary>
+      <returns>Die Umschlalt-Spielleistentastenkombinationmodifizierer.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleMicrophoneCaptureKey">
+      <summary>Ruft die Mikrofonerfassungsumschalttaste ab oder legt sie fest.</summary>
+      <returns>Die Mikrofonerfassungsumschalttaste.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleMicrophoneCaptureKeyModifiers">
+      <summary>Ruft die Mikrofonerfassungsumschalttastenmodifizierer ab oder legt sie fest.</summary>
+      <returns>Die Mikrofonerfassungsumschalttastenmodifizierer.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleRecordingIndicatorKey">
+      <summary>Ruft die Umschalt-Aufzeichnungsindikatortastenkombination ab.</summary>
+      <returns>Die Umschalt-Aufnahmeindikator-Tastenkombination.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleRecordingIndicatorKeyModifiers">
+      <summary>Ruft die Umschalt-Aufzeichnungsindikatortastenkombination-Modifizierer ab.</summary>
+      <returns>Die Umschalt-Aufzeichnungsindikatormodifizierer.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleRecordingKey">
+      <summary>Ruft die Umschalt-Aufzeichnungsindikatortastenkombination ab.</summary>
+      <returns>Die Umschalt-Aufzeichnungstastenkombination.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleRecordingKeyModifiers">
+      <summary>Ruft die Umschalt-Aufzeichnungsindikatortastenkombination-Modifizierer ab.</summary>
+      <returns>Die Umschalt-Aufzeichnungsindikatormodifizierer.</returns>
+    </member><member name="T:Windows.Media.Capture.AppCaptureHistoricalBufferLengthUnit">
+      <summary>Gibt die Einheiten des Verlaufspuffers der App-Aufzeichnung an.</summary>
+    </member><member name="F:Windows.Media.Capture.AppCaptureHistoricalBufferLengthUnit.Megabytes">
+      <summary>Megabytes</summary>
+    </member><member name="F:Windows.Media.Capture.AppCaptureHistoricalBufferLengthUnit.Seconds">
+      <summary>Sekunden</summary>
+    </member><member name="T:Windows.Media.Capture.AppCaptureManager">
+      <summary>Bietet Zugriff auf die App-Aufzeichnungseinstellungen.</summary>
+    </member><member name="M:Windows.Media.Capture.AppCaptureManager.ApplySettings(Windows.Media.Capture.AppCaptureSettings)">
+      <summary>Übernimmt App-Aufzeichnungseinstellungen.</summary>
+      <capability type="appCaptureSettings">Erforderlich, damit die Benutzereinstellungen für das Game DVR gesteuert werden können.</capability>
+      <param name="appCaptureSettings">Die zu übernehmenden Einstellungen.</param>
+    </member><member name="M:Windows.Media.Capture.AppCaptureManager.GetCurrentSettings">
+      <summary>Ruft die aktuellen App-Aufzeichnungseinstellungen ab.</summary>
+      <capability type="appCaptureSettings">Erforderlich, damit die Benutzereinstellungen für das Game DVR gesteuert werden können.</capability>
+      <returns>Die aktuellen App-Aufzeichnungseinstellungen.</returns>
+    </member><member name="T:Windows.Media.Capture.AppCaptureSettings">
+      <summary>Stellt App-Aufzeichnungseinstellungen dar.</summary>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.AlternateShortcutKeys">
+      <summary>Ruft die alternativen Tastenkombinationseinstellungen ab.</summary>
+      <returns>Die alternativen Tastenkombinationseinstellungen.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.AppCaptureDestinationFolder">
+      <summary>Ruft den Zielordner für die App-Aufzeichnung ab oder legt ihn fest.</summary>
+      <returns>Der Zielordner für die App-Aufzeichnung.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.AudioEncodingBitrate">
+      <summary>Ruft die Audiocodierungsbitrate ab oder legt sie fest.</summary>
+      <returns>Die Audiocodierungsbitrate.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.CustomVideoEncodingBitrate">
+      <summary>Ruft die benutzerdefinierte Videocodierungsbitrate ab oder legt sie fest.</summary>
+      <returns>Die benutzerdefinierte Videocodierungsbitrate.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.CustomVideoEncodingHeight">
+      <summary>Ruft die benutzerdefinierte Videocodierungshöhe ab oder legt sie fest.</summary>
+      <returns>Die benutzerdefinierte Videocodierungshöhe.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.CustomVideoEncodingWidth">
+      <summary>Ruft die benutzerdefinierte Videocodierungsbreite ab.</summary>
+      <returns>Die benutzerdefinierte Videocodierungsbreite.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.HasHardwareEncoder">
+      <summary>Ruft einen Wert ab, der angibt, ob das Gerät über einen Hardwareencoder verfügt.</summary>
+      <returns>True, wenn das Gerät über einen Hardwareencoder verfügt, andernfalls False.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.HistoricalBufferLength">
+      <summary>Ruft die Verlaufspufferlänge ab oder legt sie fest.</summary>
+      <returns>Die Verlaufspufferlänge.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.HistoricalBufferLengthUnit">
+      <summary>Ruft die Einheiten der Verlaufspufferlänge ab oder legt sie fest.</summary>
+      <returns>Die Einheiten der Verlaufspufferlänge.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.IsAppCaptureEnabled">
+      <summary>Ruft einen Wert ab, der angibt, ob die App-Aufzeichnung aktiviert ist, oder legt ihn fest.</summary>
+      <returns>True, wenn die App-Aufzeichnung aktiviert ist, andernfalls False.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.IsAudioCaptureEnabled">
+      <summary>Ruft einen Wert ab, der angibt, ob die Audioaufnahme aktiviert ist, oder legt diesen fest.</summary>
+      <returns>True, wenn die Audioaufnahme aktiviert ist, andernfalls False.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.IsCpuConstrained">
+      <summary>Ruft einen Wert ab, der angibt, ob die App-Aufzeichnung durch CPU eingeschränkt ist.</summary>
+      <returns>True, wenn die App-Aufzeichnung durch CPU eingeschränkt ist, andernfalls False.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.IsDisabledByPolicy">
+      <summary>Ruft einen Wert ab, der angibt, ob die App-Aufzeichnung per Richtlinie deaktiviert ist.</summary>
+      <returns>True, wenn die App-Aufzeichnung per Richtlinie deaktiviert ist, andernfalls False.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.IsGpuConstrained">
+      <summary>Ruft einen Wert ab, der angibt, ob die App-Aufzeichnung durch GPU eingeschränkt ist.</summary>
+      <returns>True, wenn die App-Aufzeichnung durch GPU eingeschränkt ist, andernfalls False.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.IsHistoricalCaptureEnabled">
+      <summary>Ruft einen Wert ab, der angibt, ob die Verlaufsaufzeichnung aktiviert ist, oder legt ihn fest.</summary>
+      <returns>True, wenn die Verlaufsaufzeichnung aktiviert ist, andernfalls False.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.IsHistoricalCaptureOnBatteryAllowed">
+      <summary>Ruft einen Wert ab, der angibt, ob die Verlaufsaufzeichnung erlaubt ist, während sich das Gerät im Akkubetrieb befindet.</summary>
+      <returns>True, wenn die Verlaufsaufzeichnung erlaubt ist, während sich das Gerät im Akkubetrieb befindet, andernfalls False.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.IsHistoricalCaptureOnWirelessDisplayAllowed">
+      <summary>Ruft ab einen Wert ab, der angibt, ob die Verlaufsaufzeichnung auf Funkanzeigen erlaubt ist.</summary>
+      <returns>True, wenn die Verlaufsaufzeichnung auf Funkanzeigen erlaubt ist, andernfalls False.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.IsMemoryConstrained">
+      <summary>Ruft einen Wert ab, der angibt, ob das Gerät einen eingeschränkten Arbeitsspeicher aufweist.</summary>
+      <returns>True, wenn das Gerät einen eingeschränkten Arbeitsspeicher aufweist, andernfalls False.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.IsMicrophoneCaptureEnabled">
+      <summary>Ruft einen Wert ab, der angibt, ob die Mikrofonerfassung aktiviert ist, oder legt ihn fest.</summary>
+      <returns>True, wenn die Mikrofonerfassung aktiviert ist; andernfalls False.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.IsMicrophoneCaptureEnabledByDefault">
+      <summary>Ruft einen Wert ab, der angibt, ob die Mikrofonerfassung standardmäßig aktiviert ist, oder legt ihn fest.</summary>
+      <returns>True, wenn die Mikrofonerfassung standardmäßig aktiviert ist; andernfalls False.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.MaximumRecordLength">
+      <summary>Ruft die maximale Aufzeichnungslänge ab oder legt sie fest.</summary>
+      <returns>Die maximale Aufzeichnungslänge.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.MicrophoneGain">
+      <summary>Ruft einen Wert ab, der die Audioverstärkung des Mikrofons angibt, oder legt ihn fest.</summary>
+      <returns>Die Mikrofon-Audioverstärkung.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.ScreenshotDestinationFolder">
+      <summary>Ruft den Zielordner für Screenshots ab oder legt ihn fest.</summary>
+      <returns>Der Zielordner für Screenshots.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.SystemAudioGain">
+      <summary>Ruft einen Wert ab, der die Audioverstärkung des Systems angibt, oder legt ihn fest.</summary>
+      <returns>Die System-Audioverstärkung.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.VideoEncodingBitrateMode">
+      <summary>Ruft die Videocodierungsbitrate ab oder legt sie fest.</summary>
+      <returns>Die Videocodierungsbitrate.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.VideoEncodingFrameRateMode">
+      <summary>Ruft einen Wert ab, der die Video-Codierungsbildrate anzeigt.</summary>
+      <returns>Die Video-Codierungsbildrate.</returns>
+    </member><member name="P:Windows.Media.Capture.AppCaptureSettings.VideoEncodingResolutionMode">
+      <summary>Ruft den Auflösungsmodus für die Videocodierung ab oder legt ihn fest.</summary>
+      <returns>Der Auflösungsmodus für die Videocodierung.</returns>
+    </member><member name="T:Windows.Media.Capture.AppCaptureVideoEncodingBitrateMode">
+      <summary>Gibt den Bitratenmodus der Videocodierung für die App-Aufzeichnung an.</summary>
+    </member><member name="F:Windows.Media.Capture.AppCaptureVideoEncodingBitrateMode.Custom">
+      <summary>Benutzerdefinierte Bitrate.</summary>
+    </member><member name="F:Windows.Media.Capture.AppCaptureVideoEncodingBitrateMode.High">
+      <summary>Hohe Bitrate.</summary>
+    </member><member name="F:Windows.Media.Capture.AppCaptureVideoEncodingBitrateMode.Standard">
+      <summary>Standardbitrate.</summary>
+    </member><member name="T:Windows.Media.Capture.AppCaptureVideoEncodingFrameRateMode">
+      <summary>Gibt den Video-Codierungsbildratenmodus an.</summary>
+    </member><member name="F:Windows.Media.Capture.AppCaptureVideoEncodingFrameRateMode.High">
+      <summary>Video ist mit einer hohen Bildrate codiert.</summary>
+    </member><member name="F:Windows.Media.Capture.AppCaptureVideoEncodingFrameRateMode.Standard">
+      <summary>Video wird mit der Standard-Bildrate codiert.</summary>
+    </member><member name="T:Windows.Media.Capture.AppCaptureVideoEncodingResolutionMode">
+      <summary>Gibt den Auflösungsmodus der Videocodierung für die App-Aufzeichnung an.</summary>
+    </member><member name="F:Windows.Media.Capture.AppCaptureVideoEncodingResolutionMode.Custom">
+      <summary>Benutzerdefinierte Auflösung.</summary>
+    </member><member name="F:Windows.Media.Capture.AppCaptureVideoEncodingResolutionMode.High">
+      <summary>Hohe Auflösung.</summary>
+    </member><member name="F:Windows.Media.Capture.AppCaptureVideoEncodingResolutionMode.Standard">
+      <summary>Standardauflösung.</summary>
+    </member></members>
+</doc>

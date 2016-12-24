@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Calls.LockScreenCallContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral">
+      <summary>Объект LockScreenCallEndCallDeferral сигнализирует, когда приложению больше не нужно задерживать удаление самого себя с экрана блокировки.</summary>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral.Complete">
+      <summary>Завершает отсроченное удаление приложения с экрана блокировки, что приводит к удалению приложения с экрана блокировки, если оно еще не было удалено иным путем.</summary>
+    </member><member name="T:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs">
+      <summary>Управляет удалением приложения с экрана блокировки.</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs.Deadline">
+      <summary>Получает крайний срок, в который приложение должно завершить отсрочку.</summary>
+      <returns>Крайний срок, в который приложение должно завершить отсрочку.</returns>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs.GetDeferral">
+      <summary>Отправляет запрос на отсрочку поведения по умолчанию, предполагающего удаление приложения с экрана блокировки.</summary>
+      <returns>Если этот метод завершается, возвращается объект LockScreenCallEndCallDeferral, который сигнализирует, когда приложению больше не нужно задерживать удаление самого себя с экрана блокировки.</returns>
+    </member><member name="T:Windows.ApplicationModel.Calls.LockScreenCallUI">
+      <summary>Обрабатывает обмен информацией с экраном блокировки.</summary>
+    </member><member name="P:Windows.ApplicationModel.Calls.LockScreenCallUI.CallTitle">
+      <summary>Получает и задает краткое описание характера вызова.</summary>
+      <returns>Краткое описание характеристик вызова, например "Видеовызов с Jane Doe".</returns>
+    </member><member name="E:Windows.ApplicationModel.Calls.LockScreenCallUI.Closed">
+      <summary>Происходит при завершении взаимодействия с экраном блокировки.</summary>
+    </member><member name="E:Windows.ApplicationModel.Calls.LockScreenCallUI.EndRequested">
+      <summary>Происходит, когда когда экрану взаимодействия требуется закончить вызов.</summary>
+    </member><member name="M:Windows.ApplicationModel.Calls.LockScreenCallUI.Dismiss">
+      <summary>Удаляет приложение из пользовательского интерфейса экрана блокировки.</summary>
+    </member></members>
+</doc>

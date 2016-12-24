@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.Core.CoreWindowDialogsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.Core.CoreWindowDialog">
+      <summary>Define un cuadro de diálogo secundario de una ventana de aplicación.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowDialog.#ctor">
+      <summary>Crea una nueva instancia predeterminada de la clase CoreWindowDialog.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowDialog.#ctor(System.String)">
+      <summary>Crea una instancia de la clase CoreWindowDialog con el nombre proporcionado.</summary>
+      <param name="title">Título del cuadro de diálogo.</param>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.BackButtonCommand">
+      <summary>Obtiene o establece el delegado al que se llama cuando se selecciona el botón Atrás del cuadro de diálogo.</summary>
+      <returns>El delegado al que se llama cuando se selecciona el botón Atrás del cuadro de diálogo.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.CancelCommandIndex">
+      <summary>Obtiene y establece el valor de índice de comandos para la operación de cancelación del diálogo.</summary>
+      <returns>El valor de índice de comandos para la operación de cancelación del diálogo.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.Commands">
+      <summary>Obtiene el conjunto de comandos de la interfaz de usuario (IU) disponibles en el cuadro de diálogo.</summary>
+      <returns>El conjunto de comandos de la interfaz de usuario disponibles en el cuadro de diálogo.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.DefaultCommandIndex">
+      <summary>Obtiene o establece el índice del comando predeterminado de la ventana de cuadro de diálogo.</summary>
+      <returns>El valor de índice del comando predeterminado de la ventana de cuadro de diálogo (como Aceptar).</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.IsInteractionDelayed">
+      <summary>Obtiene o establece un valor que indica si los mensajes de evento de interacción de la interfaz de usuario están ligeramente retrasados o no. Este retraso impide que un usuario invoque accidentalmente una acción en la ventana de cuadro de diálogo.</summary>
+      <returns>True si un retraso fraccionario se presenta en algunas interacciones con el cuadro de diálogo; false si no se presenta.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.MaxSize">
+      <summary>Obtiene el tamaño máximo del cuadro de diálogo.</summary>
+      <returns>Tamaño máximo del cuadro de diálogo, en píxeles.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.MinSize">
+      <summary>Obtiene el tamaño mínimo del cuadro de diálogo.</summary>
+      <returns>Tamaño mínimo del cuadro de diálogo, en píxeles.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowDialog.Title">
+      <summary>Obtiene o establece el título del cuadro de diálogo.</summary>
+      <returns>Título del cuadro de diálogo.</returns>
+    </member><member name="E:Windows.UI.Core.CoreWindowDialog.Showing">
+      <summary>Se desencadena cuando se muestra el cuadro de diálogo.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowDialog.ShowAsync">
+      <summary>Muestra el cuadro de diálogo y espera de forma asincrónica a que el usuario realice una acción.</summary>
+      <returns>La acción realizada por el usuario en el cuadro de diálogo, así como la información sobre la acción.</returns>
+    </member><member name="T:Windows.UI.Core.CoreWindowFlyout">
+      <summary>Define un control flotante secundario de una ventana de aplicación.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowFlyout.#ctor(Windows.Foundation.Point)">
+      <summary>Crea una instancia de la clase CoreWindowFlyout en la posición proporcionada.</summary>
+      <param name="position">La posición de píxel de la pantalla donde se situará el origen del control flotante. La posición proporciona la esquina superior izquierda del control flotante.</param>
+    </member><member name="M:Windows.UI.Core.CoreWindowFlyout.#ctor(Windows.Foundation.Point,System.String)">
+      <summary>Crea una instancia de la clase CoreWindowFlyout en la posición especificada con el nombre proporcionado.</summary>
+      <param name="position">La posición de píxel de la pantalla donde se situará el origen del control flotante. La posición proporciona la esquina superior izquierda del control flotante.</param>
+      <param name="title">Título del control flotante.</param>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.BackButtonCommand">
+      <summary>Obtiene o establece el delegado al que se llama cuando se selecciona el botón Atrás del control flotante.</summary>
+      <returns>El delegado al que se llama cuando se selecciona el botón Atrás del control flotante.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.Commands">
+      <summary>Obtiene el conjunto de comandos de la interfaz de usuario disponibles en el control flotante.</summary>
+      <returns>El conjunto de comandos de la interfaz de usuario disponibles en el control flotante.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.DefaultCommandIndex">
+      <summary>Obtiene o establece el índice del comando predeterminado de la ventana flotante.</summary>
+      <returns>El valor de índice del comando predeterminado de la ventana flotante (como Aceptar).</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.IsInteractionDelayed">
+      <summary>Obtiene o establece un valor que indica si los mensajes de evento de interacción de la interfaz de usuario están ligeramente retrasados o no. Este retraso impide que un usuario invoque accidentalmente una acción en la ventana flotante.</summary>
+      <returns>True si un retraso fraccionario se presenta en algunas interacciones con el control flotante; false si no se presenta.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.MaxSize">
+      <summary>Obtiene el tamaño máximo del control flotante.</summary>
+      <returns>Tamaño máximo del control flotante, en píxeles.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.MinSize">
+      <summary>Obtiene el tamaño mínimo del control flotante.</summary>
+      <returns>Tamaño mínimo del control flotante, en píxeles.</returns>
+    </member><member name="P:Windows.UI.Core.CoreWindowFlyout.Title">
+      <summary>Obtiene o establece el título del control flotante.</summary>
+      <returns>Título del control flotante.</returns>
+    </member><member name="E:Windows.UI.Core.CoreWindowFlyout.Showing">
+      <summary>Se desencadena cuando se muestra el control flotante.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowFlyout.ShowAsync">
+      <summary>Muestra el control flotante y espera de forma asincrónica a que el usuario realice una acción.</summary>
+      <returns>La acción realizada por el usuario en el control flotante, así como la información sobre la acción.</returns>
+    </member><member name="T:Windows.UI.Core.CoreWindowPopupShowingEventArgs">
+      <summary>Define un método para establecer el tamaño deseado de una ventana emergente.</summary>
+    </member><member name="M:Windows.UI.Core.CoreWindowPopupShowingEventArgs.SetDesiredSize(Windows.Foundation.Size)">
+      <summary>Establece el tamaño deseado del menú emergente.</summary>
+      <param name="value">Tamaño deseado del elemento emergente.</param>
+    </member></members>
+</doc>

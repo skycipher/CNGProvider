@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.Playlists.PlaylistsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Media.Playlists.Playlist">
+      <summary>提供媒體播放清單的存取。</summary>
+    </member><member name="M:Windows.Media.Playlists.Playlist.#ctor">
+      <summary>建立 Playlist 物件的新執行個體。</summary>
+    </member><member name="P:Windows.Media.Playlists.Playlist.Files">
+      <summary>組成播放清單的媒體檔案集。</summary>
+      <returns>組成播放清單的媒體檔案清單。</returns>
+    </member><member name="M:Windows.Media.Playlists.Playlist.LoadAsync(Windows.Storage.IStorageFile)">
+      <summary>以非同步方式將檔案載入至播放清單。</summary>
+      <returns>代表用於載入播放清單的非同步作業。 這個 IAsyncOperation 物件的 GetResults 方法傳回播放清單。</returns>
+      <param name="file">代表要載入的檔案。</param>
+    </member><member name="M:Windows.Media.Playlists.Playlist.SaveAsAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption)">
+      <summary>以非同步方式將播放清單儲存至指定的檔案和資料夾。</summary>
+      <returns>代表非同步作業，該作業會將播放清單儲存到指定的檔案和資料夾。</returns>
+      <param name="saveLocation">要儲存播放清單的資料夾。</param>
+      <param name="desiredName">要儲存之播放清單的名稱。</param>
+      <param name="option">播放清單儲存到現有檔案時所要採取的動作。 其中一個 NameCollisionOption 列舉值。</param>
+    </member><member name="M:Windows.Media.Playlists.Playlist.SaveAsAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption,Windows.Media.Playlists.PlaylistFormat)">
+      <summary>以非同步方式和指定的格式將播放清單儲存至指定的檔案和資料夾。</summary>
+      <returns>代表非同步作業，該作業會將播放清單儲存到指定的檔案和資料夾。</returns>
+      <param name="saveLocation">要儲存播放清單的資料夾。</param>
+      <param name="desiredName">要儲存之播放清單的名稱。</param>
+      <param name="option">播放清單儲存到現有檔案時所要採取的動作。 其中一個 NameCollisionOption 列舉值。</param>
+      <param name="playlistFormat">播放清單格式。 其中一個 PlaylistFormat 列舉值。</param>
+    </member><member name="M:Windows.Media.Playlists.Playlist.SaveAsync">
+      <summary>以非同步方式儲存播放清單。</summary>
+      <returns>代表要儲存播放清單的非同步動作。</returns>
+    </member><member name="T:Windows.Media.Playlists.PlaylistFormat">
+      <summary>表示播放清單的檔案格式。</summary>
+    </member><member name="F:Windows.Media.Playlists.PlaylistFormat.M3u">
+      <summary>M3U 播放清單</summary>
+    </member><member name="F:Windows.Media.Playlists.PlaylistFormat.WindowsMedia">
+      <summary>Windows Media 播放清單。</summary>
+    </member><member name="F:Windows.Media.Playlists.PlaylistFormat.Zune">
+      <summary>Zune 播放清單。</summary>
+    </member></members>
+</doc>

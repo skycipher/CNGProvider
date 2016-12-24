@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Custom.CustomDeviceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Custom.CustomDevice">
+      <summary>表示自定义设备。</summary>
+    </member><member name="P:Windows.Devices.Custom.CustomDevice.InputStream">
+      <summary>输入流。</summary>
+      <returns>输入流。</returns>
+    </member><member name="P:Windows.Devices.Custom.CustomDevice.OutputStream">
+      <summary>输出流。</summary>
+      <returns>输出流。</returns>
+    </member><member name="M:Windows.Devices.Custom.CustomDevice.FromIdAsync(System.String,Windows.Devices.Custom.DeviceAccessMode,Windows.Devices.Custom.DeviceSharingMode)">
+      <summary>为指定 DeviceInformation.Id 异步创建 CustomDevice 对象。</summary>
+      <capability type="optical">要求应用程序访问 CD、DVD 和 Blu-ray 等光盘驱动器上的函数。</capability>
+      <returns>返回自定义设备。</returns>
+      <param name="deviceId">设备的 DeviceInformation.Id。</param>
+      <param name="desiredAccess">所需访问。</param>
+      <param name="sharingMode">共享模式。</param>
+    </member><member name="M:Windows.Devices.Custom.CustomDevice.GetDeviceSelector(System.Guid)">
+      <summary>获取设备选择器。</summary>
+      <returns>设备选择器。</returns>
+      <param name="classGuid">为其创建设备选择器的设备接口的设备接口类 GUID。</param>
+    </member><member name="M:Windows.Devices.Custom.CustomDevice.SendIOControlAsync(Windows.Devices.Custom.IIOControlCode,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)">
+      <summary>发送 IO 控制代码。</summary>
+      <returns>异步操作的结果。</returns>
+      <param name="ioControlCode">IO 控件代码。</param>
+      <param name="inputBuffer">输入缓冲区。</param>
+      <param name="outputBuffer">输出缓冲区。</param>
+    </member><member name="M:Windows.Devices.Custom.CustomDevice.TrySendIOControlAsync(Windows.Devices.Custom.IIOControlCode,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)">
+      <summary>发送 IO 控制代码。 一个指示操作是否成功的返回值。</summary>
+      <returns>如果操作成功，则为 true；否则为 false。</returns>
+      <param name="ioControlCode">IO 控件代码。</param>
+      <param name="inputBuffer">输入缓冲区。</param>
+      <param name="outputBuffer">输出缓冲区。</param>
+    </member><member name="T:Windows.Devices.Custom.DeviceAccessMode">
+      <summary>设备访问模式。</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceAccessMode.Read">
+      <summary>读取访问权限。</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceAccessMode.ReadWrite">
+      <summary>读/写访问权限。</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceAccessMode.Write">
+      <summary>写入访问权限。</summary>
+    </member><member name="T:Windows.Devices.Custom.DeviceSharingMode">
+      <summary>设备共享模式。</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceSharingMode.Exclusive">
+      <summary>设备是独占的。</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceSharingMode.Shared">
+      <summary>设备是共享的。</summary>
+    </member><member name="T:Windows.Devices.Custom.IIOControlCode">
+      <summary>表示 IO 控件代码。</summary>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.AccessMode">
+      <summary>访问模式。</summary>
+      <returns>访问模式。</returns>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.BufferingMethod">
+      <summary>缓冲方法。</summary>
+      <returns>缓冲方法。</returns>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.ControlCode">
+      <summary>控件代码。</summary>
+      <returns>控件代码。</returns>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.DeviceType">
+      <summary>设备类型。</summary>
+      <returns>设备类型。</returns>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.Function">
+      <summary>函数。</summary>
+      <returns>函数。</returns>
+    </member><member name="T:Windows.Devices.Custom.IOControlAccessMode">
+      <summary>标识访问模式。</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlAccessMode.Any">
+      <summary>任何模式。</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlAccessMode.Read">
+      <summary>读取模式。</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlAccessMode.ReadWrite">
+      <summary>读/写模式。</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlAccessMode.Write">
+      <summary>写模式。</summary>
+    </member><member name="T:Windows.Devices.Custom.IOControlBufferingMethod">
+      <summary>标识缓存方法。</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlBufferingMethod.Buffered">
+      <summary>已缓冲。</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlBufferingMethod.DirectInput">
+      <summary>直接输入。</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlBufferingMethod.DirectOutput">
+      <summary>直接输出。</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlBufferingMethod.Neither">
+      <summary>二者都不是。</summary>
+    </member><member name="T:Windows.Devices.Custom.IOControlCode">
+      <summary>表示控件代码。</summary>
+    </member><member name="M:Windows.Devices.Custom.IOControlCode.#ctor(System.UInt16,System.UInt16,Windows.Devices.Custom.IOControlAccessMode,Windows.Devices.Custom.IOControlBufferingMethod)">
+      <summary>控件代码。</summary>
+      <param name="deviceType">设备类型。</param>
+      <param name="function">设备功能。</param>
+      <param name="accessMode">访问模式。</param>
+      <param name="bufferingMethod">缓冲方法。</param>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.AccessMode">
+      <summary>访问模式。</summary>
+      <returns>访问模式。</returns>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.BufferingMethod">
+      <summary>缓冲方法。</summary>
+      <returns>缓冲方法。</returns>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.ControlCode">
+      <summary>控件代码。</summary>
+      <returns>控件代码。</returns>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.DeviceType">
+      <summary>设备类型。</summary>
+      <returns>设备类型。</returns>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.Function">
+      <summary>函数。</summary>
+      <returns>函数。</returns>
+    </member><member name="T:Windows.Devices.Custom.KnownDeviceTypes">
+      <summary>表示已知的设备类型。</summary>
+    </member><member name="P:Windows.Devices.Custom.KnownDeviceTypes.Unknown">
+      <summary>由设备供应商定义。</summary>
+      <returns>由设备供应商定义。</returns>
+    </member></members>
+</doc>

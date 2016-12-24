@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Custom.CustomDeviceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Devices.Custom.CustomDevice">
+      <summary>Представляет настраиваемое устройство.</summary>
+    </member><member name="P:Windows.Devices.Custom.CustomDevice.InputStream">
+      <summary>Входной поток.</summary>
+      <returns>Входной поток.</returns>
+    </member><member name="P:Windows.Devices.Custom.CustomDevice.OutputStream">
+      <summary>Выходной поток.</summary>
+      <returns>Выходной поток.</returns>
+    </member><member name="M:Windows.Devices.Custom.CustomDevice.FromIdAsync(System.String,Windows.Devices.Custom.DeviceAccessMode,Windows.Devices.Custom.DeviceSharingMode)">
+      <summary>Создает объект CustomDevice асинхронно для указанного свойства DeviceInformation.Id.</summary>
+      <capability type="optical">Требуется приложениям для доступа к функциям оптических дисководов, таких как CD, DVD и Blu-ray.</capability>
+      <returns>Возвращает пользовательское устройство.</returns>
+      <param name="deviceId">DeviceInformation.Id устройства.</param>
+      <param name="desiredAccess">Требуемый доступ.</param>
+      <param name="sharingMode">Режим общего доступа.</param>
+    </member><member name="M:Windows.Devices.Custom.CustomDevice.GetDeviceSelector(System.Guid)">
+      <summary>Получает селектор устройства.</summary>
+      <returns>Селектор устройства.</returns>
+      <param name="classGuid">GUID класса интерфейсов устройства интерфейса устройства, для которого будет создано средство выбора устройств.</param>
+    </member><member name="M:Windows.Devices.Custom.CustomDevice.SendIOControlAsync(Windows.Devices.Custom.IIOControlCode,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)">
+      <summary>Отправляет код элемента управления ввода-вывода.</summary>
+      <returns>Результат асинхронной операции.</returns>
+      <param name="ioControlCode">Код элемента управления ввода-вывода.</param>
+      <param name="inputBuffer">Входной буфер.</param>
+      <param name="outputBuffer">Выходной буфер.</param>
+    </member><member name="M:Windows.Devices.Custom.CustomDevice.TrySendIOControlAsync(Windows.Devices.Custom.IIOControlCode,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)">
+      <summary>Отправляет код элемента управления ввода-вывода. Возвращает значение, указывающее, успешно ли выполнена операция.</summary>
+      <returns>Значение true, если операция выполнена успешно; в противном случае — значение false.</returns>
+      <param name="ioControlCode">Код элемента управления ввода-вывода.</param>
+      <param name="inputBuffer">Входной буфер.</param>
+      <param name="outputBuffer">Выходной буфер.</param>
+    </member><member name="T:Windows.Devices.Custom.DeviceAccessMode">
+      <summary>Режим доступа к устройству.</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceAccessMode.Read">
+      <summary>Доступ для чтения.</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceAccessMode.ReadWrite">
+      <summary>Доступ на чтение и запись.</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceAccessMode.Write">
+      <summary>Доступ для записи.</summary>
+    </member><member name="T:Windows.Devices.Custom.DeviceSharingMode">
+      <summary>Режим общего доступа к устройству.</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceSharingMode.Exclusive">
+      <summary>Устройство является эксклюзивным.</summary>
+    </member><member name="F:Windows.Devices.Custom.DeviceSharingMode.Shared">
+      <summary>Устройство является общим.</summary>
+    </member><member name="T:Windows.Devices.Custom.IIOControlCode">
+      <summary>Представляет код элемента управления ввода-вывода.</summary>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.AccessMode">
+      <summary>Режим доступа.</summary>
+      <returns>Режим доступа.</returns>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.BufferingMethod">
+      <summary>Метод буферизации.</summary>
+      <returns>Метод буферизации.</returns>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.ControlCode">
+      <summary>Код элемента управления.</summary>
+      <returns>Код элемента управления.</returns>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.DeviceType">
+      <summary>Тип устройства.</summary>
+      <returns>Тип устройства.</returns>
+    </member><member name="P:Windows.Devices.Custom.IIOControlCode.Function">
+      <summary>Функция.</summary>
+      <returns>Функция.</returns>
+    </member><member name="T:Windows.Devices.Custom.IOControlAccessMode">
+      <summary>Определяет режим доступа.</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlAccessMode.Any">
+      <summary>Любой режим.</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlAccessMode.Read">
+      <summary>Режим чтения.</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlAccessMode.ReadWrite">
+      <summary>Режим чтения/записи.</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlAccessMode.Write">
+      <summary>Режим записи.</summary>
+    </member><member name="T:Windows.Devices.Custom.IOControlBufferingMethod">
+      <summary>Определяет метод буферизации.</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlBufferingMethod.Buffered">
+      <summary>С буферизацией.</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlBufferingMethod.DirectInput">
+      <summary>Прямой ввод.</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlBufferingMethod.DirectOutput">
+      <summary>Прямой вывод.</summary>
+    </member><member name="F:Windows.Devices.Custom.IOControlBufferingMethod.Neither">
+      <summary>Ни то, ни другое.</summary>
+    </member><member name="T:Windows.Devices.Custom.IOControlCode">
+      <summary>Представляет код элемента управления.</summary>
+    </member><member name="M:Windows.Devices.Custom.IOControlCode.#ctor(System.UInt16,System.UInt16,Windows.Devices.Custom.IOControlAccessMode,Windows.Devices.Custom.IOControlBufferingMethod)">
+      <summary>Код элемента управления.</summary>
+      <param name="deviceType">Тип устройства.</param>
+      <param name="function">Функция устройства.</param>
+      <param name="accessMode">Режим доступа.</param>
+      <param name="bufferingMethod">Метод буферизации.</param>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.AccessMode">
+      <summary>Режим доступа.</summary>
+      <returns>Режим доступа.</returns>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.BufferingMethod">
+      <summary>Метод буферизации.</summary>
+      <returns>Метод буферизации.</returns>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.ControlCode">
+      <summary>Код элемента управления.</summary>
+      <returns>Код элемента управления.</returns>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.DeviceType">
+      <summary>Тип устройства.</summary>
+      <returns>Тип устройства.</returns>
+    </member><member name="P:Windows.Devices.Custom.IOControlCode.Function">
+      <summary>Функция.</summary>
+      <returns>Функция.</returns>
+    </member><member name="T:Windows.Devices.Custom.KnownDeviceTypes">
+      <summary>Представляет известные типы устройств.</summary>
+    </member><member name="P:Windows.Devices.Custom.KnownDeviceTypes.Unknown">
+      <summary>Определен поставщиком устройства.</summary>
+      <returns>Определен поставщиком устройства.</returns>
+    </member></members>
+</doc>

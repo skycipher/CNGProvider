@@ -1,0 +1,1162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Foundation.FoundationContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Foundation.AsyncActionCompletedHandler">
+      <summary>非同期アクションの完了イベントを処理するメソッドを表します。</summary>
+      <param name="asyncInfo">非同期アクション。</param>
+      <param name="asyncStatus">列挙値の 1 つ。</param>
+    </member><member name="T:Windows.Foundation.AsyncActionProgressHandler`1">
+      <summary>進行状況の更新を提供する非同期アクションの進行状況の更新イベントを処理するメソッドを表します。</summary>
+      <typeparam name="TProgress">進行状況に関する情報。</typeparam>
+      <param name="asyncInfo">非同期アクション。</param>
+      <param name="progressInfo">進行状況に関する情報。</param>
+    </member><member name="T:Windows.Foundation.AsyncActionWithProgressCompletedHandler`1">
+      <summary>進行状況の更新を提供する非同期アクションの完了イベントを処理するメソッドを表します。</summary>
+      <typeparam name="TProgress">進行状況に関する情報。</typeparam>
+      <param name="asyncInfo">非同期アクション。</param>
+      <param name="asyncStatus">列挙値の 1 つ。</param>
+    </member><member name="T:Windows.Foundation.AsyncOperationCompletedHandler`1">
+      <summary>非同期操作の完了イベントを処理するメソッドを表します。</summary>
+      <typeparam name="TResult">結果。</typeparam>
+      <param name="asyncInfo">非同期操作。</param>
+      <param name="asyncStatus">列挙値の 1 つ。</param>
+    </member><member name="T:Windows.Foundation.AsyncOperationProgressHandler`2">
+      <summary>進行状況の更新を提供する非同期操作の進行状況の更新イベントを処理するメソッドを表します。</summary>
+      <typeparam name="TResult">結果。</typeparam>
+      <typeparam name="TProgress">進行状況に関する情報。</typeparam>
+      <param name="asyncInfo">非同期操作。</param>
+      <param name="progressInfo">進行状況に関する情報。</param>
+    </member><member name="T:Windows.Foundation.AsyncOperationWithProgressCompletedHandler`2">
+      <summary>進行状況の更新を提供する非同期操作の完了イベントを処理するメソッドを表します。</summary>
+      <typeparam name="TResult">結果。</typeparam>
+      <typeparam name="TProgress">進行状況に関する情報。</typeparam>
+      <param name="asyncInfo">非同期操作。</param>
+      <param name="asyncStatus">列挙値の 1 つ。</param>
+    </member><member name="T:Windows.Foundation.AsyncStatus">
+      <summary>非同期操作のステータスを指定します。</summary>
+    </member><member name="F:Windows.Foundation.AsyncStatus.Canceled">
+      <summary>操作は取り消されました。</summary>
+    </member><member name="F:Windows.Foundation.AsyncStatus.Completed">
+      <summary>操作は完了しました。</summary>
+    </member><member name="F:Windows.Foundation.AsyncStatus.Error">
+      <summary>操作でエラーが発生しました。</summary>
+    </member><member name="F:Windows.Foundation.AsyncStatus.Started">
+      <summary>操作は開始しました。</summary>
+    </member><member name="T:Windows.Foundation.DateTime">
+      <summary>通常、日付や時刻として表現される瞬間を表します。</summary>
+    </member><member name="F:Windows.Foundation.DateTime.UniversalTime">
+      <summary>1601 年 1 月 1 日 (グレゴリオ暦) の午前 0 時前後の 100 ナノ秒の間隔の数値として特定の時点を表す 64 ビットの符号付き整数。</summary>
+    </member><member name="T:Windows.Foundation.Deferral">
+      <summary>遅延が完了すると呼び出される DeferralCompletedHandler を保存し、遅延の状態を操作します。</summary>
+    </member><member name="M:Windows.Foundation.Deferral.#ctor(Windows.Foundation.DeferralCompletedHandler)">
+      <summary>新しい Deferral オブジェクトを初期化し、遅延の完了時に呼び出される DeferralCompletedHandler を指定します。</summary>
+      <param name="handler">遅延の完了時に呼び出される DeferralCompletedHandler。</param>
+    </member><member name="M:Windows.Foundation.Deferral.Close">
+      <summary>DeferralCompletedHandler がまだ呼び出されていない場合、これによって呼び出され、デリゲートへの参照が削除されます。</summary>
+    </member><member name="M:Windows.Foundation.Deferral.Complete">
+      <summary>DeferralCompletedHandler がまだ呼び出されていない場合、これによって呼び出され、デリゲートへの参照が削除されます。</summary>
+    </member><member name="T:Windows.Foundation.DeferralCompletedHandler">
+      <summary>遅延したアクションの完了イベントを処理するメソッドを表します。</summary>
+    </member><member name="T:Windows.Foundation.EventHandler`1">
+      <summary>一般的なイベントを処理するメソッドを表します。</summary>
+      <typeparam name="T">イベントにより生成されるイベント データの型。</typeparam>
+      <param name="sender">イベント ソース。</param>
+      <param name="args">イベントのデータ。</param>
+    </member><member name="T:Windows.Foundation.EventRegistrationToken">
+      <summary>変更通知を受け取るデリゲートへの参照を表します。</summary>
+    </member><member name="F:Windows.Foundation.EventRegistrationToken.Value">
+      <summary>デリゲートへの参照。</summary>
+    </member><member name="T:Windows.Foundation.HResult">
+      <summary>Windows ランタイム エラーを表します。</summary>
+    </member><member name="F:Windows.Foundation.HResult.Value">
+      <summary>エラーを説明する整数です。</summary>
+    </member><member name="T:Windows.Foundation.IAsyncAction">
+      <summary>非同期アクションを表します。 これが、結果オブジェクトを返さず、進行状況を報告しない、多くの Windows ランタイム非同期メソッドの戻り値の型です。</summary>
+    </member><member name="P:Windows.Foundation.IAsyncAction.Completed">
+      <summary>アクションの完了通知を処理するメソッドを取得または設定します。</summary>
+      <returns>通知を処理するメソッド。</returns>
+    </member><member name="M:Windows.Foundation.IAsyncAction.GetResults">
+      <summary>アクションの結果を返します。</summary>
+    </member><member name="T:Windows.Foundation.IAsyncActionWithProgress`1">
+      <summary>進行状況の更新を呼び出し元に報告する非同期アクションを表します。 これが、結果オブジェクトを返さないが、リスナーをコールバックするために進行状況を報告する、多くの Windows ランタイム非同期メソッドの戻り値の型です。</summary>
+      <typeparam name="TProgress">進行状況のデータの型。</typeparam>
+    </member><member name="P:Windows.Foundation.IAsyncActionWithProgress`1.Completed">
+      <summary>アクションの完了通知を処理するメソッドを取得または設定します。</summary>
+      <returns>通知を処理するメソッド。</returns>
+    </member><member name="P:Windows.Foundation.IAsyncActionWithProgress`1.Progress">
+      <summary>進行状況の通知をコールバックするメソッドを取得または設定します。</summary>
+      <returns>進行状況の通知を処理するコールバック メソッドへの参照。 AsyncActionProgressHandler(TProgress) デリゲートを実装して、コールバックを定義します。 TProgress は、メソッドの実装によって変化する進行状況の単位の種類を定義します。</returns>
+    </member><member name="M:Windows.Foundation.IAsyncActionWithProgress`1.GetResults">
+      <summary>アクションの結果を返します。</summary>
+    </member><member name="T:Windows.Foundation.IAsyncInfo">
+      <summary>非同期アクションおよび非同期操作をサポートします。
+IAsyncInfo は、戻り値の型の組み合わせと非同期メソッドの進行状況をそれぞれサポートする、IAsyncAction、IAsyncActionWithProgress&lt;TProgress&gt;、IAsyncOperation&lt;TResult&gt;、および IAsyncOperationWithProgress&lt;TResult,TProgress&gt; の基本インターフェイスです。</summary>
+    </member><member name="P:Windows.Foundation.IAsyncInfo.ErrorCode">
+      <summary>非同期操作のエラー条件を説明する文字列を取得します。</summary>
+      <returns>エラー文字列。</returns>
+    </member><member name="P:Windows.Foundation.IAsyncInfo.Id">
+      <summary>非同期操作のハンドルを取得します。</summary>
+      <returns>非同期操作のハンドル。</returns>
+    </member><member name="P:Windows.Foundation.IAsyncInfo.Status">
+      <summary>非同期操作のステータスを示す値を取得します。</summary>
+      <returns>操作の状態を表す列挙値。 Completed の値は、メソッドが戻ったことを示します。 Started 値は、メソッドの呼び出しによって判定できる他の 3 つの最終結果 (Completed、Error、Canceled) のいずれかの前の変換状態を表します。</returns>
+    </member><member name="M:Windows.Foundation.IAsyncInfo.Cancel">
+      <summary>非同期操作を取り消します。</summary>
+    </member><member name="M:Windows.Foundation.IAsyncInfo.Close">
+      <summary>非同期操作を終了します。</summary>
+    </member><member name="T:Windows.Foundation.IAsyncOperation`1">
+      <summary>完了時に結果を返す非同期操作を表します。 これが、結果を返すが進行状況は報告しない、多くの Windows ランタイム非同期メソッドの戻り値の型です。</summary>
+      <typeparam name="TResult">結果の型。</typeparam>
+    </member><member name="P:Windows.Foundation.IAsyncOperation`1.Completed">
+      <summary>操作の完了通知を処理するメソッドを取得または設定します。</summary>
+      <returns>通知を処理するメソッド。</returns>
+    </member><member name="M:Windows.Foundation.IAsyncOperation`1.GetResults">
+      <summary>操作の結果を返します。</summary>
+      <returns>演算の結果。</returns>
+    </member><member name="T:Windows.Foundation.IAsyncOperationWithProgress`2">
+      <summary>進行状況の更新を呼び出し元に報告する非同期操作を表します。 これが、結果を返し、進行状況を報告する、多くの Windows ランタイム非同期メソッドの戻り値の型です。</summary>
+      <typeparam name="TResult">結果の型。</typeparam>
+      <typeparam name="TProgress">進行状況のデータの型。</typeparam>
+    </member><member name="P:Windows.Foundation.IAsyncOperationWithProgress`2.Completed">
+      <summary>操作の完了通知を処理するメソッドを取得または設定します。</summary>
+      <returns>通知を処理するメソッド。</returns>
+    </member><member name="P:Windows.Foundation.IAsyncOperationWithProgress`2.Progress">
+      <summary>進行状況の通知を処理するメソッドを取得または設定します。</summary>
+      <returns>進行状況の通知を処理するコールバック メソッドへの参照。 AsyncOperationProgressHandler&lt;TResult, TProgress&gt; デリゲートを実装して、コールバックを定義します。 TProgress は、メソッドの実装によって変化する進行状況の単位の種類を定義します。</returns>
+    </member><member name="M:Windows.Foundation.IAsyncOperationWithProgress`2.GetResults">
+      <summary>操作の結果を返します。</summary>
+      <returns>演算の結果。</returns>
+    </member><member name="T:Windows.Foundation.IClosable">
+      <summary>割り当てられたリソースを解放するメソッドを定義します。</summary>
+    </member><member name="M:Windows.Foundation.IClosable.Close">
+      <summary>Windows ランタイム オブジェクトによって公開されているシステム リソースを開放します。</summary>
+    </member><member name="T:Windows.Foundation.IPropertyValue">
+      <summary>プロパティ ストア内にある値を表します。 このインターフェイスは実装できません。「解説」を参照してください。</summary>
+    </member><member name="P:Windows.Foundation.IPropertyValue.IsNumericScalar">
+      <summary>プロパティ値がスカラー値であるかどうかを示す値を取得します。</summary>
+      <returns>値がスカラーである場合は true。それ以外の場合は false。</returns>
+    </member><member name="P:Windows.Foundation.IPropertyValue.Type">
+      <summary>プロパティ値に保存されている型を返します。</summary>
+      <returns>プロパティ値に格納された型。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetBoolean">
+      <summary>プロパティ値として保存されているブール値を返します。</summary>
+      <returns>値。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetBooleanArray(System.Boolean[]@)">
+      <summary>プロパティ値として保存されているブール値の配列を返します。</summary>
+      <param name="value">値の配列。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetChar16">
+      <summary>プロパティ値として保存されている Unicode 文字を返します。</summary>
+      <returns>値。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetChar16Array(System.Char[]@)">
+      <summary>プロパティ値として保存されている Unicode 文字の配列を返します。</summary>
+      <param name="value">値の配列。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetDateTime">
+      <summary>プロパティ値として保存されている日付と時刻の値を返します。</summary>
+      <returns>値。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetDateTimeArray(Windows.Foundation.DateTime[]@)">
+      <summary>プロパティ値として保存されている日付と時刻の値の配列を返します。</summary>
+      <param name="value">値の配列。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetDouble">
+      <summary>プロパティ値として保存されている浮動小数点値を返します。</summary>
+      <returns>値。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetDoubleArray(System.Double[]@)">
+      <summary>プロパティ値として保存されている浮動小数点値の配列を返します。</summary>
+      <param name="value">値の配列。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetGuid">
+      <summary>プロパティ値として保存されている GUID 値を返します。</summary>
+      <returns>値。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetGuidArray(System.Guid[]@)">
+      <summary>プロパティ値として保存されている GUID 値の配列を返します。</summary>
+      <param name="value">値の配列。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInspectableArray(System.Object[]@)">
+      <summary>プロパティ値として保存されている検査可能オブジェクトの配列を返します。</summary>
+      <param name="value">オブジェクトの配列。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt16">
+      <summary>プロパティ値として保存されている整数値を返します。</summary>
+      <returns>値。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt16Array(System.Int16[]@)">
+      <summary>プロパティ値として保存されている整数値の配列を返します。</summary>
+      <param name="value">値の配列。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt32">
+      <summary>プロパティ値として保存されている整数値を返します。</summary>
+      <returns>値。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt32Array(System.Int32[]@)">
+      <summary>プロパティ値として保存されている整数値の配列を返します。</summary>
+      <param name="value">値の配列。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt64">
+      <summary>プロパティ値として保存されている整数値を返します。</summary>
+      <returns>値。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetInt64Array(System.Int64[]@)">
+      <summary>プロパティ値として保存されている整数値の配列を返します。</summary>
+      <param name="value">値の配列。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetPoint">
+      <summary>プロパティ値として保存されている点構造体を返します。</summary>
+      <returns>構造体。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetPointArray(Windows.Foundation.Point[]@)">
+      <summary>プロパティ値として保存されている点構造体の配列を返します。</summary>
+      <param name="value">構造体の配列。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetRect">
+      <summary>プロパティ値として保存されている四角形構造体を返します。</summary>
+      <returns>構造体。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetRectArray(Windows.Foundation.Rect[]@)">
+      <summary>プロパティ値として保存されている四角形構造体の配列を返します。</summary>
+      <param name="value">構造体の配列。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetSingle">
+      <summary>プロパティ値として保存されている浮動小数点値を返します。</summary>
+      <returns>値。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetSingleArray(System.Single[]@)">
+      <summary>プロパティ値として保存されている浮動小数点値の配列を返します。</summary>
+      <param name="value">値の配列。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetSize">
+      <summary>プロパティ値として保存されているサイズ構造体を返します。</summary>
+      <returns>構造体。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetSizeArray(Windows.Foundation.Size[]@)">
+      <summary>プロパティ値として保存されているサイズ構造体の配列を返します。</summary>
+      <param name="value">構造体の配列。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetString">
+      <summary>プロパティ値として保存されている文字列値を返します。</summary>
+      <returns>値。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetStringArray(System.String[]@)">
+      <summary>プロパティ値として保存されている文字列値の配列を返します。</summary>
+      <param name="value">値の配列。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetTimeSpan">
+      <summary>プロパティ値として保存されている時間間隔値を返します。</summary>
+      <returns>値。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetTimeSpanArray(Windows.Foundation.TimeSpan[]@)">
+      <summary>プロパティ値として保存されている時間間隔値の配列を返します。</summary>
+      <param name="value">値の配列。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt16">
+      <summary>プロパティ値として保存されている符号なし整数値を返します。</summary>
+      <returns>値。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt16Array(System.UInt16[]@)">
+      <summary>プロパティ値として保存されている符号なし整数値の配列を返します。</summary>
+      <param name="value">値の配列。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt32">
+      <summary>プロパティ値として保存されている符号なし整数値を返します。</summary>
+      <returns>値。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt32Array(System.UInt32[]@)">
+      <summary>プロパティ値として保存されている符号なし整数値の配列を返します。</summary>
+      <param name="value">値の配列。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt64">
+      <summary>プロパティ値として保存されている符号なし整数値を返します。</summary>
+      <returns>値。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt64Array(System.UInt64[]@)">
+      <summary>プロパティ値として保存されている符号なし整数値の配列を返します。</summary>
+      <param name="value">値の配列。</param>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt8">
+      <summary>プロパティ値として保存されているバイト値を返します。</summary>
+      <returns>値。</returns>
+    </member><member name="M:Windows.Foundation.IPropertyValue.GetUInt8Array(System.Byte[]@)">
+      <summary>プロパティ値として保存されているバイト値の配列を返します。</summary>
+      <param name="value">値の配列。</param>
+    </member><member name="T:Windows.Foundation.IReference`1">
+      <summary>任意の列挙型、構造体、およびデリゲート型をプロパティ値として使用できるようにします。</summary>
+      <typeparam name="T">型。</typeparam>
+    </member><member name="P:Windows.Foundation.IReference`1.Value">
+      <summary>IPropertyValue で表される型を取得します。</summary>
+      <returns>型。</returns>
+    </member><member name="T:Windows.Foundation.IReferenceArray`1">
+      <summary>任意の列挙型、構造体、およびデリゲート型をプロパティ値の配列として使用できるようにします。 このインターフェイスは実装できません。「解説」を参照してください。</summary>
+      <typeparam name="T">型。</typeparam>
+    </member><member name="P:Windows.Foundation.IReferenceArray`1.Value">
+      <summary>IPropertyValue 配列で表される型を取得します。</summary>
+      <returns>型。</returns>
+    </member><member name="T:Windows.Foundation.IStringable">
+      <summary>現在のオブジェクトを文字列として表す方法を提供します。</summary>
+    </member><member name="M:Windows.Foundation.IStringable.ToString">
+      <summary>現在のオブジェクトを表す文字列を取得します。</summary>
+      <returns>現在のオブジェクトを表す文字列。</returns>
+    </member><member name="T:Windows.Foundation.Point">
+      <summary>2 次元平面内で点を定義する、x 座標と y 座標の値を表します。</summary>
+    </member><member name="F:Windows.Foundation.Point.X">
+      <summary>点の水平位置。</summary>
+    </member><member name="F:Windows.Foundation.Point.Y">
+      <summary>点の垂直位置。</summary>
+    </member><member name="T:Windows.Foundation.PropertyType">
+      <summary>プロパティ値の型を指定します。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Boolean">
+      <summary>true または false のみになる値。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.BooleanArray">
+      <summary>Boolean 値の配列。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Char16">
+      <summary>符号なし 16 ビット (2 バイトの) コード ポイントです。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Char16Array">
+      <summary>Char 値の配列。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.DateTime">
+      <summary>通常、日付や時刻として表現される瞬間の時間。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.DateTimeArray">
+      <summary>DateTime 値の配列。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Double">
+      <summary>符号付き 64 ビット (8 バイト) 浮動小数点数。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.DoubleArray">
+      <summary>Double 値の配列。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Empty">
+      <summary>種類が指定されていません。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Guid">
+      <summary>グローバル一意識別子。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.GuidArray">
+      <summary>Guid 値の配列。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Inspectable">
+      <summary>IInspectable インターフェイスを実装するオブジェクト。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.InspectableArray">
+      <summary>Inspectable 値の配列。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int16">
+      <summary>符号付き 16 ビット (2 バイト) 整数。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int16Array">
+      <summary>Int16 値の配列。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int32">
+      <summary>符号付き 32 ビット (4 バイト) 整数。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int32Array">
+      <summary>Int32 値の配列。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int64">
+      <summary>符号付き 64 ビット (8 バイト) 整数。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Int64Array">
+      <summary>Int64 値の配列。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.OtherType">
+      <summary>この列挙で指定されない型。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.OtherTypeArray">
+      <summary>指定されていないタイプの配列です。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Point">
+      <summary>2 次元平面に点を定義する順序付けされた浮動小数点座標ペア (x 座標と y 座標)。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.PointArray">
+      <summary>Point 構造体の配列です。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Rect">
+      <summary>四角形の位置とサイズを表す 4 つの浮動小数点数。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.RectArray">
+      <summary>Rect 構造体の配列。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Single">
+      <summary>符号付き 32 ビット (4 バイト) 浮動小数点数。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.SingleArray">
+      <summary>Single 値の配列。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.Size">
+      <summary>高さおよび幅を指定する浮動小数点数の順序ありペアです。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.SizeArray">
+      <summary>Size 構造体の配列。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.String">
+      <summary>Windows ランタイム HSTRING。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.StringArray">
+      <summary>String 値の配列。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.TimeSpan">
+      <summary>時間間隔。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.TimeSpanArray">
+      <summary>TimeSpan 値の配列。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt16">
+      <summary>符号なし 16 ビット (2 バイト) 整数。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt16Array">
+      <summary>UInt16 値の配列。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt32">
+      <summary>符号なし 32 ビット (4 バイト) 整数。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt32Array">
+      <summary>UInt32 値の配列。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt64">
+      <summary>符号なし 64 ビット (8 バイト) 整数。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt64Array">
+      <summary>UInt64 値の配列。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt8">
+      <summary>バイト。</summary>
+    </member><member name="F:Windows.Foundation.PropertyType.UInt8Array">
+      <summary>Byte 値の配列。</summary>
+    </member><member name="T:Windows.Foundation.PropertyValue">
+      <summary>プロパティ ストアから値を表します (PropertySet インスタンスなど)。</summary>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateBoolean(System.Boolean)">
+      <summary>ブール値からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する値。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateBooleanArray(System.Boolean[])">
+      <summary>ブール値の配列からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する配列。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateChar16(System.Char)">
+      <summary>Unicode 文字からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する値。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateChar16Array(System.Char[])">
+      <summary>Unicode 文字の配列からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する配列。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateDateTime(Windows.Foundation.DateTime)">
+      <summary>日および時間値からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する値。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateDateTimeArray(Windows.Foundation.DateTime[])">
+      <summary>日および時間値の配置からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する配列。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateDouble(System.Double)">
+      <summary>浮動小数点値からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する値。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateDoubleArray(System.Double[])">
+      <summary>浮動小数点の配置からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する配列。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateEmpty">
+      <summary>空のプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateGuid(System.Guid)">
+      <summary>GUID からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する値。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateGuidArray(System.Guid[])">
+      <summary>GUID の配列からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する配列。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInspectable(System.Object)">
+      <summary>検査可能なオブジェクトからプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納するオブジェクト。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInspectableArray(System.Object[])">
+      <summary>検査可能なオブジェクトの配列からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する配列。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt16(System.Int16)">
+      <summary>整数からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する値。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt16Array(System.Int16[])">
+      <summary>整数の配列からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する配列。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt32(System.Int32)">
+      <summary>整数からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する値。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt32Array(System.Int32[])">
+      <summary>整数の配列からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する配列。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt64(System.Int64)">
+      <summary>整数からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する値。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateInt64Array(System.Int64[])">
+      <summary>整数の配列からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する配列。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreatePoint(Windows.Foundation.Point)">
+      <summary>点構造体からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する構造体。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreatePointArray(Windows.Foundation.Point[])">
+      <summary>点構造体の配置からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する配列。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateRect(Windows.Foundation.Rect)">
+      <summary>四角形構造体からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する構造体。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateRectArray(Windows.Foundation.Rect[])">
+      <summary>四角形構造体の配置からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する配列。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateSingle(System.Single)">
+      <summary>浮動小数点値からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する値。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateSingleArray(System.Single[])">
+      <summary>浮動小数点の配置からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する配列。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateSize(Windows.Foundation.Size)">
+      <summary>サイズ構造体からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する構造体。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateSizeArray(Windows.Foundation.Size[])">
+      <summary>サイズ構造体の配置からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する配列。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateString(System.String)">
+      <summary>文字列からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する文字列。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateStringArray(System.String[])">
+      <summary>文字列の配列からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する配列。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateTimeSpan(Windows.Foundation.TimeSpan)">
+      <summary>時間間隔からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する時間間隔。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateTimeSpanArray(Windows.Foundation.TimeSpan[])">
+      <summary>時間間隔の配列からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する配列。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt16(System.UInt16)">
+      <summary>符号なし整数からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する値。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt16Array(System.UInt16[])">
+      <summary>符号なし整数の配列からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する配列。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt32(System.UInt32)">
+      <summary>符号なし整数からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する値。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt32Array(System.UInt32[])">
+      <summary>符号なし整数の配列からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する配列。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt64(System.UInt64)">
+      <summary>符号なし整数からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する値。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt64Array(System.UInt64[])">
+      <summary>符号なし整数の配列からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する配列。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt8(System.Byte)">
+      <summary>バイトからプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する値。</param>
+    </member><member name="M:Windows.Foundation.PropertyValue.CreateUInt8Array(System.Byte[])">
+      <summary>バイトの配列からプロパティ値を作成します。</summary>
+      <returns>プロパティ値。</returns>
+      <param name="value">プロパティ値に格納する配列。</param>
+    </member><member name="T:Windows.Foundation.Rect">
+      <summary>四角形の位置とサイズを表す数値を格納します。</summary>
+    </member><member name="F:Windows.Foundation.Rect.Height">
+      <summary>四角形の高さ (ピクセル単位)。</summary>
+    </member><member name="F:Windows.Foundation.Rect.Width">
+      <summary>四角形の幅 (ピクセル単位)。</summary>
+    </member><member name="F:Windows.Foundation.Rect.X">
+      <summary>四角形の左上隅の x 座標。</summary>
+    </member><member name="F:Windows.Foundation.Rect.Y">
+      <summary>四角形の左上隅の y 座標。</summary>
+    </member><member name="T:Windows.Foundation.Size">
+      <summary>高さと幅を指定する数値を表します。</summary>
+    </member><member name="F:Windows.Foundation.Size.Height">
+      <summary>高さ。</summary>
+    </member><member name="F:Windows.Foundation.Size.Width">
+      <summary>幅。</summary>
+    </member><member name="T:Windows.Foundation.TimeSpan">
+      <summary>時間間隔を署名済み 64 ビット整数値として表します。</summary>
+    </member><member name="F:Windows.Foundation.TimeSpan.Duration">
+      <summary>100 ナノ秒単位で表される期間。</summary>
+    </member><member name="T:Windows.Foundation.TypedEventHandler`2">
+      <summary>一般的なイベントを処理するメソッドを表します。</summary>
+      <typeparam name="TSender">オブジェクトの型。</typeparam>
+      <typeparam name="TResult">イベントにより生成されるイベント データの型。</typeparam>
+      <param name="sender">イベント ソース。</param>
+      <param name="args">イベントのデータ。 イベント データが存在しない場合、このパラメーターは null になります。</param>
+    </member><member name="T:Windows.Foundation.Collections.CollectionChange">
+      <summary>コレクションに変更を発生させる操作について説明します。</summary>
+    </member><member name="F:Windows.Foundation.Collections.CollectionChange.ItemChanged">
+      <summary>コレクション内の項目が変更されます。</summary>
+    </member><member name="F:Windows.Foundation.Collections.CollectionChange.ItemInserted">
+      <summary>項目がコレクションに追加されます。</summary>
+    </member><member name="F:Windows.Foundation.Collections.CollectionChange.ItemRemoved">
+      <summary>コレクションから項目が削除されます。</summary>
+    </member><member name="F:Windows.Foundation.Collections.CollectionChange.Reset">
+      <summary>コレクションが変更されました。</summary>
+    </member><member name="T:Windows.Foundation.Collections.IIterable`1">
+      <summary>指定した型のコレクションに対する単純な反復処理をサポートする反復子を公開します。</summary>
+      <typeparam name="T">反復するオブジェクトの型。</typeparam>
+    </member><member name="M:Windows.Foundation.Collections.IIterable`1.First">
+      <summary>コレクション内の項目の反復子を返します。</summary>
+      <returns>反復子。</returns>
+    </member><member name="T:Windows.Foundation.Collections.IIterator`1">
+      <summary>コレクションに対する単純な反復処理をサポートします。</summary>
+      <typeparam name="T">反復するオブジェクトの型。</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IIterator`1.Current">
+      <summary>コレクション内の現在の項目を取得します。</summary>
+      <returns>コレクション内の現在の項目。</returns>
+    </member><member name="P:Windows.Foundation.Collections.IIterator`1.HasCurrent">
+      <summary>反復子が現在の項目を参照しているか、またはコレクションの末尾にあるかどうかを示す値を取得します。</summary>
+      <returns>反復子がコレクション内の有効な項目を参照している場合は true。それ以外の場合は false。</returns>
+    </member><member name="M:Windows.Foundation.Collections.IIterator`1.GetMany(`0[])">
+      <summary>コレクション内のすべての項目を取得します。</summary>
+      <returns>コレクション内の項目数。</returns>
+      <param name="items">コレクション内の項目。</param>
+    </member><member name="M:Windows.Foundation.Collections.IIterator`1.MoveNext">
+      <summary>反復子をコレクション内の次の項目に進めます。</summary>
+      <returns>反復子がコレクション内の有効な項目を参照している場合は true。反復子がコレクションの最後を通過した場合は false。</returns>
+    </member><member name="T:Windows.Foundation.Collections.IKeyValuePair`2">
+      <summary>キーと値のペアを表します。 これは、通常、別のジェネリック インターフェイスの制約を満たすために 2 つの型パラメーターを 1 つにカプセル化する必要がある場合に制約の型として使用します。</summary>
+      <typeparam name="K">それぞれのキーと値のペアのキーの型。</typeparam>
+      <typeparam name="V">それぞれのキーと値のペアの値の型。</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IKeyValuePair`2.Key">
+      <summary>キーと値のペアのキーを取得します。</summary>
+      <returns>キー。</returns>
+    </member><member name="P:Windows.Foundation.Collections.IKeyValuePair`2.Value">
+      <summary>キー/値ペアの値を取得します。</summary>
+      <returns>値。</returns>
+    </member><member name="T:Windows.Foundation.Collections.IMap`2">
+      <summary>関連するコレクション ("マップ" または "辞書" とも呼ばれます) を表します。</summary>
+      <typeparam name="K">マップ内のキーの型。</typeparam>
+      <typeparam name="V">マップ内の値の型。</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IMap`2.Size">
+      <summary>マップ内の項目数を取得します。</summary>
+      <returns>マップ内の項目数。</returns>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.Clear">
+      <summary>マップからすべての項目を削除します。</summary>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.GetView">
+      <summary>マップを示す変更不可のビューを返します。</summary>
+      <returns>マップのビュー。</returns>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.HasKey(`0)">
+      <summary>指定したキーがマップに含まれているかどうかを判断します。</summary>
+      <returns>キーが見つかった場合は true。それ以外の場合は false。</returns>
+      <param name="key">検索する項目に関連付けるキー。</param>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.Insert(`0,`1)">
+      <summary>項目をマップに挿入または置換します。</summary>
+      <returns>指定したキーを持つ項目が既存の項目であり、置換された場合は true。それ以外の場合は false。</returns>
+      <param name="key">挿入する項目に関連付けるキー。</param>
+      <param name="value">挿入する項目。</param>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.Lookup(`0)">
+      <summary>マップ内の指定されたキーにある項目を返します。</summary>
+      <returns>指定したキーに関連付けられている項目。</returns>
+      <param name="key">検索する項目に関連付けるキー。</param>
+    </member><member name="M:Windows.Foundation.Collections.IMap`2.Remove(`0)">
+      <summary>マップから項目を削除します。</summary>
+      <param name="key">削除する項目に関連付けるキー。</param>
+    </member><member name="T:Windows.Foundation.Collections.IMapChangedEventArgs`1">
+      <summary>マップ コレクションの変更イベントに関するデータを提供します。</summary>
+      <typeparam name="K">マップ内のキーの型。</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IMapChangedEventArgs`1.CollectionChange">
+      <summary>マップ内で発生した変更の種類を取得します。</summary>
+      <returns>マップ内の変更の型。</returns>
+    </member><member name="P:Windows.Foundation.Collections.IMapChangedEventArgs`1.Key">
+      <summary>変更された項目のキーを取得します。</summary>
+      <returns>変更された項目のキー。</returns>
+    </member><member name="T:Windows.Foundation.Collections.IMapView`2">
+      <summary>マップに対する変更不可のビューを表します。</summary>
+      <typeparam name="K">マップ内のキーの型。</typeparam>
+      <typeparam name="V">マップ内の値の型。</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IMapView`2.Size">
+      <summary>マップ内の要素数を取得します。</summary>
+      <returns>マップ内の要素数</returns>
+    </member><member name="M:Windows.Foundation.Collections.IMapView`2.HasKey(`0)">
+      <summary>指定したキーがマップ ビューに含まれているかどうかを判断します。</summary>
+      <returns>キーが見つかった場合は true。それ以外の場合は false。</returns>
+      <param name="key">マップ ビューで検索するキー。</param>
+    </member><member name="M:Windows.Foundation.Collections.IMapView`2.Lookup(`0)">
+      <summary>マップ ビュー内の指定されたキーにある項目を返します。</summary>
+      <returns>指定したキーに関連付けられている項目。</returns>
+      <param name="key">マップ ビューで検索するキー。</param>
+    </member><member name="T:Windows.Foundation.Collections.IObservableMap`2">
+      <summary>項目が追加または削除される場合と同様に、マップへの動的な変更をリスナーに通知します。</summary>
+      <typeparam name="K">マップ内のキーの型。</typeparam>
+      <typeparam name="V">マップ内の値の型。</typeparam>
+    </member><member name="E:Windows.Foundation.Collections.IObservableMap`2.MapChanged">
+      <summary>マップが変更されたときに発生します。</summary>
+    </member><member name="T:Windows.Foundation.Collections.IObservableVector`1">
+      <summary>ベクターへの変更をリスナーに知らせます。</summary>
+      <typeparam name="T">ベクター内の値の型。</typeparam>
+    </member><member name="E:Windows.Foundation.Collections.IObservableVector`1.VectorChanged">
+      <summary>ベクターが変更されたときに発生します。</summary>
+    </member><member name="T:Windows.Foundation.Collections.IPropertySet">
+      <summary>他のいくつかのコレクション インターフェイスを関連付けるキーと値のペアのコレクションを表します。</summary>
+    </member><member name="T:Windows.Foundation.Collections.IVector`1">
+      <summary>要素のランダム アクセス コレクションを表します。</summary>
+      <typeparam name="T">ベクター内の値の型。</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IVector`1.Size">
+      <summary>ベクター内の項目数を取得します。</summary>
+      <returns>ベクター内の項目数。</returns>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.Append(`0)">
+      <summary>アイテムをベクターの末尾に追加します。</summary>
+      <param name="value">ベクターに追加する項目。</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.Clear">
+      <summary>ベクターからすべての項目を削除します。</summary>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.GetAt(System.UInt32)">
+      <summary>ベクター内の指定されたインデックス位置にある項目を返します。</summary>
+      <returns>指定したインデックスにある項目。</returns>
+      <param name="index">項目の 0 から始まるインデックス番号。</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.GetView">
+      <summary>ベクターを示す変更不可のビューを返します。</summary>
+      <returns>ベクターのビュー。</returns>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.IndexOf(`0,System.UInt32@)">
+      <summary>ベクター内の指定した項目のインデックスを取得します。</summary>
+      <returns>項目が見つかった場合は true。それ以外の場合は false。</returns>
+      <param name="value">ベクター内で検索する項目。</param>
+      <param name="index">項目が見つかった場合は、項目の 0 から始まるインデックス。それ以外の場合は、このパラメーターは 0 になります。</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.InsertAt(System.UInt32,`0)">
+      <summary>ベクター内の指定されたインデックス位置に項目を挿入します。</summary>
+      <param name="index">0 から始まるインデックス番号。</param>
+      <param name="value">挿入する項目。</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.RemoveAt(System.UInt32)">
+      <summary>ベクター内で指定されたインデックス位置にある項目を削除します。</summary>
+      <param name="index">削除するベクター項目の 0 から始まるインデックス。</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.RemoveAtEnd">
+      <summary>ベクターから最後の項目を削除します。</summary>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.ReplaceAll(`0[])">
+      <summary>ベクター内のすべての項目を、指定された項目に置換します。</summary>
+      <param name="items">ベクターに追加する項目のコレクション。</param>
+    </member><member name="M:Windows.Foundation.Collections.IVector`1.SetAt(System.UInt32,`0)">
+      <summary>ベクターの指定されたインデックスに値を設定します。</summary>
+      <param name="index">値を設定する位置の 0 から始まるインデックス番号。</param>
+      <param name="value">設定するアイテム。</param>
+    </member><member name="T:Windows.Foundation.Collections.IVectorChangedEventArgs">
+      <summary>ベクターの変更イベントに関するデータを提供します。</summary>
+    </member><member name="P:Windows.Foundation.Collections.IVectorChangedEventArgs.CollectionChange">
+      <summary>ベクター内で発生した変更の種類を取得します。</summary>
+      <returns>ベクター内の変更の型。</returns>
+    </member><member name="P:Windows.Foundation.Collections.IVectorChangedEventArgs.Index">
+      <summary>ベクター内の変更が発生した位置を取得します。</summary>
+      <returns>ベクター内の変更が発生した 0 から始まる位置 (該当する場合)。</returns>
+    </member><member name="T:Windows.Foundation.Collections.IVectorView`1">
+      <summary>ベクターに対する変更不可のビューを表します。</summary>
+      <typeparam name="T">ベクター内の値の型。</typeparam>
+    </member><member name="P:Windows.Foundation.Collections.IVectorView`1.Size">
+      <summary>ベクター ビュー内の項目数を取得します。</summary>
+      <returns>ベクター ビュー内の項目数。</returns>
+    </member><member name="M:Windows.Foundation.Collections.IVectorView`1.GetAt(System.UInt32)">
+      <summary>ベクター ビュー内の指定されたインデックス位置にある項目を返します。</summary>
+      <returns>指定したインデックスにある項目。</returns>
+      <param name="index">項目の 0 から始まるインデックス番号。</param>
+    </member><member name="M:Windows.Foundation.Collections.IVectorView`1.IndexOf(`0,System.UInt32@)">
+      <summary>ベクター ビュー内の指定した項目のインデックスを取得します。</summary>
+      <returns>項目が見つかった場合は true。それ以外の場合は false。</returns>
+      <param name="value">ベクター ビュー内で検索する項目。</param>
+      <param name="index">項目が見つかった場合は、項目の 0 から始まるインデックス。それ以外の場合は、このパラメーターは 0 になります。</param>
+    </member><member name="T:Windows.Foundation.Collections.MapChangedEventHandler`2">
+      <summary>監視可能なマップの変更イベントを処理するメソッドを表します。</summary>
+      <typeparam name="K">マップ内のキーの型。</typeparam>
+      <typeparam name="V">マップ内の値の型。</typeparam>
+      <param name="sender">変更された観察可能なマップ。</param>
+      <param name="event">マップ内で発生した変更の説明。</param>
+    </member><member name="T:Windows.Foundation.Collections.PropertySet">
+      <summary>文字列キーを持つ PropertyValue オブジェクトのセットであるプロパティ セットを表します。</summary>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.#ctor">
+      <summary>プロパティ セットの新しいインスタンスを作成して初期化します。</summary>
+    </member><member name="P:Windows.Foundation.Collections.PropertySet.Size">
+      <summary>プロパティ セットに含まれている項目の数を取得します。</summary>
+      <returns>プロパティ セット内の項目数。</returns>
+    </member><member name="E:Windows.Foundation.Collections.PropertySet.MapChanged">
+      <summary>監視可能なマップが変化したときに発生します。</summary>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.Clear">
+      <summary>プロパティ セットからすべての項目を削除します。</summary>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.First">
+      <summary>プロパティ セットの項目を列挙するために反復子を返します。</summary>
+      <returns>反復子。 反復子の現在の位置はインデックス 0、またはプロパティ セットが空の場合はプロパティ セットの末尾です。</returns>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.GetView">
+      <summary>プロパティ セットの変更不可のビューを取得します。</summary>
+      <returns>変更できないビュー。</returns>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.HasKey(System.String)">
+      <summary>指定されたキーを持つ項目がプロパティ セットにあるかどうかを示します。</summary>
+      <returns>指定したキーを持つ項目がプロパティ セットにある場合は true。それ以外の場合は false。</returns>
+      <param name="key">キー。</param>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.Insert(System.String,System.Object)">
+      <summary>プロパティ セットに項目を追加します。</summary>
+      <returns>メソッドでキーの既存の値が置き換える場合は true。これが新しいキーの場合は false。</returns>
+      <param name="key">挿入するキー。</param>
+      <param name="value">挿入する値。</param>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.Lookup(System.String)">
+      <summary>指定されたキーの値を取得します。</summary>
+      <returns>指定したキーを持つ項目が存在する場合の値。それ以外の場合は null。</returns>
+      <param name="key">キー。</param>
+    </member><member name="M:Windows.Foundation.Collections.PropertySet.Remove(System.String)">
+      <summary>プロパティ セットから項目を削除します。</summary>
+      <param name="key">キー。</param>
+    </member><member name="T:Windows.Foundation.Collections.StringMap">
+      <summary>関連するコレクション ("マップ" または "辞書" とも呼ばれます)。</summary>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.#ctor">
+      <summary>StringMap の新しいインスタンスを作成して初期化します。</summary>
+    </member><member name="P:Windows.Foundation.Collections.StringMap.Size">
+      <summary>マップ内の項目数を取得します。</summary>
+      <returns>マップ内の項目数。</returns>
+    </member><member name="E:Windows.Foundation.Collections.StringMap.MapChanged">
+      <summary>マップの内容が変更されたときに発生します。</summary>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.Clear">
+      <summary>マップからすべての項目を削除します。</summary>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.First">
+      <summary>コレクション内の項目を含む反復子を返します。</summary>
+      <returns>コレクション内の項目。</returns>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.GetView">
+      <summary>マップを示す変更不可のビューを返します。</summary>
+      <returns>マップのビュー。</returns>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.HasKey(System.String)">
+      <summary>指定したキーがマップに含まれているかどうかを判断します。</summary>
+      <returns>キーが見つかった場合は true。それ以外の場合は false。</returns>
+      <param name="key">検索する項目に関連付けるキー。</param>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.Insert(System.String,System.String)">
+      <summary>項目をマップに挿入または置換します。</summary>
+      <returns>指定したキーを持つ項目が既存の項目であり、置換された場合は true。それ以外の場合は false。</returns>
+      <param name="key">挿入する項目に関連付けるキー。</param>
+      <param name="value">挿入する項目。</param>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.Lookup(System.String)">
+      <summary>マップ内の指定されたキーにある項目を返します。</summary>
+      <returns>指定したキーに関連付けられている項目。</returns>
+      <param name="key">検索する項目に関連付けるキー。</param>
+    </member><member name="M:Windows.Foundation.Collections.StringMap.Remove(System.String)">
+      <summary>マップから項目を削除します。</summary>
+      <param name="key">削除する項目に関連付けるキー。</param>
+    </member><member name="T:Windows.Foundation.Collections.ValueSet">
+      <summary>String 型のキーと Object 型の値を持つマップを実装します。 このクラスは、シリアル化不可能な型がマップに入力されないようにします。</summary>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.#ctor">
+      <summary>プロパティ セットの新しいインスタンスを作成して初期化します。</summary>
+    </member><member name="P:Windows.Foundation.Collections.ValueSet.Size">
+      <summary>値セットに含まれている項目の数を取得します。</summary>
+      <returns>値セット内の項目数。</returns>
+    </member><member name="E:Windows.Foundation.Collections.ValueSet.MapChanged">
+      <summary>監視可能なマップが変化したときに発生します。</summary>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.Clear">
+      <summary>値セットからすべての項目を削除します。</summary>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.First">
+      <summary>値セットの項目を列挙するために反復子を返します。</summary>
+      <returns>反復子。 反復子の現在の位置はインデックス 0、または値セットが空の場合は値セットの末尾です。</returns>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.GetView">
+      <summary>値セットの変更不可のビューを取得します。</summary>
+      <returns>変更できないビュー。</returns>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.HasKey(System.String)">
+      <summary>指定されたキーを持つ項目が値セットにあるかどうかを示します。</summary>
+      <returns>指定されたキーを持つ項目が値セットにある場合は true。それ以外の場合は false。</returns>
+      <param name="key">キー。</param>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.Insert(System.String,System.Object)">
+      <summary>値セットに項目を追加します。</summary>
+      <returns>メソッドでキーの既存の値が置き換える場合は true。これが新しいキーの場合は false。</returns>
+      <param name="key">挿入するキー。</param>
+      <param name="value">挿入する値。</param>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.Lookup(System.String)">
+      <summary>指定されたキーの値を取得します。</summary>
+      <returns>指定したキーを持つ項目が存在する場合の値。それ以外の場合は null。</returns>
+      <param name="key">キー。</param>
+    </member><member name="M:Windows.Foundation.Collections.ValueSet.Remove(System.String)">
+      <summary>値セットから項目を削除します。</summary>
+      <param name="key">キー。</param>
+    </member><member name="T:Windows.Foundation.Collections.VectorChangedEventHandler`1">
+      <summary>監視可能なベクターの変更イベントを処理するメソッドを表します。</summary>
+      <typeparam name="T">ベクター内の値の型。</typeparam>
+      <param name="sender">変更された観察可能なベクター。</param>
+      <param name="event">ベクター内で発生した変更の説明。</param>
+    </member><member name="T:Windows.Foundation.Metadata.ActivatableAttribute">
+      <summary>クラスがアクティブ化可能なランタイム クラスであることを示します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.Type,System.UInt32)">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="type">クラスの型。</param>
+      <param name="version">クラスのバージョン。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.Type,System.UInt32,System.String)">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="type">クラスの型。</param>
+      <param name="version">クラスを実装する API コントラクトのバージョン。</param>
+      <param name="contractName">クラスを実装する API コントラクトの種類を表す文字列。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.Type,System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="type">クラスの型。</param>
+      <param name="version">クラスのバージョン。</param>
+      <param name="platform">列挙体の値。 既定値は Windows です。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.UInt32)">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="version">クラスのバージョン。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.UInt32,System.String)">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="version">クラスのバージョン。</param>
+      <param name="type">ファクトリ インターフェイスの種類を表す文字列。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ActivatableAttribute.#ctor(System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="version">クラスのバージョン。</param>
+      <param name="platform">列挙体の値。 既定値は Windows です。</param>
+    </member><member name="T:Windows.Foundation.Metadata.AllowForWebAttribute">
+      <summary>開発者が、WebView 内部のトップ レベル ドキュメントのコンテキストで、ネイティブ ユニバーサル Windows プラットフォーム (UWP) オブジェクトをグローバル パラメーターとして公開できるようにします。 ユニバーサル Windows プラットフォーム (UWP) オブジェクトをプロジェクションする場合、IAgileObject を実装し、AllowForWebAttribute 属性を使用して修飾される必要があります。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.AllowForWebAttribute.#ctor">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.AllowMultipleAttribute">
+      <summary>カスタム属性の複数のインスタンスをターゲットに適用できることを示します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.AllowMultipleAttribute.#ctor">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.ApiInformation">
+      <summary>さまざまなデバイスにわたり API を安全に呼び出すことができるように、指定されたメンバー、型、または API コントラクトがあるかどうかを検出できます。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsApiContractPresent(System.String,System.UInt16)">
+      <summary>true または false を返し、指定した名前とメジャー バージョン番号の API コントラクトがあるかどうかを示します。</summary>
+      <returns>指定した API コントラクトがある場合は true、ない場合は false になります。</returns>
+      <param name="contractName">API コントラクトの名前。</param>
+      <param name="majorVersion">API コントラクトのメジャー バージョン番号。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsApiContractPresent(System.String,System.UInt16,System.UInt16)">
+      <summary>true または false を返し、指定した名前、メジャー バージョン番号、マイナー バージョン番号の API コントラクトがあるかどうかを示します。</summary>
+      <returns>指定した API コントラクトがある場合は true、ない場合は false になります。</returns>
+      <param name="contractName">API コントラクトの名前。</param>
+      <param name="majorVersion">API コントラクトのメジャー バージョン番号。</param>
+      <param name="minorVersion">API コントラクトのマイナー バージョン番号。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsEnumNamedValuePresent(System.String,System.String)">
+      <summary>true または false を返し、指定した列挙型の名前付き定数があるかどうかを示します。</summary>
+      <returns>指定したコントラクトがある場合は true、ない場合は false になります。</returns>
+      <param name="enumTypeName">型の名前空間修飾名。</param>
+      <param name="valueName">定数の名前。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsEventPresent(System.String,System.String)">
+      <summary>true または false を返し、指定した型のイベントがあるかどうかを示します。</summary>
+      <returns>指定された型のイベントがある場合は true、ない場合は false になります。</returns>
+      <param name="typeName">型の名前空間修飾名。</param>
+      <param name="eventName">イベントの名前。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsMethodPresent(System.String,System.String)">
+      <summary>true または false を返し、指定した型のメソッドがあるかどうかを示します。</summary>
+      <returns>指定された型のメソッドがある場合は true、ない場合は false になります。</returns>
+      <param name="typeName">型の名前空間修飾名。</param>
+      <param name="methodName">メソッドの名前。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsMethodPresent(System.String,System.String,System.UInt32)">
+      <summary>true または false を返し、指定した型に、指定した入力パラメーター数のメソッド オーバーロードがあるかどうかを示します。</summary>
+      <returns>指定された型のメソッドがある場合は true、ない場合は false になります。</returns>
+      <param name="typeName">型の名前空間修飾名。</param>
+      <param name="methodName">メソッドの名前。</param>
+      <param name="inputParameterCount">オーバーロードの入力パラメーターの数。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsPropertyPresent(System.String,System.String)">
+      <summary>true または false を返し、指定した型のプロパティ (書き込み可能または読み取り専用) があるかどうかを示します。</summary>
+      <returns>指定された型のプロパティがある場合は true、ない場合は false になります。</returns>
+      <param name="typeName">型の名前空間修飾名。</param>
+      <param name="propertyName">プロパティの名前。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsReadOnlyPropertyPresent(System.String,System.String)">
+      <summary>true または false を返し、指定した型の読み取り専用プロパティがあるかどうかを示します。</summary>
+      <returns>指定された型のプロパティがある場合は true、ない場合は false になります。</returns>
+      <param name="typeName">型の名前空間修飾名。</param>
+      <param name="propertyName">プロパティの名前。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsTypePresent(System.String)">
+      <summary>true または false を返し、指定した型があるかどうかを示します。</summary>
+      <returns>指定した型がある場合は true、ない場合は false になります。</returns>
+      <param name="typeName">型の名前空間修飾名。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ApiInformation.IsWriteablePropertyPresent(System.String,System.String)">
+      <summary>true または false を返し、指定した型の書き込み可能プロパティがあるかどうかを示します。</summary>
+      <returns>指定された型のプロパティがある場合は true、ない場合は false になります。</returns>
+      <param name="typeName">型の名前空間修飾名。</param>
+      <param name="propertyName">プロパティの名前。</param>
+    </member><member name="T:Windows.Foundation.Metadata.AttributeTargets">
+      <summary>属性が適用されるプログラミング構成要素を指定します。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.All">
+      <summary>属性はすべてのプログラミング構成要素に適用されます。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.ApiContract">
+      <summary>属性は API コントラクトに適用されます。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Delegate">
+      <summary>属性はデリゲートに適用されます。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Enum">
+      <summary>属性は列挙値に適用されます。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Event">
+      <summary>属性はイベントに適用されます。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Field">
+      <summary>属性はフィールドに適用されます。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Interface">
+      <summary>属性はインターフェイスに適用されます。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.InterfaceImpl">
+      <summary>属性はインターフェイスの実装に適用されます。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Method">
+      <summary>属性はメソッドに適用されます。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Parameter">
+      <summary>属性はパラメーターに適用されます。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Property">
+      <summary>属性はプロパティに適用されます。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.RuntimeClass">
+      <summary>属性はランタイム クラスに適用されます。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.AttributeTargets.Struct">
+      <summary>属性は構造体に適用されます。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.AttributeUsageAttribute">
+      <summary>別の属性の使用を指定します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.AttributeUsageAttribute.#ctor(Windows.Foundation.Metadata.AttributeTargets)">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="A_0">1 つ以上の列挙値。</param>
+    </member><member name="T:Windows.Foundation.Metadata.ComposableAttribute">
+      <summary>プログラミング要素を作成する方法を示します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ComposableAttribute.#ctor(System.Type,Windows.Foundation.Metadata.CompositionType,System.UInt32)">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="type">プログラミング要素を作成するために使用するファクトリ オブジェクトの型。</param>
+      <param name="compositionType">列挙値の 1 つ。</param>
+      <param name="version">バージョン。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ComposableAttribute.#ctor(System.Type,Windows.Foundation.Metadata.CompositionType,System.UInt32,System.String)">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="type">プログラミング要素を作成するために使用するファクトリ オブジェクトの型。</param>
+      <param name="compositionType">列挙値の 1 つ。</param>
+      <param name="version">合成ファクトリがランタイム クラスのアクティベーション ファクトリに追加された API コントラクトのバージョン。</param>
+      <param name="contract">クラスを実装する API コントラクトの種類を表す文字列。</param>
+    </member><member name="M:Windows.Foundation.Metadata.ComposableAttribute.#ctor(System.Type,Windows.Foundation.Metadata.CompositionType,System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="type">プログラミング要素を作成するために使用するファクトリ オブジェクトの型。</param>
+      <param name="compositionType">列挙値の 1 つ。</param>
+      <param name="version">バージョン。</param>
+      <param name="platform">列挙体の値。 既定値は Windows です。</param>
+    </member><member name="T:Windows.Foundation.Metadata.CompositionType">
+      <summary>コンポーザブル属性が適用されるプログラミング要素の可視性を指定します。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.CompositionType.Protected">
+      <summary>プログラミング要素へのアクセスが、その要素が格納されているクラスの他の要素、またはそのクラスから派生した型に限定されていることを示します。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.CompositionType.Public">
+      <summary>プログラミング要素へのアクセスが制限されていないことを示します。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.DefaultAttribute">
+      <summary>ランタイム クラスの既定のインターフェイスを示します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.DefaultAttribute.#ctor">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.DefaultOverloadAttribute">
+      <summary>メソッドが既定のオーバーロード メソッドであることを示します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.DefaultOverloadAttribute.#ctor">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.DeprecatedAttribute">
+      <summary>型またはメンバーを非推奨としてメタデータでマークする必要があることを示します。 コンパイラやその他の開発者ツールは、この属性を読み取り、廃止された型と使用可能な代替型についての情報をユーザーに提供できます。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.DeprecatedAttribute.#ctor(System.String,Windows.Foundation.Metadata.DeprecationType,System.UInt32)">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="message">廃止について説明し、代替 API の文字列の名前を提供するために、コンパイラや他の開発者ツールが使用できる文字列メッセージ。</param>
+      <param name="type">列挙体の値。 既定は Deprecate です。</param>
+      <param name="version">廃止が適用されるバージョンを示す定数。</param>
+    </member><member name="M:Windows.Foundation.Metadata.DeprecatedAttribute.#ctor(System.String,Windows.Foundation.Metadata.DeprecationType,System.UInt32,System.String)">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="message">廃止について説明し、代替 API の文字列の名前を提供するために、コンパイラや他の開発者ツールが使用できる文字列メッセージ。</param>
+      <param name="type">列挙体の値。 既定は Deprecate です。</param>
+      <param name="version">廃止が適用されるバージョンを示す定数。</param>
+      <param name="contract">使用されていない型またはメンバーを実装する API コントラクトの種類を表す文字列。</param>
+    </member><member name="M:Windows.Foundation.Metadata.DeprecatedAttribute.#ctor(System.String,Windows.Foundation.Metadata.DeprecationType,System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>ターゲット化に使用する Platform 値を含む属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="message">廃止について説明し、代替 API の文字列の名前を提供するために、コンパイラや他の開発者ツールが使用できる文字列メッセージ。</param>
+      <param name="type">列挙体の値。 既定は Deprecate です。</param>
+      <param name="version">廃止が適用されるバージョンを示す定数。</param>
+      <param name="platform">列挙体の値。 既定値は Windows です。</param>
+    </member><member name="T:Windows.Foundation.Metadata.DeprecationType">
+      <summary>Deprecate または Remove として非推奨を示します。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.DeprecationType.Deprecate">
+      <summary>コンパイラやその他のツールでは、このエンティティを廃止されたものとして処理する必要があります。 これは、既定の設定です。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.DeprecationType.Remove">
+      <summary>コンパイラやその他のツールでは、このエンティティを削除されたものとして処理する必要があります。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.DualApiPartitionAttribute">
+      <summary>デスクトップ アプリケーションと Windows ストア アプリでサポートされる種類であることを示します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.DualApiPartitionAttribute.#ctor">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.ExclusiveToAttribute">
+      <summary>指定された種類はこの種類に限定されていることを示します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ExclusiveToAttribute.#ctor(System.Type)">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="typeName">型の名前。</param>
+    </member><member name="T:Windows.Foundation.Metadata.ExperimentalAttribute">
+      <summary>型またはメンバーをメタデータで実験用としてマークする必要があることを示するため、SDK またはライブラリの最終リリース バージョンには存在しない可能性があります。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ExperimentalAttribute.#ctor">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.GCPressureAmount">
+      <summary>マイクロソフト内部でのみ使用。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.GCPressureAmount.High">
+      <summary>100k を超えるメモリ負荷です。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.GCPressureAmount.Low">
+      <summary>10k 未満のメモリ負荷です。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.GCPressureAmount.Medium">
+      <summary>10 ～ 100k の間のメモリ圧迫。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.GCPressureAttribute">
+      <summary>マイクロソフト内部でのみ使用。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.GCPressureAttribute.#ctor">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.GuidAttribute">
+      <summary>インターフェイスやデリゲートの GUID を示します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.GuidAttribute.#ctor(System.UInt32,System.UInt16,System.UInt16,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte)">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="a">GUID の最初の 4 バイト。</param>
+      <param name="b">GUID の次の 2 バイト。</param>
+      <param name="c">GUID の次の 2 バイト。</param>
+      <param name="d">GUID の次のバイト。</param>
+      <param name="e">GUID の次のバイト。</param>
+      <param name="f">GUID の次のバイト。</param>
+      <param name="g">GUID の次のバイト。</param>
+      <param name="h">GUID の次のバイト。</param>
+      <param name="i">GUID の次のバイト。</param>
+      <param name="j">GUID の次のバイト。</param>
+      <param name="k">GUID の次のバイト。</param>
+    </member><member name="T:Windows.Foundation.Metadata.HasVariantAttribute">
+      <summary>種類が IInspectable バリアントのインスタンスであることを示します。 ランタイム クラス、インターフェイス、パラメーター化されたインターフェイスに適用します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.HasVariantAttribute.#ctor">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.InternalAttribute">
+      <summary>型またはメンバーをメタデータで SDK またはフレームワークの内部として、およびシステム コンポーネントによる使用のみとしてマークする必要があることを示します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.InternalAttribute.#ctor">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.LengthIsAttribute">
+      <summary>配列要素の数を示します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.LengthIsAttribute.#ctor(System.Int32)">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="indexLengthParameter">配列要素の数。</param>
+    </member><member name="T:Windows.Foundation.Metadata.MarshalingBehaviorAttribute">
+      <summary>Windows ランタイム コンポーネントのマーシャリングの動作を示します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.MarshalingBehaviorAttribute.#ctor(Windows.Foundation.Metadata.MarshalingType)">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="behavior">列挙値の 1 つ。</param>
+    </member><member name="T:Windows.Foundation.Metadata.MarshalingType">
+      <summary>クラスのマーシャリングの型を指定します。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.MarshalingType.Agile">
+      <summary>このクラスは、すべてのインターフェイス上で同じポインター値にマーシャリングおよびマーシャリング解除を行います。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.MarshalingType.InvalidMarshaling">
+      <summary>クラスはマーシャリングできません。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.MarshalingType.None">
+      <summary>このクラスは、すべてのインターフェイス上でマーシャリングを防ぎます。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.MarshalingType.Standard">
+      <summary>このクラスは IMarshal を実装しないか、またはすべてのインターフェイス上で CoGetStandardMarshal に転送します。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.MetadataMarshalAttribute">
+      <summary>アプリケーション パッケージを作成するときにツールがインターフェイスのエントリを作成する必要があることを示します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.MetadataMarshalAttribute.#ctor">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.MuseAttribute">
+      <summary>ランタイム クラスが Web ブラウザーである Windows ストア アプリと互換性があることを示します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.MuseAttribute.#ctor">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.OverloadAttribute">
+      <summary>オーバーロードをサポートする言語のオーバーロードとしてメソッドを識別します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.OverloadAttribute.#ctor(System.String)">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="method">射影された言語でメソッドを表す名前。</param>
+    </member><member name="T:Windows.Foundation.Metadata.OverridableAttribute">
+      <summary>インターフェイスにオーバーライド可能なメソッドが含まれていることを示します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.OverridableAttribute.#ctor">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.Platform">
+      <summary>Windows ランタイムの属性とメタデータで使用されるように、指定の型がサポートされている必要があるプラットフォームを指定します。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.Platform.Windows">
+      <summary>Windows メタデータによる使用向け。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.Platform.WindowsPhone">
+      <summary>Windows Phone メタデータによる使用向け。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.PlatformAttribute">
+      <summary>プラットフォーム固有のメタデータが生成されるときに型がサポートされるプラットフォームを宣言します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.PlatformAttribute.#ctor(Windows.Foundation.Metadata.Platform)">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="platform">列挙体の値。 既定値は Windows です。</param>
+    </member><member name="T:Windows.Foundation.Metadata.ProtectedAttribute">
+      <summary>インターフェイスにプロテクト メソッドが含まれていることを示します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ProtectedAttribute.#ctor">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.RangeAttribute">
+      <summary>データ フィールドの値の数値範囲制約を示します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.RangeAttribute.#ctor(System.Int32,System.Int32)">
+      <summary>指定した最小値と最大値を持つ属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="minValue">指定できる最小値。</param>
+      <param name="maxValue">指定できる最大値。</param>
+    </member><member name="T:Windows.Foundation.Metadata.RemoteAsyncAttribute">
+      <summary>非同期パターンの非同期形式を使用してインターフェイスを配信できることを示します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.RemoteAsyncAttribute.#ctor">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.StaticAttribute">
+      <summary>静的なメソッドのみを含むインターフェイスを示します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.StaticAttribute.#ctor(System.Type,System.UInt32)">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="type">ランタイム クラスの静的メソッドを含む型。</param>
+      <param name="version">静的インターフェイスが追加されたバージョン。</param>
+    </member><member name="M:Windows.Foundation.Metadata.StaticAttribute.#ctor(System.Type,System.UInt32,System.String)">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="type">ランタイム クラスの静的メソッドを含む型。</param>
+      <param name="version">静的ファクトリがランタイム クラスのアクティベーション ファクトリに追加された API コントラクトのバージョン。</param>
+      <param name="contractName">クラスを実装する API コントラクトの種類を表す文字列。</param>
+    </member><member name="M:Windows.Foundation.Metadata.StaticAttribute.#ctor(System.Type,System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="type">ランタイム クラスの静的メソッドを含む型。</param>
+      <param name="version">静的インターフェイスが追加されたバージョン。</param>
+      <param name="platform">列挙体の値。 既定値は Windows です。</param>
+    </member><member name="T:Windows.Foundation.Metadata.ThreadingAttribute">
+      <summary>Windows ランタイム コンポーネントのスレッド モデルを示します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.ThreadingAttribute.#ctor(Windows.Foundation.Metadata.ThreadingModel)">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="model">列挙値の 1 つ。</param>
+    </member><member name="T:Windows.Foundation.Metadata.ThreadingModel">
+      <summary>スレッド モデルを指定します。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.ThreadingModel.Both">
+      <summary>シングルスレッドとマルチスレッドの両方のアパートメント。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.ThreadingModel.InvalidThreading">
+      <summary>有効なスレッド モデルが適用されていません。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.ThreadingModel.MTA">
+      <summary>マルチスレッド アパートメント。</summary>
+    </member><member name="F:Windows.Foundation.Metadata.ThreadingModel.STA">
+      <summary>シングルスレッド アパートメント。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.VariantAttribute">
+      <summary>項目が IInspectable バリアントのインスタンスであることを示します。 メソッドのパラメーター、プロパティ、型の戻り値に適用します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.VariantAttribute.#ctor">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+    </member><member name="T:Windows.Foundation.Metadata.VersionAttribute">
+      <summary>型のバージョンを示します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.VersionAttribute.#ctor(System.UInt32)">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="version">マークされたオブジェクトに関連付けるバージョン。</param>
+    </member><member name="M:Windows.Foundation.Metadata.VersionAttribute.#ctor(System.UInt32,Windows.Foundation.Metadata.Platform)">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+      <param name="version">マークされたオブジェクトに関連付けるバージョン。</param>
+      <param name="platform">列挙体の値。 既定値は Windows です。</param>
+    </member><member name="T:Windows.Foundation.Metadata.WebHostHiddenAttribute">
+      <summary>機能が指定されたターゲット言語に射影されない型として型を識別します。</summary>
+    </member><member name="M:Windows.Foundation.Metadata.WebHostHiddenAttribute.#ctor">
+      <summary>属性の新しいインスタンスを作成して初期化します。</summary>
+    </member></members>
+</doc>

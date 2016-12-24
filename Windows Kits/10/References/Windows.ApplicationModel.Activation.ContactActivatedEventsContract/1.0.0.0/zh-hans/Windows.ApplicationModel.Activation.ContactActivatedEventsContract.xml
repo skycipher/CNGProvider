@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Activation.ContactActivatedEventsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs">
+      <summary>提供有关何时激活应用程序来呼叫联系人的数据。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.Contact">
+      <summary>获取呼叫的联系人。</summary>
+      <returns>呼叫的联系人。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.Kind">
+      <summary>获取激活类型。</summary>
+      <returns>ActivationKind.Contact 枚举值。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.PreviousExecutionState">
+      <summary>在应用程序激活前获取该应用程序的执行状态。</summary>
+      <returns>ApplicationExecutionState 类型化值。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.ServiceId">
+      <summary>获取用于呼叫的服务的标识符。</summary>
+      <returns>用于呼叫的服务的标识符。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.ServiceUserId">
+      <summary>获取用于呼叫的服务的用户标识符。</summary>
+      <returns>用于呼叫的服务的用户标识符。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.SplashScreen">
+      <summary>获取一个初始屏幕对象，该对象提供有关从初始屏幕转换到激活的应用程序的信息。</summary>
+      <returns>提供初始屏幕信息的对象。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.Verb">
+      <summary>获取要执行的操作。</summary>
+      <returns>要执行的操作。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs">
+      <summary>提供有关何时激活应用程序来映射联系人的数据。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Address">
+      <summary>获取映射操作的联系人的地址。</summary>
+      <returns>映射操作的联系人的地址。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Contact">
+      <summary>获取映射操作的联系人。</summary>
+      <returns>映射操作的联系人。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Kind">
+      <summary>获取激活类型。</summary>
+      <returns>ActivationKind.Contact 枚举值。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.PreviousExecutionState">
+      <summary>在应用程序激活前获取该应用程序的执行状态。</summary>
+      <returns>ApplicationExecutionState 类型化值。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.SplashScreen">
+      <summary>获取一个初始屏幕对象，该对象提供有关从初始屏幕转换到激活的应用程序的信息。</summary>
+      <returns>提供初始屏幕信息的对象。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Verb">
+      <summary>获取要执行的操作。</summary>
+      <returns>要执行的操作。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs">
+      <summary>提供有关何时激活应用程序来向联系人发送消息的数据。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.Contact">
+      <summary>获取消息的联系人。</summary>
+      <returns>消息的联系人。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.Kind">
+      <summary>获取激活类型。</summary>
+      <returns>ActivationKind.Contact 枚举值。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.PreviousExecutionState">
+      <summary>在应用程序激活前获取该应用程序的执行状态。</summary>
+      <returns>ApplicationExecutionState 类型化值。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.ServiceId">
+      <summary>获取用于消息的服务的标识符。</summary>
+      <returns>用于消息的服务的标识符。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.ServiceUserId">
+      <summary>获取用于消息的服务的用户标识符。</summary>
+      <returns>用于消息的服务的用户标识符。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.SplashScreen">
+      <summary>获取一个初始屏幕对象，该对象提供有关从初始屏幕转换到激活的应用程序的信息。</summary>
+      <returns>提供初始屏幕信息的对象。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.Verb">
+      <summary>获取要执行的操作。</summary>
+      <returns>要执行的操作。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs">
+      <summary>激活应用程序时提供数据，因为它使用的是“联系人选择器”。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.ContactPickerUI">
+      <summary>获取用户希望选取由该应用程序提供的联系人时显示的联系人选取器的 letterbox UI。</summary>
+      <returns>获取用户希望选取由该应用程序提供的联系人时显示的联系人选取器的 letterbox UI。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.Kind">
+      <summary>获取激活类型。</summary>
+      <returns>枚举值之一。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.PreviousExecutionState">
+      <summary>在应用程序激活前获取该应用程序的执行状态。</summary>
+      <returns>枚举值之一。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.SplashScreen">
+      <summary>获取提供有关从初始屏幕转换到激活的应用程序的信息的初始屏幕对象。</summary>
+      <returns>提供初始屏幕信息的对象。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs">
+      <summary>提供有关何时激活应用程序来发布联系人的数据。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.Contact">
+      <summary>获取公告的联系人。</summary>
+      <returns>公告的联系人。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.Kind">
+      <summary>获取激活类型。</summary>
+      <returns>ActivationKind.Contact 枚举值。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.PreviousExecutionState">
+      <summary>在应用程序激活前获取该应用程序的执行状态。</summary>
+      <returns>ApplicationExecutionState 类型化值。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.ServiceId">
+      <summary>获取用于公告的服务的标识符。</summary>
+      <returns>用于发布的服务的标识符。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.ServiceUserId">
+      <summary>获取用于公告的服务的用户标识符。</summary>
+      <returns>用于帖子的服务的用户标识符。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.SplashScreen">
+      <summary>获取一个初始屏幕对象，该对象提供有关从初始屏幕转换到激活的应用程序的信息。</summary>
+      <returns>提供初始屏幕信息的对象。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.Verb">
+      <summary>获取要执行的操作。</summary>
+      <returns>要执行的操作。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs">
+      <summary>提供有关何时激活应用程序来对联系人进行视频呼叫的数据。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.Contact">
+      <summary>获取视频呼叫的联系人。</summary>
+      <returns>视频呼叫的联系人。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.Kind">
+      <summary>获取激活类型。</summary>
+      <returns>ActivationKind.Contact 枚举值。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.PreviousExecutionState">
+      <summary>在应用程序激活前获取该应用程序的执行状态。</summary>
+      <returns>ApplicationExecutionState 类型化值。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.ServiceId">
+      <summary>获取用于视频呼叫的服务的标识符。</summary>
+      <returns>用于视频呼叫的服务的标识符。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.ServiceUserId">
+      <summary>获取用于视频呼叫的服务的用户标识符。</summary>
+      <returns>用于视频呼叫的服务的用户标识符。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.SplashScreen">
+      <summary>获取一个初始屏幕对象，该对象提供有关从初始屏幕转换到激活的应用程序的信息。</summary>
+      <returns>提供初始屏幕信息的对象。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.Verb">
+      <summary>获取要执行的操作。</summary>
+      <returns>要执行的操作。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactActivatedEventArgs">
+      <summary>提供有关用户管理联系人时引发的已激活事件的信息。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactActivatedEventArgs.Verb">
+      <summary>获取与激活的联系人关联的操作。</summary>
+      <returns>与激活的联系人关联的操作。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs">
+      <summary>提供有关何时激活应用程序来呼叫联系人的数据。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs.Contact">
+      <summary>获取呼叫的联系人。</summary>
+      <returns>呼叫的联系人。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs.ServiceId">
+      <summary>获取用于呼叫的服务的标识符。</summary>
+      <returns>用于呼叫的服务的标识符。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs.ServiceUserId">
+      <summary>获取用于呼叫的服务的用户标识符。</summary>
+      <returns>用于呼叫的服务的用户标识符。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs">
+      <summary>提供有关何时激活应用程序来映射联系人的数据。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs.Address">
+      <summary>获取映射操作的联系人的地址。</summary>
+      <returns>表示映射操作的联系人的地址。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs.Contact">
+      <summary>获取映射操作的联系人。</summary>
+      <returns>映射操作的联系人。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs">
+      <summary>提供有关何时激活应用程序来向联系人发送消息的数据。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs.Contact">
+      <summary>获取消息的联系人。</summary>
+      <returns>消息的联系人。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs.ServiceId">
+      <summary>获取用于消息的服务的标识符。</summary>
+      <returns>用于消息的服务的标识符。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs.ServiceUserId">
+      <summary>获取用于消息的服务的用户标识符。</summary>
+      <returns>用于消息的服务的用户标识符。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs">
+      <summary>激活应用程序时提供数据，因为它使用的是“联系人选择器”。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs.ContactPickerUI">
+      <summary>用户希望选取由该应用程序提供的文件或文件夹时显示的联系人选择器的 letterbox UI。</summary>
+      <returns>用户希望选取由该应用程序提供的文件或文件夹时显示的联系人选择器的 letterbox UI。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs">
+      <summary>提供有关何时激活应用程序来发布联系人的数据。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs.Contact">
+      <summary>获取公告的联系人。</summary>
+      <returns>公告的联系人。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs.ServiceId">
+      <summary>获取用于公告的服务的标识符。</summary>
+      <returns>用于发布的服务的标识符。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs.ServiceUserId">
+      <summary>获取用于公告的服务的用户标识符。</summary>
+      <returns>用于帖子的服务的用户标识符。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactsProviderActivatedEventArgs">
+      <summary>提供有关用户管理应用程序所提供的联系人时引发的已激活事件的信息。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactsProviderActivatedEventArgs.Verb">
+      <summary>获取与激活的联系人提供程序关联的操作。</summary>
+      <returns>与激活的联系人提供程序关联的操作。</returns>
+    </member><member name="T:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs">
+      <summary>提供有关何时激活应用程序来对联系人进行视频呼叫的数据。</summary>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs.Contact">
+      <summary>获取视频呼叫的联系人。</summary>
+      <returns>视频呼叫的联系人。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs.ServiceId">
+      <summary>获取用于视频呼叫的服务的标识符。</summary>
+      <returns>用于视频呼叫的服务的标识符。</returns>
+    </member><member name="P:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs.ServiceUserId">
+      <summary>获取用于视频呼叫的服务的用户标识符。</summary>
+      <returns>用于视频呼叫的服务的用户标识符。</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs">
+      <summary>提供有关何时激活应用程序来呼叫联系人的数据。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.ActivatedOperation">
+      <summary>获取应用程序激活的操作。</summary>
+      <returns>激活操作。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.Contact">
+      <summary>获取呼叫的联系人。</summary>
+      <returns>呼叫的联系人。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.Kind">
+      <summary>获取激活类型。</summary>
+      <returns>ActivationKind.Contact 枚举值。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.PreviousExecutionState">
+      <summary>在应用程序激活前获取该应用程序的执行状态。</summary>
+      <returns>ApplicationExecutionState 类型化值。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.ServiceId">
+      <summary>获取用于呼叫的服务的标识符。</summary>
+      <returns>用于呼叫的服务的标识符。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.ServiceUserId">
+      <summary>获取用于呼叫的服务的用户标识符。</summary>
+      <returns>用于呼叫的服务的用户标识符。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.SplashScreen">
+      <summary>获取一个初始屏幕对象，该对象提供有关从初始屏幕转换到激活的应用程序的信息。</summary>
+      <returns>提供初始屏幕信息的对象。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.Verb">
+      <summary>获取要执行的操作。</summary>
+      <returns>要执行的操作。</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs">
+      <summary>提供有关何时激活应用程序来映射联系人的数据。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.ActivatedOperation">
+      <summary>获取应用程序激活的操作。</summary>
+      <returns>激活操作。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Address">
+      <summary>获取映射操作的联系人的地址。</summary>
+      <returns>映射操作的联系人的地址。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Contact">
+      <summary>获取映射操作的联系人。</summary>
+      <returns>映射操作的联系人。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Kind">
+      <summary>获取激活类型。</summary>
+      <returns>ActivationKind.Contact 枚举值。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.PreviousExecutionState">
+      <summary>在应用程序激活前获取该应用程序的执行状态。</summary>
+      <returns>ApplicationExecutionState 类型化值。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.SplashScreen">
+      <summary>获取一个初始屏幕对象，该对象提供有关从初始屏幕转换到激活的应用程序的信息。</summary>
+      <returns>提供初始屏幕信息的对象。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Verb">
+      <summary>获取要执行的操作。</summary>
+      <returns>要执行的操作。</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs">
+      <summary>提供有关何时激活应用程序来向联系人发送消息的数据。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.ActivatedOperation">
+      <summary>获取应用程序激活的操作。</summary>
+      <returns>激活操作。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.Contact">
+      <summary>获取消息的联系人。</summary>
+      <returns>消息的联系人。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.Kind">
+      <summary>获取激活类型。</summary>
+      <returns>ActivationKind.Contact 枚举值。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.PreviousExecutionState">
+      <summary>在应用程序激活前获取该应用程序的执行状态。</summary>
+      <returns>ApplicationExecutionState 类型化值。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.ServiceId">
+      <summary>获取用于消息的服务的标识符。</summary>
+      <returns>用于消息的服务的标识符。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.ServiceUserId">
+      <summary>获取用于消息的服务的用户标识符。</summary>
+      <returns>用于消息的服务的用户标识符。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.SplashScreen">
+      <summary>获取一个初始屏幕对象，该对象提供有关从初始屏幕转换到激活的应用程序的信息。</summary>
+      <returns>提供初始屏幕信息的对象。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.Verb">
+      <summary>获取要执行的操作。</summary>
+      <returns>要执行的操作。</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs">
+      <summary>激活应用程序时提供数据，因为它使用的是“联系人选择器”。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.ActivatedOperation">
+      <summary>获取应用程序激活的操作。</summary>
+      <returns>激活操作。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.ContactPickerUI">
+      <summary>获取用户希望选取由该应用程序提供的联系人时显示的联系人选取器的 letterbox UI。</summary>
+      <returns>获取用户希望选取由该应用程序提供的联系人时显示的联系人选取器的 letterbox UI。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.Kind">
+      <summary>获取激活类型。</summary>
+      <returns>枚举值之一。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.PreviousExecutionState">
+      <summary>在应用程序激活前获取该应用程序的执行状态。</summary>
+      <returns>枚举值之一。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.SplashScreen">
+      <summary>获取提供有关从初始屏幕转换到激活的应用程序的信息的初始屏幕对象。</summary>
+      <returns>提供初始屏幕信息的对象。</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs">
+      <summary>提供有关何时激活应用程序来发布联系人的数据。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.ActivatedOperation">
+      <summary>获取应用程序激活的操作。</summary>
+      <returns>激活操作。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.Contact">
+      <summary>获取公告的联系人。</summary>
+      <returns>公告的联系人。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.Kind">
+      <summary>获取激活类型。</summary>
+      <returns>ActivationKind.Contact 枚举值。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.PreviousExecutionState">
+      <summary>在应用程序激活前获取该应用程序的执行状态。</summary>
+      <returns>ApplicationExecutionState 类型化值。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.ServiceId">
+      <summary>获取用于公告的服务的标识符。</summary>
+      <returns>用于发布的服务的标识符。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.ServiceUserId">
+      <summary>获取用于公告的服务的用户标识符。</summary>
+      <returns>用于帖子的服务的用户标识符。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.SplashScreen">
+      <summary>获取一个初始屏幕对象，该对象提供有关从初始屏幕转换到激活的应用程序的信息。</summary>
+      <returns>提供初始屏幕信息的对象。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.Verb">
+      <summary>获取要执行的操作。</summary>
+      <returns>要执行的操作。</returns>
+    </member><member name="T:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs">
+      <summary>提供有关何时激活应用程序来对联系人进行视频呼叫的数据。</summary>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.ActivatedOperation">
+      <summary>获取应用程序激活的操作。</summary>
+      <returns>激活操作。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.Contact">
+      <summary>获取视频呼叫的联系人。</summary>
+      <returns>视频呼叫的联系人。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.Kind">
+      <summary>获取激活类型。</summary>
+      <returns>ActivationKind.Contact 枚举值。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.PreviousExecutionState">
+      <summary>在应用程序激活前获取该应用程序的执行状态。</summary>
+      <returns>ApplicationExecutionState 类型化值。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.ServiceId">
+      <summary>获取用于视频呼叫的服务的标识符。</summary>
+      <returns>用于视频呼叫的服务的标识符。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.ServiceUserId">
+      <summary>获取用于视频呼叫的服务的用户标识符。</summary>
+      <returns>用于视频呼叫的服务的用户标识符。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.SplashScreen">
+      <summary>获取一个初始屏幕对象，该对象提供有关从初始屏幕转换到激活的应用程序的信息。</summary>
+      <returns>提供初始屏幕信息的对象。</returns>
+    </member><member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.Verb">
+      <summary>获取要执行的操作。</summary>
+      <returns>要执行的操作。</returns>
+    </member></members>
+</doc>

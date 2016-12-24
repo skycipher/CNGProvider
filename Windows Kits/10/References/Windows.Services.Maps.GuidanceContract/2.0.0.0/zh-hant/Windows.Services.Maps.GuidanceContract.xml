@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Services.Maps.GuidanceContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem">
+      <summary>指定用於音訊指引的測量系統。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem.Meters">
+      <summary>公制系統。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem.MilesAndFeet">
+      <summary>美國慣用系統。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem.MilesAndYards">
+      <summary>英制系統。</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind">
+      <summary>指定音訊通知的類型，會在 AudioNotificationRequested 事件觸發時要求。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.Gps">
+      <summary>GPS 通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.Maneuver">
+      <summary>機動動作通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.Route">
+      <summary>路線通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.SpeedLimit">
+      <summary>限速通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.Traffic">
+      <summary>交通狀況通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind.TrafficCamera">
+      <summary>測速照相通知。</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs">
+      <summary>提供 AudioNotificationRequested 事件的資料。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs.AudioFilePaths">
+      <summary>取得已要求播放的音訊檔案清單。</summary>
+      <returns>已要求播放的音訊檔案清單。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs.AudioNotification">
+      <summary>取得已要求的音訊通知類型。</summary>
+      <returns>已要求的音訊通知類型。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs.AudioText">
+      <summary>取得已要求的音訊通知文字版本。</summary>
+      <returns>已要求的音訊通知文字版本。</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceAudioNotifications">
+      <summary>指定導航期間使用的音訊通知類型。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.Gps">
+      <summary>GPS 通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.Maneuver">
+      <summary>機動動作通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.None">
+      <summary>未選取任何音訊通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.Route">
+      <summary>路線通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.SpeedLimit">
+      <summary>限速通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.Traffic">
+      <summary>交通狀況通知。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceAudioNotifications.TrafficCamera">
+      <summary>測速照相通知。</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceLaneInfo">
+      <summary>表示目前位置附近的車道，以及它與路線的關聯。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceLaneInfo.IsOnRoute">
+      <summary>取得值，表示車道是否在路線上。</summary>
+      <returns>如果車道是在路線上則為 true，否則為 false。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceLaneInfo.LaneMarkers">
+      <summary>取得描述車道路徑的值。</summary>
+      <returns>GuidanceLaneMarkers 類型的值，描述車道路徑。</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceLaneMarkers">
+      <summary>指定車道路徑。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.HardLeft">
+      <summary>向左急轉標記。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.HardRight">
+      <summary>向右急轉標記。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.Left">
+      <summary>左轉標記。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.LightLeft">
+      <summary>靠左行駛標記。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.LightRight">
+      <summary>靠右行駛標記。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.None">
+      <summary>無車道標記。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.Right">
+      <summary>右轉標記。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.Straight">
+      <summary>直行標記。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.Unknown">
+      <summary>沒有可用的車道標記資訊。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.UTurnLeft">
+      <summary>左迴轉標記。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceLaneMarkers.UTurnRight">
+      <summary>右迴轉標記。</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceManeuver">
+      <summary>表示沿著引導路線的機動動作。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.DepartureRoadName">
+      <summary>取得機動動作開始的完整路名。</summary>
+      <returns>機動動作開始的完整路名。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.DepartureShortRoadName">
+      <summary>取得機動動作開始的簡短路名。 例如，高速公路編號 "I-90"。</summary>
+      <returns>機動動作開始的簡短路名。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.DistanceFromPreviousManeuver">
+      <summary>取得從前一個機動動作到這一個機動動作的距離，單位公尺。</summary>
+      <returns>從前一個機動動作到這一個機動動作的距離，單位公尺。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.DistanceFromRouteStart">
+      <summary>取得從路線開始到這一個機動動作的距離，單位公尺。</summary>
+      <returns>從路線開始到這一個機動動作的距離，單位公尺。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.EndAngle">
+      <summary>取得值，表示回旋結束時的航向 (以度為單位)，其中 0 或 360 = 北、90 = 東、180 = 南、270 = 西。</summary>
+      <returns>回旋結束時的航向 (以度為單位)，其中 0 或 360 = 北、90 = 東、180 = 南、270 = 西。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.InstructionText">
+      <summary>取得與回旋相關聯的指示文字。</summary>
+      <returns>與回旋相關聯的指示文字。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.Kind">
+      <summary>取得回旋的類型。</summary>
+      <returns>回旋的類型。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.NextRoadName">
+      <summary>取得機動動作結束的完整路名。</summary>
+      <returns>機動動作結束的完整路名。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.NextShortRoadName">
+      <summary>取得機動動作結束的簡短路名。 例如，高速公路編號 "I-90"。</summary>
+      <returns>機動動作結束的簡短路名。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.RoadSignpost">
+      <summary>取得值，表示與機動動作相關聯的路標。</summary>
+      <returns>值，表示與機動動作相關聯的路標。 如果沒有可用的資料，此值會傳回 null。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.StartAngle">
+      <summary>取得值，表示回旋開始時的航向 (以度為單位)，其中 0 或 360 = 北、90 = 東、180 = 南、270 = 西。</summary>
+      <returns>機動動作開始時的航向 (以度為單位)，其中 0 或 360 = 北、90 = 東、180 = 南、270 = 西</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceManeuver.StartLocation">
+      <summary>取得回旋開始的位置。</summary>
+      <returns>回旋開始的位置。</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceManeuverKind">
+      <summary>指定指引機動動作的類型。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.End">
+      <summary>已到達目的地。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayEnterLeft">
+      <summary>進入高速公路的右側車道。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayEnterRight">
+      <summary>進入高速公路的左側車道。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayKeepLeft">
+      <summary>在高速公路上保持左側行駛。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayKeepRight">
+      <summary>在高速公路上保持右側行駛。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayLeaveLeft">
+      <summary>從左側車道離開高速公路。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.FreewayLeaveRight">
+      <summary>從右側車道離開高速公路。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.GoStraight">
+      <summary>直行。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.KeepMiddle">
+      <summary>保持中間車道行駛。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.LeaveTransitStation">
+      <summary>離開大眾交通轉運站。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.None">
+      <summary>沒有適用的機動動作。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.PassTransitStation">
+      <summary>經過大眾交通轉運站。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.Start">
+      <summary>起點。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TakeFerry">
+      <summary>登上渡船。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft1">
+      <summary>從圓環出口 1 (左側行駛)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft10">
+      <summary>從圓環出口 10 (左側行駛)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft11">
+      <summary>從圓環出口 11 (左側行駛)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft12">
+      <summary>從圓環出口 12 (左側行駛)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft2">
+      <summary>從圓環出口 2 (左側行駛)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft3">
+      <summary>從圓環出口 3 (左側行駛)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft4">
+      <summary>從圓環出口 4 (左側行駛)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft5">
+      <summary>從圓環出口 5 (左側行駛)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft6">
+      <summary>從圓環出口 6 (左側行駛)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft7">
+      <summary>從圓環出口 7 (左側行駛)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft8">
+      <summary>從圓環出口 8 (左側行駛)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleLeft9">
+      <summary>從圓環出口 9 (左側行駛)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight1">
+      <summary>從圓環出口 1 (右側行駛)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight10">
+      <summary>從圓環出口 10 (右側行駛)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight11">
+      <summary>從圓環出口 11 (右側行駛)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight12">
+      <summary>從圓環出口 12 (右側行駛)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight2">
+      <summary>從圓環出口 2 (右側行駛)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight3">
+      <summary>從圓環出口 3 (右側行駛)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight4">
+      <summary>從圓環出口 4 (右側行駛)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight5">
+      <summary>從圓環出口 5 (右側行駛)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight6">
+      <summary>從圓環出口 6 (右側行駛)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight7">
+      <summary>從圓環出口 7 (右側行駛)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight8">
+      <summary>從圓環出口 8 (右側行駛)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TrafficCircleRight9">
+      <summary>從圓環出口 9 (右側行駛)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnHardLeft">
+      <summary>向左大轉彎。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnHardRight">
+      <summary>向右大轉彎。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnKeepLeft">
+      <summary>保持左側車道行駛。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnKeepRight">
+      <summary>保持右側車道行駛。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnLeft">
+      <summary>左轉 (約 90 度)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnLightLeft">
+      <summary>略為左轉。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnLightRight">
+      <summary>略為右轉。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.TurnRight">
+      <summary>右轉 (約 90 度)。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.UTurnLeft">
+      <summary>向左迴轉。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceManeuverKind.UTurnRight">
+      <summary>向右迴轉。</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate">
+      <summary>描述使用者目前位置的導航條件。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.CurrentHeading">
+      <summary>取得值，表示目前航向 (以度為單位)，其中 0 或 360 = 北、90 = 東、180 = 南、270 = 西。</summary>
+      <returns>目前航向 (以度為單位)，其中 0 或 360 = 北、90 = 東、180 = 南、270 = 西。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.CurrentSpeed">
+      <summary>取得值，表示目前速度，以每秒公尺為單位。</summary>
+      <returns>目前速度，以每秒公尺為單位。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.IsOnStreet">
+      <summary>取得值，指出目前位置是否在街道上。</summary>
+      <returns>如果目前位置是在街道上，則為 true，否則為 false。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.Location">
+      <summary>取得目前的地理位置。</summary>
+      <returns>目前的地理位置。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.Road">
+      <summary>取得值，描述目前位置的道路。</summary>
+      <returns>值，描述目前位置的道路。</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceMode">
+      <summary>指定導航的類型。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceMode.Navigation">
+      <summary>導航作用中。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceMode.None">
+      <summary>指出引擎未作用。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceMode.Simulation">
+      <summary>已模擬導航。</summary>
+    </member><member name="F:Windows.Services.Maps.Guidance.GuidanceMode.Tracking">
+      <summary>提供導航協助，但未指定路線。</summary>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceNavigator">
+      <summary>提供導航。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceNavigator.AudioMeasurementSystem">
+      <summary>取得或設定用於音訊指引的測量系統。</summary>
+      <returns>用於音訊指引的測量系統。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceNavigator.AudioNotifications">
+      <summary>取得或設定導航所提供音訊通知的類型。</summary>
+      <returns>導航所提供音訊通知的類型。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceNavigator.IsGuidanceAudioMuted">
+      <summary>取得或設定值，指出音訊指引是否為靜音。</summary>
+      <returns>音訊指引為靜音時，值為 true；否則音訊指引不是靜音。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceNavigator.UseAppProvidedVoice">
+      <summary>取得值，指出裝置上是否使用 Cortana。</summary>
+      <returns>值為 true 時，表示裝置上正在使用 Cortana，否則為 false。</returns>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.AudioNotificationRequested">
+      <summary>音訊通知適用於導航時發生，例如，在即將轉彎或從出口離開之前。</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.DestinationReached">
+      <summary>已到達路線目的地時發生。</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.GuidanceUpdated">
+      <summary>導航已更新時發生。</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.Rerouted">
+      <summary>導航已重新規劃路線時發生。</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.RerouteFailed">
+      <summary>導航重新規劃路線失敗時發生。</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.Rerouting">
+      <summary>導航正在重新規劃路線時發生。</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.UserLocationLost">
+      <summary>失去使用者的位置時發生。</summary>
+    </member><member name="E:Windows.Services.Maps.Guidance.GuidanceNavigator.UserLocationRestored">
+      <summary>重新取得使用者的位置時發生。</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.GetCurrent">
+      <summary>取得 GuidanceNavigator 物件，表示目前的導航。</summary>
+      <returns>GuidanceNavigator 物件，表示目前的導航。</returns>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.Pause">
+      <summary>暫停導航。</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.RepeatLastAudioNotification">
+      <summary>重複最後的音訊通知。</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.Resume">
+      <summary>恢復導航。</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.SetGuidanceVoice(System.Int32,System.String)">
+      <summary>設定用於音訊通知的語音。</summary>
+      <param name="voiceId">語音識別碼。</param>
+      <param name="voiceFolder">所指定語音的資料夾路徑。</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.StartNavigating(Windows.Services.Maps.Guidance.GuidanceRoute)">
+      <summary>開始導航，使用指定的路線。</summary>
+      <param name="route">要導航的路線。</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.StartSimulating(Windows.Services.Maps.Guidance.GuidanceRoute,System.Int32)">
+      <summary>開始模擬導航，使用指定的路線。</summary>
+      <param name="route">要導航的路線。</param>
+      <param name="speedInMetersPerSecond">導航模擬的速度，以每秒公尺為單位。</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.StartTracking">
+      <summary>開始導航，不使用指定的路線。</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.Stop">
+      <summary>停止導航。</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.UpdateUserLocation(Windows.Devices.Geolocation.Geocoordinate)">
+      <summary>更新導航，使用指定的地理位置。</summary>
+      <param name="userLocation">使用者目前的位置。</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceNavigator.UpdateUserLocation(Windows.Devices.Geolocation.Geocoordinate,Windows.Devices.Geolocation.BasicGeoposition)">
+      <summary>更新導航，使用指定的地理位置。</summary>
+      <param name="userLocation">使用者目前的位置。</param>
+      <param name="positionOverride">要使用的海拔高度、緯度與經度，而不使用 userLocation 中指定的內容。</param>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs">
+      <summary>提供 Rerouted 事件的資料。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs.Route">
+      <summary>取得重新規劃所建立的新路線。</summary>
+      <returns>新路線。</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceRoadSegment">
+      <summary>表示路線上某一路段的道路。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.Id">
+      <summary>取得路段的識別碼。</summary>
+      <returns>路段的識別碼。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.IsHighway">
+      <summary>取得值，指出路段是否為高速公路。</summary>
+      <returns>如果路段是高速公路則為 true，否則為 false。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.IsTollRoad">
+      <summary>取得值，指出路段是否為收費道路。</summary>
+      <returns>如果路段是收費道路則為 true，否則為 false。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.IsTunnel">
+      <summary>取得值，指出路段是否為隧道。</summary>
+      <returns>如果路段是隧道則為 true，否則為 false。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.Path">
+      <summary>取得描述路段的依序排列地理點。</summary>
+      <returns>描述路段的依序排列地理點。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.RoadName">
+      <summary>取得完整路名。</summary>
+      <returns>完整路名。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.ShortRoadName">
+      <summary>取得簡短路名。</summary>
+      <returns>簡短路名。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.SpeedLimit">
+      <summary>取得路段的速限。</summary>
+      <returns>路段的速限。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSegment.TravelTime">
+      <summary>取得路段的行車時間。</summary>
+      <returns>路段的行車時間。</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceRoadSignpost">
+      <summary>表示路標。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.BackgroundColor">
+      <summary>取得或設定路標的背景色彩。</summary>
+      <returns>路標的背景色彩。 如果沒有可用的資料，此值會傳回藍色。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.Exit">
+      <summary>取得路標上所寫的文字。</summary>
+      <returns>路標上所寫的文字。 如果沒有可用的資料，此值會傳回 null。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.ExitDirections">
+      <summary>取得路標上所寫的方向。 例如，城市名稱和距離。</summary>
+      <returns>路標上所寫的方向。 如果沒有可用的資料，此值會傳回空白清單。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.ExitNumber">
+      <summary>取得路標上書寫的出口號碼。</summary>
+      <returns>路標上所寫的出口號瑪。 如果沒有可用的資料，此值會傳回 null。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoadSignpost.ForegroundColor">
+      <summary>取得或設定路標的文字色彩。</summary>
+      <returns>路標的文字色彩。 如果沒有可用的資料，此值會傳回白色。</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceRoute">
+      <summary>表示提供導航的路線。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.BoundingBox">
+      <summary>取得包含路線的地理區域。</summary>
+      <returns>包含路線的地理區域。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.Distance">
+      <summary>取得路線的總距離，以公尺為單位。</summary>
+      <returns>路線的總距離，以公尺為單位。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.Duration">
+      <summary>取得路線的預估行車時間。</summary>
+      <returns>路線的預估行車時間。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.Maneuvers">
+      <summary>取得路線導航所需的機動動作清單。</summary>
+      <returns>路線導航所需的機動動作。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.Path">
+      <summary>取得沿著路線依序排列的地理點。</summary>
+      <returns>沿著路線依序排列的地理點。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceRoute.RoadSegments">
+      <summary>取得組成整段路線的路段清單，從開始到抵達。</summary>
+      <returns>組成整段路線的路段清單，從開始到抵達。</returns>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceRoute.CanCreateFromMapRoute(Windows.Services.Maps.MapRoute)">
+      <summary>檢查指定的 MapRoute 物件是否可以轉換成 GuidanceRoute 物件。</summary>
+      <returns>如果可以建立 GuidanceRoute 物件，則為 true，否則為 false。</returns>
+      <param name="mapRoute">要導航的可能路線。</param>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceRoute.ConvertToMapRoute">
+      <summary>建立根據目前 GuidanceRoute 的 MapRoute 物件。</summary>
+      <returns>根據目前 GuidanceRoute 物件的 MapRoute 物件。</returns>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceRoute.TryCreateFromMapRoute(Windows.Services.Maps.MapRoute)">
+      <summary>建立根據所指定 MapRoute 的 GuidanceRoute 物件。</summary>
+      <returns>根據所指定 MapRoute 物件的 GuidanceRoute 物件；如果 mapRoute 無法轉換則為 null。</returns>
+      <param name="mapRoute">要導航的可能路線。</param>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector">
+      <summary>收集位置資料以回報交通狀況。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.Enabled">
+      <summary>取得或設定值，指出是否收集位置資料用於回報交通狀況。</summary>
+      <returns>如果有收集位置資料用於回報交通狀況，則為 true，否則為 false。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.SpeedTrigger">
+      <summary>取得或設定資料收集開始的速度，以每秒公尺為單位。</summary>
+      <returns>資料收集開始的速度，以每秒公尺為單位。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.UploadFrequency">
+      <summary>取得或設定回報交通狀況的頻率，以秒為單位。</summary>
+      <returns>回報交通狀況的頻率，以秒為單位。</returns>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.ClearLocalData">
+      <summary>清除 GuidanceTelemetryCollector 儲存在本機上的位置資料。</summary>
+    </member><member name="M:Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.GetCurrent">
+      <summary>建立用於目前遙測收集器的 GuidanceTelemetryCollector 物件。</summary>
+      <returns>目前遙測收集器。</returns>
+    </member><member name="T:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs">
+      <summary>提供 GuidanceUpdated 事件的資料。</summary>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.AfterNextManeuver">
+      <summary>取得遵循 NextManeuver 的機動動作。</summary>
+      <returns>遵循 NextManeuver 的機動動作。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.AfterNextManeuverDistance">
+      <summary>取得路線上目前位置與 AfterNextManeuver 之間的距離，以公尺為單位。</summary>
+      <returns>路線上目前位置與 AfterNextManeuver 之間的距離，以公尺為單位。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.CurrentLocation">
+      <summary>取得目前位置的導航條件。</summary>
+      <returns>目前位置的導航條件。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.DistanceToDestination">
+      <summary>取得路線的剩餘距離，以公尺為單位。</summary>
+      <returns>路線的剩餘距離，以公尺為單位。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.ElapsedDistance">
+      <summary>取得更新前路線已行駛的距離，以公尺為單位。</summary>
+      <returns>更新前路線已行駛的距離，以公尺為單位。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.ElapsedTime">
+      <summary>取得更新前路線經過的時間。</summary>
+      <returns>更新前路線經過的時間。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.IsNewManeuver">
+      <summary>取得值，指出更新是否包含新的機動動作。</summary>
+      <returns>如果更新包含新的機動動作，則為 true，否則為 false。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.LaneInfo">
+      <summary>取得目前位置附近的車道清單，由左至右排列。</summary>
+      <returns>目前位置附近的車道清單，由左至右排列。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.Mode">
+      <summary>取得導航的類型。</summary>
+      <returns>導航的類型。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.NextManeuver">
+      <summary>取得目前機動動作的後續機動動作。</summary>
+      <returns>目前機動動作的後續機動動作。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.NextManeuverDistance">
+      <summary>取得路線上目前位置與 NextManeuver 之間的距離，以公尺為單位。</summary>
+      <returns>路線上目前位置與 NextManeuver 之間的距離，以公尺為單位。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.RoadName">
+      <summary>取得目前路段的全名。</summary>
+      <returns>目前路段的全名。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.Route">
+      <summary>取得更新的路線。</summary>
+      <returns>更新的路線。</returns>
+    </member><member name="P:Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.TimeToDestination">
+      <summary>取得到達目的地預估的行車時間。</summary>
+      <returns>到達目的地預估的行車時間。</returns>
+    </member></members>
+</doc>

@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Services.Maps.LocalSearchContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Services.Maps.LocalSearch.LocalCategories">
+      <summary>提供在调用 FindLocalLocationsAsync 方法时可用于限制搜索结果的搜索类别的名称。</summary>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.All">
+      <summary>获取表示所有搜索类别的值。</summary>
+      <returns>指示搜索结果未受搜索类别限制的值。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.BankAndCreditUnions">
+      <summary>获取银行和信贷协会的搜索类别的名称。</summary>
+      <returns>银行和信贷协会的搜索类别的名称。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.EatDrink">
+      <summary>获取饮食地点的搜索类别的名称。</summary>
+      <returns>饮食地点的搜索类别的名称。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.Hospitals">
+      <summary>获取医院的搜索类别的名称。</summary>
+      <returns>医院的搜索类别的名称。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.HotelsAndMotels">
+      <summary>获取旅馆和汽车旅馆的搜索类别的名称。</summary>
+      <returns>旅馆和汽车旅馆的搜索类别的名称。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.Parking">
+      <summary>获取停靠位置的搜索类别的名称。</summary>
+      <returns>停靠位置的搜索类别的名称。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.SeeDo">
+      <summary>获取待参观地点和待办事项的搜索类别的名称。</summary>
+      <returns>待参观地点和待办事项的搜索类别的名称。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.Shop">
+      <summary>获取购物地点的搜索类别的名称。</summary>
+      <returns>购物地点的搜索类别的名称。</returns>
+    </member><member name="T:Windows.Services.Maps.LocalSearch.LocalLocation">
+      <summary>表示企业或地点。</summary>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.Address">
+      <summary>获取企业或地点的邮政地址。</summary>
+      <returns>企业或地点的邮政地址。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.Category">
+      <summary>获取此位置的类别。</summary>
+      <returns>此位置的类别。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.DataAttribution">
+      <summary>获取提供企业或地点信息的数据源的名称。</summary>
+      <returns>提供企业或地点信息的数据源的名称。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.Description">
+      <summary>获取企业或地点的说明。</summary>
+      <returns>企业或地点的说明。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.DisplayName">
+      <summary>获取企业或地点的名称。</summary>
+      <returns>企业或地点的名称。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.HoursOfOperation">
+      <summary>获取此位置的运行小时数。</summary>
+      <returns>此位置的运行小时数。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.Identifier">
+      <summary>获取企业或地点的搜索结果标识符。</summary>
+      <returns>企业或地点的搜索结果标识符。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.PhoneNumber">
+      <summary>获取企业或地点的电话号码。</summary>
+      <returns>企业或地点的电话号码。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.Point">
+      <summary>获取企业或地点的地理位置。</summary>
+      <returns>企业或地点的地理位置。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.RatingInfo">
+      <summary>获取此位置的分级信息。</summary>
+      <returns>此位置的分级信息。</returns>
+    </member><member name="T:Windows.Services.Maps.LocalSearch.LocalLocationFinder">
+      <summary>针对企业和地点的搜索。</summary>
+    </member><member name="M:Windows.Services.Maps.LocalSearch.LocalLocationFinder.FindLocalLocationsAsync(System.String,Windows.Devices.Geolocation.Geocircle,System.String,System.UInt32)">
+      <summary>获取有关满足指定搜索标准的企业和地点的信息。</summary>
+      <returns>满足指定搜索条件的相关企业或位置，类型为 LocalLocationFinderResult。</returns>
+      <param name="searchTerm">搜索的查询文本；你正在搜索的内容。</param>
+      <param name="searchArea">要包含在搜索中的地理区域。</param>
+      <param name="localCategory">搜索类别用于限制搜索结果。 我们建议使用一个或多个 LocalCategories 属性指定 localCategory。 使用分号“;”分隔符指定多个类别。</param>
+      <param name="maxResults">要从搜索中返回的结果的最大数量。</param>
+    </member><member name="T:Windows.Services.Maps.LocalSearch.LocalLocationFinderResult">
+      <summary>表示通过 FindLocalLocationsAsync 方法执行的搜索的结果。</summary>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocationFinderResult.LocalLocations">
+      <summary>获取满足指定搜索标准（如果有）的企业和地点。</summary>
+      <returns>满足指定搜索标准的企业和地点（如果有），类型为 LocalLocation。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocationFinderResult.Status">
+      <summary>获取通过 FindLocalLocationsAsync 方法执行的搜索的状态。</summary>
+      <returns>通过 FindLocalLocationsAsync 方法执行的搜索的状态。</returns>
+    </member><member name="T:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus">
+      <summary>指定通过 FindLocalLocationsAsync 方法执行的搜索的状态。</summary>
+    </member><member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.InvalidCategory">
+      <summary>一个或多个指定的类别无效。</summary>
+    </member><member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.InvalidCredentials">
+      <summary>应用没有执行搜索所需的凭据。</summary>
+    </member><member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.InvalidSearchArea">
+      <summary>指定的地理区域无效。</summary>
+    </member><member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.InvalidSearchTerm">
+      <summary>指定的搜索文本无效。</summary>
+    </member><member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.NetworkFailure">
+      <summary>搜索时遇到网络故障。</summary>
+    </member><member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.NotSupported">
+      <summary>此设备不支持搜索。</summary>
+    </member><member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.Success">
+      <summary>搜索成功完成。</summary>
+    </member><member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.UnknownError">
+      <summary>搜索遇到未知错误。</summary>
+    </member><member name="T:Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem">
+      <summary>包含位置的运行小时数。</summary>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem.Day">
+      <summary>获取属性处于运行状态的日。</summary>
+      <returns>属性处于运行状态的日。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem.Span">
+      <summary>获取属性的运行时间范围。</summary>
+      <returns>属性的运行时间范围。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem.Start">
+      <summary>获取位置的运行的开头。</summary>
+      <returns>位置的运行的开头。</returns>
+    </member><member name="T:Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo">
+      <summary>包含位置分级信息。</summary>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo.AggregateRating">
+      <summary>获取位置的聚合分级。</summary>
+      <returns>位置的聚合分级。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo.ProviderIdentifier">
+      <summary>获取分级的提供商 ID。</summary>
+      <returns>分级的提供商 ID。</returns>
+    </member><member name="P:Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo.RatingCount">
+      <summary>获取此位置的分级计数。</summary>
+      <returns>此位置的分级计数。</returns>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkClickEventArgs">
+      <summary>为 BusinessLandmarkClick 事件提供数据。</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkClickEventArgs.#ctor">
+      <summary>初始化 MapControlBusinessLandmarkClickEventArgs 类的新实例。</summary>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkClickEventArgs.LocalLocations">
+      <summary>获取与企业地标对应的企业。</summary>
+      <returns>与企业地标对应的企业，类型为 LocalLocation。</returns>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerEnteredEventArgs">
+      <summary>为 BusinessLandmarkPointerEntered 事件提供数据。</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerEnteredEventArgs.#ctor">
+      <summary>创建新的 MapControlBusinessLandmarkPointerEnteredEventArgs 对象。</summary>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerEnteredEventArgs.LocalLocations">
+      <summary>获取企业地标的本地位置。</summary>
+      <returns>企业地标的本地位置。</returns>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerExitedEventArgs">
+      <summary>为 BusinessLandmarkPointerExited 事件提供数据。</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerExitedEventArgs.#ctor">
+      <summary>构造新的 MapControlBusinessLandmarkPointerExitedEventArgs 对象。</summary>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerExitedEventArgs.LocalLocations">
+      <summary>获取地标的本地位置。</summary>
+      <returns>地标的本地位置。</returns>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkRightTappedEventArgs">
+      <summary>为 BusinessLandmarkRightTapped 事件提供数据。</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkRightTappedEventArgs.#ctor">
+      <summary>初始化 MapControlBusinessLandmarkRightTappedEventArgs 类的新实例。</summary>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkRightTappedEventArgs.LocalLocations">
+      <summary>获取与企业地标对应的企业。</summary>
+      <returns>与企业地标对应的企业，类型为 LocalLocation。</returns>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper">
+      <summary>提供指示用户已单击企业位置或运输功能的事件。</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.#ctor(Windows.UI.Xaml.Controls.Maps.MapControl)">
+      <summary>为指定 MapControl 创建 MapControlDataHelper 类的实例。</summary>
+      <param name="map">向 MapControlDataHelper 提供企业和运输位置的地图控件。</param>
+    </member><member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.BusinessLandmarkClick">
+      <summary>当用户点击企业位置或使用鼠标左键单击它时发生。 MapControlBusinessLandmarkClickEventArgs 的实例为此事件提供数据。</summary>
+    </member><member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.BusinessLandmarkPointerEntered">
+      <summary>指示指针进入了企业地标。</summary>
+    </member><member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.BusinessLandmarkPointerExited">
+      <summary>指示指针退出了企业地标。</summary>
+    </member><member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.BusinessLandmarkRightTapped">
+      <summary>当用户按住企业位置或使用鼠标右键单击它时发生。 MapControlBusinessLandmarkRightTappedEventArgs 的实例为此事件提供数据。</summary>
+    </member><member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.TransitFeatureClick">
+      <summary>当用户点击运输功能或使用鼠标左键单击它时发生。 MapControlTransitFeatureClickEventArgs 的实例为此事件提供数据。</summary>
+    </member><member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.TransitFeaturePointerEntered">
+      <summary>指示指针进入了运输功能。</summary>
+    </member><member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.TransitFeaturePointerExited">
+      <summary>指示指针退出了运输功能。</summary>
+    </member><member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.TransitFeatureRightTapped">
+      <summary>当用户按住运输功能或使用鼠标右键单击它时发生。 MapControlTransitFeatureRightTappedEventArgs 的实例为此事件提供数据。</summary>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs">
+      <summary>为 TransitFeatureClick 事件提供数据。</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs.#ctor">
+      <summary>初始化 MapControlTransitFeatureClickEventArgs 类的新实例。</summary>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs.DisplayName">
+      <summary>获取运输功能的名称。</summary>
+      <returns>运输功能的名称。</returns>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs.Location">
+      <summary>获取运输功能的地理位置。</summary>
+      <returns>运输功能的地理位置。</returns>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs.TransitProperties">
+      <summary>获取运输功能的属性包。</summary>
+      <returns>运输功能的属性包。</returns>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs">
+      <summary>为 TransitFeaturePointerEntered 事件提供数据。</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs.#ctor">
+      <summary>构造新的 MapControlTransitFeaturePointerEnteredEventArgs 对象。</summary>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs.DisplayName">
+      <summary>获取显示名称。</summary>
+      <returns>显示名称。</returns>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs.Location">
+      <summary>获取位置。</summary>
+      <returns>位置。</returns>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs.TransitProperties">
+      <summary>获取运输属性。</summary>
+      <returns>运输属性。</returns>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs">
+      <summary>向 TransitFeaturePointerExited 事件提供数据。</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs.#ctor">
+      <summary>构造新的 MapControlTransitFeaturePointerExitedEventArgs 对象。</summary>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs.DisplayName">
+      <summary>获取显示名称。</summary>
+      <returns>显示名称。</returns>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs.Location">
+      <summary>获取位置。</summary>
+      <returns>位置。</returns>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs.TransitProperties">
+      <summary>获取运输属性。</summary>
+      <returns>运输属性。</returns>
+    </member><member name="T:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs">
+      <summary>为 TransitFeatureRightTapped 事件提供数据。</summary>
+    </member><member name="M:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs.#ctor">
+      <summary>初始化 MapControlTransitFeatureRightTappedEventArgs 类的新实例。</summary>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs.DisplayName">
+      <summary>获取运输功能的名称。</summary>
+      <returns>运输功能的名称。</returns>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs.Location">
+      <summary>获取运输功能的地理位置。</summary>
+      <returns>运输功能的地理位置。</returns>
+    </member><member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs.TransitProperties">
+      <summary>获取运输功能的属性包。</summary>
+      <returns>运输功能的属性包。</returns>
+    </member></members>
+</doc>

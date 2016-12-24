@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.ApplicationSettings.ApplicationsSettingsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.ApplicationSettings.SettingsEdgeLocation">
+      <summary>Gibt den Bildschirmrand an, in dem die Charms "Einstellungen" angezeigt werden.</summary>
+      <deprecated type="deprecate">SettingsEdgeLocation ist veraltet und funktioniert möglicherweise nicht auf allen Plattformen. Weitere Informationen finden Sie unter MSDN.</deprecated>
+    </member><member name="F:Windows.UI.ApplicationSettings.SettingsEdgeLocation.Left">
+      <summary>Der Charm "Einstellungen" wird an der linken Seite des Bildschirm angezeigt.</summary>
+    </member><member name="F:Windows.UI.ApplicationSettings.SettingsEdgeLocation.Right">
+      <summary>Der Charm "Einstellungen" wird an der rechten Seite des Bildschirm angezeigt.</summary>
+    </member><member name="T:Windows.UI.ApplicationSettings.SettingsPane">
+      <summary>Eine statische Klasse, mit der die Anwendung den Bereich für den Charm "Einstellungen" steuern kann. Die App kann Befehle hinzufügen oder entfernen, eine Benachrichtigung empfangen, wenn der Benutzer den Bereich öffnet, oder den Bereich programmgesteuert öffnen.</summary>
+      <deprecated type="deprecate">SettingsPane kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein. Anstatt ein SettingsPane zu verwenden, integrieren Sie Einstellungsoptionen in die App-Erfahrung. Weitere Informationen finden Sie unter Richtlinien für App-Einstellungen.</deprecated>
+    </member><member name="P:Windows.UI.ApplicationSettings.SettingsPane.Edge">
+      <summary>Ruft einen Wert auf, der angibt, ob der Charm "Einstellungen" am linken oder rechten Bildschirmrand angezeigt wird.</summary>
+      <deprecated type="deprecate">SettingsPane kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein. Anstatt ein SettingsPane zu verwenden, integrieren Sie Einstellungsoptionen in die App-Erfahrung. Weitere Informationen finden Sie unter Richtlinien für App-Einstellungen.</deprecated>
+      <returns>Der Speicherort des Charms "Einstellungen".</returns>
+    </member><member name="E:Windows.UI.ApplicationSettings.SettingsPane.CommandsRequested">
+      <summary>Tritt ein, wenn der Benutzer den Einstellungsbereich öffnet. Das Warten auf dieses Ereignis ermöglicht der App, die Einstellungsbefehle zu initialisieren und seine Benutzeroberfläche einzufrieren, bis der Benutzer den Bereich schließt.</summary>
+      <deprecated type="deprecate">SettingsPane kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein. Anstatt ein SettingsPane zu verwenden, integrieren Sie Einstellungsoptionen in die App-Erfahrung. Weitere Informationen finden Sie unter Richtlinien für App-Einstellungen.</deprecated>
+    </member><member name="M:Windows.UI.ApplicationSettings.SettingsPane.GetForCurrentView">
+      <summary>Ruft ein SettingsPane-Objekt ab, das der aktuellen App-Ansicht (CoreWindow) zugeordnet ist.</summary>
+      <deprecated type="deprecate">SettingsPane kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein. Anstatt ein SettingsPane zu verwenden, integrieren Sie Einstellungsoptionen in die App-Erfahrung. Weitere Informationen finden Sie unter Richtlinien für App-Einstellungen.</deprecated>
+      <returns>Der Einstellungsbereich.</returns>
+    </member><member name="M:Windows.UI.ApplicationSettings.SettingsPane.Show">
+      <summary>Zeigt dem Benutzer die Charm Pane-Einstellungen an.</summary>
+      <deprecated type="deprecate">SettingsPane kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein. Anstatt ein SettingsPane zu verwenden, integrieren Sie Einstellungsoptionen in die App-Erfahrung. Weitere Informationen finden Sie unter Richtlinien für App-Einstellungen.</deprecated>
+    </member><member name="T:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest">
+      <summary>Enthält Eigenschaften, die nur während des CommandsRequested-Ereignisses verfügbar sind.</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequest kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein. Anstatt ein SettingsPane zu verwenden, integrieren Sie Einstellungsoptionen in die App-Erfahrung. Weitere Informationen finden Sie unter Richtlinien für App-Einstellungen.</deprecated>
+    </member><member name="P:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest.ApplicationCommands">
+      <summary>Ein Vektor, der während des CommandsRequested-Ereignisses verfügbar ist. Fügen Sie SettingsCommand-Objekte an, um sie für die SettingsPane-Benutzeroberfläche verfügbar zu machen.</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequest kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein. Anstatt ein SettingsPane zu verwenden, integrieren Sie Einstellungsoptionen in die App-Erfahrung. Weitere Informationen finden Sie unter Richtlinien für App-Einstellungen.</deprecated>
+      <returns>Der Vektor von SettingsCommand-Objekten.</returns>
+    </member><member name="T:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs">
+      <summary>Enthält Argumente, die dem Ereignisobjekt während des CommandsRequested-Ereignisses zur Verfügung stehen.</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequestedEventArgs kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein. Anstatt ein SettingsPane zu verwenden, integrieren Sie Einstellungsoptionen in die App-Erfahrung. Weitere Informationen finden Sie unter Richtlinien für App-Einstellungen.</deprecated>
+    </member><member name="P:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs.Request">
+      <summary>Eine Instanz von SettingsPaneCommandsRequest, die während des CommandsRequested-Ereignisses bereitgestellt wird.</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequestedEventArgs kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein. Anstatt ein SettingsPane zu verwenden, integrieren Sie Einstellungsoptionen in die App-Erfahrung. Weitere Informationen finden Sie unter Richtlinien für App-Einstellungen.</deprecated>
+      <returns>Das Objekt zum Anfordern von Befehlen.</returns>
+    </member></members>
+</doc>

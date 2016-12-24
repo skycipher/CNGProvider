@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Search.SearchContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs">
+      <summary>为与 searchPane 对象关联的 querychanged 事件提供数据。</summary>
+      <deprecated type="deprecate">ISearchPaneQueryChangedEventArgs 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs.Language">
+      <summary>标识当前与用户的文本输入设备关联的语言的 Internet 工程任务组 (IETF) 语言标记 (BCP 47 标准)。</summary>
+      <returns>Internet 工程任务组 (IETF) BCP 47 标准语言标记。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs.LinguisticDetails">
+      <summary>提供有关查询文本的信息（用户通过输入法编辑器 (IME) 输入）的对象。</summary>
+      <returns>提供查询文本相关信息的对象。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs.QueryText">
+      <summary>当 querychanged 事件激发时，位于搜索框中的文本。</summary>
+      <returns>当前查询文本。</returns>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPane">
+      <summary>已弃用。 改用 Windows.UI.Xaml.Controls.SearchBox (XAML) 或 WinJS.UI.SearchBox (HTML) 控件。</summary>
+      <deprecated type="deprecate">SearchPane 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.Language">
+      <summary>标识当前与用户的文本输入设备关联的语言的 Internet 工程任务组 (IETF) 语言标记 (BCP 47 标准)。</summary>
+      <returns>Internet 工程任务组 (IETF) BCP 47 标准语言标记。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.PlaceholderText">
+      <summary>用户未输入任意字符时搜索框中的占位符文本。</summary>
+      <returns>在搜索框中显示的占位符文本。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.QueryText">
+      <summary>搜索窗格的搜索框中的当前文本。</summary>
+      <returns>当前查询文本。 如果未使用搜索窗格，则这是一个空字符串。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.SearchHistoryContext">
+      <summary>标识搜索上下文和用于存储用户搜索应用程序历史记录的字符串。</summary>
+      <returns>搜索历史记录上下文字符串。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.SearchHistoryEnabled">
+      <summary>指示是否自动跟踪应用程序的前一个用户搜索以及该搜索是否用于提供建议。</summary>
+      <returns>如果用户的搜索历史记录将被自动跟踪并用于提供建议，则为 true；否则为 false。 默认值为 true。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.ShowOnKeyboardInput">
+      <summary>获取或设置用户是否可以通过键入打开搜索窗格。</summary>
+      <returns>如果用户可以键入以搜索则为 true。 否则为 false。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPane.Visible">
+      <summary>指示搜索窗格是否打开。</summary>
+      <returns>如果正在显示搜索窗格，则为 true；否则为 false。</returns>
+    </member><member name="E:Windows.ApplicationModel.Search.SearchPane.QueryChanged">
+      <summary>当用户在搜索框中更改文本时激发。</summary>
+    </member><member name="E:Windows.ApplicationModel.Search.SearchPane.QuerySubmitted">
+      <summary>当用户在搜索框中提交文本，且应用程序需要显示搜索结果时激发。</summary>
+    </member><member name="E:Windows.ApplicationModel.Search.SearchPane.ResultSuggestionChosen">
+      <summary>当用户选择由应用程序提供，且显示在搜索窗格中的其中一个建议结果时激发。</summary>
+    </member><member name="E:Windows.ApplicationModel.Search.SearchPane.SuggestionsRequested">
+      <summary>当用户的查询文本发生更改，且应用程序需要提供新的建议以显示在搜索窗格中时激发。</summary>
+    </member><member name="E:Windows.ApplicationModel.Search.SearchPane.VisibilityChanged">
+      <summary>当用户打开或关闭搜索窗格时激发。</summary>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPane.GetForCurrentView">
+      <summary>检索用户可以在该应用程序内进行搜索的搜索窗格实例。</summary>
+      <deprecated type="deprecate">ISearchPaneStatics 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+      <returns>搜索窗格的实例，为当前应用程序中的搜索提供一致、触控友好的搜索框和选项搜索建议。</returns>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPane.HideThisApplication">
+      <summary>隐藏当前应用程序的 UI。</summary>
+      <deprecated type="deprecate">ISearchPaneStaticsWithHideThisApplication 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPane.SetLocalContentSuggestionSettings(Windows.ApplicationModel.Search.LocalContentSuggestionSettings)">
+      <summary>指定基于本地文件的建议是否自动显示在搜索窗格，并定义 Windows 使用的条件来定位和筛选这些建议。</summary>
+      <deprecated type="deprecate">ISearchPane 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+      <param name="settings">本地内容建议的新设置。</param>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPane.Show">
+      <summary>显示搜索窗格。</summary>
+      <deprecated type="deprecate">ISearchPane 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPane.Show(System.String)">
+      <summary>显示具有指定的初始查询字符串的搜索窗格。</summary>
+      <deprecated type="deprecate">ISearchPane 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+      <param name="query">初始查询字符串。</param>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPane.TrySetQueryText(System.String)">
+      <summary>尝试设置搜索窗格的搜索框中的文本。</summary>
+      <deprecated type="deprecate">ISearchPane 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+      <returns>如果搜索框文本已成功设置，则为 true。 否则为 false。</returns>
+      <param name="query">在搜索窗格的搜索框中显示的查询文本。</param>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs">
+      <summary>为与 searchPane 对象关联的 querychanged 事件提供数据。</summary>
+      <deprecated type="deprecate">SearchPaneQueryChangedEventArgs 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs.Language">
+      <summary>标识当前与用户的文本输入设备关联的语言的 Internet 工程任务组 (IETF) 语言标记 (BCP 47 标准)。</summary>
+      <returns>Internet 工程任务组 (IETF) BCP 47 标准语言标记。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs.LinguisticDetails">
+      <summary>提供有关查询文本的语言信息（用户通过输入法编辑器 (IME) 输入）的对象。</summary>
+      <returns>提供查询文本相关语言信息的对象。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs.QueryText">
+      <summary>当 querychanged 事件激发时，位于搜索框中的文本。</summary>
+      <returns>当 querychanged 事件激发时，位于搜索框中的文本。</returns>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs">
+      <summary>为与 searchPane 关联的 querysubmitted 事件提供数据</summary>
+      <deprecated type="deprecate">SearchPaneQuerySubmittedEventArgs 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs.Language">
+      <summary>标识当前与用户的文本输入设备关联的语言的 Internet 工程任务组 (IETF) 语言标记 (BCP 47 标准)。</summary>
+      <returns>Internet 工程任务组 (IETF) BCP 47 标准语言标记。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs.LinguisticDetails">
+      <summary>提供有关查询文本的语言信息（用户通过输入法编辑器 (IME) 输入）的对象。</summary>
+      <returns>提供查询文本相关语言信息的对象。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs.QueryText">
+      <summary>通过搜索窗格提交的文本。</summary>
+      <returns>当前提交的查询文本。</returns>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs">
+      <summary>为与 searchPane 对象关联的 resultsuggestionchosen 事件提供数据。</summary>
+      <deprecated type="deprecate">SearchPaneResultSuggestionChosenEventArgs 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs.Tag">
+      <summary>用户选择的建议结果的标记。</summary>
+      <returns>所选搜索结果的应用程序定义的标记。</returns>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest">
+      <summary>存储建议以及有关建议请求的信息。</summary>
+      <deprecated type="deprecate">SearchPaneSuggestionsRequest 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest.IsCanceled">
+      <summary>指示需要是否取消要显示的建议请求。</summary>
+      <returns>如果取消了请求，则为 true；否则为 false。 默认值为 false。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest.SearchSuggestionCollection">
+      <summary>在当前查询的搜索窗格显示的建议。 应用程序通过将建议追加到此 searchSuggestionCollection 对象来提供要显示的建议。</summary>
+      <returns>要显示的建议。 应用程序通过将建议追加到此 searchSuggestionCollection 对象来提供建议。</returns>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest.GetDeferral">
+      <summary>检索允许应用程序异步响应建议请求的对象。</summary>
+      <deprecated type="deprecate">ISearchPaneSuggestionsRequest 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+      <returns>完成搜索建议请求时发送应用程序信号的对象。</returns>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral">
+      <summary>使应用程序在处理 suggestionsrequested 事件且应用程序已完成填充 searchSuggestionCollection 对象时发出信号。</summary>
+      <deprecated type="deprecate">SearchPaneSuggestionsRequestDeferral 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+    </member><member name="M:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral.Complete">
+      <summary>在处理 suggestionsrequested 事件时，应用程序已完成填充 searchSuggestionCollection 对象的信号。</summary>
+      <deprecated type="deprecate">ISearchPaneSuggestionsRequestDeferral 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs">
+      <summary>为与 searchPane 对象关联的 suggestionsrequested 事件提供数据。</summary>
+      <deprecated type="deprecate">SearchPaneSuggestionsRequestedEventArgs 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs.Language">
+      <summary>标识当前与用户的文本输入设备关联的语言的 Internet 工程任务组 (IETF) 语言标记 (BCP 47 标准)。</summary>
+      <returns>Internet 工程任务组 (IETF) BCP 47 标准语言标记。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs.LinguisticDetails">
+      <summary>提供有关查询文本的语言信息（用户通过输入法编辑器 (IME) 输入）的对象。</summary>
+      <returns>提供查询文本相关语言信息的对象。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs.QueryText">
+      <summary>当 suggestionsrequested 事件激发时应用程序应为其提供建议并位于搜索框中的文本。</summary>
+      <returns>应用程序应为其提供建议的查询文本。</returns>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs.Request">
+      <summary>存储有关请求的建议和信息的对象。</summary>
+      <returns>存储有关请求的建议和信息的对象。</returns>
+    </member><member name="T:Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs">
+      <summary>为与 searchPane 对象关联的 visibilitychanged 事件提供数据。</summary>
+      <deprecated type="deprecate">SearchPaneVisibilityChangedEventArgs 在 Windows 10 之后的版本中可能被更改或不可用。</deprecated>
+    </member><member name="P:Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs.Visible">
+      <summary>指示搜索窗格是否打开。</summary>
+      <returns>如果搜索窗格处于打开状态，则为 true；否则为 false。</returns>
+    </member></members>
+</doc>

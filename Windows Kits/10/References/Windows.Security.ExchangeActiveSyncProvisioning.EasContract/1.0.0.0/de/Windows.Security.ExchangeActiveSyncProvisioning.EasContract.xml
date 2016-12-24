@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Security.ExchangeActiveSyncProvisioning.EasContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy">
+      <summary>Moderne Mail-Apps werten die EAS-Sicherheitsrichtlinien aus und wenden sie an.</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+    </member><member name="M:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.#ctor">
+      <summary>Erstellt eine Instanz eines Objekts, die der Aufrufer-App die Festlegung von Richtlinien erlaubt, die aus dem Exchange Server zur Auswertung oder Anwendung empfangen werden.</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.DisallowConvenienceLogon">
+      <summary>Ruft die Fähigkeit auf, Hilfsanmeldungen zu verhindern, oder legt diese fest.</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+      <returns>"True" verhindert Convenience-Anmeldungen.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.MaxInactivityTimeLock">
+      <summary>Ruft die maximale Zeitspanne auf, die der Computer inaktiv bleiben kann, bevor er gesperrt ist, oder legt sie fest.</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+      <returns>Die erlaubte Zeitdauer für die Inaktivität, bevor der Computer gesperrt wird.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.MaxPasswordFailedAttempts">
+      <summary>Ruft die maximale Anzahl der fehlgeschlagenen Kennwortversuche für die Anmeldung auf oder legt sie fest.</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+      <returns>Der Bereich liegt zwischen 4 und 16.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.MinPasswordComplexCharacters">
+      <summary>Ruft die Mindestanzahl von komplexen Zeichen auf, die für ein Kennwort erforderlich sind, oder legt diese fest.</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+      <returns>Der Bereich liegt zwischen 1 und 4.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.MinPasswordLength">
+      <summary>Ruft die Mindestlänge des Kennworts auf oder legt diese fest.</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+      <returns>Der Bereich liegt zwischen 1 und 16.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.PasswordExpiration">
+      <summary>Ruft die Zeitspanne für die Kennwortgültigkeit auf oder legt diese fest.</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+      <returns>Die Zeitspanne, bevor das Kennwort abläuft und zurückgesetzt werden muss.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.PasswordHistory">
+      <summary>Ruft die Kennwortinformationen, die zuvor verwendet wurden, ab oder legt sie fest.</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+      <returns>Die Kennwortinformationen, die zuvor verwendet wurden.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.RequireEncryption">
+      <summary>Ruft auf, ob eine Verschlüsselung erforderlich ist, oder legt dies fest.</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+      <returns>"True" bedeutet, dass eine Verschlüsselung erforderlich ist.</returns>
+    </member><member name="M:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.ApplyAsync">
+      <summary>Wendet die EAS-Richtlinien im asynchronen Modus an, sobald der Benutzer zugestimmt hat.</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+      <returns>Gibt die Auswertung der Rückrufergebnisse im asynchronen Modus wieder an die aufrufende App zurück.</returns>
+    </member><member name="M:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.CheckCompliance">
+      <summary>Wertet die EAS-Richtlinien aus.</summary>
+      <deprecated type="deprecate">EasClientSecurityPolicy kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+      <returns>Gibt die Ergebnisse der Kompatibilitätsprüfung im synchronen Modus zurück.</returns>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults">
+      <summary>Stellt für die E-Mail-App die Auswertungsergebnisse bezüglich der EAS-Sicherheitsrichtlinien bereit.</summary>
+      <deprecated type="deprecate">EasComplianceResults kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.Compliant">
+      <summary>Gibt als Ergebnis zurück, ob der Computer mit dem EAS-Richtlinien kompatibel ist.</summary>
+      <deprecated type="deprecate">EasComplianceResults kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+      <returns>Das Ergebnis, ob der Computer mit den EAS-Richtlinien kompatibel ist. Die Eigenschaft von Compliant wird als "TRUE" festgelegt, wenn alle überprüften Richtlinien zutreffen. Andernfalls wird es auf FALSE festgelegt.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.DisallowConvenienceLogonResult">
+      <summary>Gibt als Ergebnis zurück, ob Convenience-Anmeldungen nicht zulässig sind.</summary>
+      <deprecated type="deprecate">EasComplianceResults kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+      <returns>Das Ergebnis, ob Convenience-Anmeldungen unzulässig sind.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.EncryptionProviderType">
+      <summary>Ruft den Typ des Exchange ActiveSync-Verschlüsselungsanbieters ab.</summary>
+      <deprecated type="deprecate">EasComplianceResults kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+      <returns>Der Typ des Exchange ActiveSync-Verschlüsselungsanbieters.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.MaxInactivityTimeLockResult">
+      <summary>Gibt die maximal zulässige Zeit zurück, die der Computer inaktiv sein kann, bevor er gesperrt wird.</summary>
+      <deprecated type="deprecate">EasComplianceResults kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+      <returns>Die maximal zulässige Zeit, die der Computer inaktiv sein kann, bevor er gesperrt wird.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.MaxPasswordFailedAttemptsResult">
+      <summary>Gibt die maximal zulässige Anzahl fehlgeschlagener Kennworteingaben zurück.</summary>
+      <deprecated type="deprecate">EasComplianceResults kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+      <returns>Das Ergebnis der maximal zulässigen Anzahl ungültiger Kennwortangaben.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.MinPasswordComplexCharactersResult">
+      <summary>Gibt die mindestens erforderliche Anzahl von Sonderzeichen für das Kennwort zurück.</summary>
+      <deprecated type="deprecate">EasComplianceResults kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+      <returns>Das Ergebnis der mindestens erforderlichen Anzahl von Sonderzeichen für das Kennwort.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.MinPasswordLengthResult">
+      <summary>Gibt die minimale Länge des erforderlichen Kennworts zurück.</summary>
+      <deprecated type="deprecate">EasComplianceResults kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+      <returns>Das Ergebnis der minimalen Länge des erforderlichen Kennworts.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.PasswordExpirationResult">
+      <summary>Gibt als Ergebnis zurück, ob das Kennwort abgelaufen ist.</summary>
+      <deprecated type="deprecate">EasComplianceResults kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+      <returns>Das Ergebnis, ob das Kennwort abgelaufen ist.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.PasswordHistoryResult">
+      <summary>Gibt das Ergebnis der Versionsgeschichte von Kennwörtern zurück.</summary>
+      <deprecated type="deprecate">EasComplianceResults kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+      <returns>Das Ergebnis der Versionsgeschichte von Kennwörtern.</returns>
+    </member><member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.RequireEncryptionResult">
+      <summary>Gibt als Ergebnis zurück, ob eine Verschlüsselung erforderlich ist.</summary>
+      <deprecated type="deprecate">EasComplianceResults kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+      <returns>Das Ergebnis, ob eine Verschlüsselung erforderlich ist.</returns>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult">
+      <summary>Abfrageergebnisse bzgl. der Anmeldungsausführung.</summary>
+      <deprecated type="deprecate">EasDisallowConvenienceLogonResult wird in Versionen nach Windows 10 möglicherweise geändert oder nicht mehr verfügbar sein.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult.CanBeCompliant">
+      <summary>Dieser Computer kann mithilfe der ApplyAsync-Methode kompatibel sein.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS, und der Benutzer ist ein Administrator.HRESULT: S_OK, aber der Benutzer wird nicht kontrolliert.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult.Compliant">
+      <summary>Dieser Computer entspricht der Richtlinie.HRESULT: S_OK, und der Benutzer wird kontrolliert.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult.NotEvaluated">
+      <summary>Die Richtlinie ist nicht für die Auswertung festgelegt.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult.RequestedPolicyIsStricter">
+      <summary>Die angeforderte Richtlinie ist strenger als die Computerrichtlinien.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS. Und der Benutzer ist kein Administrator.</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType">
+      <summary>Beschreibt den Typ des Exchange ActiveSync-Verschlüsselungsanbieters.</summary>
+      <deprecated type="deprecate">EasEncryptionProviderType kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType.NotEvaluated">
+      <summary>Der Verschlüsselungsanbietertyp wurde noch nicht bestimmt.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType.OtherEncryption">
+      <summary>Der Verschlüsselungsanbieter ist kein Windows-Anbieter.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType.WindowsEncryption">
+      <summary>Der Verschlüsselungsanbieter ist ein Windows-Anbieter.</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult">
+      <summary>Stellt die maximal zulässige Zeitdauer dar, bevor der Computer gesperrt wird.</summary>
+      <deprecated type="deprecate">EasMaxInactivityTimeLockResult kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.CanBeCompliant">
+      <summary>Dieser Computer kann mithilfe der ApplyAsync-Methode kompatibel sein.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS, und der Benutzer ist ein Administrator.HRESULT: S_OK, aber der Benutzer wird nicht kontrolliert.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.Compliant">
+      <summary>Dieser Computer entspricht der Richtlinie.HRESULT: S_OK, und der Benutzer wird kontrolliert.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.InvalidParameter">
+      <summary>Der Richtlinienwert befindet sich nicht in einem gültigen Bereich.HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.NotEvaluated">
+      <summary>Die Richtlinie ist nicht für die Auswertung festgelegt.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.RequestedPolicyIsStricter">
+      <summary>Die angeforderte Richtlinie ist strenger als die Computerrichtlinien.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS. Und der Benutzer ist kein Administrator.</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult">
+      <summary>Stellt die maximal zulässige Anzahl von Kennworteingabeversuchen dar.</summary>
+      <deprecated type="deprecate">EasMaxPasswordFailedAttemptsResult kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.CanBeCompliant">
+      <summary>Dieser Computer kann mithilfe der ApplyAsync-Methode kompatibel sein.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS, und der Benutzer ist ein Administrator.HRESULT: S_OK, aber der Benutzer wird nicht kontrolliert.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.Compliant">
+      <summary>Dieser Computer entspricht der Richtlinie.HRESULT: S_OK, und der Benutzer wird kontrolliert.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.InvalidParameter">
+      <summary>Der Richtlinienwert befindet sich nicht in einem gültigen Bereich.HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.NotEvaluated">
+      <summary>Die Richtlinie ist nicht für die Auswertung festgelegt.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.RequestedPolicyIsStricter">
+      <summary>Die angeforderte Richtlinie ist strenger als die Computerrichtlinien.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS. Und der Benutzer ist kein Administrator.</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult">
+      <summary>Stellt die minimale Kennwortkomplexität dar.</summary>
+      <deprecated type="deprecate">EasMinPasswordComplexCharactersResult kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.AdminsCannotChangePassword">
+      <summary>Einer oder mehrere Administratoren sind nicht befugt, ihre Kennwörter zu ändern. HRESULT: EAS_E_ADMINS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.AdminsHaveBlankPassword">
+      <summary>Die EAS-Kennwortrichtlinien können nicht ausgewertet werden, da eine oder mehrere Administratoren leere Kennwörter haben. HRESULT: EAS_E_ADMINS_HAVE_BLANK_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.CanBeCompliant">
+      <summary>Dieser Computer kann mithilfe der ApplyAsync-Methode kompatibel sein.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS, und der Benutzer ist ein Administrator.HRESULT: S_OK, aber der Benutzer wird nicht kontrolliert.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.ChangeConnectedAdminsPassword">
+      <summary>Es gibt mindestens einen Administrator, dessen Kennwort für das verbundene Konto geändert werden muss, um der EAS-Kennwortrichtlinie zu entsprechen.HRESULT: EAS_E_CONNECTED_ADMINS_NEED_TO_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.ChangeConnectedUserPassword">
+      <summary>Das Kennwort des verbundenen Kontos für den aktuellen Benutzer muss zur Einhaltung der EAS-Kennwortrichtlinie geändert werden.HRESULT: EAS_E_CURRENT_CONNECTED_USER_NEED_TO_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.Compliant">
+      <summary>Dieser Computer entspricht der Richtlinie.HRESULT: S_OK, und der Benutzer wird kontrolliert.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.ConnectedAdminsProviderPolicyIsWeak">
+      <summary>Die EAS-Kennwortrichtlinie kann vom verbundenen Kontoanbieter mindestens eines Administrators nicht erzwungen werden.HRESULT: EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CONNECTED_ADMINS</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.ConnectedUserProviderPolicyIsWeak">
+      <summary>Die EAS-Kennwortrichtlinie kann vom verbundenen Kontoanbieter des aktuellen Benutzers nicht erzwungen werden.HRESULT: EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CURRENT_CONNECTED_USER</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.CurrentUserHasBlankPassword">
+      <summary>Die EAS-Kennwortrichtlinien für den Benutzer können nicht ausgewertet werden, da der Benutzer ein leeres Kennwort besitzt.HRESULT: EAS_E_CURRENT_USER_HAS_BLANK_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.InvalidParameter">
+      <summary>Der Richtlinienwert befindet sich nicht in einem gültigen Bereich.HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.LocalControlledUsersCannotChangePassword">
+      <summary>Es sind andere Standardbenutzer vorhanden, die nicht berechtigt sind, ihre Kennwörter zu ändern. HRESULT: EAS_E_LOCAL_CONTROLLED_USERS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.NotEvaluated">
+      <summary>Die Richtlinie ist nicht für die Auswertung festgelegt.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.RequestedPolicyIsStricter">
+      <summary>Die angeforderte Richtlinie ist strenger als die Computerrichtlinien.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS. Und der Benutzer ist kein Administrator.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.RequestedPolicyNotEnforceable">
+      <summary>Die EAS-Richtlinie, die ausgewertet wird, kann vom System nicht umgesetzt werden.HRESULT: EAS_E_REQUESTED_POLICY_NOT_ENFORCEABLE</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.UserCannotChangePassword">
+      <summary>Der Benutzer ist nicht berechtigt, das Kennwort zu ändern. HRESULT: EAS_E_USER_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult">
+      <summary>Stellt die minimale Kennwortlänge dar.</summary>
+      <deprecated type="deprecate">EasMinPasswordLengthResult kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.AdminsCannotChangePassword">
+      <summary>Einer oder mehrere Administratoren sind nicht befugt, ihre Kennwörter zu ändern. HRESULT: EAS_E_ADMINS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.AdminsHaveBlankPassword">
+      <summary>Die EAS-Kennwortrichtlinien können nicht ausgewertet werden, da eine oder mehrere Administratoren leere Kennwörter haben. HRESULT: EAS_E_ADMINS_HAVE_BLANK_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.CanBeCompliant">
+      <summary>Dieser Computer kann mithilfe der ApplyAsync-Methode kompatibel sein.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS, und der Benutzer ist kein Administrator.HRESULT: S_OK, aber der Benutzer wird nicht kontrolliert.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.ChangeConnectedAdminsPassword">
+      <summary>Es gibt mindestens einen Administrator, dessen Kennwort für das verbundene Konto geändert werden muss, um der EAS-Kennwortrichtlinie zu entsprechen.HRESULT: EAS_E_CONNECTED_ADMINS_NEED_TO_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.ChangeConnectedUserPassword">
+      <summary>Das Kennwort des verbundenen Kontos für den aktuellen Benutzer muss zur Einhaltung der EAS-Kennwortrichtlinie geändert werden.HRESULT: EAS_E_CURRENT_CONNECTED_USER_NEED_TO_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.Compliant">
+      <summary>Dieser Computer entspricht der Richtlinie.HRESULT: S_OK, und der Benutzer wird kontrolliert.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.ConnectedAdminsProviderPolicyIsWeak">
+      <summary>Die EAS-Kennwortrichtlinie kann vom verbundenen Kontoanbieter mindestens eines Administrators nicht erzwungen werden.HRESULT: EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CONNECTED_ADMINS</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.ConnectedUserProviderPolicyIsWeak">
+      <summary>Die EAS-Kennwortrichtlinie kann vom verbundenen Kontoanbieter des aktuellen Benutzers nicht erzwungen werden.HRESULT: EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CURRENT_CONNECTED_USER</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.CurrentUserHasBlankPassword">
+      <summary>Die EAS-Kennwortrichtlinien für den Benutzer können nicht ausgewertet werden, da der Benutzer ein leeres Kennwort besitzt.HRESULT: EAS_E_CURRENT_USER_HAS_BLANK_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.InvalidParameter">
+      <summary>Der Richtlinienwert befindet sich nicht in einem gültigen Bereich.HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.LocalControlledUsersCannotChangePassword">
+      <summary>Es sind andere Standardbenutzer vorhanden, die nicht berechtigt sind, ihre Kennwörter zu ändern. HRESULT: EAS_E_LOCAL_CONTROLLED_USERS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.NotEvaluated">
+      <summary>Die Richtlinie ist nicht für die Auswertung festgelegt.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.RequestedPolicyIsStricter">
+      <summary>Die angeforderte Richtlinie ist strenger als die Computerrichtlinien.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS. Und der Benutzer ist kein Administrator.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.RequestedPolicyNotEnforceable">
+      <summary>Die EAS-Richtlinie, die ausgewertet wird, kann vom System nicht umgesetzt werden.HRESULT: EAS_E_REQUESTED_POLICY_NOT_ENFORCEABLE</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.UserCannotChangePassword">
+      <summary>Der Benutzer ist nicht berechtigt, das Kennwort zu ändern. HRESULT: EAS_E_USER_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult">
+      <summary>Abfrageergebnisse bzgl. der Kennwortablaufinformationen.</summary>
+      <deprecated type="deprecate">EasPasswordExpirationResult kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.AdminsCannotChangePassword">
+      <summary>Einer oder mehrere Administratoren sind nicht befugt, ihre Kennwörter zu ändern. HRESULT: EAS_E_ADMINS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.CanBeCompliant">
+      <summary>Der Computer kann mithilfe der ApplyAsync-Methode kompatibel sein.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS, und der Benutzer ist ein Administrator.HRESULT: S_OK, aber der Benutzer wird nicht kontrolliert.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.Compliant">
+      <summary>Der Computer entspricht der Richtlinie.HRESULT: S_OK, und der Benutzer wird kontrolliert.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.InvalidParameter">
+      <summary>Der Richtlinienwert befindet sich nicht in einem gültigen Bereich.HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.LocalControlledUsersCannotChangePassword">
+      <summary>Es sind andere Standardbenutzer vorhanden, die nicht berechtigt sind, ihre Kennwörter zu ändern. HRESULT: EAS_E_LOCAL_CONTROLLED_USERS_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.NotEvaluated">
+      <summary>Die Richtlinie ist nicht für die Auswertung festgelegt.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.RequestedExpirationIncompatible">
+      <summary>Die EAS-Kennwortablaufrichtlinie kann nicht erfüllt werden, da der Zeitraum für das Ablaufen des Kennworts kleiner ist, als der Mindestkennwortzeitraum für das System.HRESULT: EAS_E_REQUESTED_POLICY_PASSWORD_EXPIRATION_INCOMPATIBLE</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.RequestedPolicyIsStricter">
+      <summary>Die angeforderte Richtlinie ist strenger als die Computerrichtlinien.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS. Und der Benutzer ist kein Administrator.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.UserCannotChangePassword">
+      <summary>Der Benutzer ist nicht berechtigt, das Kennwort zu ändern. HRESULT: EAS_E_USER_CANNOT_CHANGE_PASSWORD</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult">
+      <summary>Stellt den Kennwortverlauf dar.</summary>
+      <deprecated type="deprecate">EasPasswordHistoryResult kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.CanBeCompliant">
+      <summary>Der Computer kann mithilfe der ApplyAsync-Methode kompatibel sein.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS, und der Benutzer ist ein Administrator.HRESULT: S_OK, aber der Benutzer wird nicht kontrolliert.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.Compliant">
+      <summary>Der Computer entspricht der Richtlinie.HRESULT: S_OK, und der Benutzer wird kontrolliert.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.InvalidParameter">
+      <summary>Der Richtlinienwert befindet sich nicht in einem gültigen Bereich.HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.NotEvaluated">
+      <summary>Die Richtlinie ist nicht für die Auswertung festgelegt.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.RequestedPolicyIsStricter">
+      <summary>Die angeforderte Richtlinie ist strenger als die Computerrichtlinien.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS. Und der Benutzer ist kein Administrator.</summary>
+    </member><member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult">
+      <summary>Stellt den erforderlichen Verschlüsselungstyp dar.</summary>
+      <deprecated type="deprecate">EasRequireEncryptionResult kann in Versionen nach Windows 10 geändert oder nicht mehr verfügbar sein.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.CanBeCompliant">
+      <summary>Dieser Computer kann mithilfe der ApplyAsync-Methode kompatibel sein. HRESULT: S_OK, aber der Benutzer wird nicht kontrolliert.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.Compliant">
+      <summary>Dieser Computer ist bereits geschützt.HRESULT: S_OK, und der Benutzer wird kontrolliert.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeFixedDataNotSupported">
+      <summary>Dieser Wert wird nicht mehr unterstützt. Verwenden Sie ab Windows 8.1 FixedDataNotSupported.</summary>
+      <deprecated type="deprecate">Dieser Wert wird nicht mehr unterstützt. Verwenden Sie ab Windows 8.1 FixedDataNotSupported.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeHardwareNotCompliant">
+      <summary>Dieser Wert wird nicht mehr unterstützt. Verwenden Sie ab Windows 8.1 HardwareNotCompliant.</summary>
+      <deprecated type="deprecate">Dieser Wert wird nicht mehr unterstützt. Verwenden Sie ab Windows 8.1 HardwareNotCompliant.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeOsVolumeNotProtected">
+      <summary>Dieser Wert wird nicht mehr unterstützt. Verwenden Sie ab Windows 8.1 OsVolumeNotProtected.</summary>
+      <deprecated type="deprecate">Dieser Wert wird nicht mehr unterstützt. Verwenden Sie ab Windows 8.1 OsVolumeNotProtected.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeProtectionNotYetEnabled">
+      <summary>Dieser Wert wird nicht mehr unterstützt. Verwenden Sie ab Windows 8.1 ProtectionNotYetEnabled.</summary>
+      <deprecated type="deprecate">Dieser Wert wird nicht mehr unterstützt. Verwenden Sie ab Windows 8.1 ProtectionNotYetEnabled.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeProtectionSuspended">
+      <summary>Dieser Wert wird nicht mehr unterstützt. Verwenden Sie ab Windows 8.1 ProtectionSuspended.</summary>
+      <deprecated type="deprecate">Dieser Wert wird nicht mehr unterstützt. Verwenden Sie ab Windows 8.1 ProtectionSuspended.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeWinReNotConfigured">
+      <summary>Dieser Wert wird nicht mehr unterstützt. Verwenden Sie ab Windows 8.1 LockNotConfigured.</summary>
+      <deprecated type="deprecate">Dieser Wert wird nicht mehr unterstützt. Verwenden Sie ab Windows 8.1 LockNotConfigured.</deprecated>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.FixedDataNotSupported">
+      <summary>Der Computer kann keine Geräteverschlüsselung unterstützen, da unverschlüsselte feste Datenvolumina vorhanden sind.HRESULT: FVE_E_DE_FIXED_DATA_NOT_SUPPORTED</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.HardwareNotCompliant">
+      <summary>Dieser Computer erfüllt nicht die Hardwareanforderungen zur Unterstützung der Geräteverschlüsselung.HRESULT: FVE_E_DE_HARDWARE_NOT_COMPLIANT</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.LockNotConfigured">
+      <summary>Der Computer kann keine Geräteverschlüsselung unterstützen, da WinRE nicht ordnungsgemäß konfiguriert istHRESULT: FVE_E_DE_WINRE_NOT_CONFIGURED</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.NoFeatureLicense">
+      <summary>Dieser Computer besitzt keine Feature-Lizenz.HRESULT: FVE_E_NO_FEATURE_LICENSE</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.NotEvaluated">
+      <summary>Die Richtlinie ist nicht für die Auswertung festgelegt.</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.NotProvisionedOnAllVolumes">
+      <summary>Dieser Computer wird nicht zur Unterstützung der Geräteverschlüsselung bereitgestellt. Aktivieren von BitLocker für alle Volumina, um die Richtlinie zur Verschlüsselung von Geräten einzuhalten. HRESULT: FVE_E_NOT_PROVISIONED_ON_ALL_VOLUMES</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.OsNotProtected">
+      <summary>Das Betriebssystemlaufwerk ist nicht durch die BitLocker-Laufwerksverschlüsselung geschützt.HRESULT: FVE_E_OS_NOT_PROTECTED</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.OsVolumeNotProtected">
+      <summary>Dieser Computer wird ohne Geräteverschlüsselung bereitgestellt. Geräteverschlüsselung auf allen Volumina aktivieren, um die Geräteverschlüsselungsrichtlinie zu erfüllen, wenn dies unterstützt wird.
+HRESULT: FVE_E_DE_OS_VOLUME_NOT_PROTECTED</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.ProtectionNotYetEnabled">
+      <summary>Schutz ist auf dem Volume nicht aktiviert. Die Schutzaktivierung erfordert ein verbundenes Konto. Wenn Sie bereits über ein Verbindungskonto verfügen und diesen Fehler sehen, finden Sie im Ereignisprotokoll mehr Informationen.HRESULT: FVE_E_DE_PROTECTION_NOT_YET_ENABLED</summary>
+    </member><member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.ProtectionSuspended">
+      <summary>Sicherheit ist auf diesem Volume aktiviert, wurde aber suspendiert. Dies ist wahrscheinlich auf ein Update des Computers zurückzuführen. Starten Sie erneut und versuchen es noch einmal.HRESULT: FVE_E_DE_PROTECTION_SUSPENDED</summary>
+    </member></members>
+</doc>

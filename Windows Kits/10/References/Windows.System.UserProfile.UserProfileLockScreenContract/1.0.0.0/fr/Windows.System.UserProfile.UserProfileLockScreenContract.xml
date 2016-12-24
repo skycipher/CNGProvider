@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.UserProfile.UserProfileLockScreenContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.System.UserProfile.LockScreen">
+      <summary>Fournit des propriétés et des méthodes pour gérer l'image pleine page utilisée comme arrière-plan de l'écran de verrouillage.</summary>
+    </member><member name="P:Windows.System.UserProfile.LockScreen.OriginalImageFile">
+      <summary>Obtient l'image de l'écran de verrouillage actuel.</summary>
+      <returns>URI (Uniform Resource Identifier) de l'image de l'écran de verrouillage.</returns>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.GetImageStream">
+      <summary>Obtient l'image de l'écran de verrou actuel en tant que flux.</summary>
+      <returns>Flux qui contient les données d'image de l'écran de verrouillage.</returns>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.RequestSetImageFeedAsync(Windows.Foundation.Uri)">
+      <summary>Enregistre un flux d'images RSS à utiliser comme diaporama d'écran de verrouillage. (Windows 8.1 uniquement)</summary>
+      <deprecated type="deprecate">RequestSetImageFeedAsync est déconseillé et peut ne pas fonctionner sur toutes les plateformes. Pour plus d'informations, consultez MSDN.</deprecated>
+      <returns>Une des valeurs SetImageFeedResult.</returns>
+      <param name="syndicationFeedUri">URI (Uniform Resource Identifier) du flux d'images RSS.</param>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.SetImageFileAsync(Windows.Storage.IStorageFile)">
+      <summary>Définit l'image de l'écran de verrouillage à partir d'un objet StorageFile.</summary>
+      <returns>Objet utilisé pour définir l'image de l'écran de verrouillage.</returns>
+      <param name="value">Objet StorageFile qui contient la nouvelle image de l'écran de verrouillage.</param>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.SetImageStreamAsync(Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>Définit l'image de l'écran de verrouillage à partir d'un flux de données.</summary>
+      <returns>Objet utilisé pour définir l'image de l'écran de verrouillage.</returns>
+      <param name="value">Flux contenant les données d'image.</param>
+    </member><member name="M:Windows.System.UserProfile.LockScreen.TryRemoveImageFeed">
+      <summary>Annule l'enregistrement du flux d'images utilisé dans le diaporama de l'écran de verrouillage, ce qui arrête le diaporama. (Windows 8.1 uniquement)</summary>
+      <deprecated type="deprecate">TryRemoveImageFeed est déconseillé et peut ne pas fonctionner sur toutes les plateformes. Pour plus d'informations, consultez MSDN.</deprecated>
+      <returns>true si le flux d'images a été désactivé ; sinon, false.</returns>
+    </member></members>
+</doc>

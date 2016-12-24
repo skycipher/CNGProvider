@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.ApplicationSettings.ApplicationsSettingsContract</name>
+  </assembly>
+  <members>
+  <member name="T:Windows.UI.ApplicationSettings.SettingsEdgeLocation">
+      <summary>설정 참이 나타나는 화면의 가장자리를 지정합니다.</summary>
+      <deprecated type="deprecate">SettingsEdgeLocation은 더 이상 사용되지 않으며 모든 플랫폼에서 작동하지 않을 수 있습니다. 자세한 내용은 MSDN을 참조하십시오.</deprecated>
+    </member><member name="F:Windows.UI.ApplicationSettings.SettingsEdgeLocation.Left">
+      <summary>설정 참이 화면 왼쪽 가장자리에 나타납니다.</summary>
+    </member><member name="F:Windows.UI.ApplicationSettings.SettingsEdgeLocation.Right">
+      <summary>설정 참이 화면 오른쪽 가장자리에 나타납니다.</summary>
+    </member><member name="T:Windows.UI.ApplicationSettings.SettingsPane">
+      <summary>응용 프로그램에서 설정 참 창을 제어할 수 있도록 설정하는 정적 클래스입니다. 응용 프로그램에서 명령을 추가하거나 제거할 수 있으며, 사용자가 창을 열 때 알림을 받거나 창을 프로그래밍 방식으로 열 수 있습니다.</summary>
+      <deprecated type="deprecate">SettingsPane은 Windows 10 이후 릴리스에서 변경되거나 사용하지 못할 수 있습니다. SettingsPane를 사용하는 대신 설정 옵션을 앱 환경에 통합합니다. 자세한 내용은 앱 설정 지침을 참조하십시오.</deprecated>
+    </member><member name="P:Windows.UI.ApplicationSettings.SettingsPane.Edge">
+      <summary>설정 참을 화면의 왼쪽 또는 오른쪽 가장자리에 표시할지 여부를 나타내는 값을 가져옵니다.</summary>
+      <deprecated type="deprecate">SettingsPane은 Windows 10 이후 릴리스에서 변경되거나 사용하지 못할 수 있습니다. SettingsPane를 사용하는 대신 설정 옵션을 앱 환경에 통합합니다. 자세한 내용은 앱 설정 지침을 참조하십시오.</deprecated>
+      <returns>설정 참의 위치입니다.</returns>
+    </member><member name="E:Windows.UI.ApplicationSettings.SettingsPane.CommandsRequested">
+      <summary>사용자가 설정 창을 열면 발생합니다. 이 이벤트를 수신 대기하면 응용 프로그램이 설정 명령을 초기화하고 사용자가 창을 닫을 때까지 해당 UI를 일시 중지할 수 있습니다.</summary>
+      <deprecated type="deprecate">SettingsPane은 Windows 10 이후 릴리스에서 변경되거나 사용하지 못할 수 있습니다. SettingsPane를 사용하는 대신 설정 옵션을 앱 환경에 통합합니다. 자세한 내용은 앱 설정 지침을 참조하십시오.</deprecated>
+    </member><member name="M:Windows.UI.ApplicationSettings.SettingsPane.GetForCurrentView">
+      <summary>현재 앱 뷰(즉, CoreWindow)와 연결된 SettingsPane 개체를 가져옵니다.</summary>
+      <deprecated type="deprecate">SettingsPane은 Windows 10 이후 릴리스에서 변경되거나 사용하지 못할 수 있습니다. SettingsPane를 사용하는 대신 설정 옵션을 앱 환경에 통합합니다. 자세한 내용은 앱 설정 지침을 참조하십시오.</deprecated>
+      <returns>설정 창입니다.</returns>
+    </member><member name="M:Windows.UI.ApplicationSettings.SettingsPane.Show">
+      <summary>설정 참 창을 표시합니다.</summary>
+      <deprecated type="deprecate">SettingsPane은 Windows 10 이후 릴리스에서 변경되거나 사용하지 못할 수 있습니다. SettingsPane를 사용하는 대신 설정 옵션을 앱 환경에 통합합니다. 자세한 내용은 앱 설정 지침을 참조하십시오.</deprecated>
+    </member><member name="T:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest">
+      <summary>CommandsRequested 이벤트 중에만 사용할 수 있는 속성을 포함합니다.</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequest는 Windows 10 이후 릴리스에서 변경되거나 사용하지 못할 수 있습니다. SettingsPane를 사용하는 대신 설정 옵션을 앱 환경에 통합합니다. 자세한 내용은 앱 설정 지침을 참조하십시오.</deprecated>
+    </member><member name="P:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest.ApplicationCommands">
+      <summary>CommandsRequested 이벤트 동안 사용할 수 있는 벡터입니다. SettingsCommand 개체를 추가하여 SettingsPane UI에서 사용합니다.</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequest는 Windows 10 이후 릴리스에서 변경되거나 사용하지 못할 수 있습니다. SettingsPane를 사용하는 대신 설정 옵션을 앱 환경에 통합합니다. 자세한 내용은 앱 설정 지침을 참조하십시오.</deprecated>
+      <returns>SettingsCommand 개체의 벡터입니다.</returns>
+    </member><member name="T:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs">
+      <summary>CommandsRequested 이벤트 중 이벤트 개체에서 사용할 수 있는 인수를 포함합니다.</summary>
+      <deprecated type="deprecate">또한 Windows 10 이후 릴리스에서는 SettingsPaneCommandsRequestedEventArgs를 변경하거나 사용하지 못할 수 있습니다. SettingsPane를 사용하는 대신 설정 옵션을 앱 환경에 통합합니다. 자세한 내용은 앱 설정 지침을 참조하십시오.</deprecated>
+    </member><member name="P:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs.Request">
+      <summary>CommandsRequested 이벤트 동안 사용할 수 있는 SettingsPaneCommandsRequest의 인스턴스입니다.</summary>
+      <deprecated type="deprecate">또한 Windows 10 이후 릴리스에서는 SettingsPaneCommandsRequestedEventArgs를 변경하거나 사용하지 못할 수 있습니다. SettingsPane를 사용하는 대신 설정 옵션을 앱 환경에 통합합니다. 자세한 내용은 앱 설정 지침을 참조하십시오.</deprecated>
+      <returns>명령 요청 개체입니다.</returns>
+    </member></members>
+</doc>

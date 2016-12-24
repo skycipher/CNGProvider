@@ -1,0 +1,347 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://schemas.microsoft.com/browser/2014/manifest#",
+  "title": "Microsoft Edge Extension JSON Manifest Schema",
+  "description": "Schema describing the manifest of Microsoft Edge extensions",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "Name of the extension",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 256
+    },
+    "version": {
+      "description": "Version of the extension, consisting of one to four digits separated by periods. Ex: 12, 12.12, 12.12.12, 12.12.12.12",
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])(\\.(0|[1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])){0,3}$"
+    },
+    "default_locale": {
+      "description": "Default locale of the extension if a _locales folder exists",
+      "type": "string"
+    },
+    "description": {
+      "description": "Description of the extension",
+      "type": "string",
+      "pattern": "[^\\x01-\\x1f]+",
+      "maxLength": 2048
+    },
+    "icons": {
+      "description": "General logos or icons for the extension",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/icon-object"
+        }
+      ]
+    },
+    "content_security_policy": {
+      "description": "Content security policy rules",
+      "type": "string",
+      "default": "script-src 'self'; object-src 'self"
+    },
+    "browser_action": {
+      "description": "Button added to the frame for the extension",
+      "type": "object",
+      "allOf": [
+        { "$ref": "#/definitions/action" }
+      ]
+    },
+    "page_action": {
+      "description": "Button added to the address bar for the extension",
+      "type": "object",
+      "allOf": [
+        { "$ref": "#/definitions/action" }
+      ]
+    },
+    "author": {
+      "description": "Author or publisher of the extension",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "background": {
+      "description": "Page created without UI to process events and background tasks",
+      "type": "object",
+      "properties": {
+        "persistent": {
+          "description": "True to run as a persisitent background page and false to run as an event page",
+          "type": "boolean"
+        },
+        "page": { },
+        "scripts": { }
+      },
+      "oneOf": [
+        { "$ref": "#/definitions/background-page" },
+        { "$ref": "#/definitions/background-scripts" }
+      ],
+      "required": ["persistent"],
+      "additionalProperties": false
+    },
+    "content_scripts": {
+      "description": "Specify scripts to run within visited web pages",
+      "type": "array",
+      "items": {
+        "allOf": [
+          { "$ref": "#/definitions/content_scripts-instance" }
+        ]
+      },
+      "minItems": 1
+    },
+    "options_page": {
+      "description": "Settings page for the extension",
+      "type": "string"
+    },
+    "permissions": {
+      "description": "Requested APIs and web host matching strings required by the extension",
+      "type": "array",
+      "items": {
+        "anyOf": [
+          { "$ref": "#/definitions/permissions-schema" },
+          { "$ref": "#/definitions/permissions-required" },
+          { "$ref": "#/definitions/permissions-optional" },
+          {
+            "description": "Compatability string",
+            "type": "string",
+            "pattern": "^((chrome\\://.*)|([a-zA-Z_.]+))$"
+          }
+        ]
+      },
+      "minItems": 1
+    },
+    "short_name": {
+      "description": "Short name for the extension to be used in places where the full name would not fit",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 40
+    },
+    "web_accessible_resources": {
+      "description": "Extension resources that need to be accessible at runtime",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "minimum_edge_version": {
+      "description": "Minimum Microsoft Edge version required to load the extension, consisting of four digits separated by periods. Ex: 12.12.12.12",
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])(\\.(0|[1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])){3}$"
+    },
+    "-ms-preload": {
+      "description": "Specify scripts to prep the context prior to any scripts being run. Ex: background, content_scripts",
+      "type": "object",
+      "properties": {
+        "backgroundScript": {
+          "description": "Script that will be loaded to prep the background context prior to running any scripts or html specified in the 'background' field",
+          "type": "string"
+        },
+        "contentScript": {
+          "description": "Script that will be loaded to prep each context context prior to running any scripts specified in the 'content_scripts' field",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "definitions": {
+    "action": {
+      "type": "object",
+      "properties": {
+        "default_icon": {
+          "description": "Icon or icon set displayed for the action",
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "#/definitions/icon-object"
+            }
+          ]
+        },
+        "default_title": {
+          "description": "Title given for the action",
+          "type": "string"
+        },
+        "default_popup": {
+          "description": "Popup displayed when the user invokes the action",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "background-page": {
+      "properties": {
+        "page": {
+          "description": "Webpage to load into the background page when the extension is started",
+          "type": "string"
+        }
+      },
+      "required": [ "page" ]
+    },
+    "background-scripts": {
+      "properties": {
+        "scripts": {
+          "description": "List of scripts to load into the background page when the extension is started",
+          "type": "array",
+          "items": {
+            "description": "Script to load into the background page of the extension",
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [ "scripts" ]
+    },
+    "content_scripts-instance": {
+      "type": "object",
+      "properties": {
+        "matches": {
+          "description": "Inclusive array of web host matching strings",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/host-matchPattern"
+          },
+          "minItems": 1
+        },
+        "exclude_matches": {
+          "description": "Exclusive array of web host matching strings",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/host-matchPattern"
+          },
+          "minItems": 1
+        },
+        "match_about_blank": {
+          "description": "Whether to run content scripts on about:blank",
+          "type": "boolean",
+          "default": false
+        },
+        "css": {
+          "description": "CSS files to load into web pages",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "js": {
+          "description": "JavaScript files to load into web pages",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "run_at": {
+          "description": "Location to load content script assets in web pages",
+          "enum": [ "document_start", "document_end", "document_idle" ],
+          "default": "document_idle"
+        },
+        "all_frames": {
+          "type": "boolean",
+          "default": false
+        },
+        "include_globs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "exclude_globs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [ "matches" ]
+    },
+    "host-matchPattern": {
+      "type": "string",
+      "description": "Pattern to match a host",
+      "pattern": "^<all_urls>|(\\*|https?|ftp|file)\\:///?(\\*|(\\*\\.)?[^*/]+)(/.*)?$"
+    },
+    "icon-object": {
+      "type": "object",
+      "patternProperties": {
+        "^(0|[1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])$": {
+          "description": "Pixel size of the square image and relative path to the icon file",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "permissions-schema": {
+      "$ref": "#/definitions/host-matchPattern"
+    },
+    "permissions-optional": {
+      "enum": [
+        "contextMenus",
+        "cookies",
+        "idle",
+        "tabs",
+        "webNavigation",
+        "webRequest"
+      ]
+    },
+    "permissions-required": {
+      "enum": [
+        "geolocation",
+        "storage"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "description": "Properties 'browser_action' and 'page_action' cannot co-exist",
+      "dependencies": {
+        "browser_action": { "not": { "required": [ "page_action" ] } }
+      }
+    },
+    {
+      "description": "The WebRequest APIs are unavailable for event pages",
+      "dependencies": {
+        "background": {
+          "anyOf": [
+            {
+              "properties": {
+                "background": {
+                  "properties": {
+                    "persistent": {
+                      "not": { "enum": [ false ] }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "properties": {
+                "permissions": {
+                  "items": {
+                    "not": {
+                      "enum": [
+                        "webRequest"
+                      ]
+                    }
+                  }
+                },
+                "optional_permissions": {
+                  "items": {
+                    "not": {
+                      "enum": [
+                        "webRequest"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "additionalProperties": true,
+  "required": [ "name", "version", "author" ]
+}
